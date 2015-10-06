@@ -1,0 +1,5 @@
+[submodule "tools/discount"]
+	path = tools/discount
+	url = https://github.com/Orc/discount.git
+	branch = master
+	ignore = untracked
