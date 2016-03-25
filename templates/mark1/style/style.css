@@ -48,63 +48,79 @@
   src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('../fonts/opensans-bolditalic-1.10.woff2') format('woff2'), url('../fonts/opensans-bolditalic-1.10.woff') format('woff');
 }
 
-body {
-    margin: 40px auto;
-    padding: 0 10px;
+article.docs {
+    margin: 0 auto;
+    padding: 40px 150px;
     max-width: 650px;
-    color: rgb(68,68,68);
-    background-color: rgb(252,252,252);
     font-family: 'Open Sans';
     font-size: 15px;
     line-height: 25px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+article.docs h1,
+article.docs h2,
+article.docs h3,
+article.docs h4,
+article.docs h5,
+article.docs h6 {
     font-family: 'Ropa Sans';
     font-weight: 400;
     text-rendering: geometricPrecision;
     color: rgb(60,60,60);
 }
 
-h1 {
+article.docs h1 {
     font-size: 40px;
     line-height: 1;
     letter-spacing: -0.035em;
 }
 
-h2 {
+article.docs h2 {
     font-size: 28px;
     line-height: 30px;
     letter-spacing: -0.025em;
 }
 
-h3 {
+article.docs h3 {
     font-size: 21px;
     line-height: 25px;
     text-transform: uppercase;
     letter-spacing: -0.018em;
 }
 
-h4 {
+article.docs h4 {
     font-size: 19px;
     line-height: 20px;
     letter-spacing: -0.02em;
 }
 
-h5 {
+article.docs h5 {
     font-size: 17px;
     line-height: 20px;
     text-transform: uppercase;
     letter-spacing: -0.01em;
 }
 
-h6 {
+article.docs h6 {
     font-size: 14px;
     line-height: 15px;
     text-transform: uppercase;
     letter-spacing: -0.005em;
 }
 
-p, body > ol, body > ul {
+article.docs header .breadcrumbs {
+    font-size: 12px;
+}
+
+article.docs footer p {
+    font-style: italic;
+}
+
+article.docs p,
+article.docs > ol,
+article.docs > ul,
+article.docs header .breadcrumbs,
+article.docs footer p,
+article.docs footer small {
     margin: 1.33333em 0;
 }

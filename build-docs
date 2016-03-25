@@ -81,12 +81,18 @@ function build_source {
     touch "${BASE}.html"
     while IFS='' read TEMPLATE || [[ -n "${TEMPLATE}" ]]; do
         echo "${TEMPLATE//$VAR_Content/$DOCUMENT_Content}" \
-            | sed -E 's:{{[ ]*meta\.language-code[ ]*}}:'"${META_Language_Code:-}"':g' \
-            | sed -E 's:{{[ ]*meta\.text-encoding[ ]*}}:'"${META_Text_Encoding:-}"':g' \
-            | sed -E 's:{{[ ]*meta\.authors[ ]*}}:'"${META_Authors:-}"':g' \
-            | sed -E 's:{{[ ]*meta\.project[ ]*}}:'"${META_Project:-}"':g' \
-            | sed -E 's:{{[ ]*meta\.title[ ]*}}:'"${META_Title:-}"':g' \
-            | sed -E 's:{{[ ]*base\.relpath[ ]*}}:'"${BASE_RELPATH:-}"':g' \
+            | sed -E 's|{{[ ]*meta\.title[ ]*}}|'"${META_Title:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.project[ ]*}}|'"${META_Project:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.project-url[ ]*}}|'"${META_Project_URL:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.project-version[ ]*}}|'"${META_Project_Version:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.language[ ]*}}|'"${META_Language:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.language-code[ ]*}}|'"${META_Language_Code:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.text-encoding[ ]*}}|'"${META_Text_Encoding:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.authors[ ]*}}|'"${META_Authors:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.copyright[ ]*}}|'"${META_Copyright:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.license[ ]*}}|'"${META_License:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.license-url[ ]*}}|'"${META_License_URL:-}"'|g' \
+            | sed -E 's|{{[ ]*base\.relpath[ ]*}}|'"${BASE_RELPATH:-}"'|g' \
         >> "${BASE}.html"
     done < "${TEMPLATE_DIR}/document.html"
 

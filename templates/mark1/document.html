@@ -10,6 +10,15 @@
     <link rel="stylesheet" type="text/css" href="{{ base.relpath }}style/style.css" />
 </head>
 <body>
+<article class="docs">
+<header>
+    <div class="breadcrumbs">{{ meta.language }} Docs > {{ meta.project }} {{ meta.project-version }} > {{ meta.title }}</div>
+</header>
 {{ document.content }}
+<footer>
+    <p><span class="authorship">This article is part of the <a href="{{ base.relpath }}" title="{{ meta.project }} Documentation">{{ meta.project }} Documentation</a> and was written by {{ meta.authors }}.</span> <span class="contributing">Join us on GitHub to contribute your thoughts and ideas, and to suggest any necessary corrections.</span></p>
+    <small class="copyright">Copyright {{ meta.copyright }}. Licensed under the <a href="{{ meta.license-url }}" title="License Summary">{{ meta.license }}</a>.</small>
+</footer>
+</article>
 </body>
 </html>
