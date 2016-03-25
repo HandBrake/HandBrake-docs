@@ -91,6 +91,7 @@ function build_source {
             | sed -E 's|{{[ ]*meta\.authors[ ]*}}|'"${META_Authors:-}"'|g' \
             | sed -E 's|{{[ ]*meta\.copyright[ ]*}}|'"${META_Copyright:-}"'|g' \
             | sed -E 's|{{[ ]*meta\.license[ ]*}}|'"${META_License:-}"'|g' \
+            | sed -E 's|{{[ ]*meta\.license-abbr[ ]*}}|'"${META_License_Abbr:-}"'|g' \
             | sed -E 's|{{[ ]*meta\.license-url[ ]*}}|'"${META_License_URL:-}"'|g' \
             | sed -E 's|{{[ ]*base\.relpath[ ]*}}|'"${BASE_RELPATH:-}"'|g' \
         >> "${BASE}.html"
