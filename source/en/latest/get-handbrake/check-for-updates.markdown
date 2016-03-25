@@ -7,7 +7,7 @@ Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
 Authors:         Bradley Sepos
-Copyright:       2015 HandBrake Team
+Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 License_URL:     https://handbrake.fr/docs/license.html
 ---
