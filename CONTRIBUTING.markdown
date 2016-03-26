@@ -34,7 +34,7 @@ Most of our [forum rules](https://forum.handbrake.fr/app.php/rules) apply. Pleas
 
 HandBrake is [open-source software](https://en.wikipedia.org/wiki/Open-source_software), created and maintained by a small group of people in their spare time. It is provided to the general public essentially for free, under the [GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License) Version 2.
 
-Similarly, HandBrake's documentation is the product of volunteer work and provided to the general public essentially for free, under the [GNU Free Documentation License](https://en.wikipedia.org/wiki/GNU_Free_Documentation_License).
+Similarly, the HandBrake Documentation is the product of volunteer work and provided to the general public essentially for free, under the [Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Basically, nobody working on HandBrake or HandBrake Docs owes you anything. So please be kind, considerate, and constructive in your contributions and criticisms of what is being freely provided to you.
 
