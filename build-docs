@@ -141,8 +141,9 @@ TEMPLATE_Document="${TEMPLATE_DIR}/document.html"
 TEMPLATE_Header="${TEMPLATE_DIR}/header.html"
 TEMPLATE_Footer="${TEMPLATE_DIR}/footer.html"
 
-# clean
-rm -rf "${DOCS_DIR}"/*
+# clean docs dir
+mkdir -p "${DOCS_DIR}"
+$(GLOBIGNORE='*.gitkeep'; rm -rf "${DOCS_DIR}"/*)
 
 # build
 cp -R "${TEMPLATE_DIR}"/fonts "${TEMPLATE_DIR}"/style "${SOURCE_DIR}"/* "${DOCS_DIR}"/

@@ -1,2 +1,6 @@
 # Prevent overwriting user config
 config.yaml
+
+# Ignore generated documents but keep the docs directory
+docs/*
+!docs/.gitkeep
