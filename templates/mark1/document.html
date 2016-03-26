@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang=\"{{ meta.language-code }}\">
+<html lang="{{ meta.language-code }}">
 <head>
-    <meta charset=\"{{ meta.text-encoding }}\" />
+    <meta charset="{{ meta.text-encoding }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ meta.authors }}" />
     <!--<meta name="description" content="" />-->
@@ -11,14 +11,9 @@
 </head>
 <body>
 <article class="docs">
-<header>
-    <div class="breadcrumbs">{{ meta.language }} Docs > {{ meta.project }} {{ meta.project-version }} > {{ meta.title }}</div>
-</header>
+{{ template.header }}
 {{ document.content }}
-<footer>
-    <p><span class="authorship">This article is part of the <a href="{{ base.relpath }}" title="{{ meta.project }} Documentation">{{ meta.project }} Documentation</a> and was written by {{ meta.authors }}.</span> <span class="contributing">Join us on GitHub to contribute your thoughts and ideas, and to suggest any necessary corrections.</span></p>
-    <small class="copyright">Copyright {{ meta.copyright }}. <a href="{{ base.relpath }}license-summary.html" title="License Summary"><abbr title="{{ meta.license }}">{{ meta.license-abbr }}</abbr></a>.</small>
-</footer>
+{{ template.footer }}
 </article>
 </body>
 </html>
