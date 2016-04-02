@@ -77,20 +77,28 @@ function build_source {
         eval $(parse_yaml "${DEST}.yaml" "DOCUMENT_")
     fi
 
-    # generate document using template
+    # preprocess markdown to add implicit figures
+    sed -E \
+    -e 's|^!\[(.+)]\([ ]*(.+)[ ]*"(.+)"[ ]*\)$|<figure><img src="\2" alt="\1" title="\3"><figcaption>\3</figcaption></figure>|' \
+    -i .sedbak "${SOURCE}"
+    # convert preprocessed markdown document to html
     "${MARKDOWN}" -fdlextra -ffencedcode -ffootnote -fgithubtags "${SOURCE}" > "${DOCUMENT_Content}"
+    # copy main template
     cp "${TEMPLATE_Document}" "${DEST}.html"
+    # omit header and footer templates from license documents
     if [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
         sed -E \
         -e 's|{{[ ]*template\.header[ ]*}}||g' \
         -e 's|{{[ ]*template\.footer[ ]*}}||g' \
         -i .sedbak "${DEST}.html"
     fi
+    # inject header, content, footer
     sed -E \
     -e '/{{[ ]*template\.header[ ]*}}/r '"${TEMPLATE_Header}"'' -e '/{{[ ]*template\.header[ ]*}}/d' \
     -e '/{{[ ]*document\.content[ ]*}}/r '"${DOCUMENT_Content}"'' -e '/{{[ ]*document\.content[ ]*}}/d' \
     -e '/{{[ ]*template\.footer[ ]*}}/r '"${TEMPLATE_Footer}"'' -e '/{{[ ]*template\.footer[ ]*}}/d' \
     -i .sedbak "${DEST}.html"
+    # process custom tags
     sed -E \
     -e 's|{{[ ]*meta\.title[ ]*}}|'"${DOCUMENT_Title:-}"'|g' \
     -e 's|{{[ ]*meta\.project[ ]*}}|'"${DOCUMENT_Project:-}"'|g' \
