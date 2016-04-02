@@ -7,7 +7,7 @@ Thank you for your interest in contributing.
 
 If you're a non-technical person, feel free to submit changes via the [HandBrake forum](https://handbrake.fr/forum/) (registration is free) or for minor issues, e.g. typos, say hi on the [HandBrake IRC channel](https://handbrake.fr/community.php).
 
-You may work directly on the source documents by [creating a GitHub account](https://github.com/join) and forking [HandBrake/handbrake-docs](https://github.com/HandBrake/handbrake-docs/). Create a new local branch for each group of changes and submit a pull request when you're done. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
+You may work directly on the source documents by [creating a GitHub account](https://github.com/join) and forking [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). Create a new local branch for each group of changes and submit a pull request when you're done. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
 
 
 ## Conduct
@@ -103,7 +103,7 @@ Every copy of the source files includes the tools needed to convert them into a 
 - TODO: describe YAML tool if not processed by build script
 - TODO: describe build script, faux headers and footers to generate full local HTML?
 
-If you haven't already, [create a GitHub account](https://github.com/join) and fork [HandBrake/handbrake-docs](https://github.com/HandBrake/handbrake-docs/). Then clone your repository to your computer using `git clone --recursive` to make sure you get all the tools.
+If you haven't already, [create a GitHub account](https://github.com/join) and fork [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). Then clone your repository to your computer using `git clone --recursive` to make sure you get all the tools.
 
 Discount must be built from its source code before it can be used to convert our Markdown to HTML. Run the command `build-tools` from the `tools` directory to build it. TODO: update if other tools are required.
 
