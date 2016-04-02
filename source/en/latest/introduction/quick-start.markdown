@@ -34,15 +34,15 @@ HandBrake calls the video you already have the `Source`.
 
 Drag your `Source` video onto HandBrake to open it. You may also select the `Open Source` button on the toolbar and browse for it.
 
-![Open Source dialog](../images/open-source-dialog.png)
+![Open Source dialog](../images/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
 
-![Opening a video source via drag and drop](../images/open-source-drag-drop.png)
+![Opening a video source via drag and drop](../images/open-source-drag-drop.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
 
 ## Select a title
 
-Some types of `Sources` contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use. Many `Sources` have only one `Title`.
+Some `Sources` may contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use. Many `Sources` have only one `Title`, while Blu-ray and DVD sources often have multiple `Titles`.
 
-![Selecting a title](../images/select-title.png)
+![Selecting a title](../images/select-title.png "Some sources may contain more than one video clip. The title control lets you select the video clip you wish to encode.")
 
 ## Select a preset
 
