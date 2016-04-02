@@ -32,7 +32,7 @@ Typically, you can launch HandBrake by quickly clicking twice (double-clicking) 
 
 HandBrake calls the video you already have the `Source`.
 
-Drag your `Source` video onto HandBrake to open it. You may also select the `Open Source` button on the toolbar and browse for it.
+Select the `Open Source` button on the toolbar to browse your files for a video to open. You may also drag your `Source` video onto HandBrake's main window. 
 
 ![Open Source dialog](../images/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
 
@@ -42,7 +42,7 @@ Drag your `Source` video onto HandBrake to open it. You may also select the `Ope
 
 Some `Sources` may contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use. Many `Sources` have only one `Title`, while Blu-ray and DVD sources often have multiple `Titles`.
 
-![Selecting a title](../images/select-title.png "Some sources may contain more than one video clip. The title control lets you select the video clip you wish to encode.")
+![Selecting a title](../images/select-title.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
 
 ## Select a preset
 
