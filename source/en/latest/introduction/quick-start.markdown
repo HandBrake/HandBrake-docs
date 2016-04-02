@@ -26,9 +26,7 @@ Let's get started.
 
 Typically, you can launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon.
 
-![HandBrake icon](../images/icon.png)
-
-Read about the icon and more at HandBrake lore (TODO: link).
+![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
 ## Open your original video
 
@@ -38,13 +36,13 @@ Drag your `Source` video onto HandBrake to open it. You may also select the `Ope
 
 ![Open Source dialog](../images/open-source-dialog.png)
 
-![Opening a video source via drag and drop](../images/drag-and-drop-source.png)
+![Opening a video source via drag and drop](../images/open-source-drag-drop.png)
 
 ## Select a title
 
 Some types of `Sources` contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use. Many `Sources` have only one `Title`.
 
-![Selecting a title](../images/titles.png)
+![Selecting a title](../images/select-title.png)
 
 ## Select a preset
 
