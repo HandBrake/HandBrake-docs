@@ -121,8 +121,9 @@ function build_source {
     -i .sedbak "${DEST}.html"
 
     # clean up
-    rm -f "${DEST}.markdown"
     rm -f "${DEST}.yaml"
+    rm -f "${DEST}.markdown"
+    rm -f "${DEST}.markdown.sedbak"
     rm -f "${DEST}.html.temp"
     rm -f "${DEST}.html.sedbak"
 
