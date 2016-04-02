@@ -124,3 +124,26 @@ article.docs footer p,
 article.docs footer small {
     margin: 1.33333em 0;
 }
+
+article.docs figure {
+    display: inline-block;
+    position: relative;
+    left: -10%;
+    margin: 1.33333em 0;
+    max-width: 45%;
+    vertical-align: top;
+}
+
+article.docs figure + figure {
+    margin-left: 5%;
+}
+
+article.docs figure img {
+    max-width: 100%;
+}
+
+article.docs figcaption {
+    font-size: 11px;
+    line-height: 15px;
+    color: rgb(120,120,120);
+}
