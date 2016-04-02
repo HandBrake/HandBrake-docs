@@ -143,6 +143,8 @@ article.docs figure img {
 }
 
 article.docs figcaption {
+    padding-top: 4px;
+    border-top: 1px solid rgb(240,240,240);
     font-size: 11px;
     line-height: 15px;
     color: rgb(120,120,120);
