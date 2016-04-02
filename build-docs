@@ -79,7 +79,7 @@ function build_source {
 
     # preprocess markdown to add implicit figures
     sed -E \
-    -e 's|^!\[(.+)]\([ ]*(.+)[ ]*"(.+)"[ ]*\)$|<figure><img src="\2" alt="\1"><figcaption>\3</figcaption></figure>|' \
+    -e 's|^!\[(.+)]\([ ]*(.+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' \
     -i .sedbak "${SOURCE}"
     # convert preprocessed markdown document to html
     "${MARKDOWN}" -fdlextra -ffencedcode -ffootnote -fgithubtags "${SOURCE}" > "${DOCUMENT_Content}"
