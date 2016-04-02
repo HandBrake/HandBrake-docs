@@ -114,6 +114,11 @@ function build_source {
     -e 's|{{[ ]*meta\.license-url[ ]*}}|'"${DOCUMENT_License_URL:-}"'|g' \
     -e 's|{{[ ]*base\.relpath[ ]*}}|'"${BASE_RELPATH:-}"'|g' \
     -i .sedbak "${DEST}.html"
+    # postprocess
+    sed -E \
+    -e 's|<p><figure>|<figure>|' \
+    -e 's|</figure></p>|</figure>|' \
+    -i .sedbak "${DEST}.html"
 
     # clean up
     rm -f "${DEST}.markdown"
