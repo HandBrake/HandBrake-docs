@@ -54,25 +54,30 @@ Additionally, source files contain metadata information in the form of [YAML](ht
 
 More technical details are available under *Working with the source files*.
 
-Here is an example excerpt from `source/quick-start.markdown`:
+Here is an example excerpt from `source/en/latest/introduction/quick-start.markdown`:
 
 ```
 ---
 Title:           Quick start
-Authors:         HandBrake Team
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: master@HEAD
-License:         Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
-License_URL:     https://handbrake.fr/docs/license/
+Project_Version: Latest
+Language:        English
+Language_Code:   en
+Text_Encoding:   utf-8
+Authors:         Bradley Sepos
+Copyright:       2016 HandBrake Team
+License:         Creative Commons Attribution-ShareAlike 4.0 International
+License_Abbr:    CC BY-SA 4.0
+License_URL:     https://handbrake.fr/docs/license.html
 ---
 
 Quick start
 ===========
 
-HandBrake takes videos you already have and makes new ones that work on your phone, tablet, TV media player, game console, computer, web browser—nearly anything that supports modern video formats.
+HandBrake takes videos you already have and makes new ones that work on your mobile phone, tablet, TV media player, game console, computer, or web browser—nearly anything that supports modern video formats.
 
-This quick start guide assumes you have already downloaded and installed HandBrake. If you do not already have HandBrake, please see [Downloading and installing HandBrake](download-and-install.html).
+This quick start guide assumes you have already downloaded and installed HandBrake. If you do not already have HandBrake, please see [Downloading and installing HandBrake](../get-handbrake/download-and-install.html).
 
 Let's get started.
 
@@ -89,7 +94,7 @@ In the example, the underlined "Quick start" text is a heading, and there is a l
 
 If you are unfamiliar with Markdown and would like to know more, GitHub has a guide called [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) that may be helpful.
 
-TODO: Notes on preferred Markdown style, features to avoid (ideally just disable them).
+TODO: Notes on preferred Markdown style, features to avoid (ideally just disable them).  
 TODO: Notes on formatting multi-platform (Linux/OS X/Windows) sections?
 
 
