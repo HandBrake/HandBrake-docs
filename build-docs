@@ -104,19 +104,19 @@ function build_source {
     -i .sedbak "${DEST}.html"
     # process custom tags
     sed -E \
-    -e 's|{{[ ]*meta\.title[ ]*}}|'"${DOCUMENT_Title:-}"'|g' \
-    -e 's|{{[ ]*meta\.project[ ]*}}|'"${DOCUMENT_Project:-}"'|g' \
-    -e 's|{{[ ]*meta\.project-url[ ]*}}|'"${DOCUMENT_Project_URL:-}"'|g' \
-    -e 's|{{[ ]*meta\.project-version[ ]*}}|'"${DOCUMENT_Project_Version:-}"'|g' \
-    -e 's|{{[ ]*meta\.language[ ]*}}|'"${DOCUMENT_Language:-}"'|g' \
-    -e 's|{{[ ]*meta\.language-code[ ]*}}|'"${DOCUMENT_Language_Code:-}"'|g' \
-    -e 's|{{[ ]*meta\.text-encoding[ ]*}}|'"${DOCUMENT_Text_Encoding:-}"'|g' \
-    -e 's|{{[ ]*meta\.authors[ ]*}}|'"${DOCUMENT_Authors:-}"'|g' \
-    -e 's|{{[ ]*meta\.copyright[ ]*}}|'"${DOCUMENT_Copyright:-}"'|g' \
-    -e 's|{{[ ]*meta\.license[ ]*}}|'"${DOCUMENT_License:-}"'|g' \
-    -e 's|{{[ ]*meta\.license-abbr[ ]*}}|'"${DOCUMENT_License_Abbr:-}"'|g' \
-    -e 's|{{[ ]*meta\.license-url[ ]*}}|'"${DOCUMENT_License_URL:-}"'|g' \
-    -e 's|{{[ ]*meta\.redirect-url[ ]*}}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
+    -e 's|{{[ ]*document\.title[ ]*}}|'"${DOCUMENT_Title:-}"'|g' \
+    -e 's|{{[ ]*document\.project[ ]*}}|'"${DOCUMENT_Project:-}"'|g' \
+    -e 's|{{[ ]*document\.project-url[ ]*}}|'"${DOCUMENT_Project_URL:-}"'|g' \
+    -e 's|{{[ ]*document\.project-version[ ]*}}|'"${DOCUMENT_Project_Version:-}"'|g' \
+    -e 's|{{[ ]*document\.language[ ]*}}|'"${DOCUMENT_Language:-}"'|g' \
+    -e 's|{{[ ]*document\.language-code[ ]*}}|'"${DOCUMENT_Language_Code:-}"'|g' \
+    -e 's|{{[ ]*document\.text-encoding[ ]*}}|'"${DOCUMENT_Text_Encoding:-}"'|g' \
+    -e 's|{{[ ]*document\.authors[ ]*}}|'"${DOCUMENT_Authors:-}"'|g' \
+    -e 's|{{[ ]*document\.copyright[ ]*}}|'"${DOCUMENT_Copyright:-}"'|g' \
+    -e 's|{{[ ]*document\.license[ ]*}}|'"${DOCUMENT_License:-}"'|g' \
+    -e 's|{{[ ]*document\.license-abbr[ ]*}}|'"${DOCUMENT_License_Abbr:-}"'|g' \
+    -e 's|{{[ ]*document\.license-url[ ]*}}|'"${DOCUMENT_License_URL:-}"'|g' \
+    -e 's|{{[ ]*document\.redirect-url[ ]*}}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
     -e 's|{{[ ]*base\.relpath[ ]*}}|'"${BASE_RELPATH:-}"'|g' \
     -i .sedbak "${DEST}.html"
     # postprocess
