@@ -1,13 +1,13 @@
 Contributing
 ============
 
-Thank you for your interest in contributing.
+Thank you for your interest in contributing documentation for HandBrake.
 
 *Everyone should first [read the existing docs](https://handbrake.fr/docs/) before submitting changes*.
 
-If you're a non-technical person, feel free to submit changes via the [HandBrake forum](https://handbrake.fr/forum/) (registration is free) or for minor issues, e.g. typos, say hi on the [HandBrake IRC channel](https://handbrake.fr/community.php).
+If you're a non-technical person, feel free to suggest changes via the [HandBrake Community Forums](https://handbrake.fr/forum/) (registration is free) or [open an issue on GitHub](https://github.com/HandBrake/HandBrake-docs/issues) (also free). To report minor issues (typos, etc.) or to ask questions, say hi on the [HandBrake IRC channel](https://handbrake.fr/community.php).
 
-You may work directly on the source documents by [creating a GitHub account](https://github.com/join) and forking [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). Create a new local branch for each group of changes and submit a pull request when you're done. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
+You may work directly on the source documents by [creating a GitHub account](https://github.com/join) and forking [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). See *Working with the source files* for more information.
 
 
 ## Conduct
@@ -46,11 +46,15 @@ TODO: Style notes here.
 
 ## Document format
 
-*We're aware of the many disagreements regarding Markdown implementations, standardization, and even file name extensions. We ask that you respect the non-political nature of this project and politely suggest that time is better spent writing quality documentation.*
+*We're aware of disagreements regarding Markdown implementation differences, attempts at standardization, and even file name extensions. We ask that you respect the non-political nature of this project by discussing these topics elsewhere, and politely suggest that time is better spent writing quality documentation.*
 
-The documentation's source files are written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and use the `.markdown` file extension. For publishing, the Markdown text is converted to [HTML](https://en.wikipedia.org/wiki/HTML) using [Discount](http://www.pell.portland.or.us/~orc/Code/discount/).
+The documentation's source files are written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and use the `.markdown` file extension.
 
-Additionally, source files contain metadata information in the form of [YAML](https://en.wikipedia.org/wiki/YAML) headers. This allows each document to be self-describing.
+Metadata such as title, author, and license information is included at the top of each Markdown document in the form of [YAML](https://en.wikipedia.org/wiki/YAML) headers, allowing each document to be self-describing.
+
+For publishing, the Markdown text is converted to [HTML](https://en.wikipedia.org/wiki/HTML) using [Discount](http://www.pell.portland.or.us/~orc/Code/discount/) and wrapped in an HTML template for presentation.
+
+[UTF-8](https://en.wikipedia.org/wiki/UTF-8) (without BOM) and [Unix (LF) newlines](https://en.wikipedia.org/wiki/Newline) everywhere.
 
 More technical details are available under *Working with the source files*.
 
@@ -84,7 +88,7 @@ Let's get started.
 ...
 ```
 
-The document begins with a YAML section encapsulated by two sets of three dashes (`---`). This allows us to describe the document in a standard manner that computers can read. The YAML section is typically followed by a blank line for legibility.
+The document begins with a YAML section encapsulated by two sets of three dashes (`---`). This allows us to describe the document in a standard manner that both humans and computers can read. The YAML section is typically followed by a blank line for legibility.
 
 The rest of the document is Markdown. Anything you see in the published documentation is written here in this format.
 
@@ -95,32 +99,38 @@ In the example, the underlined "Quick start" text is a heading, and there is a l
 If you are unfamiliar with Markdown and would like to know more, GitHub has a guide called [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) that may be helpful.
 
 TODO: Notes on preferred Markdown style, features to avoid (ideally just disable them).  
-TODO: Notes on formatting multi-platform (Linux/OS X/Windows) sections?
+TODO: Notes on formatting multi-platform (Linux/OS X/Windows) sections
 
 
 ## Working with the source files
 
-If you're new to using Git or GitHub, check out [guides.github.com](https://guides.github.com/).
+### Getting the source
 
-Every copy of the source files includes the tools needed to convert them into a collection of HTML documents:
+If you're new to using Git or GitHub, check out [GitHub Guides](https://guides.github.com/) to get started.
 
-- Discount converts Markdown to HTML that you can view in your web browser
-- TODO: describe YAML tool if not processed by build script
-- TODO: describe build script, faux headers and footers to generate full local HTML?
+If you haven't already, [create a GitHub account](https://github.com/join) and fork [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/).
 
-If you haven't already, [create a GitHub account](https://github.com/join) and fork [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). Then clone your repository to your computer using `git clone --recursive` to make sure you get all the tools.
+Every copy of the source files includes third-party tools needed build the HTML documentation from the Markdown source. Make sure you clone your fork to your computer using `git clone --recursive` to get all the tools.
 
-Discount must be built from its source code before it can be used to convert our Markdown to HTML. Run the command `build-tools` from the `tools` directory to build it. TODO: update if other tools are required.
+### Building
 
-Once the tools are built, run the `build-docs` command from the main directory to copy all Markdown documents in the `source` directory to the `docs` directory and create HTML versions. Open `docs/index.html` in your web browser to view.
+Run `build-tools` from the main directory to build all associated third-party tools.
 
-Every time you make a change, you can preview it by running the `build-docs` command and opening the desired document in your web browser.
+Once the tools are built, run `build-docs` from the main directory to build the HTML documentation in the `docs` directory. You may now view and interact with the documentation by opening `docs/index.html` in your web browser.
 
+Security restrictions in modern web browsers may prevent web fonts from displaying properly when viewing local files. One workaround is to serve the files instead of opening them directly. From the `docs` directory, run `python -m http.server 8000 || python -m SimpleHTTPServer 8000` and then open `http://localhost:8000` in your web browser.
 
-## Pull requests
+### Editing
 
-TODO: Clearly list expectations for pull requests, very basic GitHub notes here.
-TODO: Notes on rejection.
+Before editing the documentation, first create and switch to an appropriately named local branch to track your changes (e.g. `git checkout master; git checkout --branch revise-download-instructions`). This allows you to make as many changes as you like without affecting the `master` branch, and helps identify groups of changes when submitting pull requests later on.
+
+To make a change, edit the appropriate file(s) in the `source` directory. Run `build-docs` again from the main directory to rebuild the HTML documentation in `docs` including your changes.
+
+### Submitting your changes
+
+When you've finished editing the documentation, commit your changes and push your local branch to your fork on GitHub. You may then open a pull request using the GitHub website. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
+
+While it is our goal to allow everyone to contribute, contributions not meeting the project's standards may be rejected. If this happens to you, don't fret. We usually provide reasons for rejection to give you the opportunity to correct anything out of place. Make sure to review the guidelines herein, and consider asking first before attempting to make sweeping changes.
 
 
 ## Publishing
@@ -132,4 +142,6 @@ TODO: Notes on rejection.
 
 ## More information
 
-TODO: Links to the HandBrake website, forum, more ways to contribute, etc.
+[HandBrake Website](https://handbrake.fr)  
+[HandBrake Community Forums](https://handbrake.fr/forum/)  
+[HandBrake on GitHub](https://github.com/HandBrake)
