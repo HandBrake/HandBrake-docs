@@ -114,6 +114,8 @@ Every copy of the source files includes third-party tools needed build the HTML 
 
 ### Building
 
+Copy the example configuration file `config-example.yaml` to `config.yaml`.
+
 Run `build-tools` from the main directory to build all associated third-party tools.
 
 Once the tools are built, run `build-docs` from the main directory to build the HTML documentation in the `docs` directory. You may now view and interact with the documentation by opening `docs/index.html` in your web browser.
