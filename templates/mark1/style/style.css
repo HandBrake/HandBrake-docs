@@ -58,7 +58,7 @@ article.docs {
     margin: 0 auto;
     padding: 10px 15px;
     max-width: 85%;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', -apple-system-body, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
     font-size: 15px;
     line-height: 25px;
 }
@@ -69,7 +69,7 @@ article.docs h3,
 article.docs h4,
 article.docs h5,
 article.docs h6 {
-    font-family: 'Ropa Sans';
+    font-family: 'Ropa Sans', -apple-system-headline, 'Lucida Grande', 'Droid Sans', Roboto, sans-serif;
     font-weight: 400;
     /*text-rendering: geometricPrecision;*/
     color: rgb(60,60,60);
