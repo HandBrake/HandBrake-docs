@@ -80,7 +80,7 @@ function build_source {
     # preprocess markdown to add implicit figures
     sed -E \
     -e 's|^!\[(.+)]\([ ]*(.+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' \
-    -i .sedbak "${SOURCE}"
+    -i.sedbak "${SOURCE}"
     # convert preprocessed markdown document to html
     "${MARKDOWN}" -fdlextra -ffencedcode -ffootnote -fgithubtags "${SOURCE}" > "${DOCUMENT_Content}"
     # copy main template
@@ -92,38 +92,38 @@ function build_source {
     # omit header and footer templates from license documents
     if [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
         sed -E \
-        -e 's|{{[ ]*template\.header[ ]*}}||g' \
-        -e 's|{{[ ]*template\.footer[ ]*}}||g' \
-        -i .sedbak "${DEST}.html"
+        -e 's|\{\{[ ]*template\.header[ ]*\}\}||g' \
+        -e 's|\{\{[ ]*template\.footer[ ]*\}\}||g' \
+        -i.sedbak "${DEST}.html"
     fi
     # inject header, content, footer
     sed -E \
-    -e '/{{[ ]*template\.header[ ]*}}/r '"${TEMPLATE_Header}"'' -e '/{{[ ]*template\.header[ ]*}}/d' \
-    -e '/{{[ ]*document\.content[ ]*}}/r '"${DOCUMENT_Content}"'' -e '/{{[ ]*document\.content[ ]*}}/d' \
-    -e '/{{[ ]*template\.footer[ ]*}}/r '"${TEMPLATE_Footer}"'' -e '/{{[ ]*template\.footer[ ]*}}/d' \
-    -i .sedbak "${DEST}.html"
+    -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header}" -e 'd;}' \
+    -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer}" -e 'd;}' \
+    -i.sedbak "${DEST}.html"
     # process custom tags
     sed -E \
-    -e 's|{{[ ]*document\.title[ ]*}}|'"${DOCUMENT_Title:-}"'|g' \
-    -e 's|{{[ ]*document\.project[ ]*}}|'"${DOCUMENT_Project:-}"'|g' \
-    -e 's|{{[ ]*document\.project-url[ ]*}}|'"${DOCUMENT_Project_URL:-}"'|g' \
-    -e 's|{{[ ]*document\.project-version[ ]*}}|'"${DOCUMENT_Project_Version:-}"'|g' \
-    -e 's|{{[ ]*document\.language[ ]*}}|'"${DOCUMENT_Language:-}"'|g' \
-    -e 's|{{[ ]*document\.language-code[ ]*}}|'"${DOCUMENT_Language_Code:-}"'|g' \
-    -e 's|{{[ ]*document\.text-encoding[ ]*}}|'"${DOCUMENT_Text_Encoding:-}"'|g' \
-    -e 's|{{[ ]*document\.authors[ ]*}}|'"${DOCUMENT_Authors:-}"'|g' \
-    -e 's|{{[ ]*document\.copyright[ ]*}}|'"${DOCUMENT_Copyright:-}"'|g' \
-    -e 's|{{[ ]*document\.license[ ]*}}|'"${DOCUMENT_License:-}"'|g' \
-    -e 's|{{[ ]*document\.license-abbr[ ]*}}|'"${DOCUMENT_License_Abbr:-}"'|g' \
-    -e 's|{{[ ]*document\.license-url[ ]*}}|'"${DOCUMENT_License_URL:-}"'|g' \
-    -e 's|{{[ ]*document\.redirect-url[ ]*}}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
-    -e 's|{{[ ]*base\.relpath[ ]*}}|'"${BASE_RELPATH:-}"'|g' \
-    -i .sedbak "${DEST}.html"
+    -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
+    -e 's|\{\{[ ]*document\.project[ ]*\}\}|'"${DOCUMENT_Project:-}"'|g' \
+    -e 's|\{\{[ ]*document\.project-url[ ]*\}\}|'"${DOCUMENT_Project_URL:-}"'|g' \
+    -e 's|\{\{[ ]*document\.project-version[ ]*\}\}|'"${DOCUMENT_Project_Version:-}"'|g' \
+    -e 's|\{\{[ ]*document\.language[ ]*\}\}|'"${DOCUMENT_Language:-}"'|g' \
+    -e 's|\{\{[ ]*document\.language-code[ ]*\}\}|'"${DOCUMENT_Language_Code:-}"'|g' \
+    -e 's|\{\{[ ]*document\.text-encoding[ ]*\}\}|'"${DOCUMENT_Text_Encoding:-}"'|g' \
+    -e 's|\{\{[ ]*document\.authors[ ]*\}\}|'"${DOCUMENT_Authors:-}"'|g' \
+    -e 's|\{\{[ ]*document\.copyright[ ]*\}\}|'"${DOCUMENT_Copyright:-}"'|g' \
+    -e 's|\{\{[ ]*document\.license[ ]*\}\}|'"${DOCUMENT_License:-}"'|g' \
+    -e 's|\{\{[ ]*document\.license-abbr[ ]*\}\}|'"${DOCUMENT_License_Abbr:-}"'|g' \
+    -e 's|\{\{[ ]*document\.license-url[ ]*\}\}|'"${DOCUMENT_License_URL:-}"'|g' \
+    -e 's|\{\{[ ]*document\.redirect-url[ ]*\}\}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
+    -e 's|\{\{[ ]*base\.relpath[ ]*\}\}|'"${BASE_RELPATH:-}"'|g' \
+    -i.sedbak "${DEST}.html"
     # postprocess
     sed -E \
     -e 's|<p><figure>|<figure>|' \
     -e 's|</figure></p>|</figure>|' \
-    -i .sedbak "${DEST}.html"
+    -i.sedbak "${DEST}.html"
 
     # clean up
     rm -f "${DEST}.yaml"
