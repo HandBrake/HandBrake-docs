@@ -56,8 +56,8 @@
 
 article.docs {
     margin: 0 auto;
-    padding: 40px 150px;
-    max-width: 650px;
+    padding: 10px 15px;
+    max-width: 85%;
     font-family: 'Open Sans';
     font-size: 15px;
     line-height: 25px;
@@ -138,18 +138,12 @@ article.docs footer .contributing {
 article.docs figure {
     display: inline-block;
     position: relative;
-    left: -10%;
+    left: -5%;
     margin: 1.33333em 0;
-    max-width: 45%;
-    vertical-align: top;
-}
-
-article.docs figure + figure {
-    margin-left: 5%;
 }
 
 article.docs figure img {
-    max-width: 100%;
+    max-width: 110%;
 }
 
 article.docs figcaption {
@@ -158,4 +152,59 @@ article.docs figcaption {
     font-size: 11px;
     line-height: 15px;
     color: rgb(120,120,120);
+}
+
+/* Wider than 390 */
+@media (min-width: 390px) {
+
+}
+
+/* Wider than 550 */
+@media (min-width: 550px) {
+
+}
+
+/* Wider than 750 */
+@media (min-width: 750px) {
+    article.docs {
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 650px;
+    }
+
+    article.docs figure {
+        max-width: 45%;
+        vertical-align: top;
+    }
+
+    article.docs figure + figure {
+        margin-left: 5%;
+    }
+
+    article.docs figure img {
+        max-width: 100%;
+    }
+}
+
+/* Wider than 1000 */
+@media (min-width: 1000px) {
+    article.docs {
+        padding-left: 150px;
+        padding-right: 150px;
+        max-width: 650px;
+    }
+
+    article.docs figure {
+        left: -10%;
+    }
+}
+
+/* @2x */
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+
+}
+
+/* @3x */
+@media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi) {
+
 }
