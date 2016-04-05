@@ -8,13 +8,19 @@
   font-family: 'Ropa Sans';
   font-style: normal;
   font-weight: 400;
+  /*
   src: local('Ropa Sans'), local('RopaSans-Regular'), url('../fonts/ropasans-regular-1.002.woff2') format('woff2'), url('../fonts/ropasans-regular-1.002.woff') format('woff');
+  */
+  src: url('../fonts/ropasans-regular-1.002.woff2') format('woff2'), url('../fonts/ropasans-regular-1.002.woff') format('woff');
 }
 @font-face {
   font-family: 'Ropa Sans';
   font-style: italic;
   font-weight: 400;
+  /*
   src: local('Ropa Sans Italic'), local('RopaSans-Italic'), url('../fonts/ropasans-italic-1.002.woff2') format('woff2'), url('../fonts/ropasans-italic-1.002.woff') format('woff');
+  */
+  src: url('../fonts/ropasans-italic-1.002.woff2') format('woff2'), url('../fonts/ropasans-italic-1.002.woff') format('woff');
 }
 
 /**
