@@ -71,7 +71,7 @@ article.docs h5,
 article.docs h6 {
     font-family: 'Ropa Sans';
     font-weight: 400;
-    text-rendering: geometricPrecision;
+    /*text-rendering: geometricPrecision;*/
     color: rgb(60,60,60);
 }
 
