@@ -142,21 +142,21 @@ May affect compatiblity! Use a preset!
 - Containers
   - Known issue: MP4 edit lists
 - Video
-  - Codecs
-  - x264 presets, tunes, and custom settings
-  - x264 profile and level
-  - Constant quality versus average bit rate
+  - [Codecs](technical/video-codecs.html) 
+  - [x264 presets, tunes, and custom settings](technical/video-x264-presets-tunes.html) 
+  - [x264 profile and level](technical/video-x264-profiles-levels.html) 
+  - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html) 
   - VFR/PFR, CFR, custom frame rates
 - Advanced picture and filters
   - Anamorphic modes
   - Modulus
   - Custom filter settings
 - Audio
-  - Codecs: autodetection, read/passthru
+  - [Codecs](technical/audio-codecs.html)
     - Known issue: Dolby Atmos
-  - Gain
-  - DRC
-  - Mixdown
+  - [Gain](technical/audio-gain.html)
+  - [DRC](technical/audio-drc.html)
+  - [Mixdown](technical/audio-mixdowns.html)
 - Subtitles
   - Formats
 - Advanced preferences
