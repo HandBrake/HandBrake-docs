@@ -50,11 +50,9 @@ Now HandBrake is up and running. You should not have to repeat the Gatekeeper pr
 
 ## Launching HandBrake
 
-You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon.
+You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon].
 
-![HandBrake icon](../images/icon.png)
-
-Read about the icon and more at HandBrake lore (TODO: link).
+![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
 ## Next steps
 
@@ -63,3 +61,5 @@ Continue to [Checking for updates](check-for-updates.html).
 [^nightly-builds]: Nightly builds are based on HandBrake's latest development code, including new and experimental features that may be unstable or significantly different than the latest release version. Although everyone is welcome to try them, nightly builds are best suited for experienced users and developers.
 
 [^gatekeeper]: These instructions are taken directly from Apple's OS X Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/kb/PH21769?locale=en_US) and [here](https://support.apple.com/en-us/HT202491).
+
+[^about-icon]: Read about the icon and more at HandBrake lore (TODO: link).
