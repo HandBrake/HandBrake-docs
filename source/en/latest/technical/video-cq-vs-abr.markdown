@@ -26,8 +26,8 @@ HandBrake supports two modes of encoding video.
 
  
 
-Constant Quality
-----------------
+## Constant Quality
+
 
 ### Benefits over Average Bitrate
 
@@ -64,6 +64,8 @@ quality. It's simply encoded more efficiently.
 The Quality slider ranges from (Low Quality) 51 to 0 (High Quality) For good
 quality output at reasonable file sizes, the following values are recommended:
 
+Recommended settings for x264 are:
+
 -   Standard Definition (e.g DVD's) Use an RF value of around 20 +/- 1 As an
     example using the AppleTV2 preset at RF20, with 20 different sources, the
     average size was 925MB per hour of video. (Min: 625MB/h Max:1,503MB/hr)
@@ -92,7 +94,7 @@ any better.
 
 See, DVDs use lossy compression to squeeze down the raw video the studios use to
 make them -- sort of like a quality level of RF 20. It throws away detail. When
-!HandBrake uncompresses the video prior to conversion, the quality lost when the
+HandBrake uncompresses the video prior to conversion, the quality lost when the
 DVD was made is still gone. When you use RF 0 quality with x264, you're telling
 it to losslessly preserve the decoded, uncompressed video feed, not to
 losslessly preserve the DVD. Both have the same picture quality, but the
@@ -108,8 +110,7 @@ you do go higher, your output will be larger than your input!
 
  
 
-Average Bitrate
----------------
+## Average Bitrate
 
 Unless you really need to aim for a target filesize (which we recommend
 against), it is highly recommended that you use Constant Quality.

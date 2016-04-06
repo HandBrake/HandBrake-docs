@@ -74,7 +74,7 @@ Most devices (and sometimes, software decoders) support a "maximum" level. When
 the video's specifications exceed that level's constraints, the decoder won't be
 able to decode the video properly (it may simply refuse to play the file).
 
-!HandBrake's H.264 encoder, x264, sets the appropriate level automatically based
+HandBrake's H.264 encoder, x264, sets the appropriate level automatically based
 on all the other settings. To make sure your video doesn't exceed a specific
 level, you simply have to make sure the other parameters fit within the
 constraints imposed by the level.

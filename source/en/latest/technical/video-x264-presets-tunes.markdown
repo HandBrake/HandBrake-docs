@@ -17,9 +17,7 @@ x264 Presets and Tunes
 ======================
 
  
-
-x264 Presets
-------------
+## x264 Presets
 
 x264 exposes a preset and tune system. Presets range from:
 
@@ -32,12 +30,11 @@ x264 exposes a preset and tune system. Presets range from:
 
 Typically, it's recommended to use the Very Fast to Slow settings range for best
 results, or one of the slower options if you don't mind the speed loss. Medium
-is a good balance and most of !HandBrakes presets use this option.
+is a good balance and most of HandBrakes presets use this option.
 
  
 
-x264 Tunes
-----------
+## x264 Tunes
 
 The x264 tune options assign some additional options which will optimize the
 encoder for certain types of content.

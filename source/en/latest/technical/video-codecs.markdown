@@ -45,12 +45,12 @@ Video Codecs
         encodes and better filesizes over H.264
 
     -   Note, encoding to H.265 is a significantly more complicated process, so
-        it is expected to be slower than !HandBrake's H.264 encoders.
+        it is expected to be slower than HandBrake's H.264 encoders.
 
     -   Playback support is rather limited at the moment, particularly with
         mobile devices but this should improve drastically throughout 2015/16
 
--   MPEG-4 (ffmpeg): !HandBrake offers FFmpeg's MPEG-4 part 2 encoder for fast,
+-   MPEG-4 (ffmpeg): HandBrake offers FFmpeg's MPEG-4 part 2 encoder for fast,
     low quality encoding.
 
     -   Better support from older devices such as DVD players and cheap "MP4
@@ -58,7 +58,7 @@ Video Codecs
 
     -   Lower quality than the H.264 encode option but typically faster encodes.
 
--   MPEG-2 (ffmpeg): !HandBrake offers FFmpeg's MPEG-2 part 2 encoder for fast,
+-   MPEG-2 (ffmpeg): HandBrake offers FFmpeg's MPEG-2 part 2 encoder for fast,
     low quality encoding.
 
     -   Fast Encoding, but requires larger files than MPEG-4 for the same
@@ -69,7 +69,7 @@ Video Codecs
     -   A free and open video codec which offers significant improvements over
         Theora.
 
--   VP3 (Theora): !HandBrake can also encode Theora video. Theora video with
+-   VP3 (Theora): HandBrake can also encode Theora video. Theora video with
     Vorbis audio in the Matroska container represents a truly free option for
     multimedia encoding.
 
