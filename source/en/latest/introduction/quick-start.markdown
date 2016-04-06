@@ -40,9 +40,11 @@ Select the `Open Source` button on the toolbar to browse your files for a video 
 
 ## Select a title
 
-Some `Sources` may contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use. Many `Sources` have only one `Title`, while Blu-ray and DVD sources often have multiple `Titles`.
+Some `Sources` may contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use.
 
 ![Selecting a title](../images/select-title.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+
+Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multiple `Titles`.
 
 ## Select a preset
 
@@ -64,13 +66,11 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
-![Starting an encode](../images/start-button.png)
-
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
 
-![Encoding complete alert](../images/encode-complete.png)
+![Encode progress](../images/encode-progress.png "HandBrake reports its progress during encoding.")
 
-![Destination video file icon](../images/destination-file-icon.png)
+![Encoding complete alert](../images/encode-complete.png "HandBrake shows an alert when finished encoding.")
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 
