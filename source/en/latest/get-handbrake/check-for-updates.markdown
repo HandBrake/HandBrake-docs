@@ -18,7 +18,7 @@ Checking for updates
 
 HandBrake can let you know when a newer version is available, and even automatically download and install available updates.
 
-Before updating, make sure there are pending encodes in the `Queue` and make note of any custom presets you have created, as they may not be compatible with the newer version.
+Before updating, make sure there are no pending encodes in the `Queue` and make note of any custom presets you have created, as they may not be compatible with the newer version.
 
 From the main menu, navigate to `HandBrake` and select `Check for Updates...`.
 
