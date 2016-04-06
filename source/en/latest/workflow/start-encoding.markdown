@@ -30,15 +30,15 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
-![Main window toolbar](../images/toolbar.png)
+![Main window toolbar](../images/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-![Starting an encode](../images/start-button.png)
+![Starting an encode](../images/start-button.png "The Start button begins encoding.")
 
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
 
-![Encoding complete alert](../images/encode-complete.png)
+![Encode progress](../images/encode-progress.png "HandBrake reports its progress during encoding.")
 
-![Destination video file icon](../images/destination-file-icon.png)
+![Encoding complete alert](../images/encode-complete.png "HandBrake shows an alert when finished encoding.")
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 
