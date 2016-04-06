@@ -130,14 +130,13 @@ article.docs footer .contributing {
 }
 
 article.docs figure {
-    display: inline-block;
-    position: relative;
-    left: -5%;
-    margin: 1.33333em 0;
+    display: block;
+    margin: 1.33333em auto;
+    width: 100%;
 }
 
 article.docs figure img {
-    max-width: 110%;
+    max-width: 100%;
 }
 
 article.docs figcaption {
@@ -155,7 +154,9 @@ article.docs figcaption {
 
 /* Wider than 550 */
 @media (min-width: 550px) {
-
+    article.docs figure {
+        width: 80%;
+    }
 }
 
 /* Wider than 750 */
@@ -163,16 +164,20 @@ article.docs figcaption {
     article.docs {
         padding-left: 40px;
         padding-right: 40px;
-        max-width: 650px;
+        max-width: 600px;
     }
 
     article.docs figure {
-        max-width: 45%;
+        display: inline-block;
+        margin: 1.33333em 0;
+        position: relative;
+        left: -5%;
+        max-width: 42%;
         vertical-align: top;
     }
 
     article.docs figure + figure {
-        margin-left: 5%;
+        margin-left: 3%;
     }
 
     article.docs figure img {
@@ -190,6 +195,11 @@ article.docs figcaption {
 
     article.docs figure {
         left: -10%;
+        max-width: 45%;
+    }
+
+    article.docs figure + figure {
+        margin-left: 5%;
     }
 }
 
