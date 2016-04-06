@@ -30,4 +30,4 @@ If an update is available, you will be given the opportunity to install it right
 
 ## Next steps
 
-Continue to [Opening a video](../workflow/open-video.html).
+Continue to [Opening a video](../workflow/open-video-source.html).

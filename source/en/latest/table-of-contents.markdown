@@ -33,7 +33,7 @@ Table of contents
 
 ## Making videos
 
-- [Opening a video](workflow/open-video.html) - How to get your videos into HandBrake
+- [Opening a video source](workflow/open-video-source.html) - How to get your videos into HandBrake
 - [Selecting a preset](workflow/select-preset.html) - Tailored settings for instant compatibility with many devices
 - [Adjusting quality](workflow/adjust-quality.html) - Easily increase visual quality or reduce file size
   <!-- TODO: To clean up a poor-looking source video, see restoration -->
