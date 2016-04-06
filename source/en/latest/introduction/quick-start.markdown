@@ -28,7 +28,7 @@ Typically, you can launch HandBrake by quickly clicking twice (double-clicking) 
 
 ![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
-## Open your original video
+## Open your existing video
 
 HandBrake calls the video you already have the `Source`.
 
