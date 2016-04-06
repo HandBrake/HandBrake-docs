@@ -64,8 +64,6 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
-![Main window toolbar](../images/toolbar.png)
-
 ![Starting an encode](../images/start-button.png)
 
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
