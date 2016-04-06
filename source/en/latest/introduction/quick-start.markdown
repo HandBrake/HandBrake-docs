@@ -24,7 +24,7 @@ Let's get started.
 
 ## Launch HandBrake
 
-Typically, you can launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon.
+Launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon.
 
 ![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
