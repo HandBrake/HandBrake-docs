@@ -80,6 +80,6 @@ Congratulations! You just encoded your first video using HandBrake. It's now rea
 
 ## Next steps
 
-If you didn't get a video file as expected, encountered an error, or had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Getting help](../help/index.html).
+If you didn't get a video file as expected, encountered an error, or had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Troubleshooting common issues](../help/troubleshooting-common-issues.html).
 
 Continue to [About HandBrake](about.html).

@@ -116,10 +116,10 @@ May affect compatiblity! Use a preset!
 
 ## Getting help
 
-- Troubleshooting common issues
+- [Troubleshooting common issues](help/troubleshooting-common-issues.html) - What to do if something goes wrong
 - [Community support](help/community-support.html) - Help from real people
 - Activity log
-  - Required for support, see Getting help
+  - Required for support
 
 
 ## HandBrake lore
