@@ -34,7 +34,7 @@ HandBrake calls the video you already have the `Source`.
 
 Select the `Open Source` button on the toolbar to browse your files for a video to open. You may also drag your `Source` video onto HandBrake's main window. 
 
-![Open Source dialog](../images/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
+![Browsing for a video source to open](../images/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
 
 ![Opening a video source via drag and drop](../images/open-source-drag-drop.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
 
@@ -50,15 +50,19 @@ Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multi
 
 HandBrake provides a number of settings `Presets` to make your new video work well with your playback devices and software. For instance, if you have a third generation Apple TV, you may wish to select the `AppleTV 3` preset. The default `Normal` preset is fast and relatively compatible.
 
-![Selecting a preset](../images/preset-selection.png)
+![Selecting a preset](../images/select-preset.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
+
+![Toggling the presets list](../images/toggle-presets-button.png "If the presets list is not visible, select the Toggle Presets button on the toolbar.")
 
 `Presets` can affect compatibility (whether your video will work with your devices and software) and encoding time. Learn more: [Selecting a preset](../workflow/select-preset.html)
 
 ## Select a destination
 
-`Destination` is where your new video will go. You can select the `Browse...` button to choose a new location and name, or type it directly in the box.
+The `Destination` is where your new video will go. You can select the `Browse...` button to choose a different location and name, or type it directly in the box.
 
-![Selecting a destination](../images/destination.png)
+![Selecting a destination](../images/destination-field.png "The destination is where your new video will go.")
+
+![Browsing for a destination](../images/destination-dialog.png "Select the browse button to choose a different location and name.")
 
 Please take special care to *note your destination*. Otherwise, you won't be able to find your new video. You can move it later if you desire.
 
