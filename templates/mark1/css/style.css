@@ -147,6 +147,10 @@ article.docs figcaption {
     color: rgb(120,120,120);
 }
 
+.featherlight .featherlight-content {
+    border-radius: 3px;
+}
+
 /* Wider than 390 */
 @media (min-width: 390px) {
 
