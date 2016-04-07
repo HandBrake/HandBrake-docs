@@ -42,7 +42,7 @@ Select the `Open Source` button on the toolbar to browse your files for a video 
 
 Some `Sources` may contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use.
 
-![Selecting a title](../images/select-title.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+![Selecting a title](../images/title-selection.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
 
 Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multiple `Titles`.
 
@@ -50,7 +50,7 @@ Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multi
 
 HandBrake provides a number of settings `Presets` to make your new video work well with your playback devices and software. For instance, if you have a third generation Apple TV, you may wish to select the `AppleTV 3` preset. The default `Normal` preset is fast and relatively compatible.
 
-![Selecting a preset](../images/select-preset.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
+![Selecting a preset](../images/preset-selection.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
 
 ![Toggling the presets list](../images/toggle-presets-button.png "If the presets list is not visible, select the Toggle Presets button on the toolbar.")
 
