@@ -17,7 +17,7 @@ Activity Log
 =================
 
 HandBrake includes extensive logging of what it and it's various components are doing.  
-This log cotains information about the source file, encode parameneters, any errors and other relevant information. 
+This log contains information about the source file, encode parameters, any errors and other relevant information. 
 
 
 ## Accessing the Log Window
@@ -30,7 +30,7 @@ All of the HandBrake GUI's contain an "Activity Window" which can be accessed on
 ## Logging to Disk
 
 While HandBrake is scanning a source, or encoding a file, the log file is being written out to the drive at the same time.  
-This way, if the application crashes, you can see what was happening when this event occured.
+This way, if the application crashes, you can see what was happening when this event occurred.
 
 ### Mac OS
 
@@ -38,9 +38,9 @@ The log files are stored in the following folder:
 ~/Library/Application Support/HandBrake/EncodeLogs/
 
 Important Note: starting with OS X 10.7 "Lion", the ~/Library/ directory is hidden and can't be accessed using regular Finder navigation. 
-You can open the folder directly from the Activity Window (see above), or use the Finder's Go > Go to Folder� menu item (setting it to ~/Library/Application Support/HandBrake/).
+You can open the folder directly from the Activity Window (see above), or use the Finder's Go > Go to Folder menu item (setting it to ~/Library/Application Support/HandBrake/).
 
-HandBrake-activitylog.txt is the session log and is overwritten each time the applicaiton starts.
+HandBrake-activitylog.txt is the session log and is overwritten each time the application starts.
 
 Individual activity logs are saved in the file format "mymoviename.txt YYYY-MM-DD HH-MM-SS" and unlike the session based logs are not overwritten so should serve as a history of encodes you have done with HandBrake. 
 One this to keep in mind, currently there is not function which removes individual encode logs, so if you wish to delete any you will need to remove them manually.
@@ -55,7 +55,7 @@ The log files are stored in the following folder:
 * Windows 7: C:\Users\<Your Username>\AppData?\Roaming\HandBrake\logs
 * Windows Vista: C:\Users\<username>\Application Data\HandBrake\logs
 
-There is a session activity  activity_logXXXX.txt where XXXX is the process ID. 
+There is a session activity log named:  activity_logXXXX.txt where XXXX is the process ID. 
 While it is possible that this file can be overwritten it's fairly unlikely HandBrake will restart with the same process ID.
 
 In addition there are per encode logs in the format  of "Source Date Time"
@@ -69,7 +69,7 @@ The current session is written to the file "Activity.log".
 
 Typically, this will be in the directory "$(HOME)/.config/ghb", but it is possible for the system to have a different default data directory. So the full path is also shown at the top of the activity window in the gui. 
 
-A history of all encodes are also stored in separate log files. These can typically be found in the directory "$(HOME)/.config/ghb/EncodeLogs". These are text files, so you can view them with your favorite text editing/viewing tool.
+A history of all encodes are also stored in separate log files. These can typically be found in the directory "$(HOME)/.config/ghb/EncodeLogs". These are text files, so you can view them with your favourite text editing/viewing tool.
 
 ### Command Line Interface (CLI)
 
