@@ -20,14 +20,10 @@ HandBrake supports two modes of encoding video.
 
 -   With the average bitrate, you control the size of the output file but give
     up control over the video's quality.
-
 -   Constant quality mode does the opposite; you specify a quality level and
     HandBrake adjusts the bitrate (that is, the size) to meet it.
 
- 
-
 ## Constant Quality
-
 
 ### Benefits over Average Bitrate
 
@@ -108,8 +104,6 @@ you do go higher, your output will be larger than your input!
 
 [TODO]
 
- 
-
 ## Average Bitrate
 
 Unless you really need to aim for a target filesize (which we recommend
@@ -121,14 +115,10 @@ encoder will vary the number of bits given to any one portion of the video, but
 try to keep everything at the average you set.
 
 -   The video bitrate can be set on the "Video Tab"
-
 -   It is recommended that you use 2-Pass encoding.
-
 -   This will provide better quality and better bit-rate distribution. A single
     pass will lead to sub-optimal results.
-
     -   The "Turbo" checkbox will make the first pass quicker at the expense of
         quality. Most of the time this loss is minimal and not appreciable by
         the viewer.
-
 -   The downside is it can take up to twice as long to encode a file.

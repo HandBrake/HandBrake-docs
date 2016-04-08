@@ -13,10 +13,8 @@ Authors: Bradley Sepos
 Project_URL: "https://handbrake.fr/"
 ---
 
-x264 - Profiles and Levels
+Profiles and Levels
 ==========================
-
- 
 
 H.264 profiles
 --------------
@@ -33,26 +31,18 @@ profile and level, so you can simply set the option that matches your device for
 the best chance of compatibility.
 
 -   Auto (Recommended)
-
     -   This will automatically set the profile based on all the options that
         have been selected.
-
     -   It is recommended that you use this option unless you need to set a
         profile to ensure compatibility for a particular device.
-
 -   Baseline
-
     -   Baseline encodes are the most basic form of encoding. While decoding is
         much easier, it may also require much higher bit-rates to maintain the
         same level of quality.
-
 -   Main
-
     -   The middle ground. Most modern / current devices will support this
         profile.
-
 -   High Profile
-
     -   For best quality and filesize at the expense of CPU time in both decode
         and encode.
 
@@ -60,15 +50,12 @@ Note that setting a profile does not mean your encoded file will end up being
 that profile. It simply prevents options being used that would breach that
 profile constraint.
 
- 
-
 H.264 Levels
 ------------
-
 The levels are another form of constraints that define things like maximum
 bitrates, framerates and resolution etc. The wikipedia article lists the
 relevant information for each level.
-http://en.wikipedia.org/wiki/H.264/MPEG-4\_AVC\#Levels
+https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC#Levels
 
 Most devices (and sometimes, software decoders) support a "maximum" level. When
 the video's specifications exceed that level's constraints, the decoder won't be
@@ -81,6 +68,3 @@ constraints imposed by the level.
 
 It is recommended that you leave this setting on "Auto" unless you require to
 set it for device compatibility.
-
-For a more detailed guide, see
-https://forum.handbrake.fr/viewtopic.php?f=6&t=19368
