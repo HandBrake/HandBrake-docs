@@ -44,24 +44,24 @@ Table of contents
 
 ## Advanced features
 
-- Multiple jobs using the queue
-- Custom presets
+- [Multiple jobs using the queue](advanced/batch-queue.html)   
+- [Custom presets](advanced/custom-presets.html) 
   - Modifying audio and subtitle defaults
-- Resizing video
+- [Resizing video](advanced/resizing-video.html) 
   - Downscaling only
-- Preserving surround sound
+- [Surround sound](advanced/surround-sound.html)
   - Formats: ac3, dts, etc.
   - Passthru: devices and compatiblity
   - Dynamic range control
   - Downmixing
-- Adding subtitles
+- [Adding subtitles](advanced/subtitles.html) 
   - Language or forced
   - Burned-in or text (source dependent)
   - Adding external subtitles
-- Chapter markers
+- [Chapter markers](advanced/chapter-markers.html) 
   - Renaming chapters
   - Importing and exporting chapters
-- Post-processing metadata with Subler, others?
+- [Post-processing metadata](advanced/post-processing.html) 
 
 
 ## Restoration and enhancement
@@ -89,29 +89,27 @@ Table of contents
 
 ## Advanced features part 2
 
-May affect compatiblity! Use a preset!
-
-- Formats/containers
-- Video source type
+- [Formats/containers](advanced2/open-video-source.html) 
+- [Video source type](advanced2/video-sources.html) 
   - x264 tune
     - May affect compatibility
-- Video encoding speed
+- [Video encoding speed](advanced2/video-encoding-performance.html) 
   - Quality affects speed
   - x264 preset
     - May affect compatibility
-- Video angle
-- Point-to-point
-- Frame rate
+- [Video angles](advanced2/video-angles.html) 
+- [Point-to-point](advanced2/point-to-point.html) 
+- [Frame rate](advanced2/frame-rates.html) 
   - Same as source VFR/CFR
   - Fixed VFR (peak) or CFR
-- Audio quality (bitrate)
+- [Audio quality](advanced2/audio-quality.html) 
   - Affects file size, though not as much as video quality
   - Adjustments may impact compatibility (recommend to leave alone)
-- Audio defaults
-- Subtitle defaults
-- Automatic file naming
-- Web optimized
-- iPod 5G support
+- [Audio defaults](advanced2/audio-defaults.html) 
+- [Subtitle defaults](advanced2/subtitle-defaults.html) 
+- [Automatic file naming](advanced2/automatic-file-naming.html) 
+- [Web optimized](advanced2/web-optimised.html) 
+- [iPod 5G support](advanced2/old-ipod-support.html) 
 
 
 ## Getting help
@@ -130,7 +128,8 @@ May affect compatiblity! Use a preset!
 
 ## CLI documentation
 
-- CLI documentation
+- [Command line guide](cli/cli-guide.html)
+- [CLI options](cli/cli-options.html)
 
 
 ## Technical documentation
