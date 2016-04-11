@@ -56,7 +56,7 @@ function check_dependencies {  # takes 1 argument
 # builds document(s) from a single source file
 function build_source {
 
-    local SOURCE DEST DEST_NAME YAML DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content
+    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content
     SOURCE="${1}"
     BASE_RELPATH="${SOURCE#$DOCS_DIR/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
