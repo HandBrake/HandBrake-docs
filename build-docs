@@ -80,6 +80,13 @@ function build_source {
         eval $(parse_yaml "${DEST}.yaml" "DOCUMENT_")
     fi
 
+    # process authors
+    DOCUMENT_Authors=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /')
+    DELIM_NUM=$(grep -o ',' <<< "${DOCUMENT_Authors}" | wc -l)
+    if [[ "${DELIM_NUM}" -eq 1 ]]; then
+        DOCUMENT_Authors=$(echo "${DOCUMENT_Authors}" | sed -e  's/,//')
+    fi
+
     # preprocess markdown to add implicit figures
     sed -E \
     -e 's|^!\[(.+)]\([ ]*(.+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' \
