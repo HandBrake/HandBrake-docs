@@ -1,4 +1,7 @@
 ---
+Base:     base.html
+Meta:     meta.html
+Title:    title.html
 Header:   header.html
 Document: document.html
 Footer:   footer.html
