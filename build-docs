@@ -93,18 +93,25 @@ function build_source {
     -i.sedbak "${SOURCE}"
     # convert preprocessed markdown document to html
     "${MARKDOWN}" -fdlextra -ffencedcode -ffootnote -fgithubtags "${SOURCE}" > "${DOCUMENT_Content}"
-    # copy main template
-    if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]]; then
-        cp "${TEMPLATE_Redirect}" "${DEST}.html"
+    # select output type
+    if [[ "${CONFIG_Embeddable:-}" != true ]]; then
+        if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]]; then
+            # full html redirect only
+            cp "${TEMPLATE_Redirect}" "${DEST}.html"
+        else
+            # full html content
+            cp "${TEMPLATE_Base}" "${DEST}.html"
+            # inject meta, title, styles, document, scripts
+            sed -E \
+            -e '/\{\{[ ]*template\.meta[ ]*\}\}/{r '"${TEMPLATE_Meta}" -e 'd;}' \
+            -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title}" -e 'd;}' \
+            -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document}" -e 'd;}' \
+            -i.sedbak "${DEST}.html"
+        fi
     else
-        cp "${TEMPLATE_Base}" "${DEST}.html"
+        # partial html
+        cp "${TEMPLATE_Document}" "${DEST}.html"
     fi
-    # inject meta, title, styles, document, scripts
-    sed -E \
-    -e '/\{\{[ ]*template\.meta[ ]*\}\}/{r '"${TEMPLATE_Meta}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document}" -e 'd;}' \
-    -i.sedbak "${DEST}.html"
     # omit header and footer templates from license documents
     if [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
         sed -E \
