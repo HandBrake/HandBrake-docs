@@ -2,4 +2,6 @@
 Redirect_URL: latest/
 ---
 
-Redirecting to [latest/](latest/)...
+Documentation is currently only available for HandBrake Latest.
+
+Continue to [latest/](latest/)...

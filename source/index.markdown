@@ -1,5 +1,7 @@
 ---
-Redirect_URL: en/latest/
+Redirect_URL: en/
 ---
 
-Redirecting to [en/latest/](en/latest/)...
+Documentation is currently only available in English.
+
+Continue to [en/](en/)...
