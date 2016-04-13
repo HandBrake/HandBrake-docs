@@ -112,8 +112,8 @@ function build_source {
         # partial html
         cp "${TEMPLATE_Document}" "${DEST}.html"
     fi
-    # omit header and footer templates from license documents
-    if [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
+    # omit header and footer templates from redirects and license documents
+    if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]] || [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
         sed -E \
         -e 's|\{\{[ ]*template\.header[ ]*\}\}||g' \
         -e 's|\{\{[ ]*template\.footer[ ]*\}\}||g' \
