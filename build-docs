@@ -97,8 +97,14 @@ function build_source {
     if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]]; then
         cp "${TEMPLATE_Redirect}" "${DEST}.html"
     else
-        cp "${TEMPLATE_Document}" "${DEST}.html"
+        cp "${TEMPLATE_Base}" "${DEST}.html"
     fi
+    # inject meta, title, styles, document, scripts
+    sed -E \
+    -e '/\{\{[ ]*template\.meta[ ]*\}\}/{r '"${TEMPLATE_Meta}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document}" -e 'd;}' \
+    -i.sedbak "${DEST}.html"
     # omit header and footer templates from license documents
     if [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
         sed -E \
@@ -112,7 +118,7 @@ function build_source {
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
-    # inject scripts and styles
+    # process custom tags
     TEMPLATE_Scripts=""
     for SCRIPT in ${TEMPLATE_Scripts_array[@]}; do
         TEMPLATE_Scripts+="<script src=\"${BASE_RELPATH}${SCRIPT}\" charset=\"utf-8\"></script>"
@@ -121,7 +127,6 @@ function build_source {
     for STYLE in ${TEMPLATE_Styles_array[@]}; do
         TEMPLATE_Styles+="<link rel=\"stylesheet\" href=\"${BASE_RELPATH}${STYLE}\" />"
     done
-    # process custom tags
     sed -E \
     -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_Scripts:-}"'|g' \
     -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
@@ -174,6 +179,9 @@ TEMPLATE_DIR+="/${CONFIG_Template}"
 TEMPLATE_CONFIG="${TEMPLATE_DIR}/template.yaml"
 if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     eval $(parse_yaml "${TEMPLATE_CONFIG}" "TEMPLATE_")
+    TEMPLATE_Base="${TEMPLATE_DIR}/${TEMPLATE_Base}"
+    TEMPLATE_Meta="${TEMPLATE_DIR}/${TEMPLATE_Meta}"
+    TEMPLATE_Title="${TEMPLATE_DIR}/${TEMPLATE_Title}"
     TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
     TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
