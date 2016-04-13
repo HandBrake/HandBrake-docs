@@ -56,7 +56,7 @@ function check_dependencies {  # takes 1 argument
 # builds document(s) from a single source file
 function build_source {
 
-    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content
+    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content TEMPLATE_Scripts TEMPLATE_Styles
     SOURCE="${1}"
     BASE_RELPATH="${SOURCE#$DOCS_DIR/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
@@ -112,8 +112,19 @@ function build_source {
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
+    # inject scripts and styles
+    TEMPLATE_Scripts=""
+    for SCRIPT in ${TEMPLATE_Scripts_array[@]}; do
+        TEMPLATE_Scripts+="<script src=\"${BASE_RELPATH}${SCRIPT}\" charset=\"utf-8\"></script>"
+    done
+    TEMPLATE_Styles=""
+    for STYLE in ${TEMPLATE_Styles_array[@]}; do
+        TEMPLATE_Styles+="<link rel=\"stylesheet\" href=\"${BASE_RELPATH}${STYLE}\" />"
+    done
     # process custom tags
     sed -E \
+    -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_Scripts:-}"'|g' \
+    -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
     -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
     -e 's|\{\{[ ]*document\.project[ ]*\}\}|'"${DOCUMENT_Project:-}"'|g' \
     -e 's|\{\{[ ]*document\.project-url[ ]*\}\}|'"${DOCUMENT_Project_URL:-}"'|g' \
@@ -158,18 +169,22 @@ else
     exit 1
 fi
 
-# check template
+# parse template config
 TEMPLATE_DIR+="/${CONFIG_Template}"
-if [[ ! -d "${TEMPLATE_DIR}" ]] || [[ ! -e "${TEMPLATE_DIR}/document.html" ]]; then
-    echo "Template '${CONFIG_Template}' not found." >&2
+TEMPLATE_CONFIG="${TEMPLATE_DIR}/template.yaml"
+if [[ -e "${TEMPLATE_CONFIG}" ]]; then
+    eval $(parse_yaml "${TEMPLATE_CONFIG}" "TEMPLATE_")
+    TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
+    TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
+    TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
+    TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
+    TEMPLATE_Fonts_array=($(echo "${TEMPLATE_Fonts}" | sed -e "s/,[ ]*/ /g"))
+    TEMPLATE_Scripts_array=($(echo "${TEMPLATE_Scripts}" | sed -e "s/,[ ]*/ /g"))
+    TEMPLATE_Styles_array=($(echo "${TEMPLATE_Styles}" | sed -e "s/,[ ]*/ /g"))
+else
+    echo "Template configuration file not found." >&2
     exit 1
 fi
-
-# template vars
-TEMPLATE_Document="${TEMPLATE_DIR}/document.html"
-TEMPLATE_Header="${TEMPLATE_DIR}/header.html"
-TEMPLATE_Footer="${TEMPLATE_DIR}/footer.html"
-TEMPLATE_Redirect="${TEMPLATE_DIR}/redirect.html"
 
 # build single
 if [[ "${1:-}" != "" ]]; then
@@ -180,7 +195,12 @@ fi
 # build all
 mkdir -p "${DOCS_DIR}"
 $(GLOBIGNORE='*.gitkeep'; rm -rf "${DOCS_DIR}"/*)
-cp -R "${TEMPLATE_DIR}"/css "${TEMPLATE_DIR}"/fonts "${TEMPLATE_DIR}"/js "${SOURCE_DIR}"/* "${DOCS_DIR}"/
+cp -R "${SOURCE_DIR}"/* "${DOCS_DIR}"/
+for REF in ${TEMPLATE_Fonts_array[@]} ${TEMPLATE_Scripts_array[@]} ${TEMPLATE_Styles_array[@]}; do
+    FILE="${REF%\?*}"
+    mkdir -p "${DOCS_DIR}/${FILE%/*}"
+    cp "${TEMPLATE_DIR}/${FILE}" "${DOCS_DIR}/${FILE}"
+done
 SOURCES=($(find "${DOCS_DIR}" | sed 's/^\.\///' | grep -i '.markdown'))
 if [[ "${PARALLEL:-}" != "" ]]; then
     export -f build_source
