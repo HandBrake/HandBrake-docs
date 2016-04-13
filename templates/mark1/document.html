@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ document.authors }}" />
     <title>{{ document.project }} Documentation &mdash; {{ document.title }}</title>
-    <link rel="stylesheet" type="text/css"  href="{{ base.relpath }}css/vendor/featherlight/featherlight-1.4.0.min.css" />
-    <link rel="stylesheet" type="text/css" href="{{ base.relpath }}css/style.css" />
+    {{ template.styles }}
 </head>
 <body>
 <article class="docs">
@@ -14,8 +13,6 @@
 {{ document.content }}
 {{ template.footer }}
 </article>
-<script src="{{ base.relpath }}js/vendor/jquery/jquery-2.2.3.min.js" type="text/javascript"></script>
-<script src="{{ base.relpath }}js/vendor/featherlight/featherlight-1.4.0.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="{{ base.relpath }}js/scripts.js?201604070001" type="text/javascript" charset="utf-8"></script>
+{{ template.scripts }}
 </body>
 </html>
