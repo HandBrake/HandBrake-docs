@@ -65,11 +65,11 @@ You may launch HandBrake by quickly clicking twice (double-clicking) on the cock
 
 If you are running Windows 8 or 10 and have Windows Smart Screen turned on, you may receive the following message.
 
-![Installing HandBrake on OS X](../images/win-smartscreen-1.png "Windows SmartScreen")
+![Windows SmartScreen](../images/win-smartscreen-1.png "Windows SmartScreen")
 
 If you press "More Info", you'll be presented with the following dialog.
 
-![Installing HandBrake on OS X](../images/win-smartscreen-2.png "Windows SmartScreen, Run Anyway")
+![Windows SmartScreen - Run Anyway](../images/win-smartscreen-2.png "Windows SmartScreen, Run Anyway")
 
 HandBrake is not "signed" application, so Microsoft does not know about us.
 If you click "Run Anyway",  our installer will launch.
@@ -80,20 +80,20 @@ Once you've downloaded the HandBrake Installer, simply double click to run it.
 
 If you already have HandBrake installed, you'll be offered a choice to remove the old one before continuing. Press "OK" and follow the wizard.
 
-![Installing HandBrake on OS X](../images/win-uninstall.png "The HandBrake installer will offer to remove old versions before installing the current version.")
+![Installing HandBrake Windows - Uninstall old version](../images/win-uninstall.png "The HandBrake installer will offer to remove old versions before installing the current version.")
 
 Otherwise, you'll be presented with a wizard that walks you through the process.
 You'll be asked to agree to our license terms. 
 
-![Installing HandBrake on OS X](../images/win-install-1.png "The HandBrake installer wizard.")
+![Installing HandBrake Windows - Installer Wizard](../images/win-install-1.png "The HandBrake installer wizard.")
 
 Next, you'll get to choose where you wish to Install HandBrake to.  The default is fine for most.
 
-![Installing HandBrake on OS X](../images/win-install-2.png, "The HandBrake installer wizard, continued.")
+![Installing HandBrake Windows - Installer Wizard - Part 2](../images/win-install-2.png "The HandBrake installer wizard, continued.")
 
 Finally, Press "Finish". You'll find a shortcut on your Desktop and Start menu which you can use to start the applicaiton.
 
-![Installing HandBrake on OS X](../images/win-install-finish.png, "HandBrake installation complete.")
+![Installing HandBrake Windows - Finish](../images/win-install-finish.png "HandBrake installation complete.")
 
 ## Next steps
 
