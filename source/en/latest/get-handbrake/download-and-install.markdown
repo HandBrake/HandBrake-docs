@@ -20,9 +20,7 @@ HandBrake is available for Linux, OS X, and Windows, at the [official HandBrake 
 
 #### Warning about 3rd party download sites
 
-Please be aware that this is the *only* official download source for HandBrake. If you download from any other website, we highly recommend you check the download checksums against those published on our website: [Checksum List](https://handbrake.fr/checksums.php).
-
-Unfortunately, since HandBrake is free and open-source, 3rd parties are able to re-package our downloads. In some cases they bundle Adware / Malware with our code. We have no control over this which is why we highly recommend you only ever download directly from https://handbrake.fr to avoid any problems.
+Please be aware that this is the *only* official download source for HandBrake. If you download from any other website, we highly recommend you check the download checksums against those published on our website: [Checksum List](https://handbrake.fr/checksums.php). This will ensure you get an official copy of HandBrake and not one that may contain unwanted extras.
 
 ## Downloading
 
