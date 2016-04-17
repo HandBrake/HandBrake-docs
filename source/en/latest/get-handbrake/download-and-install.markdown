@@ -18,13 +18,19 @@ Downloading and installing HandBrake
 
 HandBrake is available for Linux, OS X, and Windows, at the [official HandBrake website](https://handbrake.fr/).
 
+#### Warning about 3rd party download sites
+
+Please be aware that this is the *only* official download source for HandBrake. If you download from any other website, we highly recommend you check the download checksums against those published on our website: [Checksum List](https://handbrake.fr/checksums.php).
+
+Unfortunately, since HandBrake is free and open-source, 3rd parties are able to re-package our downloads. In some cases they bundle Adware / Malware with our code. We have no control over this which is why we highly recommend you only ever download directly from https://handbrake.fr to avoid any problems.
+
 ## Downloading
 
 To download HandBrake to your computer, click the download button on the HandBrake website's [Home page](https://handbrake.fr/). You can also choose a version for a specific operating system from the [Downloads page](https://handbrake.fr/downloads.php).
 
 Experienced users may wish to try HandBrake's [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].
 
-## Installing
+## Installing on MacOS
 
 Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads folder (your web browser, e.g. Safari/Chrome/Firefox, may do this for you automatically). Drag the HandBrake application to your Applications folder.
 
@@ -32,7 +38,7 @@ Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads f
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
-## About OS X Gatekeeper
+#### About OS X Gatekeeper
 
 The first time you attempt to launch HandBrake, OS X may present this warning to you:
 
@@ -48,11 +54,44 @@ To instruct Gatekeeper to allow HandBrake to run, press the Control key, then cl
 
 Now HandBrake is up and running. You should not have to repeat the Gatekeeper process until you update HandBrake.
 
-## Launching HandBrake
+### Launching HandBrake
 
 You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon].
 
 ![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
+
+
+## Installing on Windows
+
+#### Windows SmartScreen
+
+If you are running Windows 8 or 10 and have Windows Smart Screen turned on, you may receive the following message.
+
+![Installing HandBrake on OS X](../images/win-smartscreen-1.png)
+
+If you press "More Info", you'll be presented with the following dialog.
+
+![Installing HandBrake on OS X](../images/win-smartscreen-2.png)
+
+HandBrake is not "signed" application, so Microsoft does not know about us.
+If you click "Run Anyway",  our installer will launch.
+
+#### The Installation Wizard
+
+Once you've downloaded the HandBrake Installer, simply double click to run it.
+
+If you already have HandBrake installed, you'll be offered a choice to remove the old one before continuing. Press "OK" and follow the wizard.
+![Installing HandBrake on OS X](../images/win-uninstall.png)
+
+Otherwise, you'll be presented with a wizard that walks you through the process.
+You'll be asked to agree to our license terms. 
+![Installing HandBrake on OS X](../images/win-install-1.png)
+
+Next, you'll get to choose where you wish to Install HandBrake to.  The default is fine for most.
+![Installing HandBrake on OS X](../images/win-install-2.png)
+
+Finally, Press "Finish". You'll find a shortcut on your Desktop and Start menu which you can use to start the applicaiton.
+![Installing HandBrake on OS X](../images/win-install-finish.png)
 
 ## Next steps
 

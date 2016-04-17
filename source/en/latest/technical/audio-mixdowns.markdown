@@ -43,14 +43,7 @@ HandBrake supports the following downmixes:
 
 -   7.1 Channels (5F/2R/LFE)
 
- 
 
-Automatic
----------
-
-"Automatic" will default to DPL2
-
- 
 
 Upmixing
 --------
