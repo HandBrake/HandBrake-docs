@@ -81,7 +81,7 @@ function build_source {
     fi
 
     # process authors
-    DOCUMENT_Authors=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /')
+    DOCUMENT_Authors=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /' -e 's/\([^,]\) /\1\\\&nbsp;/g')
     DELIM_NUM=$(grep -o ',' <<< "${DOCUMENT_Authors}" | wc -l)
     if [[ "${DELIM_NUM}" -eq 1 ]]; then
         DOCUMENT_Authors=$(echo "${DOCUMENT_Authors}" | sed -e  's/,//')
