@@ -65,7 +65,6 @@ article.docs h5,
 article.docs h6 {
     font-family: 'Ropa Sans', -apple-system-headline, 'Lucida Grande', 'Droid Sans', Roboto, sans-serif;
     font-weight: 400;
-    /*text-rendering: geometricPrecision;*/
     color: rgb(60,60,60);
 }
 
