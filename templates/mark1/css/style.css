@@ -53,8 +53,8 @@ article.docs {
     padding: 10px 15px;
     max-width: 90%;
     font-family: 'Open Sans', -apple-system-body, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.66666;
 }
 
 article.docs h1,
@@ -70,46 +70,46 @@ article.docs h6 {
 }
 
 article.docs h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 1;
     letter-spacing: -0.035em;
 }
 
 article.docs h2 {
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 1.75rem;
+    line-height: 1.07143;
     letter-spacing: -0.025em;
 }
 
 article.docs h3 {
-    font-size: 21px;
-    line-height: 25px;
+    font-size: 1.3125rem;
+    line-height: 1.190476;
     text-transform: uppercase;
     letter-spacing: -0.018em;
 }
 
 article.docs h4 {
-    font-size: 19px;
-    line-height: 20px;
+    font-size: 1.1875rem;
+    line-height: 1.05263;
     letter-spacing: -0.02em;
 }
 
 article.docs h5 {
-    font-size: 17px;
-    line-height: 20px;
+    font-size: 1.0625rem;
+    line-height: 1.17647;
     text-transform: uppercase;
     letter-spacing: -0.01em;
 }
 
 article.docs h6 {
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 0.875rem;
+    line-height: 1.07143;
     text-transform: uppercase;
     letter-spacing: -0.005em;
 }
 
 article.docs header .breadcrumbs {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 article.docs footer p {
@@ -142,8 +142,8 @@ article.docs figure img {
 article.docs figcaption {
     padding-top: 4px;
     border-top: 1px solid rgb(240,240,240);
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 0.6875rem;
+    line-height: 1.36364;
     color: rgb(120,120,120);
 }
 
