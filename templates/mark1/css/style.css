@@ -192,9 +192,9 @@ article.docs figcaption {
 /* Wider than 1000 */
 @media (min-width: 1000px) {
     article.docs {
-        padding-left: 150px;
-        padding-right: 150px;
-        max-width: 650px;
+        padding-left: 120px;
+        padding-right: 120px;
+        max-width: 680px;
     }
 
     article.docs figure {
