@@ -54,6 +54,8 @@ article.docs {
     max-width: 90%;
     font-family: 'Open Sans', -apple-system-body, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
     font-size: 0.9375rem;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     line-height: 1.66666;
 }
 
