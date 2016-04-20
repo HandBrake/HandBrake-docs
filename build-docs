@@ -125,7 +125,7 @@ function build_source {
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
-    # process custom tags
+    # process template tags
     TEMPLATE_Scripts=""
     for SCRIPT in ${TEMPLATE_Scripts_array[@]}; do
         TEMPLATE_Scripts+="<script src=\"${BASE_RELPATH}${SCRIPT}\" charset=\"utf-8\"></script>"
@@ -151,6 +151,12 @@ function build_source {
     -e 's|\{\{[ ]*document\.license-url[ ]*\}\}|'"${DOCUMENT_License_URL:-}"'|g' \
     -e 's|\{\{[ ]*document\.redirect-url[ ]*\}\}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
     -e 's|\{\{[ ]*base\.relpath[ ]*\}\}|'"${BASE_RELPATH:-}"'|g' \
+    -i.sedbak "${DEST}.html"
+    # process comment tags
+    sed -E \
+    -e 's|<!--[ ]*\.([^ ]*)[ ]*-->|<div class="\1">|g' \
+    -e 's|<!--[ ]*\#([^ ]*)[ ]*-->|<div id="\1">|g' \
+    -e 's|<!--[ ]*\/([.#])([^ ]*)[ ]*-->|</div><!-- /\1\2 -->|g' \
     -i.sedbak "${DEST}.html"
     # postprocess
     sed -E \
