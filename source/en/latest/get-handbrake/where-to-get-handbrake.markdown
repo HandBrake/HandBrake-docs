@@ -26,6 +26,10 @@ HandBrake source code is available at the official [HandBrake repository on GitH
 
 Other versions obtained via third parties are not supported.
 
+## Warning about third-party download sites
+
+We encourage you to obtain HandBrake from the official website. When downloading from any other website, we highly recommend you ensure you have received an official copy of HandBrake by verifying the downloaded files match the [official release checksums](https://handbrake.fr/checksums.php) as published on the HandBrake website. Downloaded files with different checksums may contain unwanted extras or malware.
+
 ## Warning about broken third-party builds
 
 Certain Linux distributions and package repositories create their own versions of HandBrake. These modified versions are often crippled (features removed for political reasons) and broken (bugs due to modifications), and should be avoided.

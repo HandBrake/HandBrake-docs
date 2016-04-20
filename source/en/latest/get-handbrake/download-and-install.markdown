@@ -18,9 +18,7 @@ Downloading and installing HandBrake
 
 HandBrake is available for Linux, OS X, and Windows, at the [official HandBrake website](https://handbrake.fr/).
 
-#### Warning about 3rd party download sites
-
-Please be aware that this is the *only* official download source for HandBrake. If you download from any other website, we highly recommend you check the download checksums against those published on our website: [Checksum List](https://handbrake.fr/checksums.php). This will ensure you get an official copy of HandBrake and not one that may contain unwanted extras.
+This is the *only* official download source for HandBrake. For more information, see [Where to get HandBrake](where-to-get-handbrake.html).
 
 ## Downloading
 
@@ -33,13 +31,13 @@ Experienced users may wish to try HandBrake's [nightly builds](https://handbrake
 
 ## Installing on MacOS
 
-Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads folder (your web browser, e.g. Safari/Chrome/Firefox, may do this for you automatically). Drag the HandBrake application to your Applications folder.
+Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
 ![Installing HandBrake on OS X](../images/install-osx.png)
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
-#### About OS X Gatekeeper
+### About OS X Gatekeeper
 
 The first time you attempt to launch HandBrake, OS X may present this warning to you:
 
@@ -55,53 +53,47 @@ To instruct Gatekeeper to allow HandBrake to run, press the Control key, then cl
 
 Now HandBrake is up and running. You should not have to repeat the Gatekeeper process until you update HandBrake.
 
-### Launching HandBrake
-
-You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon].
-
-![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
-
 <!-- /.system-mac -->
 <!-- .system-win -->
 
 ## Installing on Windows
 
-#### Windows SmartScreen
+Once you've downloaded the HandBrake installer, simply double click to run it.
 
-If you are running Windows 8 or 10 and have Windows Smart Screen turned on, you may receive the following message.
+If HandBrake is already installed on your computer, the installer wizard will offer to remove the old version before installing the current version. Select `OK` to proceed and review HandBrake's license terms.
 
-![Windows SmartScreen](../images/win-smartscreen-1.png "Windows SmartScreen")
+![Installing HandBrake on Windows: removing old versions](../images/win-uninstall.png "The installer will offer to remove old versions before installing the current version.")
 
-If you press "More Info", you'll be presented with the following dialog.
+![Installing HandBrake on Windows: the installer wizard](../images/win-install-1.png "The HandBrake installer wizard.")
 
-![Windows SmartScreen - Run Anyway](../images/win-smartscreen-2.png "Windows SmartScreen, Run Anyway")
+Next, the installer wizard will ask you where you wish to install HandBrake. Unless you have a specific reason to change this, select `Install` to continue. Once the installation is complete, you may select `Finish` to exit the installer wizard.
 
-HandBrake is not "signed" application, so Microsoft does not know about us.
-If you click "Run Anyway",  our installer will launch.
+![Installing HandBrake on Windows: installation progress](../images/win-install-2.png "The wizard reports progress while installing HandBrake.")
 
-#### The Installation Wizard
+![Installing HandBrake on Windows: installation complete](../images/win-install-finish.png "HandBrake installation complete.")
 
-Once you've downloaded the HandBrake Installer, simply double click to run it.
+You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
 
-If you already have HandBrake installed, you'll be offered a choice to remove the old one before continuing. Press "OK" and follow the wizard.
+### Windows SmartScreen
 
-![Installing HandBrake Windows - Uninstall old version](../images/win-uninstall.png "The HandBrake installer will offer to remove old versions before installing the current version.")
+When installing on Windows 8 or 10 with Windows SmartScreen enabled, you may see a message indicating that the HandBrake installer is not recognized by Windows.
 
-Otherwise, you'll be presented with a wizard that walks you through the process.
-You'll be asked to agree to our license terms. 
+![Windows SmartScreen](../images/win-smartscreen-1.png "Windows SmartScreen may present this warning. Select More info to see more options.")
 
-![Installing HandBrake Windows - Installer Wizard](../images/win-install-1.png "The HandBrake installer wizard.")
+HandBrake is not "signed" by Microsoft. This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Microsoft's paid program to validate Windows applications.
 
-Next, you'll get to choose where you wish to Install HandBrake to.  The default is fine for most.
+By selecting `More info`, you will be able to select `Run anyway` to continue the installation.
 
-![Installing HandBrake Windows - Installer Wizard - Part 2](../images/win-install-2.png "The HandBrake installer wizard, continued.")
-
-Finally, Press "Finish". You'll find a shortcut on your Desktop and Start menu which you can use to start the applicaiton.
-
-![Installing HandBrake Windows - Finish](../images/win-install-finish.png "HandBrake installation complete.")
+![Windows SmartScreen - Run Anyway](../images/win-smartscreen-2.png "Select Run anyway to dismiss the SmartScreen warning and continue installing HandBrake.")
 
 <!-- /.system-win -->
 <!-- /.systems -->
+
+## Launching HandBrake
+
+You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon].
+
+![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
 ## Next steps
 
