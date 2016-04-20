@@ -112,11 +112,12 @@ function build_source {
         # partial html
         cp "${TEMPLATE_Document}" "${DEST}.html"
     fi
-    # omit header and footer templates from redirects and license documents
+    # omit header, footer, and nav templates from redirects and license documents
     if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]] || [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
         sed -E \
         -e 's|\{\{[ ]*template\.header[ ]*\}\}||g' \
         -e 's|\{\{[ ]*template\.footer[ ]*\}\}||g' \
+        -e 's|\{\{[ ]*template\.nav[ ]*\}\}||g' \
         -i.sedbak "${DEST}.html"
     fi
     # inject header, content, footer
@@ -124,6 +125,7 @@ function build_source {
     -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header}" -e 'd;}' \
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.nav[ ]*\}\}/{r '"${TEMPLATE_Nav}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # process template tags
     TEMPLATE_Scripts=""
@@ -198,6 +200,7 @@ if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
     TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
+    TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
     TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
     TEMPLATE_Fonts_array=($(echo "${TEMPLATE_Fonts}" | sed -e "s/,[ ]*/ /g"))
     TEMPLATE_Scripts_array=($(echo "${TEMPLATE_Scripts}" | sed -e "s/,[ ]*/ /g"))
