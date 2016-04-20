@@ -28,6 +28,9 @@ To download HandBrake to your computer, click the download button on the HandBra
 
 Experienced users may wish to try HandBrake's [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].
 
+<!-- .systems -->
+<!-- .system-mac -->
+
 ## Installing on MacOS
 
 Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads folder (your web browser, e.g. Safari/Chrome/Firefox, may do this for you automatically). Drag the HandBrake application to your Applications folder.
@@ -58,6 +61,8 @@ You may launch HandBrake by quickly clicking twice (double-clicking) on the cock
 
 ![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
+<!-- /.system-mac -->
+<!-- .system-win -->
 
 ## Installing on Windows
 
@@ -94,6 +99,9 @@ Next, you'll get to choose where you wish to Install HandBrake to.  The default 
 Finally, Press "Finish". You'll find a shortcut on your Desktop and Start menu which you can use to start the applicaiton.
 
 ![Installing HandBrake Windows - Finish](../images/win-install-finish.png "HandBrake installation complete.")
+
+<!-- /.system-win -->
+<!-- /.systems -->
 
 ## Next steps
 
