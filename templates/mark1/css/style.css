@@ -59,6 +59,44 @@ article.docs {
     line-height: 1.66666;
 }
 
+article.docs .hidden {
+    display: none;
+}
+
+article.docs nav {
+    width: 100%;
+}
+
+article.docs nav .system-select,
+article.docs nav .system-select li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+    list-style-type: none;
+}
+
+article.docs nav .system-select li {
+    display: inline-block;
+    margin: .166666em .25rem;
+    padding: .25em .5rem;
+    color: white;
+    background-color: skyblue;
+    cursor: pointer;
+}
+
+article.docs nav .system-select li:first-child {
+    margin-left: .75em;
+}
+
+article.docs nav .system-select li:hover {
+    background-color: rebeccapurple;
+}
+
+article.docs nav .system-select li.selected {
+    font-weight: 700;
+    background-color: orange;
+}
+
 article.docs h1,
 article.docs h2,
 article.docs h3,
@@ -189,8 +227,6 @@ article.docs figcaption {
 /* Wider than 1000 */
 @media (min-width: 1000px) {
     article.docs {
-        padding-left: 120px;
-        padding-right: 120px;
         max-width: 680px;
     }
 
