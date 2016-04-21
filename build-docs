@@ -53,6 +53,22 @@ function check_dependencies {  # takes 1 argument
     fi
 }
 
+# transforms a string
+function string_filter {
+    local STRING FILTERS
+    STRING=("${1}");
+    shift 1
+    FILTERS=("${@}")
+    for FILTER in ${FILTERS[@]}; do
+        case "${FILTER}" in
+            'slug')
+                STRING=$(echo "${STRING}" | sed -e 's/ /-/g' | awk '{ print tolower($0) }')
+                ;;
+        esac
+    done
+    echo -n "${STRING}"
+}
+
 # builds document(s) from a single source file
 function build_source {
 
@@ -144,10 +160,14 @@ function build_source {
     -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
     -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
     -e 's|\{\{[ ]*document\.project[ ]*\}\}|'"${DOCUMENT_Project:-}"'|g' \
+    -e 's|\{\{[ ]*document\.project slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Project:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.project-url[ ]*\}\}|'"${DOCUMENT_Project_URL:-}"'|g' \
     -e 's|\{\{[ ]*document\.project-version[ ]*\}\}|'"${DOCUMENT_Project_Version:-}"'|g' \
+    -e 's|\{\{[ ]*document\.project-version slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Project_Version:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.language[ ]*\}\}|'"${DOCUMENT_Language:-}"'|g' \
+    -e 's|\{\{[ ]*document\.language slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Language:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.language-code[ ]*\}\}|'"${DOCUMENT_Language_Code:-}"'|g' \
+    -e 's|\{\{[ ]*document\.language-code slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Language_Code:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.text-encoding[ ]*\}\}|'"${DOCUMENT_Text_Encoding:-}"'|g' \
     -e 's|\{\{[ ]*document\.authors[ ]*\}\}|'"${DOCUMENT_Authors:-}"'|g' \
     -e 's|\{\{[ ]*document\.copyright[ ]*\}\}|'"${DOCUMENT_Copyright:-}"'|g' \
