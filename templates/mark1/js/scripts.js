@@ -16,6 +16,9 @@ $(document).ready(function() {
         classes.forEach(function(target){
             switch (target){
                 case 'system-select-lin':
+                    if (system_select_lin.hasClass('selected')){
+                        break;
+                    }
                     system_select_lin.addClass('selected');
                     system_select_all.removeClass('selected');
                     system_select_mac.removeClass('selected');
@@ -23,9 +26,17 @@ $(document).ready(function() {
                     system_mac.addClass('hidden');
                     system_win.addClass('hidden');
                     system_lin.removeClass('hidden');
+                    var cur_offset = $(window).scrollTop();
+                    var new_offset = system_lin.first().offset().top;
+                    if (scroll === true && new_offset < cur_offset){
+                        $("html, body").animate({ scrollTop: new_offset }, 250);
+                    }
                     Cookies.set('system', 'lin', { expires: 7 });
                     break;
                 case 'system-select-mac':
+                    if (system_select_mac.hasClass('selected')){
+                        break;
+                    }
                     system_select_mac.addClass('selected');
                     system_select_all.removeClass('selected');
                     system_select_lin.removeClass('selected');
@@ -33,9 +44,17 @@ $(document).ready(function() {
                     system_lin.addClass('hidden');
                     system_win.addClass('hidden');
                     system_mac.removeClass('hidden');
+                    var cur_offset = $(window).scrollTop();
+                    var new_offset = system_mac.first().offset().top;
+                    if (scroll === true && new_offset < cur_offset){
+                        $("html, body").animate({ scrollTop: new_offset }, 250);
+                    }
                     Cookies.set('system', 'mac', { expires: 7 });
                     break;
                 case 'system-select-win':
+                    if (system_select_win.hasClass('selected')){
+                        break;
+                    }
                     system_select_win.addClass('selected');
                     system_select_all.removeClass('selected');
                     system_select_lin.removeClass('selected');
@@ -43,9 +62,17 @@ $(document).ready(function() {
                     system_lin.addClass('hidden');
                     system_mac.addClass('hidden');
                     system_win.removeClass('hidden');
+                    var cur_offset = $(window).scrollTop();
+                    var new_offset = system_win.first().offset().top;
+                    if (scroll === true && new_offset < cur_offset){
+                        $("html, body").animate({ scrollTop: new_offset }, 250);
+                    }
                     Cookies.set('system', 'win', { expires: 7 });
                     break;
-                default:
+                case 'system-select-all':
+                    if (system_select_all.hasClass('selected')){
+                        break;
+                    }
                     system_select_all.addClass('selected');
                     system_select_lin.removeClass('selected');
                     system_select_mac.removeClass('selected');
@@ -53,13 +80,15 @@ $(document).ready(function() {
                     system_lin.removeClass('hidden');
                     system_mac.removeClass('hidden');
                     system_win.removeClass('hidden');
+                    if (scroll === true){
+                        $("html, body").animate({ scrollTop: 0 }, 250);
+                    }
                     Cookies.remove('system');
+                    break;
+                default:
                     break;
             }
         });
-        if (scroll === true){
-            $("html, body").animate({ scrollTop: 0 }, 250);
-        }
     };
 
     system_select.find('li').click(function(){
