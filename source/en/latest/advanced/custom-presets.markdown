@@ -6,7 +6,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         
+Authors:         Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -16,4 +16,15 @@ License_URL:     https://handbrake.fr/docs/license.html
 Custom Presets
 =============================
 
-Todo
+HandBrake comes with many built-in presets which cover the most common use case scenarios. However there are many scenarios and devices that many not be covered.
+
+You can create your own presets by clicking the "Add" button on the preset pane.
+
+![Preset Controls](../images/preset-controls.png "Preset Controls")
+
+When you've pressed this button, you'll see the following window appear:
+
+![Preset Add Window](../images/add-preset.png "Preset Add Window")
+
+When you press save, HandBrake will use the default behaviour  rules you've set and any settings from the main window just before you pressed "Add Preset".
+

@@ -6,7 +6,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         Bradley Sepos <bradley@bradleysepos.com>
+Authors:         Bradley Sepos <bradley@bradleysepos.com>, Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -44,9 +44,9 @@ Table of contents
 
 ## Advanced features
 
-- [Multiple jobs using the queue](advanced/batch-queue.html)   
+- [Batch processing multiple jobs using the queue](advanced/batch-queue.html)   
 - [Custom presets](advanced/custom-presets.html) 
-  - Modifying audio and subtitle defaults
+  - Modifying audio and subtitle defaults(advanced/audio-subtitle-defaults.html) 
 - [Resizing video](advanced/resizing-video.html) 
   - Downscaling only
 - [Surround sound](advanced/surround-sound.html)
@@ -67,24 +67,20 @@ Table of contents
 ## Restoration and enhancement
 
 - Common video problems
-  - Black bars at top/bottom or sides
-    - Cropping
+  - Cropping, Black bars at top/bottom or sides
   - Combing effects caused by interlacing or telecine
     - Detelecine filter
     - Decomb filter vs. Deinterlace filter
     - Bob mode and frame rates, motion
-      - May affect compatibility
   - Noise (grainy appearance and/or color splotches)
     - Denoise filters: NLMeans and HQDN3D
   - Blocky picture
     - Deblock filter
   - Stretched picture (too wide or too tall)
     - Scaling and anamorphic
-    - May affect compatibility
 - Common audio problems
   - Volume level too low
   - Dynamics too wide (soft whispers, loud booms)
-- Example videos?
 
 
 ## Advanced features part 2
@@ -145,10 +141,11 @@ Table of contents
   - [x264 profile and level](technical/video-x264-profiles-levels.html) 
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html) 
   - VFR/PFR, CFR, custom frame rates
-- Advanced picture and filters
+- Advanced picture settings
   - Anamorphic modes
   - Modulus
   - Custom filter settings
+- Advanced Filter Settings
 - Audio
   - [Codecs](technical/audio-codecs.html)
     - Known issue: Dolby Atmos
