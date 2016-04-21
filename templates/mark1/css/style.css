@@ -123,8 +123,7 @@ article.docs h2 {
 article.docs h3 {
     font-size: 1.3125rem;
     line-height: 1.190476;
-    text-transform: uppercase;
-    letter-spacing: -0.018em;
+    letter-spacing: -0.022em;
 }
 
 article.docs h4 {
@@ -136,7 +135,6 @@ article.docs h4 {
 article.docs h5 {
     font-size: 1.0625rem;
     line-height: 1.17647;
-    text-transform: uppercase;
     letter-spacing: -0.01em;
 }
 
