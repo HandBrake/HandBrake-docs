@@ -209,12 +209,17 @@ article.docs figcaption {
         margin: 1.33333em 0;
         position: relative;
         left: -5%;
+        width: auto;
         max-width: 42%;
         vertical-align: top;
     }
 
     article.docs figure + figure {
         margin-left: 3%;
+    }
+
+    article.docs figure img {
+        max-height: 160px;
     }
 }
 
@@ -231,6 +236,10 @@ article.docs figcaption {
 
     article.docs figure + figure {
         margin-left: 5%;
+    }
+
+    article.docs figure img {
+        max-height: 200px;
     }
 }
 
