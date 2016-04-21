@@ -63,6 +63,19 @@ article.docs .hidden {
     display: none;
 }
 
+article.docs a,
+article.docs a:visited {
+    color: rgb(67,149,191);
+}
+
+article.docs a:hover {
+    color: rgb(100,178,212);;
+}
+
+article.docs a:active {
+    color: orange;
+}
+
 article.docs nav {
     width: 100%;
 }
