@@ -87,6 +87,13 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 ![Windows SmartScreen - Run Anyway](../images/win-smartscreen-2.png "Select Run anyway to dismiss the SmartScreen warning and continue installing HandBrake.")
 
 <!-- /.system-win -->
+<!-- .system-lin -->
+
+## Installing on Linux
+
+TODO
+
+<!-- /.system-lin -->
 <!-- /.systems -->
 
 ## Launching HandBrake
