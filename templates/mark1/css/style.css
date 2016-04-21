@@ -50,8 +50,10 @@
 
 article.docs {
     margin: 0 auto;
-    padding: 10px 15px;
+    padding: 1.875rem 15px;
     max-width: 90%;
+    background-color: transparent;
+    color: rgb(20,20,20);
     font-family: 'Open Sans', -apple-system-body, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
     font-size: 0.9375rem;
     -moz-text-size-adjust: 100%;
@@ -167,8 +169,8 @@ article.docs footer p {
 }
 
 article.docs p,
-article.docs > ol,
-article.docs > ul,
+article.docs ol,
+article.docs ul,
 article.docs header .breadcrumbs,
 article.docs footer p,
 article.docs footer small {
@@ -176,9 +178,11 @@ article.docs footer small {
 }
 
 article.docs figure {
+    position: relative;
+    left: -4%;
     display: block;
     margin: 1.33333em auto;
-    width: 100%;
+    width: 108%;
 }
 
 article.docs figure img {
@@ -205,16 +209,17 @@ article.docs figcaption {
 /* Wider than 550 */
 @media (min-width: 550px) {
     article.docs figure {
-        width: 80%;
+        left: 0;
+        width: 82%;
     }
 }
 
 /* Wider than 750 */
 @media (min-width: 750px) {
     article.docs {
-        padding-left: 40px;
-        padding-right: 40px;
-        max-width: 600px;
+        padding-left: 50px;
+        padding-right: 50px;
+        max-width: 580px;
     }
 
     article.docs figure {
@@ -239,6 +244,8 @@ article.docs figcaption {
 /* Wider than 1000 */
 @media (min-width: 1000px) {
     article.docs {
+        padding-left: 100px;
+        padding-right: 100px;
         max-width: 680px;
     }
 
