@@ -54,13 +54,14 @@ $(document).ready(function() {
                 default:
                     break;
             }
-            $("html, body").animate({ scrollTop: 0 }, 250);
         });
+        $("html, body").animate({ scrollTop: 0 }, 250);
     };
 
     system_select.find('li').click(function(){
         system_switch(this);
     });
     system_select_all.click();
-    $('article.docs > figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
+
+    $('article.docs figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
 });
