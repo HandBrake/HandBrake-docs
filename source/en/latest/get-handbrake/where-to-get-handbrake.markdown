@@ -38,6 +38,7 @@ Broken third-party packages/builds include but are not limited to:
 
 - Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
+- Gentoo: `handbrake`
 
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
 
