@@ -29,7 +29,7 @@ Experienced users may wish to try HandBrake's [nightly builds](https://handbrake
 <!-- .systems -->
 <!-- .system-mac -->
 
-## Installing on MacOS
+## Installing on Mac OS
 
 Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
