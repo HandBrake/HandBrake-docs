@@ -18,7 +18,7 @@ Where to get HandBrake
 
 ## HandBrake releases and nightly builds
 
-Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly builds](https://handbrake.fr/nightly.php) are available for Linux, OS X, and Windows.
+Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly builds](https://handbrake.fr/nightly.php) are available for Linux, Mac, and Windows.
 
 Ubuntu Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) or the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots). The PPA may work, but is not tested, on other Debian-compatible distributions. Users of other BSD- and *nix-like distributions may compile from source.
 

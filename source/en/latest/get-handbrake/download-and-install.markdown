@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Downloading and installing HandBrake
 ====================================
 
-HandBrake is available for Linux, OS X, and Windows, at the [HandBrake website](https://handbrake.fr/).
+HandBrake is available for Linux, Mac, and Windows, at the [HandBrake website](https://handbrake.fr/).
 
 This is the *only* official download source for HandBrake. For more information, see [Where to get HandBrake](where-to-get-handbrake.html).
 
@@ -29,9 +29,9 @@ Experienced users may wish to try HandBrake's [nightly builds](https://handbrake
 <!-- .systems -->
 <!-- .system-mac -->
 
-## Installing on Mac OS
+## Installing on Mac
 
-Once you've downloaded HandBrake for OS X, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
+Once you've downloaded HandBrake for Mac, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
 ![Installing HandBrake on OS X](../images/install-osx.png)
 
@@ -43,7 +43,7 @@ The first time you attempt to launch HandBrake, OS X may present this warning to
 
 ![Gatekeeper warning](../images/gatekeeper-warning.png)
 
-HandBrake is not "signed" by Apple. This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Apple's paid program to validate OS X applications. Click OK to dismiss the dialog.
+HandBrake is not "signed" by Apple. This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Apple's paid program to validate Mac applications. Click OK to dismiss the dialog.
 
 To instruct Gatekeeper to allow HandBrake to run, press the Control key, then click the HandBrake icon, and then select Open from the shortcut menu. Gatekeeper will ask whether you are certain you wish to open HandBrake, and you may confirm that you are by clicking Open[^gatekeeper].
 
@@ -108,6 +108,6 @@ Continue to [Checking for updates](check-for-updates.html).
 
 [^nightly-builds]: Nightly builds are based on HandBrake's latest development code, including new and experimental features that may be unstable or significantly different than the latest release version. Although everyone is welcome to try them, nightly builds are best suited for experienced users and developers.
 
-[^gatekeeper]: These instructions are taken directly from Apple's OS X Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/kb/PH21769?locale=en_US) and [here](https://support.apple.com/en-us/HT202491).
+[^gatekeeper]: These instructions are taken directly from Apple's Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/kb/PH21769?locale=en_US) and [here](https://support.apple.com/en-us/HT202491).
 
 [^about-icon]: Read about the icon and more at HandBrake lore (TODO: link).

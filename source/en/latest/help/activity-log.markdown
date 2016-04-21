@@ -32,7 +32,7 @@ All of the HandBrake GUI's contain an "Activity Window" which can be accessed on
 While HandBrake is scanning a source, or encoding a file, the log file is being written out to the drive at the same time.  
 This way, if the application crashes, you can see what was happening when this event occurred.
 
-### Mac OS
+### Mac
 
 The log files are stored in the following folder:
 ~/Library/Application Support/HandBrake/EncodeLogs/

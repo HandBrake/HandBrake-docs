@@ -51,7 +51,7 @@ Audio Encoders
     -   High Efficiency AAC encoder. This encoder is optimized for low-bitrate
         applications which may be useful for streaming.
 
-    -   Available on OS X only.
+    -   Available on Mac only.
 
 -   MP3:
 

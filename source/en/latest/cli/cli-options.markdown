@@ -18,7 +18,7 @@ CLI Options
 
 ## Quick Tutorial on the Command Line.
 
-On Windows, you'll want to open the "Command Prompt" app. This is similar to the "Terminal" app on MacOS and Linux although the command's to navigate vary a bit.
+On Windows, you'll want to open the "Command Prompt" app. This is similar to the "Terminal" app on Mac and Linux although the command's to navigate vary a bit.
 
 This guide is not going to go into a lot of detail on using your systems command line as there are differences on various different platforms. Instead it will offer some hints. 
 We suggest you Google for a tutorial for your given command line of choice. 
@@ -28,10 +28,10 @@ We suggest you Google for a tutorial for your given command line of choice.
 | Command          | Platform        | Action                                                                                                                                              |
 |------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | dir              | Windows         | List the contents of the current directory                                                                                                          |
-| ls               | MacOS and Linux | Lists the contents of the current directory                                                                                                         |
+| ls               | Mac and Linux | Lists the contents of the current directory                                                                                                         |
 | cd <folder_name> | Both            | Change to the given folder.                                                                                                                         |
 | cd ..            | Both            | Go up a directory                                                                                                                                   |
-| pwd              | MacOS and Linux | Unlike Windows, the terminal does not show you the full path to your current directory. This command will show you were you are on the file system. |
+| pwd              | Mac and Linux | Unlike Windows, the terminal does not show you the full path to your current directory. This command will show you were you are on the file system. |
 
 
 When you extract HandBrakeCLI, you will need to navigate to where you extracted it on the file system, before trying to execute.  You can do so with the above commands.
@@ -44,7 +44,7 @@ If HandBrake is in a different directory than your in, you can always access it 
 
 ./path/to/HandBrakeCLI -i /path/to/source -o ../Desktop/my_output.mp4
 
-Remember, Linux and MacOS can be configured to be case sensitive. 
+Remember, Linux and Mac can be configured to be case sensitive. 
 
 
 ## HandBrake Command Line Basics

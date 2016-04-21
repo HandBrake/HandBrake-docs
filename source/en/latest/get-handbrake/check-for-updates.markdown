@@ -20,7 +20,7 @@ HandBrake can let you know when a newer version is available, and even automatic
 
 Before updating, make sure there are no pending encodes in the `Queue` and make note of any custom presets you have created, as they may not be compatible with the newer version.
 
-#### MacOS
+#### Mac
 
 From the main menu, navigate to `HandBrake` and select `Check for Updates...`.
 

@@ -18,7 +18,7 @@ About HandBrake
 
 ## What HandBrake is
 
-HandBrake is an open-source video transcoder available for Linux, OS X, and Windows, licensed under the GNU General Public License (GPL) Version 2 (TODO: license link).
+HandBrake is an open-source video transcoder available for Linux, Mac, and Windows, licensed under the GNU General Public License (GPL) Version 2 (TODO: license link).
 
 Everyone can use HandBrake to make videos *for free*.
 
@@ -53,7 +53,7 @@ HandBrake **does not**:
 
 HandBrake also does not defeat or circumvent [copy protection](https://en.wikipedia.org/wiki/Copy_protection) of any kind. It does not work with video files employing [Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management) (DRM). This includes but is not limited to, copy protected content from iTunes, Amazon Video, Netflix, or other online providers, and many commercial DVD and Blu-ray discs.
 
-Applications such as [AnyDVD HD](https://en.wikipedia.org/wiki/AnyDVD) for Windows and MakeMKV (TODO: link) for Linux, OS X, and Windows create DRM-free copies of DVD and Blu-ray discs that HandBrake can open; however, the HandBrake Team has no affiliation with these third parties and as such can neither recommend nor support these applications or their usage.
+Applications such as [AnyDVD HD](https://en.wikipedia.org/wiki/AnyDVD) for Windows and MakeMKV (TODO: link) for Linux, Mac, and Windows create DRM-free copies of DVD and Blu-ray discs that HandBrake can open; however, the HandBrake Team has no affiliation with these third parties and as such can neither recommend nor support these applications or their usage.
 
 Do not use HandBrake to copy materials you do not own or have the right to copy. If you are uncertain about your right to copy any material, you should contact your legal advisor.
 
