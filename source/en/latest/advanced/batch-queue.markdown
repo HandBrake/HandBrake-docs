@@ -34,10 +34,9 @@ On the application toolbar, there are two buttons that you can use.
 - Show Queue (x)
   - where (x) is a number that tells you how many jobs you currently have on the queue for processing.
   - When you press this button, the queue window will display showing you the current jobs waiting to be processed and those completed.
-  
-![HandBrake queue window](../images/queue.png "HandBrake Queue Window") 
- 
- 
+
+![HandBrake queue window](../images/queue.png "HandBrake Queue Window")
+
 ### Editing Items on the queue.
 
 You can't change a job that is currently on the queue. If you want to change a jobs settings, you must press the "edit job" button on the queue task itself.

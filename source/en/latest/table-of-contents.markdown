@@ -46,7 +46,7 @@ Table of contents
 
 - [Batch processing multiple jobs using the queue](advanced/batch-queue.html)   
 - [Custom presets](advanced/custom-presets.html) 
-  - Modifying audio and subtitle defaults(advanced/audio-subtitle-defaults.html) 
+  - [Audio and Subtitled Defaults](advanced/audio-subtitle-defaults.html) 
 - [Resizing video](advanced/resizing-video.html) 
   - Downscaling only
 - [Surround sound](advanced/surround-sound.html)
