@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Downloading and installing HandBrake
 ====================================
 
-HandBrake is available for Linux, OS X, and Windows, at the [official HandBrake website](https://handbrake.fr/).
+HandBrake is available for Linux, OS X, and Windows, at the [HandBrake website](https://handbrake.fr/).
 
 This is the *only* official download source for HandBrake. For more information, see [Where to get HandBrake](where-to-get-handbrake.html).
 
