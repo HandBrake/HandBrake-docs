@@ -216,10 +216,6 @@ article.docs figcaption {
     article.docs figure + figure {
         margin-left: 3%;
     }
-
-    article.docs figure img {
-        max-width: 100%;
-    }
 }
 
 /* Wider than 1000 */
