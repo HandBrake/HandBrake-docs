@@ -61,7 +61,7 @@ $(document).ready(function() {
     system_select.find('li').click(function(){
         system_switch(this);
     });
-    system_select_all.click();
+    system_select_all.addClass('selected');
 
     $('article.docs figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
 });
