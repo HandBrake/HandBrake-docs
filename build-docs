@@ -62,7 +62,7 @@ function string_filter {
     for FILTER in ${FILTERS[@]}; do
         case "${FILTER}" in
             'slug')
-                STRING=$(echo "${STRING}" | sed -e 's/ /-/g' | awk '{ print tolower($0) }')
+                STRING=$(echo "${STRING}" | sed -E -e 's/[ _]+/-/g' -e 's/[^-a-zA-Z0-9]//g' -e 's/(^-+)|(-+$)//' | awk '{ print tolower($0) }')
                 ;;
         esac
     done
