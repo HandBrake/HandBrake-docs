@@ -48,7 +48,6 @@ Table of contents
 - [Custom presets](advanced/custom-presets.html) 
   - [Audio and Subtitled Defaults](advanced/audio-subtitle-defaults.html) 
 - [Resizing video](advanced/resizing-video.html) 
-  - Downscaling only
 - [Surround sound](advanced/surround-sound.html)
   - Formats: ac3, dts, etc.
   - Passthru: devices and compatiblity
