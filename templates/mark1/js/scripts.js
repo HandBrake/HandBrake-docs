@@ -7,11 +7,11 @@ $(document).ready(function() {
     var system_select_mac = $('.system-select-mac');
     var system_select_win = $('.system-select-win');
     var system_select_all = $('.system-select-all');
-    var system_lin = $('.system-lin');
-    var system_mac = $('.system-mac');
-    var system_win = $('.system-win');
 
     var system_switch = function(control, scroll){
+        var system_lin = $('.system-lin');
+        var system_mac = $('.system-mac');
+        var system_win = $('.system-win');
         var classes = $(control).attr('class').split(' ');
         classes.forEach(function(target){
             switch (target){
@@ -27,7 +27,12 @@ $(document).ready(function() {
                     system_win.addClass('hidden');
                     system_lin.removeClass('hidden');
                     var cur_offset = $(window).scrollTop();
-                    var new_offset = system_lin.first().offset().top;
+                    var new_offset = system_lin.first().offset();
+                    if (typeof new_offset != 'undefined'){
+                        new_offset = new_offset.top;
+                    } else {
+                        new_offset = 0;
+                    }
                     if (scroll === true && new_offset < cur_offset){
                         $("html, body").animate({ scrollTop: new_offset }, 250);
                     }
@@ -45,7 +50,12 @@ $(document).ready(function() {
                     system_win.addClass('hidden');
                     system_mac.removeClass('hidden');
                     var cur_offset = $(window).scrollTop();
-                    var new_offset = system_mac.first().offset().top;
+                    var new_offset = system_mac.first().offset();
+                    if (typeof new_offset != 'undefined'){
+                        new_offset = new_offset.top;
+                    } else {
+                        new_offset = 0;
+                    }
                     if (scroll === true && new_offset < cur_offset){
                         $("html, body").animate({ scrollTop: new_offset }, 250);
                     }
@@ -63,7 +73,12 @@ $(document).ready(function() {
                     system_mac.addClass('hidden');
                     system_win.removeClass('hidden');
                     var cur_offset = $(window).scrollTop();
-                    var new_offset = system_win.first().offset().top;
+                    var new_offset = system_win.first().offset();
+                    if (typeof new_offset != 'undefined'){
+                        new_offset = new_offset.top;
+                    } else {
+                        new_offset = 0;
+                    }
                     if (scroll === true && new_offset < cur_offset){
                         $("html, body").animate({ scrollTop: new_offset }, 250);
                     }
