@@ -84,27 +84,27 @@ Table of contents
 
 ## Advanced features part 2
 
-- [Formats/containers](advanced2/containers.html) 
-- [Video source type](advanced2/video-sources.html) 
+- [Formats/containers](advanced/containers.html) 
+- [Video source type](advanced/video-sources.html) 
   - x264 tune
     - May affect compatibility
-- [Video encoding speed](advanced2/video-encoding-performance.html) 
+- [Video encoding speed](advanced/video-encoding-performance.html) 
   - Quality affects speed
   - x264 preset
     - May affect compatibility
-- [Video angles](advanced2/video-angles.html) 
-- [Point-to-point](advanced2/point-to-point.html) 
-- [Frame rate](advanced2/frame-rates.html) 
+- [Video angles](advanced/video-angles.html) 
+- [Point-to-point](advanced/point-to-point.html) 
+- [Frame rate](advanced/frame-rates.html) 
   - Same as source VFR/CFR
   - Fixed VFR (peak) or CFR
-- [Audio quality](advanced2/audio-quality.html) 
+- [Audio quality](advanced/audio-quality.html) 
   - Affects file size, though not as much as video quality
   - Adjustments may impact compatibility (recommend to leave alone)
-- [Audio defaults](advanced2/audio-defaults.html) 
-- [Subtitle defaults](advanced2/subtitle-defaults.html) 
-- [Automatic file naming](advanced2/automatic-file-naming.html) 
-- [Web optimized](advanced2/web-optimised.html) 
-- [iPod 5G support](advanced2/old-ipod-support.html) 
+- [Audio defaults](advanced/audio-defaults.html) 
+- [Subtitle defaults](advanced/subtitle-defaults.html) 
+- [Automatic file naming](advanced/automatic-file-naming.html) 
+- [Web optimized](advanced/web-optimised.html) 
+- [iPod 5G support](advanced/old-ipod-support.html) 
 
 
 ## Getting help
