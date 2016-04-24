@@ -9,6 +9,7 @@ $(document).ready(function() {
     var system_select_all = $('.system-select-all');
 
     var system_switch = function(control, scroll){
+        var header = $('article.docs header').first();
         var system_lin = $('.system-lin');
         var system_mac = $('.system-mac');
         var system_win = $('.system-win');
@@ -29,7 +30,8 @@ $(document).ready(function() {
                     var cur_offset = $(window).scrollTop();
                     var new_offset = system_lin.first().offset();
                     if (typeof new_offset != 'undefined'){
-                        new_offset = new_offset.top;
+                        new_offset = new_offset.top - header.height();
+                        new_offset < 0 ? 0 : new_offset;
                     } else {
                         new_offset = 0;
                     }
@@ -52,7 +54,8 @@ $(document).ready(function() {
                     var cur_offset = $(window).scrollTop();
                     var new_offset = system_mac.first().offset();
                     if (typeof new_offset != 'undefined'){
-                        new_offset = new_offset.top;
+                        new_offset = new_offset.top - header.height();
+                        new_offset < 0 ? 0 : new_offset;
                     } else {
                         new_offset = 0;
                     }
@@ -75,7 +78,8 @@ $(document).ready(function() {
                     var cur_offset = $(window).scrollTop();
                     var new_offset = system_win.first().offset();
                     if (typeof new_offset != 'undefined'){
-                        new_offset = new_offset.top;
+                        new_offset = new_offset.top - header.height();
+                        new_offset < 0 ? 0 : new_offset;
                     } else {
                         new_offset = 0;
                     }

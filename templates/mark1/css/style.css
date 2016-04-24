@@ -48,6 +48,12 @@
   src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('../fonts/opensans-bolditalic-1.10.woff2') format('woff2'), url('../fonts/opensans-bolditalic-1.10.woff') format('woff');
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255,255,255);
+}
+
 article.docs {
     margin: 0 auto;
     padding: 1.875rem 15px;
@@ -78,15 +84,35 @@ article.docs a:active {
     color: orange;
 }
 
-article.docs nav {
+article.docs header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     width: 100%;
+    background-color: rgb(255,255,248);
+    background: linear-gradient(0deg, rgba(255,255,248,0), rgb(255,255,248) 30px);
+}
+
+article.docs header + h1 {
+    margin-top: 8.5rem;
+}
+
+article.docs nav {
+    margin: 0 auto;
+    padding: 15px 15px 45px;
+    width: 90%;
+    font-size: 0.6875rem;
+}
+
+article.docs nav .breadcrumbs {
+    margin: 1em 0 0;
 }
 
 article.docs nav .system-select,
 article.docs nav .system-select li {
     margin: 0;
     padding: 0;
-    font-size: 0.75rem;
     list-style-type: none;
 }
 
@@ -160,10 +186,6 @@ article.docs h6 {
     letter-spacing: -0.005em;
 }
 
-article.docs header .breadcrumbs {
-    font-size: 0.75rem;
-}
-
 article.docs footer p {
     font-style: italic;
 }
@@ -171,7 +193,6 @@ article.docs footer p {
 article.docs p,
 article.docs ol,
 article.docs ul,
-article.docs header .breadcrumbs,
 article.docs footer p,
 article.docs footer small {
     margin: 1.33333em 0;
@@ -201,6 +222,17 @@ article.docs figcaption {
     border-radius: 3px;
 }
 
+/* Wider than 350 */
+@media (min-width: 350px) {
+    article.docs header + h1 {
+        margin-top: 7.5rem;
+    }
+
+    article.docs nav {
+        font-size: 0.75rem;
+    }
+}
+
 /* Wider than 390 */
 @media (min-width: 390px) {
 
@@ -220,6 +252,19 @@ article.docs figcaption {
         padding-left: 50px;
         padding-right: 50px;
         max-width: 580px;
+    }
+
+    article.docs header + h1 {
+        margin-top: 8.75rem;
+    }
+
+    article.docs nav {
+        padding: 30px 50px 60px;
+        width: 580px;
+    }
+
+    article.docs nav .breadcrumbs {
+        margin-top: 1.33333em;
     }
 
     article.docs figure {
@@ -247,6 +292,12 @@ article.docs figcaption {
         padding-left: 100px;
         padding-right: 100px;
         max-width: 680px;
+    }
+
+    article.docs nav {
+        padding-left: 100px;
+        padding-right: 100px;
+        width: 680px;
     }
 
     article.docs figure {
