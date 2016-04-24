@@ -26,7 +26,6 @@ To download HandBrake to your computer, click the download button on the HandBra
 
 Experienced users may wish to try HandBrake's [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].
 
-<!-- .systems -->
 <!-- .system-mac -->
 
 ## Installing on Mac
@@ -94,7 +93,6 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 TODO
 
 <!-- /.system-lin -->
-<!-- /.systems -->
 
 ## Launching HandBrake
 
