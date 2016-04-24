@@ -24,7 +24,7 @@ Luckily, HandBrake has a `Preview` feature that allows you to do a test run on a
 
 At the top of HandBrake's main window, you'll see a toolbar with various buttons.
 
-![Main window toolbar](../images/mac/toolbar.png)
+![Main window toolbar](../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
 Select the `Preview` button to open the `Preview` window.
 

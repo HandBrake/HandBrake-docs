@@ -28,7 +28,7 @@ HandBrake includes a number of built-in `Presets` for various devices and genera
 
 Once you've opened a `Source`, select the `Preset` that most closely describes the device you want your videos to work on. For instance, if you want to play your videos on an iPad, choose the `iPad Preset`.
 
-![Selecting a preset](../images/mac/preset-selection.png)
+![Selecting a preset](../images/mac/preset-selection.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
 
 If your device is not listed, or you wish to play your videos on a computer, choose the `Normal Preset` or `High Profile Preset`. The `Normal Preset` is fast and compatible across a wide range of softwares and devices. The `High Profile Preset` makes better quality videos that take up less space, leaving room for a second audio track in surround sound.
 
