@@ -63,4 +63,4 @@ You can preview the effect of your adjustments by clicking the "Preview" button 
 The preview window will then appear and will display in real-time any changes you make on the picture settings screen.
 If the size of the output exceeds the window size, the preview window will scale it to fit to screen.
 
-![Preview window](../images/windows/preview-window.png "Preview window")
+![Preview window](../images/windows/preview-window.jpg "Preview window")
