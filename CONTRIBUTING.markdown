@@ -58,6 +58,8 @@ For publishing, the Markdown text is converted to [HTML](https://en.wikipedia.or
 
 More technical details are available under *Working with the source files*.
 
+### Document example
+
 Here is an example excerpt from `source/en/latest/introduction/quick-start.markdown`:
 
 ```
@@ -92,25 +94,83 @@ The document begins with a YAML section encapsulated by two sets of three dashes
 
 The rest of the document is Markdown. Anything you see in the published documentation is written here in this format.
 
+### Markdown formatting
+
 Markdown is a [markup language](https://en.wikipedia.org/wiki/Markup_language) that allows plain text to be "marked up" with special identifiers to enhance formatting and meaning. Markdown directly translates into [HTML](https://en.wikipedia.org/wiki/HTML), while being easier to read and write than HTML.
 
 In the example, the underlined "Quick start" text is a heading, and there is a link at the end of the second sentence. We could have added stars around certain words to indicate emphasis, for instance \*italics\* (*italics*) or \*\*bold\*\* (**bold**).
 
 If you are unfamiliar with Markdown and would like to know more, GitHub has a guide called [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) that may be helpful.
 
-TODO: Notes on preferred Markdown style, features to avoid (ideally just disable them).  
-TODO: Notes on formatting multi-platform (Linux/OS X/Windows) sections
+### Markdown extensions
+
+The build system extends Markdown in some notable ways.
+
+Images with a title are treated as implicit figures. The title becomes the caption for the figure and the image is linked to itself, allowing for better presentation.
+
+```
+![Alternate text](path/to/image.png)
+
+![Alternate text](path/to/image.png "Title/caption")
+```
+
+The above example renders to:
+
+```
+<p><img src="path/to/image.png" alt="Alternate text" /></p>
+
+<figure><a href="path/to/image.png"><img src="path/to/image.png" alt="Alternate text" /></a><figcaption>Title/caption</figcaption></figure>
+```
+
+Special HTML comments may be used to differentiate instructions for Linux, Mac, and Windows, allowing for better presentation. Wrap the appropriate sections in special HTML comments as follows:
+
+```
+General instructions here.
+
+<!-- .system-lin -->
+
+Special instructions for Linux here.
+
+<!-- /.system-lin -->
+
+<!-- .system-mac -->
+
+Special instructions for Mac here.
+
+<!-- /.system-mac -->
+
+<!-- .system-win -->
+
+Special instructions for Linux here.
+
+<!-- /.system-win -->
+
+More general instructions here.
+```
+
+Try to group relevant pieces of information together to form a cohesive whole. It is usually unnecessary for an entire article to be separated into system-specific instructions. Likewise, it is usually unnecessary to have more than a few system-specific sections. That said, there is no per-article limit to the number of system-specific sections.
 
 
 ## Working with the source files
 
+### Requirements
+
+To work directly with the source files, the following is a basic list of requirements:
+
+- OS X, Linux, or compatible†
+- Bash shell
+
+The following components are suggested, but not required:
+
+- [GNU Parallel](https://www.gnu.org/software/parallel/)
+
+† Windows users may wish to use Linux in a virtual machine.
+
 ### Getting the source
 
-If you're new to using Git or GitHub, check out [GitHub Guides](https://guides.github.com/) to get started.
+If you're new to using Git or GitHub, check out [GitHub Guides](https://guides.github.com/) to get started. You will need to [create a GitHub account](https://github.com/join) and fork [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/).
 
-If you haven't already, [create a GitHub account](https://github.com/join) and fork [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/).
-
-Every copy of the source files includes third-party tools needed build the HTML documentation from the Markdown source. Make sure you clone your fork to your computer using `git clone --recursive` to get all the tools.
+Every copy of the source files includes additional third-party tools needed build the HTML documentation from the Markdown source. Make sure to clone your fork to your computer using `git clone --recursive` to get all the tools.
 
 ### Building
 
@@ -120,11 +180,11 @@ Run `build-tools` from the main directory to build all associated third-party to
 
 Once the tools are built, run `build-docs` from the main directory to build the HTML documentation in the `docs` directory. You may now view and interact with the documentation by opening `docs/index.html` in your web browser.
 
-Security restrictions in modern web browsers may prevent web fonts from displaying properly when viewing local files. One workaround is to serve the files instead of opening them directly. From the `docs` directory, run `python -m http.server 8000 || python -m SimpleHTTPServer 8000` and then open `http://localhost:8000` in your web browser.
+Security restrictions in modern web browsers may prevent web fonts from displaying properly when viewing local files. One workaround is to serve the files instead of opening them directly. From the main directory, run `python -m http.server 8000 || python -m SimpleHTTPServer 8000` and then open `http://localhost:8000/docs/` in your web browser (requires Python).
 
 ### Editing
 
-Before editing the documentation, first create and switch to an appropriately named local branch to track your changes (e.g. `git checkout master; git checkout --branch revise-download-instructions`). This allows you to make as many changes as you like without affecting the `master` branch, and helps identify groups of changes when submitting pull requests later on.
+Before editing the documentation, first create and switch to an appropriately named local branch to track your changes (e.g. `git checkout master; git checkout --branch branch-name`). This allows you to make as many changes as you like without affecting the `master` branch, and helps identify groups of changes when submitting pull requests later on.
 
 To make a change, edit the appropriate file(s) in the `source` directory. Run `build-docs` again from the main directory to rebuild the HTML documentation in `docs` including your changes.
 
