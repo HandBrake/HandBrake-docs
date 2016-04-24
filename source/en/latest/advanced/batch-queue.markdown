@@ -26,7 +26,7 @@ HandBrake offers two features to make this easier.  A queue of jobs and batch sc
 
 On the application toolbar, there are two buttons that you can use.
 
-![HandBrake app toolbar](../images/add-to-queue.png "HandBrake Toolbar")
+![HandBrake app toolbar](../images/windows/add-to-queue.png "HandBrake Toolbar")
 
 - Add to Queue
   - When you press this button, it will add the currently selected source, title and the currently chosen settings to the queue
@@ -35,7 +35,7 @@ On the application toolbar, there are two buttons that you can use.
   - where (x) is a number that tells you how many jobs you currently have on the queue for processing.
   - When you press this button, the queue window will display showing you the current jobs waiting to be processed and those completed.
 
-![HandBrake queue window](../images/queue.png "HandBrake Queue Window")
+![HandBrake queue window](../images/windows/queue.png "HandBrake Queue Window")
 
 ### Editing Items on the queue.
 

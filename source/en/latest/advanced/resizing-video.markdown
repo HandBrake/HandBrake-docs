@@ -20,7 +20,7 @@ Resizing Video
 
 The picture settings tab is located on HandBrake's main window and becomes active after you've scanned a source.
 
-![Picture settings tab](../images/picture-settings.png "Picture settings tab")
+![Picture settings tab](../images/windows/picture-settings.png "Picture settings tab")
 
 ### Width and Height
 
@@ -58,9 +58,9 @@ HandBrakes auto-crop is not perfect. It's giving you a best guess at what the cr
 
 You can preview the effect of your adjustments by clicking the "Preview" button on the toolbar.
 
-![HandBrake toolbar](../images/toolbar.png "HandBrake toolbar")
+![HandBrake toolbar](../images/windows/toolbar.png "HandBrake toolbar")
 
 The preview window will then appear and will display in real-time any changes you make on the picture settings screen.
 If the size of the output exceeds the window size, the preview window will scale it to fit to screen.
 
-![Preview window](../images/preview-window.png "Preview window")
+![Preview window](../images/windows/preview-window.png "Preview window")

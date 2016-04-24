@@ -37,19 +37,19 @@ Learn more about [source formats](../technical/source-formats.html).
 
 By default, HandBrake presents the `Open Source` dialog on launch. It is also accessable from the `Toolbar` at the top of HandBrake's main window.
 
-![Main window toolbar](../images/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
+![Main window toolbar](../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-![Open Source button](../images/open-source-button.png "The Open Source button opens the Open Source dialog.")
+![Open Source button](../images/mac/open-source-button.png "The Open Source button opens the Open Source dialog.")
 
 Select the `Open Source` button to select the video you want to open. You can also drag and drop a video `Source` onto HandBrake's main window.
 
-![Open Source dialog](../images/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
+![Open Source dialog](../images/mac/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
 
-![Opening a video source via drag and drop](../images/open-source-drag-drop.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
+![Opening a video source via drag and drop](../images/mac/open-source-drag-drop.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
 
 HandBrake will scan your selection and after a few moments, the main window will show the file name of the `Source` you opened along with some additional information.
 
-![Successfully opened source](../images/open-source-success.png "HandBrake's main window after sucessfully opening a source.")
+![Successfully opened source](../images/mac/open-source-success.png "HandBrake's main window after sucessfully opening a source.")
 
 Great! At this point, HandBrake knows which video you want to use.
 

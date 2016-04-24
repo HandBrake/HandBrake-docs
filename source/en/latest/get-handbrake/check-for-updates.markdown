@@ -24,11 +24,11 @@ Before updating, make sure there are no pending encodes in the `Queue` and make 
 
 From the main menu, navigate to `HandBrake` and select `Check for Updates...`.
 
-![Check for Updates menu item](../images/check-for-updates-menu-item.png)
+![Check for Updates menu item](../images/mac/check-for-updates-menu-item.png)
 
 If an update is available, you will be given the opportunity to install it right away. To enable automatic updates, select the appropriate checkbox labeled `Automatically download and install updates in the future`.
 
-![Check for Updates dialog](../images/check-for-updates.png)
+![Check for Updates dialog](../images/mac/check-for-updates.png)
 
 #### Windows
 From the help menu, navigate to `Check for Updates...`.
