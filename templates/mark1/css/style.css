@@ -45,7 +45,7 @@ article.docs header {
 }
 
 article.docs header + h1 {
-    margin-top: 8.5rem;
+    margin-top: 6.75rem;
 }
 
 article.docs nav {
@@ -136,6 +136,11 @@ article.docs h6 {
     letter-spacing: -0.005em;
 }
 
+article.docs footer p,
+article.docs footer small {
+    font-size: 0.75rem;
+}
+
 article.docs footer p {
     font-style: italic;
 }
@@ -150,10 +155,10 @@ article.docs footer small {
 
 article.docs figure {
     position: relative;
-    left: -4%;
+    left: -3%;
     display: block;
     margin: 1.33333em auto;
-    width: 108%;
+    width: 106%;
 }
 
 article.docs figure img {
@@ -161,11 +166,16 @@ article.docs figure img {
 }
 
 article.docs figcaption {
-    padding-top: 4px;
-    border-top: 1px solid rgb(240,240,240);
+    margin-bottom: -1px;
+    padding-top: 0.454545em;
+    border-top: 1px solid rgb(232,232,232);
     font-size: 0.6875rem;
     line-height: 1.36364;
     color: rgb(120,120,120);
+}
+
+article.docs .footnotes {
+    font-size: .875rem;
 }
 
 .featherlight .featherlight-content {
@@ -174,10 +184,6 @@ article.docs figcaption {
 
 /* Wider than 350 */
 @media (min-width: 350px) {
-    article.docs header + h1 {
-        margin-top: 7.5rem;
-    }
-
     article.docs nav {
         font-size: 0.75rem;
     }
@@ -193,6 +199,11 @@ article.docs figcaption {
     article.docs figure {
         left: 0;
         width: 82%;
+    }
+
+    article.docs footer p,
+    article.docs footer small {
+        font-size: 0.875rem;
     }
 }
 
@@ -232,8 +243,9 @@ article.docs figcaption {
     }
 
     article.docs figure img {
-        max-height: 160px;
+        max-height: 240px;
     }
+
 }
 
 /* Wider than 1000 */
@@ -259,7 +271,107 @@ article.docs figcaption {
     }
 
     article.docs figure img {
-        max-height: 200px;
+        max-height: 320px;
+    }
+
+}
+
+/* Wider than 1200, taller than 900 */
+@media (min-width: 1200px) and (min-height: 750px) {
+    article.docs {
+        max-width: 760px;
+        font-size: 1.125rem;
+    }
+
+    article.docs nav {
+        width: 760px;
+        font-size: 0.9rem;
+    }
+
+    article.docs header + h1 {
+        margin-top: 10.5rem;
+    }
+
+    article.docs h1 {
+        font-size: 3rem;
+        letter-spacing: -0.04em;
+    }
+
+    article.docs h2 {
+        font-size: 2.1rem;
+        letter-spacing: -0.03em;
+    }
+
+    article.docs h3 {
+        font-size: 1.575rem;
+        letter-spacing: -0.023em;
+    }
+
+    article.docs h4 {
+        font-size: 1.425rem;
+        letter-spacing: -0.022em;
+    }
+
+    article.docs h5 {
+        font-size: 1.275rem;
+        letter-spacing: -0.021em;
+    }
+
+    article.docs h6 {
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: -0.009em;
+    }
+
+    article.docs figcaption {
+        font-size: 0.825rem;
+    }
+
+    article.docs .footnotes {
+        font-size: 1.05rem;
+    }
+
+    article.docs footer p,
+    article.docs footer small {
+        font-size: 1.05rem;
+    }
+
+    article.docs figure img {
+        max-height: 384px;
+    }
+}
+
+/* Shorter than 550 */
+@media (max-height: 549px) {
+    article.docs figure img {
+        max-height: 300px;
+    }
+}
+
+/* Shorter than 450 */
+@media (max-height: 449px) {
+    article.docs header {
+        background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 15px);
+    }
+
+    article.docs nav {
+        padding: 10px 15px 25px;
+    }
+
+    article.docs nav .breadcrumbs {
+        margin-top: 0.5em;
+        font-size: 0.625rem;
+    }
+
+    article.docs figure img {
+        max-height: 220px;
+    }
+}
+
+/* Shorter than 350 */
+@media (max-height: 349px) {
+    article.docs figure img {
+        max-height: 160px;
     }
 }
 
