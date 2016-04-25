@@ -30,7 +30,7 @@ $(document).ready(function() {
                     var cur_offset = $(window).scrollTop();
                     var new_offset = system_lin.first().offset();
                     if (typeof new_offset != 'undefined'){
-                        new_offset = new_offset.top - header.height();
+                        new_offset = new_offset.top - header.height()+10;
                         new_offset < 0 ? 0 : new_offset;
                     } else {
                         new_offset = 0;
@@ -54,7 +54,7 @@ $(document).ready(function() {
                     var cur_offset = $(window).scrollTop();
                     var new_offset = system_mac.first().offset();
                     if (typeof new_offset != 'undefined'){
-                        new_offset = new_offset.top - header.height();
+                        new_offset = new_offset.top - header.height()+10;
                         new_offset < 0 ? 0 : new_offset;
                     } else {
                         new_offset = 0;
@@ -78,7 +78,7 @@ $(document).ready(function() {
                     var cur_offset = $(window).scrollTop();
                     var new_offset = system_win.first().offset();
                     if (typeof new_offset != 'undefined'){
-                        new_offset = new_offset.top - header.height();
+                        new_offset = new_offset.top - header.height()+10;
                         new_offset < 0 ? 0 : new_offset;
                     } else {
                         new_offset = 0;

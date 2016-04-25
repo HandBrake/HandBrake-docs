@@ -90,8 +90,8 @@ article.docs header {
     left: 0;
     z-index: 999;
     width: 100%;
-    background-color: rgb(255,255,248);
-    background: linear-gradient(0deg, rgba(255,255,248,0), rgb(255,255,248) 30px);
+    background-color: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 30px);
 }
 
 article.docs header + h1 {
