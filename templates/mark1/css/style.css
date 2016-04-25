@@ -343,6 +343,10 @@ article.docs .footnotes {
 
 /* Shorter than 550 */
 @media (max-height: 549px) {
+    article.docs header + h1 {
+        margin-top: 6.25rem;
+    }
+
     article.docs figure img {
         max-height: 300px;
     }
@@ -352,6 +356,10 @@ article.docs .footnotes {
 @media (max-height: 449px) {
     article.docs header {
         background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 15px);
+    }
+
+    article.docs header + h1 {
+        margin-top: 5rem;
     }
 
     article.docs nav {
