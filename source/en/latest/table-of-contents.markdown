@@ -49,17 +49,8 @@ Table of contents
   - [Audio and Subtitled Defaults](advanced/audio-subtitle-defaults.html) 
 - [Resizing video](advanced/resizing-video.html) 
 - [Surround sound](advanced/surround-sound.html)
-  - Formats: ac3, dts, etc.
-  - Passthru: devices and compatiblity
-  - Dynamic range control
-  - Downmixing
 - [Adding subtitles](advanced/subtitles.html) 
-  - Language or forced
-  - Burned-in or text (source dependent)
-  - Adding external subtitles
 - [Chapter markers](advanced/chapter-markers.html) 
-  - Renaming chapters
-  - Importing and exporting chapters
 - [Post-processing metadata](advanced/post-processing.html) 
 
 
@@ -100,8 +91,6 @@ Table of contents
 - [Audio quality](advanced/audio-quality.html) 
   - Affects file size, though not as much as video quality
   - Adjustments may impact compatibility (recommend to leave alone)
-- [Audio defaults](advanced/audio-defaults.html) 
-- [Subtitle defaults](advanced/subtitle-defaults.html) 
 - [Automatic file naming](advanced/automatic-file-naming.html) 
 - [Web optimized](advanced/web-optimised.html) 
 - [iPod 5G support](advanced/old-ipod-support.html) 

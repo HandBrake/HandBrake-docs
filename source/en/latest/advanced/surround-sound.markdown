@@ -17,3 +17,8 @@ Surround Sound Guide
 =============================
 
 Todo
+
+  - Formats: ac3, dts, etc.
+  - Passthru: devices and compatiblity
+  - Dynamic range control
+  - Downmixing
