@@ -16,4 +16,5 @@ License_URL:     https://handbrake.fr/docs/license.html
 Video Sources
 =============================
 
-Todo
+- x264 tune
+    - May affect compatibility

@@ -51,7 +51,7 @@ Table of contents
 - [Surround sound](advanced/surround-sound.html)
 - [Adding subtitles](advanced/subtitles.html) 
 - [Chapter markers](advanced/chapter-markers.html) 
-- [Post-processing metadata](advanced/post-processing.html) 
+<!-- - [Post-processing metadata](advanced/post-processing.html) -->
 
 
 ## Restoration and enhancement
@@ -77,20 +77,12 @@ Table of contents
 
 - [Formats/containers](advanced/containers.html) 
 - [Video source type](advanced/video-sources.html) 
-  - x264 tune
-    - May affect compatibility
 - [Video encoding speed](advanced/video-encoding-performance.html) 
-  - Quality affects speed
-  - x264 preset
-    - May affect compatibility
 - [Video angles](advanced/video-angles.html) 
 - [Point-to-point](advanced/point-to-point.html) 
 - [Frame rate](advanced/frame-rates.html) 
-  - Same as source VFR/CFR
-  - Fixed VFR (peak) or CFR
+   <!-- TODO   - VFR/PFR, CFR, custom frame rates under this? -->
 - [Audio quality](advanced/audio-quality.html) 
-  - Affects file size, though not as much as video quality
-  - Adjustments may impact compatibility (recommend to leave alone)
 - [Automatic file naming](advanced/automatic-file-naming.html) 
 - [Web optimized](advanced/web-optimised.html) 
 - [iPod 5G support](advanced/old-ipod-support.html) 
@@ -118,17 +110,12 @@ Table of contents
 
 ## Technical documentation
 
-- Introduction
-  - Not for regular use
 - [Source formats](technical/source-formats.html)
-- Containers
-  - Known issue: MP4 edit lists
 - Video
   - [Codecs](technical/video-codecs.html) 
   - [x264 presets, tunes, and custom settings](technical/video-x264-presets-tunes.html) 
   - [x264 profile and level](technical/video-x264-profiles-levels.html) 
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html) 
-  - VFR/PFR, CFR, custom frame rates
 - Advanced picture settings
   - Anamorphic modes
   - Modulus
@@ -136,10 +123,7 @@ Table of contents
 - Advanced Filter Settings
 - Audio
   - [Codecs](technical/audio-codecs.html)
-    - Known issue: Dolby Atmos
   - [Gain](technical/audio-gain.html)
   - [DRC](technical/audio-drc.html)
   - [Mixdown](technical/audio-mixdowns.html)
-- Subtitles
-  - Formats
 - Advanced preferences

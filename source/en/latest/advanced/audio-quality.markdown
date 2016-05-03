@@ -17,3 +17,5 @@ Audio Quality
 =============================
 
 Todo
+  - Affects file size, though not as much as video quality
+  - Adjustments may impact compatibility (recommend to leave alone)

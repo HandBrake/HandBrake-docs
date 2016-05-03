@@ -17,3 +17,7 @@ Video Encoding Speed
 =============================
 
 Todo
+
+  - Quality affects speed
+  - x264 preset
+    - May affect compatibility

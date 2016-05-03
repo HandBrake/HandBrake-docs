@@ -17,3 +17,6 @@ Framerates
 =============================
 
 Todo
+
+Same as source VFR/CFR
+Fixed VFR (peak) or CFR

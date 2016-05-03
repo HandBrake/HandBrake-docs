@@ -6,7 +6,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         
+Authors:         Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -16,4 +16,9 @@ License_URL:     https://handbrake.fr/docs/license.html
 Web Optimised
 =============================
 
-Todo
+![Web Optimised Checkbox](../images/windows/web-optimised.png "Web Optimised Checkbox")
+
+If you are encoding for the web and using the MP4 file format, you'll want to turn on "Web Optimised" checkbox.
+This places the MP4 container header at the start of the file, optimizing it for streaming across the web.
+
+This is often referred to as MP4 "Fast Start".

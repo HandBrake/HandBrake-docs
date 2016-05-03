@@ -6,7 +6,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         
+Authors:         Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -16,4 +16,37 @@ License_URL:     https://handbrake.fr/docs/license.html
 Automatic File Naming
 =============================
 
-Todo
+HandBrake can automatically name your output files for you based on a number of criteria.
+
+If you open the programs Preferences screen, you'll see a section that referes to the "Output Files"
+
+![File output preferences](../images/windows/output-file-preferences.png "File output preferences")
+
+Here you can define the default path where output files will be stored, and the format the file name will take.
+
+By default, it will be {source}-{title}
+You can add in addition to this: {chapters}
+
+
+### Source Name Handling.
+
+Many sources have awkward names. (i.e all capitals). HandBrake offers a few options to correct this.
+
+The following options will affect the source name:
+
+- "Change to Title case",  This is also known as camel case where the first letter of each word is a capital followed by lower case letters.
+
+- "Replace underscores with a space"  i.e  "_" to " "
+
+- "Remove common punctuation" i.e ( Dash - Period . Commas ,)
+
+### MP4 File Extension Handling
+
+The last option allows you to choose the MP4 file extension handling.
+
+MP4 and M4V are identical files. It's just a different file extension.
+
+For MP4 files, HandBrake will automatically use the extension M4V when you pass-through audio (AC3), use SRT subtitles or have chapter markers enabled.
+
+You can simply change the file extension between .mp4 and .m4v as the file is exactly the same. There are no differences in the content or container itself.
+
