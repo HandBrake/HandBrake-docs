@@ -81,7 +81,6 @@ Table of contents
 - [Video angles](advanced/video-angles.html) 
 - [Point-to-point](advanced/point-to-point.html) 
 - [Frame rate](advanced/frame-rates.html) 
-   <!-- TODO   - VFR/PFR, CFR, custom frame rates under this? -->
 - [Audio quality](advanced/audio-quality.html) 
 - [Automatic file naming](advanced/automatic-file-naming.html) 
 - [Web optimized](advanced/web-optimised.html) 
@@ -97,9 +96,8 @@ Table of contents
 
 ## HandBrake lore
 
-- About the name HandBrake
-- About the cocktail and pineapple icon
-- Other esoteric information
+- [Project history](about/history.html)
+- [About the cocktail and pineapple icon](about/the-icon.html) 
 
 
 ## CLI documentation

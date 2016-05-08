@@ -1,5 +1,5 @@
 ---
-Title:           Framerates
+Title:           Audio and Subtitle Defaults
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,11 +13,5 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Framerates
+The Icon
 =============================
-
-Todo
-
-Same as source VFR/CFR
-Fixed VFR (peak) or CFR
-
