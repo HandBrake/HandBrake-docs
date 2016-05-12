@@ -347,6 +347,10 @@ article.docs .footnotes {
         margin-top: 6.25rem;
     }
 
+    article.docs nav {
+        padding: 20px 30px 45px;
+    }
+
     article.docs figure img {
         max-height: 300px;
     }
