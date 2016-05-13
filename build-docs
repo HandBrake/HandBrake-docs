@@ -77,6 +77,7 @@ function build_source {
     BASE_RELPATH="${SOURCE#$DOCS_DIR/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
     BASE_RELPATH="${BASE_RELPATH//[\/]/../}"  # slashes to dirs
+    BASE_RELPATH="${BASE_RELPATH:-./}"        # empty to current dir
     DEST="${SOURCE%.markdown}"
     DEST_NAME="${DEST##*/}"
     DOCUMENT_Content="${DEST}.html.temp"
