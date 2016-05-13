@@ -59,6 +59,13 @@ article.docs nav .breadcrumbs {
     margin: 1em 0 0;
 }
 
+.license article.docs nav .breadcrumbs .language-separator,
+.license article.docs nav .breadcrumbs .language,
+.license article.docs nav .breadcrumbs .version-separator,
+.license article.docs nav .breadcrumbs .version {
+    display: none;
+}
+
 article.docs nav .system-select,
 article.docs nav .system-select li {
     margin: 0;
@@ -208,6 +215,10 @@ article.docs h6 {
     line-height: 1.07143;
     text-transform: uppercase;
     letter-spacing: -0.005em;
+}
+
+.license article.docs footer {
+    display: none;
 }
 
 article.docs footer p,
@@ -360,7 +371,7 @@ article.docs .footnotes {
         font-size: 1.125rem;
     }
 
-    .js article.docs {
+    .js:not(.license) article.docs {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
@@ -371,13 +382,13 @@ article.docs .footnotes {
         font-size: 0.9rem;
     }
 
-    .js article.docs nav {
+    .js:not(.license) article.docs nav {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
     }
 
-    .js article.docs nav .navigation {
+    .js:not(.license) article.docs nav .navigation {
         display: block;
     }
 
