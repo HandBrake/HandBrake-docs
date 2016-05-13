@@ -130,7 +130,7 @@ article.docs nav .navigation h2.selected:before {
 article.docs nav .navigation ul {
     margin: 0;
     padding: 6px 10px;
-    background-color: rgb(252,252,252);
+    background-color: rgb(252,252,255);
     font-size: 0.875rem;
     line-height: 1.42857;
 }
