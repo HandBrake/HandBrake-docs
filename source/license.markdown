@@ -1,4 +1,5 @@
 ---
+Type:            license
 Title:           License
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
