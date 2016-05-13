@@ -287,7 +287,7 @@ article.docs .footnotes {
     }
 
     article.docs header + h1 {
-        margin-top: 8.75rem;
+        margin-top: 7.5rem;
     }
 
     article.docs nav {
@@ -325,6 +325,10 @@ article.docs .footnotes {
         padding-left: 100px;
         padding-right: 100px;
         max-width: 680px;
+    }
+
+    article.docs header + h1 {
+        margin-top: 8.75rem;
     }
 
     article.docs nav {
