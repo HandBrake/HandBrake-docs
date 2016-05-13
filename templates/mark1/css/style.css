@@ -353,22 +353,28 @@ article.docs .footnotes {
 /* Wider than 1200, taller than 750 */
 @media (min-width: 1200px) and (min-height: 750px) {
     article.docs {
-        position: relative;
-        padding-left: 350px;
-        padding-right: 50px;
         max-width: 760px;
         font-size: 1.125rem;
     }
 
-    article.docs nav {
+    .js article.docs {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
+    }
+
+    article.docs nav {
         width: 760px;
         font-size: 0.9rem;
     }
 
-    article.docs nav .navigation {
+    .js article.docs nav {
+        position: relative;
+        padding-left: 350px;
+        padding-right: 50px;
+    }
+
+    .js article.docs nav .navigation {
         display: block;
     }
 
