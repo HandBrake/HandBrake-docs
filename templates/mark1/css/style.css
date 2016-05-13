@@ -137,6 +137,9 @@ article.docs nav .navigation ul {
 
 .js article.docs nav .navigation > ul {
     display: none;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 article.docs nav .navigation li {
