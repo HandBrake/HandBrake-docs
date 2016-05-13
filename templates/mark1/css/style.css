@@ -291,7 +291,7 @@ article.docs .footnotes {
     }
 
     article.docs nav {
-        padding: 30px 50px 60px;
+        padding: 20px 50px 45px;
         width: 580px;
     }
 
@@ -328,8 +328,7 @@ article.docs .footnotes {
     }
 
     article.docs nav {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 30px 100px 60px;
         width: 680px;
     }
 
@@ -426,10 +425,6 @@ article.docs .footnotes {
 @media (max-height: 549px) {
     article.docs header + h1 {
         margin-top: 6.25rem;
-    }
-
-    article.docs nav {
-        padding: 20px 30px 45px;
     }
 
     article.docs figure img {
