@@ -88,6 +88,77 @@ article.docs nav .system-select li.selected {
     background-color: orange;
 }
 
+article.docs nav .navigation {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 15px;
+    width: 275px;
+    max-height: 900px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+article.docs nav .navigation h1 {
+    display: none;
+}
+
+article.docs nav .navigation h2 {
+    margin: 0;
+    padding: 3px 10px;
+    background-color: skyblue;
+    color: white;
+    font-family: 'Open Sans', -apple-system, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    text-transform: uppercase;
+}
+
+.js article.docs nav .navigation h2:before {
+    content: "+ "
+}
+
+article.docs nav .navigation h2.selected {
+    background-color: orange;
+}
+
+article.docs nav .navigation h2.selected:before {
+    content: ""
+}
+
+article.docs nav .navigation ul {
+    margin: 0;
+    padding: 6px 10px;
+    background-color: rgb(252,252,252);
+    font-size: 0.875rem;
+    line-height: 1.42857;
+}
+
+.js article.docs nav .navigation ul {
+    display: none;
+}
+
+article.docs nav .navigation li {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+article.docs nav .navigation li > a.selected {
+    color: rgb(20,20,20);
+    font-style: italic;
+    text-decoration: none;
+    cursor: default;
+}
+
+article.docs nav .navigation li > em {
+    display: none;
+}
+
+article.docs nav .navigation li > ul {
+    padding-left: 15px;
+}
+
 article.docs h1,
 article.docs h2,
 article.docs h3,
@@ -248,8 +319,8 @@ article.docs .footnotes {
 
 }
 
-/* Wider than 1000 */
-@media (min-width: 1000px) {
+/* Wider than 1000, taller than 600 */
+@media (min-width: 1000px) and (min-height: 600px) {
     article.docs {
         padding-left: 100px;
         padding-right: 100px;
@@ -276,16 +347,26 @@ article.docs .footnotes {
 
 }
 
-/* Wider than 1200, taller than 900 */
+/* Wider than 1200, taller than 750 */
 @media (min-width: 1200px) and (min-height: 750px) {
     article.docs {
+        position: relative;
+        padding-left: 350px;
+        padding-right: 50px;
         max-width: 760px;
         font-size: 1.125rem;
     }
 
     article.docs nav {
+        position: relative;
+        padding-left: 350px;
+        padding-right: 50px;
         width: 760px;
         font-size: 0.9rem;
+    }
+
+    article.docs nav .navigation {
+        display: block;
     }
 
     article.docs header + h1 {

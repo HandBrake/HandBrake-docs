@@ -1,3 +1,6 @@
 <nav>
     <div class="breadcrumbs"><a href="{{ base.relpath }}">Docs</a>&nbsp;> <a href="{{ base.relpath }}{{ document.language-code slug }}/">{{ document.language }}</a>&nbsp;> <a href="{{ base.relpath }}{{ document.language-code slug }}/{{ document.project-version slug }}/">{{ document.project }} {{ document.project-version }}</a>&nbsp;> {{ document.title }}</div>
+    <div class="navigation">
+        {{ include.navigation }}
+    </div>
 </nav>
