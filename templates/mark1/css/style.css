@@ -319,8 +319,8 @@ article.docs .footnotes {
 
 }
 
-/* Wider than 1000, taller than 600 */
-@media (min-width: 1000px) and (min-height: 600px) {
+/* Wider than 1000, taller than 550 */
+@media (min-width: 1000px) and (min-height: 550px) {
     article.docs {
         padding-left: 100px;
         padding-right: 100px;
@@ -350,8 +350,8 @@ article.docs .footnotes {
 
 }
 
-/* Wider than 1200, taller than 750 */
-@media (min-width: 1200px) and (min-height: 750px) {
+/* Wider than 1200, taller than 600 */
+@media (min-width: 1200px) and (min-height: 600px) {
     article.docs {
         max-width: 760px;
         font-size: 1.125rem;
