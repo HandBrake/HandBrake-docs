@@ -9,8 +9,8 @@ $(document).ready(function() {
         $(this).addClass('selected').next('ul').slideDown(250);
         navigation_headings.not(this).removeClass('selected').next('ul').slideUp(250);
     });
-    navigation.find('ul').has('a.selected').show().prev('h2').addClass('selected');
-    navigation.find('ul').not(':has(a.selected)').hide();
+    navigation_headings.next('ul').has('a.selected').show().prev('h2').addClass('selected');
+    navigation_headings.next('ul').not(':has(a.selected)').hide();
 
     var nav = $('article.docs nav');
     var system_select = $('<ul class="system-select">Instructions:<li class="system-select-all">All</li><li class="system-select-lin">Linux</li><li class="system-select-mac">Mac</li><li class="system-select-win">Windows</li></ul>').prependTo(nav);
