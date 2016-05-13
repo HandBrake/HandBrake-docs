@@ -117,25 +117,17 @@ function build_source {
         else
             # full html content
             cp "${TEMPLATE_Base}" "${DEST}.html"
-            # inject meta, title, styles, document, scripts
-            sed -E \
-            -e '/\{\{[ ]*template\.meta[ ]*\}\}/{r '"${TEMPLATE_Meta:-}" -e 'd;}' \
-            -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title:-}" -e 'd;}' \
-            -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
-            -i.sedbak "${DEST}.html"
         fi
     else
         # partial html
         cp "${TEMPLATE_Document}" "${DEST}.html"
     fi
-    # omit header, footer, and nav templates from redirects and license documents
-    if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]] || [[ "${DEST_NAME}" == "license" ]] || [[ "${DEST_NAME}" == "license-summary" ]]; then
-        sed -E \
-        -e 's|\{\{[ ]*template\.header[ ]*\}\}||g' \
-        -e 's|\{\{[ ]*template\.footer[ ]*\}\}||g' \
-        -e 's|\{\{[ ]*template\.nav[ ]*\}\}||g' \
-        -i.sedbak "${DEST}.html"
-    fi
+    # inject meta, title, styles, document, scripts
+    sed -E \
+    -e '/\{\{[ ]*template\.meta[ ]*\}\}/{r '"${TEMPLATE_Meta:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
+    -i.sedbak "${DEST}.html"
     # inject header, content, footer
     sed -E \
     -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header:-}" -e 'd;}' \
@@ -175,6 +167,7 @@ function build_source {
     -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_Scripts:-}"'|g' \
     -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
     -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
+    -e 's|\{\{[ ]*document\.type[ ]*\}\}|'"${DOCUMENT_Type:-}"'|g' \
     -e 's|\{\{[ ]*document\.project[ ]*\}\}|'"${DOCUMENT_Project:-}"'|g' \
     -e 's|\{\{[ ]*document\.project slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Project:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.project-url[ ]*\}\}|'"${DOCUMENT_Project_URL:-}"'|g' \
