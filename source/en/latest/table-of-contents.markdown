@@ -20,26 +20,36 @@ Table of contents
 
 <!-- TODO: link to contributing guide -->
 
-- [Quick start](introduction/quick-start.html) - Learn how to make your first video in minutes
-- [About HandBrake](introduction/about.html) - What HandBrake is, does, and does not do
+- [Quick start](introduction/quick-start.html)
+  *Learn how to make your first video in minutes*
+- [About HandBrake](introduction/about.html)
+  *What HandBrake is, does, and does not do*
 
 
 ## Getting HandBrake
 
-- [Where to get HandBrake](get-handbrake/where-to-get-handbrake.html) - The officially supported version
-- [Downloading and installing HandBrake](get-handbrake/download-and-install.html) - How to get HandBrake onto your computer
-- [Checking for updates](get-handbrake/check-for-updates.html) - Staying up to date with the latest version is easy
+- [Where to get HandBrake](get-handbrake/where-to-get-handbrake.html)
+  *The officially supported version*
+- [Downloading and installing HandBrake](get-handbrake/download-and-install.html)
+  *How to get HandBrake onto your computer*
+- [Checking for updates](get-handbrake/check-for-updates.html)
+  *Staying up to date with the latest version is easy*
 
 
 ## Making videos
 
-- [Opening a video source](workflow/open-video-source.html) - How to get your videos into HandBrake
-- [Selecting a preset](workflow/select-preset.html) - Tailored settings for instant compatibility with many devices
-- [Adjusting quality](workflow/adjust-quality.html) - Easily increase visual quality or reduce file size
+- [Opening a video source](workflow/open-video-source.html)
+  *How to get your videos into HandBrake*
+- [Selecting a preset](workflow/select-preset.html)
+  *Tailored settings for instant compatibility with many devices*
+- [Adjusting quality](workflow/adjust-quality.html)
+  *Easily increase visual quality or reduce file size*
   <!-- TODO: To clean up a poor-looking source video, see restoration -->
-- [Previewing your settings](workflow/preview-settings.html) - See what your new video will look like, without waiting
+- [Previewing your settings](workflow/preview-settings.html)
+  *See what your new video will look like, without waiting*
   <!-- TODO: To clean up a poor-looking source video, see restoration -->
-- [Starting encoding](workflow/start-encoding.html) - Start encoding your new video with one click
+- [Starting encoding](workflow/start-encoding.html)
+  *Start encoding your new video with one click*
 
 
 ## Advanced features
@@ -89,8 +99,10 @@ Table of contents
 
 ## Getting help
 
-- [Troubleshooting common issues](help/troubleshooting-common-issues.html) - What to do if something goes wrong
-- [Community support](help/community-support.html) - Help from real people
+- [Troubleshooting common issues](help/troubleshooting-common-issues.html)
+  *What to do if something goes wrong*
+- [Community support](help/community-support.html)
+  *Help from real people*
 - [Activity log](help/activity-log.html) 
 
 
