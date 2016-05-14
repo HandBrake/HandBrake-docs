@@ -12,6 +12,9 @@ $(document).ready(function(){
         });
         navigation_sections.has('a.selected').show().prev('h2').addClass('selected');
         navigation_sections.not(':has(a.selected)').hide();
+        navigation_sections.find('a').each(function(){
+            $(this).attr('title', $(this).next().text());
+        });
 
         var nav = $('article.docs nav');
         var system_select = $('<ul class="system-select">Instructions:<li class="system-select-all">All</li><li class="system-select-lin">Linux</li><li class="system-select-mac">Mac</li><li class="system-select-win">Windows</li></ul>').prependTo(nav);
