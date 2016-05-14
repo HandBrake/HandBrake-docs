@@ -120,6 +120,7 @@ article.docs nav .navigation h2 {
     font-size: 0.875rem;
     line-height: 1.42857;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .js article.docs nav .navigation h2:before {
@@ -128,6 +129,7 @@ article.docs nav .navigation h2 {
 
 article.docs nav .navigation h2.selected {
     background-color: orange;
+    cursor: default;
 }
 
 article.docs nav .navigation h2.selected:before {
