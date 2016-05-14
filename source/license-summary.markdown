@@ -35,7 +35,7 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the **same license**[^same-license] as the original.
 
-**No additional restrictions** — You may not apply legal terms or **technological measures**[^technological-measures] that legally restrice others from doing anything the license permits.
+**No additional restrictions** — You may not apply legal terms or **technological measures**[^technological-measures] that legally restrict others from doing anything the license permits.
 
 [^appropriate-credit]: If supplied, you must provide the name of the creator and attribution parties, a copyright notice, a license notice, a disclaimer notice, and a link to the material. [More info on attribution](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution).
 
