@@ -98,9 +98,9 @@ article.docs nav .system-select li.selected {
 article.docs nav .navigation {
     display: none;
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
-    margin: 0 15px;
+    margin: .166666em 15px .166666em;
     width: 275px;
     max-height: 900px;
     overflow-x: hidden;
