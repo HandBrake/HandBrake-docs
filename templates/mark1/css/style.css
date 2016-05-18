@@ -241,6 +241,11 @@ article.docs h6 {
     letter-spacing: -0.005em;
 }
 
+article.docs footer {
+	border-top: 1px solid lightgray;
+	margin-top: 3em;
+}
+
 .license article.docs footer {
     display: none;
 }
