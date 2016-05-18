@@ -31,7 +31,7 @@ In HandBrake terms, the video you already have is called the `Source`. One of Ha
 
 Learn more about [source formats](../technical/source-formats.html).
 
-**Note:** HandBrake does not defeat or circumvent [copy protection](https://en.wikipedia.org/wiki/Copy_protection) of any kind. It does not work with video files employing [Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management) (DRM). See [About HandBrake](../introduction/about.html) for more information about what HandBrake *does* and *does not*.
+**Note:** HandBrake does not defeat or circumvent [copy protection](https://en.wikipedia.org/wiki/Copy_protection) of any kind. It does not work with video files employing [[DRM](https://en.wikipedia.org/wiki/Digital_rights_management)](abbr:Digital Rights Management). See [About HandBrake](../introduction/about.html) for more information about what HandBrake *does* and *does not*.
 
 ## Ways to open a video source
 
