@@ -96,7 +96,7 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 
 ## Launching HandBrake
 
-You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon].
+You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon]. Depending on your system settings, a single click may suffice.
 
 ![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
