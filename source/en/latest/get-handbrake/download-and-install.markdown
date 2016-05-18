@@ -26,6 +26,13 @@ To download HandBrake to your computer, click the download button on the HandBra
 
 Experienced users may wish to try HandBrake's [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].
 
+<!-- .system-lin -->
+
+## Installing on Linux
+
+TODO
+
+<!-- /.system-lin -->
 <!-- .system-mac -->
 
 ## Installing on Mac
@@ -86,13 +93,6 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 ![Windows SmartScreen - Run Anyway](../images/windows/smartscreen-2.png "Select Run anyway to dismiss the SmartScreen warning and continue installing HandBrake.")
 
 <!-- /.system-win -->
-<!-- .system-lin -->
-
-## Installing on Linux
-
-TODO
-
-<!-- /.system-lin -->
 
 ## Launching HandBrake
 
