@@ -1,7 +1,28 @@
 ---
-Redirect_URL: table-of-contents.html
+Title:           Welcome
+Project:         HandBrake
+Project_URL:     https://handbrake.fr/
+Project_Version: Latest
+Language:        English
+Language_Code:   en
+Text_Encoding:   utf-8
+Authors:         Bradley Sepos <bradley@bradleysepos.com>
+Copyright:       2016 HandBrake Team
+License:         Creative Commons Attribution-ShareAlike 4.0 International
+License_Abbr:    CC BY-SA 4.0
+License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-A landing page has not yet been implemented.
+Welcome
+=======
 
-Continue to [table-of-contents.html](table-of-contents.html)...
+Welcome to the English documentation for HandBrake Latest.
+
+Here are some quick links to get you started:
+
+- To quickly get up and running with HandBrake, continue to [Quick start](introduction/quick-start.html)
+- To get a copy of HandBrake (*it's free!*), see [Where to get HandBrake](get-handbrake/where-to-get-handbrake.html)
+- A more detailed guide to using HandBrake begins with [Opening a video source](workflow/open-video-source.html)
+- Having problems? See [Troubleshooting common issues](help/troubleshooting-common-issues.html)
+
+Continue to the [Table of contents](table-of-contents.html) for a list of all available articles.
