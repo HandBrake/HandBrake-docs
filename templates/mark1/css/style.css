@@ -400,7 +400,7 @@ article.docs .footnotes {
         font-size: 1.125rem;
     }
 
-    .js:not(.license) article.docs {
+    .js:not(.landing):not(.license) article.docs {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
@@ -411,13 +411,13 @@ article.docs .footnotes {
         font-size: 0.9rem;
     }
 
-    .js:not(.license) article.docs nav {
+    .js:not(.landing):not(.license) article.docs nav {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
     }
 
-    .js:not(.license) article.docs nav .navigation {
+    .js:not(.landing):not(.license) article.docs nav .navigation {
         display: block;
     }
 
