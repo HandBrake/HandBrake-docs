@@ -21,7 +21,7 @@ Welcome to the English documentation for HandBrake Latest.
 Here are some quick links to get you started:
 
 - To quickly get up and running with HandBrake, continue to [Quick start](introduction/quick-start.html)
-- To get a copy of HandBrake (*it's free!*), see [Where to get HandBrake](get-handbrake/where-to-get-handbrake.html)
+- To get a copy of HandBrake (*it's free!*), see [Downloading and installing HandBrake](get-handbrake/download-and-install.html)
 - A more detailed guide to using HandBrake begins with [Opening a video source](workflow/open-video-source.html)
 - Having problems? See [Troubleshooting common issues](help/troubleshooting-common-issues.html)
 
