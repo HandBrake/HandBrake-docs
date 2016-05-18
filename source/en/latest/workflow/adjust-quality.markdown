@@ -48,15 +48,15 @@ Begin by making small adjustments (plus or minus 1-2 RF is usually noticeable).
 
 Recommended settings for the **x264** encoder are:
 
-- RF 18-22 for 480p Standard Definition[^480p]
+- RF 18-22 for 480p/576p Standard Definition[^480p]
 - RF 19-23 for 720p High Definition[^720p]
-- RF 20-24 for 1080p High Definition[^1080p]
+- RF 20-24 for 1080p Full High Definition[^1080p]
 
 Recommended settings for the **x265** encoder are:
 
-- RF 20-24 for 480p Standard Definition[^480p]
-- RF 21-25 for 720p High Definition[^720p]
-- RF 22-26 for 1080p High Definition[^1080p]
+- RF 20-24 for 480p/576p Standard Definition[^480p-2]
+- RF 21-25 for 720p High Definition[^720p-2]
+- RF 22-26 for 1080p Full High Definition[^1080p-2]
 
 Lower quality settings may be used to produce smaller video files or for web videos where bandwidth is a concern. Drastically lower settings may show significant loss of detail.
 
@@ -77,5 +77,11 @@ Continue to [Previewing your settings](preview-settings.html).
 [^720p]: 720p [HD](abbr:High Definition) video has a resolution of 1280x720 pixels. With three times the resolution of SD, and about half that of 1080p HD, 720p HD is commonly used by consumer video cameras, web videos, and broadcast TV sports.
 
 [^1080p]: 1080p [HD](abbr:High Definition) video has a resolution of 1920x1080 pixels—twice the resolution of 720p and six times the resolution of 480p. 1080p HD video is commonly used by mobile phones and tablets, consumer and professional video cameras, and Blu-ray.
+
+[^480p-2]: [SD](abbr:Standard Definition) video has a resolution of 720x480 or fewer pixels. DVDs, small web videos, and most analog sources are SD.
+
+[^1080p-2]: 1080p [HD](abbr:High Definition) video has a resolution of 1920x1080 pixels—twice the resolution of 720p and six times the resolution of 480p. 1080p HD video is commonly used by mobile phones and tablets, consumer and professional video cameras, and Blu-ray.
+
+[^720p-2]: 720p [HD](abbr:High Definition) video has a resolution of 1280x720 pixels. With three times the resolution of SD, and about half that of 1080p HD, 720p HD is commonly used by consumer video cameras, web videos, and broadcast TV sports.
 
 [^viewing-distance]: Learn more about [optimum viewing distances for high definition TV displays](https://en.wikipedia.org/wiki/Optimum_HDTV_viewing_distance).
