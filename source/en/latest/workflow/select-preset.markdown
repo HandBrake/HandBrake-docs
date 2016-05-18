@@ -34,7 +34,7 @@ If your device is not listed, or you wish to play your videos on a computer, cho
 
 ## Custom presets
 
-If you've previously saved one of your own `Presets`, you may select it in the same way as the built-in `Presets`. Learn more about Custom presets (TODO: link).
+If you've previously saved one of your own `Presets`, you may select it in the same way as the built-in `Presets`. Learn more about [Custom presets](../advanced/custom-presets.html).
 
 ## Next steps
 
