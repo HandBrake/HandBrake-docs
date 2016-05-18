@@ -125,6 +125,7 @@ article.docs nav .navigation h1 {
     background-color: steelblue;
     font-size: 0.9rem;
     line-height: 1.66666;
+    cursor: default;
 }
 
 article.docs nav .navigation h1 a,
