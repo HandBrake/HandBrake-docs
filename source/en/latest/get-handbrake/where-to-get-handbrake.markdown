@@ -20,7 +20,11 @@ Where to get HandBrake
 
 Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly builds](https://handbrake.fr/nightly.php) are available for Linux, Mac, and Windows.
 
+<!-- .system-lin -->
+
 Ubuntu Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) or the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots). The PPA may work, but is not tested, on other Debian-compatible distributions. Users of other BSD- and *nix-like distributions may compile from source.
+
+<!-- /.system-lin -->
 
 HandBrake source code is available at the official [HandBrake repository on GitHub](https://github.com/HandBrake/HandBrake).
 
@@ -29,6 +33,8 @@ Other versions obtained via third parties are not supported.
 ## Warning about third-party download sites
 
 We encourage you to obtain HandBrake from the official website. When downloading from any other website, we highly recommend you ensure you have received an official copy of HandBrake by verifying the downloaded files match the [official release checksums](https://handbrake.fr/checksums.php) as published on the HandBrake website. Downloaded files with different checksums may contain unwanted extras or malware.
+
+<!-- .system-lin -->
 
 ## Warning about broken third-party builds
 
@@ -43,6 +49,8 @@ Broken third-party packages/builds include but are not limited to:
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
 
 Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), install the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), or compile from the [official source code](https://github.com/HandBrake/HandBrake).
+
+<!-- /.system-lin -->
 
 ## Next steps
 

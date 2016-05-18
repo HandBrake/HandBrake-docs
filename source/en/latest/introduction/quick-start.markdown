@@ -34,15 +34,43 @@ HandBrake calls the video you already have the `Source`.
 
 Select the `Open Source` button on the toolbar to browse your files for a video to open. You may also drag your `Source` video onto HandBrake's main window. 
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Browsing for a video source to open](../images/mac/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
 
 ![Opening a video source via drag and drop](../images/mac/open-source-drag-drop.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 ## Select a title
 
 Some `Sources` may contain more than one video clip, or a collection of `Titles`. Use HandBrake's `Title` control to select which video clip you want to use.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Selecting a title](../images/mac/title-selection.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multiple `Titles`.
 
@@ -50,9 +78,23 @@ Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multi
 
 HandBrake provides a number of settings `Presets` to make your new video work well with your playback devices and software. For instance, if you have a third generation Apple TV, you may wish to select the `AppleTV 3` preset. The default `Normal` preset is fast and relatively compatible.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Selecting a preset](../images/mac/preset-selection.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
 
 ![Toggling the presets list](../images/mac/toggle-presets-button.png "If the presets list is not visible, select the Toggle Presets button on the toolbar.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 `Presets` can affect compatibility (whether your video will work with your devices and software) and encoding time. Learn more: [Selecting a preset](../workflow/select-preset.html)
 
@@ -60,9 +102,23 @@ HandBrake provides a number of settings `Presets` to make your new video work we
 
 The `Destination` is where your new video will go. You can select the `Browse...` button to choose a different location and name, or type it directly in the box.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Selecting a destination](../images/mac/destination-field.png "The destination is where your new video will go.")
 
 ![Browsing for a destination](../images/mac/destination-dialog.png "Select the browse button to choose a different location and name.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 Please take special care to *note your destination*. Otherwise, you won't be able to find your new video. You can move it later if you desire.
 
@@ -72,9 +128,23 @@ Select the `Start` button on the toolbar to make your new video.
 
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Encode progress](../images/mac/encode-progress.png "HandBrake reports its progress during encoding.")
 
 ![Encoding complete alert](../images/mac/encode-complete.png "HandBrake shows an alert when finished encoding.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 

@@ -24,27 +24,94 @@ Luckily, HandBrake has a `Preview` feature that allows you to do a test run on a
 
 At the top of HandBrake's main window, you'll see a toolbar with various buttons.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Main window toolbar](../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
 Select the `Preview` button to open the `Preview` window.
+
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
 
 ![Preview button](../images/mac/preview-button.png)
 
 ![Preview window](../images/mac/preview-window.png)
 
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
 ## Adjusting Preview settings
 
 Move your mouse cursor over the `Preview` window, and some controls will appear.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Preview controls](../images/mac/preview-controls.png)
 
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
 Set the starting position by dragging the `Position` control left or right. Choose how many seconds of video you want to encode using the `Duration` control. Longer durations will take more time to encode.
+
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
 
 ![Preview position control](../images/mac/preview-controls-position.png)
 
 ![Preview duration control](../images/mac/preview-controls-duration.png)
 
-## Starting a Preview encode
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
+<!-- .system-lin -->
+
+## Starting a Preview encode on Linux
+
+TODO: Linux instructions.
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
+## Starting a Preview encode on Mac
 
 When you're satisfied with your starting position and duration, select `Live Preview` and be patient. HandBrake will report its progress while it works. When your `Preview` is ready, it will play automatically. You can use the playback controls to pause, rewind, and replay your `Preview`.
 
@@ -52,13 +119,38 @@ When you're satisfied with your starting position and duration, select `Live Pre
 
 ![Preview playing](../images/mac/preview-playing.png)
 
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+## Starting a Preview encode on Windows
+
+TODO: Windows instructions.
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
 ## Finishing up
 
-To create a new `Preview`, select the `Still Previews` button to start over. When you're finished previewing your work, you may close the `Preview` window.
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
+To create a new `Preview`, select the `×` button to start over. When you're finished previewing your work, you may close the `Preview` window.
 
 ![Preview reset control](../images/mac/preview-controls-reset.png)
 
 ![Closing the preview window](../images/mac/preview-window-close.png)
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 ## Next steps
 

@@ -26,7 +26,21 @@ Most of HandBrake's built-in `Presets` use the x264 video encoder and a constant
 
 To increase video quality, adjust the quality control toward the right. To reduce video quality, adjust the quality control toward the left.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Quality control](../images/mac/quality-control.png)
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 Begin by making small adjustments (plus or minus 1-2 RF is usually noticeable).
 

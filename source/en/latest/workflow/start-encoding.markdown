@@ -22,7 +22,21 @@ Now that you've got all your settings just right, it's time to make your new vid
 
 `Destination` is where your new video will go. You can select the `Browse...` button to choose a new location and name, or type it directly in the box.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Selecting a destination](../images/mac/destination.png)
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 Please take special care to *note your destination*. Otherwise, you won't be able to find your new video. You can move it later if you desire.
 
@@ -30,15 +44,43 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
 ![Main window toolbar](../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
 ![Starting an encode](../images/mac/start-button.png "The Start button begins encoding.")
 
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
+
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
 
 ![Encode progress](../images/mac/encode-progress.png "HandBrake reports its progress during encoding.")
 
 ![Encoding complete alert](../images/mac/encode-complete.png "HandBrake shows an alert when finished encoding.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 
