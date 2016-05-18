@@ -107,10 +107,7 @@ article.docs nav .navigation {
     overflow-y: auto;
 }
 
-article.docs nav .navigation h1 {
-    display: none;
-}
-
+article.docs nav .navigation h1,
 article.docs nav .navigation h2 {
     margin: 0;
     padding: 3px 10px;
@@ -119,12 +116,37 @@ article.docs nav .navigation h2 {
     font-family: 'Open Sans', -apple-system, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
     font-size: 0.875rem;
     line-height: 1.42857;
-    text-transform: uppercase;
     cursor: pointer;
+}
+
+article.docs nav .navigation h1 {
+    padding-top: .25em;
+    padding-bottom: .25em;
+    background-color: steelblue;
+    font-size: 0.9rem;
+    line-height: 1.66666;
+}
+
+article.docs nav .navigation h1 a,
+article.docs nav .navigation h1 a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+article.docs nav .navigation h1 a:hover {
+    text-decoration: underline;
+}
+
+article.docs nav .navigation h2 {
+    text-transform: uppercase;
 }
 
 .js article.docs nav .navigation h2:before {
     content: "+ "
+}
+
+article.docs nav .navigation h2:hover {
+    background-color: rebeccapurple;
 }
 
 article.docs nav .navigation h2.selected {
