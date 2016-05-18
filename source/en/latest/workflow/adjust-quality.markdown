@@ -32,15 +32,21 @@ Begin by making small adjustments (plus or minus 1-2 RF is usually noticeable).
 
 ## Recommended quality settings
 
-Recommended settings for x264 are:
+Recommended settings for the **x264** encoder are:
 
 - RF 18-22 for 480p Standard Definition[^480p]
 - RF 19-23 for 720p High Definition[^720p]
 - RF 20-24 for 1080p High Definition[^1080p]
 
+Recommended settings for the **x265** encoder are:
+
+- RF 20-24 for 480p Standard Definition[^480p]
+- RF 21-25 for 720p High Definition[^720p]
+- RF 22-26 for 1080p High Definition[^1080p]
+
 Lower quality settings may be used to produce smaller video files or for web videos where bandwidth is a concern. Drastically lower settings may show significant loss of detail.
 
-Using higher than recommended quality settings (exceeding RF 18 or so) can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
+Using higher than recommended quality settings (exceeding RF 18 for x264 or RF 20 for x265) can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
 
 ## Display size and viewing distance
 
