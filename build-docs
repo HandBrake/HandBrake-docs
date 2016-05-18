@@ -144,6 +144,7 @@ function build_source {
     NAVIGATION_RELPATH="${BASE_RELPATH#../../}"
     if [[ -e "${NAVIGATION_PARTIAL}" ]]; then
         sed -E \
+        -e 's|<h1>([^<]+)</h1>|<h1><a href="'"${NAVIGATION_RELPATH}${CONFIG_Navigation%.markdown}.html"'">\1</a></h1>|' \
         -e 's|(<a href=")([^.])|\1'"${NAVIGATION_RELPATH}"'\2|g' \
         -e 's|<a (href="[^"]*'"${DEST_NAME}.html"'"[^>]*)>([^<>]+)</a>|<a \1 class="selected">\2</a>|g' \
         "${NAVIGATION_PARTIAL}" > "${DEST}.nav.partial.html"
