@@ -45,7 +45,8 @@ Broken third-party packages/builds include but are not limited to:
 - Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - Gentoo: `handbrake`
-- Arch User Repository (AUR): `handbrake-cli-git`, `handbrake-cli-fdkaac`, `handbrake-fdkaac`, `handbrake-gtk-git`, `handbrake-gtk2`
+- Arch: `handbrake`, `handbrake-cli`
+- Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-cli-fdkaac`, `handbrake-fdkaac`, `handbrake-gtk-git`, `handbrake-gtk2`
 
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
 
