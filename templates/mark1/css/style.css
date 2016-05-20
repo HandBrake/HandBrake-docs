@@ -97,6 +97,7 @@ article.docs nav .system-select li.selected {
 
 article.docs nav .navigation {
     display: none;
+    transform: translate3d(0,0,0); /* hint to enable hardware graphics acceleration */
 }
 
 article.docs nav .navigation h1,
