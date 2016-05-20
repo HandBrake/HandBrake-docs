@@ -64,6 +64,7 @@ Here is an example excerpt from `source/en/latest/introduction/quick-start.markd
 
 ```
 ---
+Type:            article
 Title:           Quick start
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
