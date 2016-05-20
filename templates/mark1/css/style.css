@@ -97,14 +97,6 @@ article.docs nav .system-select li.selected {
 
 article.docs nav .navigation {
     display: none;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    margin: .166666em 15px .166666em;
-    width: 275px;
-    max-height: 900px;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 article.docs nav .navigation h1,
@@ -416,6 +408,17 @@ article.docs .footnotes {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
+    }
+
+    article.docs nav .navigation {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        margin: .166666em 15px .166666em;
+        width: 275px;
+        max-height: 900px;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .js:not(.landing):not(.license) article.docs nav .navigation {
