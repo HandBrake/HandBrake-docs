@@ -418,7 +418,7 @@ article.docs .footnotes {
         font-size: 1.125rem;
     }
 
-    .js:not(.landing):not(.license) article.docs {
+    .js.article article.docs {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
@@ -429,7 +429,7 @@ article.docs .footnotes {
         font-size: 0.9rem;
     }
 
-    .js:not(.landing):not(.license) article.docs nav {
+    .js.article article.docs nav {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
@@ -446,7 +446,7 @@ article.docs .footnotes {
         overflow-y: auto;
     }
 
-    .js:not(.landing):not(.license) article.docs nav .navigation {
+    .js.article article.docs nav .navigation {
         display: block;
     }
 
