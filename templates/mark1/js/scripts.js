@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('body').addClass('js');
 
     if (!$('body').hasClass("license")){
+        var header = $('article.docs header').first();
         var navigation_headings = $('article.docs nav .navigation > h2');
         var navigation_sections = navigation_headings.next('ul');
         navigation_headings.click(function(){
@@ -23,11 +24,36 @@ $(document).ready(function(){
         var system_select_win = $('.system-select-win');
         var system_select_all = $('.system-select-all');
 
+        var scroll_to_section = function(el, fallback_el){
+            var headings = 'h1, h2, h3, h4, h5, h6';
+            var cur_offset = $(window).scrollTop();
+            var new_offset = $(el).children().first();
+            if (new_offset.length === 0 || new_offset.is(headings) === false){
+                new_offset = $(el).prevAll(headings);
+            }
+            new_offset = new_offset.offset();
+            if (typeof new_offset == 'undefined' && typeof fallback_el != 'undefined'){
+                new_offset = $(fallback_el).children().first();
+                if (new_offset.length === 0 || new_offset.is(headings) === false){
+                    new_offset = $(fallback_el).prevAll(headings);
+                }
+                new_offset = new_offset.offset();
+            }
+            if (typeof new_offset == 'undefined'){
+                return;
+            }
+            new_offset = new_offset.top - header.height()+10;
+            new_offset < 0 ? 0 : new_offset;
+            if (new_offset < cur_offset){
+                $("html, body").animate({ scrollTop: new_offset }, 250);
+            }
+        };
+
         var system_switch = function(control, scroll){
-            var header = $('article.docs header').first();
-            var system_lin = $('.system-lin');
-            var system_mac = $('.system-mac');
-            var system_win = $('.system-win');
+            var system_all = $('.system-lin, .system-mac, .system-win');
+            var system_lin = system_all.filter('.system-lin');
+            var system_mac = system_all.filter('.system-mac');
+            var system_win = system_all.filter('.system-win');
             var classes = $(control).attr('class').split(' ');
             classes.forEach(function(target){
                 switch (target){
@@ -42,16 +68,8 @@ $(document).ready(function(){
                         system_mac.addClass('hidden');
                         system_win.addClass('hidden');
                         system_lin.removeClass('hidden');
-                        var cur_offset = $(window).scrollTop();
-                        var new_offset = system_lin.first().offset();
-                        if (typeof new_offset != 'undefined'){
-                            new_offset = new_offset.top - header.height()+10;
-                            new_offset < 0 ? 0 : new_offset;
-                        } else {
-                            new_offset = 0;
-                        }
-                        if (scroll === true && new_offset < cur_offset){
-                            $("html, body").animate({ scrollTop: new_offset }, 250);
+                        if (scroll === true){
+                            scroll_to_section(system_lin.first(), system_all.first());
                         }
                         Cookies.set('system', 'lin', { expires: 7 });
                         break;
@@ -66,16 +84,8 @@ $(document).ready(function(){
                         system_lin.addClass('hidden');
                         system_win.addClass('hidden');
                         system_mac.removeClass('hidden');
-                        var cur_offset = $(window).scrollTop();
-                        var new_offset = system_mac.first().offset();
-                        if (typeof new_offset != 'undefined'){
-                            new_offset = new_offset.top - header.height()+10;
-                            new_offset < 0 ? 0 : new_offset;
-                        } else {
-                            new_offset = 0;
-                        }
-                        if (scroll === true && new_offset < cur_offset){
-                            $("html, body").animate({ scrollTop: new_offset }, 250);
+                        if (scroll === true){
+                            scroll_to_section(system_mac.first(), system_all.first());
                         }
                         Cookies.set('system', 'mac', { expires: 7 });
                         break;
@@ -90,16 +100,8 @@ $(document).ready(function(){
                         system_lin.addClass('hidden');
                         system_mac.addClass('hidden');
                         system_win.removeClass('hidden');
-                        var cur_offset = $(window).scrollTop();
-                        var new_offset = system_win.first().offset();
-                        if (typeof new_offset != 'undefined'){
-                            new_offset = new_offset.top - header.height()+10;
-                            new_offset < 0 ? 0 : new_offset;
-                        } else {
-                            new_offset = 0;
-                        }
-                        if (scroll === true && new_offset < cur_offset){
-                            $("html, body").animate({ scrollTop: new_offset }, 250);
+                        if (scroll === true){
+                            scroll_to_section(system_win.first(), system_all.first());
                         }
                         Cookies.set('system', 'win', { expires: 7 });
                         break;
@@ -115,7 +117,7 @@ $(document).ready(function(){
                         system_mac.removeClass('hidden');
                         system_win.removeClass('hidden');
                         if (scroll === true){
-                            $("html, body").animate({ scrollTop: 0 }, 250);
+                            scroll_to_section(system_all.first());
                         }
                         Cookies.remove('system');
                         break;
