@@ -41,7 +41,7 @@ article.docs header {
     z-index: 999;
     width: 100%;
     background-color: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 30px);
+    background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 1.875rem);
 }
 
 article.docs header + h1 {
@@ -50,7 +50,7 @@ article.docs header + h1 {
 
 article.docs nav {
     margin: 0 auto;
-    padding: 15px 15px 45px;
+    padding: .9375rem .9375rem 2.8125rem;
     width: 90%;
     font-size: 0.6875rem;
 }
@@ -102,7 +102,7 @@ article.docs nav .navigation {
 article.docs nav .navigation h1,
 article.docs nav .navigation h2 {
     margin: 0;
-    padding: 3px 10px;
+    padding: .1875rem .625rem;
     background-color: skyblue;
     color: white;
     font-family: 'Open Sans', -apple-system, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
@@ -153,7 +153,7 @@ article.docs nav .navigation h2.selected:before {
 
 article.docs nav .navigation ul {
     margin: 0;
-    padding: 6px 10px;
+    padding: .375rem .625rem;
     background-color: rgb(252,252,255);
     font-size: 0.875rem;
     line-height: 1.42857;
@@ -183,7 +183,7 @@ article.docs nav .navigation li > em {
 }
 
 article.docs nav .navigation li > ul {
-    padding-left: 15px;
+    padding-left: .9375rem;
 }
 
 article.docs h1,
@@ -327,7 +327,7 @@ article.docs .footnotes {
     }
 
     article.docs nav {
-        padding: 20px 50px 45px;
+        padding: 1.25rem 3.125rem 2.8125rem;
         width: 580px;
     }
 
@@ -368,7 +368,7 @@ article.docs .footnotes {
     }
 
     article.docs nav {
-        padding: 30px 100px 60px;
+        padding: 1.875rem 6.25rem 3.75rem;
         width: 680px;
     }
 
@@ -412,7 +412,7 @@ article.docs .footnotes {
 
     article.docs nav .navigation {
         position: absolute;
-        top: 30px;
+        top: 1.875rem;
         left: 0;
         margin: .166666em 15px .166666em;
         width: 275px;
@@ -492,7 +492,7 @@ article.docs .footnotes {
 /* Shorter than 450 */
 @media (max-height: 449px) {
     article.docs header {
-        background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 15px);
+        background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) .9375rem);
     }
 
     article.docs header + h1 {
@@ -500,7 +500,7 @@ article.docs .footnotes {
     }
 
     article.docs nav {
-        padding: 10px 15px 25px;
+        padding: .625rem .9375rem 1.5625rem;
     }
 
     article.docs nav .breadcrumbs {
