@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Formats / containers
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

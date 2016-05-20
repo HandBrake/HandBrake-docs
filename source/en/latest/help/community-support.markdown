@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Community support
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

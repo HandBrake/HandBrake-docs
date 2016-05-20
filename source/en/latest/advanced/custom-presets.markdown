@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Custom Presets
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

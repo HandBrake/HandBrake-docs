@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Source formats
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

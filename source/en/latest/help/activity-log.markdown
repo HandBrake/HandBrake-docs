@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Activity Log
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

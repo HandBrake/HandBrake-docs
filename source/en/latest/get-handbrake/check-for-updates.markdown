@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Checking for updates
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

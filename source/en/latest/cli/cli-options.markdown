@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           CLI Options
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

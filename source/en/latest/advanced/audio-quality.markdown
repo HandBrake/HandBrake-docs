@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Audio Quality
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

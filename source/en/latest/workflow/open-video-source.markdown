@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Opening a video source
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

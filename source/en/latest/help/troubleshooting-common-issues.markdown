@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Troubleshooting common issues
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

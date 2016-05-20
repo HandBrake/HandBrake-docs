@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Framerates
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

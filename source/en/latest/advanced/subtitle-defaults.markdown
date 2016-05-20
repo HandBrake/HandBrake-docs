@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Subtitle Defaults
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

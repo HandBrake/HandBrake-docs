@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Post Processing
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

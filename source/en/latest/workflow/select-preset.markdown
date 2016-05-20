@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Selecting a preset
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

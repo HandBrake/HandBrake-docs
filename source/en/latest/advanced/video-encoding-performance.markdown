@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Video Encoding Speed
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

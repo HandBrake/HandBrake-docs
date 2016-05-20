@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Chapter Markers
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

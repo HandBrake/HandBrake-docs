@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Point to Point Encoding
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Table of contents
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

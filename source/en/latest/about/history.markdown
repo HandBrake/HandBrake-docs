@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           HandBrake History
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

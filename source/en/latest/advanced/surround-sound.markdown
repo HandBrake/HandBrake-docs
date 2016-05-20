@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Surround Sound Guide
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

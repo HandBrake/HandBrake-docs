@@ -1,4 +1,5 @@
 ---
+Type:            article
 Title:           Automatic File Naming
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
