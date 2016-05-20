@@ -21,6 +21,11 @@ article.docs .hidden {
     display: none;
 }
 
+article.docs :target {
+    padding-top: 6.5rem;
+    margin-top: -6.5rem;
+}
+
 article.docs a,
 article.docs a:visited {
     color: rgb(67,149,191);
@@ -42,6 +47,7 @@ article.docs header {
     width: 100%;
     background-color: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) 1.875rem);
+    pointer-events: none; /* allows selecting elements on layers with a lower z-index */
 }
 
 article.docs header + h1 {
@@ -52,11 +58,17 @@ article.docs nav {
     margin: 0 auto;
     padding: .9375rem .9375rem 2.8125rem;
     width: 90%;
+    height: 3.75rem;
     font-size: 0.6875rem;
+}
+
+article.docs nav * {
+    pointer-events: auto; /* make sure nav items are selectable */
 }
 
 article.docs nav .breadcrumbs {
     margin: 1em 0 0;
+    white-space: nowrap;
 }
 
 .license article.docs nav .breadcrumbs .language-separator,
@@ -71,6 +83,7 @@ article.docs nav .system-select li {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    white-space: nowrap;
 }
 
 article.docs nav .system-select li {
@@ -323,6 +336,11 @@ article.docs .footnotes {
         max-width: 580px;
     }
 
+    article.docs :target {
+        padding-top: 7.75rem;
+        margin-top: -7.75rem;
+    }
+
     article.docs header + h1 {
         margin-top: 7.5rem;
     }
@@ -330,6 +348,7 @@ article.docs .footnotes {
     article.docs nav {
         padding: 1.25rem 3.125rem 2.8125rem;
         width: 580px;
+        height: 4.6875rem;
     }
 
     article.docs nav .breadcrumbs {
@@ -362,6 +381,11 @@ article.docs .footnotes {
         padding-left: 100px;
         padding-right: 100px;
         max-width: 680px;
+    }
+
+    article.docs :target {
+        padding-top: 9.3125rem;
+        margin-top: -9.3125rem;
     }
 
     article.docs header + h1 {
@@ -496,12 +520,18 @@ article.docs .footnotes {
         background: linear-gradient(0deg, rgba(255,255,255,0), rgb(255,255,255) .9375rem);
     }
 
+    article.docs :target {
+        padding-top: 5.3125rem;
+        margin-top: -5.3125rem;
+    }
+
     article.docs header + h1 {
         margin-top: 5rem;
     }
 
     article.docs nav {
         padding: .625rem .9375rem 1.5625rem;
+        height: 3.125rem;
     }
 
     article.docs nav .breadcrumbs {
