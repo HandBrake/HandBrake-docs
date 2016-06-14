@@ -40,13 +40,13 @@ TODO
 
 Once you've downloaded HandBrake for Mac, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
-![Installing HandBrake on OS X](../images/mac/install-osx.png)
+![Installing HandBrake on Mac](../images/mac/install.png)
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
-### About OS X Gatekeeper
+### About Gatekeeper
 
-The first time you attempt to launch HandBrake, OS X may present this warning to you:
+The first time you attempt to launch HandBrake, your Mac may present this warning to you:
 
 ![Gatekeeper warning](../images/mac/gatekeeper-warning.png)
 
