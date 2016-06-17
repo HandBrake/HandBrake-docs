@@ -36,19 +36,20 @@ function parse_yaml {
 }
 
 # checks for required external tools
-function check_dependencies {  # takes 1 argument
-    local DEPS ERROR
-    DEPS=("${1}");
-    ERROR=false
+function check_dependencies {  # check_dependencies $DEP1 $DEP2 ...
+    local DEPS ERRORS
+    DEPS=("${@}");
+    ERRORS=()
     for DEP in ${DEPS[@]}; do
         if echo "${DEP}" | grep '/' >/dev/null 2>&1 && [[ ! -x "${DEP}" ]]; then
-            ERROR=true
+            ERRORS+=("${DEP}")
         elif ! hash "${DEP}" >/dev/null 2>&1; then
-            ERROR=true
+            ERRORS+=("${DEP}")
         fi
     done
-    if [[ "${ERROR}" == true ]]; then
-        echo "Error: Unable to find command '${DEP#$BASE_DIR/}'." >&2
+    if [[ "${#ERRORS[@]}" -ne 0 ]]; then
+        echo "dependencies: ${DEPS[@]}"
+        echo "unable to find command(s): ${ERRORS[*]}" >&2
         return 1
     fi
 }
