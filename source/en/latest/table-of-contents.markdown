@@ -139,7 +139,7 @@ Table of contents
   - [Mixdown](technical/audio-mixdowns.html)
 - Advanced preferences
 
-## Developer/Maintainer documentation
+## Developer documentation
 
 - Releases
   - [Linux Flatpaks](developer/flatpak-repo.html)
