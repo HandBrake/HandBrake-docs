@@ -248,6 +248,31 @@ article.docs h6 {
     letter-spacing: -0.005em;
 }
 
+article.docs code,
+article.docs pre {
+    font-family: Courier, monospace, serif;  /* webkit is an unrequested silly thing */
+}
+
+article.docs p > code {
+    display: inline-block;
+    position: relative;
+    top: -0.08rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    margin: -0.08rem 0.12rem 0;
+    padding: 0.08rem 0.35rem 0;
+    background-color: whitesmoke;
+    line-height: 1.83824;
+}
+
+article.docs pre {
+    padding: 0.75rem;
+    background-color: whitesmoke;
+    font-size: 0.625rem;
+    line-height: 1;
+    overflow-x: auto;
+}
+
 article.docs footer {
 	border-top: 1px solid lightgray;
 	margin-top: 3em;
@@ -317,6 +342,11 @@ article.docs .footnotes {
 
 /* Wider than 550 */
 @media (min-width: 550px) {
+    article.docs pre {
+        padding: 0.8125rem;
+        font-size: 0.6875rem;
+    }
+
     article.docs figure {
         left: 0;
         width: 82%;
@@ -353,6 +383,11 @@ article.docs .footnotes {
 
     article.docs nav .breadcrumbs {
         margin-top: 1.33333em;
+    }
+
+    article.docs pre {
+        padding: 0.9375rem;
+        font-size: 0.75rem;
     }
 
     article.docs figure {
@@ -483,6 +518,19 @@ article.docs .footnotes {
         font-size: 1.05rem;
         text-transform: uppercase;
         letter-spacing: -0.009em;
+    }
+
+    article.docs p > code {
+        top: -0.1rem;
+        font-size: 0.9375rem;
+        margin: -0.1rem 0.15rem 0;
+        padding: 0.1rem 0.35rem 0;
+        line-height: 1.66666;
+    }
+
+    article.docs pre {
+        padding: 0.9375rem;
+        font-size: 0.875rem;
     }
 
     article.docs figcaption {
