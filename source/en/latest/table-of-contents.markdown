@@ -138,3 +138,8 @@ Table of contents
   - [DRC](technical/audio-drc.html)
   - [Mixdown](technical/audio-mixdowns.html)
 - Advanced preferences
+
+## Developer documentation
+
+- Releases
+  - [Linux Flatpaks](developer/flatpak-repo.html)
