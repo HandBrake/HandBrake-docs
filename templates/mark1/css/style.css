@@ -273,6 +273,13 @@ article.docs pre {
     overflow-x: auto;
 }
 
+article.docs p + pre {
+    position: relative;
+    top: -0.75rem;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 article.docs footer {
 	border-top: 1px solid lightgray;
 	margin-top: 3em;
