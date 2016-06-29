@@ -2,16 +2,16 @@
 
 # vars
 SELF="${BASH_SOURCE[0]}"
-BASE_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
-BASE_DIR="${BASE_DIR:-$(pwd)}"
-CONFIG="${BASE_DIR}/config.yaml"
-DOCS_DIR="${BASE_DIR}/docs"
-SOURCE_DIR="${BASE_DIR}/source"
-TEMPLATE_DIR="${BASE_DIR}/templates"
-TOOLS_DIR="${BASE_DIR}/tools"
+SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
+SELF_DIR="${SELF_DIR:-$(pwd)}"
+CONFIG="${SELF_DIR}/config.yaml"
+DOCS_DIR="${SELF_DIR}/docs"
+SOURCE_DIR="${SELF_DIR}/source"
+TEMPLATE_DIR="${SELF_DIR}/templates"
+TOOLS_BIN="${SELF_DIR}/tools/local/bin"
 
 # dependencies
-MARKDOWN="${BASE_DIR}/tools/discount/markdown"
+MARKDOWN="${TOOLS_BIN}/markdown"
 DEPS=("${MARKDOWN}")
 
 # optional dependencies
@@ -213,7 +213,7 @@ function build_source {
 }
 
 # base directory (absolute)
-cd "${BASE_DIR}"
+cd "${SELF_DIR}"
 
 # check deps
 check_dependencies "${DEPS[@]}" || exit 1
@@ -293,7 +293,7 @@ else
         done
         cd "${SOURCE_DIR}"
     done
-    cd "${BASE_DIR}"
+    cd "${SELF_DIR}"
 
     # sources
     SOURCES=($(find "${DOCS_DIR}" | sed 's/^\.\///' | grep -i '.markdown'))

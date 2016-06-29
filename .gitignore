@@ -1,6 +1,9 @@
 # Prevent overwriting user config
 config.yaml
 
+# Ignore tools directories
+tools/local
+
 # Ignore generated documents but keep the docs directory
 docs/*
 !docs/.gitkeep
