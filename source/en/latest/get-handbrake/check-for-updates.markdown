@@ -34,10 +34,6 @@ The Linux version of HandBrake does not have a built-in update checking feature.
 
 From the main menu, navigate to `HandBrake` and select `Check for Updates...`.
 
-![Check for Updates menu item](../images/mac/check-for-updates-menu-item.png)
-
-![Check for Updates dialog](../images/mac/check-for-updates.png)
-
 If an update is available, you will be given the opportunity to install it right away. To enable automatic updates, select the appropriate checkbox labeled `Automatically download and install updates in the future`.
 
 <!-- /.system-mac -->

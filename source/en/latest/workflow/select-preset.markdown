@@ -34,8 +34,6 @@ Once you've opened a `Source`, select the `Preset` that most closely describes t
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Presets](../images/mac/presets.png)
-
 ![Selecting a preset](../images/mac/preset-selection.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
 
 <!-- /.system-mac -->

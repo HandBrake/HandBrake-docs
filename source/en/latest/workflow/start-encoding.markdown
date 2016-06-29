@@ -57,19 +57,10 @@ Select the `Start` button on the toolbar to make your new video.
 ![Starting an encode](../images/mac/start-button.png "The Start button begins encoding.")
 
 <!-- /.system-mac -->
-<!-- .system-win -->
-
-<!-- TODO: Windows figures. -->
-
-<!-- /.system-win -->
 
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
 
-<!-- .system-lin -->
 
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
 <!-- .system-mac -->
 
 ![Encode progress](../images/mac/encode-progress.png "HandBrake reports its progress during encoding.")
@@ -77,11 +68,7 @@ HandBrake will report its progress while it's working and alert you when it's fi
 ![Encoding complete alert](../images/mac/encode-complete.png "HandBrake shows an alert when finished encoding.")
 
 <!-- /.system-mac -->
-<!-- .system-win -->
 
-<!-- TODO: Windows figures. -->
-
-<!-- /.system-win -->
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 
