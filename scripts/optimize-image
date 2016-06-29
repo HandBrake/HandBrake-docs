@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# vars
+SELF="${BASH_SOURCE[0]}"
+SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
+SELF_DIR="${SELF_DIR:-$(pwd)}"
+TOOLS_BIN="${SELF_DIR}/../tools/local/bin"
+
+function backup_original {  # backup_original $FILE
+    local FILE FILE_BASE FILE_EXT
+    FILE="${1}"
+    if [[ "${FILE:-}" == "" ]]; then
+        echo "file not specified" >&2
+        return 1
+    fi
+    if [[ ! -e "${FILE}" ]]; then
+        echo "file does not exist: ${FILE}" >&2
+        return 1
+    fi
+    FILE_BASE="${FILE%.*}"
+    FILE_EXT="${FILE##*.}"
+    if [[ -e "${FILE_BASE}-original.${FILE_EXT}" ]]; then
+        echo "backup already exists for file: ${FILE}" >&2
+        return 1
+    fi
+    cp "${FILE}" "${FILE_BASE}-original.${FILE_EXT}"
+    return 0
+}
+
+if [[ "${#@}" -eq 0 ]]; then
+    echo "no files specified" >&2
+    exit 1
+fi
+
+ERRORS=()
+for IMAGE in "${@}"; do
+    if [[ -e "${IMAGE}" ]]; then
+        IMAGE_SIZE=$(wc -c <"${IMAGE}")
+        IMAGE_EXT="${IMAGE##*.}"
+        case "${IMAGE_EXT}" in
+            png)
+                if backup_original "${IMAGE}" && "${TOOLS_BIN}/pngquant" 256 --speed 3 --quality 80-100 --force --skip-if-larger --output "${IMAGE}" "${IMAGE}" >/dev/null 2>&1 && "${TOOLS_BIN}/zopflipng" --lossy_transparent --filters=0pme -y "${IMAGE}" "${IMAGE}" >/dev/null 2>&1; then
+                    IMAGE_SIZE_NEW=$(wc -c <"${IMAGE}")
+                    IMAGE_SIZE_PERCENT=$(awk -v s1="${IMAGE_SIZE}" -v s2="${IMAGE_SIZE_NEW}" 'BEGIN { printf "%.1f", (s2/s1) * 100 }')
+                    echo -n "[${IMAGE_SIZE_PERCENT}%]"
+                    echo -ne "\t"
+                    echo "${IMAGE}"
+                else
+                    echo "unable to process file: ${IMAGE}" >&2
+                    ERRORS+="${IMAGE}"
+                fi
+                ;;
+            *)
+                echo "file type '${IMAGE_EXT}' not handled: ${IMAGE}" >&2
+                ERRORS+="${IMAGE}"
+                ;;
+        esac
+    else
+        ERRORS+="${IMAGE}"
+    fi
+done
+if [[ "${#ERRORS[@]}" -ne 0 ]]; then
+    exit 1
+fi
+
+# done
+exit 0
