@@ -268,13 +268,13 @@ else
     LANGUAGES=()
     while IFS= read -r -d '' x; do
       LANGUAGES+=("$(basename "${x}")")
-    done < <(find . -type d -not -name '.*' -maxdepth 1 -print0)
+    done < <(find . -maxdepth 1 -type d -not -name '.*' -print0)
     for LANGUAGE in "${LANGUAGES[@]}"; do
         cd "${LANGUAGE}"
         VERSIONS=()
         while IFS= read -r -d '' x; do
           VERSIONS+=("$(basename "${x}")")
-        done < <(find . -type d -not -name '.*' -maxdepth 1 -print0)
+        done < <(find . -maxdepth 1 -type d -not -name '.*' -print0)
         for VERSION in "${VERSIONS[@]}"; do
             cd "${VERSION}"
             if [[ -e "${CONFIG_Navigation}" ]]; then
