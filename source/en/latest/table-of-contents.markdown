@@ -143,3 +143,6 @@ Table of contents
 
 - Releases
   - [Linux Flatpaks](developer/flatpak-repo.html)
+- Building HandBrake
+  - [Building on Windows](developer/build-windows.html)
+
