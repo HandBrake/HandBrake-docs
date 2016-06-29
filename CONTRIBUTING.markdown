@@ -171,7 +171,7 @@ The following components are suggested, but not required:
 
 If you're new to using Git or GitHub, check out [GitHub Guides](https://guides.github.com/) to get started. You will need to [create a GitHub account](https://github.com/join) and fork [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/).
 
-Every copy of the source files includes additional third-party tools needed build the HTML documentation from the Markdown source. Make sure to clone your fork to your computer using `git clone --recursive` to get all the tools.
+Every copy of the source files includes additional third-party tools needed build the HTML documentation from the Markdown source. Clone your fork to your computer using `git clone --recursive my-fork` to get all the tools. If you forget to use the `--recursive` parameter, you may later clone the tools manually using `git submodule init && git submodule update`.
 
 ### Building
 
