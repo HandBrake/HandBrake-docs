@@ -165,7 +165,7 @@ The following components are suggested, but not required:
 
 - [GNU Parallel](https://www.gnu.org/software/parallel/)
 
-† Windows users may wish to use Linux in a virtual machine.
+† Windows users may freely edit the source files, but the build system requires a *nix-compatible environment. One option is to build using Linux in a virtual machine.
 
 ### Getting the source
 
