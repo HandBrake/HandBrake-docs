@@ -3,3 +3,23 @@
 	url = https://github.com/Orc/discount.git
 	branch = master
 	ignore = untracked
+[submodule "tools/pngquant"]
+	path = tools/pngquant
+	url = https://github.com/pornel/pngquant.git
+	branch = master
+	ignore = untracked
+[submodule "tools/zopfli"]
+	path = tools/zopfli
+	url = https://github.com/google/zopfli.git
+	branch = master
+	ignore = untracked
+[submodule "tools/libpng"]
+	path = tools/libpng
+	url = https://github.com/glennrp/libpng.git
+	branch = libpng16
+	ignore = untracked
+[submodule "tools/zlib"]
+	path = tools/zlib
+	url = https://github.com/madler/zlib.git
+	branch = master
+	ignore = untracked
