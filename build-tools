@@ -7,6 +7,7 @@ SELF_DIR="${SELF_DIR:-$(pwd)}"
 TOOLS_DIR="${SELF_DIR}/tools"
 BUILD_DIR="${TOOLS_DIR}/local/build"
 INSTALL_DIR="${TOOLS_DIR}/local"
+SYS_NAME=$(uname | awk '{ print tolower($0)}')
 TOOLS=('discount' 'zlib' 'libpng' 'pngquant' 'zopfli')
 
 # discount
@@ -26,11 +27,15 @@ function build_zlib {
 
 # libpng
 function build_libpng {
-    rm -rf Makefile.in aclocal.m4 automate.cache/ compile config.guess config.h.in config.sub configure depcomp install-sh ltmain.sh missing scripts/libtool.m4 scripts/ltoptions.m4 scripts/ltsugar.m4 scripts/ltversion.m4 scripts/lt~obsolete.m4 test-driver || return 1
-    ./autogen.sh || return 1
-    CFLAGS="-I${INSTALL_DIR}/include" CPPFLAGS="-I${INSTALL_DIR}/include" LDFLAGS="-L${INSTALL_DIR}/lib -lz" ./configure --with-zlib-prefix="${INSTALL_DIR}" --prefix="${INSTALL_DIR}" --disable-shared --enable-static || return 1
-    make || return 1
-    make install || return 1
+    if [[ "${SYS_NAME}" == "darwin" ]]; then
+        cp scripts/makefile.darwin Makefile
+    elif [[ "${SYS_NAME}" == "linux" ]]; then
+        cp scripts/makefile.linux Makefile
+    else
+        return 1
+    fi
+    make libpng.a prefix="${INSTALL_DIR}" ZLIBINC="${INSTALL_DIR}/include" ZLIBLIB="${INSTALL_DIR}/lib" || return 1
+    make install-static prefix="${INSTALL_DIR}" || return 1
 }
 
 # pngquant
@@ -66,7 +71,11 @@ for TOOL in "${TOOLS[@]}"; do
         break
     fi
 done
-rm -rf "${BUILD_DIR}"
+
+# clean up
+if [[ "${ERROR}" != true ]]; then
+    rm -rf "${BUILD_DIR}"
+fi
 
 # done
 if [[ "${ERROR}" == true ]]; then
