@@ -142,7 +142,7 @@ Special instructions for Mac here.
 
 <!-- .system-win -->
 
-Special instructions for Linux here.
+Special instructions for Windows here.
 
 <!-- /.system-win -->
 
