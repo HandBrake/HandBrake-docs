@@ -37,7 +37,8 @@ While it may be possible to run HandBrake on hardware older than this, your mile
 
 <!-- .system-win -->
 ## Windows
-- Windows Vista with Service Pack 1
+- Windows Vista (64bit) with Service Pack 1 or later
+- Microsoft .NET Framework 4.6 or later
 
 <!-- /.system-win -->
 
