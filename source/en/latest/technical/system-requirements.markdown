@@ -7,7 +7,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         Scott (s55), Bradley Sepos <bradley@bradleysepos.com>
+Authors:         Scott (s55), Bradley Sepos <bradley@bradleysepos.com> (BradleyS) (BradleyS)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
