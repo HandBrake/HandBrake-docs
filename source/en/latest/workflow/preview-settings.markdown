@@ -51,7 +51,7 @@ Select the `Preview` button to open the `Preview` window.
 <!-- .system-mac -->
 
 
-![Preview window](../images/mac/preview-window.png)
+![Preview window](../images/mac/preview-window.jpg)
 
 <!-- /.system-mac -->
 <!-- .system-win -->
