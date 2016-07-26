@@ -45,7 +45,7 @@ If you do not have a MinGW toolchain with at least GCC 5.x, then you must compil
   - git clone https://github.com/HandBrake/HandBrake.git
   - cd HandBrake
   - cd scripts
-  - ./mingw-w64-build x86_64 ./home/<my_user>/toolchains/
+  - ./mingw-w64-build x86_64 /home/&lt;my_user&gt;/toolchains/
   
 This process will take a few minutes, then provide you with a command which you can use to add the toolchain to your path.
  
