@@ -86,16 +86,16 @@ Table of contents
 
 ## Advanced features part 2
 
-- [Formats/containers](advanced/containers.html) 
-- [Video source type](advanced/video-sources.html) 
-- [Video encoding speed](advanced/video-encoding-performance.html) 
-- [Video angles](advanced/video-angles.html) 
-- [Point-to-point](advanced/point-to-point.html) 
-- [Frame rate](advanced/frame-rates.html) 
-- [Audio quality](advanced/audio-quality.html) 
-- [Automatic file naming](advanced/automatic-file-naming.html) 
-- [Web optimized](advanced/web-optimised.html) 
-- [iPod 5G support](advanced/old-ipod-support.html) 
+- [Formats/containers](advanced/containers.html)
+- [Video source type](advanced/video-sources.html)
+- [Video encoding speed](advanced/video-encoding-performance.html)
+- [Video angles](advanced/video-angles.html)
+- [Point-to-point](advanced/point-to-point.html)
+- [Frame rate](advanced/frame-rates.html)
+- [Audio quality](advanced/audio-quality.html)
+- [Automatic file naming](advanced/automatic-file-naming.html)
+- [Web optimized](advanced/web-optimised.html)
+- [iPod 5G support](advanced/old-ipod-support.html)
 
 
 ## Getting help
