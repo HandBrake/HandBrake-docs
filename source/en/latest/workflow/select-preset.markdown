@@ -25,7 +25,7 @@ Selecting a `Preset` can go a long way toward ensuring your video works where yo
 
 HandBrake includes a number of built-in `Presets` for various devices and general use.
 
-Once you've opened a `Source`, select the `Preset` that most closely describes the device you want your videos to work on. For instance, if you want to play your videos on an iPad, choose the `iPad Preset`.
+Once you've opened a `Source`, select the `Preset` that most closely describes the device you want your videos to work on. For instance, if you want to play your videos on a Roku that supports 1080p High Definition, choose the `Roku 1080p30 Surround` preset under `Devices`.
 
 <!-- .system-lin -->
 
@@ -43,7 +43,7 @@ Once you've opened a `Source`, select the `Preset` that most closely describes t
 
 <!-- /.system-win -->
 
-If your device is not listed, or you wish to play your videos on a computer, choose the `Normal Preset` or `High Profile Preset`. The `Normal Preset` is fast and compatible across a wide range of softwares and devices. The `High Profile Preset` makes better quality videos that take up less space, leaving room for a second audio track in surround sound.
+If your device is not listed, or you wish to play your videos on a computer, the default `Fast 1080p30` preset is a good choice. It's fast and compatible across a wide range of softwares and devices.
 
 ## Custom presets
 
