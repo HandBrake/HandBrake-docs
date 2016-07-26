@@ -121,8 +121,8 @@ Table of contents
 
 ## Technical documentation
 
-- [System Requirements](technical/system-requirements.html)
-  *Make sure your system meets the requirements for running HandBrake*
+- [System requirements](technical/system-requirements.html)
+  *Make sure your system can run HandBrake*
 - [Source formats](technical/source-formats.html)
 - Video
   - [Codecs](technical/video-codecs.html) 
