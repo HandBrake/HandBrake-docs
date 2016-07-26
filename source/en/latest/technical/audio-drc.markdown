@@ -1,16 +1,17 @@
 ---
-License_Abbr: CC BY-SA 4.0
-License_URL: "https://handbrake.fr/docs/license.html"
-Language: English
+Type:            article
+Title:           DRC - Dynamic Range Compression
+Project:         HandBrake
+Project_URL:     https://handbrake.fr/
 Project_Version: Latest
-Language_Code: en
-Title: DRC - Dynamic Range Compression
-License: Creative Commons Attribution-ShareAlike 4.0 International
-Text_Encoding: utf-8
-Copyright: 2016 HandBrake Team
-Project: HandBrake
-Authors: Scott (s55)
-Project_URL: "https://handbrake.fr/"
+Language:        English
+Language_Code:   en
+Text_Encoding:   utf-8
+Authors:         Scott (s55)
+Copyright:       2016 HandBrake Team
+License:         Creative Commons Attribution-ShareAlike 4.0 International
+License_Abbr:    CC BY-SA 4.0
+License_URL:     https://handbrake.fr/docs/license.html
 ---
 
 DRC - Dynamic Range Compression
