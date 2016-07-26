@@ -35,8 +35,6 @@ Table of contents
   *How to get HandBrake onto your computer*
 - [Checking for updates](get-handbrake/check-for-updates.html)
   *Staying up to date with the latest version is easy*
-- [System Requirements](get-handbrake/system-requirements.html)
-  *Check your system meets the requirements for running HandBrake*
 
 
 ## Making videos
@@ -123,6 +121,8 @@ Table of contents
 
 ## Technical documentation
 
+- [System Requirements](technical/system-requirements.html)
+  *Make sure your system meets the requirements for running HandBrake*
 - [Source formats](technical/source-formats.html)
 - Video
   - [Codecs](technical/video-codecs.html) 
