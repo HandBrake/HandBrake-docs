@@ -54,10 +54,12 @@ HandBrake **does not**:
 
 HandBrake also does not defeat or circumvent [copy protection](https://en.wikipedia.org/wiki/Copy_protection) of any kind. It does not work with video files employing [Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management) (DRM). This includes but is not limited to, copy protected content from iTunes, Amazon Video, Netflix, or other online providers, and many commercial DVD and Blu-ray discs.
 
-Applications such as [AnyDVD HD](https://en.wikipedia.org/wiki/AnyDVD) for Windows and MakeMKV (TODO: link) for Linux, Mac, and Windows create DRM-free copies of DVD and Blu-ray discs that HandBrake can open; however, the HandBrake Team has no affiliation with these third parties and as such can neither recommend nor support these applications or their usage.
+Applications such as [AnyDVD HD](https://en.wikipedia.org/wiki/AnyDVD) for Windows and [MakeMKV](https://www.google.com/search?q=makemkv&ie=utf-8&oe=utf-8) for Linux, Mac, and Windows can create copies of DVD and Blu-ray discs that HandBrake can open, reducing wear on the original discs and often fixing errors due too poorly mastered or otherwise broken discs.[^third-party-apps]
 
-Do not use HandBrake to copy materials you do not own or have the right to copy. If you are uncertain about your right to copy any material, you should contact your legal advisor.
+Do not use HandBrake or any other application to copy materials you do not own or have the right to copy. If you are uncertain about your right to copy any material, you should contact your legal advisor.
 
 ## Next steps
 
 Continue to [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html).
+
+[^third-party-apps]: The HandBrake Team has no affiliation with these applications or their creators. If support is needed, please use their respective contact channels directly.
