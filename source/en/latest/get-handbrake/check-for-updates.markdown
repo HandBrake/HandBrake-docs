@@ -19,7 +19,7 @@ Checking for updates
 
 HandBrake can let you know when a newer version is available, and even automatically download and install available updates.
 
-Before updating, make sure there are no pending encodes in the `Queue` and make note of any custom presets you have created, as they may not be compatible with the newer version.
+Before updating, please make sure there are no pending encodes in the `Queue`. If you are currently using HandBrake older than version 1.0.0, also make note of any custom `Presets` you have created, as they may not be compatible with newer versions.
 
 <!-- .system-lin -->
 
@@ -32,21 +32,27 @@ The Linux version of HandBrake does not have a built-in update checking feature.
 
 ## Updating HandBrake on Mac
 
-From the main menu, navigate to `HandBrake` and select `Check for Updates...`.
+After you've installed and launched HandBrake more than once, it will ask whether you want to automatically check for updates. Select `Check Automatically` and HandBrake will offer to install future updates as they become available.
 
-If an update is available, you will be given the opportunity to install it right away. To enable automatic updates, select the appropriate checkbox labeled `Automatically download and install updates in the future`.
+![Automatic updates dialog](../images/mac/check-for-updates-automatically.png "Checking for updates automatically can help you stay up to date with the latest features and bug fixes.")
+
+Automatic update checking may be enabled or disabled in HandBrake's preferences. Using the main menu at the top of your screen, select `HandBrake` and then `Preferences...`. You will find the option in the `General` section.
+
+Manually checking for updates is easy. Using the main menu at the top of your screen, select `HandBrake` and then `Check for Updates...`. If an update is available, HandBrake will offer to install it for you.
+
+![Software update dialog](../images/mac/software-update.png "If an update is available, HandBrake will offer to install it for you.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
 ## Updating HandBrake on Windows
 
-From the help menu, navigate to `Check for Updates...`.
+Automatic update checking may be enabled or disabled in HandBrake's preferences. From the `Tools` menu select `Preferences`. You will find the option in the `General` section. HandBrake will alert you when a new update is available.
 
-If an update is available, you will be given the opportunity to install it right away.
+Manually checking for updates is easy. From the `Help` menu, select `Check for Updates...`. If an update is available, HandBrake will offer to install it for you.
 
 <!-- /.system-win -->
 
 ## Next steps
 
-Continue to [Opening a video](../workflow/open-video-source.html).
+Continue to [Opening a video source](../workflow/open-video-source.html).
