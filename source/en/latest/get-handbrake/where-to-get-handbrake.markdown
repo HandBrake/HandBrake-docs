@@ -31,9 +31,13 @@ HandBrake source code is available at the official [HandBrake repository on GitH
 
 Other versions obtained via third parties are not supported.
 
-## Warning about third-party download sites
+## Warning about scams and fakes
 
-We encourage you to obtain HandBrake from the official website. When downloading from any other website, we highly recommend you ensure you have received an official copy of HandBrake by verifying the downloaded files match the [official release checksums](https://handbrake.fr/checksums.php) as published on the HandBrake website. Downloaded files with different checksums may contain unwanted extras or malware.
+HandBrake is available for *free* at the [HandBrake website](https://handbrake.fr/).[^checksums] This is the *only* official download source for HandBrake.
+
+Beware of third-party websites and peer-to-peer downloads of HandBrake. They may include unwanted extras such as additional applications, [ransomware](https://en.wikipedia.org/wiki/Ransomware), or other forms of [malware](https://en.wikipedia.org/wiki/Malware). The HandBrake Team has no control over these external services. Avoid!
+
+Beware of online marketplaces and auction sites. HandBrake is *free software*.
 
 <!-- .system-lin -->
 
@@ -58,3 +62,5 @@ Linux users should install the [official release PPA](https://launchpad.net/~ste
 ## Next steps
 
 Continue to [Downloading and installing HandBrake](download-and-install.html).
+
+[^checksums]: Downloaded files should match the [official release checksums](https://handbrake.fr/checksums.php) as published on the official HandBrake website. Downloaded files with unlisted checksums may be tampered with.
