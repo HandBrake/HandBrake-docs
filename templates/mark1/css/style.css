@@ -306,6 +306,12 @@ article.docs footer small {
     margin: 1.33333em 0;
 }
 
+article.docs li > ol,
+article.docs li > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 article.docs figure {
     position: relative;
     left: -3%;
