@@ -53,6 +53,10 @@ Manually checking for updates is easy. From the `Help` menu, select `Check for U
 
 <!-- /.system-win -->
 
+<!-- .continue -->
+
 ## Next steps
 
 Continue to [Opening a video source](../workflow/open-video-source.html).
+
+<!-- /.continue -->

@@ -103,9 +103,13 @@ You may launch HandBrake by quickly clicking twice (double-clicking) on the cock
 
 ![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
 
+<!-- .continue -->
+
 ## Next steps
 
 Continue to [Checking for updates](check-for-updates.html).
+
+<!-- /.continue -->
 
 [^nightly-builds]: Nightly builds are based on HandBrake's latest development code, including new and experimental features that may be unstable or significantly different than the latest release version. Although everyone is welcome to try them, nightly builds are best suited for experienced users and developers.
 

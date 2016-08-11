@@ -151,8 +151,12 @@ HandBrake will report its progress while it's working and alert you when it's fi
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 
+<!-- .continue -->
+
 ## Next steps
 
 If you didn't get a video file as expected, encountered an error, or had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Troubleshooting common issues](../help/troubleshooting-common-issues.html).
 
 Continue to [About HandBrake](about.html).
+
+<!-- /.continue -->

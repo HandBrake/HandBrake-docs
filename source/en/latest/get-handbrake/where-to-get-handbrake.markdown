@@ -59,8 +59,12 @@ Linux users should install the [official release PPA](https://launchpad.net/~ste
 
 <!-- /.system-lin -->
 
+<!-- .continue -->
+
 ## Next steps
 
 Continue to [Downloading and installing HandBrake](download-and-install.html).
+
+<!-- /.continue -->
 
 [^checksums]: Downloaded files should match the [official release checksums](https://handbrake.fr/checksums.php) as published on the official HandBrake website. Downloaded files with unlisted checksums may be tampered with.

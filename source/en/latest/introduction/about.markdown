@@ -58,8 +58,12 @@ Applications such as [AnyDVD HD](https://en.wikipedia.org/wiki/AnyDVD) for Windo
 
 Do not use HandBrake or any other application to copy materials you do not own or have the right to copy. If you are uncertain about your right to copy any material, you should contact your legal advisor.
 
+<!-- .continue -->
+
 ## Next steps
 
 Continue to [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html).
+
+<!-- /.continue -->
 
 [^third-party-apps]: The HandBrake Team has no affiliation with these applications or their creators. If support is needed, please use their respective contact channels directly.

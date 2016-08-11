@@ -69,9 +69,13 @@ Imperfections tend to be more noticeable at larger display sizes and closer view
 
 You may wish to slightly increase quality for viewing on larger displays (50 inches / 125 cm diagonal or greater), or where viewing from closer than average distances[^viewing-distance]. Reduced quality may be acceptable for viewing on smaller screens or where storage space is limited, e.g. mobile devices.
 
+<!-- .continue -->
+
 ## Next steps
 
 Continue to [Previewing your settings](preview-settings.html).
+
+<!-- /.continue -->
 
 [^SD]: [SD](abbr:Standard Definition) video has a resolution of 720x480 or fewer pixels (720x576 for PAL). DVDs, small web videos, and most analog sources are SD.
 

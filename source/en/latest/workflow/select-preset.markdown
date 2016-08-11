@@ -49,6 +49,10 @@ If your device is not listed, or you wish to play your videos on a computer, the
 
 If you've previously saved one of your own `Presets`, you may select it in the same way as the built-in `Presets`. Learn more about [Custom presets](../advanced/custom-presets.html).
 
+<!-- .continue -->
+
 ## Next steps
 
 Continue to [Adjusting quality](adjust-quality.html).
+
+<!-- /.continue -->

@@ -98,11 +98,15 @@ HandBrake will scan your selection and after a few moments, the main window will
 
 Great! At this point, HandBrake knows which video you want to use.
 
+<!-- .continue -->
+
 ## Next steps
 
 If HandBrake didn't open your video as as expected or you had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Troubleshooting common issues](../help/troubleshooting-common-issues.html).
 
 Continue to [Selecting a preset](select-preset.html).
+
+<!-- /.continue -->
 
 [^consumer-editor-export]: Videos made using consumer video editing software such as [iMovie](https://www.apple.com/mac/imovie/) must first be exported to a common video format for compatibility with HandBrake.
 
