@@ -282,7 +282,7 @@ article.docs p + pre {
 
 article.docs footer {
 	border-top: 1px solid lightgray;
-	margin-top: 3em;
+	margin-top: 2em;
 }
 
 .license article.docs footer {
@@ -327,7 +327,29 @@ article.docs figcaption {
     color: rgb(120,120,120);
 }
 
+article.docs .continue {
+    margin-top: 2em;
+    padding-bottom: .1px;
+    background-color: rgb(252,252,255);
+}
+
+article.docs .continue h2 {
+    margin: 0;
+    padding: .625rem .9375rem;
+    background-color: steelblue;
+    color: white;
+    font-family: 'Open Sans', -apple-system, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.17647;
+}
+
+article.docs .continue p {
+    margin-left: .9375rem;
+    margin-right: .9375rem;
+}
+
 article.docs .footnotes {
+    margin-top: 2em;
     font-size: .875rem;
 }
 
@@ -542,6 +564,10 @@ article.docs .footnotes {
 
     article.docs figcaption {
         font-size: 0.825rem;
+    }
+
+    article.docs .continue h2 {
+        font-size: 1.275rem;
     }
 
     article.docs .footnotes {
