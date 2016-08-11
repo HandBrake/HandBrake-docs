@@ -572,6 +572,10 @@ article.docs .footnotes + footer {
         font-size: 0.875rem;
     }
 
+    article.docs figure {
+        left: -3.45%;
+    }
+
     article.docs figcaption {
         font-size: 0.825rem;
     }
