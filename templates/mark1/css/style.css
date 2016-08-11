@@ -350,7 +350,17 @@ article.docs .continue p {
 
 article.docs .footnotes {
     margin-top: 2em;
+    padding-top: .25rem;
+    border-top: 1px solid lightgray;
     font-size: .875rem;
+}
+
+article.docs .footnotes hr {
+    display: none;
+}
+
+article.docs .footnotes + footer {
+    border-top: none;
 }
 
 .featherlight .featherlight-content {
