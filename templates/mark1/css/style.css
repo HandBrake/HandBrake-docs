@@ -312,6 +312,11 @@ article.docs li > ul {
     margin-bottom: 0;
 }
 
+.license article.docs li {
+    margin-top: 1.33333em;
+    margin-bottom: 1.33333em;
+}
+
 article.docs figure {
     position: relative;
     left: -3%;
