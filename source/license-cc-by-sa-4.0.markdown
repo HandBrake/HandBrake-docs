@@ -107,8 +107,8 @@ b. Where Your right to use the Licensed Material has terminated under Section 6(
     <ol>
     <li>automatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or</li>
     <li>upon express reinstatement by the Licensor.</li>
-    <p>For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.</p>
     </ol>
+    <p>For the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.</p>
 c. For the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.
 d. Sections 1, 5, 6, 7, and 8 survive termination of this Public License.
 
