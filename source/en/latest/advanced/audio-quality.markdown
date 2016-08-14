@@ -7,7 +7,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         
+Authors:         Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -17,6 +17,45 @@ License_URL:     https://handbrake.fr/docs/license.html
 Audio Quality
 =============================
 
-Todo
-  - Affects file size, though not as much as video quality
-  - Adjustments may impact compatibility (recommend to leave alone)
+The Audio Tracks quality settings are controlled via the "Audio" tab on the main window.
+
+Each track can be configured to suit your needs.
+
+<!-- .system-win -->
+
+![HandBrake's Audio Track Settings](../images/windows/audio-quality.png "HandBrake's Audio Track Settings")
+
+<!-- /.system-win -->
+
+There are several different modes HandBrake can operate in.
+
+### Average Bitrate
+
+HandBrake supports average bitrate for all audio encoders except FLAC.
+
+### Quality based Encoding
+
+Quality based encoding is supported for the following codecs:
+- AAC
+- MP3
+- Vorbis
+
+The scale of the quality if much less pronounced compared to the video quality slider, so changes do not have nearly as big an impact on file size. 
+
+### Lossless
+
+HandBrake supports FLAC (both 16 and 24bit) when the output format is MKV.
+
+In addition, HandBrake can passthru the following source audio track formats:
+
+- AC3 and E-AC3
+- DTS, DTS-HD
+- TrueHD
+- AAC
+- MP3
+- FLAC
+
+  
+
+
+
