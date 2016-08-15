@@ -99,7 +99,7 @@ The default `Fast 1080p30` preset is often a good choice because it's fast and c
 
 <!-- /.system-win -->
 
-`Presets` can affect compatibility (whether your video will work with your devices and software) and encoding time. Learn more: [Selecting a preset](../workflow/select-preset.html)
+`Presets` can affect compatibility (whether your video will work with your devices and software) and encoding time. Learn more about [Selecting a preset](../workflow/select-preset.html).
 
 ## Select a destination
 

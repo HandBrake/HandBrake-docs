@@ -30,7 +30,7 @@ In HandBrake terms, the video you already have is called the `Source`. One of Ha
 - Broadcast TV recordings
 - Digital recordings of VHS, Beta, Video8/Hi8, LaserDisc, and other analog sources
 
-Learn more about [source formats](../technical/source-formats.html).
+You can learn more about [Source formats](../technical/source-formats.html) in the technical documentation.
 
 **Note:** HandBrake does not defeat or circumvent [copy protection](https://en.wikipedia.org/wiki/Copy_protection) of any kind. It does not work with video files employing [[DRM](https://en.wikipedia.org/wiki/Digital_rights_management)](abbr:Digital Rights Management). See [About HandBrake](../introduction/about.html) for more information about what HandBrake *does* and *does not*.
 
