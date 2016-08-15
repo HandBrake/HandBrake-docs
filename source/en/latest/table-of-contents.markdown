@@ -24,7 +24,7 @@ Table of contents
 - [Quick start](introduction/quick-start.html)
   *Learn how to make your first video in minutes*
 - [About HandBrake](introduction/about.html)
-  *What HandBrake is, does, and does not do*
+  *What HandBrake is, does, and does not*
 
 
 ## Getting HandBrake
@@ -34,7 +34,7 @@ Table of contents
 - [Downloading and installing HandBrake](get-handbrake/download-and-install.html)
   *How to get HandBrake onto your computer*
 - [Checking for updates](get-handbrake/check-for-updates.html)
-  *Staying up to date with the latest version is easy*
+  *Staying up to date with the latest features and bug fixes*
 
 
 ## Making videos
@@ -45,10 +45,8 @@ Table of contents
   *Tailored settings for instant compatibility with many devices*
 - [Adjusting quality](workflow/adjust-quality.html)
   *Easily increase visual quality or reduce file size*
-  <!-- TODO: To clean up a poor-looking source video, see restoration -->
 - [Previewing your settings](workflow/preview-settings.html)
-  *See what your new video will look like, without waiting*
-  <!-- TODO: To clean up a poor-looking source video, see restoration -->
+  *See what your new video will look like in a fraction of the time*
 - [Starting encoding](workflow/start-encoding.html)
   *Start encoding your new video with one click*
 
