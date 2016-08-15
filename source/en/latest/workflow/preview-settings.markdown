@@ -17,89 +17,59 @@ License_URL:     https://handbrake.fr/docs/license.html
 Previewing your settings
 ========================
 
-Video encoding requires a lot of computer resources and can take awhile to complete. Exactly how long depends on a number of factors, including the duration, resolution, and complexity of your `Source`, and the settings for making your new video.
+Video encoding requires a lot of computer resources and can take awhile to complete.
 
-Luckily, HandBrake has a `Preview` feature that allows you to do a test run on a few seconds or minutes of your `Source`, so you can see what your new video will look like without waiting for a complete encode to finish.
+HandBrake's `Preview` feature allows you to perform a test run on a small portion of your `Source`, so you can see what your new video will look like without encoding all of it.
 
 ## Opening the Preview window
 
 At the top of HandBrake's main window, you'll see a toolbar with various buttons.
 
-<!-- .system-lin -->
-
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
 <!-- .system-mac -->
 
 ![Main window toolbar](../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
+![Opening the Preview window](../images/mac/preview-button.png "The Preview button opens a window where you can test your settings.")
+
 <!-- /.system-mac -->
-<!-- .system-win -->
-
-<!-- TODO: Windows figures. -->
-
-<!-- /.system-win -->
 
 Select the `Preview` button to open the `Preview` window.
-
-<!-- .system-lin -->
-
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
-<!-- .system-mac -->
-
-
-![Preview window](../images/mac/preview-window.jpg)
-
-<!-- /.system-mac -->
-<!-- .system-win -->
-
-<!-- TODO: Windows figures. -->
-
-<!-- /.system-win -->
 
 ## Adjusting Preview settings
 
 Move your mouse cursor over the `Preview` window, and some controls will appear.
 
-<!-- .system-lin -->
-
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Preview controls](../images/mac/preview-controls.png)
+![Preview window](../images/mac/preview-window.jpg "HandBrake's Preview feature lets you test your settings on a small portion of your Source.")
+
+![Preview controls](../images/mac/preview-controls.png "You can set the starting position and duration of your Preview.")
 
 <!-- /.system-mac -->
 
-Set the starting position by dragging the `Position` control left or right. Choose how many seconds of video you want to encode using the `Duration` control. Longer durations will take more time to encode.
+Set the starting position by dragging the `Position` control left or right, and choose how many seconds of video you want to encode using the `Duration` control.
 
+## Starting a Preview encode
 
-
-
-## Starting a Preview encode on Mac
-
-When you're satisfied with your starting position and duration, select `Live Preview` and be patient. HandBrake will report its progress while it works. When your `Preview` is ready, it will play automatically. You can use the playback controls to pause, rewind, and replay your `Preview`.
-
-<!-- .system-mac -->
-![Preview start control](../images/mac/preview-controls-start.png)
-
-![Preview playing](../images/mac/preview-playing.png)
-
-<!-- /.system-mac -->
+When you're satisfied with your starting position and duration, select `Live Preview` and be patient. HandBrake will report its progress while it works.
 
 <!-- .system-mac -->
 
-To create a new `Preview`, select the `×` button to start over. When you're finished previewing your work, you may close the `Preview` window.
+![Preview progress indicator](../images/mac/preview-progress.png "HandBrake will report its progress while encoding your Preview.")
 
-![Preview reset control](../images/mac/preview-controls-reset.png)
-
-![Closing the preview window](../images/mac/preview-window-close.png)
+![Preview playback controls](../images/mac/preview-controls-playback.png "Playback controls allow you to interact with your Preview when it's ready.")
 
 <!-- /.system-mac -->
+
+When your `Preview` is ready, it will play automatically. During playback, the Preview controls are updated to let you pause, rewind, and replay. You can also choose which audio tracks is playing and adjust its volume.
+
+<!-- .system-mac -->
+
+To create a new `Preview`, select the `╳` button to start over.
+
+<!-- /.system-mac -->
+
+When you're finished previewing your work, you may close the `Preview` window.
 
 <!-- .continue -->
 
