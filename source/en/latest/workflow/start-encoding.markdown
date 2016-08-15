@@ -45,7 +45,7 @@ Select the `Start` button on the toolbar to make your new video.
 
 <!-- /.system-mac -->
 
-Video encoding requires a lot of computer resources and can take awhile to complete. Some videos may take minutes to create; others may take hours.
+Video encoding requires a lot of computer resources and can take awhile to complete. Some videos may take minutes to create; others may take hours.[^encoding-time]
 
 <!-- .system-mac -->
 
