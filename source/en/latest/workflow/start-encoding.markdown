@@ -23,21 +23,13 @@ Now that you've got all your settings just right, it's time to make your new vid
 
 `Destination` is where your new video will go. You can select the `Browse...` button to choose a new location and name, or type it directly in the box.
 
-<!-- .system-lin -->
-
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Selecting a destination](../images/mac/destination.png)
+![Selecting a destination](../images/mac/destination-field.png "The destination is where your new video will go.")
+
+![Browsing for a destination](../images/mac/destination-dialog.png "Select the browse button to choose a different location and name.")
 
 <!-- /.system-mac -->
-<!-- .system-win -->
-
-<!-- TODO: Windows figures. -->
-
-<!-- /.system-win -->
 
 Please take special care to *note your destination*. Otherwise, you won't be able to find your new video. You can move it later if you desire.
 
@@ -45,21 +37,15 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
-<!-- .system-lin -->
-
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
 <!-- .system-mac -->
 
 ![Main window toolbar](../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-![Starting an encode](../images/mac/start-button.png "The Start button begins encoding.")
+![Starting an encode](../images/mac/start-button.png "The Start button begins encoding your new video.")
 
 <!-- /.system-mac -->
 
-HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
-
+Video encoding requires a lot of computer resources and can take awhile to complete. Some videos may take minutes to create; others may take hours.
 
 <!-- .system-mac -->
 
@@ -69,6 +55,13 @@ HandBrake will report its progress while it's working and alert you when it's fi
 
 <!-- /.system-mac -->
 
+HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
+
+<!-- .system-mac -->
+
+![Destination in Finder](../images/mac/destination-finder.png "Your new video is located at the Destination you specified.")
+
+<!-- /.system-mac -->
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 
@@ -81,3 +74,5 @@ If you didn't get a video file as expected, encountered an error, or had some ot
 Continue to (TODO: add link).
 
 <!-- /.continue -->
+
+[^encoding-time]: Encoding time depends on multiple factors, including the duration, resolution, and complexity of your `Source`; the settings used to make your new video; and the speed and computation power of your machine.
