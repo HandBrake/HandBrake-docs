@@ -17,51 +17,35 @@ License_URL:     https://handbrake.fr/docs/license.html
 Adjusting quality
 =================
 
-HandBrake's default settings and built-in `Presets` use a constant quality encoding method. This makes your new video look consistent from start to finish. Always use constant quality unless you have a specific reason not to.
+HandBrake's default settings and most of the official `Presets` use a constant quality encoding method. This makes your new video look consistent from start to finish. Always use constant quality unless you have a specific reason not to.
 
 You can use the default setting for the `Preset` you selected, or adjust the quality control higher or lower depending on your tastes. Increasing quality will make your new video take up more space on your computer or playback device, whereas reducing quality will typically make your new video take up less space.
 
 ## Using the quality control
 
-Most of HandBrake's built-in `Presets` use the x264 video encoder and a constant quality value of [RF](abbr:Rate Factor) 20. A lower RF number means *higher* quality.
+Most of HandBrake's official `Presets` use the x264 video encoder and a constant quality setting between [RF](abbr:Rate Factor) 18 and 24. A lower RF number means *higher* quality.
 
 To increase video quality, adjust the quality control toward the right. To reduce video quality, adjust the quality control toward the left.
 
-<!-- .system-lin -->
-
-<!-- TODO: Linux figures. -->
-
-<!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Quality control](../images/mac/quality-control.png)
+![Using the constant quality control](../images/mac/quality-control.png "Adjust the quality control toward the right to increase quality, or toward the left to lower it.")
 
 <!-- /.system-mac -->
-<!-- .system-win -->
 
-<!-- TODO: Windows figures. -->
-
-<!-- /.system-win -->
-
-Begin by making small adjustments (plus or minus 1-2 RF is usually noticeable).
+Begin by making small adjustments. Plus or minus 1-2 RF is usually noticeable.
 
 ## Recommended quality settings
 
-Recommended settings for the **x264** encoder are:
+Recommended settings for **x264** and **x265** encoders:
 
 - RF 18-22 for 480p/576p Standard Definition[^SD]
 - RF 19-23 for 720p High Definition[^720p]
 - RF 20-24 for 1080p Full High Definition[^1080p]
 
-Recommended settings for the **x265** encoder are:
+Raising quality minus 1-2 RF may produce better results when encoding animated `Sources` (anime, cartoons). Lower quality settings may be used to produce smaller files. Drastically lower settings may show significant loss of detail.
 
-- RF 20-24 for 480p/576p Standard Definition[^SD-2]
-- RF 21-25 for 720p High Definition[^720p-2]
-- RF 22-26 for 1080p Full High Definition[^1080p-2]
-
-Lower quality settings may be used to produce smaller video files or for web videos where bandwidth is a concern. Drastically lower settings may show significant loss of detail.
-
-Using higher than recommended quality settings (exceeding RF 18 for x264 or RF 20 for x265) can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
+Using higher than recommended quality settings (exceeding RF 18 or RF 16 for animation) can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
 
 ## Display size and viewing distance
 
@@ -82,11 +66,5 @@ Continue to [Previewing your settings](preview-settings.html).
 [^720p]: 720p [HD](abbr:High Definition) video has a resolution of 1280x720 pixels. With three times the resolution of SD, and about half that of 1080p HD, 720p HD is commonly used by consumer video cameras, web videos, and broadcast TV sports.
 
 [^1080p]: 1080p [HD](abbr:High Definition) video has a resolution of 1920x1080 pixels—twice the resolution of 720p and six times the resolution of 480p. 1080p HD video is commonly used by mobile phones and tablets, consumer and professional video cameras, and Blu-ray.
-
-[^SD-2]: [SD](abbr:Standard Definition) video has a resolution of 720x480 or fewer pixels (720x576 for PAL). DVDs, small web videos, and most analog sources are SD.
-
-[^1080p-2]: 1080p [HD](abbr:High Definition) video has a resolution of 1920x1080 pixels—twice the resolution of 720p and six times the resolution of 480p. 1080p HD video is commonly used by mobile phones and tablets, consumer and professional video cameras, and Blu-ray.
-
-[^720p-2]: 720p [HD](abbr:High Definition) video has a resolution of 1280x720 pixels. With three times the resolution of SD, and about half that of 1080p HD, 720p HD is commonly used by consumer video cameras, web videos, and broadcast TV sports.
 
 [^viewing-distance]: Learn more about [optimum viewing distances for high definition TV displays](https://en.wikipedia.org/wiki/Optimum_HDTV_viewing_distance).
