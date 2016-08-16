@@ -73,7 +73,7 @@ function string_filter {
 # builds document(s) from a single source file
 function build_source {
 
-    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
+    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Type DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_Abbr DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
     SOURCE="${1}"
     BASE_RELPATH="${SOURCE#$DOCS_DIR/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
@@ -169,8 +169,8 @@ function build_source {
     sed -E \
     -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_Scripts:-}"'|g' \
     -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
-    -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
     -e 's|\{\{[ ]*document\.type[ ]*\}\}|'"${DOCUMENT_Type:-}"'|g' \
+    -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
     -e 's|\{\{[ ]*document\.project[ ]*\}\}|'"${DOCUMENT_Project:-}"'|g' \
     -e 's|\{\{[ ]*document\.project slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Project:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.project-url[ ]*\}\}|'"${DOCUMENT_Project_URL:-}"'|g' \
@@ -234,10 +234,10 @@ if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     TEMPLATE_Base="${TEMPLATE_DIR}/${TEMPLATE_Base}"
     TEMPLATE_Meta="${TEMPLATE_DIR}/${TEMPLATE_Meta}"
     TEMPLATE_Title="${TEMPLATE_DIR}/${TEMPLATE_Title}"
-    TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
-    TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
     TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
+    TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
+    TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
     TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
     TEMPLATE_Fonts_array=($(echo "${TEMPLATE_Fonts}" | sed -e "s/,[ ]*/ /g"))
     TEMPLATE_Scripts_array=($(echo "${TEMPLATE_Scripts}" | sed -e "s/,[ ]*/ /g"))
