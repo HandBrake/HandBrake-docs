@@ -73,7 +73,7 @@ function string_filter {
 # builds document(s) from a single source file
 function build_source {
 
-    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Type DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_Abbr DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
+    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Type DOCUMENT_State DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_Abbr DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
     SOURCE="${1}"
     BASE_RELPATH="${SOURCE#$DOCS_DIR/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
@@ -105,6 +105,9 @@ function build_source {
         DOCUMENT_Authors=$(echo "${DOCUMENT_Authors}" | sed -e  's/,//')
     fi
 
+    # process state
+    DOCUMENT_State=(${DOCUMENT_State//,/})
+
     # preprocess markdown to add implicit figures
     sed -E \
     -e 's|^!\[(.+)]\([ ]*([^ ]+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' \
@@ -130,9 +133,10 @@ function build_source {
     -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title:-}" -e 'd;}' \
     -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
-    # inject header, content, footer
+    # inject header, notice, content, footer
     sed -E \
     -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.notice[ ]*\}\}/{r '"${TEMPLATE_Notice:-}" -e 'd;}' \
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content:-}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
@@ -170,6 +174,7 @@ function build_source {
     -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_Scripts:-}"'|g' \
     -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
     -e 's|\{\{[ ]*document\.type[ ]*\}\}|'"${DOCUMENT_Type:-}"'|g' \
+    -e 's|\{\{[ ]*document\.state[ ]*\}\}|'"${DOCUMENT_State:-}"'|g' \
     -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
     -e 's|\{\{[ ]*document\.project[ ]*\}\}|'"${DOCUMENT_Project:-}"'|g' \
     -e 's|\{\{[ ]*document\.project slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Project:-}" slug)'|g' \
@@ -190,6 +195,21 @@ function build_source {
     -e 's|\{\{[ ]*document\.redirect-url[ ]*\}\}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
     -e 's|\{\{[ ]*base\.relpath[ ]*\}\}|'"${BASE_RELPATH:-}"'|g' \
     -i.sedbak "${DEST}.html"
+    # process conditionals
+    for STATE in ${DOCUMENT_State[@]}; do
+        case "${STATE}" in
+        draft)
+            cp "${DEST}.html" "${DEST}.html.temp"
+            awk '/\{\% if document.state contains "draft"/ {k=1;i=1;delete a} {a[i++]=$0} (k==1 && /endif \%\}/) {k=0;for (j=2;j<i-1;j++) {print a[j]};next} (k==0) { print }' "${DEST}.html.temp" > "${DEST}.html"
+            ;;
+        obsolete)
+            cp "${DEST}.html" "${DEST}.html.temp"
+            awk '/\{\% if document.state contains "obsolete"/ {k=1;i=1;delete a} {a[i++]=$0} (k==1 && /endif \%\}/) {k=0;for (j=2;j<i-1;j++) {print a[j]};next} (k==0) { print }' "${DEST}.html.temp" > "${DEST}.html"
+            ;;
+        esac
+    done
+    cp "${DEST}.html" "${DEST}.html.temp"
+    awk '/\{\% if/ {k=1;i=1;delete a} {a[i++]=$0} (k==1 && /endif \%\}/) {k=0;next} (k==0) { print }' "${DEST}.html.temp" > "${DEST}.html"
     # process comment tags
     sed -E \
     -e 's|<!--[ ]*\.([^ ]*)[ ]*-->|<div class="\1">|g' \
@@ -237,6 +257,7 @@ if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
     TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
     TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
+    TEMPLATE_Notice="${TEMPLATE_DIR}/${TEMPLATE_Notice}"
     TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
     TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
     TEMPLATE_Fonts_array=($(echo "${TEMPLATE_Fonts}" | sed -e "s/,[ ]*/ /g"))
