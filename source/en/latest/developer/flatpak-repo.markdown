@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           draft
 Title:           Maintaining a HandBrake flatpak repository
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

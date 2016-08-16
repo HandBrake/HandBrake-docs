@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           draft
 Title:           HandBrake History
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

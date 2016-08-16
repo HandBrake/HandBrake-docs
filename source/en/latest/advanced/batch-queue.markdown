@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           draft, obsolete
 Title:           Queueing Jobs
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

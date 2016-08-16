@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           draft
 Title:           Audio Defaults
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
