@@ -42,10 +42,11 @@ Recommended settings for **x264** and **x265** encoders:
 - RF 18-22 for 480p/576p Standard Definition[^SD]
 - RF 19-23 for 720p High Definition[^720p]
 - RF 20-24 for 1080p Full High Definition[^1080p]
+- RF 22-28 for 2160p 4K Ultra High Definition[^2160p]
 
 Raising quality minus 1-2 RF may produce better results when encoding animated `Sources` (anime, cartoons). Lower quality settings may be used to produce smaller files. Drastically lower settings may show significant loss of detail.
 
-Using higher than recommended quality settings (exceeding RF 18 or RF 16 for animation) can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
+Using higher than recommended quality settings can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
 
 ## Display size and viewing distance
 
@@ -66,5 +67,7 @@ Continue to [Previewing your settings](preview-settings.html).
 [^720p]: 720p [HD](abbr:High Definition) video has a resolution of 1280x720 pixels. With three times the resolution of SD, and about half that of 1080p HD, 720p HD is commonly used by consumer video cameras, web videos, and broadcast TV sports.
 
 [^1080p]: 1080p [HD](abbr:High Definition) video has a resolution of 1920x1080 pixels—twice the resolution of 720p and six times the resolution of 480p. 1080p HD video is commonly used by mobile phones and tablets, consumer and professional video cameras, and Blu-ray.
+
+[^2160p]: 2160p [UHD](abbr:Ultra High Definition) video has a resolution of 3840x2160 pixels and is four times the resolution of 1080p. 4K video is used by high-end mobile phones and tablets, consumer and professional video cameras, and 4K Blu-ray.
 
 [^viewing-distance]: Learn more about [optimum viewing distances for high definition TV displays](https://en.wikipedia.org/wiki/Optimum_HDTV_viewing_distance).
