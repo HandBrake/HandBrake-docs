@@ -50,7 +50,7 @@ article.docs header {
     pointer-events: none; /* allows selecting elements on layers with a lower z-index */
 }
 
-article.docs header + h1 {
+article.docs header + * {
     margin-top: 6.75rem;
 }
 
@@ -198,6 +198,35 @@ article.docs nav .navigation li > em {
 
 article.docs nav .navigation li > ul {
     padding-left: .9375rem;
+}
+
+article.docs .notice {
+    margin-bottom: .66666em;
+    padding: 0 .625rem;
+    border: 1px dotted lightgreen;
+    background-color: honeydew;
+    font-size: 0.8em;
+    line-height: 1.25;
+    text-align: center;
+}
+
+article.docs .notice.draft {
+    border: 1px dotted khaki;
+    background-color: lightyellow;
+}
+
+article.docs .notice p:first-child:before {
+    display: inline;
+    margin-right: .5em;
+    content: "♻";
+}
+
+article.docs .notice.draft p:first-child:before {
+    content: "⚠";
+}
+
+article.docs .notice p {
+    margin: 0.71429em 0;
 }
 
 article.docs h1,
@@ -421,7 +450,7 @@ article.docs .footnotes + footer {
         margin-top: -7.75rem;
     }
 
-    article.docs header + h1 {
+    article.docs header + * {
         margin-top: 7.5rem;
     }
 
@@ -473,7 +502,7 @@ article.docs .footnotes + footer {
         margin-top: -9.3125rem;
     }
 
-    article.docs header + h1 {
+    article.docs header + * {
         margin-top: 8.75rem;
     }
 
@@ -535,7 +564,7 @@ article.docs .footnotes + footer {
         display: block;
     }
 
-    article.docs header + h1 {
+    article.docs header + * {
         margin-top: 10.5rem;
     }
 
@@ -611,7 +640,7 @@ article.docs .footnotes + footer {
 
 /* Shorter than 550 */
 @media (max-height: 549px) {
-    article.docs header + h1 {
+    article.docs header + * {
         margin-top: 6.25rem;
     }
 
@@ -631,7 +660,7 @@ article.docs .footnotes + footer {
         margin-top: -5.3125rem;
     }
 
-    article.docs header + h1 {
+    article.docs header + * {
         margin-top: 5rem;
     }
 
