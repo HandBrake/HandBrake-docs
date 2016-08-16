@@ -112,9 +112,9 @@ The `Destination` is where your new video will go. You can select the `Browse...
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Selecting a destination](../images/mac/destination-field.png "The destination is where your new video will go.")
+![Selecting a destination](../images/mac/destination-field.png "Destination is where HandBrake will put your new video.")
 
-![Browsing for a destination](../images/mac/destination-dialog.png "Select the browse button to choose a different location and name.")
+![Browsing for a destination](../images/mac/destination-dialog.png "Select the Browse button to choose a different location and name.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
