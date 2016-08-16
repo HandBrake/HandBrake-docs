@@ -61,7 +61,7 @@ When you're satisfied with your starting position and duration, select `Live Pre
 
 <!-- /.system-mac -->
 
-When your `Preview` is ready, it will play automatically. During playback, the Preview controls are updated to let you pause, rewind, and replay. You can also choose which audio tracks is playing and adjust its volume.
+When your `Preview` is ready, the controls are updated to let you play, pause, and rewind your video. You can also adjust the audio volume, and in some cases, choose which audio track plays.
 
 <!-- .system-mac -->
 
