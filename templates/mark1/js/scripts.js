@@ -3,7 +3,7 @@ $.featherlight.autoBind = false;
 $(document).ready(function(){
     $('body').addClass('js');
 
-    if (!$('body').hasClass("license")){
+    if ($('body').hasClass("article")){
         var header = $('article.docs header').first();
         var navigation_headings = $('article.docs nav .navigation > h2');
         var navigation_sections = navigation_headings.next('ul');
