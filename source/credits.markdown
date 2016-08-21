@@ -21,9 +21,9 @@ Credits
 
 HandBrake Documentation is an open source project created and maintained by the HandBrake Team. All are invited to participate: see [Contributing](https://github.com/HandBrake/HandBrake-docs/blob/master/CONTRIBUTING.markdown) for more information.
 
-Written contributions are listed on each individual article.
+Major written contributions are listed at the end of individual articles.
 
-[Contributors](https://github.com/HandBrake/HandBrake-docs/graphs/contributors) on GitHub shows all contributions tracked by git.
+[Contributors](https://github.com/HandBrake/HandBrake-docs/graphs/contributors) on GitHub shows all project contributions tracked by git.
 
 ## Blender Foundation
 
