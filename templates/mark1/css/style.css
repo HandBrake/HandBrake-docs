@@ -346,6 +346,11 @@ article.docs li > ul {
     margin-bottom: 1.33333em;
 }
 
+.credits article.docs img {
+    max-width: 30%;
+    max-height: 6em;
+}
+
 article.docs figure {
     position: relative;
     left: -3%;
