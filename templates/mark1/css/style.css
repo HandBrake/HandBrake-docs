@@ -71,6 +71,10 @@ article.docs nav .breadcrumbs {
     white-space: nowrap;
 }
 
+.credits article.docs nav .breadcrumbs .language-separator,
+.credits article.docs nav .breadcrumbs .language,
+.credits article.docs nav .breadcrumbs .version-separator,
+.credits article.docs nav .breadcrumbs .version,
 .license article.docs nav .breadcrumbs .language-separator,
 .license article.docs nav .breadcrumbs .language,
 .license article.docs nav .breadcrumbs .version-separator,
