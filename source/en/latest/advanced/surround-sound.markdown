@@ -18,9 +18,58 @@ License_URL:     https://handbrake.fr/docs/license.html
 Surround Sound Guide
 =============================
 
-Todo
+There are many different formats for multi-channel audio which your source may have:
 
-  - Formats: ac3, dts, etc.
-  - Passthru: devices and compatiblity
-  - Dynamic range control
-  - Downmixing
+- Dolby Pro Logic
+- Dolby Digital Surround
+- Digital Theater System (DTS)
+- Digital Theater System Master Audio (DTS-HD) 
+- TrueHD
+
+HandBrake can take these and either pass them through to your source or convert them to another format with a downmix.
+
+## Downmixing
+When you are not using a passthru in the codec selection, you can choose the downmix from the "Mixdown" dropdown.
+
+The options you have will depend on what the source track is and how many channels it has.
+
+- Dolby Surround
+- Dobly ProLogic II
+- 5.1 Surround
+- 6.1 Surround
+- 7.1 Surround
+
+By default HandBrake will downmix your audio to Dolby ProLogic II which sounds good on both stereo and multi-channel audio systems alike. However, if you want the true experience you can choose the appropriate channel count surround option from the "Mixdown" dropdown.
+
+## Audio passthru
+
+HandBrake also supports passing through the source audio track, bit-for-bit without altering it.
+
+The following source format's can be passed thru.
+
+- AC3
+- E-AC3
+- DTS    (Limited player compatibility in MP4)
+- DTS-HD (Limited player compatibility in MP4)
+- TrueHD (MKV files only)
+- FLAC   (MKV files only)
+- AAC
+- MP3
+
+
+## Dynamic Range Control (DRC)
+
+The dynamic range of an audio track is the difference between the softest and loudest sounds.
+
+Dynamic range compression reduces the gap between those extremes.
+
+- 1.0-2.5 are good values to use.
+- 0, the default, turns it off completely.
+- 1.0 uses the compression hints embedded in the AC3 track.
+- Values greater than 1.0 compress the range further by boosting the volume of soft sound samples while leaving loud samples as they are. This squeezes down the range between the softest and loudest parts, but should make the softer ones easier to hear in noisy listening environments.
+
+Note, this is not the same as a gain or volume boost control.
+
+### Compatibility
+
+Dynamic range compression only works when the source audio is AC3 and you are encoding to another format, like AAC. It has no effect on AC3 pass-through or on DTS or MPEG-2 audio.
