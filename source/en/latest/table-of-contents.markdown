@@ -53,11 +53,12 @@ Table of contents
 
 ## Advanced features
 
-- [Batch processing multiple jobs using the queue](advanced/batch-queue.html)   
+- [Batch processing multiple jobs](advanced/batch-queue.html)   
 - [Custom presets](advanced/custom-presets.html) 
   - [Audio and Subtitled Defaults](advanced/audio-subtitle-defaults.html) 
 - [Resizing video](advanced/resizing-video.html) 
-- [Surround sound](advanced/surround-sound.html)
+- [Managing Audio Tracks](advanced/managing-audio.html)
+  - [Understanding Surround Sound](advanced/surround-sound.html)
 - [Adding subtitles](advanced/subtitles.html) 
 - [Chapter markers](advanced/chapter-markers.html) 
 <!-- - [Post-processing metadata](advanced/post-processing.html) -->
@@ -65,6 +66,8 @@ Table of contents
 
 ## Restoration and enhancement
 
+- Coming Soon!
+<!--
 - Common video problems
   - Cropping, Black bars at top/bottom or sides
   - Combing effects caused by interlacing or telecine
@@ -80,21 +83,31 @@ Table of contents
 - Common audio problems
   - Volume level too low
   - Dynamics too wide (soft whispers, loud booms)
-
+-->
 
 ## Advanced features part 2
 
-- [Formats/containers](advanced/containers.html)
-- [Video source type](advanced/video-sources.html)
-- [Video encoding speed](advanced/video-encoding-performance.html)
-- [Video angles](advanced/video-angles.html)
-- [Point-to-point](advanced/point-to-point.html)
-- [Frame rate](advanced/frame-rates.html)
-- [Audio quality](advanced/audio-quality.html)
-- [Automatic file naming](advanced/automatic-file-naming.html)
-- [Web optimized](advanced/web-optimised.html)
-- [iPod 5G support](advanced/old-ipod-support.html)
-
+- Video
+  <!-- - [Video source type](advanced/video-sources.html) -->
+  - [Summary of encoders](technical/video-codecs.html) 
+  - [Video encoding speed](advanced/video-encoding-performance.html)
+  - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html) 
+  - [Video angles](advanced/video-angles.html)
+  - [Frame rate](advanced/frame-rates.html)
+- Audio
+  - [Dynamic Range Compression](advanced/dynamic-range-compression.html) 
+  - [Audio quality](advanced/audio-quality.html)
+- Output and Compatibility
+  - [Formats/containers](advanced/containers.html)
+  - [Web optimized](advanced/web-optimised.html)
+  - [iPod 5G support](advanced/old-ipod-support.html)
+  - [Point-to-point](advanced/point-to-point.html)
+  - [Automatic file naming](advanced/automatic-file-naming.html)
+- Picture
+  - [Anamorphic Guide](advanced/anamorphic-guide.html) 
+  - [Modulus](advanced/modulus.html) 
+- Filters
+  - [Summary](advanced/filters-summary.html)
 
 ## Getting help
 
@@ -121,23 +134,14 @@ Table of contents
 
 - [System requirements](technical/system-requirements.html)
   *Make sure your system can run HandBrake*
-- [Source formats](technical/source-formats.html)
+- [Supported Source formats](technical/source-formats.html)
 - Video
-  - [Codecs](technical/video-codecs.html) 
   - [x264 presets, tunes, and custom settings](technical/video-x264-presets-tunes.html) 
   - [x264 profile and level](technical/video-x264-profiles-levels.html) 
-  - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html) 
-- Advanced picture settings
-  - Anamorphic modes
-  - Modulus
-  - Custom filter settings
+<!--
 - Advanced Filter Settings
-- Audio
-  - [Codecs](technical/audio-codecs.html)
-  - [Gain](technical/audio-gain.html)
-  - [DRC](technical/audio-drc.html)
-  - [Mixdown](technical/audio-mixdowns.html)
 - Advanced preferences
+-->
 
 ## Developer documentation
 
