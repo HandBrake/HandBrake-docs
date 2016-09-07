@@ -1,9 +1,9 @@
 $.featherlight.autoBind = false;
 
 $(document).ready(function(){
-    $('body').addClass('js');
+    $('article.docs').addClass('js');
 
-    if ($('body').hasClass("article")){
+    if ($('article.docs').hasClass("article")){
         var header = $('article.docs header').first();
         var navigation_headings = $('article.docs nav .navigation > h2');
         var navigation_sections = navigation_headings.next('ul');

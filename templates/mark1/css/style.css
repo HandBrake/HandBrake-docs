@@ -71,14 +71,14 @@ article.docs nav .breadcrumbs {
     white-space: nowrap;
 }
 
-.credits article.docs nav .breadcrumbs .language-separator,
-.credits article.docs nav .breadcrumbs .language,
-.credits article.docs nav .breadcrumbs .version-separator,
-.credits article.docs nav .breadcrumbs .version,
-.license article.docs nav .breadcrumbs .language-separator,
-.license article.docs nav .breadcrumbs .language,
-.license article.docs nav .breadcrumbs .version-separator,
-.license article.docs nav .breadcrumbs .version {
+article.docs.credits nav .breadcrumbs .language-separator,
+article.docs.credits nav .breadcrumbs .language,
+article.docs.credits nav .breadcrumbs .version-separator,
+article.docs.credits nav .breadcrumbs .version,
+article.docs.license nav .breadcrumbs .language-separator,
+article.docs.license nav .breadcrumbs .language,
+article.docs.license nav .breadcrumbs .version-separator,
+article.docs.license nav .breadcrumbs .version {
     display: none;
 }
 
@@ -152,7 +152,7 @@ article.docs nav .navigation h2 {
     text-transform: uppercase;
 }
 
-.js article.docs nav .navigation h2:before {
+article.docs.js nav .navigation h2:before {
     content: "+ "
 }
 
@@ -177,7 +177,7 @@ article.docs nav .navigation ul {
     line-height: 1.42857;
 }
 
-.js article.docs nav .navigation > ul {
+article.docs.js nav .navigation > ul {
     display: none;
     max-height: 300px;
     overflow-x: hidden;
@@ -318,7 +318,7 @@ article.docs footer {
 	margin-top: 2em;
 }
 
-.license article.docs footer {
+article.docs.license footer {
     display: none;
 }
 
@@ -345,12 +345,12 @@ article.docs li > ul {
     margin-bottom: 0;
 }
 
-.license article.docs li {
+article.docs.license li {
     margin-top: 1.33333em;
     margin-bottom: 1.33333em;
 }
 
-.credits article.docs img {
+article.docs.credits img {
     max-width: 30%;
     max-height: 6em;
 }
@@ -541,7 +541,7 @@ article.docs .footnotes + footer {
         font-size: 1.125rem;
     }
 
-    .js.article article.docs {
+    article.docs.article.js {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
@@ -552,7 +552,7 @@ article.docs .footnotes + footer {
         font-size: 0.9rem;
     }
 
-    .js.article article.docs nav {
+    article.docs.article.js nav {
         position: relative;
         padding-left: 350px;
         padding-right: 50px;
@@ -569,7 +569,7 @@ article.docs .footnotes + footer {
         overflow-y: auto;
     }
 
-    .js.article article.docs nav .navigation {
+    article.docs.article.js nav .navigation {
         display: block;
     }
 
