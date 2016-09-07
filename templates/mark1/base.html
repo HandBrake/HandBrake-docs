@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ document.language-code }}">
 <head>
-    {{ template.meta }}
+    <meta charset="{{ document.text-encoding }}" />
+    <meta name="author" content="{{ document.authors }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{ template.title }}
+    <title>{{ document.project }} Documentation &mdash; {{ document.title }}</title>
 </head>
 <body>
     {{ template.document }}

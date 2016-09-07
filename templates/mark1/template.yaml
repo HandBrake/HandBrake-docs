@@ -1,7 +1,5 @@
 ---
 Base:     base.html
-Meta:     meta.html
-Title:    title.html
 Header:   header.html
 Nav:      nav.html
 Notice:   notice.html
