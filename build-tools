@@ -8,7 +8,47 @@ TOOLS_DIR="${SELF_DIR}/tools"
 BUILD_DIR="${TOOLS_DIR}/local/build"
 INSTALL_DIR="${TOOLS_DIR}/local"
 SYS_NAME=$(uname | awk '{ print tolower($0)}')
-TOOLS=('discount' 'zlib' 'libpng' 'pngquant' 'zopfli')
+TOOLS=('discount')
+TOOLS_EXTRA=('zlib' 'libpng' 'pngquant' 'zopfli')
+
+# args
+OPTIND=1
+OPTSPEC=":-:"
+OPTARRAY=('--all')  # all short and long options
+while getopts "${OPTSPEC}" OPT; do
+    case "${OPT}" in
+        -)
+            case "${OPTARG}" in
+                all)
+                    TOOLS=("${TOOLS[@]}" "${TOOLS_EXTRA[@]}")
+                    ;;
+                all=*)
+                    # Option with prohibited value
+                    echo "option --${OPTARG%%=*} takes no value" >&2
+                    exit 1
+                    ;;
+                *)
+                    if [[ "${OPTERR}" == 1 ]]; then
+                        # Invalid option specified
+                        echo "invalid option: --${OPTARG}" >&2
+                        exit 1
+                    fi
+                    ;;
+            esac
+            ;;
+        :)
+            # Option without required value
+            echo "option -${OPTARG} requires a value" >&2
+            exit 1
+            ;;
+        \?)
+            # Invalid option specified
+            echo "invalid option: -${OPTARG}" >&2
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND - 1))
 
 # discount
 function build_discount {
