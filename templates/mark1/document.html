@@ -1,6 +1,8 @@
 <article class="docs {{ document.type }}" lang="{{ document.language-code }}" charset="{{ document.text-encoding }}">
+    {{ template.styles }}
     {{ template.header }}
     {{ template.notice }}
     {{ document.content }}
     {{ template.footer }}
+    {{ template.scripts }}
 </article>
