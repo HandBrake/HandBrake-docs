@@ -18,11 +18,11 @@ $(document).ready(function(){
         });
 
         var nav = $('article.docs nav');
-        var system_select = $('<ul class="system-select" hidden>Instructions:<li class="system-select-all">All</li><li class="system-select-lin">Linux</li><li class="system-select-mac">Mac</li><li class="system-select-win">Windows</li></ul>').prependTo(nav);
-        var system_select_lin = $('.system-select-lin');
-        var system_select_mac = $('.system-select-mac');
-        var system_select_win = $('.system-select-win');
-        var system_select_all = $('.system-select-all');
+        var system_select = $('article.docs .system-select');
+        var system_select_lin = system_select.find('.system-select-lin');
+        var system_select_mac = system_select.find('.system-select-mac');
+        var system_select_win = system_select.find('.system-select-win');
+        var system_select_all = system_select.find('.system-select-all');
 
         var scroll_to_section = function(el, fallback_el){
             var headings = 'h1, h2, h3, h4, h5, h6';
