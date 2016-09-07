@@ -127,10 +127,8 @@ function build_source {
         # partial html
         cp "${TEMPLATE_Document}" "${DEST}.html"
     fi
-    # inject meta, title, styles, document, scripts
+    # inject document
     sed -E \
-    -e '/\{\{[ ]*template\.meta[ ]*\}\}/{r '"${TEMPLATE_Meta:-}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.title[ ]*\}\}/{r '"${TEMPLATE_Title:-}" -e 'd;}' \
     -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # inject header, notice, content, footer
@@ -254,8 +252,6 @@ TEMPLATE_CONFIG="${TEMPLATE_DIR}/template.yaml"
 if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     eval $(parse_yaml "${TEMPLATE_CONFIG}" "TEMPLATE_")
     TEMPLATE_Base="${TEMPLATE_DIR}/${TEMPLATE_Base}"
-    TEMPLATE_Meta="${TEMPLATE_DIR}/${TEMPLATE_Meta}"
-    TEMPLATE_Title="${TEMPLATE_DIR}/${TEMPLATE_Title}"
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
     TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
     TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
