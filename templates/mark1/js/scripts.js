@@ -1,11 +1,12 @@
 $.featherlight.autoBind = false;
 
 $(document).ready(function(){
-    $('article.docs').addClass('js');
+    var docs = $('article.docs');
+    docs.addClass('js');
 
-    if ($('article.docs').hasClass("article")){
-        var header = $('article.docs header').first();
-        var navigation_headings = $('article.docs nav .navigation > h2');
+    if (docs.hasClass("article")){
+        var header = docs.find('header').first();
+        var navigation_headings = docs.find('nav .navigation > h2');
         var navigation_sections = navigation_headings.next('ul');
         navigation_headings.click(function(){
             $(this).addClass('selected').next('ul').slideDown(250);
@@ -17,8 +18,8 @@ $(document).ready(function(){
             $(this).attr('title', $(this).next().text());
         });
 
-        var nav = $('article.docs nav');
-        var system_select = $('article.docs .system-select');
+        var nav = docs.find('nav');
+        var system_select = docs.find('.system-select');
         var system_select_lin = system_select.find('.system-select-lin');
         var system_select_mac = system_select.find('.system-select-mac');
         var system_select_win = system_select.find('.system-select-win');
@@ -50,7 +51,7 @@ $(document).ready(function(){
         };
 
         var system_switch = function(control, scroll){
-            var system_all = $('.system-lin, .system-mac, .system-win');
+            var system_all = docs.find('.system-lin, .system-mac, .system-win');
             var system_lin = system_all.filter('.system-lin');
             var system_mac = system_all.filter('.system-mac');
             var system_win = system_all.filter('.system-win');
@@ -151,5 +152,5 @@ $(document).ready(function(){
         }
     }
 
-    $('article.docs figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
+    docs.find('figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
 });
