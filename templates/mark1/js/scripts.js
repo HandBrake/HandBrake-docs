@@ -125,6 +125,10 @@ $(document).ready(function(){
                     default:
                         break;
                 }
+                var location_sans_fragment = window.location.href.split('#')[0];
+                if (window.location != location_sans_fragment){
+                    history.pushState(null, null, location_sans_fragment);
+                }
             });
         };
 
