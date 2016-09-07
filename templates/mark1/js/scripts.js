@@ -18,7 +18,7 @@ $(document).ready(function(){
         });
 
         var nav = $('article.docs nav');
-        var system_select = $('<ul class="system-select">Instructions:<li class="system-select-all">All</li><li class="system-select-lin">Linux</li><li class="system-select-mac">Mac</li><li class="system-select-win">Windows</li></ul>').prependTo(nav);
+        var system_select = $('<ul class="system-select" hidden>Instructions:<li class="system-select-all">All</li><li class="system-select-lin">Linux</li><li class="system-select-mac">Mac</li><li class="system-select-win">Windows</li></ul>').prependTo(nav);
         var system_select_lin = $('.system-select-lin');
         var system_select_mac = $('.system-select-mac');
         var system_select_win = $('.system-select-win');

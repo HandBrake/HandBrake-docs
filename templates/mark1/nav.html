@@ -1,6 +1,6 @@
 <nav>
     <div class="breadcrumbs"><a href="{{ base.relpath }}">Docs</a><span class="language-separator">&nbsp;> </span><span class="language"><a href="{{ base.relpath }}{{ document.language-code slug }}/">{{ document.language }}</a></span><span class="version-separator">&nbsp;> </span><span class="version"><a class="version" href="{{ base.relpath }}{{ document.language-code slug }}/{{ document.project-version slug }}/">{{ document.project }} {{ document.project-version }}</a></span>&nbsp;> {{ document.title }}</div>
-    <div class="navigation">
+    <div class="navigation" hidden>
         {{ include.navigation }}
     </div>
 </nav>
