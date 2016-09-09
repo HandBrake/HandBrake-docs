@@ -185,7 +185,7 @@ Security restrictions in modern web browsers may prevent web fonts from displayi
 
 ### Editing
 
-Before editing the documentation, first create and switch to an appropriately named local branch to track your changes (e.g. `git checkout master; git checkout --branch branch-name`). This allows you to make as many changes as you like without affecting the `master` branch, and helps identify groups of changes when submitting pull requests later on.
+Before editing the documentation, first create and switch to an appropriately named local branch to track your changes (e.g. `git checkout master; git checkout -b branch-name`). This allows you to make as many changes as you like without affecting the `master` branch, and helps identify groups of changes when submitting pull requests later on.
 
 To make a change, edit the appropriate file(s) in the `source` directory. Run `build-docs` again from the main directory to rebuild the HTML documentation in `docs` including your changes.
 
