@@ -25,7 +25,7 @@ Troubleshooting common issues
 
 We are not currently able to sign the HandBrake downloads. Since our download is not code signed, OSX will flag the application as from an unidentified developer. To work around this, please read their [Open an app from an unidentified developer](https://support.apple.com/kb/PH18657?locale=en_US)  help article.
 
-This is also detailed on the [Downloading and installing HandBrake](download-and-install.html) page.
+This is also detailed on the [Downloading and installing HandBrake](../get-handbrake/download-and-install.html) page.
 
 ## Linux GUI
 
