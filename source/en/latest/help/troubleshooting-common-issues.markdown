@@ -21,12 +21,17 @@ Troubleshooting common issues
 ## Common Questions (All Platforms)
 
 ## Mac GUI
+####*HandBrake won't launch when double clicking on the icon.*
+
+We are not currently able to sign the HandBrake downloads. Since our download is not code signed, OSX will flag the application as from an unidentified developer. To work around this, please read their [Open an app from an unidentified developer](https://support.apple.com/kb/PH18657?locale=en_US)  help article.
+
+This is also detailed on the [Downloading and installing HandBrake](download-and-install.html) page.
 
 ## Linux GUI
 
 ## Windows GUI
 
-####*Where can I download the Microsoft .NET framework 4.6.1 or later *
+####*Where can I download the Microsoft .NET framework 4.6.1 or later*
 
 If you are running Windows 7 or 8.x, it is available via Windows update. 
 Alternatively, you can download it from the ​Microsoft Website.
