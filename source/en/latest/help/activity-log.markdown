@@ -25,15 +25,15 @@ This log contains information about the source file, encode parameters, any erro
 ## Accessing the Log Window
 
 All of the HandBrake GUI's contain an "Activity Window" which can be accessed on the toolbar.
-
-[TODO Screenshot]
+While HandBrake is scanning a source, or encoding a file, the log will appear in this window in real time.
 
 
 ## Logging to Disk
 
-While HandBrake is scanning a source, or encoding a file, the log file is being written out to the drive at the same time.  
+In addition to the activity window, all HandBrake's logs are written to the drive at the same time.
 This way, if the application crashes, you can see what was happening when this event occurred.
 
+<!-- .system-mac -->
 ### Mac
 
 The log files are stored in the following folder:
@@ -49,20 +49,23 @@ One this to keep in mind, currently there is not function which removes individu
 
 Note: The individual activity logs are in addition to the existing session based activity log. 
 If you do a scan of a new source during encoding, the new source scan log messages will be intermixed with the encode log messages.
+<!-- /.system-mac -->
 
+<!-- .system-win -->
 ### Windows
 
 The log files are stored in the following folder:
 
-* Windows 7: C:\Users\<Your Username>\AppData?\Roaming\HandBrake\logs
+* Windows 7,8 and 10: C:\Users\<Your Username>\AppData?\Roaming\HandBrake\logs
 * Windows Vista: C:\Users\<username>\Application Data\HandBrake\logs
 
 There is a session activity log named:  activity_logXXXX.txt where XXXX is the process ID. 
 While it is possible that this file can be overwritten it's fairly unlikely HandBrake will restart with the same process ID.
 
 In addition there are per encode logs in the format  of "Source Date Time"
+<!-- /.system-win-->
 
-
+<!-- .system-lin -->
 ### Linux
 
 Activity logs are stored to disc after each scan or encode.
@@ -72,6 +75,7 @@ The current session is written to the file "Activity.log".
 Typically, this will be in the directory "$(HOME)/.config/ghb", but it is possible for the system to have a different default data directory. So the full path is also shown at the top of the activity window in the gui. 
 
 A history of all encodes are also stored in separate log files. These can typically be found in the directory "$(HOME)/.config/ghb/EncodeLogs". These are text files, so you can view them with your favourite text editing/viewing tool.
+<!-- /.system-lin -->
 
 ### Command Line Interface (CLI)
 
