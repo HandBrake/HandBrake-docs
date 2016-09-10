@@ -24,7 +24,7 @@ Didn't find it? Keep reading.
 
 ## Activity Logs
 
-Activity logs explain a lot and are **required** for all support requests. More information about [Activity Logs](../activity-log.html).
+Activity logs explain a lot and are **required** for all support requests. More information about [Activity Logs](../help/activity-log.html).
 
 ## Community Forums
 
@@ -42,10 +42,4 @@ Note that HandBrake's developers are located in various timezones around the wor
 
 Developer discussion happens on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), which is moderated for the team's sanity. If you've a developer and would like to speak on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), you may ask politely on [#handbrake](irc://irc.freenode.net/#handbrake).
 
-<!-- .continue -->
 
-## Next steps
-
-Continue to (TODO: link).
-
-<!-- /.continue -->
