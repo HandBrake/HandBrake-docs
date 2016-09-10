@@ -149,4 +149,5 @@ Table of contents
   - [Linux Flatpaks](developer/flatpak-repo.html)
 - Building HandBrake
   - [Building on Windows](developer/build-windows.html)
+  - [Building on macOS](developer/build-mac.html)
 
