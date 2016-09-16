@@ -31,6 +31,7 @@ You can access this information at any time by running the following command:
 	General Options --------------------------------------------------------------
 
 	   -h, --help              Print help
+	   --version               Print version
 	   -v, --verbose[=number]  Be verbose (optional argument: logging level)
 	   -Z. --preset <string>   Select preset by name (case-sensitive)
 							   Enclose names containing spaces in double quotation
