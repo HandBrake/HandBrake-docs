@@ -5,8 +5,8 @@ SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
 CONFIG="${SELF_DIR}/config.yaml"
-DOCS_DIR="${SELF_DIR}/docs"
 SOURCE_DIR="${SELF_DIR}/source"
+PUBLIC_DIR="${SELF_DIR}/public"
 TEMPLATE_DIR="${SELF_DIR}/templates"
 TOOLS_BIN="${SELF_DIR}/tools/local/bin"
 
@@ -75,7 +75,7 @@ function build_source {
 
     local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Type DOCUMENT_State DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_Abbr DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
     SOURCE="${1}"
-    BASE_RELPATH="${SOURCE#$DOCS_DIR/}"       # strip abs prefix
+    BASE_RELPATH="${SOURCE#$PUBLIC_DIR/docs/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
     BASE_RELPATH="${BASE_RELPATH//[\/]/../}"  # slashes to dirs
     BASE_RELPATH="${BASE_RELPATH:-./}"        # empty to current dir
@@ -143,7 +143,7 @@ function build_source {
     -e '/\{\{[ ]*template\.nav[ ]*\}\}/{r '"${TEMPLATE_Nav:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # process includes
-    NAVIGATION_PARTIAL="${DOCS_DIR}/$(string_filter \"${DOCUMENT_Language_Code:-.}\" slug)/$(string_filter \"${DOCUMENT_Project_Version:-.}\" slug)/${CONFIG_Navigation%.markdown}.partial.html"
+    NAVIGATION_PARTIAL="${PUBLIC_DIR}/docs/$(string_filter \"${DOCUMENT_Language_Code:-.}\" slug)/$(string_filter \"${DOCUMENT_Project_Version:-.}\" slug)/${CONFIG_Navigation%.markdown}.partial.html"
     NAVIGATION_RELPATH="${BASE_RELPATH#../../}"
     if [[ -e "${NAVIGATION_PARTIAL}" ]] && [[ "${DOCUMENT_Type}" == "article" ]]; then
         sed -E \
@@ -273,17 +273,17 @@ if [[ "${1:-}" != "" ]]; then
 else
     # everything
     # assets
-    mkdir -p "${DOCS_DIR}"
-    $(GLOBIGNORE='*.gitkeep'; rm -rf "${DOCS_DIR}"/*)
-    cp -R "${SOURCE_DIR}"/* "${DOCS_DIR}"/
+    mkdir -p "${PUBLIC_DIR}"/docs
+    $(GLOBIGNORE='*.gitkeep'; rm -rf "${PUBLIC_DIR}"/docs/*)
+    cp -R "${SOURCE_DIR}"/docs/* "${PUBLIC_DIR}"/docs/
     for REF in ${TEMPLATE_Fonts_array[@]} ${TEMPLATE_Scripts_array[@]} ${TEMPLATE_Styles_array[@]}; do
         FILE="${REF%\?*}"
-        mkdir -p "${DOCS_DIR}/${FILE%/*}"
-        cp "${TEMPLATE_DIR}/${FILE}" "${DOCS_DIR}/${FILE}"
+        mkdir -p "${PUBLIC_DIR}/docs/${FILE%/*}"
+        cp "${TEMPLATE_DIR}/${FILE}" "${PUBLIC_DIR}/docs/${FILE}"
     done
 
     # navigation
-    cd "${SOURCE_DIR}"
+    cd "${SOURCE_DIR}"/docs
     LANGUAGES=()
     while IFS= read -r -d '' x; do
       LANGUAGES+=("$(basename "${x}")")
@@ -297,7 +297,7 @@ else
         for VERSION in "${VERSIONS[@]}"; do
             cd "${VERSION}"
             if [[ -e "${CONFIG_Navigation}" ]]; then
-                NAVIGATION_PARTIAL="${DOCS_DIR}/${LANGUAGE}/${VERSION}/${CONFIG_Navigation%.markdown}.partial.html"
+                NAVIGATION_PARTIAL="${PUBLIC_DIR}/docs/${LANGUAGE}/${VERSION}/${CONFIG_Navigation%.markdown}.partial.html"
                 cp "${CONFIG_Navigation}" "${NAVIGATION_PARTIAL}"
                 if head -n 1 "${NAVIGATION_PARTIAL}" | grep '^---$' >/dev/null 2>&1; then
                     # remove yaml
@@ -308,14 +308,14 @@ else
                 "${MARKDOWN}" -fdlextra -ffencedcode -ffootnote -fgithubtags "${NAVIGATION_PARTIAL}.temp" > "${NAVIGATION_PARTIAL}"
                 rm -f "${NAVIGATION_PARTIAL}.temp"
             fi
-            cd "${SOURCE_DIR}/${LANGUAGE}"
+            cd "${SOURCE_DIR}/docs/${LANGUAGE}"
         done
-        cd "${SOURCE_DIR}"
+        cd "${SOURCE_DIR}"/docs
     done
     cd "${SELF_DIR}"
 
     # sources
-    SOURCES=($(find "${DOCS_DIR}" | sed 's/^\.\///' | grep -i '.markdown'))
+    SOURCES=($(find "${PUBLIC_DIR}"/docs | sed 's/^\.\///' | grep -i '.markdown'))
     if [[ "${PARALLEL:-}" != "" ]]; then
         export -f build_source
         "${PARALLEL}" "${SELF}" ::: "${SOURCES[@]}"
@@ -326,7 +326,7 @@ else
     fi
 
     # clean up
-    find "${DOCS_DIR}" -name '*.partial.html' -exec rm -f {} \;
+    find "${PUBLIC_DIR}"/docs -name '*.partial.html' -exec rm -f {} \;
 fi
 
 # done
