@@ -8,5 +8,5 @@ Footer:   footer.html
 Redirect: redirect.html
 Fonts:    fonts/opensans-bold-1.10.woff, fonts/opensans-bold-1.10.woff2, fonts/opensans-bolditalic-1.10.woff, fonts/opensans-bolditalic-1.10.woff2, fonts/opensans-italic-1.10.woff, fonts/opensans-italic-1.10.woff2, fonts/opensans-regular-1.10.woff, fonts/opensans-regular-1.10.woff2, fonts/ropasans-italic-1.002.ttf, fonts/ropasans-italic-1.002.woff, fonts/ropasans-italic-1.002.woff2, fonts/ropasans-regular-1.002.ttf, fonts/ropasans-regular-1.002.woff, fonts/ropasans-regular-1.002.woff2
 Scripts:  js/vendor/jquery/jquery-2.2.3.min.js, js/vendor/js-cookie/js-cookie-2.1.1.min.js, js/vendor/featherlight/featherlight-1.4.0.min.js, js/scripts.js?2016090705
-Styles:   css/vendor/featherlight/featherlight-1.4.0.min.css, css/fonts.css?2016051301, css/style.css?2016092201
+Styles:   css/opensans.css?2016100501, css/ropasans.css?2016100501, css/vendor/featherlight/featherlight-1.4.0.min.css, css/style.css?2016092201
 ...
