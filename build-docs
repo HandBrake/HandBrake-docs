@@ -206,17 +206,17 @@ function build_source {
         -i.sedbak "${DEST}.html"
     fi
     # process template tags
-    TEMPLATE_Scripts=""
-    for SCRIPT in ${TEMPLATE_Scripts_array[@]}; do
-        TEMPLATE_Scripts+="<script src=\"${BASE_RELPATH}${SCRIPT}\" charset=\"utf-8\"></script>"
+    TEMPLATE_SCRIPTS=""
+    for SCRIPT in ${TEMPLATE_Assets_Scripts[@]}; do
+        TEMPLATE_SCRIPTS+="<script src=\"${BASE_RELPATH}${SCRIPT}\" charset=\"utf-8\"></script>"
     done
-    TEMPLATE_Styles=""
-    for STYLE in ${TEMPLATE_Styles_array[@]}; do
-        TEMPLATE_Styles+="<link rel=\"stylesheet\" href=\"${BASE_RELPATH}${STYLE}\" />"
+    TEMPLATE_STYLES=""
+    for STYLE in ${TEMPLATE_Assets_Styles[@]}; do
+        TEMPLATE_STYLES+="<link rel=\"stylesheet\" href=\"${BASE_RELPATH}${STYLE}\" />"
     done
     sed -E \
-    -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_Scripts:-}"'|g' \
-    -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_Styles:-}"'|g' \
+    -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_SCRIPTS:-}"'|g' \
+    -e 's|\{\{[ ]*template\.styles[ ]*\}\}|'"${TEMPLATE_STYLES:-}"'|g' \
     -e 's|\{\{[ ]*document\.type[ ]*\}\}|'"${DOCUMENT_Type:-}"'|g' \
     -e 's|\{\{[ ]*document\.state[ ]*\}\}|'"${DOCUMENT_State:-}"'|g' \
     -e 's|\{\{[ ]*document\.title[ ]*\}\}|'"${DOCUMENT_Title:-}"'|g' \
@@ -304,9 +304,36 @@ if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     TEMPLATE_Notice="${TEMPLATE_DIR}/${TEMPLATE_Notice}"
     TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
     TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
-    TEMPLATE_Fonts_array=($(echo "${TEMPLATE_Fonts}" | sed -e "s/,[ ]*/ /g"))
-    TEMPLATE_Scripts_array=($(echo "${TEMPLATE_Scripts}" | sed -e "s/,[ ]*/ /g"))
-    TEMPLATE_Styles_array=($(echo "${TEMPLATE_Styles}" | sed -e "s/,[ ]*/ /g"))
+    TEMPLATE_Assets_Fonts=()
+    INDEX=0
+    ASSET="TEMPLATE_Assets_Fonts_${INDEX}"
+    ASSET="${!ASSET}"
+    while [[ "${ASSET}" != "" ]]; do
+        TEMPLATE_Assets_Fonts+=("${ASSET}")
+        INDEX=$((INDEX+1))
+        ASSET="TEMPLATE_Assets_Fonts_${INDEX}"
+        ASSET="${!ASSET}"
+    done
+    TEMPLATE_Assets_Styles=()
+    INDEX=0
+    ASSET="TEMPLATE_Assets_Styles_${INDEX}"
+    ASSET="${!ASSET}"
+    while [[ "${ASSET}" != "" ]]; do
+        TEMPLATE_Assets_Styles+=("${ASSET}")
+        INDEX=$((INDEX+1))
+        ASSET="TEMPLATE_Assets_Styles_${INDEX}"
+        ASSET="${!ASSET}"
+    done
+    TEMPLATE_Assets_Scripts=()
+    INDEX=0
+    ASSET="TEMPLATE_Assets_Scripts_${INDEX}"
+    ASSET="${!ASSET}"
+    while [[ "${ASSET}" != "" ]]; do
+        TEMPLATE_Assets_Scripts+=("${ASSET}")
+        INDEX=$((INDEX+1))
+        ASSET="TEMPLATE_Assets_Scripts_${INDEX}"
+        ASSET="${!ASSET}"
+    done
 else
     echo "Template configuration file not found." >&2
     exit 1
@@ -322,7 +349,7 @@ else
     mkdir -p "${PUBLIC_DIR}"/docs
     $(GLOBIGNORE='*.gitkeep'; rm -rf "${PUBLIC_DIR}"/docs/*)
     cp -R "${SOURCE_DIR}"/docs/* "${PUBLIC_DIR}"/docs/
-    for REF in ${TEMPLATE_Fonts_array[@]} ${TEMPLATE_Scripts_array[@]} ${TEMPLATE_Styles_array[@]}; do
+    for REF in ${TEMPLATE_Assets_Fonts[@]} ${TEMPLATE_Assets_Scripts[@]} ${TEMPLATE_Assets_Styles[@]}; do
         FILE="${REF%\?*}"
         mkdir -p "${PUBLIC_DIR}/docs/${FILE%/*}"
         cp "${TEMPLATE_DIR}/${FILE}" "${PUBLIC_DIR}/docs/${FILE}"
