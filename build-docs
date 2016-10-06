@@ -18,21 +18,67 @@ DEPS=("${MARKDOWN}")
 PARALLEL=$(which parallel)
 
 # creates bash variables from yaml records
+# extended to support arrays, empty values, and more
+# https://gist.github.com/DinoChiesa/3e3c3866b51290f31243
+# https://gist.github.com/epiloque/8cf512c6d64641bde388
 # https://gist.github.com/pkuczynski/8665367
-function parse_yaml {
-   local prefix=$2
-   local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
-   sed -ne "s|^\($s\)\($w\)$s:$s\"\(.*\)\"$s\$|\1$fs\2$fs\3|p" \
-        -e "s|^\($s\)\($w\)$s:$s\(.*\)$s\$|\1$fs\2$fs\3|p"  $1 |
-   awk -F$fs '{
-      indent = length($1)/2;
-      vname[indent] = $2;
-      for (i in vname) {if (i > indent) {delete vname[i]}}
-      if (length($3) > 0) {
-         vn=""; for (i=0; i<indent; i++) {vn=(vn)(vname[i])("_")}
-         printf("%s%s%s=\"%s\"\n", "'$prefix'",vn, $2, $3);
-      }
-   }'
+function parse_yaml {  # parse_yaml yaml_string_or_file variables_prefix spaces_per_indentation
+    local INPUT PREFIX INDENT S W FS
+    INPUT="${1:-}"
+    [[ "${INPUT}" == "" ]] && return 0
+    if [[ -f "${INPUT}" ]] && [[ -r "${INPUT}" ]]; then
+        INPUT=$(<"${INPUT}")
+    fi
+    PREFIX="${2:-}"
+    INDENT="${3:-}"
+    [[ ! "${INDENT}" =~ '^[0-9]+$' ]] && INDENT=2
+    S='[[:space:]]*'
+    W='[a-zA-Z0-9_]*'
+    FS=$(echo @|tr @ '\034')
+    echo "${INPUT}" |
+    sed -n \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\(${W}\)${S}:${S}\"\(.*\)\"${S}\$|\3${FS}\2  \4${FS}\5${FS}\6|p" \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\(${W}\)${S}:${S}\(.*\)${S}\$|\3${FS}\2  \4${FS}\5${FS}\6|p" \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\"\(.*\)\"${S}\$|\3${FS}\2  \4${FS}${FS}\5|p" \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\([^:].*\)${S}\$|\3${FS}\2  \4${FS}${FS}\5|p" \
+        -e "s|^\(${S}\)\(${W}\)${S}:${S}\"\(.*\)\"${S}\$|${FS}\1${FS}\2${FS}\3|p" \
+        -e "s|^\(${S}\)\(${W}\)${S}:${S}\(.*\)${S}\$|${FS}\1${FS}\2${FS}\3|p" |
+    awk -F"${FS}" \
+        'BEGIN { prefix = "'"${PREFIX}"'"; indent = '"${INDENT}"'; prev_level = 0; }
+        {
+            type = $1;
+            level = length($2)/indent;
+            key  = $3;
+            val  = $4;
+            if (level < prev_level) { adepth[prev_level] = -1; }
+            if (adepth[level] == "") { adepth[level] = -1; }
+            if (type == "-") { adepth[level]++; }
+            vname[level] = key;
+            for (i in vname) {
+                if (i > (level)) { vname[i] = ""; }
+            }
+            out = prefix;
+            for (i = 0; i < level; i++) {
+                if (vname[i] != "") {
+                    out = out "_" vname[i];
+                    if (adepth[i] > -1) { out = out "_" adepth[i+1]; }
+                } else {
+                    out = out "_" adepth[i+1];
+                }
+            }
+            out = out "_" key "=";
+            gsub(/__/, "_", out);
+            gsub(/_=/, "=", out);
+            if (prefix == "") { out = substr(out, 2); }
+            out = out "\""
+            if (length(val) > 0) {
+                gsub(/"/, "\\\"", val)
+                out = out val;
+            }
+            out = out "\""
+            print out;
+            prev_level = level;
+        }'
 }
 
 # checks for required external tools
