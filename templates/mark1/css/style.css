@@ -368,10 +368,12 @@ article.docs figure {
 }
 
 article.docs figure img {
+    display: block;
     max-width: 100%;
 }
 
 article.docs figcaption {
+    margin-top: .5rem;
     margin-bottom: -1px;
     padding-top: 0.454545em;
     border-top: 1px solid rgb(232,232,232);
