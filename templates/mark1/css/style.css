@@ -11,7 +11,7 @@ article.docs {
     background-color: transparent;
     color: rgb(20,20,20);
     font-family: 'Open Sans', -apple-system-body, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
-    font-size: 0.9375rem;
+    font-size: .9375rem;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.66666;
@@ -59,7 +59,7 @@ article.docs nav {
     padding: .9375rem .9375rem 2.8125rem;
     width: 90%;
     height: 3.75rem;
-    font-size: 0.6875rem;
+    font-size: .6875rem;
 }
 
 article.docs nav * {
@@ -128,7 +128,7 @@ article.docs nav .navigation h2 {
     background-color: skyblue;
     color: white;
     font-family: 'Open Sans', -apple-system, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.42857;
     cursor: pointer;
 }
@@ -137,7 +137,7 @@ article.docs nav .navigation h1 {
     padding-top: .25em;
     padding-bottom: .25em;
     background-color: steelblue;
-    font-size: 0.9rem;
+    font-size: .9rem;
     line-height: 1.66666;
     cursor: default;
 }
@@ -177,7 +177,7 @@ article.docs nav .navigation ul {
     margin: 0;
     padding: .375rem .625rem;
     background-color: rgb(252,252,255);
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.42857;
 }
 
@@ -213,7 +213,7 @@ article.docs .notice {
     padding: 0 .625rem;
     border: 1px dotted lightgreen;
     background-color: honeydew;
-    font-size: 0.8em;
+    font-size: .8em;
     line-height: 1.25;
     text-align: center;
 }
@@ -234,7 +234,7 @@ article.docs .notice.draft p:first-child:before {
 }
 
 article.docs .notice p {
-    margin: 0.71429em 0;
+    margin: .71429em 0;
 }
 
 article.docs h1,
@@ -279,7 +279,7 @@ article.docs h5 {
 }
 
 article.docs h6 {
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.07143;
     text-transform: uppercase;
     letter-spacing: -0.005em;
@@ -294,18 +294,18 @@ article.docs p > code {
     display: inline-block;
     position: relative;
     top: -0.08rem;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-    margin: -0.08rem 0.12rem 0;
-    padding: 0.08rem 0.35rem 0;
+    border-radius: .25rem;
+    font-size: .85rem;
+    margin: -0.08rem .12rem 0;
+    padding: .08rem .35rem 0;
     background-color: whitesmoke;
     line-height: 1.83824;
 }
 
 article.docs pre {
-    padding: 0.75rem;
+    padding: .75rem;
     background-color: whitesmoke;
-    font-size: 0.625rem;
+    font-size: .625rem;
     line-height: 1;
     overflow-x: auto;
 }
@@ -328,7 +328,7 @@ article.docs.license footer {
 
 article.docs footer p,
 article.docs footer small {
-    font-size: 0.75rem;
+    font-size: .75rem;
 }
 
 article.docs footer p {
@@ -375,9 +375,9 @@ article.docs figure img {
 article.docs figcaption {
     margin-top: .5rem;
     margin-bottom: -1px;
-    padding-top: 0.454545em;
+    padding-top: .454545em;
     border-top: 1px solid rgb(232,232,232);
-    font-size: 0.6875rem;
+    font-size: .6875rem;
     line-height: 1.36364;
     color: rgb(120,120,120);
 }
@@ -425,7 +425,7 @@ article.docs .footnotes + footer {
 /* Wider than 350 */
 @media (min-width: 350px) {
     article.docs nav {
-        font-size: 0.75rem;
+        font-size: .75rem;
     }
 }
 
@@ -437,8 +437,8 @@ article.docs .footnotes + footer {
 /* Wider than 550 */
 @media (min-width: 550px) {
     article.docs pre {
-        padding: 0.8125rem;
-        font-size: 0.6875rem;
+        padding: .8125rem;
+        font-size: .6875rem;
     }
 
     article.docs figure {
@@ -448,7 +448,7 @@ article.docs .footnotes + footer {
 
     article.docs footer p,
     article.docs footer small {
-        font-size: 0.875rem;
+        font-size: .875rem;
     }
 }
 
@@ -480,8 +480,8 @@ article.docs .footnotes + footer {
     }
 
     article.docs pre {
-        padding: 0.9375rem;
-        font-size: 0.75rem;
+        padding: .9375rem;
+        font-size: .75rem;
     }
 
     article.docs figure {
@@ -555,7 +555,7 @@ article.docs .footnotes + footer {
 
     article.docs nav {
         width: 760px;
-        font-size: 0.9rem;
+        font-size: .9rem;
     }
 
     article.docs.article.js nav {
@@ -616,15 +616,15 @@ article.docs .footnotes + footer {
 
     article.docs p > code {
         top: -0.1rem;
-        font-size: 0.9375rem;
-        margin: -0.1rem 0.15rem 0;
-        padding: 0.1rem 0.35rem 0;
+        font-size: .9375rem;
+        margin: -0.1rem .15rem 0;
+        padding: .1rem .35rem 0;
         line-height: 1.66666;
     }
 
     article.docs pre {
-        padding: 0.9375rem;
-        font-size: 0.875rem;
+        padding: .9375rem;
+        font-size: .875rem;
     }
 
     article.docs figure {
@@ -632,7 +632,7 @@ article.docs .footnotes + footer {
     }
 
     article.docs figcaption {
-        font-size: 0.825rem;
+        font-size: .825rem;
     }
 
     article.docs .continue h2 {
@@ -685,8 +685,8 @@ article.docs .footnotes + footer {
     }
 
     article.docs nav .breadcrumbs {
-        margin-top: 0.5em;
-        font-size: 0.625rem;
+        margin-top: .5em;
+        font-size: .625rem;
     }
 
     article.docs figure img {
