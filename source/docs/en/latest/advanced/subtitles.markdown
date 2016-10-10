@@ -16,26 +16,29 @@ License_URL:     https://handbrake.fr/docs/license.html
 ---
 
 Subtitles
-=============================
+=========
 
-## Supported Subtitle Foramts
+## Supported Subtitle Formats
 
-There are different types of subtitles that exist: 
+There are different types of subtitles that exist:
+
 - Bitmaps (Pictures), e.g. DVD VOBSUBs, Bluray PGS
 - Text with markup, e.g. Closed Captions and SRT files.
 - Styled SSA, e.g. most anime subtitles in MKV files
 
-HandBrake can read subtitles from the following sources
-* From DVD’s – Either embedded VOBSUB or CC tracks. 
-* From Bluray - PGS Subtitles. 
-* User supplied SRT files. 
-* Embedded SSA/SRT/CC within files (such as mkv or mp4)
+HandBrake can read subtitles from the following sources:
+
+- From DVD’s – Either embedded VOBSUB or CC tracks. 
+- From Bluray - PGS Subtitles. 
+- User supplied SRT files. 
+- Embedded SSA/SRT/CC within files (such as mkv or mp4)
 
 ## Supported Output Formats
 
-HandBrake has two methods of subtitle OUTPUT: 
+HandBrake has two methods of subtitle OUTPUT:
+
 - Hard Burn: This means the subtitles are written on top of the image permanently. They cannot be turned on or off like on the DVD.
-- Soft Subtitles:  This means the subtitles will appear as separate selectable tracks in your output file. With the correct playback software, you’ll be able to enable / disable these subtitles as required.
+- Soft Subtitles: This means the subtitles will appear as separate selectable tracks in your output file. With the correct playback software, you’ll be able to enable / disable these subtitles as required.
 
 The following subtitle types as supported as follows:
 
