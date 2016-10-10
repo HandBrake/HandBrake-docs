@@ -212,7 +212,7 @@ function build_source {
     done
     TEMPLATE_STYLES=""
     for STYLE in ${TEMPLATE_Assets_Styles[@]}; do
-        TEMPLATE_STYLES+="<link rel=\"stylesheet\" href=\"${BASE_RELPATH}${STYLE}\" />"
+        TEMPLATE_STYLES+="<link rel=\"stylesheet\" href=\"${BASE_RELPATH}${STYLE}\" charset=\"utf-8\" />"
     done
     sed -E \
     -e 's|\{\{[ ]*template\.scripts[ ]*\}\}|'"${TEMPLATE_SCRIPTS:-}"'|g' \
