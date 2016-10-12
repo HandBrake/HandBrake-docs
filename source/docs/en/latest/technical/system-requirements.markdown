@@ -68,10 +68,12 @@ The following is the minimum level of hardware that HandBrake supports. While it
 - System Storage:
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
-- Intel QuickSync requires a 2nd generation or newer Intel Core Ix Series processor with integrated Intel HD Graphics enabled
-- OpenCL scaling requires an AMD or Intel GPU with OpenCL 1.2 or later
+- Intel QuickSync requires a 2nd generation or newer Intel Core Ix Series processor with integrated Intel HD Graphics enabled and a directly connected display
+- OpenCL scaling is experimental and requires an AMD or Intel GPU with OpenCL 1.2 or later
 
 <!-- /.system-win -->
+
+HandBrake's QuickSync and OpenCL features are only supported on Windows.
 
 ## Software
 
