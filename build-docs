@@ -177,10 +177,9 @@ function build_source {
     sed -E \
     -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
-    # inject header, notice, content, footer
+    # inject header, content, footer
     sed -E \
     -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header:-}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.notice[ ]*\}\}/{r '"${TEMPLATE_Notice:-}" -e 'd;}' \
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content:-}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
@@ -301,7 +300,6 @@ if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
     TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
     TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
-    TEMPLATE_Notice="${TEMPLATE_DIR}/${TEMPLATE_Notice}"
     TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
     TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
     TEMPLATE_Assets_Fonts=()
