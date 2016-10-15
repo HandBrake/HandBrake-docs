@@ -3,6 +3,7 @@ Base:     base.html
 Header:   header.html
 Nav:      nav.html
 Document: document.html
+Content:  content.html
 Footer:   footer.html
 Redirect: redirect.html
 Assets:

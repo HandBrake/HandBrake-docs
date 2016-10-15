@@ -7,7 +7,7 @@
     {% if document.state contains "draft" %}
     <div class="notice draft"><p>This article is a draft and may contain incomplete or incorrect information.</p></div>
     {% endif %}
-    {{ document.content }}
+    {{ template.content }}
     {{ template.footer }}
     {{ template.scripts }}
 </article>
