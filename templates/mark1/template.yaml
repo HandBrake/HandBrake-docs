@@ -2,7 +2,6 @@
 Base:     base.html
 Header:   header.html
 Nav:      nav.html
-Notice:   notice.html
 Document: document.html
 Footer:   footer.html
 Redirect: redirect.html
