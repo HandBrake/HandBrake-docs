@@ -1,11 +1,12 @@
 ---
-Base:     base.html
-Body:     body.html
-Document: document.html
-Header:   header.html
-Footer:   footer.html
-Nav:      nav.html
-Redirect: redirect.html
+Partials:
+  Base:     base.html
+  Body:     body.html
+  Document: document.html
+  Header:   header.html
+  Footer:   footer.html
+  Nav:      nav.html
+  Redirect: redirect.html
 Assets:
   Fonts:
     - fonts/opensans-bold-1.10.woff
