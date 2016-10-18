@@ -171,19 +171,19 @@ function build_source {
         fi
     else
         # partial html
-        cp "${TEMPLATE_Document}" "${DEST}.html"
+        cp "${TEMPLATE_Body}" "${DEST}.html"
     fi
-    # inject document template
+    # inject body template
     sed -E \
-    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.body[ ]*\}\}/{r '"${TEMPLATE_Body:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
-    # inject header, content, footer templates
+    # inject header, document, footer templates
     sed -E \
     -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header:-}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.content[ ]*\}\}/{r '"${TEMPLATE_Content:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
     -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
-    # inject content
+    # inject document content
     sed -E \
     -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
@@ -303,8 +303,8 @@ if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     TEMPLATE_Base="${TEMPLATE_DIR}/${TEMPLATE_Base}"
     TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
     TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
+    TEMPLATE_Body="${TEMPLATE_DIR}/${TEMPLATE_Body}"
     TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
-    TEMPLATE_Content="${TEMPLATE_DIR}/${TEMPLATE_Content}"
     TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
     TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
     TEMPLATE_Assets_Fonts=()
