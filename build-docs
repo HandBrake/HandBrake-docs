@@ -164,24 +164,24 @@ function build_source {
     if [[ "${CONFIG_Embeddable:-}" != true ]]; then
         if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]]; then
             # full html redirect only
-            cp "${TEMPLATE_Redirect}" "${DEST}.html"
+            cp "${TEMPLATE_Partials_Redirect}" "${DEST}.html"
         else
             # full html content
-            cp "${TEMPLATE_Base}" "${DEST}.html"
+            cp "${TEMPLATE_Partials_Base}" "${DEST}.html"
         fi
     else
         # partial html
-        cp "${TEMPLATE_Body}" "${DEST}.html"
+        cp "${TEMPLATE_Partials_Body}" "${DEST}.html"
     fi
     # inject body template
     sed -E \
-    -e '/\{\{[ ]*template\.body[ ]*\}\}/{r '"${TEMPLATE_Body:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.body[ ]*\}\}/{r '"${TEMPLATE_Partials_Body:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # inject header, document, footer templates
     sed -E \
-    -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Header:-}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Document:-}" -e 'd;}' \
-    -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Footer:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.header[ ]*\}\}/{r '"${TEMPLATE_Partials_Header:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.document[ ]*\}\}/{r '"${TEMPLATE_Partials_Document:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.footer[ ]*\}\}/{r '"${TEMPLATE_Partials_Footer:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # inject document content
     sed -E \
@@ -189,7 +189,7 @@ function build_source {
     -i.sedbak "${DEST}.html"
     # inject nav template
     sed -E \
-    -e '/\{\{[ ]*template\.nav[ ]*\}\}/{r '"${TEMPLATE_Nav:-}" -e 'd;}' \
+    -e '/\{\{[ ]*template\.nav[ ]*\}\}/{r '"${TEMPLATE_Partials_Nav:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # process includes
     NAVIGATION_PARTIAL="${PUBLIC_DIR}/docs/$(string_filter \"${DOCUMENT_Language_Code:-.}\" slug)/$(string_filter \"${DOCUMENT_Project_Version:-.}\" slug)/${CONFIG_Navigation%.markdown}.partial.html"
@@ -300,13 +300,13 @@ TEMPLATE_DIR+="/${CONFIG_Template}"
 TEMPLATE_CONFIG="${TEMPLATE_DIR}/template.yaml"
 if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     eval $(parse_yaml "${TEMPLATE_CONFIG}" "TEMPLATE_")
-    TEMPLATE_Base="${TEMPLATE_DIR}/${TEMPLATE_Base}"
-    TEMPLATE_Header="${TEMPLATE_DIR}/${TEMPLATE_Header}"
-    TEMPLATE_Nav="${TEMPLATE_DIR}/${TEMPLATE_Nav}"
-    TEMPLATE_Body="${TEMPLATE_DIR}/${TEMPLATE_Body}"
-    TEMPLATE_Document="${TEMPLATE_DIR}/${TEMPLATE_Document}"
-    TEMPLATE_Footer="${TEMPLATE_DIR}/${TEMPLATE_Footer}"
-    TEMPLATE_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Redirect}"
+    TEMPLATE_Partials_Base="${TEMPLATE_DIR}/${TEMPLATE_Partials_Base}"
+    TEMPLATE_Partials_Header="${TEMPLATE_DIR}/${TEMPLATE_Partials_Header}"
+    TEMPLATE_Partials_Nav="${TEMPLATE_DIR}/${TEMPLATE_Partials_Nav}"
+    TEMPLATE_Partials_Body="${TEMPLATE_DIR}/${TEMPLATE_Partials_Body}"
+    TEMPLATE_Partials_Document="${TEMPLATE_DIR}/${TEMPLATE_Partials_Document}"
+    TEMPLATE_Partials_Footer="${TEMPLATE_DIR}/${TEMPLATE_Partials_Footer}"
+    TEMPLATE_Partials_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Partials_Redirect}"
     TEMPLATE_Assets_Fonts=()
     INDEX=0
     ASSET="TEMPLATE_Assets_Fonts_${INDEX}"
