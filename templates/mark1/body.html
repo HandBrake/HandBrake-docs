@@ -1,0 +1,13 @@
+<article class="docs {{ document.type }}" lang="{{ document.language-code }}" charset="{{ document.text-encoding }}">
+    {{ template.styles }}
+    {{ template.header }}
+    {% if document.state contains "obsolete" %}
+    <div class="notice obsolete"><p>This article is for an older version of {{ document.project }}. <a href="{{ base.relpath }}">See all versions</a>.</p></div>
+    {% endif %}
+    {% if document.state contains "draft" %}
+    <div class="notice draft"><p>This article is a draft and may contain incomplete or incorrect information.</p></div>
+    {% endif %}
+    {{ template.document }}
+    {{ template.footer }}
+    {{ template.scripts }}
+</article>

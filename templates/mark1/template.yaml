@@ -1,10 +1,10 @@
 ---
 Base:     base.html
-Header:   header.html
-Nav:      nav.html
+Body:     body.html
 Document: document.html
-Content:  content.html
+Header:   header.html
 Footer:   footer.html
+Nav:      nav.html
 Redirect: redirect.html
 Assets:
   Fonts:
