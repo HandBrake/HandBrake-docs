@@ -35,7 +35,7 @@ This may be done on a different machine than the repo.
 
 From the HandBrake source tree, update build versions by running configure  
 
-    ./configure --flatpak
+    ./configure --prefix=/app --flatpak
 
 Build flatpaks for GUI and CLI.  
 Results will be in build/pkg/flatpak/  
