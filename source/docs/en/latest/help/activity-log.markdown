@@ -8,7 +8,7 @@ Project_Version: Latest
 Language:        English
 Language_Code:   en
 Text_Encoding:   utf-8
-Authors:         Scott (s55)
+Authors:         Bradley Sepos <bradley@bradleysepos.com> (BradleyS), John Stebbins (j45), Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -16,82 +16,150 @@ License_URL:     https://handbrake.fr/docs/license.html
 ---
 
 Activity Log
-=================
+============
 
-HandBrake includes extensive logging of what it and it's various components are doing.  
-This log contains information about the source file, encode parameters, any errors and other relevant information. 
+When you launch HandBrake, it begins recording information about its operation to an Activity Log. When you open a `Source`, HandBrake scans it and records what it discovers to the log. Likewise, during encoding, HandBrake records its progress—and any issues it encounters—to the log.
 
+Activity Logs can be a good personal reference for the settings you used to make your videos and whether everything went as you expected.
 
-## Accessing the Log Window
+Should you need technical support, providing an Activity Log is **required** and is essential for diagnosing the issue you may be experiencing.
 
-All of the HandBrake GUI's contain an "Activity Window" which can be accessed on the toolbar.
-While HandBrake is scanning a source, or encoding a file, the log will appear in this window in real time.
+## Why Activity Logs are required for support
 
+Frequently, people ask the HandBrake Team, "Why should I be *required* to provide an Activity Log to receive technical support?" Good question!
 
-## Logging to Disk
+For starters, most applications log information about their operation. Your operating system keeps countless logs as well. Logs are often used for informational purposes and to diagnose technical problems with a system or application that isn't behaving as expected.
 
-In addition to the activity window, all HandBrake's logs are written to the drive at the same time.
-This way, if the application crashes, you can see what was happening when this event occurred.
+Here are some questions that may be helpful in diagnosing a problem with HandBrake, that an Activity Log can answer:
 
-<!-- .system-mac -->
-### Mac
+- Are you using official HandBrake or an unsupported third-party build?
+- Where is HandBrake installed on your system?
+- What HandBrake version are you using?
+- What operating system and version are you using?
+- What type of CPU are you using? Does it support Intel QuickSync Video?
+- What type of GPU are you using? What version of OpenCL does it support?
+- Is HandBrake able to use your GPU for certain features?
+- What is your display resolution?
+- What is your system's temporary files directory? Is HandBrake able to use it?
+- Is HandBrake using dvdread or dvdnav for reading DVDs?
+- Is HandBrake able to open your `Source`?
+- Is HandBrake able to detect the media type of your `Source`? What type (DVD, Blu-ray, MKV/MP4, etc.)?
+- Is your `Source` a physical DVD or Blu-ray or a file on your computer?
+- Is your `Source` unusable due to copy protection?
+- What [region](https://en.wikipedia.org/wiki/DVD_region_code) is your DVD and does your DVD drive support this region?
+- Does your `Source` contain multiple `Titles`? How many? How long is each one?
+- Is HandBrake able to parse and read each `Title`? What errors?
+- What video, audio, and subtitle tracks are in each `Title`? What [codecs](https://en.wikipedia.org/wiki/Codec) does each use?
+- Is there a video track? What frame rate and resolution is the video?
+- Is HandBrake able to detect and automatically remove (crop) black borders around the edges of your video?
+- Are there audio tracks? What language, sample rate, channel layout, and bit rate is each audio track?
+- Are there subtitles? What types and languages?
+- Is HandBrake performing a foreign audio scan to find forced subtitles? Did it find any?
+- Are there chapter markers? How many? How long is each one?
+- What preset is being used for encoding? Is it an official preset?
+- What changes are made to the settings after selecting a preset?
+- What are the final settings used for the encode?
+- Is HandBrake able to write to your `Destination` file? If not, why not?
+- While encoding, is HandBrake able to read your entire `Source` without errors?
+- Are there any problems with your `Source`'s timestamps?
+- How many frames did HandBrake decode from the `Source` during encoding? More or less than expected?
+- Is HandBrake dropping or duplicating frames to enforce a constant frame rate setting? How many frames of each?
+- What is the average bitrate of each encoded track in the `Destination`?
+- Are HandBrake's work threads finishing and exiting properly?
+- Is HandBrake leaking memory during encoding?
 
-The log files are stored in the following folder:
-~/Library/Application Support/HandBrake/EncodeLogs/
+Obviously, it would be *laborious* to ask these questions to thousands of people requesting support for HandBrake.
 
-Important Note: starting with OS X 10.7 "Lion", the ~/Library/ directory is hidden and can't be accessed using regular Finder navigation. 
-You can open the folder directly from the Activity Window (see above), or use the Finder's Go > Go to Folder menu item (setting it to ~/Library/Application Support/HandBrake/).
+In contrast, providing an Activity Log is an easy way to explain exactly what is going on in a standardized manner, which helps ensure accuracy and prevent confusion. This speeds up the support process significantly, which saves time for everybody.
 
-HandBrake-activitylog.txt is the session log and is overwritten each time the application starts.
+Despite this, some people refuse to provide logs even after being given the above reasoning. Often times, these people think their question is simple enough that a log shouldn't be required. This is almost never the case in practice, and time is wasted asking and answering questions that Activity Logs are designed for.
 
-Individual activity logs are saved in the file format "mymoviename.txt YYYY-MM-DD HH-MM-SS" and unlike the session based logs are not overwritten so should serve as a history of encodes you have done with HandBrake. 
-One this to keep in mind, currently there is not function which removes individual encode logs, so if you wish to delete any you will need to remove them manually.
+While it is the HandBrake Team's goal to help everyone we can, the fact remains that we can't magically infer what may or may not be happening inside your computer. *Without an Activity Log, the HandBrake Team simply cannot provide technical support.*
 
-Note: The individual activity logs are in addition to the existing session based activity log. 
-If you do a scan of a new source during encoding, the new source scan log messages will be intermixed with the encode log messages.
-<!-- /.system-mac -->
+## Privacy
 
-<!-- .system-win -->
-### Windows
+Activity Logs are stored *only* on your computer. HandBrake does not send these logs anywhere else.
 
-The log files are stored in the following folder:
+If you are concerned about retaining these logs indefinitely, feel free to delete them periodically. Be sure not to delete any other files important to HandBrake's operation.
 
-* Windows 7,8 and 10: C:\Users\<Your Username>\AppData?\Roaming\HandBrake\logs
-* Windows Vista: C:\Users\<username>\Application Data\HandBrake\logs
+To provide an Activity Log for support, you must send us your log(s) manually. If you are concerned about private information an Activity Log may contain and reveal to others, feel free to read through the log and redact the parts that concern you before sharing.
 
-There is a session activity log named:  activity_logXXXX.txt where XXXX is the process ID. 
-While it is possible that this file can be overwritten it's fairly unlikely HandBrake will restart with the same process ID.
+## Sharing
 
-In addition there are per encode logs in the format  of "Source Date Time"
-<!-- /.system-win-->
+To share your Activity Log publicly—for instance, to request technical support for HandBrake—you may wish to do one of the following:
+
+- Copy and paste the text of the log to a Pastebin site such as [Pastebin.com](http://pastebin.com)
+- Upload the log file to a free temporary file sharing service such as [ExpireBox](http://expirebox.com/) or [WeTransfer](https://www.wetransfer.com/)
+- Upload the log file to a paid file sharing service such as [Box](https://www.box.com/), [Dropbox](https://www.dropbox.com), or [Jumpshare](https://jumpshare.com/)
+
+Once your log is available publicly, share its link with your intended recipient(s). When using a free service, be sure to note how long the service intends to store your log (typically 1-7 days).
+
+Activity Logs may also be pasted directly into [new support requests on GitHub](https://github.com/HandBrake/HandBrake/issues/new).
+
+## Where to find the logs
+
+**Note:** When scanning a new source during encoding, log messages from the scan may be intermixed with log messages from your currently running encode.
 
 <!-- .system-lin -->
-### Linux
 
-Activity logs are stored to disc after each scan or encode.
+### Activity Logs on Linux
 
-The current session is written to the file "Activity.log".
+You can access the current log by opening the Activity Log window in HandBrake.
 
-Typically, this will be in the directory "$(HOME)/.config/ghb", but it is possible for the system to have a different default data directory. So the full path is also shown at the top of the activity window in the gui. 
+<!-- image, activity log window on linux -->
 
-A history of all encodes are also stored in separate log files. These can typically be found in the directory "$(HOME)/.config/ghb/EncodeLogs". These are text files, so you can view them with your favourite text editing/viewing tool.
+On Linux, logs are stored at `Datadir/ghb`, where `Datadir` is the system default data directory (typically `$(HOME)/.config`).
+
+The full path to the log directory is shown at the top of the Activity Log window.
+
+Inside, you may find the following files:
+
+- `Activity.log.ProcessID`, where `ProcessID` is the process identifier given to HandBrake by Linux, contains information about the specific app session
+- Log files for individual encodes are located in the `EncodeLogs` subdirectory and named according to the pattern `Videoname Date Time.txt`; encode logs are retained until deleted manually
+
 <!-- /.system-lin -->
+<!-- .system-mac -->
 
-### Command Line Interface (CLI)
+### Activity Logs on Mac
 
-When encoding with HandBrakeCLI,
+You can access the current log by opening the Activity Log window in HandBrake.
 
-* Log data is output to Standard Error
-* Encode progress information (ETA, Percent Complete, Avg Encoding framerate etc) are output to Standard Output.
+<!-- image, activity log window on mac -->
 
+On Mac, logs are stored at `~/Library/Application Support/HandBrake/EncodeLogs`, where `~` is your home folder.
 
-In order to log the data to the file, you can redirect the standard error using a pipe.
+You can open this location directly from HandBrake's Activity Log window.
 
-You can do this by adding:
+Inside, you may find the following files:
 
-> 2> log.txt
+- `HandBrake-activitylog.txt` is overwritten each time HandBrake starts, and contains information about the latest app session
+- Log files for individual encodes are named according to the pattern `Videoname Date Time.txt` and are retained until deleted manually
 
-to the end of your parameters. for example:
+<!-- /.system-mac -->
+<!-- .system-win -->
 
-> ./HandBrakeCLI -i "~/Video.mp4" -o "~/output.mkv" --preset="Universal" 2> log.txt
+### Activity Logs on Windows
 
+You can access the current log by opening the Activity Log window in HandBrake.
+
+<!-- image, activity log window on windows -->
+
+On Windows, logs are stored at the following locations, where `Username` is your user name:
+
+- `C:\Users\Username\AppData\Roaming\HandBrake\logs` on Windows 7, 8, and 10
+- `C:\Users\Username\Application Data\HandBrake\logs` on Windows Vista
+
+Inside, you may find the following files:
+
+- `activity_logProcessID.txt`, where `ProcessID` is the process identifier given to HandBrake by Windows, contains information about the specific app session
+- Log files for individual encodes are named according to the pattern `Videoname Date Time.txt` and are retained until deleted manually
+
+<!-- /.system-win -->
+
+### Activity Logs on the command line
+
+HandBrake's command line interface outputs to the standard streams `stdout` and `stderr`, with encode progress information routed to the former and log messages routed to the latter.
+
+To capture HandBrake's log messages to a file, simply redirect `stderr`:
+
+    HandBrakeCLI ... 2> my-activity-log.txt
