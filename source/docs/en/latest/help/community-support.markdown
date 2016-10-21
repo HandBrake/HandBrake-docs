@@ -26,6 +26,8 @@ Didn't find it? Keep reading.
 
 Activity logs explain a lot and are **required** for all support requests. More information about [Activity Logs](../help/activity-log.html).
 
+If you think you have a simple question for which an activity log is not **required**, please read [Why are Activity Logs required for support?](../help/why-activity-log.html).
+
 ## Community Forums
 
 The [HandBrake Community Forums](https://forum.handbrake.fr/) are available 24/7. Whether you have a support request or simply want to connect with other HandBrake users, this is the place. Registration is free. Please read and abide by our [Community Rules](https://forum.handbrake.fr/viewtopic.php?f=6&t=6702).
