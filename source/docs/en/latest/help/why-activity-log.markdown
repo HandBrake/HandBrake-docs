@@ -100,7 +100,7 @@ or are you reading a file?
 * What framerate and resolution is your source video?
 * What language, samplerate, channel layout, bitrate is your source audio?
 * How many chapters in each title and what are their durations?
-* Where there any errors reading or parsing each title during a title scan?
+* Were there any errors reading or parsing each title during a title scan?
 * Was HandBrake able to open your output file?  If not, why not?
 * What HandBrake preset did you use for encoding?
 * Did you make any changes to the settings after selecting a preset?
