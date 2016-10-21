@@ -27,7 +27,8 @@ track settings in the GUI. This is the kind of simple question that many people
 think we can answer with pretty much no additional information. But there are
 slight differences between each platform, and there are changes from one version
 of HandBrake to the next. So if you didn't provide an activity log, there would
-be a couple of questions we would have to ask before we could give you an answer.
+be a couple of questions we would have to ask before we could give you an
+answer.
 
 * What platform are you running HandBrake on (Windows, Mac, Linux)?
 * What version of HandBrake are you running?
@@ -42,9 +43,12 @@ requests we get.
 Well first, it's slow and wastes our time. The HandBrake developers and
 forum moderators are all volunteers.  We do this in our voluminous spare time
 and get paid nothing for it. So we don't have the time to waste. Second, the
-questions are often not answered accurately. Even something as simple as reporting
-the version of HandBrake being used is prone to error. Activity Logs are
-definitive. Third, users often don't know the anwsers to questions we need to ask.
+questions are often not answered accurately. Even something as simple as
+reporting the version of HandBrake being used is prone to error. Activity Logs
+are definitive. Third, users often don't know the anwsers to questions we need
+to ask. And finally, Activity Logs help us improve the quality of HandBrake.
+Sometimes we will see problems in the log that you didn't notice.  When we
+see a problem, we follow up and fix it.
 
 ## Can't I just tell you what you need to know without supplying an Activity Log?
 
@@ -108,7 +112,8 @@ or are you reading a file?
 * During the encode, were there any read errors?
 * Were there any problems found with the source's timestamps?
 * Did HandBrake see the expected number of frames of video during the encode?
-* How many frames were dropped or duplicated in order to satisfy your constant frame rate setting?
+* How many frames were dropped or duplicated in order to satisfy your constant
+frame rate setting?
 * What was the averate bitrate of each output stream encoded by HandBrake?
 * Did all the work threads launched by HandBrake finish and exit properly?
 * Did HandBrake leak memory during the encoding?
