@@ -52,8 +52,8 @@ see a problem, we follow up and fix it.
 
 ## Can't I just tell you what you need to know without supplying an Activity Log?
 
-Perhaps.  And generally, if I see a support request that is missing an Activity
-Log, but has enough information to supply an answer, I will respond to that
+Perhaps.  And generally, if we see a support request that is missing an Activity
+Log, but has enough information to supply an answer, we will respond to that
 request.  On the other hand, if you don't supply enough information, I
 will not respond, not even to tell you what you are missing.  Dead air. There
 are other moderators that may respond depending on their mood and the phase
@@ -62,7 +62,7 @@ of the moon. But you risk being totally ignored.
 ## But what about my privacy?
 
 Maybe you are concerned about privacy and what the Activity Log might tell
-us and the world about you. I understand your concern. The vast majority
+us and the world about you. we understand your concern. The vast majority
 of what is in the Activity Log is very technical and not descriptive of
 the subject matter of your source media. But there are things
 like file and path names in the log that you might prefer not sharing.
