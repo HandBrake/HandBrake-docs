@@ -74,7 +74,7 @@ or remove file and path names you don't want to share.
 
 The Activity Log is designed to answer a collection of questions that
 over years of supporting HandBrake users, we have found we frequently
-need answers to.  Here is a non-exhaustive list of such questions.
+need answers to.  Here is a non-exhaustive list of such questions:
 
 * What OS and version of OS are you using?
 * What verion of HandBrake are you running?
