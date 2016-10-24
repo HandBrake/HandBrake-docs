@@ -179,15 +179,15 @@ Copy the example configuration file `config-example.yaml` to `config.yaml`.
 
 Run `build-tools` from the main directory to build all associated third-party tools.
 
-Once the tools are built, run `build-docs` from the main directory to build the HTML documentation in the `docs` directory. You may now view and interact with the documentation by opening `docs/index.html` in your web browser.
+Once the tools are built, run `build-docs` from the main directory to build the HTML documentation in the `public/docs` directory. You may now view and interact with the documentation by opening `public/docs/index.html` in your web browser.
 
-Security restrictions in modern web browsers may prevent web fonts from displaying properly when viewing local files. One workaround is to serve the files instead of opening them directly. From the main directory, run `python -m http.server 8000 || python -m SimpleHTTPServer 8000` and then open `http://localhost:8000/docs/` in your web browser (requires Python).
+Security restrictions in modern web browsers may prevent web fonts from displaying properly when viewing local files. One workaround is to serve the files instead of opening them directly. From the `public` directory, run `python -m http.server 8000 || python -m SimpleHTTPServer 8000` and then open `http://localhost:8000/docs/` in your web browser (requires Python).
 
 ### Editing
 
 Before editing the documentation, first create and switch to an appropriately named local branch to track your changes (e.g. `git checkout master; git checkout -b branch-name`). This allows you to make as many changes as you like without affecting the `master` branch, and helps identify groups of changes when submitting pull requests later on.
 
-To make a change, edit the appropriate file(s) in the `source` directory. Run `build-docs` again from the main directory to rebuild the HTML documentation in `docs` including your changes.
+To make a change, edit the appropriate file(s) in the `source` directory. Run `build-docs` again from the main directory to rebuild the HTML documentation in `public/docs` including your changes.
 
 ### Submitting your changes
 
