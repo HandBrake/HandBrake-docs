@@ -64,7 +64,7 @@ of the moon. But you risk being totally ignored.
 ## But what about my privacy?
 
 Maybe you are concerned about privacy and what the Activity Log might tell
-us and the world about you. we understand your concern. The vast majority
+us and the world about you. We understand your concern. The vast majority
 of what is in the Activity Log is very technical and not descriptive of
 the subject matter of your source media. But there are things
 like file and path names in the log that you might prefer not sharing.
