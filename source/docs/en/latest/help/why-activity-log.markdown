@@ -49,7 +49,8 @@ Activity Logs are definitive.
 * Third, users often don't know the anwsers to questions we need to ask.
 * And finally, Activity Logs help us improve the quality of HandBrake.
 Sometimes we will see problems in the log that you didn't notice.  When we
-see a problem, we follow up and fix it.
+see a problem, we follow up and fix it. So by supplying Activity Logs, you
+contribute something back to the community that supports HandBrake.
 
 ## Can't I just tell you what you need to know without supplying an Activity Log?
 
