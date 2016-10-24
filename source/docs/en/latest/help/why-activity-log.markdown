@@ -40,13 +40,14 @@ requests we get.
 
 ## Why don't we just keep asking questions until we get all the information we need?
 
-Well first, it's slow and wastes our time. The HandBrake developers and
+* Well first, it's slow and wastes our time. The HandBrake developers and
 forum moderators are all volunteers.  We do this in our voluminous spare time
-and get paid nothing for it. So we don't have the time to waste. Second, the
-questions are often not answered accurately. Even something as simple as
-reporting the version of HandBrake being used is prone to error. Activity Logs
-are definitive. Third, users often don't know the anwsers to questions we need
-to ask. And finally, Activity Logs help us improve the quality of HandBrake.
+and get paid nothing for it. So we don't have the time to waste.
+* Second, the questions are often not answered accurately. Even something as
+simple as reporting the version of HandBrake being used is prone to error.
+Activity Logs are definitive.
+* Third, users often don't know the anwsers to questions we need to ask.
+* And finally, Activity Logs help us improve the quality of HandBrake.
 Sometimes we will see problems in the log that you didn't notice.  When we
 see a problem, we follow up and fix it.
 
