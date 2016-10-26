@@ -185,7 +185,7 @@ function build_source {
     -i.sedbak "${DEST}.html"
     # inject document content
     sed -E \
-    -e '/\{\{[ ]*document\.content[ ]*\}\}/{r '"${DOCUMENT_Content:-}" -e 'd;}' \
+    -e '/\{\{[ ]*document[ ]*\}\}/{r '"${DOCUMENT_Content:-}" -e 'd;}' \
     -i.sedbak "${DEST}.html"
     # inject nav template
     sed -E \
