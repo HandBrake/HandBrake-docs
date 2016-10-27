@@ -1,6 +1,6 @@
 <nav>
     <ul class="system-select" hidden>Instructions:<li class="system-select-all">All</li><li class="system-select-lin">Linux</li><li class="system-select-mac">Mac</li><li class="system-select-win">Windows</li></ul>
-    <div class="breadcrumbs"><a href="{{ base.relpath }}">Docs</a><span class="language-separator">&nbsp;> </span><span class="language"><a href="{{ base.relpath }}{{ document.language-code slug }}/">{{ document.language }}</a></span><span class="version-separator">&nbsp;> </span><span class="version"><a class="version" href="{{ base.relpath }}{{ document.language-code slug }}/{{ document.project-version slug }}/">{{ document.project }} {{ document.project-version }}</a></span>&nbsp;> {{ document.title }}</div>
+    <div class="breadcrumbs"><a href="{{ base.relpath }}">Docs</a><span class="language-separator">&nbsp;> </span><span class="language"><a href="{{ base.relpath }}{{ document.language-code | slug }}/">{{ document.language }}</a></span><span class="version-separator">&nbsp;> </span><span class="version"><a class="version" href="{{ base.relpath }}{{ document.language-code | slug }}/{{ document.project-version | slug }}/">{{ document.project }} {{ document.project-version }}</a></span>&nbsp;> {{ document.title }}</div>
     <div class="navigation" hidden>
         {{ navigation }}
     </div>
