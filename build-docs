@@ -238,9 +238,7 @@ function build_source {
     -e 's|\{\{[ ]*document\.license[ ]*\}\}|'"${DOCUMENT_License:-}"'|g' \
     -e 's|\{\{[ ]*document\.license-abbr[ ]*\}\}|'"${DOCUMENT_License_Abbr:-}"'|g' \
     -e 's|\{\{[ ]*document\.license-url[ ]*\}\}|'"${DOCUMENT_License_URL:-}"'|g' \
-    -e 's|\{\{[ ]*document\.license-url rel[ ]*\}\}|'"${BASE_RELPATH}${CONFIG_License%.markdown}.html"'|g' \
     -e 's|\{\{[ ]*document\.credits-url[ ]*\}\}|'"${DOCUMENT_Credits_URL:-}"'|g' \
-    -e 's|\{\{[ ]*document\.credits-url rel[ ]*\}\}|'"${BASE_RELPATH}${CONFIG_Credits%.markdown}.html"'|g' \
     -e 's|\{\{[ ]*document\.redirect-url[ ]*\}\}|'"${DOCUMENT_Redirect_URL:-}"'|g' \
     -e 's|\{\{[ ]*base\.relpath[ ]*\}\}|'"${BASE_RELPATH:-}"'|g' \
     -i.sedbak "${DEST}.html"
