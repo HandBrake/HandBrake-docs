@@ -115,7 +115,7 @@ Table of contents
   *What to do if something goes wrong*
 - [Community support](help/community-support.html)
   *Help from real people*
-- [Activity log](help/activity-log.html) 
+- [Activity Log](help/activity-log.html) 
 
 
 ## HandBrake lore
