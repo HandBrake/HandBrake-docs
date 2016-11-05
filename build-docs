@@ -298,41 +298,41 @@ TEMPLATE_DIR+="/${CONFIG_Template}"
 TEMPLATE_CONFIG="${TEMPLATE_DIR}/template.yaml"
 if [[ -e "${TEMPLATE_CONFIG}" ]]; then
     eval $(parse_yaml "${TEMPLATE_CONFIG}" "TEMPLATE_")
-    TEMPLATE_Partials_Base="${TEMPLATE_DIR}/${TEMPLATE_Partials_Base}"
-    TEMPLATE_Partials_Header="${TEMPLATE_DIR}/${TEMPLATE_Partials_Header}"
-    TEMPLATE_Partials_Nav="${TEMPLATE_DIR}/${TEMPLATE_Partials_Nav}"
-    TEMPLATE_Partials_Body="${TEMPLATE_DIR}/${TEMPLATE_Partials_Body}"
-    TEMPLATE_Partials_Document="${TEMPLATE_DIR}/${TEMPLATE_Partials_Document}"
-    TEMPLATE_Partials_Footer="${TEMPLATE_DIR}/${TEMPLATE_Partials_Footer}"
-    TEMPLATE_Partials_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Partials_Redirect}"
+    TEMPLATE_Partials_Base="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Base}"
+    TEMPLATE_Partials_Header="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Header}"
+    TEMPLATE_Partials_Nav="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Nav}"
+    TEMPLATE_Partials_Body="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Body}"
+    TEMPLATE_Partials_Document="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Document}"
+    TEMPLATE_Partials_Footer="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Footer}"
+    TEMPLATE_Partials_Redirect="${TEMPLATE_DIR}/${TEMPLATE_Template_Partials_Redirect}"
     TEMPLATE_Assets_Fonts=()
     INDEX=0
-    ASSET="TEMPLATE_Assets_Fonts_${INDEX}"
+    ASSET="TEMPLATE_Template_Assets_Fonts_${INDEX}"
     ASSET="${!ASSET}"
     while [[ "${ASSET}" != "" ]]; do
         TEMPLATE_Assets_Fonts+=("${ASSET}")
         INDEX=$((INDEX+1))
-        ASSET="TEMPLATE_Assets_Fonts_${INDEX}"
+        ASSET="TEMPLATE_Template_Assets_Fonts_${INDEX}"
         ASSET="${!ASSET}"
     done
     TEMPLATE_Assets_Styles=()
     INDEX=0
-    ASSET="TEMPLATE_Assets_Styles_${INDEX}"
+    ASSET="TEMPLATE_Template_Assets_Styles_${INDEX}"
     ASSET="${!ASSET}"
     while [[ "${ASSET}" != "" ]]; do
         TEMPLATE_Assets_Styles+=("${ASSET}")
         INDEX=$((INDEX+1))
-        ASSET="TEMPLATE_Assets_Styles_${INDEX}"
+        ASSET="TEMPLATE_Template_Assets_Styles_${INDEX}"
         ASSET="${!ASSET}"
     done
     TEMPLATE_Assets_Scripts=()
     INDEX=0
-    ASSET="TEMPLATE_Assets_Scripts_${INDEX}"
+    ASSET="TEMPLATE_Template_Assets_Scripts_${INDEX}"
     ASSET="${!ASSET}"
     while [[ "${ASSET}" != "" ]]; do
         TEMPLATE_Assets_Scripts+=("${ASSET}")
         INDEX=$((INDEX+1))
-        ASSET="TEMPLATE_Assets_Scripts_${INDEX}"
+        ASSET="TEMPLATE_Template_Assets_Scripts_${INDEX}"
         ASSET="${!ASSET}"
     done
 else
