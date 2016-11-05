@@ -119,7 +119,7 @@ function string_filter {
 # builds document(s) from a single source file
 function build_source {
 
-    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Type DOCUMENT_State DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Text_Encoding DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_Abbr DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
+    local SOURCE BASE_RELPATH DEST DEST_NAME YAML DOCUMENT_Type DOCUMENT_State DOCUMENT_Title DOCUMENT_Project DOCUMENT_Project_URL DOCUMENT_Project_Version DOCUMENT_Language DOCUMENT_Language_Code DOCUMENT_Authors DOCUMENT_Copyright DOCUMENT_License DOCUMENT_License_Abbr DOCUMENT_License_URL DOCUMENT_Redirect_URL DOCUMENT_Content NAVIGATION_PARTIAL NAVIGATION_RELPATH TEMPLATE_Scripts TEMPLATE_Styles
     SOURCE="${1}"
     BASE_RELPATH="${SOURCE#$PUBLIC_DIR/docs/}"       # strip abs prefix
     BASE_RELPATH="${BASE_RELPATH//[^\/]}"     # leave only slashes
@@ -232,7 +232,6 @@ function build_source {
     -e 's|\{\{[ ]*document\.language[ ]+[\|]?[ ]*slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Language:-}" slug)'|g' \
     -e 's|\{\{[ ]*document\.language-code[ ]*\}\}|'"${DOCUMENT_Language_Code:-}"'|g' \
     -e 's|\{\{[ ]*document\.language-code[ ]+[\|]?[ ]*slug[ ]*\}\}|'$(string_filter "${DOCUMENT_Language_Code:-}" slug)'|g' \
-    -e 's|\{\{[ ]*document\.text-encoding[ ]*\}\}|'"${DOCUMENT_Text_Encoding:-}"'|g' \
     -e 's|\{\{[ ]*document\.authors[ ]*\}\}|'"${DOCUMENT_Authors:-}"'|g' \
     -e 's|\{\{[ ]*document\.copyright[ ]*\}\}|'"${DOCUMENT_Copyright:-}"'|g' \
     -e 's|\{\{[ ]*document\.license[ ]*\}\}|'"${DOCUMENT_License:-}"'|g' \
