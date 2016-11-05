@@ -1,36 +1,37 @@
 ---
-Partials:
-  Base:     partials/base.html
-  Body:     partials/body.html
-  Document: partials/document.html
-  Header:   partials/header.html
-  Footer:   partials/footer.html
-  Nav:      partials/nav.html
-  Redirect: partials/redirect.html
-Assets:
-  Fonts:
-    - assets/fonts/opensans-bold-1.10.woff
-    - assets/fonts/opensans-bold-1.10.woff2
-    - assets/fonts/opensans-bolditalic-1.10.woff
-    - assets/fonts/opensans-bolditalic-1.10.woff2
-    - assets/fonts/opensans-italic-1.10.woff
-    - assets/fonts/opensans-italic-1.10.woff2
-    - assets/fonts/opensans-regular-1.10.woff
-    - assets/fonts/opensans-regular-1.10.woff2
-    - assets/fonts/ropasans-italic-1.002.ttf
-    - assets/fonts/ropasans-italic-1.002.woff
-    - assets/fonts/ropasans-italic-1.002.woff2
-    - assets/fonts/ropasans-regular-1.002.ttf
-    - assets/fonts/ropasans-regular-1.002.woff
-    - assets/fonts/ropasans-regular-1.002.woff2
-  Styles:
-    - assets/css/opensans.css?2016100501
-    - assets/css/ropasans.css?2016100501
-    - assets/css/vendor/featherlight/featherlight-1.4.0.min.css
-    - assets/css/style.css?2016101002
-  Scripts:
-    - assets/js/vendor/jquery/jquery-2.2.3.min.js
-    - assets/js/vendor/js-cookie/js-cookie-2.1.1.min.js
-    - assets/js/vendor/featherlight/featherlight-1.4.0.min.js
-    - assets/js/scripts.js?2016090705
+Template:
+  Partials:
+    Base:     partials/base.html
+    Body:     partials/body.html
+    Document: partials/document.html
+    Header:   partials/header.html
+    Footer:   partials/footer.html
+    Nav:      partials/nav.html
+    Redirect: partials/redirect.html
+  Assets:
+    Fonts:
+      - assets/fonts/opensans-bold-1.10.woff
+      - assets/fonts/opensans-bold-1.10.woff2
+      - assets/fonts/opensans-bolditalic-1.10.woff
+      - assets/fonts/opensans-bolditalic-1.10.woff2
+      - assets/fonts/opensans-italic-1.10.woff
+      - assets/fonts/opensans-italic-1.10.woff2
+      - assets/fonts/opensans-regular-1.10.woff
+      - assets/fonts/opensans-regular-1.10.woff2
+      - assets/fonts/ropasans-italic-1.002.ttf
+      - assets/fonts/ropasans-italic-1.002.woff
+      - assets/fonts/ropasans-italic-1.002.woff2
+      - assets/fonts/ropasans-regular-1.002.ttf
+      - assets/fonts/ropasans-regular-1.002.woff
+      - assets/fonts/ropasans-regular-1.002.woff2
+    Styles:
+      - assets/css/opensans.css?2016100501
+      - assets/css/ropasans.css?2016100501
+      - assets/css/vendor/featherlight/featherlight-1.4.0.min.css
+      - assets/css/style.css?2016101002
+    Scripts:
+      - assets/js/vendor/jquery/jquery-2.2.3.min.js
+      - assets/js/vendor/js-cookie/js-cookie-2.1.1.min.js
+      - assets/js/vendor/featherlight/featherlight-1.4.0.min.js
+      - assets/js/scripts.js?2016090705
 ...
