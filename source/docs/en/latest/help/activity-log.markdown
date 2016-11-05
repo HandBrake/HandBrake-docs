@@ -7,7 +7,6 @@ Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Text_Encoding:   utf-8
 Authors:         Bradley Sepos <bradley@bradleysepos.com> (BradleyS), John Stebbins (j45), Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
