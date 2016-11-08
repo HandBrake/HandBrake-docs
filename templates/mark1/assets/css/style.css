@@ -86,8 +86,14 @@ article.docs.js nav .system-select {
     display: block;
 }
 
-article.docs nav .system-select,
+article.docs nav .system-select {
+    margin: 0;
+    padding: 0;
+}
+
+article.docs nav .system-select ul,
 article.docs nav .system-select li {
+    display: inline-block;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -95,7 +101,6 @@ article.docs nav .system-select li {
 }
 
 article.docs nav .system-select li {
-    display: inline-block;
     margin: .166666em .25rem;
     padding: .25em .5rem;
     color: white;
