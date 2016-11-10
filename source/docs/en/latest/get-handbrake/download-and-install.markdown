@@ -48,10 +48,11 @@ If you prefer HandBrake's nightly builds, add the [official git-snapshots PPA](h
 
 Install HandBrake.
 
-    sudo apt-get install handbrake-gtk  # graphical
-    sudo apt-get install handbrake-cli  # command line
+    sudo apt-get install handbrake-cli handbrake-gtk
 
-You may now launch the graphical user interface by running `ghb`. The command line binary is named `HandBrakeCLI`.
+Run `HandBrakeCLI` to use HandBrake on the command line.
+
+Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-click on the icon and select "Lock to Launcher" for easy access in the future.
 
 <!-- /.system-lin -->
 <!-- .system-mac -->
