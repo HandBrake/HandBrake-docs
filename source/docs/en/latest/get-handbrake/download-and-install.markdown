@@ -32,7 +32,26 @@ Experienced users may wish to try HandBrake's [nightly builds](https://handbrake
 
 ## Installing on Linux
 
-TODO
+If you have installed a HandBrake package from your distribution or other third-party package repository, please remove it before proceeding. See the section, *Warning about broken third-party builds* on [Where to get HandBrake](where-to-get-handbrake.html) for more information.
+
+The following instructions are for Ubuntu. They may also work on other `deb`-compatible distributions. For other Linux, please compile from the [official source code](https://github.com/HandBrake/HandBrake).
+
+From the command line, add the official releases PPA to your system.
+
+    sudo add-apt-repository ppa:stebbins/handbrake-releases
+    sudo apt-get update
+
+If you prefer HandBrake's nightly builds, add the official git-snapshots PPA.
+
+    sudo add-apt-repository ppa:stebbins/handbrake-git-snapshots
+    sudo apt-get update
+
+Install HandBrake.
+
+    sudo apt-get install handbrake-gtk  # graphical
+    sudo apt-get install handbrake-cli  # command line
+
+You may now launch the graphical user interface by running `ghb`. The command line binary is named `HandBrakeCLI`.
 
 <!-- /.system-lin -->
 <!-- .system-mac -->
