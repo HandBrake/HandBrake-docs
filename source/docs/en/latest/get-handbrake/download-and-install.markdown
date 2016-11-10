@@ -36,12 +36,12 @@ If you have installed a HandBrake package from your distribution or other third-
 
 The following instructions are for Ubuntu. They may also work on other `deb`-compatible distributions. For other Linux, please compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
-From the command line, add the official releases PPA to your system.
+From the command line, add the [official releases PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) to your system.
 
     sudo add-apt-repository ppa:stebbins/handbrake-releases
     sudo apt-get update
 
-If you prefer HandBrake's nightly builds, add the official git-snapshots PPA.
+If you prefer HandBrake's nightly builds, add the [official git-snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots).
 
     sudo add-apt-repository ppa:stebbins/handbrake-git-snapshots
     sudo apt-get update
