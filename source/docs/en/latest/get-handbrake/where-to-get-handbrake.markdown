@@ -46,11 +46,12 @@ Certain Linux distributions and package repositories create their own versions o
 
 Broken third-party packages/builds include but are not limited to:
 
-- Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
-- Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
-- Gentoo: `handbrake`
 - Arch: `handbrake`, `handbrake-cli`
 - Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-cli-fdkaac`, `handbrake-fdkaac`, `handbrake-gtk-git`, `handbrake-gtk2`
+- Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
+- Gentoo: `handbrake`
+- openSUSE Packman: `handbrake`, `handbrake-cli`, `handbrake-gtk`
+- Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
 
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
 
