@@ -1,6 +1,3 @@
-# Prevent overwriting user config
-config.yaml
-
 # Ignore tools directories
 tools/local
 

@@ -1,0 +1,15 @@
+---
+Build:
+  Name: HandBrake
+  Description: Open source video transcoder
+  URL:  https://handbrake.fr
+  Path: public
+  Targets:
+    - Name:   Documentation
+      Path:   docs
+      Force:  true
+      Source: source/docs
+      Navigation: table-of-contents.markdown
+      Templates:
+        - Source: templates/mark1
+...

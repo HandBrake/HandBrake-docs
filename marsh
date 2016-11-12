@@ -1,0 +1,2232 @@
+#!/bin/bash
+# marsh - build static websites using markdown and bash
+#
+# Copyright 2016 Bradley Sepos
+# Released under the MIT License. See LICENSE for details.
+# https://github.com/bradleysepos/marsh
+
+NAME="marsh"
+VERSION="0.1.0"
+SELF="${BASH_SOURCE[0]}"
+SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
+SELF_DIR="${SELF_DIR:-$(pwd)}"
+SELF_NAME=$(basename "${SELF}")
+MARKDOWN_OPTIONS_DEFAULT=(-1.0 +alphalist -autolink -cdata +definitionlist -divquote -dldiscount +dlextra -emphasis +ext +fencedcode +footnote +githubtags -header +html +image -latex +links -safelink +smarty +strikethrough +style +superscript +tables -tabstop -toc)
+HELP="\
+usage: ${SELF_NAME} [-h | --help]
+       ${SELF_NAME} [-v | --version]
+       ${SELF_NAME} build [--fetch] [--force] [--markdown markdown]
+         [--markdown-options opt1,opt2] [config_file]
+where:
+  -h, --help
+        display this help text
+  -v, --version
+        display version information
+  --fetch
+        download remote resources
+  --force
+        remove and replace existing targets (overwrite)
+  --markdown
+        path to markdown application
+  --markdown-options
+        markdown translation options (comma delimited)
+        default: $(echo ${MARKDOWN_OPTIONS_DEFAULT[@]} | sed 's/ /,/g')"
+
+# creates bash variables from yaml records
+# extended to support arrays, empty values, and more
+# https://gist.github.com/DinoChiesa/3e3c3866b51290f31243
+# https://gist.github.com/epiloque/8cf512c6d64641bde388
+# https://gist.github.com/pkuczynski/8665367
+function parse_yaml {  # parse_yaml yaml_string_or_file variables_prefix spaces_per_indentation
+    local INPUT PREFIX INDENT S W FS
+    INPUT="${1:-}"
+    [[ "${INPUT}" == "" ]] && return 0
+    if [[ -f "${INPUT}" ]] && [[ -r "${INPUT}" ]]; then
+        INPUT=$(<"${INPUT}")
+    fi
+    PREFIX="${2:-}"
+    INDENT="${3:-}"
+    if [[ ! "${INDENT}" =~ '^[0-9]+$' ]] || [[ ! "${INDENT}" -eq 0 ]]; then
+        INDENT=2
+    fi
+    S='[[:space:]]*'
+    W='[a-zA-Z0-9_]*'
+    FS=$(echo @|tr @ '\034')
+    echo "${INPUT}" |
+    sed -n \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\(${W}\)${S}:${S}\(\".*\"\)\${S}\$|\3${FS}\2  \4${FS}\5${FS}\6|p" \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\(${W}\)${S}:${S}\(.*\)${S}\$|\3${FS}\2  \4${FS}\5${FS}\6|p" \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\(\".*\"\)${S}\$|\3${FS}\2  \4${FS}${FS}\5|p" \
+        -e "s|^\(\(${S}\)\(-\) \)\{1\}\(${S}\)\([^:].*\)${S}\$|\3${FS}\2  \4${FS}${FS}\5|p" \
+        -e "s|^\(${S}\)\(${W}\)${S}:${S}\(\".*\"\)${S}\$|${FS}\1${FS}\2${FS}\3|p" \
+        -e "s|^\(${S}\)\(${W}\)${S}:${S}\(.*\)${S}\$|${FS}\1${FS}\2${FS}\3|p" |
+    awk -F"${FS}" \
+        '#
+        # parse_csv, public domain, http://lorance.freeshell.org/csv/
+        #**************************************************************************
+        #
+        # This file is in the public domain.
+        #
+        # For more information email LoranceStinson+csv@gmail.com.
+        # Or see http://lorance.freeshell.org/csv/
+        #
+        # Parse a CSV string into an array.
+        # The number of fields found is returned.
+        # In the event of an error a negative value is returned and csverr is set to
+        # the error. See below for the error values.
+        #
+        # Parameters:
+        # string  = The string to parse.
+        # csv     = The array to parse the fields into.
+        # sep     = The field separator character. Normally ,
+        # quote   = The string quote character. Normally "
+        # escape  = The quote escape character. Normally "
+        # newline = Handle embedded newlines. Provide either a newline or the
+        #           string to use in place of a newline. If left empty embedded
+        #           newlines cause an error.
+        # trim    = When true spaces around the separator are removed.
+        #           This affects parsing. Without this a space between the
+        #           separator and quote result in the quote being ignored.
+        #
+        # These variables are private:
+        # fields  = The number of fields found thus far.
+        # pos     = Where to pull a field from the string.
+        # strtrim = True when a string is found so we know to remove the quotes.
+        #
+        # Error conditions:
+        # -1  = Unable to read the next line.
+        # -2  = Missing end quote.
+        # -3  = Missing separator.
+        #
+        # Notes:
+        # The code assumes that every field is preceded by a separator, even the
+        # first field. This makes the logic much simpler, but also requires a
+        # separator be prepended to the string before parsing.
+        function parse_csv(string,csv,sep,quote,escape,newline,trim, fields,pos,strtrim) {
+            # Make sure there is something to parse.
+            if (length(string) == 0) return 0;
+            string = sep string; # The code below assumes ,FIELD.
+            fields = 0; # The number of fields found thus far.
+            while (length(string) > 0) {
+                # Remove spaces after the separator if requested.
+                if (trim && substr(string, 2, 1) == " ") {
+                    if (length(string) == 1) return fields;
+                    string = substr(string, 2);
+                    continue;
+                }
+                strtrim = 0; # Used to trim quotes off strings.
+                # Handle a quoted field.
+                if (substr(string, 2, 1) == quote) {
+                    pos = 2;
+                    do {
+                        pos++
+                        if (pos != length(string) &&
+                            substr(string, pos, 1) == escape &&
+                            (substr(string, pos + 1, 1) == quote ||
+                             substr(string, pos + 1, 1) == escape)) {
+                            # Remove escaped quote characters.
+                            string = substr(string, 1, pos - 1) substr(string, pos + 1);
+                        } else if (substr(string, pos, 1) == quote) {
+                            # Found the end of the string.
+                            strtrim = 1;
+                        } else if (newline && pos >= length(string)) {
+                            # Handle embedded newlines if requested.
+                            if (getline == -1) {
+                                csverr = "Unable to read the next line.";
+                                return -1;
+                            }
+                            string = string newline $0;
+                        }
+                    } while (pos < length(string) && strtrim == 0)
+                    if (strtrim == 0) {
+                        csverr = "Missing end quote.";
+                        return -2;
+                    }
+                } else {
+                    # Handle an empty field.
+                    if (length(string) == 1 || substr(string, 2, 1) == sep) {
+                        csv[fields] = "";
+                        fields++;
+                        if (length(string) == 1)
+                            return fields;
+                        string = substr(string, 2);
+                        continue;
+                    }
+                    # Search for a separator.
+                    pos = index(substr(string, 2), sep);
+                    # If there is no separator the rest of the string is a field.
+                    if (pos == 0) {
+                        csv[fields] = substr(string, 2);
+                        fields++;
+                        return fields;
+                    }
+                }
+                # Remove spaces after the separator if requested.
+                if (trim && pos != length(string) && substr(string, pos + strtrim, 1) == " ") {
+                    trim = strtrim
+                    # Count the number fo spaces found.
+                    while (pos < length(string) && substr(string, pos + trim, 1) == " ") {
+                        trim++
+                    }
+                    # Remove them from the string.
+                    string = substr(string, 1, pos + strtrim - 1) substr(string,  pos + trim);
+                    # Adjust pos with the trimmed spaces if a quotes string was not found.
+                    if (!strtrim) {
+                        pos -= trim;
+                    }
+                }
+                # Make sure we are at the end of the string or there is a separator.
+                if ((pos != length(string) && substr(string, pos + 1, 1) != sep)) {
+                    csverr = "Missing separator.";
+                    return -3;
+                }
+                # Gather the field.
+                csv[fields] = substr(string, 2 + strtrim, pos - (1 + strtrim * 2));
+                fields++;
+                # Remove the field from the string for the next pass.
+                string = substr(string, pos + 1);
+            }
+            return fields;
+        }
+        BEGIN { prefix = "'"${PREFIX}"'"; indent = '"${INDENT}"'; prev_level = 0; }
+        {
+            type  = $1;
+            level = length($2)/indent;
+            key   = $3;
+            val   = $4;
+            out   = "";
+            array = 0;
+            if (level < prev_level) { adepth[prev_level] = -1; }
+            if (adepth[level] == "") { adepth[level] = -1; }
+            if (type == "-") { adepth[level]++; }
+            vname[level] = key;
+            for (i in vname) {
+                if (i > (level)) { vname[i] = ""; }
+            }
+            for (i = 0; i < level; i++) {
+                if (vname[i] != "") {
+                    out = out "_" vname[i];
+                    if (adepth[i] > -1) { out = out "_" adepth[i+1]; }
+                } else {
+                    out = out "_" adepth[i+1];
+                }
+            }
+            if (substr(val,1,1) == "[" && substr(val,length(val),1) == "]") {
+                array = 1;
+                gsub(/^\[[ ]*/, "", val);
+                gsub(/[ ]*\]$/, "", val);
+                num_vals = parse_csv(val, vals, ",", "\"", "\"", "\\n", 1);
+                if (num_vals < 0) {
+                    # Error parsing inline array
+                    exit 1;
+                }
+            } else {
+                if (substr(val,1,1) == "\"" && substr(val,length(val),1) == "\"") {
+                    num_vals = parse_csv(val, vals, "'"${FS}"'", "\"", "\"", "\\n", 0);
+                    if (num_vals < 0) {
+                        # Error parsing
+                        exit 1;
+                    }
+                } else {
+                    vals[1] = val;
+                }
+            }
+            if (key != "") { out = out "_" key; }
+            out = prefix out;
+            gsub(/__/, "_", out);
+            gsub(/_=/, "", out);
+            #for (i = 1; i <= length(vals); i++) {
+            for (i in vals) {
+                gsub(/"/, "\\\"", vals[i]);
+                if (vals[i] != "true" && vals[i] != "false") {
+                    vals[i]="\"" vals[i] "\""
+                }
+                if (array == 1) {
+                    print out "_" i "=" vals[i];
+                } else {
+                    print out "=" vals[i];
+                }
+            }
+            delete vals;
+            prev_level = level;
+        }'
+}
+
+# tests whether a string is an exact match for an array item
+function in_array {  # in_array needle haystack[@]
+    local e
+    for e in "${@:2}"; do
+        [[ "${e}" == "${1}" ]] && return 0;
+    done
+    return 1
+}
+
+# creates an array from the contents of flat variables
+# TEST_0="foo"; TEST_1="bar"; TEST_2="baz"
+# eval $(flat_to_array "TEST" "TEST_")  # loops over TEST_{0..2}
+# echo "${TEST[*]}"                     # foo bar baz
+function flat_to_array {  # flat_to_array array_name variable_prefix
+    local ARRAY_NAME PREFIX INDEX ITEM
+    ARRAY_NAME="${1:-}"
+    [[ "${ARRAY_NAME}" == "" ]] && return 1
+    PREFIX="${2:-}"
+    [[ "${PREFIX}" == "" ]] && return 1
+    echo "${ARRAY_NAME}=()"
+    INDEX=0
+    ITEM="${PREFIX}${INDEX}"
+    ITEM="${!ITEM:-}"
+    while [[ "${ITEM}" != "" ]]; do
+        echo "${ARRAY_NAME}+=(\"${ITEM//\"/\\\"}\")"
+        INDEX=$((INDEX + 1))
+        ITEM="${PREFIX}${INDEX}"
+        ITEM="${!ITEM:-}"
+    done
+    return 0
+}
+
+# prints arguments combined with delimiters
+# join_delimited ', ' ', ' ', ' foo bar baz         # foo, bar, baz
+# join_delimited ', ' ' and ' ', and ' foo bar baz  # foo, bar, and baz
+function join_delimited {  # join_delimited delimiter1 delimiter2 delimiter3 args[@]
+    local DELIM1 DELIM2 DELIM3
+    DELIM1="${1:-}"
+    shift 1
+    DELIM2="${1:-}"
+    shift 1
+    DELIM3="${1:-}"
+    shift 1
+    if [[ "${#@}" -gt 0 ]]; then
+        echo -n "${1}"
+        if [[ "${#@}" -eq 2 ]]; then
+            echo "${DELIM2}${2}"
+            return 0
+        fi
+        while [[ "${#@}" -gt 2 ]]; do
+            echo -n "${DELIM1}${2}"
+            shift 1
+        done
+        echo -n "${2+$DELIM3$2}"
+        echo
+    fi
+    return 0
+}
+
+# prints md5 hash for a given string
+function md5_string {  # md5_string string
+    local STRING SYS_NAME
+    STRING="${1:-}"
+    SYS_NAME=$(uname | awk '{ print tolower($0)}')
+    if [[ "${SYS_NAME}" == "darwin" ]]; then
+        echo -n "${STRING}" | md5 -r | awk '{ print $1 }'
+    else
+        echo -n "${STRING}" | md5sum | awk '{ print $1 }'
+    fi
+    return 0
+}
+
+# transforms a string
+function text_filter {  # text_filter filters[@]
+    local FILTERS
+    local LF TEXT OPTIONS TEXT_TEMP DATE_FORMAT MAX_CHARS MAX_PARAS WRAP
+    LF=$'\n'
+    TEXT=$(</dev/stdin)
+    FILTERS=("${@}")
+    for FILTER in ${FILTERS[@]}; do
+        OPTIONS="${FILTER#*:}"
+        if [[ "${OPTIONS}" == "${FILTER}" ]]; then
+            OPTIONS=""
+        fi
+        OPTIONS=(${OPTIONS//:/ })
+        case "${FILTER}" in
+            date:*)
+                [[ "${TEXT}" == "" ]] && return 1
+                DATE_FORMAT="${OPTIONS[0]:-}"
+                if [[ "${DATE_FORMAT}" != "" ]]; then
+                    TEXT_TEMP="${TEXT}"
+                    if [[ "${#TEXT_TEMP}" -eq 10 ]]; then
+                        TEXT_TEMP="${TEXT_TEMP} 00:00:00"
+                    fi
+                    case "${DATE_FORMAT}" in
+                        [Rr][Ff][Cc]3339)
+                            TEXT_TEMP=$(TZ=UTC date -jf '%Y-%m-%d %H:%M:%S' '+%Y-%m-%dT%T%z' "${TEXT_TEMP}" 2>/dev/null | sed -E -e 's/([0-9][0-9])$/:\1/')
+                            [[ $? -ne 0 ]] && return 1
+                            ;;
+                    esac
+                    TEXT="${TEXT_TEMP}"
+                fi
+                ;;
+            escape:html)
+                TEXT=$(echo "${TEXT}" | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/"/\&quot;/g' -e 's/'"'"'/\&#39;/g');
+                ;;
+            excerpt:*)
+                MAX_CHARS="${OPTIONS[0]:-}"
+                MAX_PARAS="${OPTIONS[1]:-}"
+                if [[ "${MAX_CHARS}" != "" ]]; then
+                    [[ "${MAX_CHARS}" -lt 1 ]] && TEXT="" && break
+                    TEXT=$(echo "${TEXT}" | text_filter headings:remove plaintext)
+                    if [[ "${MAX_PARAS}" != "" ]]; then
+                        TEXT=$(echo "${TEXT}" | awk -v RS="\n\n" 'NR<='${MAX_PARAS}'+1 { print $0 }')
+                    fi
+                    TEXT_TEMP=$(echo "${TEXT:0:$MAX_CHARS}")
+                    if [[ "${TEXT}" != "${TEXT_TEMP}" ]]; then
+                        if [[ "${MAX_CHARS}" -gt 3 ]]; then
+                            TEXT=$(echo "${TEXT_TEMP:0:$((MAX_CHARS-3))}")
+                        else
+                            TEXT=""
+                        fi
+                        TEXT="${TEXT}..."
+                    fi
+                    TEXT=$(echo "${TEXT}${LF}")
+                fi
+                ;;
+            excerpt)
+                TEXT=$(echo "${TEXT}" | text_filter excerpt:300:2)
+                ;;
+            headings:push)
+                TEXT=$(echo "${TEXT}${LF}" | sed -E -e 'N;s/^(.*)\n([-]+|[=]+)$/# \1/' | sed -E -e 's/^([#]+ )/#\1/' -e 's/^####### (.+)$/**\1**/')
+                TEXT=$(echo "${TEXT}" | sed -E -e '/<\/?h[0-6][^>]*>/{s/<(\/)?h6/<\1strong/g' -e 's/<(\/)?h5/<\1h6/g' -e 's/<(\/)?h4/<\1h5/g' -e 's/<(\/)?h3/<\1h4/g' -e 's/<(\/)?h2/<\1h3/g' -e 's/<(\/)?h1/<\1h2/g' -e '}')
+                ;;
+            headings:shift)
+                TEXT=$(echo "${TEXT}${LF}" | sed -E -e 'N;s/^(.*)\n([-]+|[=]+)$/# \1/' | sed -E -e '/^# .+$/d' -e 's/^#([#]+ )/\1/')
+                TEXT=$(echo "${TEXT}" | sed -E -e '/<h1[^>]*>.*<\/h1>/s///g' | sed -E -e '/<\/?h[0-6][^>]*>/{s/<(\/)h2/<\1h1/g' -e 's/<(\/)h3/<\1h2/g' -e 's/<(\/)h4/<\1h3/g' -e 's/<(\/)h5/<\1h4/g' -e 's/<(\/)h6/<\1h5/g' -e '}')
+                ;;
+            headings:remove)
+                TEXT=$(echo "${TEXT}${LF}" | sed -E -e 'N;s/^(.*)\n([-]+|[=]+)$/# \1/' | sed -E -e '/^[#]+ .+$/d')
+                TEXT=$(echo "${TEXT}" | sed -E -e 's/<(h1|h2|h3|h4|h5|h6)[^>]*>.*<\/(h1|h2|h3|h4|h5|h6)>//g')
+                ;;
+            plaintext)
+                # ':a;s/<[^>]*>//g;/</N;//ba' strips html tags and works across multiple lines (better version of 's/<[^>]*>//g')
+                # '/./,/^$/!d' deletes blank lines at start and collapses consecutive blank lines into one, leaving up to one blank line at end
+                TEXT=$(echo "${TEXT}" | sed -e ':a' -e 's/<[^>]*>//g' -e '/</N' -e '//ba' | sed '/./,/^$/!d')
+                ;;
+            slug)
+                TEXT=$(echo "${TEXT}" | head -n 1 | sed -E -e 's/[ _]+/-/g' -e 's/[^-a-zA-Z0-9.]//g' -e 's/(^-+)|(-+$)//' | awk '{ print tolower($0) }')
+                ;;
+            wrap:*)
+                WRAP="${OPTIONS[0]}"
+                TEXT=$(echo "<!-- ${WRAP} -->${LF}${TEXT}${LF}<!-- /${WRAP} -->${LF}")
+                ;;
+        esac
+    done
+    echo "${TEXT}"
+}
+
+# prints a list of variables given their assignment commands, one per line, e.g. FOO="bar" prints FOO
+function get_variables {  # get_variables assignments_string
+    local STRING
+    STRING=$(</dev/stdin)
+    echo "${STRING}" | sed -E -e 's/^([^=]+[^+])[+]?=.*/\1/' | sort -u
+}
+
+# tests whether existing file or directory is child of parent directory
+function is_child {  # is_child directory child
+    local CURRENT_DIR DIRECTORY CHILD CD
+    CURRENT_DIR=$(pwd)
+    DIRECTORY="${1:-}"
+    [[ ! -d "${DIRECTORY}" ]] && return 1
+    DIRECTORY="${DIRECTORY%/}/"
+    CHILD="${2:-}"
+    if [[ -d "${CHILD}" ]]; then
+        CHILD_DIR="${CHILD%/}/"
+    elif [[ -f "${CHILD}" ]]; then
+        CHILD_DIR="${CHILD%/*}/"
+    else
+        return 1
+    fi
+
+    # parent dir
+    cd "${DIRECTORY}" >/dev/null 2>&1 || return 1
+    DIRECTORY=$(pwd -P . 2>/dev/null || command pwd)
+    cd "${CURRENT_DIR}"
+
+    # child dir
+    cd "${CHILD_DIR}" >/dev/null 2>&1 || return 1
+    CHILD_DIR=$(pwd -P . 2>/dev/null || command pwd)
+    cd "${CURRENT_DIR}"
+
+    # compare
+    if [[ -f "${CHILD}" ]] && [[ "${DIRECTORY}" == "${CHILD_DIR}" ]]; then
+        # file in directory root
+        return 0
+    fi
+    if [[ "${DIRECTORY}" != "${CHILD_DIR}" ]] && [[ "${CHILD_DIR#$DIRECTORY}" != "${CHILD_DIR}" ]]; then
+        # subdirectory or file in subdirectory
+        return 0
+    fi
+    return 1
+}
+
+# prints an integer transformation of a version string
+# useful for simple comparisons, max input 999.999.999
+# [[ $(version 2.10.9) -gt $(version 1.0.5) ]]  # true
+# [[           2010009 -gt 1000005          ]]  # true
+function version {  # version x(.x)?(.x)?
+    echo $(printf "%03d%03d%03d\n" $(echo "${1:-}" | sed -E -e 's/^([0-9]+(\.[0-9]+(\.[0-9]+)?)?).*$/\1/' | tr '.' '\n' | head -n 3)) | sed 's/^0*//' | sed 's/^$/0/'
+}
+
+# checks for required external tool
+function dependency_exists {  # dependency_exists dep
+    local DEP ERROR
+    DEP="${1:-}"; [[ "${DEP}" == "" ]] && return 1
+    ERROR=false
+    if echo "${DEP}" | grep '/' >/dev/null 2>&1 && [[ ! -x "${DEP}" ]]; then
+        echo "Unable to find command: ${DEP}" >&2
+        ERROR=true
+    elif ! hash "${DEP}" >/dev/null 2>&1; then
+        echo "Unable to find command: ${DEP}" >&2
+        ERROR=true
+    fi
+    [[ "${ERROR}" == true ]] && return 1
+    return 0
+}
+
+# checks for required external tools (plural)
+function dependencies_exist {  # dependencies_exist deps[@]
+    local DEPS ERRORS
+    DEPS=("${@}");
+    ERRORS=()
+    for DEP in ${DEPS[@]}; do
+        dependency_exists "${DEP}" 2>/dev/null || ERRORS+=("${DEP}")
+    done
+    if [[ "${#ERRORS[@]}" -ne 0 ]]; then
+        echo "Unable to find command(s): ${ERRORS[*]}" >&2
+        return 1
+    fi
+    return 0
+}
+
+# prints dependency requirements
+function print_dependency {  # print_dependency name url required_version found_version
+    local NAME URL VERSION FOUND
+    NAME="${1:-}"; [[ "${NAME}" == "" ]] && return 1
+    URL="${2:-}"
+    VERSION="${3:-}"
+    FOUND="${4:-}"
+    echo -n "${NAME}" >&2
+    if [[ "${VERSION}" != "" ]]; then
+        echo -n " version ${VERSION} or later" >&2
+    fi
+    echo -n " is required" >&2
+    if [[ "${FOUND}" != "" ]]; then
+        echo -n " (found version ${FOUND})" >&2
+    fi
+    if [[ "${URL}" != "" ]]; then
+        echo -n ": ${URL}" >&2
+    fi
+    echo >&2
+}
+
+# prints bash variable assignments for template metadata
+function parse_template_metadata {  # parse_template_metadata prefix template_dir template_config_extra
+    local PREFIX TEMPLATE_DIR TEMPLATE_CONFIG_EXTRA
+    local TEMPLATE_META TEMPLATE_META_VARS
+    local TEMPLATE_ASSETS_FONTS TEMPLATE_ASSETS_STYLES TEMPLATE_ASSETS_SCRIPTS TEMPLATE_ASSETS_IMAGES TEMPLATE_ASSETS_AUDIO TEMPLATE_ASSETS_VIDEO TEMPLATE_ASSETS_DOCUMENTS TEMPLATE_ASSETS_OTHER
+    local INDEX ASSET_TYPES ASSET_TYPE_UPPER ASSET FILTER_INDEX REGEX EXTENDED MATCH REPLACE EXTRA ASSETS_INDEX ASSETS ASSETS_TEMP
+
+    # init
+    PREFIX="${1:-}"
+    TEMPLATE_DIR="${2:-}"
+    [[ "${TEMPLATE_DIR}" == "" ]] && return 1
+    TEMPLATE_CONFIG_EXTRA="${3:-}"
+
+    # load config
+    if [[ -f "${TEMPLATE_DIR}/template.yaml" ]] && [[ -r "${TEMPLATE_DIR}/template.yaml" ]]; then
+        TEMPLATE_META=$(parse_yaml "${TEMPLATE_DIR}/template.yaml" "MARSH_TEMPLATE_")
+        [[ $? -ne 0 ]] && echo "Unable to parse yaml file: ${TEMPLATE_DIR}/template.yaml" >&2 && return 1
+        TEMPLATE_META_VARS=$(echo "${TEMPLATE_META}" | get_variables)
+        eval "${TEMPLATE_META}"
+    else
+        echo "Template configuration file not found: ${TEMPLATE_DIR}/template.yaml" >&2
+        return 1
+    fi
+    if [[ "${TEMPLATE_CONFIG_EXTRA}" != "" ]]; then
+        # load extra config
+        if [[ -f "${TEMPLATE_CONFIG_EXTRA}" ]] && [[ -r "${TEMPLATE_CONFIG_EXTRA}" ]]; then
+            TEMPLATE_META=$(parse_yaml "${TEMPLATE_CONFIG_EXTRA}" "MARSH_TEMPLATE_")
+            [[ $? -ne 0 ]] && echo "Unable to parse yaml file: ${TEMPLATE_CONFIG_EXTRA}" >&2 && return 1
+            TEMPLATE_META_VARS=$(echo "${TEMPLATE_META_VARS}"$'\n'"${TEMPLATE_META}" | get_variables)
+            eval "${TEMPLATE_META}"
+        else
+            echo "Template configuration file not found: ${TEMPLATE_CONFIG_EXTRA}" >&2
+            return 1
+        fi
+    fi
+
+    # print partials paths relative to template dir
+    [[ "${MARSH_TEMPLATE_Template_Partials_Base:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Base=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Base//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Body:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Body//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive:-}"  != "" ]] && echo "${PREFIX}Template_Partials_Archive=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Document//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Header:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Header=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Header//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Nav:-}"      != "" ]] && echo "${PREFIX}Template_Partials_Nav=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Nav//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Footer:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Footer=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Footer//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Redirect:-}" != "" ]] && echo "${PREFIX}Template_Partials_Redirect=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Redirect//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Feed_Body:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Feed_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Feed_Body//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Feed_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Feed_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Feed_Document//\"/\\\"}\""
+
+    # assets
+    ASSET_TYPES=('Fonts' 'Styles' 'Scripts' 'Images' 'Audio' 'Video' 'Documents' 'Binaries' 'Other')
+    for ASSET_TYPE in ${ASSET_TYPES[@]}; do
+        eval "TEMPLATE_ASSETS_${ASSET_TYPE}=()"
+        INDEX=0
+        ASSET="MARSH_TEMPLATE_Template_Assets_${ASSET_TYPE}_${INDEX}"
+        ASSET="${!ASSET:-}"
+        while [[ "${ASSET}" != "" ]]; do
+            eval "TEMPLATE_ASSETS_${ASSET_TYPE}+=(\"${ASSET//\"/\\\"}\")"
+            INDEX=$((INDEX+1))
+            ASSET="MARSH_TEMPLATE_Template_Assets_${ASSET_TYPE}_${INDEX}"
+            ASSET="${!ASSET:-}"
+        done
+    done
+
+    # assets filters
+    FILTER_INDEX=0
+    REGEX="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Regex"
+    REGEX="${!REGEX:-}"
+    EXTENDED="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Extended"
+    EXTENDED="${!EXTENDED:-}"
+    # loop over assets filters
+    while [[ "${REGEX}" != "" ]]; do
+        # escape match
+        if [[ "$(echo ${REGEX} | grep -E '^s/.+[^\]/.*[^\]/g?$')" == "${REGEX}" ]]; then
+            MATCH=$(echo "${REGEX}" | sed -E 's/^s\/(.+[^\])\/.*[^\]\/g?/\1/' | sed 's/[[]\.|$(){}?+*^]/\\&/g')
+            REPLACE=$(echo "${REGEX}" | sed -E 's/^s\/.+[^\]\/(.*[^\])\/g?/\1/')
+            EXTRA=$(echo "${REGEX}" | sed -E 's/^s\/.+[^\]\/.*[^\]\/(g?)/\1/')
+            REGEX="s/${MATCH}/${REPLACE}/${EXTRA}"
+        elif [[ "$(echo ${REGEX} | grep -E '^s\|.+[^\]\|.*[^\]\|g?$')" == "${REGEX}" ]]; then
+            MATCH=$(echo "${REGEX}" | sed -E 's/^s\|(.+[^\])\|.*[^\]\|g?/\1/' | sed 's/[[]\.|$(){}?+*^]/\\&/g')
+            REPLACE=$(echo "${REGEX}" | sed -E 's/^s\|.+[^\]\|(.*[^\])\|g?/\1/')
+            EXTRA=$(echo "${REGEX}" | sed -E 's/^s\|.+[^\]\|.*[^\]\|(g?)/\1/')
+            REGEX="s|${MATCH}|${REPLACE}|${EXTRA}"
+        elif [[ "$(echo ${REGEX} | grep -E '^/.+[^\]/d?$')" == "${REGEX}" ]]; then
+            MATCH=$(echo "${REGEX}" | sed -E 's/^\/(.+[^\])\/d?/\1/' | sed 's/[[]\.|$(){}?+*^]/\\&/g')
+            REPLACE=""
+            EXTRA=$(echo "${REGEX}" | sed -E 's/^\/.+[^\]\/(d?)/\1/')
+            REGEX="/${MATCH}/${EXTRA}"
+        else
+            continue
+        fi
+        ASSETS_INDEX=0
+        ASSETS_TYPE="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Assets_${ASSETS_INDEX}"
+        ASSETS_TYPE="${!ASSETS_TYPE}"
+        # loop over assets types for filter
+        while [[ "${ASSETS_TYPE}" != "" ]]; do
+            ASSETS="TEMPLATE_ASSETS_${ASSETS_TYPE}[@]"
+            ASSETS=(${!ASSETS})
+            ASSETS_TEMP=()
+            # loop over all individual assets of this type
+            for ASSET in ${ASSETS[@]}; do
+                # do regex
+                if [[ "${EXTENDED}" == true ]]; then
+                    ASSET=$(echo "${ASSET}" | sed -E "${REGEX}" 2>/dev/null)
+                else
+                    ASSET=$(echo "${ASSET}" | sed "${REGEX}" 2>/dev/null)
+                fi
+                # remove empty
+                if [[ "${ASSET:-}" != "" ]]; then
+                    ASSETS_TEMP+=("${ASSET}")
+                fi
+            done
+            # update original array
+            eval "TEMPLATE_ASSETS_${ASSETS_TYPE}=()"
+            for I in "${!ASSETS_TEMP[@]}"; do
+                eval "TEMPLATE_ASSETS_${ASSETS_TYPE}+=(\"${ASSETS_TEMP[$I]//\"/\\\"}\")"
+            done
+            ASSETS_INDEX=$((ASSETS_INDEX+1))
+            ASSETS_TYPE="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Assets_${ASSETS_INDEX}"
+            ASSETS_TYPE="${!ASSETS_TYPE:-}"
+        done
+        FILTER_INDEX=$((FILTER_INDEX+1))
+        REGEX="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Regex"
+        REGEX="${!REGEX:-}"
+        EXTENDED="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Extended"
+        EXTENDED="${!EXTENDED:-}"
+        ASSETS_INDEX=0
+        ASSETS_TYPE="MARSH_TEMPLATE_Template_Filters_${FILTER_INDEX}_Assets_${ASSETS_INDEX}"
+        ASSETS_TYPE="${!ASSETS_TYPE:-}"
+    done
+
+    # print assets
+    for ASSET_TYPE in ${ASSET_TYPES[@]}; do
+        ASSET_TYPE_UPPER=$(echo "${ASSET_TYPE}" | awk '{ print toupper($0) }')
+        ASSETS="TEMPLATE_ASSETS_${ASSET_TYPE}[@]"
+        ASSETS=(${!ASSETS})
+        echo "${PREFIX}ASSETS_${ASSET_TYPE_UPPER}=()"
+        for ASSET in ${ASSETS[@]}; do
+            [[ "${ASSET:-}" != "" ]] && echo "${PREFIX}ASSETS_${ASSET_TYPE_UPPER}+=(\"${ASSET//\"/\\\"}\")"
+        done
+    done
+
+    # unset temporary global variables
+    for VAR in ${TEMPLATE_META_VARS[@]}; do unset "${VAR}"; done
+}
+
+# loads target metadata into convenience variables
+function get_target_metadata {  # get_target_metadata source_prefix prefix
+    local SOURCE_PREFIX PREFIX
+    local TARGET_PATH TARGET_NAME TEMPLATE_SOURCE TARGET_TYPE TEMPLATE_REMOTE TARGET_FORCE TEMPLATE_FETCH TARGET_NAV
+    local II TEMPLATE_SOURCE TEMPLATE_REMOTE TEMPLATE_FETCH TEMPLATE_CONFIG
+    local FEED FEED_NAME FEED_COUNT FEED_CONTENT FEED_TYPES FEED_EXCLUDED_STATES
+    local ARCHIVE ARCHIVE_NAME ARCHIVE_COUNT ARCHIVE_CONTENT ARCHIVE_TYPES ARCHIVE_EXCLUDED_STATES
+
+    # init
+    SOURCE_PREFIX="${1:-}"
+    PREFIX="${2:-}"
+
+    # root
+    TARGET_PATH="${SOURCE_PREFIX}Path"
+    [[ -z ${!TARGET_PATH+isset} ]] && return 1
+    TARGET_NAME="${SOURCE_PREFIX}Name"
+    TARGET_SOURCE="${SOURCE_PREFIX}Source"
+    TARGET_TYPE="${SOURCE_PREFIX}Type"
+    TARGET_REMOTE="${SOURCE_PREFIX}Remote"
+    TARGET_FORCE="${SOURCE_PREFIX}Force"
+    TARGET_FETCH="${SOURCE_PREFIX}Fetch"
+    TARGET_NAV="${SOURCE_PREFIX}Navigation"
+    [[ "${!TARGET_PATH:-}"   != "" ]] && echo "${PREFIX}PATH=\"${!TARGET_PATH//\"/\\\"}\""
+    [[ "${!TARGET_NAME:-}"   != "" ]] && echo "${PREFIX}NAME=\"${!TARGET_NAME//\"/\\\"}\""
+    [[ "${!TARGET_SOURCE:-}" != "" ]] && echo "${PREFIX}SOURCE=\"${!TARGET_SOURCE//\"/\\\"}\""
+    [[ "${!TARGET_TYPE:-}"   != "" ]] && echo "${PREFIX}TYPE=\"${!TARGET_TYPE//\"/\\\"}\""
+    [[ "${!TARGET_REMOTE:-}" != "" ]] && echo "${PREFIX}REMOTE=\"${!TARGET_REMOTE//\"/\\\"}\""
+    [[ "${!TARGET_NAV:-}"    != "" ]] && echo "${PREFIX}NAV=\"${!TARGET_NAV//\"/\\\"}\""
+    [[ "${!TARGET_FORCE:-}"  != "" ]] && echo "${PREFIX}FORCE=\"${!TARGET_FORCE//\"/\\\"}\""
+    [[ "${!TARGET_FETCH:-}"  != "" ]] && echo "${PREFIX}FETCH=\"${!TARGET_FETCH//\"/\\\"}\""
+
+    # templates
+    echo "${PREFIX}TEMPLATES_SOURCE=()"
+    echo "${PREFIX}TEMPLATES_REMOTE=()"
+    echo "${PREFIX}TEMPLATES_FETCH=()"
+    echo "${PREFIX}TEMPLATES_CONFIG=()"
+    echo "${PREFIX}TEMPLATES=()"
+    II=0
+    TEMPLATE_SOURCE="${SOURCE_PREFIX}Templates_${II}_Source"
+    TEMPLATE_REMOTE="${SOURCE_PREFIX}Templates_${II}_Remote"
+    TEMPLATE_FETCH="${SOURCE_PREFIX}Templates_${II}_Fetch"
+    TEMPLATE_CONFIG="${SOURCE_PREFIX}Templates_${II}_Config"
+    while [[ "${!TEMPLATE_SOURCE:-}" != "" ]]; do
+        echo "${PREFIX}TEMPLATES_SOURCE+=(\"${!TEMPLATE_SOURCE//\"/\\\"}\")"
+        echo "${PREFIX}TEMPLATES_REMOTE+=(\"${!TEMPLATE_REMOTE//\"/\\\"}\")"
+        if [[ "${!TEMPLATE_FETCH:-}" == "true" ]]; then
+            echo "${PREFIX}TEMPLATES_FETCH+=(true)"
+        else
+            echo "${PREFIX}TEMPLATES_FETCH+=(false)"
+        fi
+        echo "${PREFIX}TEMPLATES_CONFIG+=(\"${!TEMPLATE_CONFIG//\"/\\\"}\")"
+        echo "${PREFIX}TEMPLATES+=(\"${!TEMPLATE_SOURCE##*/}-$(md5_string ${!TEMPLATE_REMOTE:-local}:${!TEMPLATE_SOURCE})\")"
+        II=$((II+1))
+        TEMPLATE_SOURCE="${SOURCE_PREFIX}Templates_${II}_Source"
+        TEMPLATE_REMOTE="${SOURCE_PREFIX}Templates_${II}_Remote"
+        TEMPLATE_FETCH="${SOURCE_PREFIX}Templates_${II}_Fetch"
+        TEMPLATE_CONFIG="${SOURCE_PREFIX}Templates_${II}_Config"
+    done
+
+    # feeds
+    echo "${PREFIX}FEEDS=()"
+    echo "${PREFIX}FEEDS_NAME=()"
+    echo "${PREFIX}FEEDS_COUNT=()"
+    echo "${PREFIX}FEEDS_CONTENT=()"
+    echo "${PREFIX}FEEDS_TYPES=()"
+    echo "${PREFIX}FEEDS_EXCLUDED_STATES=()"
+    II=0
+    FEED="${SOURCE_PREFIX}Feeds_${II}_Path"
+    FEED_NAME="${SOURCE_PREFIX}Feeds_${II}_Name"
+    FEED_COUNT="${SOURCE_PREFIX}Feeds_${II}_Count"
+    FEED_CONTENT="${SOURCE_PREFIX}Feeds_${II}_Content"
+    while [[ "${!FEED:-}" != "" ]]; do
+        echo "${PREFIX}FEEDS+=(\"${!FEED//\"/\\\"}\")"
+        echo "${PREFIX}FEEDS_NAME+=(\"${!FEED_NAME//\"/\\\"}\")"
+        echo "${PREFIX}FEEDS_COUNT+=(\"${!FEEDS_COUNT//\"/\\\"}\")"
+        echo "${PREFIX}FEEDS_CONTENT+=(\"${!FEEDS_CONTENT//\"/\\\"}\")"
+        eval $(flat_to_array "FEED_TYPES" "${SOURCE_PREFIX}Feeds_${II}_Types_")
+        OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}FEEDS_TYPES+=(\"${FEED_TYPES[*]//\"/\\\"}\")"; IFS="${OIFS}"
+        eval $(flat_to_array "FEED_EXCLUDED_STATES" "${SOURCE_PREFIX}Feeds_${II}_Exclude_")
+        OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}FEEDS_EXCLUDED_STATES+=(\"${FEED_EXCLUDED_STATES[*]//\"/\\\"}\")"; IFS="${OIFS}"
+        II=$((II+1))
+        FEED="${SOURCE_PREFIX}Feeds_${II}_Path"
+        FEED_NAME="${SOURCE_PREFIX}Feeds_${II}_Name"
+        FEEDS_COUNT="${SOURCE_PREFIX}Feeds_${II}_Count"
+        FEEDS_CONTENT="${SOURCE_PREFIX}Feeds_${II}_Content"
+    done
+
+    # archives
+    echo "${PREFIX}ARCHIVES=()"
+    echo "${PREFIX}ARCHIVES_NAME=()"
+    echo "${PREFIX}ARCHIVES_COUNT=()"
+    echo "${PREFIX}ARCHIVES_CONTENT=()"
+    echo "${PREFIX}ARCHIVES_TYPES=()"
+    echo "${PREFIX}ARCHIVES_EXCLUDED_STATES=()"
+    II=0
+    ARCHIVE="${SOURCE_PREFIX}Archives_${II}_Path"
+    ARCHIVE_NAME="${SOURCE_PREFIX}Archives_${II}_Name"
+    ARCHIVE_COUNT="${SOURCE_PREFIX}Archives_${II}_Count"
+    ARCHIVE_CONTENT="${SOURCE_PREFIX}Archives_${II}_Content"
+    while [[ "${!ARCHIVE:-}" != "" ]]; do
+        echo "${PREFIX}ARCHIVES+=(\"${!ARCHIVE//\"/\\\"}\")"
+        echo "${PREFIX}ARCHIVES_NAME+=(\"${!ARCHIVE_NAME//\"/\\\"}\")"
+        echo "${PREFIX}ARCHIVES_COUNT+=(\"${!ARCHIVES_COUNT//\"/\\\"}\")"
+        echo "${PREFIX}ARCHIVES_CONTENT+=(\"${!ARCHIVES_CONTENT//\"/\\\"}\")"
+        eval $(flat_to_array "ARCHIVE_TYPES" "${SOURCE_PREFIX}Archives_${II}_Types_")
+        OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}ARCHIVES_TYPES+=(\"${ARCHIVE_TYPES[*]//\"/\\\"}\")"; IFS="${OIFS}"
+        eval $(flat_to_array "ARCHIVE_EXCLUDED_STATES" "${SOURCE_PREFIX}Archives_${II}_Exclude_")
+        OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}ARCHIVES_EXCLUDED_STATES+=(\"${ARCHIVE_EXCLUDED_STATES[*]//\"/\\\"}\")"; IFS="${OIFS}"
+        II=$((II+1))
+        ARCHIVE="${SOURCE_PREFIX}Archives_${II}_Path"
+        ARCHIVE_NAME="${SOURCE_PREFIX}Archives_${II}_Name"
+        ARCHIVES_COUNT="${SOURCE_PREFIX}Archives_${II}_Count"
+        ARCHIVES_CONTENT="${SOURCE_PREFIX}Archives_${II}_Content"
+    done
+
+    return 0
+}
+
+# copies files, fetching if necessary and authorized
+function get_files {  # get_files source dest force fetch uri
+    local SOURCE DEST FORCE FETCH URI
+    local SOURCE_DIR CACHE TYPE REMOTE FILES
+    SOURCE="${1:-}"
+    DEST="${2:-}"
+    if [[ "${SOURCE}" == "" ]]; then
+        echo "Internal error copying files: source empty" >&2
+        return 1
+    elif [[ "${DEST}" == "" ]]; then
+        echo "Internal error copying files: destination empty" >&2
+        return 1
+    fi
+    SOURCE_DIR="${SOURCE%/*}"
+    SOURCE_DIR="${SOURCE_DIR:-.}"
+    FORCE="${3:-}"
+    FETCH="${4:-}"
+    URI="${5:-}"
+    CACHE=$(md5_string "${URI}")
+    [[ "${CACHE}" == "" ]] && CACHE=$(md5_string "${SOURCE}")
+    CACHE="${MARSH_TEMP}/${CACHE}"
+    TYPE="file"
+    REMOTE=false
+    if [[ "${URI}" != "" ]]; then
+        if [[ "${URI}" =~ ^(git|https?|ssh): ]] || [[ "${URI}" =~ ^.+@.+: ]]; then
+            # remote git
+            TYPE="git"
+            REMOTE=true
+        elif [[ "${URI}" =~ ^file: ]] || [[ "${URI}" =~ .git$ ]]; then
+            # local git
+            TYPE="git"
+        fi
+    fi
+    if [[ "${REMOTE}" != true ]] || [[ "${FETCH}" == true ]]; then
+        # fetch unnecessary/approved
+        if [[ "${TYPE}" != "file" ]] && [[ ! -e "${CACHE}" ]]; then
+            # cache does not exist, create it
+            mkdir -p "${CACHE}"
+            if [[ "${TYPE}" == "git" ]]; then
+                # clone repository
+                echo "Retrieving source: ${URI}"
+                if ! "${GIT}" clone --depth 1 --recursive "${URI}" "${CACHE}" >/dev/null 2>&1; then
+                    # unable to clone repository
+                    echo "Unable to retrieve source: ${URI}" >&2
+                    return 1
+                fi
+            fi
+        fi
+        if [[ "${TYPE}" == "git" ]]; then
+            # files path relative to cache
+            SOURCE="${CACHE}/${SOURCE}"
+            SOURCE_DIR="${SOURCE%/*}"
+            SOURCE_DIR="${SOURCE_DIR:-.}"
+        fi
+        # select files for copy
+        if [[ -d "${SOURCE}" ]]; then
+            # entire directory
+            FILES="${SOURCE#$SOURCE_DIR/}"
+            DEST="${DEST%/$FILES}"
+            FILES=("${FILES}")
+        else
+            # directory contents
+            OIFS="${IFS}"
+            IFS=$'\n'
+            FILES=($(cd "${SOURCE_DIR}" >/dev/null 2>&1 && find . -maxdepth 1 -name "${SOURCE##*/}" | sed -e 's/^\.\///' -e 's/^\.$//'))
+            [[ $? -ne 0 ]] && IFS="${OIFS}" && echo "Unable to change into directory: ${SOURCE_DIR}" >&2 && return 1
+            IFS="${OIFS}"
+        fi
+        # loop over files
+        for FILE in ${FILES[@]}; do
+            # sanity
+            if [[ "${SOURCE_DIR}/${FILE}" == "${DEST%/}/${FILE}" ]]; then
+                # same source and destination
+                echo "Source and destination paths are equal: ${DEST}" >&2
+                return 1
+            fi
+            if [[ -e "${DEST%/}/${FILE}" ]] && [[ "${FORCE}" != true ]]; then
+                # path exists
+                echo "Path exists (--force to overwrite): ${DEST%/}/${FILE}" >&2
+                return 1
+            fi
+            # create path
+            if ! mkdir -p "${DEST}"; then
+                echo "Unable to create path: ${DEST}" >&2
+                return 1
+            fi
+            if [[ -d "${SOURCE_DIR}/${FILE}" ]]; then
+                # clean destination
+                if ! rm -rf "${DEST%/}/${FILE}"; then
+                    echo "Unable to replace path: ${DEST}" >&2
+                    return 1
+                fi
+            fi
+            # copy
+            if ! cp -R "${SOURCE_DIR}/${FILE}" "${DEST%/}/${FILE}"; then
+                echo "Unable to copy file: ${SOURCE_DIR}/${FILE} -> ${DEST%/}/${FILE}" >&2
+                return 1
+            fi
+        done
+        return 0
+    else
+        # fetch not explicitly authorized
+        echo "Remote source not authorized (--fetch to override): ${URI}" >&2
+        return 1
+    fi
+}
+
+# builds an index of directory contents, sorted by descending date
+function build_index {  # build_index index_type target_dir dest_file dest_title content_length count #types[@] types[@] #excluded_states[@] excluded_states[@]
+    local INDEX_TYPE TARGET_DIR DEST DEST_SUB_PREFIX DEST_TITLE CONTENT COUNT NUM_TYPES TYPES NUM_EXCLUDED_STATES EXCLUDED_STATES
+    local VALID DOCUMENTS DOCUMENTS_MAX DOCUMENT_META_PREFIX DOCUMENT_META DOCUMENT_META_VARS
+    local DOCUMENT TITLE DATE DATE_PRETTY LANGCODE ENCODING STATE EXCLUDE DEST_SUB URI ABSPATH
+
+    # init
+    INDEX_TYPE="${1:-}"
+    if [[ "${INDEX_TYPE}" != "archive" ]] && [[ "${INDEX_TYPE}" != "feed" ]]; then
+        return 1
+    fi
+    shift 1
+    TARGET_DIR="${1:-}"; [[ "${TARGET_DIR}" == "" ]] && return 1
+    DEST="${2:-}";       [[ "${DEST}" == "" ]] && return 1
+    DEST="${TARGET_DIR}/${DEST}"
+    DEST_SUB_PREFIX="${DEST}.${MARSH_UID}.subdocuments"
+    DEST_TITLE="${3:-}"
+    CONTENT="${4:-}"
+    CONTENT_VALID=('excerpt' 'none' '')
+    if ! in_array "${CONTENT%%:*}" "${CONTENT_VALID[@]}"; then
+        echo "Invalid archive content type: ${CONTENT%%:*}" >&2
+        return 1
+    fi
+    COUNT="${5:-}"
+    shift 5
+    NUM_TYPES="${1:-0}"
+    shift 1
+    TYPES=()
+    while [[ "${NUM_TYPES}" -gt 0 ]] && [[ "${#@}" -gt 0 ]]; do
+        TYPES+=("${1}")
+        NUM_TYPES=$((NUM_TYPES - 1 ))
+        shift
+    done
+    NUM_EXCLUDED_STATES="${1:-0}"
+    shift 1
+    EXCLUDED_STATES=()
+    while [[ "${NUM_EXCLUDED_STATES}" -gt 0 ]] && [[ "${#@}" -gt 0 ]]; do
+        EXCLUDED_STATES+=("${1}")
+        NUM_EXCLUDED_STATES=$((NUM_EXCLUDED_STATES - 1 ))
+        shift
+    done
+
+    # create directory
+    mkdir -p "${DEST%/*}" >/dev/null 2>&1 || return 1
+
+    # write yaml header
+    echo "---" > "${DEST}" 2>/dev/null || return 1
+    echo "Type: ${INDEX_TYPE}" >> "${DEST}"
+    echo "Date: $(date -u '+%Y-%m-%d %H:%M:%S')" >> "${DEST}"
+    echo "Title: ${DEST_TITLE}" >> "${DEST}"
+    echo "Language: English" >> "${DEST}"
+    echo "Language_Code: en" >> "${DEST}"
+    echo "---" >> "${DEST}"
+    echo "" >> "${DEST}"
+    if [[ "${INDEX_TYPE}" == "archive" ]]; then
+        echo "# ${DEST_TITLE}" >> "${DEST}"
+        echo "" >> "${DEST}"
+    fi
+
+    # loop over documents
+    VALID=0
+    DOCUMENTS=$(cd "${TARGET_DIR}" && find . -name '*.'"${MARSH_UID}"'.document' | sed 's/^\.\///' | sort -nr -t/)
+    DOCUMENTS_MAX="${#DOCUMENTS[@]}"
+    DOCUMENTS_MAX=$((DOCUMENTS_MAX - 1))
+    for DOCUMENT in ${DOCUMENTS[@]}; do
+        if [[ "${COUNT}" != "" ]] && [[ "${VALID}" -ge "${COUNT}" ]]; then
+            break
+        fi
+        DOCUMENT_META_PREFIX=$(echo "marsh_meta_${DOCUMENT}_" | sed -E -e 's/[^A-Za-z0-9_]/_/g')
+        DOCUMENT_META=$(parse_yaml "${TARGET_DIR}/${DOCUMENT%.document}.meta.yaml" "${DOCUMENT_META_PREFIX}")
+        [[ $? -ne 0 ]] && echo "Unable to parse yaml file: ${TARGET_DIR}/${DOCUMENT%.document}.meta.yaml" >&2 && return 1
+        DOCUMENT_META_VARS=$(echo "${DOCUMENT_META}" | get_variables)
+        eval "${DOCUMENT_META}"
+        TYPE="${DOCUMENT_META_PREFIX}Type"
+        TYPE="${!TYPE:-}"
+        if [[ "${TYPE}" == "archive" ]] || [[ "${TYPE}" == "feed" ]]; then
+            # archives and feeds are skipped by default
+            continue
+        fi
+        if [[ "${#TYPES[@]}" -gt 0 ]] && ! in_array "${TYPE}" "${TYPES[@]}"; then
+            # skip type if not in list
+            continue
+        fi
+        if [[ "${#EXCLUDED_STATES[@]}" -gt 0 ]]; then
+            STATE="${DOCUMENT_META_PREFIX}State"
+            STATE="${!STATE}"
+            if [[ "${STATE}" != "" ]]; then
+                # deprecated (no brackets)
+                # Key: foo, bar, baz
+                STATE=(${STATE//, /})
+            else
+                # YAML inline array
+                # Key: [ foo, bar, baz ]
+                eval $(flat_to_array "STATE" "${DOCUMENT_META_PREFIX}State_")
+            fi
+            for E in "${EXCLUDED_STATES[@]}"; do
+                if in_array "${E}" "${STATE[@]}"; then
+                    # skip excluded state
+                    continue 2
+                fi
+            done
+        fi
+        # valid subdocument
+        VALID=$((VALID + 1))
+        DEST_SUB="${DEST_SUB_PREFIX}.$((VALID-1))"
+        # process text
+        if [[ "${CONTENT}" == "none" ]]; then
+            touch "${DEST_SUB}.document"
+        elif [[ "${CONTENT}" != "" ]]; then
+            <"${TARGET_DIR:-.}/${DOCUMENT}" text_filter headings:push "${CONTENT}" "wrap:div.$(echo ${CONTENT} | sed -e 's/:[^ ]//g' -e 's/ /./g')" >> "${DEST_SUB}.document"
+        else
+            <"${TARGET_DIR:-.}/${DOCUMENT}" text_filter headings:push >> "${DEST_SUB}.document"
+        fi
+        # copy metadata
+        cp "${TARGET_DIR}/${DOCUMENT%.document}.meta.yaml" "${DEST_SUB}.meta.yaml.temp" >/dev/null 2>&1
+        # store paths (cannot calculate original path later)
+        URI="${TARGET_DIR#$MARSH_CONFIG_PATH}"
+        URI="${MARSH_CONFIG_URL%/}/${URI#/}/${DOCUMENT%.${MARSH_UID}.document}"
+        URI="${URI%.markdown}.html"
+        ABSPATH=""
+        [[ "${URI}" =~ / ]] && ABSPATH="${URI%/*}"
+        <"${DEST_SUB}.meta.yaml.temp" sed -e '/^\.\.\.$/d' > "${DEST_SUB}.meta.yaml"
+        echo "---" >> "${DEST_SUB}.meta.yaml"
+        echo "ABSPATH: ${ABSPATH}" >> "${DEST_SUB}.meta.yaml"
+        echo "URI: ${URI}" >> "${DEST_SUB}.meta.yaml"
+        echo "..." >> "${DEST_SUB}.meta.yaml"
+        # unset temporary global variables
+        for VAR in ${DOCUMENT_META_VARS[@]}; do unset "${VAR}"; done
+    done
+    return 0
+}
+
+# builds advanced navigation
+function build_advanced_nav {  # build_advanced_nav target_dir navigation_file
+    local TARGET_DIR NAV_NAME
+    local NAV_TARGETS NAV_DEST
+
+    # init
+    TARGET_DIR="${1:-}"; [[ "${TARGET_DIR}" == "" ]] && return 1
+    NAV_NAME="${2:-}";   [[ "${NAV_NAME}" == "" ]]   && return 1
+
+    NAV_TARGETS=$(cd "${TARGET_DIR}" && find . -name "${NAV_NAME}" | sed 's/^\.\///')
+    for NAV_TARGET in ${NAV_TARGETS[@]}; do
+        NAV_TARGET="${TARGET_DIR}/${NAV_TARGET}"
+        NAV_DEST="${NAV_TARGET}.${MARSH_UID}.advanced-nav.html"
+        cp "${NAV_TARGET}" "${NAV_DEST}"
+        if head -n 1 "${NAV_DEST}" 2>/dev/null | grep -E '^---[ ]*(#.*)?$' >/dev/null 2>&1; then
+            # remove yaml
+            <"${NAV_DEST}" tail -n +$(awk '{ drop = 0; } /^---[ ]*(#.*)?$/ { if (NR==1) { drop = 1 } else if (NR>1) { exit } else { drop = 0; next } } drop == 0 { print }' "${NAV_DEST}" | wc -l | awk '{ print $1+3 }') > "${NAV_DEST}.temp"
+        else
+            cp "${NAV_DEST}" "${NAV_DEST}.temp"
+        fi
+        <"${NAV_DEST}.temp" process_markdown > "${NAV_DEST}"
+        rm -f "${NAV_DEST}.temp"
+    done
+}
+
+# builds a template and applies it to a document
+function build_template {  # build_template dest_dir target_dir document templates_dir template template_config_extra
+    function process_authors {  # process_authors dest_array source_array
+        local DEST_ARRAY SOURCE_ARRAY ITEM
+        DEST_ARRAY="${1:-}"
+        [[ "${DEST_ARRAY}" == "" ]] && return 1
+        SOURCE_ARRAY="${2:-}"
+        [[ "${SOURCE_ARRAY}" == "" ]] && return 1
+        echo "${DEST_ARRAY}=()"
+        SOURCE_ARRAY="${SOURCE_ARRAY}[@]"
+        for ITEM in "${!SOURCE_ARRAY}"; do
+            ITEM=$(echo "${ITEM}" | sed -E -e 's/[ ]+<[^>]+>//g' -e 's/[ ]/\\\&nbsp\\\;/g')
+            echo "${DEST_ARRAY}+=(\"${ITEM}\")"
+        done
+        return 0
+    }
+
+    function process_conditionals {  # process_conditionals file tag comparitor list[@]
+        local FILE TAG COMPARITOR LIST
+        local FILE_TEMP
+        FILE="${1:-}";       [[ "${FILE}" == "" ]] && return 1
+        TAG="${2:-}";        [[ "${TAG}" == "" ]]  && return 1
+        COMPARITOR="${3:-}"; [[ "${COMPARITOR}" == "" ]] && return 1
+        LIST="${4:-}";       [[ "${LIST}" == "" ]] && return 1
+        LIST=(${4:-})
+        FILE_TEMP=$(mktemp "${MARSH_TEMP}/conditional-XXXXXX")
+        # process match
+        for ITEM in ${LIST[@]}; do
+            cp "${FILE}" "${FILE_TEMP}"
+            <"${FILE_TEMP}" \
+            awk '/^[ ]*\{\%[ ]*if[ ]+'${TAG//\./\.}'[ ]+'${COMPARITOR// /[ ]+}'[ ]+"'${ITEM}'"[ ]*\%\}[ ]*$/ {
+                    tag=1;
+                    line=1;
+                    delete buffer;
+                }
+                {
+                    buffer[line++]=$0;
+                }
+                (tag==1 && (/^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/ || /^[ ]*\{\%[ ]*else[ ]*\%\}[ ]*$/)) {
+                    for (i=2; i < line-1; i++) {
+                        print buffer[i];
+                    }
+                }
+                (tag>0 && /^[ ]*\{\%[ ]*else[ ]*\%\}[ ]*$/) {
+                    tag=2;
+                    next;
+                }
+                (tag>0 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {
+                    tag=0;
+                    next;
+                }
+                (tag==0) {
+                    print;
+                }' \
+            > "${FILE}"
+        done
+        # process else
+        cp "${FILE}" "${FILE_TEMP}"
+        <"${FILE_TEMP}" \
+        awk '/^[ ]*\{\%[ ]*if[ ]+'${TAG//\./\.}'[ ]+'${COMPARITOR// /[ ]+}'[ ]+".+"[ ]*\%\}[ ]*$/ {
+                tag=1;
+                line=1;
+                delete buffer;
+            }
+            {
+                buffer[line++]=$0;
+            }
+            (tag==1) {
+                delete buffer;
+            }
+            (tag==2 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {
+                for (i=2; i < line-1; i++) {
+                    print buffer[i];
+                }
+            }
+            (tag>0 && /^[ ]*\{\%[ ]*else[ ]*\%\}[ ]*$/) {
+                tag=2;
+                next;
+            }
+            (tag>0 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {
+                tag=0;
+                next;
+            }
+            (tag==0) {
+                print;
+            }' \
+        > "${FILE}"
+    }
+
+    function clean_conditionals {  # clean_conditionals file
+        local FILE FILE_TEMP
+        FILE="${1:-}"; [[ "${FILE}" == "" ]] && return 1
+        FILE_TEMP=$(mktemp "${MARSH_TEMP}/conditional-XXXXXX")
+        # remove unsupported conditionals
+        cp "${FILE}" "${FILE_TEMP}"
+        <"${FILE_TEMP}" awk '/^[ ]*\{\%[ ]*if[^%]+\%\}[ ]*$/ {k=1;i=1;delete a} {a[i++]=$0} (k==1 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {k=0;next} (k==0) { print }' > "${FILE}"
+        return 0
+    }
+
+    function replace_tags {  # replace_tags document prefix
+        local DOCUMENT PREFIX
+        local TAGS TAG_ESC TAG_VAL TAG_NAME TAG_FILTERS TAG_VAR TAG_READFILE
+
+        # init
+        DOCUMENT="${1:-}"
+        PREFIX="${2:-}"
+        [[ "${DOCUMENT}" == "" ]] && return 1
+
+        # find template tags
+        OIFS="${IFS}"
+        IFS=$'\n'
+        TAGS=($(<"${DOCUMENT}" grep -Eo '\{\{[ ]*([a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)?)[ ]*(([ ]*\|[ ]*[a-z][a-z0-9-]*(\:[a-z0-9][a-z0-9-]*)*)*)[ ]*\}\}'))
+        IFS="${OIFS}"
+
+        # loop over tags
+        for I in "${!TAGS[@]}"; do
+            TAG_ESC=$(echo "${TAGS[$I]}" | sed 's/[][/.|$(){}?+*^]/\\&/g')
+            TAG_VAL=$(echo "${TAGS[$I]}" | sed -E -e 's/\{\{[ ]*([a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)?)[ ]*(([ ]*\|[ ]*[a-z][a-z0-9-]*(\:[a-z0-9][a-z0-9-]*)*)*)[ ]*\}\}/\1\3/')
+            TAG_NAME="${TAG_VAL%%|*}"
+            TAG_FILTERS="${TAG_VAL#$TAG_NAME}"
+            TAG_FILTERS=(${TAG_FILTERS//|/ })
+            TAG_READFILE=false
+            # map tag to variable
+            case "${TAG_NAME}" in
+                base.relpath)
+                    TAG_VAR="${PREFIX}RELPATH"
+                    ;;
+                document.relpath)
+                    TAG_VAR="${PREFIX}RELPATH"
+                    ;;
+                base.abspath)
+                    TAG_VAR="${PREFIX}ABSPATH"
+                    ;;
+                document.abspath)
+                    TAG_VAR="${PREFIX}ABSPATH"
+                    ;;
+                document.uri)
+                    TAG_VAR="${PREFIX}URI"
+                    ;;
+                document)
+                    TAG_VAR="${PREFIX}CONTENT"
+                    TAG_READFILE=true
+                    ;;
+                document.authors)
+                    TAG_VAR="${PREFIX}AUTHORS"
+                    ;;
+                document.copyright)
+                    TAG_VAR="${PREFIX}Copyright"
+                    ;;
+                document.credits-url)
+                    TAG_VAR="${PREFIX}Credits_URL"
+                    ;;
+                document.date)
+                    TAG_VAR="${PREFIX}Date"
+                    ;;
+                document.language)
+                    TAG_VAR="${PREFIX}Language"
+                    ;;
+                document.language-code)
+                    TAG_VAR="${PREFIX}Language_Code"
+                    ;;
+                document.license)
+                    TAG_VAR="${PREFIX}License"
+                    ;;
+                document.license-abbr)
+                    TAG_VAR="${PREFIX}License_Abbr"
+                    ;;
+                document.license-url)
+                    TAG_VAR="${PREFIX}License_URL"
+                    ;;
+                document.project)
+                    TAG_VAR="${PREFIX}Project"
+                    ;;
+                document.project-version)
+                    TAG_VAR="${PREFIX}Project_Version"
+                    ;;
+                document.project-url)
+                    TAG_VAR="${PREFIX}Project_URL"
+                    ;;
+                document.redirect-url)
+                    TAG_VAR="${PREFIX}Redirect_URL"
+                    ;;
+                document.state)
+                    TAG_VAR="${PREFIX}State"
+                    ;;
+                document.title)
+                    TAG_VAR="${PREFIX}Title"
+                    ;;
+                document.type)
+                    TAG_VAR="${PREFIX}Type"
+                    ;;
+                *)
+                    TAG_VAR=""
+                    ;;
+            esac
+            if [[ "${TAG_VAR}" != "" ]]; then
+                if [[ "${TAG_READFILE}" == true ]]; then
+                    if [[ -f "${!TAG_VAR}" ]] && [[ -r "${!TAG_VAR}" ]]; then
+                        TAG_VAR=$(<"${!TAG_VAR}")
+                    else
+                        return 1
+                    fi
+                else
+                    TAG_VAR="${!TAG_VAR}"
+                fi
+                TAG_VAR=$(echo "${TAG_VAR}" | text_filter "${TAG_FILTERS[@]}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                TAG_VAR=${TAG_VAR%$'\n'}
+                sed -E \
+                -e "/${TAG_ESC}/s//${TAG_VAR:-}/g" \
+                -i".${MARSH_UID}.backup" "${DOCUMENT}" && rm -f "${DOCUMENT}.${MARSH_UID}.backup"
+            else
+                # ignore unknown tags
+                :
+            fi
+        done
+    }
+
+    local DEST_DIR TARGET_DIR DOCUMENT TEMPLATE_DIR TEMPLATE TEMPLATE_CONFIG_EXTRA
+    local DOCUMENT_META DOCUMENT_META_VARS
+    local SUBDOCUMENTS
+    local INDEX DOCUMENT_AUTHORS
+    local TEMPLATE_PREFIX TEMPLATE_META TEMPLATE_META_VARS PARTIALS TEMPLATE_BASE TEMPLATE_TEMP
+    local NAV NAV_DIR NAV_NAME NAV_RELPATH
+    local TEMPLATE_STYLES TEMPLATE_SCRIPTS
+
+    # init
+    DEST_DIR="${1:-.}"
+    DEST_DIR="${DEST_DIR%/}"
+    TARGET_DIR="${2:-.}"
+    TARGET_DIR="${TARGET_DIR%/}"
+    DOCUMENT="${3:-}"
+    [[ "${DOCUMENT}" == "" ]] && return 1
+    DOCUMENT_EXT="${DOCUMENT##*.}"
+    DOCUMENT_DIR="./${DOCUMENT}"
+    DOCUMENT_DIR="${DOCUMENT_DIR%/*}"
+    DOCUMENT_DIR="${DOCUMENT_DIR#./}"
+    DOCUMENT_RELPATH="${DOCUMENT#./}"                 # strip current dir
+    DOCUMENT_RELPATH="${DOCUMENT_RELPATH//[^\/]}"     # leave only slashes
+    DOCUMENT_RELPATH="${DOCUMENT_RELPATH//[\/]/../}"  # slashes to dirs
+    DOCUMENT_RELPATH="${DOCUMENT_RELPATH:-./}"        # empty to current dir
+    DOCUMENT_ABSPATH="${MARSH_CONFIG_URL:-}"
+    DOCUMENT_ABSPATH="${DOCUMENT_ABSPATH%/}/${TARGET_DIR}/${DOCUMENT_DIR}"
+    DOCUMENT_ABSPATH="${DOCUMENT_ABSPATH%/.}"
+    DEST="${DOCUMENT}"
+    DEST_NAME="${DEST%.$DOCUMENT_EXT}"
+    DEST_NAME="${DEST_NAME##*/}"
+    if echo "${DOCUMENT_EXT}" | grep -Ei '^(markdown|md|mkd|mkdn|mdown)$' >/dev/null 2>&1; then
+        DEST="${DEST%.*}.html"
+    fi
+    DEST="${DEST_DIR}/${TARGET_DIR}/${DEST}"
+    DOCUMENT="${DEST_DIR}/${TARGET_DIR}/${DOCUMENT}"
+    DOCUMENT_URI="${DOCUMENT_ABSPATH:+$DOCUMENT_ABSPATH/}${DEST##*/}"
+    TEMPLATE_DIR="${4:-}"
+    TEMPLATE="${5:-}"
+    TEMPLATE_CONFIG_EXTRA="${6:-}"
+
+    # verbosity
+    # seems logical to put this elsewhere, but this is a good catch-all for now
+    if [[ ! -e "${DEST}" ]]; then
+        echo "  ${DEST#$DEST_DIR/}"
+    fi
+
+    # document
+    DOCUMENT_CONTENT="${DOCUMENT}.${MARSH_UID}.document"
+    [[ -e "${DOCUMENT_CONTENT}" ]] || return 1
+
+    # document metadata
+    if [[ -f "${DOCUMENT}.${MARSH_UID}.meta.yaml" ]] && [[ -r "${DOCUMENT}.${MARSH_UID}.meta.yaml" ]]; then
+        # parse metadata
+        DOCUMENT_META=$(parse_yaml "${DOCUMENT}.${MARSH_UID}.meta.yaml" "DOCUMENT_")
+        [[ $? -ne 0 ]] && echo "Unable to parse yaml file: ${DOCUMENT}.${MARSH_UID}.meta.yaml" >&2 && return 1
+        DOCUMENT_META_VARS=$(echo "${DOCUMENT_META}" | sed -E -e 's/^([^=]+)=.*/\1/')
+        eval "${DOCUMENT_META}"
+    fi
+
+    # authors
+    if [[ "${DOCUMENT_Authors}" != "" ]]; then
+        # deprecated (no brackets)
+        # Key: foo, bar, baz
+        #DOCUMENT_AUTHORS=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /' -e 's/\([^,]\) /\1\\\&nbsp;/g')
+        DOCUMENT_AUTHORS=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /')
+        DELIM_NUM=$(grep -o ',' <<< "${DOCUMENT_AUTHORS}" | wc -l)
+        if [[ "${DELIM_NUM}" -eq 1 ]]; then
+            DOCUMENT_AUTHORS=$(echo "${DOCUMENT_AUTHORS}" | sed -e  's/,//')
+        fi
+    else
+        # YAML inline array
+        # Key: [ foo, bar, baz ]
+        DOCUMENT_AUTHORS=()
+        eval $(flat_to_array "DOCUMENT_Authors" "DOCUMENT_Authors_")
+        eval $(process_authors "DOCUMENT_AUTHORS" "DOCUMENT_Authors")
+        DOCUMENT_AUTHORS=$(join_delimited ', ' ' and ' ', and ' ${DOCUMENT_AUTHORS[@]})
+    fi
+
+    # state
+    if [[ "${DOCUMENT_State}" != "" ]]; then
+        # deprecated (no brackets)
+        # Key: foo, bar, baz
+        DOCUMENT_State=(${DOCUMENT_State//, /})
+    else
+        # YAML inline array
+        # Key: [ foo, bar, baz ]
+        eval $(flat_to_array "DOCUMENT_State" "DOCUMENT_State_")
+    fi
+
+    # template
+    if [[ "${TEMPLATE_DIR}" != "" ]]; then
+        TEMPLATE_PREFIX="TEMPLATE_"
+        TEMPLATE_META=$(parse_template_metadata "${TEMPLATE_PREFIX}" "${TEMPLATE_DIR}/${TEMPLATE}" "${TEMPLATE_CONFIG_EXTRA}")
+        [[ $? -ne 0 ]] && return 1
+        TEMPLATE_META_VARS=$(echo "${TEMPLATE_META}" | get_variables)
+        eval "${TEMPLATE_META}"
+
+        # partials
+        PARTIALS=("${TEMPLATE_Template_Partials_Redirect:-}" "${TEMPLATE_Template_Partials_Base:-}" "${TEMPLATE_Template_Partials_Body:-}" "${TEMPLATE_Template_Partials_Archive:-}" "${TEMPLATE_Template_Partials_Document:-}" "${TEMPLATE_Template_Partials_Header:-}" "${TEMPLATE_Template_Partials_Footer:-}" "${TEMPLATE_Template_Partials_Nav:-}")
+        # conditionals
+        for J in "${!PARTIALS[@]}"; do
+            [[ "${PARTIALS[$J]}" == "" ]] && continue
+            # grep to avoid unnecessary processing
+            if [[ "$(<${PARTIALS[$J]} grep -Eo '\{\%[ ]*if[ ]+')" != "" ]]; then
+                # template contains conditionals, operate using a copy
+                TEMPLATE_TEMP=$(mktemp "${MARSH_TEMP}/template-XXXXXX")
+                cp "${PARTIALS[$J]}" "${TEMPLATE_TEMP}"
+                PARTIALS[$J]="${TEMPLATE_TEMP}"
+                # process
+                process_conditionals "${PARTIALS[$J]}" "document.state" "contains" "${DOCUMENT_State[@]}"
+                process_conditionals "${PARTIALS[$J]}" "document.type" "contains" "${DOCUMENT_Type[@]}"
+                # remove remaining conditionals
+                clean_conditionals "${PARTIALS[$J]}"
+            fi
+        done
+        TEMPLATE_Template_Partials_Redirect="${PARTIALS[0]:-}"
+        TEMPLATE_Template_Partials_Base="${PARTIALS[1]:-}"
+        TEMPLATE_Template_Partials_Body="${PARTIALS[2]:-}"
+        TEMPLATE_Template_Partials_Archive="${PARTIALS[3]:-}"
+        TEMPLATE_Template_Partials_Document="${PARTIALS[4]:-}"
+        TEMPLATE_Template_Partials_Header="${PARTIALS[5]:-}"
+        TEMPLATE_Template_Partials_Footer="${PARTIALS[6]:-}"
+        TEMPLATE_Template_Partials_Nav="${PARTIALS[7]:-}"
+        TEMPLATE_Template_Partials_Feed_Body="${TEMPLATE_Template_Partials_Feed_Body:-}"
+        TEMPLATE_Template_Partials_Feed_Document="${TEMPLATE_Template_Partials_Feed_Document:-}"
+
+        if [[ "${DOCUMENT_Type}" == "feed" ]]; then
+            if [[ "${TEMPLATE_Template_Partials_Feed_Body:-}" != "" ]]; then
+                cp "${TEMPLATE_Template_Partials_Feed_Body}" "${DEST}"
+            else
+                continue
+            fi
+        else
+            # body template
+            if [[ ! -e "${DEST}" ]]; then
+                if [[ "${TEMPLATE_Template_Partials_Body}" != "" ]]; then
+                    cp "${TEMPLATE_Template_Partials_Body}" "${DEST}"
+                else
+                    echo "Body partial not found for primary template: ${TEMPLATE}" >&2
+                    return 1
+                fi
+            fi
+
+            # base template
+            if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]]; then
+                # redirect
+                TEMPLATE_BASE="${TEMPLATE_Template_Partials_Redirect}"
+            fi
+            TEMPLATE_BASE="${TEMPLATE_BASE:-$TEMPLATE_Template_Partials_Base}"
+            if [[ "${TEMPLATE_BASE}" != "" ]]; then
+                # inject into base template
+                if [[ -f "${TEMPLATE_BASE}" ]] && [[ -r "${TEMPLATE_BASE}" ]]; then
+                    cp "${DEST}" "${DEST}.${MARSH_UID}.temp"
+                    cp "${TEMPLATE_BASE}" "${DEST}"
+                    SUB=$(<"${DEST}.${MARSH_UID}.temp" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                    SUB=${SUB%$'\n'}
+                    SUB=${SUB%\\}
+                    sed -E \
+                    -e "/\{\{[ ]*template\.body[ ]*\}\}/s//${SUB:-}/g" \
+                    -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                    unset SUB
+                fi
+            fi
+
+            # remaining templates
+            if [[ -f "${TEMPLATE_Template_Partials_Archive}" ]] && [[ -r "${TEMPLATE_Template_Partials_Archive}" ]]; then
+                SUB=$(<"${TEMPLATE_Template_Partials_Archive}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*template\.archive[ ]*\}\}/s//${SUB:-}/g" \
+                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                unset SUB
+            fi
+            if [[ -f "${TEMPLATE_Template_Partials_Document}" ]] && [[ -r "${TEMPLATE_Template_Partials_Document}" ]]; then
+                SUB=$(<"${TEMPLATE_Template_Partials_Document}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*template\.document[ ]*\}\}/s//${SUB:-}/g" \
+                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                unset SUB
+            fi
+            if [[ -f "${TEMPLATE_Template_Partials_Header}" ]] && [[ -r "${TEMPLATE_Template_Partials_Header}" ]]; then
+                SUB=$(<"${TEMPLATE_Template_Partials_Header}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*template\.header[ ]*\}\}/s//${SUB:-}/g" \
+                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                unset SUB
+            fi
+            if [[ -f "${TEMPLATE_Template_Partials_Footer}" ]] && [[ -r "${TEMPLATE_Template_Partials_Footer}" ]]; then
+                SUB=$(<"${TEMPLATE_Template_Partials_Footer}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*template\.footer[ ]*\}\}/s//${SUB:-}/g" \
+                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                unset SUB
+            fi
+            if [[ -f "${TEMPLATE_Template_Partials_Nav}" ]] && [[ -r "${TEMPLATE_Template_Partials_Nav}" ]]; then
+                SUB=$(<"${TEMPLATE_Template_Partials_Nav}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*template\.nav[ ]*\}\}/s//${SUB:-}/g" \
+                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                unset SUB
+            fi
+
+            # scripts and styles
+            TEMPLATE_SCRIPTS=""
+            for SCRIPT in ${TEMPLATE_ASSETS_SCRIPTS[@]}; do
+                TEMPLATE_SCRIPTS="${TEMPLATE_SCRIPTS}<script src=\"${DOCUMENT_RELPATH}${SCRIPT}\"></script>"
+            done
+            TEMPLATE_SCRIPTS=$(echo "${TEMPLATE_SCRIPTS}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+            TEMPLATE_STYLES=""
+            for STYLE in ${TEMPLATE_ASSETS_STYLES[@]}; do
+                TEMPLATE_STYLES="${TEMPLATE_STYLES}<link rel=\"stylesheet\" href=\"${DOCUMENT_RELPATH}${STYLE}\" />"
+            done
+            TEMPLATE_STYLES=$(echo "${TEMPLATE_STYLES}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+            sed -E \
+            -e '/\{\{[ ]*template\.scripts[ ]*\}\}/s||'"${TEMPLATE_SCRIPTS}"'|g' \
+            -e '/\{\{[ ]*template\.styles[ ]*\}\}/s||'"${TEMPLATE_STYLES}"'|g' \
+            -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+            # advanced navigation
+            for NAV in $(cd "${DEST_DIR}/${TARGET_DIR}" && find . -name "*.${MARSH_UID}.advanced-nav.html" | sed 's/^\.\///'); do
+                NAV_NAME="${NAV##*/}"
+                NAV_NAME="${NAV_NAME%.$MARSH_UID.advanced-nav.html}.html"
+                NAV_NAME=$(echo "${NAV_NAME}" | sed -E -e 's/\.(markdown|md|mkd|mkdn|mdown)(.html)$/\2/')
+                NAV_DIR="./${NAV}"
+                NAV_DIR="${NAV_DIR%/*}"
+                NAV_DIR="${NAV_DIR#./}"
+                if is_child "${DEST_DIR}/${TARGET_DIR}/${NAV_DIR}" "${DOCUMENT}"; then
+                    NAV_RELPATH="${DOCUMENT_DIR#$NAV_DIR}"
+                    NAV_RELPATH="${NAV_RELPATH//[^\/]}"     # leave only slashes
+                    NAV_RELPATH="${NAV_RELPATH//[\/]/../}"  # slashes to dirs
+                    NAV_RELPATH="${NAV_RELPATH:-.}"         # empty to current dir
+                    NAV_RELPATH="${NAV_RELPATH%/}"          # drop trailing slash
+                    <"${DEST_DIR}/${TARGET_DIR}/${NAV}" sed -E \
+                    -e 's|<h1>([^<]+)</h1>|<h1><a href="'"${NAV_RELPATH}/${NAV_NAME}"'">\1</a></h1>|' \
+                    -e 's|(<a href=")([^.])|\1'"${NAV_RELPATH}/"'\2|g' \
+                    -e 's|<a (href="[^"]*'"${DEST_NAME}.html"'"[^>]*)>([^<>]+)</a>|<a \1 class="selected">\2</a>|g' \
+                    > "${DEST}.${MARSH_UID}.temp"
+                    SUB=$(<"${DEST}.${MARSH_UID}.temp" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                    SUB=${SUB%$'\n'}
+                    SUB=${SUB%\\}
+                    sed -E \
+                    -e "/\{\{[ ]*navigation[ ]*\}\}/s//${SUB}/g" \
+                    -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                    unset SUB
+                fi
+            done
+            sed -E \
+            -e 's/\{\{[ ]*navigation[ ]*\}\}//g' \
+            -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+        fi # DOCUMENT_Type == "feed" else
+
+        # remove unused/unknown template includes
+        sed -E \
+        -e '/\{\{[ ]*template(\.[a-z]+)?[ ]*\}\}/s///' \
+        -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+        # template tags
+        replace_tags "${DEST}" "DOCUMENT_"
+
+        # subdocuments
+        OIFS="${IFS}"
+        IFS=$'\n'
+        SUBDOCUMENTS=($(cd "${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}" && find . -name "${DEST_NAME}${DOCUMENT_EXT:+.$DOCUMENT_EXT}.*" | grep -E '.+\.'"${MARSH_UID}"'\.subdocuments\.[0-9]+\.document$' | sed 's/^\.\///' | sed -E -e 's/(\.'"${MARSH_UID}"'\.subdocuments\.)/\1\|/' | sort -t \| -k2 -g | sed -E -e 's/(\.'"${MARSH_UID}"'\.subdocuments\.)\|/\1/'))
+        IFS="${OIFS}"
+        if [[ "${#SUBDOCUMENTS[@]}" -gt 0 ]]; then
+            for J in ${!SUBDOCUMENTS[@]}; do
+                # full path
+                SUBDOCUMENT="${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/${SUBDOCUMENTS[$J]}"
+                # document metadata
+                if [[ -f "${SUBDOCUMENT%.document}.meta.yaml" ]] && [[ -r "${SUBDOCUMENT%.document}.meta.yaml" ]]; then
+                    # parse metadata
+                    SUBDOCUMENT_META=$(parse_yaml "${SUBDOCUMENT%.document}.meta.yaml" "SUBDOCUMENT_")
+                    [[ $? -ne 0 ]] && echo "Unable to parse yaml file: ${SUBDOCUMENT%.document}.meta.yaml" >&2 && return 1
+                    SUBDOCUMENT_META_VARS=$(echo "${SUBDOCUMENT_META}" | sed -E -e 's/^([^=]+)=.*/\1/')
+                    eval "${SUBDOCUMENT_META}"
+                fi
+                cp "${SUBDOCUMENT}" "${SUBDOCUMENT}.document"
+                SUBDOCUMENT_CONTENT="${SUBDOCUMENT}.document"
+                # authors
+                if [[ "${SUBDOCUMENT_Authors}" != "" ]]; then
+                    # deprecated (no brackets)
+                    # Authors: foo, bar, baz
+                    #SUBDOCUMENT_AUTHORS=$(echo "${SUBDOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /' -e 's/\([^,]\) /\1\\\&nbsp;/g')
+                    SUBDOCUMENT_AUTHORS=$(echo "${SUBDOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /')
+                    DELIM_NUM=$(grep -o ',' <<< "${SUBDOCUMENT_AUTHORS}" | wc -l)
+                    if [[ "${DELIM_NUM}" -eq 1 ]]; then
+                        SUBDOCUMENT_AUTHORS=$(echo "${SUBDOCUMENT_AUTHORS}" | sed -e  's/,//')
+                    fi
+                else
+                    # YAML inline array
+                    # Authors: [ foo, bar, baz ]
+                    SUBDOCUMENT_AUTHORS=()
+                    eval $(flat_to_array "SUBDOCUMENT_Authors" "SUBDOCUMENT_Authors_")
+                    eval $(process_authors "SUBDOCUMENT_AUTHORS" "SUBDOCUMENT_Authors")
+                    SUBDOCUMENT_AUTHORS=$(join_delimited ', ' ' and ' ', and ' ${SUBDOCUMENT_AUTHORS[@]})
+                fi
+                # state
+                if [[ "${SUBDOCUMENT_State}" != "" ]]; then
+                    # deprecated (no brackets)
+                    # Key: foo, bar, baz
+                    SUBDOCUMENT_State=(${SUBDOCUMENT_State//, /})
+                else
+                    # YAML inline array
+                    # Key: [ foo, bar, baz ]
+                    eval $(flat_to_array "SUBDOCUMENT_State" "SUBDOCUMENT_State_")
+                fi
+                if [[ "${DOCUMENT_Type}" == "feed" ]]; then
+                    # document template
+                    if [[ "${TEMPLATE_Template_Partials_Feed_Document:-}" != "" ]]; then
+                        cp "${SUBDOCUMENT}" "${SUBDOCUMENT}.document"
+                        cp "${TEMPLATE_Template_Partials_Feed_Document}" "${SUBDOCUMENT}"
+                    fi
+                else
+                    # markdown to html
+                    <"${SUBDOCUMENT}" process_markdown > "${SUBDOCUMENT}.document"
+                    # document template
+                    cp "${TEMPLATE_Template_Partials_Document}" "${SUBDOCUMENT}"
+                fi
+                # inject html into template
+                SUB=$(<"${SUBDOCUMENT}.document" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*document[ ]*\}\}/s//${SUB}/g" \
+                -i".${MARSH_UID}.backup" "${SUBDOCUMENT}" && rm -f "${SUBDOCUMENT}.${MARSH_UID}.backup"
+                unset SUB
+                sed -E \
+                -e 's/\{\{[ ]*subdocuments[ ]*\}\}//g' \
+                -i".${MARSH_UID}.backup" "${SUBDOCUMENT}" && rm -f "${SUBDOCUMENT}.${MARSH_UID}.backup"
+                # template tags
+                replace_tags "${SUBDOCUMENT}" "SUBDOCUMENT_"
+                # combine with previous subdocuments
+                cat "${SUBDOCUMENT}" >> "${DOCUMENT}.${MARSH_UID}.subdocuments"
+                # unset temporary global variables
+                for VAR in ${SUBDOCUMENT_META_VARS[@]}; do unset "${VAR}"; done
+            done
+            cp "${DEST}" "${DEST}.temp"
+            <"${DEST}.temp" awk 'BEGIN { while (getline < "'"${DOCUMENT}.${MARSH_UID}.subdocuments"'") txt=txt $0 "\n"; gsub(/[&]/, "\\\\&", txt) } /\{\{[ ]*subdocuments[ ]*\}\}/{ gsub(/\{\{[ ]*subdocuments[ ]*\}\}/, txt) } 1' > "${DEST}"
+        fi
+
+        # unset temporary global variables
+        for VAR in ${TEMPLATE_META_VARS[@]}; do unset "${VAR}"; done
+    else
+        cp "${DOCUMENT_CONTENT}" "${DEST}"
+    fi  # TEMPLATE_DIR != "" else
+
+    # smart comment tags
+    sed -E \
+    -e 's|<!--[ ]*([a-z]+)\.([^ ]*)[ ]*(.*)-->|<\1 class="\2" \3>|g' \
+    -e 's|<!--[ ]*([a-z]+)\#([^ ]*)[ ]*(.*)-->|<\1 id="\2" \3>|g' \
+    -e 's|<!--[ ]*\/([a-z]+)([.#])([^ ]*)[ ]*-->|</\1><!-- end \1\2\3 -->|g' \
+    -e 's|<!--[ ]*\.([^ ]*)[ ]*(.*)-->|<div class="\1" \2>|g' \
+    -e 's|<!--[ ]*\#([^ ]*)[ ]*(.*)-->|<div id="\1" \2>|g' \
+    -e 's|<!--[ ]*\/([.#])([^ ]*)[ ]*-->|</div><!-- end div\1\2 -->|g' \
+    -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+    # multiple classes foo.bar.baz to foo bar baz
+    sed -E \
+    -e ':a' -e 's|class="([^."]+)\.([^"]+)"|class="\1 \2"|g' -e 'ta' \
+    -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+    # unwrap figures
+    sed -E \
+    -e 's|<p><figure>|<figure>|' \
+    -e 's|</figure></p>|</figure>|' \
+    -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+    # unset temporary global variables
+    for VAR in ${DOCUMENT_META_VARS[@]}; do unset "${VAR}"; done
+}
+
+# builds a document from a single file
+function build_document {  # build_document dest_dir target_dir document advanced_nav_name
+    local DEST_DIR TARGET_DIR DOCUMENT ADVANCED_NAV
+    local DOCUMENT_EXT DEST DEST_NAME
+
+    # init
+    DEST_DIR="${1:-.}"
+    DEST_DIR="${DEST_DIR%/}"
+    TARGET_DIR="${2:-.}"
+    TARGET_DIR="${TARGET_DIR%/}"
+    DOCUMENT="${3:-}"
+    [[ "${DOCUMENT}" == "" ]] && return 1
+    DOCUMENT_EXT="${DOCUMENT##*.}"
+    DOCUMENT_DIR="./${DOCUMENT}"
+    DOCUMENT_DIR="${DOCUMENT_DIR%/*}"
+    DOCUMENT_DIR="${DOCUMENT_DIR#./}"
+    DOCUMENT="${DEST_DIR}/${TARGET_DIR}/${DOCUMENT}"
+    TEMPLATE_DIR="${4:-}"
+    TEMPLATE_CONFIG_EXTRA="${5:-}"
+    ADVANCED_NAV="${6:-}"
+    ADVANCED_NAV="${ADVANCED_NAV%.$DOCUMENT_EXT}"
+
+    # normalize extensions
+    if echo "${DOCUMENT_EXT}" | grep -Ei '^(markdown|md|mkd|mkdn|mdown)$' >/dev/null 2>&1; then
+        DOCUMENT_EXT="markdown"
+    fi
+
+    # skip existing final document
+    if [[ "${DOCUMENT_EXT}" == "markdown" ]] && [[ -e "${DOCUMENT%.*}.html" ]]; then
+        return 0
+    fi
+
+    # split yaml and markdown, keep original
+    if head -n 1 "${DOCUMENT}" 2>/dev/null | grep -E '^---[ ]*(#.*)?$' >/dev/null 2>&1; then
+        echo "---" > "${DOCUMENT}.${MARSH_UID}.meta.yaml"
+        <"${DOCUMENT}" awk '{ drop = 0; } /^---[ ]*(#.*)?$/ { if (NR==1) { drop = 1 } else if (NR>1) { exit } else { drop = 0; next } } drop == 0 { print }' >> "${DOCUMENT}.${MARSH_UID}.meta.yaml"
+        <"${DOCUMENT}" tail -n +$(wc -l "${DOCUMENT}.${MARSH_UID}.meta.yaml" | awk '{ print $1+3 }') > "${DOCUMENT}.${MARSH_UID}.document"
+        echo "..." >> "${DOCUMENT}.${MARSH_UID}.meta.yaml"
+    fi
+
+    if [[ "${DOCUMENT_EXT}" == "markdown" ]]; then
+        # preprocess markdown to add implicit figures
+        # convert preprocessed markdown to html
+        cp "${DOCUMENT}.${MARSH_UID}.document" "${DOCUMENT}.${MARSH_UID}.document.temp"
+        <"${DOCUMENT}.${MARSH_UID}.document.temp" sed -E \
+        -e 's|^!\[(.+)]\([ ]*([^ ]+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' |
+        process_markdown > "${DOCUMENT}.${MARSH_UID}.document"
+    fi
+
+    # unset temporary global variables
+    for VAR in ${DOCUMENT_META_VARS[@]}; do unset "${VAR}"; done
+}
+
+# builds a target, parallel if possible
+function build_target {  # build_target dest_dir target advanced_nav templates_dir #templates[@] templates[@] #templates_config_extra[@] templates_config_extra[@]
+    local DEST_DIR TARGET ADVANCED_NAV TEMPLATES_DIR NUM_TEMPLATES TEMPLATES NUM_TEMPLATES_CONFIG_EXTRA TEMPLATES_CONFIG_EXTRA
+    local TEMPLATE_META TEMPLATE_META_VARS
+    local TARGET_DIR TEMPLATE_PREFIX DOCUMENTS PARALLEL
+
+    # init
+    DEST_DIR="${1:-.}"
+    DEST_DIR="${DEST_DIR%/}"
+    TARGET="${2:-}"
+    TARGET="${TARGET%/}"
+    TARGET_DIR="${TARGET%/*}"
+    TARGET_DIR="${TARGET_DIR:-.}"
+    TARGET="${TARGET:-*}"
+    ADVANCED_NAV="${3:-}"
+    TEMPLATES_DIR="${4:-}"
+    shift 4
+    NUM_TEMPLATES="${1:-0}"
+    shift 1
+    TEMPLATES=()
+    while [[ "${NUM_TEMPLATES}" -gt 0 ]] && [[ "${#@}" -gt 0 ]]; do
+        TEMPLATES+=("${1}")
+        NUM_TEMPLATES=$((NUM_TEMPLATES - 1 ))
+        shift
+    done
+    NUM_TEMPLATES_CONFIG_EXTRA="${1:-0}"
+    shift 1
+    TEMPLATES_CONFIG_EXTRA=()
+    while [[ "${NUM_TEMPLATES_CONFIG_EXTRA}" -gt 0 ]] && [[ "${#@}" -gt 0 ]]; do
+        TEMPLATES_CONFIG_EXTRA+=("${1}")
+        NUM_TEMPLATES_CONFIG_EXTRA=$((NUM_TEMPLATES_CONFIG_EXTRA - 1 ))
+        shift
+    done
+
+    # copy template assets
+    if [[ "${TEMPLATES_DIR}" != "" ]]; then
+        for I in "${!TEMPLATES[@]}"; do
+            TEMPLATE_PREFIX="TEMPLATE_"
+            TEMPLATE_META=$(parse_template_metadata "${TEMPLATE_PREFIX}" "${TEMPLATES_DIR}/${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]}")
+            [[ $? -ne 0 ]] && return 1
+            TEMPLATE_META_VARS=$(echo "${TEMPLATE_META}" | get_variables)
+            eval "${TEMPLATE_META}"
+            for ASSET in ${TEMPLATE_ASSETS_FONTS[@]} ${TEMPLATE_ASSETS_STYLES[@]} ${TEMPLATE_ASSETS_SCRIPTS[@]}; do
+                ASSET="${ASSET%\?*}"
+                if [[ -d "${TEMPLATES_DIR}/${TEMPLATES[$I]}/${ASSET}" ]]; then
+                    mkdir -p "${DEST_DIR}/${TARGET_DIR}/${ASSET}"
+                elif [[ -f "${TEMPLATES_DIR}/${TEMPLATES[$I]}/${ASSET}" ]]; then
+                    mkdir -p "${DEST_DIR}/${TARGET_DIR}/${ASSET%/*}"
+                fi
+                if [[ -e "${TEMPLATES_DIR}/${TEMPLATES[$I]}/${ASSET}" ]] && [[ -r "${TEMPLATES_DIR}/${TEMPLATES[$I]}/${ASSET}" ]]; then
+                    cp -R "${TEMPLATES_DIR}/${TEMPLATES[$I]}/${ASSET}" "${DEST_DIR}/${TARGET_DIR}/${ASSET}"
+                fi
+            done
+            # unset temporary global variables
+            for VAR in ${TEMPLATE_META_VARS[@]}; do unset "${VAR}"; done
+        done
+    fi
+
+    # build target documents
+    if [[ "${TARGET}" == '*' ]]; then
+        DOCUMENTS=$(cd "${DEST_DIR}/${TARGET_DIR}" && find *)
+    elif [[ -d "${DEST_DIR}/${TARGET}" ]]; then
+        DOCUMENTS=$(cd "${DEST_DIR}/${TARGET}" && find .)
+    else
+        DOCUMENTS=$(cd "${DEST_DIR}/${TARGET_DIR}" && find "${TARGET##*/}")
+    fi
+    DOCUMENTS=$(echo "${DOCUMENTS}" | grep -Ei '\.(markdown|md|mkd|mkdn|mdown|xml)$' | sed 's/^\.\///')
+    PARALLEL=$(which parallel)
+    if [[ "${PARALLEL:-}" != "" ]] && [[ "$(${PARALLEL} --version --no-notice 2>/dev/null | head -n 1 | grep -o 'GNU parallel')" == "GNU parallel" ]]; then
+        # in parallel
+        export -f build_document
+        if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${SELF_DIR}/${SELF}" build-document "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
+            echo "Unable to build template: ${TEMPLATES[$I]}"
+            return 1
+        fi
+        if [[ "${TEMPLATES_DIR}" != "" ]] && [[ "${#TEMPLATES[@]}" -gt 0 ]]; then
+            export -f build_template
+            for I in "${!TEMPLATES[@]}"; do
+                if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${SELF_DIR}/${SELF}" build-templates "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
+                    echo "Unable to build template: ${TEMPLATES[$I]}"
+                    return 1
+                fi
+            done
+        fi
+    else
+        # serially
+        for DOCUMENT in ${DOCUMENTS[@]}; do
+            if ! build_document "${DEST_DIR}" "${TARGET_DIR}" "${DOCUMENT}" "${ADVANCED_NAV}"; then
+                echo "Unable to build document: ${DOCUMENT}"
+                return 1
+            fi
+            if [[ "${TEMPLATES_DIR}" != "" ]] && [[ "${#TEMPLATES[@]}" -gt 0 ]]; then
+                for I in "${!TEMPLATES[@]}"; do
+                    if ! build_template "${DEST_DIR}" "${TARGET_DIR}" "${DOCUMENT}" "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}"; then
+                        echo "Unable to build template: ${TEMPLATES[$I]}"
+                        return 1
+                    fi
+                done
+            fi
+        done
+    fi
+}
+
+# removes temporary files used during target builds
+function clean_target {  # clean_target target
+    local TARGET
+    TARGET="${1:-}"; [[ "${TARGET}" == "" ]] && return 1
+    find "${TARGET}" \( -iname '*.markdown' -or -iname '*.md' -or -iname '*.mkd' -or -iname '*.mkdn' -or -iname '*.mdown' -or -iname '*.marsh.feed' -or -name '*.'"${MARSH_UID}"'.*' \) -delete
+}
+
+# commands
+COMMANDS=('build' 'build-document' 'build-templates')
+COMMAND="${1:-}"
+
+# validate command
+if [[ ! "${COMMAND}" =~ ^- ]]; then
+    if [[ "${COMMAND}" == "" ]]; then
+        # command not specified
+        echo "Command not specified" >&2
+        echo -e "${HELP}"
+        exit 1
+    elif ! in_array "${COMMAND}" "${COMMANDS[@]}"; then
+        # invalid command
+        echo "Invalid command: ${COMMAND}" >&2
+        echo -e "${HELP}"
+        exit 1
+    fi
+    shift 1
+else
+    # continue processing arguments
+    COMMAND=""
+fi
+
+# args
+FETCH=false
+FORCE=false
+MARKDOWN=""
+OPTIND=1
+OPTSPEC=":-:hv"
+OPTARRAY=('-h' '--help' '-v' '--version' '--fetch' '--force' '--markdown' '--markdown-options')  # all short and long options
+while getopts "${OPTSPEC}" OPT; do
+    case "${OPT}" in
+        -)
+            case "${OPTARG}" in
+                help)
+                    # Print help and exit
+                    echo -e "${HELP}"
+                    exit 0
+                    ;;
+                help=*)
+                    # Print help and exit
+                    echo -e "${HELP}"
+                    exit 0
+                    ;;
+                version)
+                    # Print version and exit
+                    echo -e "${NAME} ${VERSION}"
+                    exit 0
+                    ;;
+                version=*)
+                    # Print version and exit
+                    echo -e "${NAME} ${VERSION}"
+                    exit 0
+                    ;;
+                markdown-options)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARKDOWN_OPTIONS="${!OPTIND}"
+                    OIFS="${IFS}"
+                    IFS=$'\n'
+                    MARKDOWN_OPTIONS=(${MARKDOWN_OPTIONS//,/$IFS})
+                    IFS="${OIFS}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                markdown-options=*)
+                    MARKDOWN_OPTIONS="${OPTARG#*=}"
+                    OIFS="${IFS}"
+                    IFS=$'\n'
+                    MARKDOWN_OPTIONS=(${MARKDOWN_OPTIONS//,/$IFS})
+                    IFS="${OIFS}"
+                    ;;
+                markdown)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARKDOWN="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                markdown=*)
+                    MARKDOWN="${OPTARG#*=}"
+                    ;;
+                fetch)
+                    FETCH=true
+                    ;;
+                fetch=*)
+                    # Option with prohibited value
+                    echo "Option --${OPTARG%%=*} takes no value" >&2
+                    echo -e "${HELP}"
+                    exit 1
+                    ;;
+                force)
+                    FORCE=true
+                    ;;
+                force=*)
+                    # Option with prohibited value
+                    echo "Option --${OPTARG%%=*} takes no value" >&2
+                    echo -e "${HELP}"
+                    exit 1
+                    ;;
+                *)
+                    if [[ "${OPTERR}" == 1 ]]; then
+                        # Invalid option specified
+                        echo "Invalid option: --${OPTARG}" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    ;;
+            esac
+            ;;
+        h)
+            # Print help and exit
+            echo -e "${HELP}"
+            exit 0
+            ;;
+        v)
+            # Print version and exit
+            echo "${NAME} ${VERSION}"
+            exit 0
+            ;;
+        :)
+            # Option without required value
+            echo "Option -${OPTARG} requires a value" >&2
+            echo -e "${HELP}"
+            exit 1
+            ;;
+        \?)
+            # Invalid option specified
+            echo "Invalid option: -${OPTARG}" >&2
+            echo -e "${HELP}"
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND - 1))
+
+# revalidate command
+if [[ "${COMMAND}" == "" ]]; then
+    # command not specified
+    echo "Command not specified" >&2
+    echo -e "${HELP}"
+    exit 1
+elif ! in_array "${COMMAND}" "${COMMANDS[@]}"; then
+    # invalid command
+    echo "Invalid command: ${COMMAND}" >&2
+    echo -e "${HELP}"
+    exit 1
+fi
+
+# parse config
+if [[ "${MARSH_CONFIG_FILE:-}" == "" ]]; then
+    MARSH_CONFIG_FILE="${1:-$SELF_DIR}"
+    if [[ -d "${MARSH_CONFIG_FILE}" ]]; then
+        MARSH_CONFIG_FILE="$(cd ${MARSH_CONFIG_FILE} && (pwd -P . 2>/dev/null || command pwd))"
+        [[ "${MARSH_CONFIG_FILE}" != "" ]] && MARSH_CONFIG_FILE="${MARSH_CONFIG_FILE%/}/config.yaml"
+    fi
+    if [[ -f "${MARSH_CONFIG_FILE}" ]] && [[ -r "${MARSH_CONFIG_FILE}" ]]; then
+        MARSH_CONFIG=$(parse_yaml "${MARSH_CONFIG_FILE}" "CONFIG_")
+        [[ $? -ne 0 ]] && echo "Unable to parse yaml file: ${MARSH_CONFIG_FILE}" >&2 && return 1
+        eval "${MARSH_CONFIG}"
+    else
+        echo "Configuration file not found: ${MARSH_CONFIG_FILE#$SELF_DIR/}" >&2
+        exit 1
+    fi
+    if [[ "${CONFIG_Build_Path:-}" != "" ]]; then
+        MARSH_CONFIG_PATH="${CONFIG_Build_Path}"
+        [[ "${MARSH_CONFIG_FILE}" =~ / ]] && MARSH_CONFIG_FILE_DIR="${MARSH_CONFIG_FILE%/*}"
+        MARSH_CONFIG_FILE_DIR="${MARSH_CONFIG_FILE_DIR:-.}"
+        [[ ! "${MARSH_CONFIG_PATH}" =~ ^/ ]] && MARSH_CONFIG_PATH="${MARSH_CONFIG_FILE_DIR}/${MARSH_CONFIG_PATH}"
+        MARSH_CONFIG_PATH="${MARSH_CONFIG_PATH#./}"
+    else
+        echo "Build directory empty or not found in config: ${MARSH_CONFIG_FILE}" >&2
+        exit 1
+    fi
+    MARSH_CONFIG_URL="${CONFIG_Build_URL:-}"
+    export MARSH_CONFIG_FILE MARSH_CONFIG_FILE_DIR MARSH_CONFIG_PATH MARSH_CONFIG_URL
+fi
+
+# dependencies
+GIT="git"
+MD5="md5sum"
+[[ "$(uname | awk '{ print tolower($0) }')" == "darwin" ]] && MD5="md5"
+MARKDOWN="${MARKDOWN:-markdown}"
+MARKDOWN_VERSION_REQ="2.2.1"
+DEPS_MISSING=()
+dependency_exists "${MD5}" || DEPS_MISSING+=("${MD5}")
+if dependency_exists "${GIT}"; then
+    GIT_VERSION=$("${GIT}" --version | head -n 1 | sed -E -e 's/^git +version +([0-9]+(\.[0-9]+(\.[0-9]+)?)?).*$/\1/')
+    [[ $(version "${GIT_VERSION:-}") -ge $(version "2.3") ]] && export GIT_TERMINAL_PROMPT=0
+else
+    DEPS_MISSING+=("${GIT}")
+fi
+if dependency_exists "${MARKDOWN}"; then
+    MARKDOWN_VERSION=$("${MARKDOWN%%\ *}" -V | head -n 1 | sed -E -e 's/^markdown: +discount +([0-9]+(\.[0-9]+(\.[0-9]+)?)?).*$/\1/')
+    [[ $(version "${MARKDOWN_VERSION:-}") -ge $(version "${MARKDOWN_VERSION_REQ}") ]] || DEPS_MISSING+=("${MARKDOWN}")
+else
+    DEPS_MISSING+=("${MARKDOWN}")
+fi
+if [[ "${#DEPS_MISSING[@]}" -gt 0 ]]; then
+    in_array "${MD5}" "${DEPS_MISSING[@]}" && print_dependency "md5sum (md5 on Darwin/macOS)"
+    in_array "${GIT}" "${DEPS_MISSING[@]}" && print_dependency "Git" "https://git-scm.com/"
+    in_array "${MARKDOWN}" "${DEPS_MISSING[@]}" && print_dependency "Discount markdown" "http://www.pell.portland.or.us/~orc/Code/discount/" "${MARKDOWN_VERSION_REQ:-}" "${MARKDOWN_VERSION:-}"
+    exit 1
+fi
+
+# discount markdown options
+if [[ -z ${MARKDOWN_OPTIONS+isset} ]]; then
+    MARKDOWN_OPTIONS=(${MARKDOWN_OPTIONS_DEFAULT[@]})
+fi
+for I in "${!MARKDOWN_OPTIONS[@]}"; do
+    MARKDOWN_OPTIONS[$I]="-f${MARKDOWN_OPTIONS[$I]}"
+done
+OIFS="${IFS}"
+IFS=$'\n'
+MARKDOWN_UNKNOWN=($(echo "test options" | "${MARKDOWN}" ${MARKDOWN_OPTIONS[@]} -VV 2>&1 >/dev/null | grep -i "unknown" | sed -E -e 's/^markdown: unknown option <([^>]+)>$/\1/'))
+IFS="${OIFS}"
+if [[ "${#MARKDOWN_UNKNOWN[@]}" -gt 0 ]]; then
+    echo -n "Unknown markdown options:" >&2
+    for UNKNOWN in "${MARKDOWN_UNKNOWN[@]}"; do
+        echo -n " '${UNKNOWN}'" >&2
+    done
+    echo ""
+    exit
+fi
+function process_markdown {
+    # re[lv]="footnote" is not valid html5; remove it
+    if [[ "${#MARKDOWN_OPTIONS[@]}" -gt 0 ]]; then
+        "${MARKDOWN}" ${MARKDOWN_OPTIONS[@]} ${@} | sed -E -e '/<a href="#[a-z]+:[^"]+" re[lv]="footnote">/s/ re[lv]="footnote"//g'
+    else
+        "${MARKDOWN}" ${@} | sed -E -e '/<a href="#[a-z]+:[^"]+" re[lv]="footnote">/s/ re[lv]="footnote"//g'
+    fi
+}
+export -f process_markdown
+
+# create target directory
+mkdir -p "${MARSH_CONFIG_PATH}"
+
+# keep temporary directory creation close to trap to catch quick SIGINT
+# temporary directory
+if [[ "${MARSH_UID:-}" == "" ]]; then
+    MARSH_TEMP=$(mktemp -d "${TMPDIR:-/tmp/}marsh-XXXXXX")
+    MARSH_UID="marsh-${MARSH_TEMP##*marsh-}"
+    export MARSH_TEMP MARSH_UID
+fi
+TEMPLATES_DIR="${MARSH_TEMP}/templates"
+mkdir -p "${TEMPLATES_DIR}"
+
+# kills child processes and removes temporary files
+function die_gracefully {  # die_gracefully
+    trap - EXIT INT
+    trap ":" INT  # prevent recursion due to spamming ctrl-c
+    echo "Killing all processes and cleaning up (ETA ~3 seconds)..." >&2
+    #trap - INT && kill -2 -- -$$  # should not be needed with `parallel --halt now,fail=1 ...`
+    sleep 2
+    rm -rf "${MARSH_TEMP}" || "Temporary files may still remain at: ${MARSH_TEMP}" >&2
+    sleep 1
+    trap - TERM && kill -- -$$
+}
+
+# work
+if [[ "${COMMAND}" == "build" ]]; then
+    # die gracefully
+    trap "die_gracefully" EXIT INT TERM
+
+    # build everything
+    echo "${CONFIG_Build_Namex:-No Name} (${MARSH_CONFIG_FILE#$SELF_DIR/})"
+    echo "${CONFIG_Build_Path%/} -> ${CONFIG_Build_URL%/}"
+
+    # build
+    INDEX=0
+    PREFIX="CONFIG_Build_Targets_${INDEX}_"
+    while META=$(get_target_metadata "${PREFIX}" "TARGET_"); do
+        eval "${META}"
+        META_VARS=$(echo "${META}" | get_variables)
+
+        # get template
+        for I in "${!TARGET_TEMPLATES[@]}"; do
+            if [[ ! -e "${TEMPLATES_DIR}/${TARGET_TEMPLATES[$I]}" ]]; then
+                # fetch remote?
+                if [[ "${TARGET_TEMPLATES_FETCH[$I]}" == true ]] || [[ "${FETCH}" == true ]]; then
+                    TARGET_TEMPLATES_FETCH[$I]=true
+                fi
+                if [[ "${TARGET_TEMPLATES_REMOTE[$I]}" == "" ]] && [[ ! "${TARGET_TEMPLATES_SOURCE[$I]}" =~ ^/ ]]; then
+                    TARGET_TEMPLATES_SOURCE[$I]="${MARSH_CONFIG_FILE_DIR}/${TARGET_TEMPLATES_SOURCE[$I]}"
+                    TARGET_TEMPLATES_SOURCE[$I]="${TARGET_TEMPLATES_SOURCE[$I]#./}"
+                fi
+                if [[ "${TARGET_TEMPLATES_CONFIG[$I]}" != "" ]] && [[ ! "${TARGET_TEMPLATES_CONFIG[$I]}" =~ ^/ ]]; then
+                    TARGET_TEMPLATES_CONFIG[$I]="${MARSH_CONFIG_FILE_DIR}/${TARGET_TEMPLATES_CONFIG[$I]}"
+                    TARGET_TEMPLATES_CONFIG[$I]="${TARGET_TEMPLATES_CONFIG[$I]#./}"
+                fi
+                get_files "${TARGET_TEMPLATES_SOURCE[$I]}/*" \
+                          "${TEMPLATES_DIR}/${TARGET_TEMPLATES[$I]}" \
+                          false \
+                          "${TARGET_TEMPLATES_FETCH[$I]}" \
+                          "${TARGET_TEMPLATES_REMOTE[$I]}" || die_gracefully
+            fi
+        done
+
+        # get source files for target
+        if [[ "${TARGET_FORCE}" == true ]] || [[ "${FORCE}" == true ]]; then
+            TARGET_FORCE=true
+        fi
+        if [[ "${TARGET_FETCH}" == true ]] || [[ "${FETCH}" == true ]]; then
+            TARGET_FETCH=true
+        fi
+        if [[ "${TARGET_REMOTE}" == "" ]] && [[ ! "${TARGET_SOURCE}" =~ ^/ ]]; then
+            TARGET_SOURCE="${MARSH_CONFIG_FILE_DIR}/${TARGET_SOURCE}"
+            TARGET_SOURCE="${TARGET_SOURCE#./}"
+        fi
+        if [[ "${TARGET_SOURCE}" != "" ]]; then
+            get_files "${TARGET_SOURCE}" \
+                      "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
+                      "${TARGET_FORCE}" \
+                      "${TARGET_FETCH}" \
+                      "${TARGET_REMOTE}" || die_gracefully
+        fi
+
+        # build advanced navigation
+        if [[ "${TARGET_NAV}" != "" ]]; then
+            build_advanced_nav "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
+                               "${TARGET_NAV}" || die_gracefully
+        fi
+
+        # build target
+        build_target "${MARSH_CONFIG_PATH}" \
+                     "${TARGET_PATH}" \
+                     "${TARGET_NAV}" \
+                     "${TEMPLATES_DIR}" \
+                     "${#TARGET_TEMPLATES[@]}" \
+                     "${TARGET_TEMPLATES[@]}" \
+                     "${#TARGET_TEMPLATES_CONFIG[@]}" \
+                     "${TARGET_TEMPLATES_CONFIG[@]}" || die_gracefully
+
+        # archives
+        for I in "${!TARGET_ARCHIVES[@]}"; do
+            if [[ "${TARGET_ARCHIVES[$I]}" != "" ]]; then
+                OIFS="${IFS}"
+                IFS=$(echo @|tr @ '\034')
+                TARGET_ARCHIVE_TYPES=(${TARGET_ARCHIVES_TYPES[$I]:-})
+                TARGET_ARCHIVE_EXCLUDED_STATES=(${TARGET_ARCHIVES_EXCLUDED_STATES[$I]:-})
+                IFS="${OIFS}"
+                if ! build_index  "archive" \
+                                  "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
+                                  "${TARGET_ARCHIVES[$I]}" \
+                                  "${TARGET_ARCHIVES_NAME[$I]:-$TARGET_NAME}" \
+                                  "${TARGET_ARCHIVES_CONTENT[$I]}" \
+                                  "${TARGET_ARCHIVES_COUNT[$I]}" \
+                                  "${#TARGET_ARCHIVE_TYPES[@]}" \
+                                  "${TARGET_ARCHIVE_TYPES[@]}" \
+                                  "${#TARGET_ARCHIVE_EXCLUDED_STATES[@]}" \
+                                  "${TARGET_ARCHIVE_EXCLUDED_STATES[@]}" \
+                || ! build_target "${MARSH_CONFIG_PATH}" \
+                                  "${TARGET_PATH}/${TARGET_ARCHIVES[$I]}" \
+                                  "" \
+                                  "${TEMPLATES_DIR}" \
+                                  "${#TARGET_TEMPLATES[@]}" \
+                                  "${TARGET_TEMPLATES[@]}" \
+                                  "${#TARGET_TEMPLATES_CONFIG[@]}" \
+                                  "${TARGET_TEMPLATES_CONFIG[@]}"
+                then
+                    die_gracefully
+                fi
+                unset TARGET_ARCHIVE_TYPES TARGET_ARCHIVE_EXCLUDED_STATES
+            fi
+        done
+
+        # feeds
+        for I in "${!TARGET_FEEDS[@]}"; do
+            if [[ "${TARGET_FEEDS[$I]}" != "" ]]; then
+                OIFS="${IFS}"
+                IFS=$(echo @|tr @ '\034')
+                TARGET_FEED_TYPES=(${TARGET_FEEDS_TYPES[$I]:-})
+                TARGET_FEED_EXCLUDED_STATES=(${TARGET_FEEDS_EXCLUDED_STATES[$I]:-})
+                IFS="${OIFS}"
+                if ! build_index  "feed" \
+                                  "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
+                                  "${TARGET_FEEDS[$I]}" \
+                                  "${TARGET_FEEDS_NAME[$I]:-$TARGET_NAME}" \
+                                  "${TARGET_FEEDS_CONTENT[$I]}" \
+                                  "${TARGET_FEEDS_COUNT[$I]}" \
+                                  "${#TARGET_FEEDS_TYPES[@]}" \
+                                  "${TARGET_FEEDS_TYPES[@]}" \
+                                  "${#TARGET_FEEDS_EXCLUDED_STATES[@]}" \
+                                  "${TARGET_FEEDS_EXCLUDED_STATES[@]}" \
+                || ! build_target "${MARSH_CONFIG_PATH}" \
+                                  "${TARGET_PATH}/${TARGET_FEEDS[$I]}" \
+                                  "" \
+                                  "${TEMPLATES_DIR}" \
+                                  "${#TARGET_TEMPLATES[@]}" \
+                                  "${TARGET_TEMPLATES[@]}" \
+                                  "${#TARGET_TEMPLATES_CONFIG[@]}" \
+                                  "${TARGET_TEMPLATES_CONFIG[@]}"
+                then
+                    die_gracefully
+                fi
+                unset TARGET_FEED_TYPES TARGET_FEED_EXCLUDED_STATES
+            fi
+        done
+
+        # clean build files
+        clean_target "${MARSH_CONFIG_PATH}/${TARGET_PATH}"
+
+        # unset temporary global variables
+        for VAR in ${META_VARS[@]}; do unset "${VAR}"; done
+
+        INDEX=$((INDEX+1))
+        PREFIX="CONFIG_Build_Targets_${INDEX}_"
+    done
+
+    # clean up
+    rm -rf "${MARSH_TEMP}"
+    trap - EXIT INT TERM
+elif [[ "${COMMAND}" == "build-document" ]]; then
+    # build single document
+    build_document "${@}"
+elif [[ "${COMMAND}" == "build-templates" ]]; then
+    # build templates for document
+    build_template "${@}"
+fi
+
+# done
+exit 0
