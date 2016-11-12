@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.1.0"
+VERSION="0.2.0"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -15,8 +15,8 @@ MARKDOWN_OPTIONS_DEFAULT=(-1.0 +alphalist -autolink -cdata +definitionlist -divq
 HELP="\
 usage: ${SELF_NAME} [-h | --help]
        ${SELF_NAME} [-v | --version]
-       ${SELF_NAME} build [--fetch] [--force] [--markdown markdown]
-         [--markdown-options opt1,opt2] [config_file]
+       ${SELF_NAME} build [--fetch] [--force] [-j # | --jobs #]
+         [--markdown markdown] [--markdown-options opt1,opt2] [config_file]
 where:
   -h, --help
         display this help text
@@ -26,6 +26,9 @@ where:
         download remote resources
   --force
         remove and replace existing targets (overwrite)
+  -j, --jobs
+        number of concurrent jobs to run using GNU Parallel
+        default: automatically chosen by GNU Parallel, if available
   --markdown
         path to markdown application
   --markdown-options
@@ -1760,17 +1763,17 @@ function build_target {  # build_target dest_dir target advanced_nav templates_d
     fi
     DOCUMENTS=$(echo "${DOCUMENTS}" | grep -Ei '\.(markdown|md|mkd|mkdn|mdown|xml)$' | sed 's/^\.\///')
     PARALLEL=$(which parallel)
-    if [[ "${PARALLEL:-}" != "" ]] && [[ "$(${PARALLEL} --version --no-notice 2>/dev/null | head -n 1 | grep -o 'GNU parallel')" == "GNU parallel" ]]; then
+    if [[ "${JOBS}" != 1 ]] && [[ "${PARALLEL:-}" != "" ]] && [[ "$(${PARALLEL} --version --no-notice 2>/dev/null | head -n 1 | grep -o 'GNU parallel')" == "GNU parallel" ]]; then
         # in parallel
         export -f build_document
-        if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${SELF_DIR}/${SELF}" build-document "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
+        if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${JOBS:+--jobs=$JOBS}" "${SELF_DIR}/${SELF}" build-document "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
             echo "Unable to build template: ${TEMPLATES[$I]}"
             return 1
         fi
         if [[ "${TEMPLATES_DIR}" != "" ]] && [[ "${#TEMPLATES[@]}" -gt 0 ]]; then
             export -f build_template
             for I in "${!TEMPLATES[@]}"; do
-                if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${SELF_DIR}/${SELF}" build-templates "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
+                if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${JOBS:+--jobs=$JOBS}" "${SELF_DIR}/${SELF}" build-templates "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
                     echo "Unable to build template: ${TEMPLATES[$I]}"
                     return 1
                 fi
@@ -1828,10 +1831,11 @@ fi
 # args
 FETCH=false
 FORCE=false
+JOBS=""
 MARKDOWN=""
 OPTIND=1
-OPTSPEC=":-:hv"
-OPTARRAY=('-h' '--help' '-v' '--version' '--fetch' '--force' '--markdown' '--markdown-options')  # all short and long options
+OPTSPEC=":-:hvj:"
+OPTARRAY=('-h' '--help' '-v' '--version' '--fetch' '--force' '-j' '--jobs' '--markdown' '--markdown-options')  # all short and long options
 while getopts "${OPTSPEC}" OPT; do
     case "${OPT}" in
         -)
@@ -1855,6 +1859,29 @@ while getopts "${OPTSPEC}" OPT; do
                     # Print version and exit
                     echo -e "${NAME} ${VERSION}"
                     exit 0
+                    ;;
+                jobs)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    JOBS="${!OPTIND}"
+                    if [[ ! "${JOBS}" =~ ^[1-9][0-9]*$ ]]; then
+                        echo "Option --${OPTARG} requires a numeric value greater than zero" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                jobs=*)
+                    JOBS="${OPTARG#*=}"
+                    if [[ ! "${JOBS}" =~ ^[1-9][0-9]*$ ]]; then
+                        echo "Option --${OPTARG} requires a numeric value greater than zero" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
                     ;;
                 markdown-options)
                     if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
@@ -1927,6 +1954,15 @@ while getopts "${OPTSPEC}" OPT; do
             # Print version and exit
             echo "${NAME} ${VERSION}"
             exit 0
+            ;;
+        j)
+            # Number of jobs
+            JOBS="${OPTARG}"
+            if [[ ! "${JOBS}" =~ ^[1-9][0-9]*$ ]]; then
+                echo "Option -${OPT} requires a numeric value greater than zero" >&2
+                echo -e "${HELP}"
+                exit 1
+            fi
             ;;
         :)
             # Option without required value
