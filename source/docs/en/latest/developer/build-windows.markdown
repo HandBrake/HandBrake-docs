@@ -65,11 +65,11 @@ When complete, you will find `HandBrakeCLI.exe` in the `build` directory and `hb
 The following tools are required to build and run the [GUI](abbr:Graphical User Interface).
 
 - [Microsoft Visual Studio Community Edition](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)
-- *Optional* [Source Tree](https://www.sourcetreeapp.com) git client
+- [Source Tree](https://www.sourcetreeapp.com) git client (optional)
   - Visual Studio 2015 has built-in git support, if you prefer it
-- `hb.dll` (see the LibHB build instructions preceding these, or download from https://handbrake.fr/nightly.php)
+- `hb.dll` (see the LibHB build instructions preceding these, or download from [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php))
 
-Clone https://github.com/HandBrake/HandBrake.git using your git client.
+Clone `https://github.com/HandBrake/HandBrake.git` using your git client.
 
 Source code for the GUI resides in the `win\CS` folder and the solution file is named `HandBrake.sln`.
 
