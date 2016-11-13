@@ -1,6 +1,6 @@
 ---
 Build:
-  Name: HandBrake
+  Name: HandBrake Documentation
   Description: Open source video transcoder
   URL:  https://handbrake.fr
   Path: public
