@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           draft
 Title:           Building HandBrake for Windows
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
