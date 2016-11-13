@@ -1,7 +1,7 @@
 ---
 Type:            article
 State:           draft
-Title:           Building HandBrake for macOS
+Title:           Building HandBrake for Mac
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -14,8 +14,8 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Building HandBrake for macOS
-==========================================
+Building HandBrake for Mac
+==========================
 
 ## Be prepared 
 
