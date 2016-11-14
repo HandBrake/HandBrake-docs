@@ -1,13 +1,12 @@
 ---
 Type:            article
-State:           draft
 Title:           Building HandBrake for Mac
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Authors:         Scott (s55)
+Authors:         Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Scott (s55)
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -17,56 +16,32 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Mac
 ==========================
 
-## Be prepared 
+Dependencies:
 
-The first step is to get your development environment right.
+- [Xcode](https://developer.apple.com/xcode/) 7.2.1 or later
+  - free Apple Developer registration required, or install from the Mac App Store
+- [Command Line Tools for Xcode](https://developer.apple.com/download/more/)
+  - free Apple Developer registration required, or install using `xcode-select --install`
 
- * [Download and install the Xcode Developer Tools](http://developer.apple.com/mac/) (you will need to register with Apple, but it's free)
+Additional dependencies (may be built via script):
 
- * Download, compile, and install a current version of yasm:
+- autoconf
+- automake
+- cmake 3.3.0 or later
+- libtool
+- pkg-config
+- yasm 1.3.0 or later
 
-Open up the Terminal. That's found in your /Applications/Utilities folder. 
+Clone the HandBrake repository.
 
-In the window that appears, type the following:
+    git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-	curl http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz> yasm-1.3.0.tar.gz
-	tar -xvf yasm-1.3.0.tar.gz
-	cd yasm-1.3.0/
-	./configure ; make
+You may build and install the additional dependencies to `/usr/local/` using the included `mac-toolchain-build` script.
 
+    scripts/mac-toolchain-build
 
-When that finishes, you'll need to install yasm. Type the following:
-	
-	sudo make install
+Build HandBrake.
 
-*(You'll need to enter your system password at this point and hit return)*
+    ./configure --launch-jobs=$(sysctl -n hw.ncpu 2>/dev/null) --launch
 
-Once yasm is installed, clean up by typing:
-
-	cd ../
-	rm -rf yasm-1.2.0 yasm-1.2.0.tar.gz 
-
-
-*Leave that Terminal window open for the next step.*
-
-## Meet your maker 
-
-In the Terminal window, type:
-
-	git clone https://github.com/HandBrake/HandBrake.git  handbrake-git
-	cd handbrake-git/
-	./configure --launch --launch-jobs=0 ; open build/
-
-
-This will take awhile. When it's done, you'll see a window in front of you with your freshly-built copies of !HandBrake and HandBrakeCLI.
-
-## Reach enlightenment 
-
-This is just a simple quick-start guide. For the real meat and potatoes, [see the latest OS X build documentation](https://github.com/HandBrake/HandBrake/blob/master/doc/BUILD-Mac). Topics covered there include:
-
- * Running configuration and build commands on subsequent compiles (hint, do it from the build/ directory, not the root)
-
- * Cleaning build files
- 
- * Tweaking contrib libraries
- 
+When complete, you will find `HandBrake.app` and `HandBrakeCLI` in the `build/xroot` directory.
