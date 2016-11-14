@@ -36,7 +36,7 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-You may build and install the additional dependencies to `/usr/local/` using the included `mac-toolchain-build` script.
+You may build and install the additional dependencies to `/usr/local/` using the included script.
 
     scripts/mac-toolchain-build
 
