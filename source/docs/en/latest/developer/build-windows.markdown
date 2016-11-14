@@ -24,19 +24,19 @@ The following instructions are for Ubuntu 16.04 LTS.
 
 Dependencies:
 
-- git
-- yasm [minimum recommended version: 1.3]
-- libtool
-- intltool
-- cmake
-- gcc
-- make
-- patch
-- tar
-- m4
-- python 2 [minimum recommended version: 2.7.1]
+- cmake 3.3.0 or later
 - curl
+- gcc (5.x or later recommended)
+- git
+- intltool
+- libtool
+- make
+- m4 1.4.17 or later
+- patch
+- python 2.7.1 or later (python 3 is currently not supported)
+- tar
 - wget
+- yasm 1.3.0 or later
 
 Install all dependencies.
 
