@@ -30,8 +30,8 @@ Dependencies:
 - git
 - intltool
 - libtool
-- make
 - m4 1.4.17 or later
+- make
 - patch
 - python 2.7.1 or later (python 3 is currently not supported)
 - tar
@@ -40,7 +40,7 @@ Dependencies:
 
 Install all dependencies.
 
-    sudo apt-get install git yasm libtool intltool cmake gcc make patch tar m4 python curl wget
+    sudo apt-get install cmake curl gcc git intltool libtool m4 make patch python tar wget yasm
 
 Clone the HandBrake repository.
 
