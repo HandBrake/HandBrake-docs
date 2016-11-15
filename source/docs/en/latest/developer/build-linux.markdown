@@ -80,6 +80,63 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
     sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkitgtk-3.0-dev
 
+## Fedora dependencies
+
+The following instructions are for Fedora 20 and later.
+
+Dependencies:
+
+- Development Tools
+- Development Libraries
+- bzip2-devel
+- cmake (3.3.0 or later recommended)
+- fontconfig-devel
+- freetype-devel
+- fribidi-devel
+- gcc-c++
+- git
+- harfbuzz-devel
+- jansson-devel
+- lame-devel
+- libass-devel
+- libogg-devel
+- libsamplerate-devel
+- libtheora-devel
+- libtool
+- libvorbis-devel
+- libxml2-devel
+- m4 (1.4.17 or later recommended)
+- make
+- opus-devel
+- patch
+- python 2.7.1 or later (python 3 is currently not supported)
+- tar
+- x264-devel
+- yasm 1.2.0 or later (1.3.0 or later recommended)
+- zlib-devel
+
+Graphical interface dependencies:
+
+- X Software Development
+- GNOME Software Development
+- dbus-glib-devel
+- gstreamer1-devel
+- gstreamer1-plugins-base-devel
+- intltool
+- libgudev1-devel
+- libnotify-devel
+- webkitgtk3-devel
+
+Install dependencies.
+
+    sudo yum groupinstall "Development Tools" "Development Libraries"
+    sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make opus-devel patch python tar x264-devel yasm zlib-devel
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo yum groupinstall "X Software Development" "GNOME Software Development"
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk3-devel
+
 ## Building
 
 Clone the HandBrake repository.
