@@ -25,7 +25,7 @@ Dependencies:
 
 - autoconf
 - build-essential
-- cmake
+- cmake (3.3.0 or later recommended)
 - git
 - libass-dev
 - libbz2-dev
@@ -43,7 +43,7 @@ Dependencies:
 - libvorbis-dev
 - libx264-dev
 - libxml2-dev
-- m4 1.4.17 or later
+- m4 (1.4.17 or later recommended)
 - make
 - patch
 - python 2.7.1 or later (python 3 is currently not supported)

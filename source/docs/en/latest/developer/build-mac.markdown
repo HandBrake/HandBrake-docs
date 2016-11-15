@@ -27,10 +27,10 @@ Additional dependencies (may be built via included script):
 
 - autoconf
 - automake
-- cmake 3.3.0 or later
+- cmake (3.3.0 or later recommended)
 - libtool
 - pkg-config
-- yasm 1.3.0 or later
+- yasm 1.2.0 or later (1.3.0 or later recommended)
 
 Install Xcode and open it once. You may quit Xcode after it has finished loading.
 
