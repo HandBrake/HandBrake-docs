@@ -147,6 +147,7 @@ Table of contents
 - Releases
   - [Linux Flatpaks](developer/flatpak-repo.html)
 - Building HandBrake
+  - [Building HandBrake for Linux](developer/build-linux.html)
   - [Building HandBrake for Mac](developer/build-mac.html)
   - [Building HandBrake for Windows](developer/build-windows.html)
 
