@@ -54,7 +54,7 @@ This process will take a few minutes, then provide you with instructions for add
 
 Compile HandBrake.
 
-    ./configure --cross=x86_64-w64-mingw32 --enable-x265 --enable-qsv --launch-jobs=1 --launch
+    ./configure --cross=x86_64-w64-mingw32 --enable-x265 --enable-qsv --launch-jobs=$(nproc 2>/dev/null) --launch
 
 When complete, you will find `HandBrakeCLI.exe` in the `build` directory and `hb.dll` in `build/libhb`.
 
