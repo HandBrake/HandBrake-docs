@@ -52,7 +52,7 @@ Build the MinGW-w64 toolchain using the provided script, where `username` is you
 
 This process will take a few minutes, then provide you with instructions for adding the resulting binaries location to your environment's `PATH`. Do this now.
 
-Compile HandBrake.
+Build HandBrake.
 
     ./configure --cross=x86_64-w64-mingw32 --enable-x265 --enable-qsv --launch-jobs=$(nproc 2>/dev/null) --launch
 
@@ -70,10 +70,8 @@ The following tools are required to build and run the [GUI](abbr:Graphical User 
 
 Clone `https://github.com/HandBrake/HandBrake.git` using your git client.
 
-Source code for the GUI resides in the `win\CS` folder and the solution file is named `HandBrake.sln`.
-
-Make sure HandBrakeWPF is set as the startup project in the Solution Explorer: right-click on HandBrakeWPF and select "Set as startup project".
+Source code for the GUI resides in the `win\CS` folder and the solution file is named `HandBrake.sln`. Make sure HandBrakeWPF is set as the startup project in the Solution Explorer: right-click on HandBrakeWPF and select "Set as startup project".
 
 To build the GUI, select Build Solution from the Build menu.
 
-Locate the output folder where `HandBrake.exe` is created (typically in `win\CS\HandBrakeWPF\bin\...`, depending on the selected build profile). Copy `hb.dll` to this folder. This completes the build process.
+When complete, locate the output folder where `HandBrake.exe` is created (typically in `win\CS\HandBrakeWPF\bin\...`, depending on the selected build profile). Copy `hb.dll` to this folder. This completes the build process.
