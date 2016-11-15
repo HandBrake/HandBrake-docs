@@ -25,7 +25,7 @@ Dependencies:
 
 - autoconf
 - build-essential
-- cmake (3.3.0 or later recommended)
+- cmake
 - git
 - libass-dev
 - libbz2-dev
@@ -43,7 +43,7 @@ Dependencies:
 - libvorbis-dev
 - libx264-dev
 - libxml2-dev
-- m4 (1.4.17 or later recommended)
+- m4
 - make
 - patch
 - python 2.7.1 or later (python 3 is currently not supported)
@@ -89,7 +89,7 @@ Dependencies:
 - Development Tools
 - Development Libraries
 - bzip2-devel
-- cmake (3.3.0 or later recommended)
+- cmake
 - fontconfig-devel
 - freetype-devel
 - fribidi-devel
@@ -105,7 +105,7 @@ Dependencies:
 - libtool
 - libvorbis-devel
 - libxml2-devel
-- m4 (1.4.17 or later recommended)
+- m4
 - make
 - opus-devel
 - patch
