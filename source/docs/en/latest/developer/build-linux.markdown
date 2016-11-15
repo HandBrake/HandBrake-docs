@@ -17,7 +17,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Linux
 ============================
 
-## Ubuntu
+## Ubuntu dependencies
 
 The following instructions are for Ubuntu 14.04 LTS (Trusty Tahr) and Ubuntu 16.04 LTS (Xenial Xerus).
 
