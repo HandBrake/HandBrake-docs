@@ -28,7 +28,6 @@ Dependencies:
 - curl
 - gcc (5.x or later recommended)
 - git
-- intltool
 - libtool
 - m4 (1.4.17 or later recommended)
 - make
