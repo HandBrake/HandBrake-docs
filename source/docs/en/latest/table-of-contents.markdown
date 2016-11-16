@@ -135,8 +135,9 @@ Table of contents
   *Make sure your system can run HandBrake*
 - [Supported Source formats](technical/source-formats.html)
 - Video
-  - [x264 presets, tunes, and custom settings](technical/video-x264-presets-tunes.html) 
+  - [x264 presets and tunes](technical/video-x264-presets-tunes.html) 
   - [x264 profile and level](technical/video-x264-profiles-levels.html) 
+  - [Intel QuickSync Options](technical/video-qsv-options.html) 
 <!--
 - Advanced Filter Settings
 - Advanced preferences
