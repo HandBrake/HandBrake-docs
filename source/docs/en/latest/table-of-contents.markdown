@@ -63,10 +63,10 @@ Table of contents
 <!-- - [Post-processing metadata](advanced/post-processing.html) -->
 
 
-## Restoration and enhancement
+<!-- ## Restoration and enhancement
 
 - Coming Soon!
-<!--
+
 - Common video problems
   - Cropping, Black bars at top/bottom or sides
   - Combing effects caused by interlacing or telecine
@@ -120,7 +120,7 @@ Table of contents
 ## HandBrake lore
 
 - [Project history](about/history.html)
-- [About the cocktail and pineapple icon](about/the-icon.html) 
+<!-- - [About the cocktail and pineapple icon](about/the-icon.html)  -->
 
 
 ## CLI documentation
