@@ -86,9 +86,8 @@ Several major versions are supported, see [Where to get HandBrake](../get-handbr
 
 #### Other Linux
 
-Compile from source.
+For any other distribution, you must [Compile from source](../developer/build-linux.html). 
 
-TODO: Link to developer documentation compile guide.
 
 <!-- /.system-lin -->
 <!-- .system-mac -->
