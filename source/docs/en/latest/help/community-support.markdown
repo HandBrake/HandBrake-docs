@@ -37,7 +37,7 @@ Developers and keen users may report reproducible bugs on the [Bugs Forum](https
 
 ## IRC discussion channels
 
-Real-time chat is available on our [Freenode](http://freenode.net/irc_servers.shtml) IRC channel, [#handbrake](irc://irc.freenode.net/#handbrake). Make sure to provide an [Activity Log]../activity-log.html) when requesting support.
+Real-time chat is available on our [Freenode](http://freenode.net/irc_servers.shtml) IRC channel, [#handbrake](irc://irc.freenode.net/#handbrake). Make sure to provide an [Activity Log](../activity-log.html) when requesting support.
 
 Note that HandBrake's developers are located in various timezones around the world, and have lives and jobs outside of HandBrake and its community. It's possible that nobody will be able to answer your support request on IRC right away. Be patient for awhile or ask on the forums.
 
