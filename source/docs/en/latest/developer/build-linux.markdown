@@ -137,6 +137,67 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
     sudo yum groupinstall "X Software Development" "GNOME Software Development"
     sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk3-devel
 
+## CentOS dependencies
+
+The following instructions are for CentOS x86_64 and (HandBrake [CLI](abbr:Command Line Interface) only).
+
+### CentOS 6.8
+
+Dependencies:
+
+- Development tools
+- Additional Development
+- cmake
+- libicu-devel
+- libogg-devel
+- libsamplerate-devel
+- libtheora-devel
+- libvorbis-devel
+
+Additional dependencies not available in the base repository:
+
+- fribidi-devel [EPEL]
+- harfbuzz-devel [spec file]
+- jansson-devel [EPEL]
+- lame-devel [RPM Fusion]
+- libass-devel [EPEL]
+- opus-devel [EPEL]
+- python 2.7.1 or later (python 3 is currently not supported) [SCL]
+- x264-devel [RPM Fusion]
+- yasm 1.2.0 or later (1.3.0 or later recommended) [EPEL]
+
+Install dependencies.
+
+    sudo yum groupinstall "Development tools" "Additional Development"
+    sudo yum install cmake libicu-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel
+
+Install the [Software Collections (SCL)](https://wiki.centos.org/AdditionalResources/Repositories/SCL) repository and Python 2.7.x[^python-centos-6].
+
+    sudo yum install python27 python27-python-devel python27-python-setuptools python27-python-tools python27-python-virtualenv
+
+Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
+
+    sudo yum install epel-release
+    sudo yum install fribidi-devel jansson-devel libass-devel opus-devel yasm
+
+Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
+
+    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/updates/6/i386/rpmfusion-free-release-6-1.noarch.rpm
+    sudo yum install lame-devel x264-devel
+
+Download the HarfBuzz spec file from [CentOS 7 rpms/harfbuzz](https://git.centos.org/summary/rpms!harfbuzz.git) and disable the `graphite2-devel` dependency.
+
+    sudo mkdir -p /root/rpmbuild/SPECS
+    sudo curl -o /root/rpmbuild/SPECS/harfbuzz.spec 'https://git.centos.org/raw/rpms!harfbuzz.git/f5bd1f4920ed0fc56cd21547294f7c34deeb4e4f/SPECS!harfbuzz.spec'
+    sudo sed -i'' -e '/BuildRequires:[ ]*graphite2-devel/d' -e '/%configure/s/ --with-graphite2//' /root/rpmbuild/SPECS/harfbuzz.spec
+
+Download, build, and install HarfBuzz (provides the `harfbuzz-devel` package).
+
+    sudo mkdir -p /root/rpmbuild/SOURCES
+    sudo curl -o /root/rpmbuild/SOURCES/harfbuzz-0.9.36.tar.bz2 'https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.36.tar.bz2'
+    sudo rpmbuild -ba /root/rpmbuild/SPECS/harfbuzz.spec
+    sudo rpm -ivh /root/rpmbuild/RPMS/x86_64/harfbuzz-*.rpm
+
 ## Building
 
 Clone the HandBrake repository.
@@ -152,3 +213,5 @@ When complete, you will find `HandBrakeCLI` in the `build` directory. If enabled
 Install HandBrake, including icon and desktop files to populate the Applications menu (optional).
 
     cd build && sudo make install
+
+[^python-centos-6]: Installing Python from CentOS [SCL](https://wiki.centos.org/AdditionalResources/Repositories/SCL) does not impact the default system Python; newer versions are installed alongside and in addition to the system version.
