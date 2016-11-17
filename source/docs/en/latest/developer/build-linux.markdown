@@ -173,6 +173,7 @@ Install dependencies.
 
 Install the [Software Collections (SCL)](https://wiki.centos.org/AdditionalResources/Repositories/SCL) repository and Python 2.7.x[^python-centos-6].
 
+    sudo yum install centos-release-scl
     sudo yum install python27 python27-python-devel python27-python-setuptools python27-python-tools python27-python-virtualenv
 
 Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
