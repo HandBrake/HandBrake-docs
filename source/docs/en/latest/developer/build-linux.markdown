@@ -205,13 +205,13 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Build HandBrake. To build the command line interface only, disable the GTK GUI by appending `--disable-gtk`.
+Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
 
     ./configure --launch-jobs=$(nproc 2>/dev/null) --launch
 
-When complete, you will find `HandBrakeCLI` in the `build` directory. If enabled, you will also find `ghb` in the `build/gtk/src` directory.
+When complete, you will find `HandBrakeCLI` in the `build` directory. If the graphical interface is enabled, you will also find `ghb` in the `build/gtk/src` directory.
 
-Install HandBrake, including icon and desktop files to populate the Applications menu (optional).
+Install HandBrake (optional). When installing the graphical interface, icon and desktop files for the Applications menu will be also installed.
 
     cd build && sudo make install
 
