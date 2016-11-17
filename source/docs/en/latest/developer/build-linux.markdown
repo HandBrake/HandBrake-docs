@@ -48,9 +48,9 @@ Dependencies:
 - m4
 - make
 - patch
-- python 2.7.1 or later (python 3 is currently not supported)
+- python
 - tar
-- yasm 1.2.0 or later (1.3.0 or later recommended)
+- yasm
 - zlib1g-dev
 
 Additional Ubuntu 16.04 LTS dependencies:
@@ -111,10 +111,10 @@ Dependencies:
 - make
 - opus-devel
 - patch
-- python 2.7.1 or later (python 3 is currently not supported)
+- python
 - tar
 - x264-devel
-- yasm 1.2.0 or later (1.3.0 or later recommended)
+- yasm
 - zlib-devel
 
 Graphical interface dependencies:
@@ -162,9 +162,9 @@ Additional dependencies not available in the base repository:
 - lame-devel [RPM Fusion]
 - libass-devel [EPEL]
 - opus-devel [EPEL]
-- python 2.7.1 or later (python 3 is currently not supported) [SCL]
+- python27 [SCL]
 - x264-devel [RPM Fusion]
-- yasm 1.2.0 or later (1.3.0 or later recommended) [EPEL]
+- yasm [EPEL]
 
 Install dependencies.
 
