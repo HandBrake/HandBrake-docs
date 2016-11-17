@@ -17,7 +17,9 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Linux
 ============================
 
-## Ubuntu dependencies
+## Installing dependencies
+
+### Ubuntu
 
 The following instructions are for Ubuntu 14.04 LTS (Trusty Tahr) and Ubuntu 16.04 LTS (Xenial Xerus).
 
@@ -80,7 +82,7 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
     sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkitgtk-3.0-dev
 
-## Fedora dependencies
+### Fedora
 
 The following instructions are for Fedora 20 and later.
 
@@ -137,11 +139,9 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
     sudo yum groupinstall "X Software Development" "GNOME Software Development"
     sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk3-devel
 
-## CentOS dependencies
+### CentOS 6
 
-The following instructions are for CentOS x86_64 and (HandBrake [CLI](abbr:Command Line Interface) only).
-
-### CentOS 6.8
+The following instructions are for CentOS 6.8 x86_64 and HandBrake [CLI](abbr:Command Line Interface) only.
 
 Dependencies:
 
@@ -185,7 +185,7 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/updates/6/i386/rpmfusion-free-release-6-1.noarch.rpm
     sudo yum install lame-devel x264-devel
 
-Download the HarfBuzz spec file from [CentOS 7 rpms/harfbuzz](https://git.centos.org/summary/rpms!harfbuzz.git) and disable the `graphite2-devel` dependency.
+Download the HarfBuzz spec file from the CentOS 7 [rpms/harfbuzz](https://git.centos.org/summary/rpms!harfbuzz.git) git repository and remove the `graphite2-devel` dependency.
 
     sudo mkdir -p /root/rpmbuild/SPECS
     sudo curl -o /root/rpmbuild/SPECS/harfbuzz.spec 'https://git.centos.org/raw/rpms!harfbuzz.git/f5bd1f4920ed0fc56cd21547294f7c34deeb4e4f/SPECS!harfbuzz.spec'
@@ -198,7 +198,7 @@ Download, build, and install HarfBuzz (provides the `harfbuzz-devel` package).
     sudo rpmbuild -ba /root/rpmbuild/SPECS/harfbuzz.spec
     sudo rpm -ivh /root/rpmbuild/RPMS/x86_64/harfbuzz-*.rpm
 
-## Building
+## Building HandBrake
 
 Clone the HandBrake repository.
 
