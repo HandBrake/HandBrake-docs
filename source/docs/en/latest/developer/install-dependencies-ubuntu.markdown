@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Ubuntu
 =================================
 
-The following instructions are for Ubuntu 16.04 LTS (Xenial Xerus) and Ubuntu 14.04 LTS (Trusty Tahr).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 16.04 LTS (Xenial Xerus) and Ubuntu 14.04 LTS (Trusty Tahr).
 
 Dependencies:
 
