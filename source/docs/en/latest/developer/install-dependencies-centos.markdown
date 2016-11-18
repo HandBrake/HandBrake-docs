@@ -16,7 +16,51 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on CentOS
 =================================
 
-The following instructions are for [CentOS](https://centos.org) 6 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
+Instructions are available for installing dependencies on [CentOS](https://centos.org) 6 and 7.
+
+## CentOS 7
+
+The following instructions are for CentOS 7 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
+
+Dependencies:
+
+- Development Tools
+- Additional Development
+- fribidi-devel
+- jansson-devel
+- libogg-devel
+- libsamplerate-devel
+- libtheora-devel
+- libvorbis-devel
+- opus-devel
+
+Additional dependencies not available in the base repository:
+
+- lame-devel [ZMREPO]
+- libass-devel [EPEL]
+- x264-devel [ZMREPO]
+- yasm [EPEL]
+
+Install dependencies.
+
+    sudo yum groupinstall "Development Tools" "Additional Development"
+    sudo yum install fribidi-devel jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel opus-devel
+
+Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
+
+    sudo yum install epel-release
+    sudo yum install libass-devel yasm
+
+Install the [ZMREPO](https://zmrepo.zoneminder.com) repository and related additional dependencies.
+
+    sudo yum localinstall --nogpgcheck https://zmrepo.zoneminder.com/el/7/x86_64/zmrepo-7-7.el7.centos.noarch.rpm
+    sudo yum install lame-devel x264-devel
+
+CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
+
+## CentOS 6
+
+The following instructions are for CentOS 6 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
 
 Dependencies:
 
