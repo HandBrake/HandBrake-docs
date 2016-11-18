@@ -34,7 +34,7 @@ Clone the HandBrake repository.
 
 Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
 
-    ./configure --launch-jobs=$(nproc 2>/dev/null) --launch
+    ./configure --launch-jobs=$(nproc) --launch
 
 When complete, you will find `HandBrakeCLI` in the `build` directory. If the graphical interface is enabled, you will also find `ghb` in the `build/gtk/src` directory.
 

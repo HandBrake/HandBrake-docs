@@ -46,7 +46,7 @@ This process will take a few minutes. If necessary, the script will provide you 
 
 Build HandBrake.
 
-    ./configure --launch-jobs=$(sysctl -n hw.ncpu 2>/dev/null) --launch
+    ./configure --launch-jobs=$(sysctl -n hw.ncpu) --launch
 
 When complete, you will find `HandBrake.app` and `HandBrakeCLI` in the `build/xroot` directory.
 
