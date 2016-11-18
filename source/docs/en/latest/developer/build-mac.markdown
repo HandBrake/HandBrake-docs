@@ -27,7 +27,7 @@ Additional dependencies (may be built via included script):
 
 - autoconf
 - automake
-- cmake (3.3.0 or later recommended)
+- cmake (3.3.2 or later recommended)
 - libtool
 - pkg-config
 - yasm 1.2.0 or later (1.3.0 or later recommended)
