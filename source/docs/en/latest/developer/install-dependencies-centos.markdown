@@ -72,7 +72,7 @@ Download, build, and install HarfBuzz (provides the `harfbuzz-devel` package).
     sudo mkdir -p /root/rpmbuild/SOURCES
     sudo curl -o /root/rpmbuild/SOURCES/harfbuzz-0.9.36.tar.bz2 'https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.36.tar.bz2'
     sudo rpmbuild -ba /root/rpmbuild/SPECS/harfbuzz.spec
-    sudo rpm -ivh /root/rpmbuild/RPMS/x86_64/harfbuzz-*.rpm
+    sudo yum localinstall /root/rpmbuild/RPMS/x86_64/harfbuzz-*.rpm
 
 CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
