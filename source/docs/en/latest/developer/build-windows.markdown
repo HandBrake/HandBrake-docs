@@ -26,16 +26,16 @@ Dependencies:
 
 - cmake
 - curl
-- gcc (5.x or later recommended)
+- gcc
 - git
 - libtool
-- m4 (1.4.17 or later recommended)
+- m4
 - make
 - patch
-- python 2.7.1 or later (python 3 is currently not supported)
+- python
 - tar
 - wget
-- yasm 1.2.0 or later (1.3.0 or later recommended)
+- yasm
 
 Install all dependencies.
 
