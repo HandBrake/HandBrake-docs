@@ -23,9 +23,9 @@ Didn't find it? Keep reading.
 
 ## Activity Logs
 
-Providing an Activity Log is **required** for all support requests. It is the fastest and most accurate way for the HandBrake Team to understand any potential issues you may be facing. Logs are stored *only* on your computer, so please read more about where to find your [Activity Logs](../help/activity-log.html) and how to share them when requesting support.
+Providing an Activity Log is **required** for all support requests. It is the fastest and most accurate way for the HandBrake Team to understand any potential issues you may be facing. Logs are stored *only* on your computer, so please read more about where to find your [Activity Logs](activity-log.html) and how to share them when requesting support.
 
-You may think you have a simple question for which providing a log seems unnecessary. Please read the section, *Why Activity Logs are required for support* on the [Activity Log](../help/activity-log.html) article. *Without an Activity Log, the HandBrake Team simply cannot provide technical support.*
+You may think you have a simple question for which providing a log seems unnecessary. Please read the section, *Why Activity Logs are required for support* on the [Activity Log](activity-log.html) article. *Without an Activity Log, the HandBrake Team simply cannot provide technical support.*
 
 ## Community Forums
 
@@ -37,7 +37,7 @@ Developers and keen users may report reproducible bugs on the [Bugs Forum](https
 
 ## IRC discussion channels
 
-Real-time chat is available on our [Freenode](http://freenode.net/irc_servers.shtml) IRC channel, [#handbrake](irc://irc.freenode.net/#handbrake). Make sure to provide an [Activity Log](../help/activity-log.html) when requesting support.
+Real-time chat is available on our [Freenode](http://freenode.net/irc_servers.shtml) IRC channel, [#handbrake](irc://irc.freenode.net/#handbrake). Make sure to provide an [Activity Log](activity-log.html) when requesting support.
 
 Note that HandBrake's developers are located in various timezones around the world, and have lives and jobs outside of HandBrake and its community. It's possible that nobody will be able to answer your support request on IRC right away. Be patient for awhile or ask on the forums.
 
