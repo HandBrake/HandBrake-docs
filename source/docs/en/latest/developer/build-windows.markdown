@@ -18,7 +18,7 @@ Building HandBrake for Windows
 
 ## Command line interface and LibHB
 
-Building the Windows [CLI](abbr:Command Line Interface) and LibHB (hb.dll) requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 16.04 LTS or later is recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions, as most packaged versions have issues that can produce non-functioning builds.
+Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 16.04 LTS or later is recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as most packaged versions have issues that can produce non-functioning builds.
 
 The following instructions are for Ubuntu 16.04 LTS.
 
@@ -45,7 +45,7 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Build the MinGW-w64 toolchain using the provided script, where `username` is your user name. Feel free to choose a different output path, if desired.
+Build the MinGW-w64 toolchain using the included script, where `username` is your user name. Feel free to choose a different output path, if desired.
 
     scripts/mingw-w64-build x86_64 /home/username/toolchains/
 
