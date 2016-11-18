@@ -69,7 +69,7 @@ The following tools are required to build and run the [GUI](abbr:Graphical User 
 
 Clone `https://github.com/HandBrake/HandBrake.git` using your git client.
 
-Source code for the GUI resides in the `win\CS` folder and the solution file is named `HandBrake.sln`. Make sure HandBrakeWPF is set as the startup project in the Solution Explorer: right-click on HandBrakeWPF and select "Set as startup project".
+Source code for the GUI resides in the `win\CS` folder and the solution file is named `HandBrake.sln`. Make sure HandBrakeWPF is set as the startup project in the Solution Explorer by right-clicking the name and selecting "Set as startup project".
 
 To build the GUI, select Build Solution from the Build menu.
 
