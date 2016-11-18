@@ -50,4 +50,4 @@ Build HandBrake.
 
 When complete, you will find `HandBrake.app` and `HandBrakeCLI` in the `build/xroot` directory.
 
-[^default-path]: `/usr/local` is included in the system's `PATH` by default.
+[^default-path]: `/usr/local/bin` is included in the system's `PATH` by default. It is not necessary to add it to your environment's `PATH` when installing the additional dependencies to `/usr/local`.
