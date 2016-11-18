@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           draft
 Title:           Community support
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
@@ -41,6 +40,4 @@ Real-time chat is available on our [Freenode](http://freenode.net/irc_servers.sh
 
 Note that HandBrake's developers are located in various timezones around the world, and have lives and jobs outside of HandBrake and its community. It's possible that nobody will be able to answer your support request on IRC right away. Be patient for awhile or ask on the forums.
 
-Developer discussion happens on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), which is moderated for the team's sanity. If you've a developer and would like to speak on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), you may ask politely on [#handbrake](irc://irc.freenode.net/#handbrake).
-
-
+Developer discussion happens on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), which is moderated for the team's sanity. If you're a developer and would like to speak on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), you may ask politely on [#handbrake](irc://irc.freenode.net/#handbrake).
