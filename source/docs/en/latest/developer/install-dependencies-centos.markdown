@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on CentOS
 =================================
 
-The following instructions are for [CentOS](https://centos.org) 6.8 x86_64. Only the HandBrake [CLI](abbr:Command Line Interface) is supported.
+The following instructions are for [CentOS](https://centos.org) 6 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
 
 Dependencies:
 
