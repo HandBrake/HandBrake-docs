@@ -71,15 +71,11 @@ article.docs nav .breadcrumbs {
     white-space: nowrap;
 }
 
-article.docs.credits nav .breadcrumbs .language-separator,
-article.docs.credits nav .breadcrumbs .language,
-article.docs.credits nav .breadcrumbs .version-separator,
-article.docs.credits nav .breadcrumbs .version,
-article.docs.license nav .breadcrumbs .language-separator,
-article.docs.license nav .breadcrumbs .language,
-article.docs.license nav .breadcrumbs .version-separator,
-article.docs.license nav .breadcrumbs .version {
-    display: none;
+article.docs.article nav .breadcrumbs .language-separator,
+article.docs.article nav .breadcrumbs .language,
+article.docs.article nav .breadcrumbs .version-separator,
+article.docs.article nav .breadcrumbs .version {
+    display: inline;
 }
 
 article.docs.article.js nav .system-select {
