@@ -156,5 +156,10 @@ $(document).ready(function(){
         }
     }
 
+    // temporary hack until build system creates breadcrumbs instead of template
+    if (docs.hasClass('landing') && docs.children('h1').first().text() == 'Versions'){
+        $('article.docs nav .breadcrumbs .language-separator').add('article.docs nav .breadcrumbs .language').css('display', 'inline');
+    }
+
     docs.find('figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
 });
