@@ -82,7 +82,7 @@ article.docs.license nav .breadcrumbs .version {
     display: none;
 }
 
-article.docs.js nav .system-select {
+article.docs.article.js nav .system-select {
     display: block;
 }
 
