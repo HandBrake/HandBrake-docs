@@ -18,14 +18,24 @@ Installing dependencies on Gentoo
 
 The following instructions are for [Gentoo](https://gentoo.org) Base System release 2.2 and [GNOME](https://www.gnome.org).
 
-Dependencies:
+Dependencies[^rebuild]:
 
 - fribidi
+- harfbuzz
 - jansson
+- lame
 - libass
+- libogg
+- libsamplerate
+- libtheora
+- libvorbis
+- opus
+- x264
 
 Install dependencies.
 
-    sudo emerge --ask fribidi jansson libass
+    sudo emerge --ask fribidi harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis opus x264
 
 Gentoo is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
+
+[^rebuild]: Previously installed dependencies may need to be rebuilt before building HandBrake.
