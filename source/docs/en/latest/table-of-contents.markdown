@@ -149,7 +149,7 @@ Table of contents
   - [Linux Flatpaks](developer/flatpak-repo.html)
 - Building HandBrake
   - [Building HandBrake for Linux](developer/build-linux.html)
-    - Installing dependencies on [CentOS](developer/install-dependencies-centos.html) / [Fedora](developer/install-dependencies-fedora.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
+    - Installing dependencies on [CentOS](developer/install-dependencies-centos.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
   - [Building HandBrake for Mac](developer/build-mac.html)
   - [Building HandBrake for Windows](developer/build-windows.html)
 
