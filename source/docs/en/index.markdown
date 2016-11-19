@@ -11,12 +11,17 @@ Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
-Redirect_URL:    latest/
 ---
 
 Versions
 ========
 
-English documentation is currently available for the following versions:
+English documentation is currently available for the following HandBrake versions.
 
-- [HandBrake Latest](latest/)
+Releases:
+
+- None (in progress)
+
+Development:
+
+- [HandBrake Latest](latest/) (nightly and snapshot builds from [HandBrake git master](https://github.com/HandBrake/HandBrake/commits/master))

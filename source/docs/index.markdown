@@ -11,11 +11,12 @@ Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
-Redirect_URL:    en/
 ---
 
 Languages
 =========
+
+Welcome to the HandBrake Documentation.
 
 Documentation is currently available in the following languages:
 
