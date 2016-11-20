@@ -95,6 +95,24 @@ HandBrake will scan your selection and after a few moments, the main window will
 
 <!-- /.system-win -->
 
+Some `Sources` may contain more than one video clip, or a collection of `Titles`. Blu-ray and DVD `Sources` often have multiple `Titles`. Use HandBrake's `Title` control to select which video clip you want to use.
+
+<!-- .system-lin -->
+
+<!-- TODO: Linux figures. -->
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
+![Selecting a title](../images/mac/title-selection.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+
+<!-- /.system-mac -->
+<!-- .system-win -->
+
+<!-- TODO: Windows figures. -->
+
+<!-- /.system-win -->
+
 Great! At this point, HandBrake knows which video you want to use.
 
 <!-- .continue -->
