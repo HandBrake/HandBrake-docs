@@ -20,6 +20,8 @@ Where to get HandBrake
 
 Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly builds](https://handbrake.fr/nightly.php) are available for Linux, Mac, and Windows.
 
+HandBrake is open-source software licensed under the GNU General Public License Version 2 (GPLv2)[^license]. Anyone can download and use HandBrake *for free*.
+
 <!-- .system-lin -->
 
 Ubuntu Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) or the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots). The PPA may work, but is not tested, on other Debian-compatible distributions. Users of other BSD- and *nix-like distributions may compile from source.
@@ -66,5 +68,7 @@ Linux users should install the [official release PPA](https://launchpad.net/~ste
 Continue to [Downloading and installing HandBrake](download-and-install.html).
 
 <!-- /.continue -->
+
+[^license]: For more information about the license, see the [LICENSE](https://github.com/HandBrake/HandBrake/blob/master/LICENSE) file and a [summary of GPLv2 on TLDRLegal](https://tldrlegal.com/license/gnu-general-public-license-v2).
 
 [^checksums]: Downloaded files should match the [official release checksums](https://handbrake.fr/checksums.php) as published on the official HandBrake website. Downloaded files with unlisted checksums may be tampered with.

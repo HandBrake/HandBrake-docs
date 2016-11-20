@@ -18,7 +18,7 @@ About HandBrake
 
 ## What HandBrake is
 
-HandBrake is an open-source video transcoder available for Linux, Mac, and Windows, licensed under the GNU General Public License (GPL) Version 2 (TODO: license link).
+HandBrake is an open-source video transcoder available for Linux, Mac, and Windows.
 
 Everyone can use HandBrake to make videos *for free*.
 
