@@ -49,11 +49,9 @@ When using the `Queue`, you may find it beneficial to create multiple `Jobs` at 
 
 <!-- .system-mac -->
 
-On Mac, first open the `Preferences` window using the `HandBrake` menu.
+On Mac, first open the `Preferences` window using the `HandBrake` menu. In the `General` section, ensure that the `Automatically name output files` setting is selected and `Title` is part of the `Format` field.
 
 ![Opening the Preferences window on Mac](../images/mac/preferences-menu.png "Open the Preferences window using the HandBrake menu.")
-
-In the `General` section, ensure that the `Automatically name output files` setting is selected and `Title` is part of the `Format` field.
 
 ![Selecting the Automatically name output files setting](../images/mac/preferences-auto-naming.png "Select Automatically name output files ensure unique file names when adding multiple Titles to the Queue.")
 
@@ -62,11 +60,9 @@ This ensures that each of your `Jobs` will be given a unique file name, and not 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
-On Windows, first open the `Preferences` window using the `Tools` menu.
+On Windows, first open the `Preferences` window using the `Tools` menu. In the `Output Files` section, ensure that the `Automatically name output files` setting is selected. Set a `Default Path` (where your new videos will be created) and make sure `Title` is part of the `File Format` field.
 
 ![Opening the Preferences window on Windows](../images/windows/preferences-menu.png "Open the Preferences window using the Tools menu.")
-
-In the `Output Files` section, ensure that the `Automatically name output files` setting is selected. Set a `Default Path` (where your new videos will be created) and make sure `Title` is part of the `File Format` field.
 
 ![Selecting the Automatically name output files setting](../images/windows/preferences-auto-naming.png "Set up Automatic File Naming to ensure unique file names when adding multiple Titles to the Queue.")
 
