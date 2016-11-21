@@ -25,6 +25,11 @@ Luckily, you can set up multiple encodes at once by adding them to HandBrake's `
 
 Begin by [opening a Source, selecting a Title](../workflow/open-video-source.html), and [selecting a Preset](../workflow/select-preset.html). Then select the `Add to Queue` button on the toolbar.
 
+<!-- .system-mac -->
+
+![Adding an encode to the Queue](../images/mac/add-to-queue-button.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+
+<!-- /.system-mac -->
 <!-- .system-win -->
 
 ![HandBrake toolbar on Windows](../images/windows/toolbar.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
@@ -33,6 +38,13 @@ Begin by [opening a Source, selecting a Title](../workflow/open-video-source.htm
 
 Select the `Show Queue` button on the toolbar to see the queued encodes, or `Jobs`.
 
+<!-- .system-mac -->
+
+![Opening the Queue window](../images/mac/queue-button.png "Select the Show Queue button on the toolbar to open the Queue window.")
+
+![Queue window on Mac](../images/mac/queue.png "The Queue window lists pending Jobs.")
+
+<!-- /.system-mac -->
 <!-- .system-win -->
 
 ![HandBrake toolbar on Windows](../images/windows/toolbar.png "Select the Show Queue button on the toolbar to open the Queue window.")
@@ -107,6 +119,11 @@ You may open additional `Sources` and add them to the `Queue` in the same manner
 
 To make changes to `Jobs` in the `Queue`, first open the `Queue` window by selecting the `Show Queue` button on the toolbar.
 
+<!-- .system-mac -->
+
+![Opening the Queue window](../images/mac/queue-button.png "Select the Show Queue button on the toolbar to open the Queue window.")
+
+<!-- /.system-mac -->
 <!-- .system-win -->
 
 ![HandBrake toolbar on Windows](../images/windows/toolbar.png "Select the Show Queue button on the toolbar to open the Queue window.")
@@ -115,15 +132,21 @@ To make changes to `Jobs` in the `Queue`, first open the `Queue` window by selec
 
 To remove a `Job`, select the `╳` button next to the unwanted `Job`.
 
+<!-- .system-lin -->
+
+On Linux, if you want to make changes to a `Job` already in the `Queue`, select the `Job` and then select `Edit`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
+
+<!-- /.system-lin -->
+<!-- .system-mac -->
+
+On Mac, if you want to make changes to a `Job` already in the `Queue`, control- or right-click on the `Job` and select `Edit`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
+
+![Editing an encode Job on Mac](../images/mac/queue-edit.png "Control- or right-click the Job and select Edit to make changes.")
+
+<!-- /.system-mac -->
 <!-- .system-win -->
 
-![Removing an encode Job on Windows](../images/windows/queue.png "Select the remove button, which looks like a red X, to remove a Job from the Queue.")
-
-<!-- /.system-win -->
-
-If you want to make changes to a `Job` already in the `Queue`, select the edit button next to the `Job`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
-
-<!-- .system-win -->
+On Windows, if you want to make changes to a `Job` already in the `Queue`, select the edit button next to the `Job`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
 
 ![Editing an encode Job on Windows](../images/windows/queue.png "Select the edit button, which looks like a sheet of paper, to make changes to a Job.")
 
@@ -131,6 +154,11 @@ If you want to make changes to a `Job` already in the `Queue`, select the edit b
 
 When you're finished making changes, again add the encode to the `Queue` by selecting the `Add to Queue` button on the toolbar.
 
+<!-- .system-mac -->
+
+![Adding an encode to the Queue](../images/mac/add-to-queue-button.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+
+<!-- /.system-mac -->
 <!-- .system-win -->
 
 ![HandBrake toolbar on Windows](../images/windows/toolbar.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
@@ -140,5 +168,11 @@ When you're finished making changes, again add the encode to the `Queue` by sele
 ## Starting the Queue
 
 When ready, select the `Start` button on the toolbar or `Queue` window to begin encoding the `Jobs` in the `Queue`.
+
+<!-- .system-mac -->
+
+![Starting the Queue](../images/mac/start-queue-button.png "The Start Queue button begins encoding the Jobs in the Queue.")
+
+<!-- /.system-mac -->
 
 [^batch-scan-subdirectories]: When opening multiple videos in a folder, HandBrake ignores any additional folders inside. Make sure the videos you wish to open are at the top level of the selected folder.
