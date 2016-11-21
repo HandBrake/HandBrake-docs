@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           draft
 Title:           Multiple encodes using the Queue
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
