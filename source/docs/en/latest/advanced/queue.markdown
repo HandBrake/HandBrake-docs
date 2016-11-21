@@ -78,6 +78,13 @@ If your `Source` is a Blu-ray, DVD, or other disc or disc-like format with multi
 
 Additionally, you may open a folder of multiple single-`Title` videos (excluding discs and disc-like formats) as one virtual `Source` with multiple `Titles` using the `Open Source` dialog, and then add multiple `Titles` to the `Queue`[^batch-scan-subdirectories].
 
+<!-- .system-mac -->
+
+![Opening a folder containing multiple video Sources](../images/mac/open-source-dialog-folder.png "The Open Source dialog allows you to select a folder containing multiple video files.")
+
+![Selecting a Title](../images/mac/title-selection.png "The Title control lets you select which video clip you want to use.")
+
+<!-- /.system-mac -->
 <!-- .system-lin -->
 
 On Linux, select `Add Multiple` from the `Queue` menu, then select the `Titles` you wish to encode using the presented dialog. Be sure to give each a unique file name.
@@ -86,6 +93,10 @@ On Linux, select `Add Multiple` from the `Queue` menu, then select the `Titles` 
 <!-- .system-mac -->
 
 On Mac, select `Add Titles to Queue...` from the `File` menu, then select the `Titles` you wish to encode using the presented dialog.
+
+![Add Titles to Queue menu item](../images/mac/add-titles-to-queue-menu.png "Select Add Titles to Queue from the File menu to open a selection dialog.")
+
+![Selecting multiple Titles to add to the Queue](../images/mac/add-titles-to-queue.png "Select the Titles you wish to encode from the Add Titles to Queue dialog.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
