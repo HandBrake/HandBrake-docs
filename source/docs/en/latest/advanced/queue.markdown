@@ -76,7 +76,7 @@ This ensures that each of your `Jobs` will be given a unique file name, and not 
 
 If your `Source` is a Blu-ray, DVD, or other disc or disc-like format with multiple `Titles`, you may open it with HandBrake and add multiple `Titles` to the `Queue` simultaneously.
 
-Additionally, you may open multiple single-`Title` videos (excluding discs and disc-like formats) as one virtual `Source` with multiple `Titles` using the `Open Source` dialog, and then add multiple `Titles` to the `Queue`[^batch-scan-subdirectories].
+Additionally, you may open a folder of multiple single-`Title` videos (excluding discs and disc-like formats) as one virtual `Source` with multiple `Titles` using the `Open Source` dialog, and then add multiple `Titles` to the `Queue`[^batch-scan-subdirectories].
 
 <!-- .system-lin -->
 
