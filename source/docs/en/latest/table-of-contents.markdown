@@ -52,7 +52,7 @@ Table of contents
 
 ## Advanced features
 
-- [Batch processing multiple jobs](advanced/batch-queue.html)   
+- [Multiple encodes using the Queue](advanced/queue.html)
 - [Custom presets](advanced/custom-presets.html) 
   - [Audio and Subtitled Defaults](advanced/audio-subtitle-defaults.html) 
 - [Resizing video](advanced/resizing-video.html) 
