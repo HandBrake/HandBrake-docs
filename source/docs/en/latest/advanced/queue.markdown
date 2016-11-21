@@ -85,8 +85,6 @@ On Linux, select `Add Multiple` from the `Queue` menu, then select the `Titles` 
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Open Source dialog](../images/mac/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
-
 On Mac, select `Add Titles to Queue...` from the `File` menu, then select the `Titles` you wish to encode using the presented dialog.
 
 <!-- /.system-mac -->
