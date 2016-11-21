@@ -70,7 +70,7 @@ Congratulations! You just encoded your first video using HandBrake. It's now rea
 
 If you didn't get a video file as expected, encountered an error, or had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Troubleshooting common issues](../help/troubleshooting-common-issues.html).
 
-Continue to (TODO: add link).
+Continue to [Multiple encodes using the Queue](../advanced/queue.html).
 
 <!-- /.continue -->
 
