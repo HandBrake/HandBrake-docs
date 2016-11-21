@@ -167,7 +167,7 @@ When you're finished making changes, again add the encode to the `Queue` by sele
 
 ## Starting the Queue
 
-When ready, select the `Start` button on the toolbar or `Queue` window to begin encoding the `Jobs` in the `Queue`.
+When ready, select the `Start` button on the`Queue` window or the `Start Queue` button on the main window to begin encoding the `Jobs` in the `Queue`.
 
 <!-- .system-mac -->
 
