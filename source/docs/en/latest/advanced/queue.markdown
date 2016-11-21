@@ -53,7 +53,7 @@ On Mac, first open the `Preferences` window using the `HandBrake` menu. In the `
 
 ![Opening the Preferences window on Mac](../images/mac/preferences-menu.png "Open the Preferences window using the HandBrake menu.")
 
-![Selecting the Automatically name output files setting](../images/mac/preferences-auto-naming.png "Select Automatically name output files ensure unique file names when adding multiple Titles to the Queue.")
+![Selecting the Automatically name output files setting](../images/mac/preferences-auto-naming.png "Select Automatically name output files to ensure unique file names when adding multiple Titles to the Queue.")
 
 This ensures that each of your `Jobs` will be given a unique file name, and not overwrite each other.
 
@@ -90,7 +90,7 @@ On Linux, select `Add Multiple` from the `Queue` menu, then select the `Titles` 
 
 On Mac, select `Add Titles to Queue...` from the `File` menu, then select the `Titles` you wish to encode using the presented dialog.
 
-![Add Titles to Queue menu item](../images/mac/add-titles-to-queue-menu.png "Select Add Titles to Queue from the File menu to open a selection dialog.")
+![Add Titles to Queue menu item](../images/mac/add-titles-to-queue-menu.png "Select Add Titles to Queue... from the File menu to open a selection dialog.")
 
 ![Selecting multiple Titles to add to the Queue](../images/mac/add-titles-to-queue.png "Select the Titles you wish to encode from the Add Titles to Queue dialog.")
 
