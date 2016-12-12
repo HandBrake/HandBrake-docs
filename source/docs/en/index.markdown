@@ -22,6 +22,6 @@ Releases:
 
 - None (in progress)
 
-Development:
+Nightly and snapshot builds:
 
-- [HandBrake Latest](latest/) (nightly and snapshot builds from [HandBrake git master](https://github.com/HandBrake/HandBrake/commits/master))
+- [HandBrake Latest](latest/)

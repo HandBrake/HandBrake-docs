@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Welcome
 =======
 
-Welcome to the English documentation for HandBrake Latest (nightly and snapshot builds from [HandBrake git master](https://github.com/HandBrake/HandBrake/commits/master)).
+Welcome to the English documentation for HandBrake Latest, covering nightly and snapshot builds from [git master](https://github.com/HandBrake/HandBrake/commits/master).
 
 Here are some quick links to get you started:
 
