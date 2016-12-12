@@ -79,8 +79,8 @@ Each devices `Preset` is named according to the device name or class, maximum re
 | Playstation 1080p30 Surround | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
 | Playstation 720p30           | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
 | Playstation 540p30           | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Roku 2160p60 4K Surround     | *MKV* | H.264 | AAC stereo; AAC, MP3, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), or DTS | Standard | **Very slow** |
-| Roku 2160p30 4K Surround     | *MKV* | H.264 | AAC stereo; AAC, MP3, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), or DTS | Standard | **Very slow** |
+| Roku 2160p60 4K Surround     | *MKV* | *H.265* | AAC stereo; AAC, MP3, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), or DTS | Standard | **Very slow** |
+| Roku 2160p30 4K Surround     | *MKV* | *H.265* | AAC stereo; AAC, MP3, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), or DTS | Standard | **Very slow** |
 | Roku 1080p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
 | Roku 720p30 Surround         | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
 | Roku 576p25                  | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
