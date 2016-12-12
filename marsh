@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.2.1"
+VERSION="0.2.2"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1505,8 +1505,9 @@ function build_template {  # build_template dest_dir target_dir document templat
                     NAV_RELPATH="${NAV_RELPATH%/}"          # drop trailing slash
                     <"${DEST_DIR}/${TARGET_DIR}/${NAV}" sed -E \
                     -e 's|<h1>([^<]+)</h1>|<h1><a href="'"${NAV_RELPATH}/${NAV_NAME}"'">\1</a></h1>|' \
-                    -e 's|(<a href=")([^.])|\1'"${NAV_RELPATH}/"'\2|g' \
-                    -e 's|<a (href="[^"]*'"${DEST_NAME}.html"'"[^>]*)>([^<>]+)</a>|<a \1 class="selected">\2</a>|g' \
+                    -e 's|(<a href=")([^.])|\1'"${NAV_RELPATH}/"'\2|g' | \
+                    sed -E \
+                    -e 's|<a (href="[^"]*'"${NAV_RELPATH}/${DEST_NAME}.html"'"[^>]*)>([^<>]+)</a>|<a \1 class="selected">\2</a>|g' \
                     > "${DEST}.${MARSH_UID}.temp"
                     SUB=$(<"${DEST}.${MARSH_UID}.temp" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
                     SUB=${SUB%$'\n'}
