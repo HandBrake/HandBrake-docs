@@ -19,11 +19,18 @@ Official presets
 
 A `Preset` is a group of settings specifically tailored for the software or device you want your videos to play on. Selecting a `Preset` can go a long way toward ensuring your video works where you want it to.
 
-HandBrake includes a number of official `Presets` for specific devices and for general use. The default `Fast 1080p30` preset is a good choice if you're just getting started. It's fast and compatible across a wide range of software and devices.
+HandBrake includes a number of official `Presets` that select specific settings to ensure compatibility for specific devices and for general use. When selecting one of these `Presets`, higher resolution video will be downscaled to a maximum resolution, and higher frame rates will be peak limited to a maximum frame rate. Audio and other settings may also be enforced.
 
-The official `Presets` impose limitations on various settings in order to ensure compatibility with the intended playback software or device. For instance, higher resolution video will be downscaled to the maximum resolution, and higher frame rates will be peak limited to the maximum frame rate.
+Here are some examples of how `Presets` work in practice:
 
-So, a 1080p video at 60 frames per second will be downscaled to 480p resolution and peak limited to 30 frames per second when using one of the 480p30 `Presets`. There may be additional limitations on audio and other settings to ensure compatibility. To see what settings will be used to make your new video, select a `Preset` and explore the graphical interface.
+- When selecting one of the 720p30 `Presets`, a Source with 1080p video at 60 frames per second will be downscaled to 720p resolution and peak limited to 30 frames per second
+- When selecting one of the 720p30 `Presets`, a Source with 480p video at 30 frames per second will not be scaled or peak limited
+- When selecting a `Preset` that does not include surround sound, only stereo audio is encoded; the discrete surround audio is dropped
+- When selecting a `Preset` that includes surround sound, stereo audio is encoded and surround audio is "passed through" if possible (or encoded to a compatible format)
+
+Select a `Preset` and explore which settings have changed. These settings will be used to make your new video.
+
+The default `Fast 1080p30` preset is a good choice if you're just getting started. It's fast and compatible across a wide range of software and devices.
 
 ## General presets
 
