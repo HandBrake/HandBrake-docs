@@ -134,6 +134,7 @@ Table of contents
 - [System requirements](technical/system-requirements.html)
   *Make sure your system can run HandBrake*
 - [Supported Source formats](technical/source-formats.html)
+- [Official presets](technical/official-presets.html)
 - Video
   - [x264 presets and tunes](technical/video-x264-presets-tunes.html) 
   - [x264 profile and level](technical/video-x264-profiles-levels.html) 
