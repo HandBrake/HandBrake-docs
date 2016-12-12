@@ -318,6 +318,48 @@ article.docs p + pre {
     margin-right: 1em;
 }
 
+article.docs table {
+    margin: 1.5rem 0;
+    font-size: .9rem;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+article.docs thead {
+    border-left:  1px solid steelblue;
+    border-right: 1px solid steelblue;
+    background: steelblue;
+    color: white;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+article.docs th {
+    padding: .5em .66666em;
+    text-align: left;
+}
+
+article.docs tbody tr {
+    background: white;
+}
+
+article.docs tbody tr {
+    border-left:  1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+}
+
+article.docs tbody tr:last-child {
+    border-bottom: 1px solid whitesmoke;
+}
+
+article.docs tbody tr:nth-of-type(odd) {
+    background: whitesmoke;
+}
+
+article.docs td {
+    padding: .5em .66666em;
+}
+
 article.docs footer {
 	border-top: 1px solid lightgray;
 	margin-top: 2em;
