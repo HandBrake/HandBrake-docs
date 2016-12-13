@@ -34,7 +34,7 @@ The default `Fast 1080p30` preset is a good choice if you're just getting starte
 
 ## General presets
 
-HandBrake's general `Presets` are intended to be broadly compatible across a wide range of software and devices.[^high-quality-settings-less-compatible]
+HandBrake's general `Presets` use the [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are intended to be broadly compatible across a wide range of software and devices.[^high-quality-settings-less-compatible]
 
 Each general `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
 
@@ -60,6 +60,8 @@ Each general `Preset` is named according to the quality or speed, maximum resolu
 ## Devices presets
 
 HandBrake's devices `Presets` target specific devices and classes of devices, such as mobile phones, tablets, TV media players, and game consoles.
+
+Most devices presets use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14), while a select few use the [Matroska Multimedia Container](https://en.wikipedia.org/wiki/Matroska) to support advanced features such as [Ultra HD 4K resolution](https://en.wikipedia.org/wiki/4K_resolution) and additional audio types compatible with target devices.
 
 Each devices `Preset` is named according to the device name or class, maximum resolution, and maximum frame rate it produces.
 
