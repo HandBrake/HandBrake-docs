@@ -65,34 +65,34 @@ Most devices presets use the broadly compatible [MP4 container](https://en.wikip
 
 Each devices `Preset` is named according to the device name or class, maximum resolution, and maximum frame rate it produces.
 
-| Preset                       | Type  | Video | Audio                            | Picture Quality | Encoding Speed |
-|------------------------------|-------|-------|----------------------------------|-----------------|----------------|
-| Android 1080p30              | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Android 720p30               | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Android 576p25               | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Android 480p30               | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Apple 1080p60 Surround       | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Apple 1080p30 Surround       | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Apple 720p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Apple 540p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Apple 240p30                 | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Chromecast 1080p30 Surround  | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Fire TV 1080p30 Surround     | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Playstation 1080p30 Surround | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Playstation 720p30           | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Playstation 540p30           | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Roku 2160p60 4K Surround     | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | Standard | **Very slow** |
-| Roku 2160p30 4K Surround     | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | Standard | **Very slow** |
-| Roku 1080p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Roku 720p30 Surround         | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Roku 576p25                  | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Roku 480p30                  | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Windows Mobile 1080p30       | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Windows Mobile 720p30        | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Windows Mobile 540p30        | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Windows Mobile 480p30        | MP4   | H.264 | AAC stereo                       | Standard        | Medium         |
-| Xbox 1080p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
-| Xbox Legacy 1080p30 Surround | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
+| Preset                       | Type  | Video | Audio                            | Encoding Speed |
+|------------------------------|-------|-------|----------------------------------|----------------|
+| Android 1080p30              | MP4   | H.264 | AAC stereo                       | Medium         |
+| Android 720p30               | MP4   | H.264 | AAC stereo                       | Medium         |
+| Android 576p25               | MP4   | H.264 | AAC stereo                       | Medium         |
+| Android 480p30               | MP4   | H.264 | AAC stereo                       | Medium         |
+| Apple 1080p60 Surround       | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 1080p30 Surround       | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 720p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 540p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 240p30                 | MP4   | H.264 | AAC stereo                       | Medium         |
+| Chromecast 1080p30 Surround  | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Fire TV 1080p30 Surround     | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Playstation 1080p30 Surround | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Playstation 720p30           | MP4   | H.264 | AAC stereo                       | Medium         |
+| Playstation 540p30           | MP4   | H.264 | AAC stereo                       | Medium         |
+| Roku 2160p60 4K Surround     | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | **Very slow** |
+| Roku 2160p30 4K Surround     | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | **Very slow** |
+| Roku 1080p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Roku 720p30 Surround         | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Roku 576p25                  | MP4   | H.264 | AAC stereo                       | Medium         |
+| Roku 480p30                  | MP4   | H.264 | AAC stereo                       | Medium         |
+| Windows Mobile 1080p30       | MP4   | H.264 | AAC stereo                       | Medium         |
+| Windows Mobile 720p30        | MP4   | H.264 | AAC stereo                       | Medium         |
+| Windows Mobile 540p30        | MP4   | H.264 | AAC stereo                       | Medium         |
+| Windows Mobile 480p30        | MP4   | H.264 | AAC stereo                       | Medium         |
+| Xbox 1080p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Xbox Legacy 1080p30 Surround | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Medium         |
 
 ## Matroska presets
 
@@ -100,24 +100,24 @@ HandBrake's Matroska `Presets` target software and devices supporting the [Matro
 
 Each Matroska `Preset` is named according to the video type, maximum resolution, and maximum frame rate it produces.
 
-| Preset                    | Type | Video | Audio                            | Picture Quality | Encoding Speed |
-|---------------------------|------|-------|----------------------------------|-----------------|----------------|
-| H.264 MKV 1080p30         | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
-| H.264 MKV 720p30          | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
-| H.264 MKV 576p25          | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
-| H.264 MKV 480p30          | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
-| H.265 MKV 1080p30         | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
-| H.265 MKV 720p30          | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
-| H.265 MKV 576p25          | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
-| H.265 MKV 480p30          | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
-| VP8 MKV 1080p30           | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
-| VP8 MKV 720p30            | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
-| VP8 MKV 576p25            | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
-| VP8 MKV 480p30            | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
-| VP9 MKV 1080p30           | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
-| VP9 MKV 720p30            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
-| VP9 MKV 576p25            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
-| VP9 MKV 480p30            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
+| Preset                    | Type | Video | Audio                            | Encoding Speed |
+|---------------------------|------|-------|----------------------------------|----------------|
+| H.264 MKV 1080p30         | MKV  | H.264 | AAC stereo                       | Standard       |
+| H.264 MKV 720p30          | MKV  | H.264 | AAC stereo                       | Standard       |
+| H.264 MKV 576p25          | MKV  | H.264 | AAC stereo                       | Standard       |
+| H.264 MKV 480p30          | MKV  | H.264 | AAC stereo                       | Standard       |
+| H.265 MKV 1080p30         | MKV  | H.265 | AAC stereo                       | **Very slow**  |
+| H.265 MKV 720p30          | MKV  | H.265 | AAC stereo                       | **Very slow**  |
+| H.265 MKV 576p25          | MKV  | H.265 | AAC stereo                       | **Very slow**  |
+| H.265 MKV 480p30          | MKV  | H.265 | AAC stereo                       | **Very slow**  |
+| VP8 MKV 1080p30           | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
+| VP8 MKV 720p30            | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
+| VP8 MKV 576p25            | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
+| VP8 MKV 480p30            | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
+| VP9 MKV 1080p30           | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
+| VP9 MKV 720p30            | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
+| VP9 MKV 576p25            | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
+| VP9 MKV 480p30            | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
 
 ## Legacy presets
 
