@@ -44,7 +44,7 @@ Each general `Preset` is named according to the quality or speed, maximum resolu
 | Very Fast 720p30          | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
 | Very Fast 576p25          | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
 | Very Fast 480p30          | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
-| Fast 1080p30              | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
+| **Fast 1080p30**          | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
 | Fast 720p30               | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
 | Fast 576p25               | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
 | Fast 480p30               | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
