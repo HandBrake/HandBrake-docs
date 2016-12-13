@@ -94,7 +94,30 @@ Each devices `Preset` is named according to the device name or class, maximum re
 | Xbox 1080p30 Surround        | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
 | Xbox Legacy 1080p30 Surround | MP4   | H.264 | AAC stereo; Dolby Digital (AC-3) | Standard        | Medium         |
 
-<!-- ## Matroska presets -->
+## Matroska presets
+
+HandBrake's Matroska `Presets` target software and devices supporting the [Matroska Multimedia Container](https://en.wikipedia.org/wiki/Matroska). MKV files support virtually all video and audio types, including many that the [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) does not.
+
+Each Matroska `Preset` is named according to the video type, maximum resolution, and maximum frame rate it produces.
+
+| Preset                    | Type | Video | Audio                            | Picture Quality | Encoding Speed |
+|---------------------------|------|-------|----------------------------------|-----------------|----------------|
+| H.264 MKV 1080p30         | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
+| H.264 MKV 720p30          | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
+| H.264 MKV 576p25          | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
+| H.264 MKV 480p30          | MKV  | H.264 | AAC stereo                       | Standard        | Standard       |
+| H.265 MKV 1080p30         | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
+| H.265 MKV 720p30          | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
+| H.265 MKV 576p25          | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
+| H.265 MKV 480p30          | MKV  | H.265 | AAC stereo                       | Standard        | **Very slow**  |
+| VP8 MKV 1080p30           | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
+| VP8 MKV 720p30            | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
+| VP8 MKV 576p25            | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
+| VP8 MKV 480p30            | MKV  | VP8   | Vorbis stereo                    | Standard        | **Ultra slow** |
+| VP9 MKV 1080p30           | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
+| VP9 MKV 720p30            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
+| VP9 MKV 576p25            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
+| VP9 MKV 480p30            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
 
 <!-- ## Legacy presets -->
 
