@@ -38,24 +38,24 @@ HandBrake's general `Presets` are intended to be broadly compatible across a wid
 
 Each general `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
 
-| Preset                    | Type | Video | Audio                            | Picture Quality | File Size      | Encoding Speed |
+| Preset                    | Type | Video | Audio                            | Picture Quality | Encoding Speed | File Size      |
 |---------------------------|------|-------|----------------------------------|-----------------|----------------|----------------|
-| Very Fast 1080p30         | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
-| Very Fast 720p30          | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
-| Very Fast 576p25          | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
-| Very Fast 480p30          | MP4  | H.264 | AAC stereo                       | Average         | Small          | Very fast      |
-| **Fast 1080p30**          | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
-| Fast 720p30               | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
-| Fast 576p25               | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
-| Fast 480p30               | MP4  | H.264 | AAC stereo                       | Standard        | Average        | Fast           |
-| HQ 1080p30 Surround       | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Large          | Slow           |
-| HQ 720p30 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Large          | Slow           |
-| HQ 576p25 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Large          | Slow           |
-| HQ 480p30 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Large          | Slow           |
-| Super HQ 1080p30 Surround | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very large** | **Very slow**  |
-| Super HQ 720p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very large** | **Very slow**  |
-| Super HQ 576p25 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very large** | **Very slow**  |
-| Super HQ 480p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very large** | **Very slow**  |
+| Very Fast 1080p30         | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 720p30          | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 576p25          | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 480p30          | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
+| **Fast 1080p30**          | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 720p30               | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 576p25               | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 480p30               | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
+| HQ 1080p30 Surround       | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 720p30 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 576p25 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 480p30 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| Super HQ 1080p30 Surround | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Super HQ 720p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Super HQ 576p25 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Super HQ 480p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
 
 ## Devices presets
 
