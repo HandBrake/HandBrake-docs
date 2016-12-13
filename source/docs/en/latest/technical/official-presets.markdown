@@ -100,24 +100,24 @@ HandBrake's Matroska `Presets` target software and devices supporting the [Matro
 
 Each Matroska `Preset` is named according to the video type, maximum resolution, and maximum frame rate it produces.
 
-| Preset                    | Type | Video | Audio                            | Encoding Speed |
-|---------------------------|------|-------|----------------------------------|----------------|
-| H.264 MKV 1080p30         | MKV  | H.264 | AAC stereo                       | Standard       |
-| H.264 MKV 720p30          | MKV  | H.264 | AAC stereo                       | Standard       |
-| H.264 MKV 576p25          | MKV  | H.264 | AAC stereo                       | Standard       |
-| H.264 MKV 480p30          | MKV  | H.264 | AAC stereo                       | Standard       |
-| H.265 MKV 1080p30         | MKV  | H.265 | AAC stereo                       | **Very slow**  |
-| H.265 MKV 720p30          | MKV  | H.265 | AAC stereo                       | **Very slow**  |
-| H.265 MKV 576p25          | MKV  | H.265 | AAC stereo                       | **Very slow**  |
-| H.265 MKV 480p30          | MKV  | H.265 | AAC stereo                       | **Very slow**  |
-| VP8 MKV 1080p30           | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
-| VP8 MKV 720p30            | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
-| VP8 MKV 576p25            | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
-| VP8 MKV 480p30            | MKV  | VP8   | Vorbis stereo                    | **Ultra slow** |
-| VP9 MKV 1080p30           | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
-| VP9 MKV 720p30            | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
-| VP9 MKV 576p25            | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
-| VP9 MKV 480p30            | MKV  | VP9   | Opus stereo                      | **Ultra slow** |
+| Preset            | Type | Video | Audio         | Encoding Speed |
+|-------------------|------|-------|---------------|----------------|
+| H.264 MKV 1080p30 | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 720p30  | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 576p25  | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 480p30  | MKV  | H.264 | AAC stereo    | Standard       |
+| H.265 MKV 1080p30 | MKV  | H.265 | AAC stereo    | **Very slow**  |
+| H.265 MKV 720p30  | MKV  | H.265 | AAC stereo    | **Very slow**  |
+| H.265 MKV 576p25  | MKV  | H.265 | AAC stereo    | **Very slow**  |
+| H.265 MKV 480p30  | MKV  | H.265 | AAC stereo    | **Very slow**  |
+| VP8 MKV 1080p30   | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
+| VP8 MKV 720p30    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
+| VP8 MKV 576p25    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
+| VP8 MKV 480p30    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
+| VP9 MKV 1080p30   | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 720p30    | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 576p25    | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 480p30    | MKV  | VP9   | Opus stereo   | **Ultra slow** |
 
 ## Legacy presets
 
