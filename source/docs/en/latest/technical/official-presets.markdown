@@ -119,6 +119,23 @@ Each Matroska `Preset` is named according to the video type, maximum resolution,
 | VP9 MKV 576p25            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
 | VP9 MKV 480p30            | MKV  | VP9   | Opus stereo                      | Standard        | **Ultra slow** |
 
-<!-- ## Legacy presets -->
+## Legacy presets
+
+HandBrake's legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
+
+| Preset              | Type | Video | Audio                            | Max Resolution | Encoding Speed |
+|---------------------|------|-------|----------------------------------|----------------|----------------|
+| Normal              | MP4  | H.264 | AAC stereo                       | 1080p          | Very fast      |
+| High Profile        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Medium         |
+| Universal           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 576p/480p      | Very fast      |
+| iPod                | MP4  | H.264 | AAC stereo                       | 240p           | Ultra fast     |
+| iPhone & iPod touch | MP4  | H.264 | AAC stereo                       | 540p           | Medium         |
+| iPad                | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
+| AppleTV             | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 540p           | Medium         |
+| AppleTV 2           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 720p           | Medium         |
+| AppleTV 3           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Medium         |
+| Android             | MP4  | H.264 | AAC stereo                       | 480p           | Medium         |
+| Android Tablet      | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
+| Windows Phone 8     | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
 
 [^high-quality-settings-less-compatible]: Higher quality general `Presets` may include settings that are incompatible with older or slower devices.
