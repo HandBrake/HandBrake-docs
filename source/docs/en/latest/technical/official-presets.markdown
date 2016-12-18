@@ -33,9 +33,9 @@ The default `Fast 1080p30` preset is a good choice if you're just getting starte
 
 ## General presets
 
-HandBrake's general `Presets` use the [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are intended to be broadly compatible across a wide range of software and devices.[^high-quality-settings-less-compatible]
+HandBrake's General `Presets` use the [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are intended to be broadly compatible across a wide range of software and devices.[^high-quality-settings-less-compatible]
 
-Each general `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
+Each General `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
 
 | Preset                    | Type | Video | Audio                            | Picture Quality | Encoding Speed | File Size      |
 |---------------------------|------|-------|----------------------------------|-----------------|----------------|----------------|
@@ -58,7 +58,7 @@ Each general `Preset` is named according to the quality or speed, maximum resolu
 
 ## Web presets
 
-HandBrake's web `Presets` use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are tailored for sharing videos on the Internet.
+HandBrake's Web `Presets` use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are tailored for sharing videos on the Internet.
 
 Gmail `Presets` are designed to guarantee video up to a certain duration will produce a file less than 25 [MB](abbr:megabytes) for attaching to an email.[^email-size-limit] The maximum duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
 
@@ -70,11 +70,11 @@ Gmail `Presets` are designed to guarantee video up to a certain duration will pr
 
 ## Devices presets
 
-HandBrake's devices `Presets` target specific devices and classes of devices, such as mobile phones, tablets, TV media players, and game consoles.
+HandBrake's Devices `Presets` target specific devices and classes of devices, such as mobile phones, tablets, TV media players, and game consoles.
 
-Most devices presets use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14), while a select few use the [Matroska Multimedia Container](https://en.wikipedia.org/wiki/Matroska) to support advanced features such as [Ultra HD 4K resolution](https://en.wikipedia.org/wiki/4K_resolution) and additional audio types compatible with target devices.
+Most Devices `Presets` use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14), while a select few use the [Matroska Multimedia Container](https://en.wikipedia.org/wiki/Matroska) to support advanced features such as [Ultra HD 4K resolution](https://en.wikipedia.org/wiki/4K_resolution) and additional audio types compatible with target devices.
 
-Each devices `Preset` is named according to the device name or class, maximum resolution, and maximum frame rate it produces.
+Each Devices `Preset` is named according to the device name or class, maximum resolution, and maximum frame rate it produces.
 
 | Preset                       | Type  | Video | Audio                            | Encoding Speed |
 |------------------------------|-------|-------|----------------------------------|----------------|
@@ -132,7 +132,7 @@ Each Matroska `Preset` is named according to the video type, maximum resolution,
 
 ## Legacy presets
 
-HandBrake's legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
+HandBrake's Legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
 
 | Preset              | Type | Video | Audio                            | Max Resolution | Encoding Speed |
 |---------------------|------|-------|----------------------------------|----------------|----------------|
@@ -149,6 +149,6 @@ HandBrake's legacy `Presets` are retained from previous HandBrake releases for c
 | Android Tablet      | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
 | Windows Phone 8     | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
 
-[^high-quality-settings-less-compatible]: Higher quality general `Presets` may include settings that are incompatible with older or slower devices.
+[^high-quality-settings-less-compatible]: Higher quality General `Presets` may include settings that are incompatible with older or slower devices.
 
 [^email-size-limit]: The 25 [MB](abbr:megabytes) per message size limit for email attachments is specific to the [Gmail](https://www.google.com/gmail/) service and may change in the future. Other email services may set different limits. It is generally recommended to use a [file hosting service](https://en.wikipedia.org/wiki/Comparison_of_file_hosting_services) when sharing large or long videos.
