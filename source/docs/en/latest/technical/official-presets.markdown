@@ -18,7 +18,7 @@ Official presets
 
 A `Preset` is a group of settings specifically tailored for the software or device you want your videos to play on. Selecting a `Preset` can go a long way toward ensuring your video works where you want it to.
 
-HandBrake includes a number of official `Presets` that select specific settings to ensure compatibility for specific devices and for general use. When selecting one of these `Presets`, higher resolution video will be downscaled to a maximum resolution, and higher frame rates will be peak limited to a maximum frame rate. Audio and other settings may also be enforced.
+HandBrake includes a number of official `Presets` that select specific settings to ensure compatibility for specific devices, the web, and for general use. When selecting one of these `Presets`, higher resolution video will be downscaled to a maximum resolution, and higher frame rates will be peak limited to a maximum frame rate. Audio and other settings may also be enforced.
 
 Here are some examples of how `Presets` work in practice:
 
@@ -55,6 +55,18 @@ Each general `Preset` is named according to the quality or speed, maximum resolu
 | Super HQ 720p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
 | Super HQ 576p25 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
 | Super HQ 480p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+
+## Web presets
+
+HandBrake's web `Presets` use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are tailored for sharing videos on the Internet.
+
+Gmail `Presets` are designed to guarantee video up to a certain duration will produce a file less than 25 [MB](abbr:megabytes) for attaching to an email.[^email-size-limit] The maximum duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
+
+| Preset                        | Type | Video | Audio      | Picture Quality   | Encoding Speed | File Size     |
+|-------------------------------|------|-------|------------|-------------------|----------------|---------------|
+| Gmail Large 3 Minutes 720p30  | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 25 MB or less |
+| Gmail Medium 5 Minutes 480p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 25 MB or less |
+| Gmail Small 10 Minutes 288p30 | MP4  | H.264 | AAC mono   | Depends on source | Fast           | 25 MB or less |
 
 ## Devices presets
 
@@ -138,3 +150,5 @@ HandBrake's legacy `Presets` are retained from previous HandBrake releases for c
 | Windows Phone 8     | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
 
 [^high-quality-settings-less-compatible]: Higher quality general `Presets` may include settings that are incompatible with older or slower devices.
+
+[^email-size-limit]: The 25 [MB](abbr:megabytes) per message size limit for email attachments is specific to the [Gmail](https://www.google.com/gmail/) service and may change in the future. Other email services may set different limits. It is generally recommended to use a [file hosting service](https://en.wikipedia.org/wiki/Comparison_of_file_hosting_services) when sharing large or long videos.
