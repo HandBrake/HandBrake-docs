@@ -1,27 +1,30 @@
 ---
-Type:            landing
-Title:           Versions
+Type:            article
+State:           draft
+Title:           Summary of Filters
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Authors:         [ Bradley Sepos <bradley@bradleysepos.com> (BradleyS) ]
+Authors:         []
 Copyright:       2016 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Versions
-========
+Summary of Filters
+=============================
 
-English documentation is currently available for the following HandBrake versions.
+Coming Soon!
 
-Releases:
+HandBrake contains the following filters:
 
-- [HandBrake 1.0.0](1.0.0/)
-
-Nightly and snapshot builds:
-
-- [HandBrake Latest](latest/)
+- Detelecine
+- Deinterlace 
+  - Decomb
+- Denoise
+- Deblock
+- Grayscale
+- Rotation
