@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.2.2"
+VERSION="0.2.3"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1057,7 +1057,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         echo "${DEST_ARRAY}=()"
         SOURCE_ARRAY="${SOURCE_ARRAY}[@]"
         for ITEM in "${!SOURCE_ARRAY}"; do
-            ITEM=$(echo "${ITEM}" | sed -E -e 's/[ ]+<[^>]+>//g' -e 's/[ ]/\\\&nbsp\\\;/g')
+            ITEM=$(echo "${ITEM}" | sed -E -e 's/[ ]+<[^>]+>//g' -e 's/[ ]/\&nbsp\;/g')
             echo "${DEST_ARRAY}+=(\"${ITEM}\")"
         done
         return 0
