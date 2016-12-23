@@ -17,7 +17,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 iPod 5G Support
 =============================
 
-![iPod 5G Checkbox](../../images/windows/ipod-5g.png "iPod 5G Checkbox")
+![iPod 5G Checkbox](../../images/windows/ipod-5g-1.0.0.png "iPod 5G Checkbox")
 
 Older classic iPods require a special atom to be written to the MP4 file before they will play back on the device or be transferable in iTunes.
 

@@ -21,7 +21,7 @@ HandBrake can automatically name your output files for you based on a number of 
 
 If you open the programs Preferences screen, you'll see a section that referes to the "Output Files"
 
-![File output preferences](../../images/windows/output-file-preferences.png "File output preferences")
+![File output preferences](../../images/windows/output-file-preferences-1.0.0.png "File output preferences")
 
 Here you can define the default path where output files will be stored, and the format the file name will take.
 

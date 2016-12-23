@@ -27,6 +27,6 @@ HandBrake does not currently support multi-angle output.
 
 <!-- .system-win -->
 
-![Frame rate controls on Windows](../../images/windows/point-to-point.png "HandBrake's Angle Control.")
+![Frame rate controls on Windows](../../images/windows/point-to-point-1.0.0.png "HandBrake's Angle Control.")
 
 <!-- /.system-win -->

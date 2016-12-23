@@ -26,12 +26,12 @@ Begin by [opening a Source, selecting a Title](../workflow/open-video-source.htm
 
 <!-- .system-mac -->
 
-![Adding an encode to the Queue](../../images/mac/add-to-queue-button.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![Adding an encode to the Queue](../../images/mac/add-to-queue-button-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
 
 <!-- /.system-win -->
 
@@ -39,16 +39,16 @@ Select the `Show Queue` button on the toolbar to see the queued encodes, or `Job
 
 <!-- .system-mac -->
 
-![Opening the Queue window](../../images/mac/queue-button.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![Opening the Queue window](../../images/mac/queue-button-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
-![Queue window on Mac](../../images/mac/queue.png "The Queue window lists pending Jobs.")
+![Queue window on Mac](../../images/mac/queue-1.0.0.png "The Queue window lists pending Jobs.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
-![Queue window on Windows](../../images/windows/queue.png "The Queue window lists pending Jobs.")
+![Queue window on Windows](../../images/windows/queue-1.0.0.png "The Queue window lists pending Jobs.")
 
 <!-- /.system-win -->
 
@@ -62,9 +62,9 @@ When using the `Queue`, you may find it beneficial to create multiple `Jobs` at 
 
 On Mac, first open the `Preferences` window using the `HandBrake` menu. In the `General` section, ensure that the `Automatically name output files` setting is selected and `Title` is part of the `Format` field.
 
-![Opening the Preferences window on Mac](../../images/mac/preferences-menu.png "Open the Preferences window using the HandBrake menu.")
+![Opening the Preferences window on Mac](../../images/mac/preferences-menu-1.0.0.png "Open the Preferences window using the HandBrake menu.")
 
-![Selecting the Automatically name output files setting](../../images/mac/preferences-auto-naming.png "Select Automatically name output files to ensure unique file names when adding multiple Titles to the Queue.")
+![Selecting the Automatically name output files setting](../../images/mac/preferences-auto-naming-1.0.0.png "Select Automatically name output files to ensure unique file names when adding multiple Titles to the Queue.")
 
 This ensures that each of your `Jobs` will be given a unique file name, and not overwrite each other.
 
@@ -73,9 +73,9 @@ This ensures that each of your `Jobs` will be given a unique file name, and not 
 
 On Windows, first open the `Preferences` window using the `Tools` menu. In the `Output Files` section, ensure that the `Automatically name output files` setting is selected. Set a `Default Path` (where your new videos will be created) and make sure `Title` is part of the `File Format` field.
 
-![Opening the Preferences window on Windows](../../images/windows/preferences-menu.png "Open the Preferences window using the Tools menu.")
+![Opening the Preferences window on Windows](../../images/windows/preferences-menu-1.0.0.png "Open the Preferences window using the Tools menu.")
 
-![Selecting the Automatically name output files setting](../../images/windows/preferences-auto-naming.png "Set up Automatic File Naming to ensure unique file names when adding multiple Titles to the Queue.")
+![Selecting the Automatically name output files setting](../../images/windows/preferences-auto-naming-1.0.0.png "Set up Automatic File Naming to ensure unique file names when adding multiple Titles to the Queue.")
 
 This ensures that each of your `Jobs` will be given a unique file name, and not overwrite each other.
 
@@ -87,9 +87,9 @@ Additionally, you may open a folder of multiple single-`Title` videos (excluding
 
 <!-- .system-mac -->
 
-![Opening a folder containing multiple video Sources](../../images/mac/open-source-dialog-folder.png "The Open Source dialog allows you to select a folder containing multiple video files.")
+![Opening a folder containing multiple video Sources](../../images/mac/open-source-dialog-folder-1.0.0.png "The Open Source dialog allows you to select a folder containing multiple video files.")
 
-![Selecting a Title](../../images/mac/title-selection.png "The Title control lets you select which video clip you want to use.")
+![Selecting a Title](../../images/mac/title-selection-1.0.0.png "The Title control lets you select which video clip you want to use.")
 
 <!-- /.system-mac -->
 <!-- .system-lin -->
@@ -101,9 +101,9 @@ On Linux, select `Add Multiple` from the `Queue` menu, then select the `Titles` 
 
 On Mac, select `Add Titles to Queue...` from the `File` menu, then select the `Titles` you wish to encode using the presented dialog.
 
-![Add Titles to Queue menu item](../../images/mac/add-titles-to-queue-menu.png "Select Add Titles to Queue... from the File menu to open a selection dialog.")
+![Add Titles to Queue menu item](../../images/mac/add-titles-to-queue-menu-1.0.0.png "Select Add Titles to Queue... from the File menu to open a selection dialog.")
 
-![Selecting multiple Titles to add to the Queue](../../images/mac/add-titles-to-queue.png "Select the Titles you wish to encode from the Add Titles to Queue dialog.")
+![Selecting multiple Titles to add to the Queue](../../images/mac/add-titles-to-queue-1.0.0.png "Select the Titles you wish to encode from the Add Titles to Queue dialog.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -120,12 +120,12 @@ To make changes to `Jobs` in the `Queue`, first open the `Queue` window by selec
 
 <!-- .system-mac -->
 
-![Opening the Queue window](../../images/mac/queue-button.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![Opening the Queue window](../../images/mac/queue-button-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
 <!-- /.system-win -->
 
@@ -140,14 +140,14 @@ On Linux, if you want to make changes to a `Job` already in the `Queue`, select 
 
 On Mac, if you want to make changes to a `Job` already in the `Queue`, control- or right-click on the `Job` and select `Edit`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
 
-![Editing an encode Job on Mac](../../images/mac/queue-edit.png "Control- or right-click the Job and select Edit to make changes.")
+![Editing an encode Job on Mac](../../images/mac/queue-edit-1.0.0.png "Control- or right-click the Job and select Edit to make changes.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
 On Windows, if you want to make changes to a `Job` already in the `Queue`, select the edit button next to the `Job`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
 
-![Editing an encode Job on Windows](../../images/windows/queue.png "Select the edit button, which looks like a sheet of paper, to make changes to a Job.")
+![Editing an encode Job on Windows](../../images/windows/queue-1.0.0.png "Select the edit button, which looks like a sheet of paper, to make changes to a Job.")
 
 <!-- /.system-win -->
 
@@ -155,12 +155,12 @@ When you're finished making changes, again add the encode to the `Queue` by sele
 
 <!-- .system-mac -->
 
-![Adding an encode to the Queue](../../images/mac/add-to-queue-button.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![Adding an encode to the Queue](../../images/mac/add-to-queue-button-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
 
 <!-- /.system-win -->
 
@@ -170,7 +170,7 @@ When ready, select the `Start` button on the`Queue` window or the `Start Queue` 
 
 <!-- .system-mac -->
 
-![Starting the Queue](../../images/mac/start-queue-button.png "The Start Queue button begins encoding the Jobs in the Queue.")
+![Starting the Queue](../../images/mac/start-queue-button-1.0.0.png "The Start Queue button begins encoding the Jobs in the Queue.")
 
 <!-- /.system-mac -->
 

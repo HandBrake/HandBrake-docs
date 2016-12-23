@@ -25,7 +25,7 @@ In order to configure the track selection behaviour, click the "Configure Defaul
 
 ### Audio Defaults
 
-![Audio Defaults Window](../../images/windows/audio-defaults.png "Audio Defaults Window")
+![Audio Defaults Window](../../images/windows/audio-defaults-1.0.0.png "Audio Defaults Window")
 
 - Track Selection Behaviour
   - None
@@ -44,7 +44,7 @@ In order to configure the track selection behaviour, click the "Configure Defaul
 
 ### Subtitle Defaults
 
-![Subtitle Defaults Window](../../images/windows/subtitle-defaults.png "Subtitle Defaults Window")
+![Subtitle Defaults Window](../../images/windows/subtitle-defaults-1.0.0.png "Subtitle Defaults Window")
 
 - Track Selection Behaviour
   - None

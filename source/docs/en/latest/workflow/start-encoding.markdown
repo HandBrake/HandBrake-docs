@@ -24,9 +24,9 @@ Now that you've got all your settings just right, it's time to make your new vid
 
 <!-- .system-mac -->
 
-![Selecting a destination](../../images/mac/destination-field.png "Destination is where HandBrake will put your new video.")
+![Selecting a destination](../../images/mac/destination-field-1.0.0.png "Destination is where HandBrake will put your new video.")
 
-![Browsing for a destination](../../images/mac/destination-dialog.png "Select the Browse button to choose a different location and name.")
+![Browsing for a destination](../../images/mac/destination-dialog-1.0.0.png "Select the Browse button to choose a different location and name.")
 
 <!-- /.system-mac -->
 
@@ -38,9 +38,9 @@ Select the `Start` button on the toolbar to make your new video.
 
 <!-- .system-mac -->
 
-![Main window toolbar](../../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
+![Main window toolbar](../../images/mac/toolbar-1.0.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-![Starting an encode](../../images/mac/start-button.png "The Start button begins encoding your new video.")
+![Starting an encode](../../images/mac/start-button-1.0.0.png "The Start button begins encoding your new video.")
 
 <!-- /.system-mac -->
 
@@ -48,9 +48,9 @@ Video encoding requires a lot of computer resources and can take awhile to compl
 
 <!-- .system-mac -->
 
-![Encode progress](../../images/mac/encode-progress.png "HandBrake reports its progress during encoding.")
+![Encode progress](../../images/mac/encode-progress-1.0.0.png "HandBrake reports its progress during encoding.")
 
-![Encoding complete alert](../../images/mac/encode-complete.png "HandBrake shows an alert when finished encoding.")
+![Encoding complete alert](../../images/mac/encode-complete-1.0.0.png "HandBrake shows an alert when finished encoding.")
 
 <!-- /.system-mac -->
 
@@ -58,7 +58,7 @@ HandBrake will report its progress while it's working and alert you when it's fi
 
 <!-- .system-mac -->
 
-![Destination in Finder](../../images/mac/destination-finder.png "Your new video is located at the Destination you specified.")
+![Destination in Finder](../../images/mac/destination-finder-1.0.0.png "Your new video is located at the Destination you specified.")
 
 <!-- /.system-mac -->
 

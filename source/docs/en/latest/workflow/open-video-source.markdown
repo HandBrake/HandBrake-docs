@@ -44,9 +44,9 @@ By default, HandBrake presents the `Open Source` dialog on launch. It is also ac
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Main window toolbar](../../images/mac/toolbar.png "The Toolbar provides easy access to HandBrake's most common functions.")
+![Main window toolbar](../../images/mac/toolbar-1.0.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-![Open Source button](../../images/mac/open-source-button.png "The Open Source button opens the Open Source dialog.")
+![Open Source button](../../images/mac/open-source-button-1.0.0.png "The Open Source button opens the Open Source dialog.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -66,9 +66,9 @@ You can also drag and drop a video `Source` onto HandBrake's main window.
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Open Source dialog](../../images/mac/open-source-dialog.png "The Open Source dialog allows you to browse your files for a video to open.")
+![Open Source dialog](../../images/mac/open-source-dialog-1.0.0.png "The Open Source dialog allows you to browse your files for a video to open.")
 
-![Opening a video source via drag and drop](../../images/mac/open-source-drag-drop.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
+![Opening a video source via drag and drop](../../images/mac/open-source-drag-drop-1.0.0.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -86,7 +86,7 @@ HandBrake will scan your selection and after a few moments, the main window will
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Successfully opened source](../../images/mac/open-source-success.png "HandBrake's main window after sucessfully opening a source.")
+![Successfully opened source](../../images/mac/open-source-success-1.0.0.png "HandBrake's main window after sucessfully opening a source.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -104,7 +104,7 @@ Some `Sources` may contain more than one video clip, or a collection of `Titles`
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Selecting a title](../../images/mac/title-selection.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+![Selecting a title](../../images/mac/title-selection-1.0.0.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
