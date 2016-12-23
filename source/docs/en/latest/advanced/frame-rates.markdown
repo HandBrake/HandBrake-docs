@@ -21,7 +21,7 @@ A video's frame rate is how many still pictures are displayed per second. Common
 
 <!-- .system-mac -->
 
-![Frame rate controls on Mac](../images/mac/frame-rate-controls.png "HandBrake's frame rate controls.")
+![Frame rate controls on Mac](../../images/mac/frame-rate-controls.png "HandBrake's frame rate controls.")
 
 <!-- /.system-mac -->
 

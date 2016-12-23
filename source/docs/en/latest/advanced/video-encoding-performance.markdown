@@ -45,7 +45,7 @@ For x264 and x265, the Medium preset is a good trade off between quality, file s
 
 <!-- .system-win -->
 
-![HandBrake's Video Quality Settings](../images/windows/video-quality.png "HandBrake's Video Quality Settings")
+![HandBrake's Video Quality Settings](../../images/windows/video-quality.png "HandBrake's Video Quality Settings")
 
 <!-- /.system-win -->
 
@@ -54,7 +54,7 @@ Filters are another thing that has a big effect. Particularly if you use Denoise
 
 <!-- .system-win -->
 
-![HandBrake's Video Filter Settings](../images/windows/video-quality.png "HandBrake's Video Filter Settings")
+![HandBrake's Video Filter Settings](../../images/windows/video-quality.png "HandBrake's Video Filter Settings")
 
 <!-- /.system-win -->
 

@@ -17,7 +17,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Web Optimised
 =============================
 
-![Web Optimised Checkbox](../images/windows/web-optimised.png "Web Optimised Checkbox")
+![Web Optimised Checkbox](../../images/windows/web-optimised.png "Web Optimised Checkbox")
 
 If you are encoding for the web and using the MP4 file format, you'll want to turn on "Web Optimised" checkbox.
 This places the MP4 container header at the start of the file, optimizing it for streaming across the web.

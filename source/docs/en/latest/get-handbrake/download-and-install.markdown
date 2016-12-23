@@ -61,7 +61,7 @@ Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-
 
 Once you've downloaded HandBrake for Mac, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
-![Installing HandBrake on Mac](../images/mac/install.png "Drag HandBrake to your Applications folder to install it on your Mac.")
+![Installing HandBrake on Mac](../../images/mac/install.png "Drag HandBrake to your Applications folder to install it on your Mac.")
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
@@ -69,15 +69,15 @@ HandBrake is now installed. You may eject the disk image and move it to the Tras
 
 The first time you attempt to launch HandBrake, your Mac may present this message to you[^gatekeeper-disabled]:
 
-![Mac Gatekeeper message](../images/mac/gatekeeper-message.png "Gatekeeper may present this message when launching HandBrake for the first time.")
+![Mac Gatekeeper message](../../images/mac/gatekeeper-message.png "Gatekeeper may present this message when launching HandBrake for the first time.")
 
 This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Apple's paid program to validate Mac applications. Select `OK` to dismiss the Gatekeeper message.
 
 Hold down the `Control` key and select the HandBrake icon to bring up the shortcut menu. Select `Open` and your Mac will ask whether you are certain you wish to open HandBrake. Confirm that you want to trust HandBrake by again selecting `Open`.[^gatekeeper-instructions]
 
-![Opening HandBrake using Finder's shortcut menu](../images/mac/shortcut-menu-open.png "Launching HandBrake using the Open option in the Finder's shortcut menu will bypass the initial Gatekeeper message.")
+![Opening HandBrake using Finder's shortcut menu](../../images/mac/shortcut-menu-open.png "Launching HandBrake using the Open option in the Finder's shortcut menu will bypass the initial Gatekeeper message.")
 
-![Gatekeeper message with Open option](../images/mac/gatekeeper-message-quarantine.png "Gatekeeper may also present this message when launching HandBrake for the first time. Selecting Open will tell Gatekeeper to trust HandBrake.")
+![Gatekeeper message with Open option](../../images/mac/gatekeeper-message-quarantine.png "Gatekeeper may also present this message when launching HandBrake for the first time. Selecting Open will tell Gatekeeper to trust HandBrake.")
 
 Now HandBrake is up and running. You should not have to repeat this process in the near future.
 
@@ -90,15 +90,15 @@ Once you've downloaded the HandBrake installer, simply double click to run it.
 
 If HandBrake is already installed on your computer, the installer will offer to remove the previous version before installing the current version. Select `OK` to proceed and review HandBrake's license terms.
 
-![HandBrake Windows installer: removing previous versions](../images/windows/uninstall.png "The HandBrake installer will offer to remove previous versions before installing the current version.")
+![HandBrake Windows installer: removing previous versions](../../images/windows/uninstall.png "The HandBrake installer will offer to remove previous versions before installing the current version.")
 
-![HandBrake Windows installer](../images/windows/install-1.png "HandBrake's Windows installer.")
+![HandBrake Windows installer](../../images/windows/install-1.png "HandBrake's Windows installer.")
 
 Next, the installer will ask you where you wish to install HandBrake. Unless you have a specific reason to change this, select `Install` to continue. Once the installation is complete, you may select `Finish` to exit the installer.
 
-![HandBrake for Windows installation progress](../images/windows/install-2.png "The installer will report its progress.")
+![HandBrake for Windows installation progress](../../images/windows/install-2.png "The installer will report its progress.")
 
-![HandBrake for Windows installation complete](../images/windows/install-finish.png "HandBrake is now installed.")
+![HandBrake for Windows installation complete](../../images/windows/install-finish.png "HandBrake is now installed.")
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
 
@@ -106,13 +106,13 @@ You will find shortcuts for launching HandBrake placed on both the Windows Deskt
 
 When installing on Windows 8 or 10 with Windows SmartScreen enabled, you may see a message indicating that the HandBrake installer is not recognized by Windows.
 
-![Windows SmartScreen](../images/windows/smartscreen-1.png "Windows SmartScreen may present this message. Select More info to see more options.")
+![Windows SmartScreen](../../images/windows/smartscreen-1.png "Windows SmartScreen may present this message. Select More info to see more options.")
 
 HandBrake is not "signed" by Microsoft. This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Microsoft's paid program to validate Windows applications.
 
 By selecting `More info`, you will be able to select `Run anyway` to continue the installation.
 
-![Windows SmartScreen - Run Anyway](../images/windows/smartscreen-2.png "Select Run anyway to dismiss the SmartScreen message and continue installing HandBrake.")
+![Windows SmartScreen - Run Anyway](../../images/windows/smartscreen-2.png "Select Run anyway to dismiss the SmartScreen message and continue installing HandBrake.")
 
 <!-- /.system-win -->
 
@@ -120,7 +120,7 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 
 You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon]. Depending on your system settings, a single click may suffice.
 
-![HandBrake icon](../images/icon.png)![Double-clicking HandBrake icon](../images/icon-click.gif)
+![HandBrake icon](../../images/icon.png)![Double-clicking HandBrake icon](../../images/icon-click.gif)
 
 <!-- .continue -->
 

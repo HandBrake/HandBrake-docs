@@ -21,11 +21,11 @@ HandBrake comes with many built-in presets which cover the most common use case 
 
 You can create your own presets by clicking the "Add" button on the preset pane.
 
-![Preset Controls](../images/windows/preset-controls.png "Preset Controls")
+![Preset Controls](../../images/windows/preset-controls.png "Preset Controls")
 
 When you've pressed this button, you'll see the following window appear:
 
-![Preset Add Window](../images/windows/add-preset.png "Preset Add Window")
+![Preset Add Window](../../images/windows/add-preset.png "Preset Add Window")
 
 When you press save, HandBrake will use the default behaviour  rules you've set and any settings from the main window just before you pressed "Add Preset".
 

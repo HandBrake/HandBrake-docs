@@ -23,7 +23,7 @@ HandBrake can copy Chatper Markers from your source to the MP4 or MKV output fil
 
 In HandBrake, if you click on the 'Chapters' tab, you'll see a list of detected chapters. HandBrake will automatically generated chapter names in the following format:  "Chatper n" where n is the chapter number.
 
-![Chapters Tab](../images/windows/chapters.png "Chapters Tab")
+![Chapters Tab](../../images/windows/chapters.png "Chapters Tab")
 
 ## Renaming Chapters.
 
