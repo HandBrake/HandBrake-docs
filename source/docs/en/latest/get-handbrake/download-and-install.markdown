@@ -118,7 +118,7 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 
 ## Launching HandBrake
 
-You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon[^about-icon]. Depending on your system settings, a single click may suffice.
+You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon. Depending on your system settings, a single click may suffice.
 
 ![HandBrake icon](../../images/icon-1.0.0.png)![Double-clicking HandBrake icon](../../images/icon-click-1.0.0.gif)
 
@@ -135,5 +135,3 @@ Continue to [Checking for updates](check-for-updates.html).
 [^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
 
 [^gatekeeper-instructions]: These instructions are taken directly from Apple's Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/kb/PH21769?locale=en_US) and [here](https://support.apple.com/en-us/HT202491).
-
-[^about-icon]: Read about the icon and more at HandBrake lore (TODO: link).

@@ -42,7 +42,7 @@ HandBrake can open a number of production formats produced by professional video
 
 HandBrake can directly open DVD and Blu-ray discs. In most situations it is better to first copy the contents to your computer's hard drive[^uncopyable]. Common folders are VIDEO_TS and BDMV. Common video file types are VOB, EVO, and MTS or M2TS.
 
-Certain third-party disc copy tools such as MakeMKV (TODO: link) commonly make... wait for it... MKV video files. Other tools create ISO (sometimes labeled CDR) images of DVD and Blu-ray discs. HandBrake usually can open these directly.
+Certain third-party disc copy tools such as MakeMKV commonly make... wait for it... MKV video files. Other tools create ISO (sometimes labeled CDR) images of DVD and Blu-ray discs. HandBrake usually can open these directly.
 
 BIN+CUE, MDF+MDS, and Toast images must first be mounted. Open the image using your operating system or appropriate software, and then open the virtual disc with HandBrake.
 

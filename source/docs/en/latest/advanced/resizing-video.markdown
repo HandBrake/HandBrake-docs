@@ -41,8 +41,6 @@ The width and height must be divisible by this number. It's best left at 2, but 
 
 Typically recommended that you leave this on "loose". If your source is not anamorphic, having this set to an anamorphic option will not affect the output. Thus, it is safe to leave on.
 
-For more information on what Anamorphic is, please read our advanced anamorphic guide  [TODO LINK]
-
 ## Upscaling
 
 The HandBrake GUI's do not allow upscaling. Most of the time this is a bad idea as it reduces (not increases) the quality of your source file along with increasing the final file size. This is less than idea. Most of the time, letting the playback device or software upscale to your screen size is much better. You don't gain anything by upscaling with HandBrake.
