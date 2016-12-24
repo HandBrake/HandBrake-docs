@@ -50,3 +50,7 @@ Copyright 2012 Blender Foundation
 *Cosmos Laundromat* ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/))  
 Copyright 2015 Blender Foundation  
 [gooseberry.blender.org](https://gooseberry.blender.org/)
+
+## Donations
+
+The HandBrake and HandBrake Documentation projects are not accepting monetary donations. Please instead consider donating to the [VideoLAN non-profit organization](https://www.videolan.org/videolan/) and the [Blender Foundation](https://www.blender.org/foundation/).
