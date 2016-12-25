@@ -4,7 +4,7 @@ State:           draft
 Title:           Resizing Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: Latest
+Project_Version: 1.0.0
 Language:        English
 Language_Code:   en
 Authors:         [ Scott (s55) ]

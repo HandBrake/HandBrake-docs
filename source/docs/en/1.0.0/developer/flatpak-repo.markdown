@@ -4,7 +4,7 @@ State:           draft
 Title:           Maintaining a HandBrake flatpak repository
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: Latest
+Project_Version: 1.0.0
 Language:        English
 Language_Code:   en
 Authors:         [ John (j45) ]
