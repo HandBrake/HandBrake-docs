@@ -44,10 +44,14 @@ You may build and install the additional dependencies using the included script.
 
 This process will take a few minutes. If necessary, the script will provide you with instructions for adding the resulting binaries location to your environment's `PATH`[^default-path]. Do this now.
 
-Build HandBrake.
+Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-xcode`.
 
     ./configure --launch-jobs=$(sysctl -n hw.ncpu) --launch
 
-When complete, you will find `HandBrake.app` and `HandBrakeCLI` in the `build/xroot` directory.
+When complete, you will find `HandBrakeCLI` in the `build/xroot` directory. If the graphical interface is enabled, you will also find `HandBrake.app` in this directory.
+
+Install HandBrake (optional).
+
+    cd build && sudo make install
 
 [^default-path]: `/usr/local/bin` is included in the system's `PATH` by default. It is not necessary to add it to your environment's `PATH` when installing the additional dependencies to `/usr/local`.
