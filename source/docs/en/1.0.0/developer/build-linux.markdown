@@ -22,6 +22,7 @@ If you have installed a HandBrake package from your distribution or other third-
 
 Dependency installation instructions are available for the following distributions.
 
+- [Arch](install-dependencies-arch.html)
 - [CentOS](install-dependencies-centos.html)
 - [Fedora](install-dependencies-fedora.html)
 - [Gentoo](install-dependencies-gentoo.html)
