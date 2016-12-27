@@ -54,4 +54,9 @@ Install HandBrake (optional).
 
     cd build && sudo make install
 
+To start over, simply remove the `build` directory.
+
+    if [[ "$(basename $(pwd))" == "build" ]]; then cd ..; fi
+    rm -rf build
+
 [^default-path]: `/usr/local/bin` is included in the system's `PATH` by default. It is not necessary to add it to your environment's `PATH` when installing the additional dependencies to `/usr/local`.
