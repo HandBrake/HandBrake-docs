@@ -6,11 +6,12 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.2.3"
+VERSION="0.2.4"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
 SELF_NAME=$(basename "${SELF}")
+SYS_NAME=$(uname | awk '{ print tolower($0)}')
 MARKDOWN_OPTIONS_DEFAULT=(-1.0 +alphalist -autolink -cdata +definitionlist -divquote -dldiscount +dlextra -emphasis +ext +fencedcode +footnote +githubtags -header +html +image -latex +links -safelink +smarty +strikethrough +style +superscript +tables -tabstop -toc)
 HELP="\
 usage: ${SELF_NAME} [-h | --help]
@@ -1764,17 +1765,17 @@ function build_target {  # build_target dest_dir target advanced_nav templates_d
     fi
     DOCUMENTS=$(echo "${DOCUMENTS}" | grep -Ei '\.(markdown|md|mkd|mkdn|mdown|xml)$' | sed 's/^\.\///')
     PARALLEL=$(which parallel)
-    if [[ "${JOBS}" != 1 ]] && [[ "${PARALLEL:-}" != "" ]] && [[ "$(${PARALLEL} --version --no-notice 2>/dev/null | head -n 1 | grep -o 'GNU parallel')" == "GNU parallel" ]]; then
+    if [[ "${JOBS:-1}" -gt 1 ]] && [[ "${PARALLEL:-}" != "" ]] && [[ "$(${PARALLEL} --version --no-notice 2>/dev/null | head -n 1 | grep -o 'GNU parallel')" == "GNU parallel" ]]; then
         # in parallel
         export -f build_document
-        if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${JOBS:+--jobs=$JOBS}" "${SELF_DIR}/${SELF}" build-document "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
+        if ! "${PARALLEL}" --halt now,fail=1 --quote --no-notice "--jobs=${JOBS:-1}" "${SELF_DIR}/${SELF_NAME}" build-document "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
             echo "Unable to build template: ${TEMPLATES[$I]}"
             return 1
         fi
         if [[ "${TEMPLATES_DIR}" != "" ]] && [[ "${#TEMPLATES[@]}" -gt 0 ]]; then
             export -f build_template
             for I in "${!TEMPLATES[@]}"; do
-                if ! "${PARALLEL}" --halt now,fail=1 --no-notice "${JOBS:+--jobs=$JOBS}" "${SELF_DIR}/${SELF}" build-templates "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
+                if ! "${PARALLEL}" --halt now,fail=1 --quote --no-notice "--jobs=${JOBS:-1}" "${SELF_DIR}/${SELF_NAME}" build-templates "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
                     echo "Unable to build template: ${TEMPLATES[$I]}"
                     return 1
                 fi
@@ -1832,7 +1833,12 @@ fi
 # args
 FETCH=false
 FORCE=false
-JOBS=""
+JOBS=1
+if [[ "${SYS_NAME}" == "darwin" ]]; then
+    JOBS=$(sysctl -n hw.ncpu)
+elif [[ "${SYS_NAME}" == "linux" ]]; then
+    JOBS=$(nproc)
+fi
 MARKDOWN=""
 OPTIND=1
 OPTSPEC=":-:hvj:"
@@ -1998,7 +2004,7 @@ fi
 if [[ "${MARSH_CONFIG_FILE:-}" == "" ]]; then
     MARSH_CONFIG_FILE="${1:-$SELF_DIR}"
     if [[ -d "${MARSH_CONFIG_FILE}" ]]; then
-        MARSH_CONFIG_FILE="$(cd ${MARSH_CONFIG_FILE} && (pwd -P . 2>/dev/null || command pwd))"
+        MARSH_CONFIG_FILE=$(cd "${MARSH_CONFIG_FILE}" && (pwd -P . 2>/dev/null || command pwd))
         [[ "${MARSH_CONFIG_FILE}" != "" ]] && MARSH_CONFIG_FILE="${MARSH_CONFIG_FILE%/}/config.yaml"
     fi
     if [[ -f "${MARSH_CONFIG_FILE}" ]] && [[ -r "${MARSH_CONFIG_FILE}" ]]; then
@@ -2110,6 +2116,9 @@ if [[ "${COMMAND}" == "build" ]]; then
     trap "die_gracefully" EXIT INT TERM
 
     # build everything
+    echo -n "${NAME} ${VERSION}"
+    [[ "${JOBS:-1}" -gt 1 ]] && echo -n " (${JOBS} jobs)"
+    echo ""
     echo "${CONFIG_Build_Name:-No Name} (${MARSH_CONFIG_FILE#$SELF_DIR/})"
     echo "${CONFIG_Build_Path%/} -> ${CONFIG_Build_URL%/}"
 
