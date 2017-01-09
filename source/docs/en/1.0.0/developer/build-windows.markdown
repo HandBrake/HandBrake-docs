@@ -67,7 +67,7 @@ To start over, simply remove the `build` directory.
 
 The following tools are required to build and run the [GUI](abbr:Graphical User Interface).
 
-- [Microsoft Visual Studio Community Edition](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)
+- [Microsoft Visual Studio Community](https://www.visualstudio.com/vs/community/)
 - [Source Tree](https://www.sourcetreeapp.com) git client (optional)
   - Visual Studio 2015 has built-in git support, if you prefer it
 - `hb.dll` (see the LibHB build instructions preceding these, or download from [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php))
