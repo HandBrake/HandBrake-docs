@@ -142,13 +142,13 @@ Table of contents
   - [Audio quality](technical/audio-quality.html)
 - Files and compatibility
   - [Container formats](technical/containers.html)
-  - [Web optimized](technical/web-optimised.html)
   - [iPod 5th Generation support](technical/old-ipod-support.html)
   - [Automatic file naming](technical/automatic-file-naming.html)
 - Filters
   - [Filters summary](technical/filters-summary.html)
 
 <!--
+- [Web optimized](technical/web-optimised.html)
 - [Video source type](advanced/video-sources.html)
 - Advanced Filter Settings
 - Advanced preferences
