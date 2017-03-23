@@ -1,12 +1,12 @@
 #!/bin/bash
 # marsh - build static websites using markdown and bash
 #
-# Copyright 2016 Bradley Sepos
+# Copyright 2017 Bradley Sepos
 # Released under the MIT License. See LICENSE for details.
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.2.7"
+VERSION="0.2.8"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -2039,7 +2039,7 @@ if [[ "${MARKDOWN}" != "" ]] && [[ "${MARKDOWN#\/}" == "${MARKDOWN}" ]]; then
     MARKDOWN="${SELF_DIR}/${MARKDOWN}"
 fi
 MARKDOWN="${MARKDOWN:-markdown}"
-MARKDOWN_VERSION_REQ="2.2.1"
+MARKDOWN_VERSION_REQ="2.2.2"
 DEPS_MISSING=()
 dependency_exists "${MD5}" || DEPS_MISSING+=("${MD5}")
 if dependency_exists "${GIT}"; then
