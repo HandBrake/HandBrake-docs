@@ -108,7 +108,7 @@ Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related a
 
 Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
 
-    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/updates/6/x86_64/rpmfusion-free-release-6-1.noarch.rpm
+    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-6.noarch.rpm
     sudo yum install lame-devel x264-devel
 
 Download the HarfBuzz spec file from the CentOS 7 [rpms/harfbuzz](https://git.centos.org/summary/rpms!harfbuzz.git) git repository and remove the `graphite2-devel` dependency.
