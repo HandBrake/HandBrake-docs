@@ -36,9 +36,9 @@ Dependencies:
 
 Additional dependencies not available in the base repository:
 
-- lame-devel [ZMREPO]
+- lame-devel [RPM Fusion]
 - libass-devel [EPEL]
-- x264-devel [ZMREPO]
+- x264-devel [RPM Fusion]
 - yasm [EPEL]
 
 Install dependencies.
@@ -51,9 +51,15 @@ Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related a
     sudo yum install epel-release
     sudo yum install libass-devel yasm
 
-Install the [ZMREPO](https://zmrepo.zoneminder.com) repository and related additional dependencies.
+The `lame-devel` and `x264-devel` packages are now provided by the RPM Fusion repository. If you previously installed the [ZMREPO](https://zmrepo.zoneminder.com) repository for these packages, remove them and the repository before continuing.
 
-    sudo yum localinstall --nogpgcheck https://zmrepo.zoneminder.com/el/7/x86_64/zmrepo-7-7.el7.centos.noarch.rpm
+    # Only necessary if previously installed ZMREPO
+    sudo yum repo-pkgs zmrepo remove
+    sudo yum remove zmrepo
+
+Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
+
+    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
     sudo yum install lame-devel x264-devel
 
 CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
