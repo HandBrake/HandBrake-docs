@@ -28,6 +28,44 @@ To download HandBrake to your computer, click the download button on the HandBra
 
 Experienced users may wish to try HandBrake's [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].
 
+## Verifying your download
+
+### Checksums
+
+The HandBrake Team publishes [checksums for all downloads on handbrake.fr](https://handbrake.fr/checksums.php) and the [Checksums article on GitHub](https://github.com/HandBrake/HandBrake/wiki/Checksums). You may use the provided checksums to verify the integrity of the files you download.
+
+<!-- .system-lin -->
+
+When installing on Linux using the official PPA, download integrity is verified automatically. Similarly, the integrity of source code managed using `git` is verified automatically.
+
+To verify an official source distribution tarball, consult your Linux distribution's documentation for instructions on how to verify checksums.
+
+<!-- /.system-lin -->
+
+<!-- .system-mac -->
+
+On Mac, launch Terminal from your Applications > Utilities folder and use the `shasum` command. For example, if you downloaded HandBrake 1.0.0 to your Downloads folder:
+
+    shasum -a 1 ~/Downloads/HandBrake-1.0.0.dmg && shasum -a 256 ~/Downloads/HandBrake-1.0.0.dmg
+
+Alternatively, the free third-party app [Hashsum](https://itunes.apple.com/us/app/hashsum/id1079442694?mt=12) available on the Mac App Store provides a convenient graphical interface for computing file checksums[^third-party-utilities-1].
+
+<!-- /.system-mac -->
+
+<!-- .system-win -->
+
+On Windows, Microsoft provides the [Microsoft File Checksum Integrity Verifier](https://www.microsoft.com/en-us/download/details.aspx?id=11533) command line utility for verifying checksums. Please see the [associated Microsoft help article](https://support.microsoft.com/en-us/help/841290/availability-and-description-of-the-file-checksum-integrity-verifier-utility) for more information and usage instructions.
+
+Alternatively, free third-party apps [Compute Hash](http://www.subisoft.net/ComputeHash.aspx), [ExactFile](http://www.exactfile.com), and [MultiHasher](http://www.abelhadigital.com/multihasher) for Windows provide convenient graphical interfaces for computing file checksums[^third-party-utilities-2].
+
+<!-- /.system-win -->
+
+*If the checksums for the file you downloaded do not match the ones published by the HandBrake Team, you should delete the file and try your download again.*
+
+### OpenPGP
+
+The HandBrake Team also publishes [OpenPGP signatures for all downloads on GitHub](https://github.com/HandBrake/HandBrake/releases). More information is available on the [OpenPGP article on GitHub](https://github.com/HandBrake/HandBrake/wiki/OpenPGP).
+
 <!-- .system-lin -->
 
 ## Installing on Linux
@@ -131,6 +169,10 @@ Continue to [Checking for updates](check-for-updates.html).
 <!-- /.continue -->
 
 [^nightly-builds]: Nightly builds are based on HandBrake's latest development code, including new and experimental features that may be unstable or significantly different than the latest release version. Although everyone is welcome to try them, nightly builds are best suited for experienced users and developers.
+
+[^third-party-utilities-1]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
+
+[^third-party-utilities-2]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
 
 [^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
 
