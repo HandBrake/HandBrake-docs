@@ -26,6 +26,8 @@ Providing an Activity Log is **required** for all support requests. It is the fa
 
 You may think you have a simple question for which providing a log seems unnecessary. Please read the section, *Why Activity Logs are required for support* on the [Activity Log](activity-log.html) article. *Without an Activity Log, the HandBrake Team simply cannot provide technical support.*
 
+If you think you have a simple question for which an activity log is not **required**, please read [Why are Activity Logs required for support?](../help/why-activity-log.html).
+
 ## Community Forums
 
 The [HandBrake Community Forums](https://forum.handbrake.fr/) are available 24/7. Whether you have a support request or simply want to connect with other HandBrake users, this is the place. Registration is free. Please read and abide by our [Community Rules](https://forum.handbrake.fr/viewtopic.php?f=6&t=6702).
