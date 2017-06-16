@@ -16,9 +16,9 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Mac
 ==========================
 
-Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running OS X 10.10.5 Yosemite or later, and the following dependencies.
+Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running OS X 10.11.5 El Capitan or later, and the following dependencies.
 
-- [Xcode](https://developer.apple.com/xcode/) 7.2.1 or later
+- [Xcode](https://developer.apple.com/xcode/) 8.2.1 or later
   - free Apple Developer registration required, or install from the Mac App Store
 - [Command Line Tools for Xcode](https://developer.apple.com/download/more/) (optional)
   - free Apple Developer registration required, or install using `xcode-select --install`
@@ -27,7 +27,7 @@ Additional dependencies (may be built via included script):
 
 - autoconf
 - automake
-- cmake (3.3.2 or later recommended)
+- cmake (3.7.2 or later recommended)
 - libtool
 - pkg-config
 - yasm 1.2.0 or later (1.3.0 or later recommended)
