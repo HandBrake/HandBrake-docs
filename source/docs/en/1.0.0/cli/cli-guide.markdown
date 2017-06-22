@@ -191,6 +191,8 @@ You can access this information at any time by running the following command:
                                Multiple output tracks can be used for one input.
        -E, --aencoder <string> Select audio encoder(s):
                                    av_aac
+                                   ca_aac
+                                   ca_haac
                                    copy:aac
                                    ac3
                                    copy:ac3
@@ -212,8 +214,8 @@ You can access this information at any time by running the following command:
                                is supported for the audio type.
                                Separate tracks by commas.
                                Defaults:
-                                   av_mp4   av_aac
-                                   av_mkv   mp3
+                                   av_mp4   ca_aac/av_aac
+                                   av_mkv   ca_aac/mp3
            --audio-copy-mask <string>
                                Set audio codecs that are permitted when the
                                "copy" audio encoder option is specified
@@ -245,6 +247,8 @@ You can access this information at any time by running the following command:
                                Separate tracks by commas.
                                Defaults:
                                    av_aac           up to dpl2
+                                   ca_aac           up to dpl2
+                                   ca_haac          up to dpl2
                                    ac3              up to 5point1
                                    eac3             up to 5point1
                                    mp3              up to dpl2
@@ -297,8 +301,10 @@ You can access this information at any time by running the following command:
        -X, --maxWidth  <number>
                                Set maximum width in pixels
        --non-anamorphic        Set pixel aspect ratio to 1:1
-       --strict-anamorphic     Store pixel aspect ratio in video stream
-       --loose-anamorphic      Store pixel aspect ratio with specified display width
+       --auto-anamorphic       Store pixel aspect ratio that maximizes storage
+                               resolution
+       --loose-anamorphic      Store pixel aspect ratio that is as close as
+                               possible to the source video pixel aspect ratio
        --custom-anamorphic     Store pixel aspect ratio in video stream and
                                directly control all parameters.
        --display-width <number>
@@ -318,10 +324,10 @@ You can access this information at any time by running the following command:
        --no-itu-par            Disable preset 'itu-par'
        --modulus <number>      Set storage width and height modulus
                                Dimensions will be made divisible by this number.
-                               Does not affect strict anamorphic mode (always mod 2)
                                (default: set by preset, typically 2)
        -M, --color-matrix <string>
                                Set the color space signaled by the output:
+                                   2020
                                    709
                                    601
                                    ntsc (same as 601)
@@ -502,12 +508,14 @@ You can access this information at any time by running the following command:
                                the subtitle list specified with '--subtitle'
                                or "native" to burn the subtitle track that may
                                be added by the 'native-language' option.
-          --subtitle-default[=number]
+          --subtitle-default[=number or "none"]
                                Flag the selected subtitle as the default
                                subtitle to be displayed upon playback.  Setting
                                no default means no subtitle will be displayed
                                automatically. 'number' is an index into the
                                subtitle list specified with '--subtitle'.
+                               "none" may be used to override an automatically
+                               selected default subtitle track.
       -N, --native-language <string>
                                Specifiy your language preference. When the first
                                audio track does not match your native language
@@ -546,6 +554,3 @@ You can access this information at any time by running the following command:
                                the video track.
                                If 'number' is omitted, the first SRT is burned.
                                'number' is a 1-based index into the 'srt-file' list
-
-
-
