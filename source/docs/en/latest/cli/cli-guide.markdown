@@ -56,7 +56,6 @@ You can access this information at any time by running the following command:
        --queue-import-file <filename>
                                Import an encode queue file created by the GUI
            --no-dvdnav         Do not use dvdnav for reading DVDs
-           --no-opencl         Disable use of OpenCL
 
 
     Source Options ---------------------------------------------------------------
@@ -102,7 +101,6 @@ You can access this information at any time by running the following command:
            --no-optimize       Disable preset 'optimize'
        -I, --ipod-atom         Add iPod 5G compatibility atom to MP4 container
            --no-ipod-atom      Disable iPod 5G atom
-       -P, --use-opencl        Use OpenCL where applicable
 
 
     Video Options ----------------------------------------------------------------
@@ -123,7 +121,7 @@ You can access this information at any time by running the following command:
                                specified video encoder
            --encoder-tune <string>
                                Adjust video encoding settings for a particular
-                               type of souce or situation (encoder-specific)
+                               type of source or situation (encoder-specific)
        --encoder-tune-list <string>
                                List supported --encoder-tune values for the
                                specified video encoder
@@ -172,7 +170,7 @@ You can access this information at any time by running the following command:
     Audio Options ----------------------------------------------------------------
 
            --audio-lang-list <string>
-                               Specifiy a comma separated list of audio
+                               Specify a comma separated list of audio
                                languages you would like to select from the
                                source title. By default, the first audio
                                matching each language will be added to your
@@ -190,7 +188,10 @@ You can access this information at any time by running the following command:
                                tracks, default: first one).
                                Multiple output tracks can be used for one input.
        -E, --aencoder <string> Select audio encoder(s):
+                                   none
                                    av_aac
+                                   ca_aac
+                                   ca_haac
                                    copy:aac
                                    ac3
                                    copy:ac3
@@ -212,8 +213,8 @@ You can access this information at any time by running the following command:
                                is supported for the audio type.
                                Separate tracks by commas.
                                Defaults:
-                                   av_mp4   av_aac
-                                   av_mkv   mp3
+                                   av_mp4   ca_aac/av_aac
+                                   av_mkv   ca_aac/mp3
            --audio-copy-mask <string>
                                Set audio codecs that are permitted when the
                                "copy" audio encoder option is specified
@@ -244,7 +245,10 @@ You can access this information at any time by running the following command:
                                    5_2_lfe
                                Separate tracks by commas.
                                Defaults:
+                                   none             up to dpl2
                                    av_aac           up to dpl2
+                                   ca_aac           up to dpl2
+                                   ca_haac          up to dpl2
                                    ac3              up to 5point1
                                    eac3             up to 5point1
                                    mp3              up to dpl2
@@ -297,8 +301,10 @@ You can access this information at any time by running the following command:
        -X, --maxWidth  <number>
                                Set maximum width in pixels
        --non-anamorphic        Set pixel aspect ratio to 1:1
-       --strict-anamorphic     Store pixel aspect ratio in video stream
-       --loose-anamorphic      Store pixel aspect ratio with specified display width
+       --auto-anamorphic       Store pixel aspect ratio that maximizes storage
+                               resolution
+       --loose-anamorphic      Store pixel aspect ratio that is as close as
+                               possible to the source video pixel aspect ratio
        --custom-anamorphic     Store pixel aspect ratio in video stream and
                                directly control all parameters.
        --display-width <number>
@@ -318,10 +324,10 @@ You can access this information at any time by running the following command:
        --no-itu-par            Disable preset 'itu-par'
        --modulus <number>      Set storage width and height modulus
                                Dimensions will be made divisible by this number.
-                               Does not affect strict anamorphic mode (always mod 2)
                                (default: set by preset, typically 2)
        -M, --color-matrix <string>
                                Set the color space signaled by the output:
+                                   2020
                                    709
                                    601
                                    ntsc (same as 601)
@@ -433,6 +439,56 @@ You can access this information at any time by running the following command:
                                    sprite
                                Applies to NLMeans presets only (does not affect
                                custom settings)
+       --unsharp[=string]      Sharpen video with unsharp filter
+                               Presets:
+                                   ultralight
+                                   light
+                                   medium
+                                   strong
+                                   stronger
+                                   verystrong
+                               Custom Format:
+                                   y-strength=y:y-size=y:cb-strength=c:cb-size=c:
+                                   cr-strength=c:cr-size=c
+                               Default:
+                                   y-strength=0.25:y-size=7:cb-strength=0.25:
+                                   cb-size=7
+       --no-unsharp            Disable preset unsharp filter
+       --unsharp-tune <string> Tune unsharp filter
+                               Tunes:
+                                   none
+                                   ultrafine
+                                   fine
+                                   medium
+                                   coarse
+                                   verycoarse
+                               Applies to unsharp presets only (does not affect
+                               custom settings)
+       --lapsharp[=string]     Sharpen video with lapsharp filter
+                               Presets:
+                                   ultralight
+                                   light
+                                   medium
+                                   strong
+                                   stronger
+                                   verystrong
+                               Custom Format:
+                                   y-strength=y:y-kernel=y:cb-strength=c:
+                                   cb-kernel=c:cr-strength=c:cr-kernel=c
+                               Default:
+                                   y-strength=0.2:y-kernel=isolap:cb-strength=0.2:
+                                   cb-kernel=isolap
+       --no-lapsharp           Disable preset lapsharp filter
+       --lapsharp-tune <string>
+                               Tune lapsharp filter
+                               Tunes:
+                                   none
+                                   film
+                                   grain
+                                   animation
+                                   sprite
+                               Applies to lapsharp presets only (does not affect
+                               custom settings)
        -7, --deblock[=string]  Deblock video with pp7 filter
                                Custom Format:
                                    qp=q:mode=m:disable=d
@@ -460,7 +516,7 @@ You can access this information at any time by running the following command:
     Subtitles Options ------------------------------------------------------------
 
       --subtitle-lang-list <string>
-                               Specifiy a comma separated list of subtitle
+                               Specify a comma separated list of subtitle
                                languages you would like to select from the
                                source title. By default, the first subtitle
                                matching each language will be added to your
@@ -502,14 +558,16 @@ You can access this information at any time by running the following command:
                                the subtitle list specified with '--subtitle'
                                or "native" to burn the subtitle track that may
                                be added by the 'native-language' option.
-          --subtitle-default[=number]
+          --subtitle-default[=number or "none"]
                                Flag the selected subtitle as the default
                                subtitle to be displayed upon playback.  Setting
                                no default means no subtitle will be displayed
                                automatically. 'number' is an index into the
                                subtitle list specified with '--subtitle'.
+                               "none" may be used to override an automatically
+                               selected default subtitle track.
       -N, --native-language <string>
-                               Specifiy your language preference. When the first
+                               Specify your language preference. When the first
                                audio track does not match your native language
                                then select the first subtitle that does. When
                                used in conjunction with --native-dub the audio
@@ -546,6 +604,3 @@ You can access this information at any time by running the following command:
                                the video track.
                                If 'number' is omitted, the first SRT is burned.
                                'number' is a 1-based index into the 'srt-file' list
-
-
-
