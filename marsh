@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.2.9"
+VERSION="0.5.0"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -328,6 +328,13 @@ function md5_string {  # md5_string string
     return 0
 }
 
+# converts html name or number entities to utf-8 character
+function decode_entities {  # decode_entities
+    TEXT=$(</dev/stdin)
+    echo "${TEXT}" | sed -e 's/&#34;/"/g' -e 's/&quot;/"/g' -e 's/&#38;/\&/g' -e 's/&amp;/\&/g' -e 's/&#39;/'"'"'/g' -e 's/&apos;/'"'"'/g' -e 's/&#60;/</g' -e 's/&lt;/</g' -e 's/&#62;/>/g' -e 's/&gt;/>/g' -e 's/&#160;/ /g' -e 's/&nbsp;/ /g' -e 's/&#161;/¡/g' -e 's/&iexcl;/¡/g' -e 's/&#162;/¢/g' -e 's/&cent;/¢/g' -e 's/&#163;/£/g' -e 's/&pound;/£/g' -e 's/&#164;/¤/g' -e 's/&curren;/¤/g' -e 's/&#165;/¥/g' -e 's/&yen;/¥/g' -e 's/&#166;/¦/g' -e 's/&brvbar;/¦/g' -e 's/&#167;/§/g' -e 's/&sect;/§/g' -e 's/&#168;/¨/g' -e 's/&uml;/¨/g' -e 's/&#169;/©/g' -e 's/&copy;/©/g' -e 's/&#170;/ª/g' -e 's/&ordf;/ª/g' -e 's/&#171;/«/g' -e 's/&laquo;/«/g' -e 's/&#172;/¬/g' -e 's/&not;/¬/g' -e 's/&#173;/­­/g' -e 's/&shy;/­­/g' -e 's/&#174;/®/g' -e 's/&reg;/®/g' -e 's/&#175;/¯/g' -e 's/&macr;/¯/g' -e 's/&#176;/°/g' -e 's/&deg;/°/g' -e 's/&#177;/±/g' -e 's/&plusmn;/±/g' -e 's/&#178;/²/g' -e 's/&sup2;/²/g' -e 's/&#179;/³/g' -e 's/&sup3;/³/g' -e 's/&#180;/´/g' -e 's/&acute;/´/g' -e 's/&#181;/µ/g' -e 's/&micro;/µ/g' -e 's/&#182;/¶/g' -e 's/&para;/¶/g' -e 's/&#183;/·/g' -e 's/&middot;/·/g' -e 's/&#184;/¸/g' -e 's/&cedil;/¸/g' -e 's/&#185;/¹/g' -e 's/&sup1;/¹/g' -e 's/&#186;/º/g' -e 's/&ordm;/º/g' -e 's/&#187;/»/g' -e 's/&raquo;/»/g' -e 's/&#188;/¼/g' -e 's/&frac14;/¼/g' -e 's/&#189;/½/g' -e 's/&frac12;/½/g' -e 's/&#190;/¾/g' -e 's/&frac34;/¾/g' -e 's/&#191;/¿/g' -e 's/&iquest;/¿/g' -e 's/&#215;/×/g' -e 's/&times;/×/g' -e 's/&#247;/÷/g' -e 's/&divide;/÷/g' -e 's/&#192;/À/g' -e 's/&Agrave;/À/g' -e 's/&#193;/Á/g' -e 's/&Aacute;/Á/g' -e 's/&#194;/Â/g' -e 's/&Acirc;/Â/g' -e 's/&#195;/Ã/g' -e 's/&Atilde;/Ã/g' -e 's/&#196;/Ä/g' -e 's/&Auml;/Ä/g' -e 's/&#197;/Å/g' -e 's/&Aring;/Å/g' -e 's/&#198;/Æ/g' -e 's/&AElig;/Æ/g' -e 's/&#199;/Ç/g' -e 's/&Ccedil;/Ç/g' -e 's/&#200;/È/g' -e 's/&Egrave;/È/g' -e 's/&#201;/É/g' -e 's/&Eacute;/É/g' -e 's/&#202;/Ê/g' -e 's/&Ecirc;/Ê/g' -e 's/&#203;/Ë/g' -e 's/&Euml;/Ë/g' -e 's/&#204;/Ì/g' -e 's/&Igrave;/Ì/g' -e 's/&#205;/Í/g' -e 's/&Iacute;/Í/g' -e 's/&#206;/Î/g' -e 's/&Icirc;/Î/g' -e 's/&#207;/Ï/g' -e 's/&Iuml;/Ï/g' -e 's/&#208;/Ð/g' -e 's/&ETH;/Ð/g' -e 's/&#209;/Ñ/g' -e 's/&Ntilde;/Ñ/g' -e 's/&#210;/Ò/g' -e 's/&Ograve;/Ò/g' -e 's/&#211;/Ó/g' -e 's/&Oacute;/Ó/g' -e 's/&#212;/Ô/g' -e 's/&Ocirc;/Ô/g' -e 's/&#213;/Õ/g' -e 's/&Otilde;/Õ/g' -e 's/&#214;/Ö/g' -e 's/&Ouml;/Ö/g' -e 's/&#216;/Ø/g' -e 's/&Oslash;/Ø/g' -e 's/&#217;/Ù/g' -e 's/&Ugrave;/Ù/g' -e 's/&#218;/Ú/g' -e 's/&Uacute;/Ú/g' -e 's/&#219;/Û/g' -e 's/&Ucirc;/Û/g' -e 's/&#220;/Ü/g' -e 's/&Uuml;/Ü/g' -e 's/&#221;/Ý/g' -e 's/&Yacute;/Ý/g' -e 's/&#222;/Þ/g' -e 's/&THORN;/Þ/g' -e 's/&#223;/ß/g' -e 's/&szlig;/ß/g' -e 's/&#224;/à/g' -e 's/&agrave;/à/g' -e 's/&#225;/á/g' -e 's/&aacute;/á/g' -e 's/&#226;/â/g' -e 's/&acirc;/â/g' -e 's/&#227;/ã/g' -e 's/&atilde;/ã/g' -e 's/&#228;/ä/g' -e 's/&auml;/ä/g' -e 's/&#229;/å/g' -e 's/&aring;/å/g' -e 's/&#230;/æ/g' -e 's/&aelig;/æ/g' -e 's/&#231;/ç/g' -e 's/&ccedil;/ç/g' -e 's/&#232;/è/g' -e 's/&egrave;/è/g' -e 's/&#233;/é/g' -e 's/&eacute;/é/g' -e 's/&#234;/ê/g' -e 's/&ecirc;/ê/g' -e 's/&#235;/ë/g' -e 's/&euml;/ë/g' -e 's/&#236;/ì/g' -e 's/&igrave;/ì/g' -e 's/&#237;/í/g' -e 's/&iacute;/í/g' -e 's/&#238;/î/g' -e 's/&icirc;/î/g' -e 's/&#239;/ï/g' -e 's/&iuml;/ï/g' -e 's/&#240;/ð/g' -e 's/&eth;/ð/g' -e 's/&#241;/ñ/g' -e 's/&ntilde;/ñ/g' -e 's/&#242;/ò/g' -e 's/&ograve;/ò/g' -e 's/&#243;/ó/g' -e 's/&oacute;/ó/g' -e 's/&#244;/ô/g' -e 's/&ocirc;/ô/g' -e 's/&#245;/õ/g' -e 's/&otilde;/õ/g' -e 's/&#246;/ö/g' -e 's/&ouml;/ö/g' -e 's/&#248;/ø/g' -e 's/&oslash;/ø/g' -e 's/&#249;/ù/g' -e 's/&ugrave;/ù/g' -e 's/&#250;/ú/g' -e 's/&uacute;/ú/g' -e 's/&#251;/û/g' -e 's/&ucirc;/û/g' -e 's/&#252;/ü/g' -e 's/&uuml;/ü/g' -e 's/&#253;/ý/g' -e 's/&yacute;/ý/g' -e 's/&#254;/þ/g' -e 's/&thorn;/þ/g' -e 's/&#255;/ÿ/g' -e 's/&yuml;/ÿ/g' -e 's/&#8704;/∀/g' -e 's/&forall;/∀/g' -e 's/&#8706;/∂/g' -e 's/&part;/∂/g' -e 's/&#8707;/∃/g' -e 's/&exist;/∃/g' -e 's/&#8709;/∅/g' -e 's/&empty;/∅/g' -e 's/&#8711;/∇/g' -e 's/&nabla;/∇/g' -e 's/&#8712;/∈/g' -e 's/&isin;/∈/g' -e 's/&#8713;/∉/g' -e 's/&notin;/∉/g' -e 's/&#8715;/∋/g' -e 's/&ni;/∋/g' -e 's/&#8719;/∏/g' -e 's/&prod;/∏/g' -e 's/&#8721;/∑/g' -e 's/&sum;/∑/g' -e 's/&#8722;/−/g' -e 's/&minus;/−/g' -e 's/&#8727;/∗/g' -e 's/&lowast;/∗/g' -e 's/&#8730;/√/g' -e 's/&radic;/√/g' -e 's/&#8733;/∝/g' -e 's/&prop;/∝/g' -e 's/&#8734;/∞/g' -e 's/&infin;/∞/g' -e 's/&#8736;/∠/g' -e 's/&ang;/∠/g' -e 's/&#8743;/∧/g' -e 's/&and;/∧/g' -e 's/&#8744;/∨/g' -e 's/&or;/∨/g' -e 's/&#8745;/∩/g' -e 's/&cap;/∩/g' -e 's/&#8746;/∪/g' -e 's/&cup;/∪/g' -e 's/&#8747;/∫/g' -e 's/&int;/∫/g' -e 's/&#8756;/∴/g' -e 's/&there4;/∴/g' -e 's/&#8764;/∼/g' -e 's/&sim;/∼/g' -e 's/&#8773;/≅/g' -e 's/&cong;/≅/g' -e 's/&#8776;/≈/g' -e 's/&asymp;/≈/g' -e 's/&#8800;/≠/g' -e 's/&ne;/≠/g' -e 's/&#8801;/≡/g' -e 's/&equiv;/≡/g' -e 's/&#8804;/≤/g' -e 's/&le;/≤/g' -e 's/&#8805;/≥/g' -e 's/&ge;/≥/g' -e 's/&#8834;/⊂/g' -e 's/&sub;/⊂/g' -e 's/&#8835;/⊃/g' -e 's/&sup;/⊃/g' -e 's/&#8836;/⊄/g' -e 's/&nsub;/⊄/g' -e 's/&#8838;/⊆/g' -e 's/&sube;/⊆/g' -e 's/&#8839;/⊇/g' -e 's/&supe;/⊇/g' -e 's/&#8853;/⊕/g' -e 's/&oplus;/⊕/g' -e 's/&#8855;/⊗/g' -e 's/&otimes;/⊗/g' -e 's/&#8869;/⊥/g' -e 's/&perp;/⊥/g' -e 's/&#8901;/⋅/g' -e 's/&sdot;/⋅/g' -e 's/&#913;/Α/g' -e 's/&Alpha;/Α/g' -e 's/&#914;/Β/g' -e 's/&Beta;/Β/g' -e 's/&#915;/Γ/g' -e 's/&Gamma;/Γ/g' -e 's/&#916;/Δ/g' -e 's/&Delta;/Δ/g' -e 's/&#917;/Ε/g' -e 's/&Epsilon;/Ε/g' -e 's/&#918;/Ζ/g' -e 's/&Zeta;/Ζ/g' -e 's/&#919;/Η/g' -e 's/&Eta;/Η/g' -e 's/&#920;/Θ/g' -e 's/&Theta;/Θ/g' -e 's/&#921;/Ι/g' -e 's/&Iota;/Ι/g' -e 's/&#922;/Κ/g' -e 's/&Kappa;/Κ/g' -e 's/&#923;/Λ/g' -e 's/&Lambda;/Λ/g' -e 's/&#924;/Μ/g' -e 's/&Mu;/Μ/g' -e 's/&#925;/Ν/g' -e 's/&Nu;/Ν/g' -e 's/&#926;/Ξ/g' -e 's/&Xi;/Ξ/g' -e 's/&#927;/Ο/g' -e 's/&Omicron;/Ο/g' -e 's/&#928;/Π/g' -e 's/&Pi;/Π/g' -e 's/&#929;/Ρ/g' -e 's/&Rho;/Ρ/g' -e 's/&#931;/Σ/g' -e 's/&Sigma;/Σ/g' -e 's/&#932;/Τ/g' -e 's/&Tau;/Τ/g' -e 's/&#933;/Υ/g' -e 's/&Upsilon;/Υ/g' -e 's/&#934;/Φ/g' -e 's/&Phi;/Φ/g' -e 's/&#935;/Χ/g' -e 's/&Chi;/Χ/g' -e 's/&#936;/Ψ/g' -e 's/&Psi;/Ψ/g' -e 's/&#937;/Ω/g' -e 's/&Omega;/Ω/g' -e 's/&#945;/α/g' -e 's/&alpha;/α/g' -e 's/&#946;/β/g' -e 's/&beta;/β/g' -e 's/&#947;/γ/g' -e 's/&gamma;/γ/g' -e 's/&#948;/δ/g' -e 's/&delta;/δ/g' -e 's/&#949;/ε/g' -e 's/&epsilon;/ε/g' -e 's/&#950;/ζ/g' -e 's/&zeta;/ζ/g' -e 's/&#951;/η/g' -e 's/&eta;/η/g' -e 's/&#952;/θ/g' -e 's/&theta;/θ/g' -e 's/&#953;/ι/g' -e 's/&iota;/ι/g' -e 's/&#954;/κ/g' -e 's/&kappa;/κ/g' -e 's/&#955;/λ/g' -e 's/&lambda;/λ/g' -e 's/&#956;/μ/g' -e 's/&mu;/μ/g' -e 's/&#957;/ν/g' -e 's/&nu;/ν/g' -e 's/&#958;/ξ/g' -e 's/&xi;/ξ/g' -e 's/&#959;/ο/g' -e 's/&omicron;/ο/g' -e 's/&#960;/π/g' -e 's/&pi;/π/g' -e 's/&#961;/ρ/g' -e 's/&rho;/ρ/g' -e 's/&#962;/ς/g' -e 's/&sigmaf;/ς/g' -e 's/&#963;/σ/g' -e 's/&sigma;/σ/g' -e 's/&#964;/τ/g' -e 's/&tau;/τ/g' -e 's/&#965;/υ/g' -e 's/&upsilon;/υ/g' -e 's/&#966;/φ/g' -e 's/&phi;/φ/g' -e 's/&#967;/χ/g' -e 's/&chi;/χ/g' -e 's/&#968;/ψ/g' -e 's/&psi;/ψ/g' -e 's/&#969;/ω/g' -e 's/&omega;/ω/g' -e 's/&#977;/ϑ/g' -e 's/&thetasym;/ϑ/g' -e 's/&#978;/ϒ/g' -e 's/&upsih;/ϒ/g' -e 's/&#982;/ϖ/g' -e 's/&piv;/ϖ/g' -e 's/&#338;/Œ/g' -e 's/&OElig;/Œ/g' -e 's/&#339;/œ/g' -e 's/&oelig;/œ/g' -e 's/&#352;/Š/g' -e 's/&Scaron;/Š/g' -e 's/&#353;/š/g' -e 's/&scaron;/š/g' -e 's/&#376;/Ÿ/g' -e 's/&Yuml;/Ÿ/g' -e 's/&#402;/ƒ/g' -e 's/&fnof;/ƒ/g' -e 's/&#710;/ˆ/g' -e 's/&circ;/ˆ/g' -e 's/&#732;/˜/g' -e 's/&tilde;/˜/g' -e 's/&#8194;/ /g' -e 's/&ensp;/ /g' -e 's/&#8195;/ /g' -e 's/&emsp;/ /g' -e 's/&#8201;/ /g' -e 's/&thinsp;/ /g' -e 's/&#8204;/‌/g' -e 's/&zwnj;/‌/g' -e 's/&#8205;/‍/g' -e 's/&zwj;/‍/g' -e 's/&#8206;/‎/g' -e 's/&lrm;/‎/g' -e 's/&#8207;/‏/g' -e 's/&rlm;/‏/g' -e 's/&#8211;/–/g' -e 's/&ndash;/–/g' -e 's/&#8212;/—/g' -e 's/&mdash;/—/g' -e 's/&#8216;/‘/g' -e 's/&lsquo;/‘/g' -e 's/&#8217;/’/g' -e 's/&rsquo;/’/g' -e 's/&#8218;/‚/g' -e 's/&sbquo;/‚/g' -e 's/&#8220;/“/g' -e 's/&ldquo;/“/g' -e 's/&#8221;/”/g' -e 's/&rdquo;/”/g' -e 's/&#8222;/„/g' -e 's/&bdquo;/„/g' -e 's/&#8224;/†/g' -e 's/&dagger;/†/g' -e 's/&#8225;/‡/g' -e 's/&Dagger;/‡/g' -e 's/&#8226;/•/g' -e 's/&bull;/•/g' -e 's/&#8230;/…/g' -e 's/&hellip;/…/g' -e 's/&#8240;/‰/g' -e 's/&permil;/‰/g' -e 's/&#8242;/′/g' -e 's/&prime;/′/g' -e 's/&#8243;/″/g' -e 's/&Prime;/″/g' -e 's/&#8249;/‹/g' -e 's/&lsaquo;/‹/g' -e 's/&#8250;/›/g' -e 's/&rsaquo;/›/g' -e 's/&#8254;/‾/g' -e 's/&oline;/‾/g' -e 's/&#8364;/€/g' -e 's/&euro;/€/g' -e 's/&#8482;/™/g' -e 's/&#153;/™/g' -e 's/&trade;/™/g' -e 's/&#8592;/←/g' -e 's/&larr;/←/g' -e 's/&#8593;/↑/g' -e 's/&uarr;/↑/g' -e 's/&#8594;/→/g' -e 's/&rarr;/→/g' -e 's/&#8595;/↓/g' -e 's/&darr;/↓/g' -e 's/&#8596;/↔/g' -e 's/&harr;/↔/g' -e 's/&#8629;/↵/g' -e 's/&crarr;/↵/g' -e 's/&#8968;/⌈/g' -e 's/&lceil;/⌈/g' -e 's/&#8969;/⌉/g' -e 's/&rceil;/⌉/g' -e 's/&#8970;/⌊/g' -e 's/&lfloor;/⌊/g' -e 's/&#8971;/⌋/g' -e 's/&rfloor;/⌋/g' -e 's/&#9674;/◊/g' -e 's/&loz;/◊/g' -e 's/&#9824;/♠/g' -e 's/&spades;/♠/g' -e 's/&#9827;/♣/g' -e 's/&clubs;/♣/g' -e 's/&#9829;/♥/g' -e 's/&hearts;/♥/g' -e 's/&#9830;/♦/g' -e 's/&diams;/♦/g'
+    return 0
+}
+
 # transforms a string
 function text_filter {  # text_filter filters[@]
     local FILTERS
@@ -359,8 +366,15 @@ function text_filter {  # text_filter filters[@]
                     TEXT="${TEXT_TEMP}"
                 fi
                 ;;
+            escape:entities)
+                TEXT=$(echo "${TEXT}" | decode_entities);
+                ;;
             escape:html)
+                TEXT=$(echo "${TEXT}" | decode_entities);
                 TEXT=$(echo "${TEXT}" | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/"/\&quot;/g' -e 's/'"'"'/\&#39;/g');
+                ;;
+            escape:json-val)
+                TEXT=$(echo "${TEXT}" | sed -e 's/"/\\"/g' | awk '(NR==1) { printf "%s", $0 } (NR>1) { printf "\\n%s", $0 }');
                 ;;
             excerpt:*)
                 MAX_CHARS="${OPTIONS[0]:-}"
@@ -393,6 +407,8 @@ function text_filter {  # text_filter filters[@]
             headings:shift)
                 TEXT=$(echo "${TEXT}${LF}" | sed -E -e 'N;s/^(.*)\n([-]+|[=]+)$/# \1/' | sed -E -e '/^# .+$/d' -e 's/^#([#]+ )/\1/')
                 TEXT=$(echo "${TEXT}" | sed -E -e '/<h1[^>]*>.*<\/h1>/s///g' | sed -E -e '/<\/?h[0-6][^>]*>/{s/<(\/)h2/<\1h1/g' -e 's/<(\/)h3/<\1h2/g' -e 's/<(\/)h4/<\1h3/g' -e 's/<(\/)h5/<\1h4/g' -e 's/<(\/)h6/<\1h5/g' -e '}')
+                # '/./,$!d' deletes blank lines at start
+                TEXT=$(echo "${TEXT}" | sed -e '/./,$!d')
                 ;;
             headings:remove)
                 TEXT=$(echo "${TEXT}${LF}" | sed -E -e 'N;s/^(.*)\n([-]+|[=]+)$/# \1/' | sed -E -e '/^[#]+ .+$/d')
@@ -402,6 +418,7 @@ function text_filter {  # text_filter filters[@]
                 # ':a;s/<[^>]*>//g;/</N;//ba' strips html tags and works across multiple lines (better version of 's/<[^>]*>//g')
                 # '/./,/^$/!d' deletes blank lines at start and collapses consecutive blank lines into one, leaving up to one blank line at end
                 TEXT=$(echo "${TEXT}" | sed -e ':a' -e 's/<[^>]*>//g' -e '/</N' -e '//ba' | sed '/./,/^$/!d')
+                TEXT=$(echo "${TEXT}" | decode_entities)
                 ;;
             slug)
                 TEXT=$(echo "${TEXT}" | head -n 1 | sed -E -e 's/[ _]+/-/g' -e 's/[^-a-zA-Z0-9.]//g' -e 's/(^-+)|(-+$)//' | awk '{ print tolower($0) }')
@@ -559,14 +576,17 @@ function parse_template_metadata {  # parse_template_metadata prefix template_di
     # print partials paths relative to template dir
     [[ "${MARSH_TEMPLATE_Template_Partials_Base:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Base=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Base//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Body:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Body//\"/\\\"}\""
-    [[ "${MARSH_TEMPLATE_Template_Partials_Archive:-}"  != "" ]] && echo "${PREFIX}Template_Partials_Archive=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Document//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Header:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Header=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Header//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Nav:-}"      != "" ]] && echo "${PREFIX}Template_Partials_Nav=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Nav//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Footer:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Footer=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Footer//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Redirect:-}" != "" ]] && echo "${PREFIX}Template_Partials_Redirect=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Redirect//\"/\\\"}\""
-    [[ "${MARSH_TEMPLATE_Template_Partials_Feed_Body:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Feed_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Feed_Body//\"/\\\"}\""
-    [[ "${MARSH_TEMPLATE_Template_Partials_Feed_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Feed_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Feed_Document//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive_HTML_Body:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Archive_HTML_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_HTML_Body//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive_HTML_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Archive_HTML_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_HTML_Document//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive_Atom_Body:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Archive_Atom_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_Atom_Body//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive_Atom_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Archive_Atom_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_Atom_Document//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive_JSON_Body:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Archive_JSON_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_JSON_Body//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Archive_JSON_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Archive_JSON_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_JSON_Document//\"/\\\"}\""
 
     # assets
     ASSET_TYPES=('Fonts' 'Styles' 'Scripts' 'Images' 'Audio' 'Video' 'Documents' 'Binaries' 'Other')
@@ -670,8 +690,7 @@ function get_target_metadata {  # get_target_metadata source_prefix prefix
     local SOURCE_PREFIX PREFIX
     local TARGET_PATH TARGET_NAME TEMPLATE_SOURCE TARGET_TYPE TEMPLATE_REMOTE TARGET_FORCE TEMPLATE_FETCH TARGET_NAV
     local II TEMPLATE_SOURCE TEMPLATE_REMOTE TEMPLATE_FETCH TEMPLATE_CONFIG
-    local FEED FEED_NAME FEED_COUNT FEED_CONTENT FEED_TYPES FEED_EXCLUDED_STATES
-    local ARCHIVE ARCHIVE_NAME ARCHIVE_COUNT ARCHIVE_CONTENT ARCHIVE_TYPES ARCHIVE_EXCLUDED_STATES
+    local ARCHIVE ARCHIVE_NAME ARCHIVE_ENCODING ARCHIVE_COUNT ARCHIVE_CONTENT ARCHIVE_TYPES ARCHIVE_EXCLUDED_STATES
 
     # init
     SOURCE_PREFIX="${1:-}"
@@ -724,36 +743,9 @@ function get_target_metadata {  # get_target_metadata source_prefix prefix
         TEMPLATE_CONFIG="${SOURCE_PREFIX}Templates_${II}_Config"
     done
 
-    # feeds
-    echo "${PREFIX}FEEDS=()"
-    echo "${PREFIX}FEEDS_NAME=()"
-    echo "${PREFIX}FEEDS_COUNT=()"
-    echo "${PREFIX}FEEDS_CONTENT=()"
-    echo "${PREFIX}FEEDS_TYPES=()"
-    echo "${PREFIX}FEEDS_EXCLUDED_STATES=()"
-    II=0
-    FEED="${SOURCE_PREFIX}Feeds_${II}_Path"
-    FEED_NAME="${SOURCE_PREFIX}Feeds_${II}_Name"
-    FEED_COUNT="${SOURCE_PREFIX}Feeds_${II}_Count"
-    FEED_CONTENT="${SOURCE_PREFIX}Feeds_${II}_Content"
-    while [[ "${!FEED:-}" != "" ]]; do
-        echo "${PREFIX}FEEDS+=(\"${!FEED//\"/\\\"}\")"
-        echo "${PREFIX}FEEDS_NAME+=(\"${!FEED_NAME//\"/\\\"}\")"
-        echo "${PREFIX}FEEDS_COUNT+=(\"${!FEEDS_COUNT//\"/\\\"}\")"
-        echo "${PREFIX}FEEDS_CONTENT+=(\"${!FEEDS_CONTENT//\"/\\\"}\")"
-        eval $(flat_to_array "FEED_TYPES" "${SOURCE_PREFIX}Feeds_${II}_Types_")
-        OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}FEEDS_TYPES+=(\"${FEED_TYPES[*]//\"/\\\"}\")"; IFS="${OIFS}"
-        eval $(flat_to_array "FEED_EXCLUDED_STATES" "${SOURCE_PREFIX}Feeds_${II}_Exclude_")
-        OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}FEEDS_EXCLUDED_STATES+=(\"${FEED_EXCLUDED_STATES[*]//\"/\\\"}\")"; IFS="${OIFS}"
-        II=$((II+1))
-        FEED="${SOURCE_PREFIX}Feeds_${II}_Path"
-        FEED_NAME="${SOURCE_PREFIX}Feeds_${II}_Name"
-        FEEDS_COUNT="${SOURCE_PREFIX}Feeds_${II}_Count"
-        FEEDS_CONTENT="${SOURCE_PREFIX}Feeds_${II}_Content"
-    done
-
     # archives
     echo "${PREFIX}ARCHIVES=()"
+    echo "${PREFIX}ARCHIVES_ENCODING=()"
     echo "${PREFIX}ARCHIVES_NAME=()"
     echo "${PREFIX}ARCHIVES_COUNT=()"
     echo "${PREFIX}ARCHIVES_CONTENT=()"
@@ -761,23 +753,26 @@ function get_target_metadata {  # get_target_metadata source_prefix prefix
     echo "${PREFIX}ARCHIVES_EXCLUDED_STATES=()"
     II=0
     ARCHIVE="${SOURCE_PREFIX}Archives_${II}_Path"
+    ARCHIVE_ENCODING="${SOURCE_PREFIX}Archives_${II}_Encoding"
     ARCHIVE_NAME="${SOURCE_PREFIX}Archives_${II}_Name"
     ARCHIVE_COUNT="${SOURCE_PREFIX}Archives_${II}_Count"
     ARCHIVE_CONTENT="${SOURCE_PREFIX}Archives_${II}_Content"
     while [[ "${!ARCHIVE:-}" != "" ]]; do
         echo "${PREFIX}ARCHIVES+=(\"${!ARCHIVE//\"/\\\"}\")"
+        echo "${PREFIX}ARCHIVES_ENCODING+=(\"${!ARCHIVE_ENCODING//\"/\\\"}\")"
         echo "${PREFIX}ARCHIVES_NAME+=(\"${!ARCHIVE_NAME//\"/\\\"}\")"
-        echo "${PREFIX}ARCHIVES_COUNT+=(\"${!ARCHIVES_COUNT//\"/\\\"}\")"
-        echo "${PREFIX}ARCHIVES_CONTENT+=(\"${!ARCHIVES_CONTENT//\"/\\\"}\")"
+        echo "${PREFIX}ARCHIVES_COUNT+=(\"${!ARCHIVE_COUNT//\"/\\\"}\")"
+        echo "${PREFIX}ARCHIVES_CONTENT+=(\"${!ARCHIVE_CONTENT//\"/\\\"}\")"
         eval $(flat_to_array "ARCHIVE_TYPES" "${SOURCE_PREFIX}Archives_${II}_Types_")
         OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}ARCHIVES_TYPES+=(\"${ARCHIVE_TYPES[*]//\"/\\\"}\")"; IFS="${OIFS}"
         eval $(flat_to_array "ARCHIVE_EXCLUDED_STATES" "${SOURCE_PREFIX}Archives_${II}_Exclude_")
         OIFS="${IFS}"; IFS=$(echo @|tr @ '\034'); echo "${PREFIX}ARCHIVES_EXCLUDED_STATES+=(\"${ARCHIVE_EXCLUDED_STATES[*]//\"/\\\"}\")"; IFS="${OIFS}"
         II=$((II+1))
         ARCHIVE="${SOURCE_PREFIX}Archives_${II}_Path"
+        ARCHIVE_ENCODING="${SOURCE_PREFIX}Archives_${II}_Encoding"
         ARCHIVE_NAME="${SOURCE_PREFIX}Archives_${II}_Name"
-        ARCHIVES_COUNT="${SOURCE_PREFIX}Archives_${II}_Count"
-        ARCHIVES_CONTENT="${SOURCE_PREFIX}Archives_${II}_Content"
+        ARCHIVE_COUNT="${SOURCE_PREFIX}Archives_${II}_Count"
+        ARCHIVE_CONTENT="${SOURCE_PREFIX}Archives_${II}_Content"
     done
 
     return 0
@@ -865,16 +860,15 @@ function get_files {  # get_files source dest force fetch uri
                 return 1
             fi
             # create path
+            DEST="${DEST%/.}"
             if ! mkdir -p "${DEST}"; then
                 echo "Unable to create path: ${DEST}" >&2
                 return 1
             fi
-            if [[ -d "${SOURCE_DIR}/${FILE}" ]]; then
-                # clean destination
-                if ! rm -rf "${DEST%/}/${FILE}"; then
-                    echo "Unable to replace path: ${DEST}" >&2
-                    return 1
-                fi
+            # clean destination
+            if ! rm -rf "${DEST%/}/${FILE}"; then
+                echo "Unable to replace path: ${DEST}" >&2
+                return 1
             fi
             # copy
             if ! cp -R "${SOURCE_DIR}/${FILE}" "${DEST%/}/${FILE}"; then
@@ -890,17 +884,14 @@ function get_files {  # get_files source dest force fetch uri
     fi
 }
 
-# builds an index of directory contents, sorted by descending date
-function build_index {  # build_index index_type target_dir dest_file dest_title content_length count #types[@] types[@] #excluded_states[@] excluded_states[@]
-    local INDEX_TYPE TARGET_DIR DEST DEST_SUB_PREFIX DEST_TITLE CONTENT COUNT NUM_TYPES TYPES NUM_EXCLUDED_STATES EXCLUDED_STATES
+# builds an archive of directory contents, sorted by descending date
+function build_archive {  # build_archive encoding target_dir dest_file dest_title content_length count #types[@] types[@] #excluded_states[@] excluded_states[@]
+    local ENCODING TARGET_DIR DEST DEST_SUB_PREFIX DEST_TITLE CONTENT COUNT NUM_TYPES TYPES NUM_EXCLUDED_STATES EXCLUDED_STATES
     local VALID DOCUMENTS DOCUMENTS_MAX DOCUMENT_META_PREFIX DOCUMENT_META DOCUMENT_META_VARS
-    local DOCUMENT TITLE DATE DATE_PRETTY LANGCODE ENCODING STATE EXCLUDE DEST_SUB URI ABSPATH
+    local DOCUMENT TITLE DATE DATE_PRETTY LANGCODE STATE EXCLUDE DEST_SUB URI ABSPATH
 
     # init
-    INDEX_TYPE="${1:-}"
-    if [[ "${INDEX_TYPE}" != "archive" ]] && [[ "${INDEX_TYPE}" != "feed" ]]; then
-        return 1
-    fi
+    ENCODING="${1:-html}"
     shift 1
     TARGET_DIR="${1:-}"; [[ "${TARGET_DIR}" == "" ]] && return 1
     DEST="${2:-}";       [[ "${DEST}" == "" ]] && return 1
@@ -937,24 +928,31 @@ function build_index {  # build_index index_type target_dir dest_file dest_title
 
     # write yaml header
     echo "---" > "${DEST}" 2>/dev/null || return 1
-    echo "Type: ${INDEX_TYPE}" >> "${DEST}"
+    if [[ "${ENCODING}" == "html" ]]; then
+        echo "Type: archive" >> "${DEST}"
+    else
+        echo "Type: archive-${ENCODING}" >> "${DEST}"
+    fi
     echo "Date: $(date -u '+%Y-%m-%d %H:%M:%S')" >> "${DEST}"
     echo "Title: ${DEST_TITLE}" >> "${DEST}"
     echo "Language: English" >> "${DEST}"
     echo "Language_Code: en" >> "${DEST}"
     echo "---" >> "${DEST}"
     echo "" >> "${DEST}"
-    if [[ "${INDEX_TYPE}" == "archive" ]]; then
+    if [[ "${ENCODING}" == "html" ]]; then
         echo "# ${DEST_TITLE}" >> "${DEST}"
         echo "" >> "${DEST}"
     fi
 
     # loop over documents
     VALID=0
-    DOCUMENTS=$(cd "${TARGET_DIR}" && find . -name '*.'"${MARSH_UID}"'.document' | sed 's/^\.\///' | sort -nr -t/)
+    OIFS="${IFS}"
+    IFS=$'\n'
+    DOCUMENTS=($(cd "${TARGET_DIR}" && find . -name '*.'"${MARSH_UID}"'.document' | sed 's/^\.\///' | sort -nr -t/))
+    IFS="${OIFS}"
     DOCUMENTS_MAX="${#DOCUMENTS[@]}"
     DOCUMENTS_MAX=$((DOCUMENTS_MAX - 1))
-    for DOCUMENT in ${DOCUMENTS[@]}; do
+    for DOCUMENT in "${DOCUMENTS[@]}"; do
         if [[ "${COUNT}" != "" ]] && [[ "${VALID}" -ge "${COUNT}" ]]; then
             break
         fi
@@ -965,8 +963,8 @@ function build_index {  # build_index index_type target_dir dest_file dest_title
         eval "${DOCUMENT_META}"
         TYPE="${DOCUMENT_META_PREFIX}Type"
         TYPE="${!TYPE:-}"
-        if [[ "${TYPE}" == "archive" ]] || [[ "${TYPE}" == "feed" ]]; then
-            # archives and feeds are skipped by default
+        if [[ "${TYPE%%-*}" == "archive" ]]; then
+            # archives are skipped by default
             continue
         fi
         if [[ "${#TYPES[@]}" -gt 0 ]] && ! in_array "${TYPE}" "${TYPES[@]}"; then
@@ -995,22 +993,35 @@ function build_index {  # build_index index_type target_dir dest_file dest_title
         # valid subdocument
         VALID=$((VALID + 1))
         DEST_SUB="${DEST_SUB_PREFIX}.$((VALID-1))"
-        # process text
-        if [[ "${CONTENT}" == "none" ]]; then
-            touch "${DEST_SUB}.document"
-        elif [[ "${CONTENT}" != "" ]]; then
-            <"${TARGET_DIR:-.}/${DOCUMENT}" text_filter headings:push "${CONTENT}" "wrap:div.$(echo ${CONTENT} | sed -e 's/:[^ ]//g' -e 's/ /./g')" >> "${DEST_SUB}.document"
-        else
-            <"${TARGET_DIR:-.}/${DOCUMENT}" text_filter headings:push >> "${DEST_SUB}.document"
-        fi
-        # copy metadata
-        cp "${TARGET_DIR}/${DOCUMENT%.document}.meta.yaml" "${DEST_SUB}.meta.yaml.temp" >/dev/null 2>&1
-        # store paths (cannot calculate original path later)
+        # add subdocument title
+        TITLE="${DOCUMENT_META_PREFIX}Title"
+        TITLE="${!TITLE:-}"
         URI="${TARGET_DIR#$MARSH_CONFIG_PATH}"
         URI="${MARSH_CONFIG_URL%/}/${URI#/}/${DOCUMENT%.${MARSH_UID}.document}"
         URI="${URI%.markdown}.html"
         ABSPATH=""
         [[ "${URI}" =~ / ]] && ABSPATH="${URI%/*}"
+        if [[ "${ENCODING}" == "html" ]]; then
+            echo "## [${TITLE}](${URI})" >> "${DEST_SUB}.document"
+            echo "" >> "${DEST_SUB}.document"
+        fi
+        # process text
+        if [[ "${CONTENT}" == "none" ]]; then
+            # no content
+            # title already added
+            touch "${DEST_SUB}.document"
+        elif [[ "${CONTENT%%:}" == "excerpt" ]]; then
+            # excerpt
+            # filters strip duplicate title
+            <"${TARGET_DIR:-.}/${DOCUMENT}" text_filter headings:push "${CONTENT}" "wrap:div.$(echo ${CONTENT} | sed -e 's/:[^ ]//g' -e 's/ /./g')" >> "${DEST_SUB}.document"
+        else
+            # full
+            # filters strip duplicate title
+            <"${TARGET_DIR:-.}/${DOCUMENT}" text_filter headings:shift headings:push headings:push >> "${DEST_SUB}.document"
+        fi
+        # copy metadata
+        cp "${TARGET_DIR}/${DOCUMENT%.document}.meta.yaml" "${DEST_SUB}.meta.yaml.temp" >/dev/null 2>&1
+        # store paths (cannot calculate original path later)
         <"${DEST_SUB}.meta.yaml.temp" sed -e '/^\.\.\.$/d' > "${DEST_SUB}.meta.yaml"
         echo "---" >> "${DEST_SUB}.meta.yaml"
         echo "ABSPATH: ${ABSPATH}" >> "${DEST_SUB}.meta.yaml"
@@ -1238,6 +1249,9 @@ function build_template {  # build_template dest_dir target_dir document templat
                 document.type)
                     TAG_VAR="${PREFIX}Type"
                     ;;
+                util.json-separator)
+                    TAG_VAR="UTIL_JSON_SEPARATOR"
+                    ;;
                 *)
                     TAG_VAR=""
                     ;;
@@ -1264,9 +1278,12 @@ function build_template {  # build_template dest_dir target_dir document templat
         done
     }
 
-    local DEST_DIR TARGET_DIR DOCUMENT TEMPLATE_DIR TEMPLATE TEMPLATE_CONFIG_EXTRA
+    local DEST_DIR TARGET_DIR
+    local DOCUMENT DOCUMENT_EXT DOCUMENT_DIR DOCUMENT_RELPATH DOCUMENT_ABSPATH DOCUMENT_URI
+    local DEST DEST_NAME
+    local TEMPLATE_DIR TEMPLATE TEMPLATE_CONFIG_EXTRA
     local DOCUMENT_META DOCUMENT_META_VARS
-    local SUBDOCUMENTS
+    local SUBDOCUMENTS NUM_SUBDOCUMENTS
     local INDEX DOCUMENT_AUTHORS
     local TEMPLATE_PREFIX TEMPLATE_META TEMPLATE_META_VARS PARTIALS TEMPLATE_BASE TEMPLATE_TEMP
     local NAV NAV_DIR NAV_NAME NAV_RELPATH
@@ -1296,18 +1313,22 @@ function build_template {  # build_template dest_dir target_dir document templat
     if echo "${DOCUMENT_EXT}" | grep -Ei '^(markdown|md|mkd|mkdn|mdown)$' >/dev/null 2>&1; then
         DEST="${DEST%.*}.html"
     fi
-    DEST="${DEST_DIR}/${TARGET_DIR}/${DEST}"
+    if [[ "${TARGET_DIR}" != "." ]]; then
+        DEST="${TARGET_DIR}/${DEST}"
+    fi
+    DEST="${DEST_DIR}/${DEST}"
     DOCUMENT="${DEST_DIR}/${TARGET_DIR}/${DOCUMENT}"
     DOCUMENT_URI="${DOCUMENT_ABSPATH:+$DOCUMENT_ABSPATH/}${DEST##*/}"
     TEMPLATE_DIR="${4:-}"
     TEMPLATE="${5:-}"
     TEMPLATE_CONFIG_EXTRA="${6:-}"
 
+    # utility vars
+    UTIL_JSON_SEPARATOR=","
+
     # verbosity
     # seems logical to put this elsewhere, but this is a good catch-all for now
-    if [[ ! -e "${DEST}" ]]; then
-        echo "  ${DEST#$DEST_DIR/}"
-    fi
+    echo "  ${DEST#$DEST_DIR/}"
 
     # document
     DOCUMENT_CONTENT="${DOCUMENT}.${MARSH_UID}.document"
@@ -1361,7 +1382,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         eval "${TEMPLATE_META}"
 
         # partials
-        PARTIALS=("${TEMPLATE_Template_Partials_Redirect:-}" "${TEMPLATE_Template_Partials_Base:-}" "${TEMPLATE_Template_Partials_Body:-}" "${TEMPLATE_Template_Partials_Archive:-}" "${TEMPLATE_Template_Partials_Document:-}" "${TEMPLATE_Template_Partials_Header:-}" "${TEMPLATE_Template_Partials_Footer:-}" "${TEMPLATE_Template_Partials_Nav:-}")
+        PARTIALS=("${TEMPLATE_Template_Partials_Redirect:-}" "${TEMPLATE_Template_Partials_Base:-}" "${TEMPLATE_Template_Partials_Body:-}" "${TEMPLATE_Template_Partials_Document:-}" "${TEMPLATE_Template_Partials_Header:-}" "${TEMPLATE_Template_Partials_Footer:-}" "${TEMPLATE_Template_Partials_Nav:-}" "${TEMPLATE_Template_Partials_Archive_HTML_Body:-}" "${TEMPLATE_Template_Partials_Archive_HTML_Document:-}" "${TEMPLATE_Template_Partials_Archive_Atom_Body:-}" "${TEMPLATE_Template_Partials_Archive_Atom_Document:-}" "${TEMPLATE_Template_Partials_Archive_JSON_Body:-}" "${TEMPLATE_Template_Partials_Archive_JSON_Document:-}")
         # conditionals
         for J in "${!PARTIALS[@]}"; do
             [[ "${PARTIALS[$J]}" == "" ]] && continue
@@ -1373,7 +1394,6 @@ function build_template {  # build_template dest_dir target_dir document templat
                 PARTIALS[$J]="${TEMPLATE_TEMP}"
                 # process
                 process_conditionals "${PARTIALS[$J]}" "document.state" "contains" "${DOCUMENT_State[@]}"
-                process_conditionals "${PARTIALS[$J]}" "document.type" "contains" "${DOCUMENT_Type[@]}"
                 # remove remaining conditionals
                 clean_conditionals "${PARTIALS[$J]}"
             fi
@@ -1381,32 +1401,50 @@ function build_template {  # build_template dest_dir target_dir document templat
         TEMPLATE_Template_Partials_Redirect="${PARTIALS[0]:-}"
         TEMPLATE_Template_Partials_Base="${PARTIALS[1]:-}"
         TEMPLATE_Template_Partials_Body="${PARTIALS[2]:-}"
-        TEMPLATE_Template_Partials_Archive="${PARTIALS[3]:-}"
-        TEMPLATE_Template_Partials_Document="${PARTIALS[4]:-}"
-        TEMPLATE_Template_Partials_Header="${PARTIALS[5]:-}"
-        TEMPLATE_Template_Partials_Footer="${PARTIALS[6]:-}"
-        TEMPLATE_Template_Partials_Nav="${PARTIALS[7]:-}"
-        TEMPLATE_Template_Partials_Feed_Body="${TEMPLATE_Template_Partials_Feed_Body:-}"
-        TEMPLATE_Template_Partials_Feed_Document="${TEMPLATE_Template_Partials_Feed_Document:-}"
+        TEMPLATE_Template_Partials_Document="${PARTIALS[3]:-}"
+        TEMPLATE_Template_Partials_Header="${PARTIALS[4]:-}"
+        TEMPLATE_Template_Partials_Footer="${PARTIALS[5]:-}"
+        TEMPLATE_Template_Partials_Nav="${PARTIALS[6]:-}"
+        TEMPLATE_Template_Partials_Archive_HTML_Body="${PARTIALS[7]:-}"
+        TEMPLATE_Template_Partials_Archive_HTML_Document="${PARTIALS[8]:-}"
+        TEMPLATE_Template_Partials_Archive_Atom_Body="${PARTIALS[9]:-}"
+        TEMPLATE_Template_Partials_Archive_Atom_Document="${PARTIALS[10]:-}"
+        TEMPLATE_Template_Partials_Archive_JSON_Body="${PARTIALS[11]:-}"
+        TEMPLATE_Template_Partials_Archive_JSON_Document="${PARTIALS[12]:-}"
 
-        if [[ "${DOCUMENT_Type}" == "feed" ]]; then
-            if [[ "${TEMPLATE_Template_Partials_Feed_Body:-}" != "" ]]; then
-                cp "${TEMPLATE_Template_Partials_Feed_Body}" "${DEST}"
+        # body template
+        if [[ "${DOCUMENT_Type}" == "archive-atom" ]]; then
+            if [[ "${TEMPLATE_Template_Partials_Archive_Atom_Body:-}" != "" ]]; then
+                cp "${TEMPLATE_Template_Partials_Archive_Atom_Body}" "${DEST}"
             else
-                continue
+                echo "Atom archive body partial not found for primary template: ${TEMPLATE}" >&2
+                return 1
+            fi
+        elif [[ "${DOCUMENT_Type}" == "archive-json" ]]; then
+            if [[ "${TEMPLATE_Template_Partials_Archive_JSON_Body:-}" != "" ]]; then
+                cp "${TEMPLATE_Template_Partials_Archive_JSON_Body}" "${DEST}"
+            else
+                echo "JSON archive body partial not found for primary template: ${TEMPLATE}" >&2
+                return 1
+            fi
+        elif [[ "${DOCUMENT_Type}" == "archive" ]]; then
+            if [[ "${TEMPLATE_Template_Partials_Archive_HTML_Body:-}" != "" ]]; then
+                cp "${TEMPLATE_Template_Partials_Archive_HTML_Body}" "${DEST}"
+            else
+                echo "HTML archive body partial not found for primary template: ${TEMPLATE}" >&2
+                return 1
             fi
         else
-            # body template
-            if [[ ! -e "${DEST}" ]]; then
-                if [[ "${TEMPLATE_Template_Partials_Body}" != "" ]]; then
-                    cp "${TEMPLATE_Template_Partials_Body}" "${DEST}"
-                else
-                    echo "Body partial not found for primary template: ${TEMPLATE}" >&2
-                    return 1
-                fi
+            if [[ "${TEMPLATE_Template_Partials_Body}" != "" ]]; then
+                cp "${TEMPLATE_Template_Partials_Body}" "${DEST}"
+            else
+                echo "Body partial not found for primary template: ${TEMPLATE}" >&2
+                return 1
             fi
+        fi
 
-            # base template
+        # base template
+        if [[ "${DOCUMENT_Type}" != "archive-atom" ]] && [[ "${DOCUMENT_Type}" != "archive-json" ]]; then
             if [[ "${DOCUMENT_Redirect_URL:-}" != "" ]]; then
                 # redirect
                 TEMPLATE_BASE="${TEMPLATE_Template_Partials_Redirect}"
@@ -1426,17 +1464,20 @@ function build_template {  # build_template dest_dir target_dir document templat
                     unset SUB
                 fi
             fi
+        fi
 
-            # remaining templates
-            if [[ -f "${TEMPLATE_Template_Partials_Archive}" ]] && [[ -r "${TEMPLATE_Template_Partials_Archive}" ]]; then
-                SUB=$(<"${TEMPLATE_Template_Partials_Archive}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+        # remaining templates
+        if [[ "${DOCUMENT_Type}" == "archive" ]]; then
+            if [[ -f "${TEMPLATE_Template_Partials_Archive_HTML_Document}" ]] && [[ -r "${TEMPLATE_Template_Partials_Archive_HTML_Document}" ]]; then
+                SUB=$(<"${TEMPLATE_Template_Partials_Archive_HTML_Document}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
                 SUB=${SUB%$'\n'}
                 SUB=${SUB%\\}
                 sed -E \
-                -e "/\{\{[ ]*template\.archive[ ]*\}\}/s//${SUB:-}/g" \
+                -e "/\{\{[ ]*template\.document[ ]*\}\}/s//${SUB:-}/g" \
                 -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
                 unset SUB
             fi
+        else
             if [[ -f "${TEMPLATE_Template_Partials_Document}" ]] && [[ -r "${TEMPLATE_Template_Partials_Document}" ]]; then
                 SUB=$(<"${TEMPLATE_Template_Partials_Document}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
                 SUB=${SUB%$'\n'}
@@ -1446,83 +1487,83 @@ function build_template {  # build_template dest_dir target_dir document templat
                 -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
                 unset SUB
             fi
-            if [[ -f "${TEMPLATE_Template_Partials_Header}" ]] && [[ -r "${TEMPLATE_Template_Partials_Header}" ]]; then
-                SUB=$(<"${TEMPLATE_Template_Partials_Header}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
-                SUB=${SUB%$'\n'}
-                SUB=${SUB%\\}
-                sed -E \
-                -e "/\{\{[ ]*template\.header[ ]*\}\}/s//${SUB:-}/g" \
-                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
-                unset SUB
-            fi
-            if [[ -f "${TEMPLATE_Template_Partials_Footer}" ]] && [[ -r "${TEMPLATE_Template_Partials_Footer}" ]]; then
-                SUB=$(<"${TEMPLATE_Template_Partials_Footer}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
-                SUB=${SUB%$'\n'}
-                SUB=${SUB%\\}
-                sed -E \
-                -e "/\{\{[ ]*template\.footer[ ]*\}\}/s//${SUB:-}/g" \
-                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
-                unset SUB
-            fi
-            if [[ -f "${TEMPLATE_Template_Partials_Nav}" ]] && [[ -r "${TEMPLATE_Template_Partials_Nav}" ]]; then
-                SUB=$(<"${TEMPLATE_Template_Partials_Nav}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
-                SUB=${SUB%$'\n'}
-                SUB=${SUB%\\}
-                sed -E \
-                -e "/\{\{[ ]*template\.nav[ ]*\}\}/s//${SUB:-}/g" \
-                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
-                unset SUB
-            fi
-
-            # scripts and styles
-            TEMPLATE_SCRIPTS=""
-            for SCRIPT in ${TEMPLATE_ASSETS_SCRIPTS[@]}; do
-                TEMPLATE_SCRIPTS="${TEMPLATE_SCRIPTS}<script src=\"${DOCUMENT_RELPATH}${SCRIPT}\"></script>"
-            done
-            TEMPLATE_SCRIPTS=$(echo "${TEMPLATE_SCRIPTS}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
-            TEMPLATE_STYLES=""
-            for STYLE in ${TEMPLATE_ASSETS_STYLES[@]}; do
-                TEMPLATE_STYLES="${TEMPLATE_STYLES}<link rel=\"stylesheet\" href=\"${DOCUMENT_RELPATH}${STYLE}\" />"
-            done
-            TEMPLATE_STYLES=$(echo "${TEMPLATE_STYLES}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+        fi
+        if [[ -f "${TEMPLATE_Template_Partials_Header}" ]] && [[ -r "${TEMPLATE_Template_Partials_Header}" ]]; then
+            SUB=$(<"${TEMPLATE_Template_Partials_Header}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+            SUB=${SUB%$'\n'}
+            SUB=${SUB%\\}
             sed -E \
-            -e '/\{\{[ ]*template\.scripts[ ]*\}\}/s||'"${TEMPLATE_SCRIPTS}"'|g' \
-            -e '/\{\{[ ]*template\.styles[ ]*\}\}/s||'"${TEMPLATE_STYLES}"'|g' \
+            -e "/\{\{[ ]*template\.header[ ]*\}\}/s//${SUB:-}/g" \
             -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
-
-            # advanced navigation
-            for NAV in $(cd "${DEST_DIR}/${TARGET_DIR}" && find . -name "*.${MARSH_UID}.advanced-nav.html" | sed 's/^\.\///'); do
-                NAV_NAME="${NAV##*/}"
-                NAV_NAME="${NAV_NAME%.$MARSH_UID.advanced-nav.html}.html"
-                NAV_NAME=$(echo "${NAV_NAME}" | sed -E -e 's/\.(markdown|md|mkd|mkdn|mdown)(.html)$/\2/')
-                NAV_DIR="./${NAV}"
-                NAV_DIR="${NAV_DIR%/*}"
-                NAV_DIR="${NAV_DIR#./}"
-                if is_child "${DEST_DIR}/${TARGET_DIR}/${NAV_DIR}" "${DOCUMENT}"; then
-                    NAV_RELPATH="${DOCUMENT_DIR#$NAV_DIR}"
-                    NAV_RELPATH="${NAV_RELPATH//[^\/]}"     # leave only slashes
-                    NAV_RELPATH="${NAV_RELPATH//[\/]/../}"  # slashes to dirs
-                    NAV_RELPATH="${NAV_RELPATH:-.}"         # empty to current dir
-                    NAV_RELPATH="${NAV_RELPATH%/}"          # drop trailing slash
-                    <"${DEST_DIR}/${TARGET_DIR}/${NAV}" sed -E \
-                    -e 's|<h1>([^<]+)</h1>|<h1><a href="'"${NAV_RELPATH}/${NAV_NAME}"'">\1</a></h1>|' \
-                    -e 's|(<a href=")([^.])|\1'"${NAV_RELPATH}/"'\2|g' | \
-                    sed -E \
-                    -e 's|<a (href="[^"]*'"${NAV_RELPATH}/${DEST_NAME}.html"'"[^>]*)>([^<>]+)</a>|<a \1 class="selected">\2</a>|g' \
-                    > "${DEST}.${MARSH_UID}.temp"
-                    SUB=$(<"${DEST}.${MARSH_UID}.temp" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
-                    SUB=${SUB%$'\n'}
-                    SUB=${SUB%\\}
-                    sed -E \
-                    -e "/\{\{[ ]*navigation[ ]*\}\}/s//${SUB}/g" \
-                    -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
-                    unset SUB
-                fi
-            done
+            unset SUB
+        fi
+        if [[ -f "${TEMPLATE_Template_Partials_Footer}" ]] && [[ -r "${TEMPLATE_Template_Partials_Footer}" ]]; then
+            SUB=$(<"${TEMPLATE_Template_Partials_Footer}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+            SUB=${SUB%$'\n'}
+            SUB=${SUB%\\}
             sed -E \
-            -e 's/\{\{[ ]*navigation[ ]*\}\}//g' \
+            -e "/\{\{[ ]*template\.footer[ ]*\}\}/s//${SUB:-}/g" \
             -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
-        fi # DOCUMENT_Type == "feed" else
+            unset SUB
+        fi
+        if [[ -f "${TEMPLATE_Template_Partials_Nav}" ]] && [[ -r "${TEMPLATE_Template_Partials_Nav}" ]]; then
+            SUB=$(<"${TEMPLATE_Template_Partials_Nav}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+            SUB=${SUB%$'\n'}
+            SUB=${SUB%\\}
+            sed -E \
+            -e "/\{\{[ ]*template\.nav[ ]*\}\}/s//${SUB:-}/g" \
+            -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+            unset SUB
+        fi
+
+        # scripts and styles
+        TEMPLATE_SCRIPTS=""
+        for SCRIPT in ${TEMPLATE_ASSETS_SCRIPTS[@]}; do
+            TEMPLATE_SCRIPTS="${TEMPLATE_SCRIPTS}<script src=\"${DOCUMENT_RELPATH}${SCRIPT}\"></script>"
+        done
+        TEMPLATE_SCRIPTS=$(echo "${TEMPLATE_SCRIPTS}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+        TEMPLATE_STYLES=""
+        for STYLE in ${TEMPLATE_ASSETS_STYLES[@]}; do
+            TEMPLATE_STYLES="${TEMPLATE_STYLES}<link rel=\"stylesheet\" href=\"${DOCUMENT_RELPATH}${STYLE}\" />"
+        done
+        TEMPLATE_STYLES=$(echo "${TEMPLATE_STYLES}" | sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+        sed -E \
+        -e '/\{\{[ ]*template\.scripts[ ]*\}\}/s||'"${TEMPLATE_SCRIPTS}"'|g' \
+        -e '/\{\{[ ]*template\.styles[ ]*\}\}/s||'"${TEMPLATE_STYLES}"'|g' \
+        -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+        # advanced navigation
+        for NAV in $(cd "${DEST_DIR}/${TARGET_DIR}" && find . -name "*.${MARSH_UID}.advanced-nav.html" | sed 's/^\.\///'); do
+            NAV_NAME="${NAV##*/}"
+            NAV_NAME="${NAV_NAME%.$MARSH_UID.advanced-nav.html}.html"
+            NAV_NAME=$(echo "${NAV_NAME}" | sed -E -e 's/\.(markdown|md|mkd|mkdn|mdown)(.html)$/\2/')
+            NAV_DIR="./${NAV}"
+            NAV_DIR="${NAV_DIR%/*}"
+            NAV_DIR="${NAV_DIR#./}"
+            if is_child "${DEST_DIR}/${TARGET_DIR}/${NAV_DIR}" "${DOCUMENT}"; then
+                NAV_RELPATH="${DOCUMENT_DIR#$NAV_DIR}"
+                NAV_RELPATH="${NAV_RELPATH//[^\/]}"     # leave only slashes
+                NAV_RELPATH="${NAV_RELPATH//[\/]/../}"  # slashes to dirs
+                NAV_RELPATH="${NAV_RELPATH:-.}"         # empty to current dir
+                NAV_RELPATH="${NAV_RELPATH%/}"          # drop trailing slash
+                <"${DEST_DIR}/${TARGET_DIR}/${NAV}" sed -E \
+                -e 's|<h1>([^<]+)</h1>|<h1><a href="'"${NAV_RELPATH}/${NAV_NAME}"'">\1</a></h1>|' \
+                -e 's|(<a href=")([^.])|\1'"${NAV_RELPATH}/"'\2|g' | \
+                sed -E \
+                -e 's|<a (href="[^"]*'"${NAV_RELPATH}/${DEST_NAME}.html"'"[^>]*)>([^<>]+)</a>|<a \1 class="selected">\2</a>|g' \
+                > "${DEST}.${MARSH_UID}.temp"
+                SUB=$(<"${DEST}.${MARSH_UID}.temp" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+                SUB=${SUB%$'\n'}
+                SUB=${SUB%\\}
+                sed -E \
+                -e "/\{\{[ ]*navigation[ ]*\}\}/s//${SUB}/g" \
+                -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+                unset SUB
+            fi
+        done
+        sed -E \
+        -e 's/\{\{[ ]*navigation[ ]*\}\}//g' \
+        -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
 
         # remove unused/unknown template includes
         sed -E \
@@ -1536,8 +1577,9 @@ function build_template {  # build_template dest_dir target_dir document templat
         OIFS="${IFS}"
         IFS=$'\n'
         SUBDOCUMENTS=($(cd "${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}" && find . -name "${DEST_NAME}${DOCUMENT_EXT:+.$DOCUMENT_EXT}.*" | grep -E '.+\.'"${MARSH_UID}"'\.subdocuments\.[0-9]+\.document$' | sed 's/^\.\///' | sed -E -e 's/(\.'"${MARSH_UID}"'\.subdocuments\.)/\1\|/' | sort -t \| -k2 -g | sed -E -e 's/(\.'"${MARSH_UID}"'\.subdocuments\.)\|/\1/'))
+        NUM_SUBDOCUMENTS="${#SUBDOCUMENTS[@]}"
         IFS="${OIFS}"
-        if [[ "${#SUBDOCUMENTS[@]}" -gt 0 ]]; then
+        if [[ "${NUM_SUBDOCUMENTS}" -gt 0 ]]; then
             for J in ${!SUBDOCUMENTS[@]}; do
                 # full path
                 SUBDOCUMENT="${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/${SUBDOCUMENTS[$J]}"
@@ -1579,17 +1621,27 @@ function build_template {  # build_template dest_dir target_dir document templat
                     # Key: [ foo, bar, baz ]
                     eval $(flat_to_array "SUBDOCUMENT_State" "SUBDOCUMENT_State_")
                 fi
-                if [[ "${DOCUMENT_Type}" == "feed" ]]; then
+                if [[ "${DOCUMENT_Type}" == "archive-atom" ]]; then
                     # document template
-                    if [[ "${TEMPLATE_Template_Partials_Feed_Document:-}" != "" ]]; then
+                    if [[ "${TEMPLATE_Template_Partials_Archive_Atom_Document:-}" != "" ]]; then
                         cp "${SUBDOCUMENT}" "${SUBDOCUMENT}.document"
-                        cp "${TEMPLATE_Template_Partials_Feed_Document}" "${SUBDOCUMENT}"
+                        cp "${TEMPLATE_Template_Partials_Archive_Atom_Document}" "${SUBDOCUMENT}"
+                    fi
+                elif [[ "${DOCUMENT_Type}" == "archive-json" ]]; then
+                    # document template
+                    if [[ "${TEMPLATE_Template_Partials_Archive_JSON_Document:-}" != "" ]]; then
+                        cp "${SUBDOCUMENT}" "${SUBDOCUMENT}.document"
+                        cp "${TEMPLATE_Template_Partials_Archive_JSON_Document}" "${SUBDOCUMENT}"
                     fi
                 else
                     # markdown to html
                     <"${SUBDOCUMENT}" process_markdown > "${SUBDOCUMENT}.document"
                     # document template
-                    cp "${TEMPLATE_Template_Partials_Document}" "${SUBDOCUMENT}"
+                    if [[ "${DOCUMENT_Type}" == "archive" ]]; then
+                        cp "${TEMPLATE_Template_Partials_Archive_HTML_Document}" "${SUBDOCUMENT}"
+                    else
+                        cp "${TEMPLATE_Template_Partials_Document}" "${SUBDOCUMENT}"
+                    fi
                 fi
                 # inject html into template
                 SUB=$(<"${SUBDOCUMENT}.document" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
@@ -1603,14 +1655,19 @@ function build_template {  # build_template dest_dir target_dir document templat
                 -e 's/\{\{[ ]*subdocuments[ ]*\}\}//g' \
                 -i".${MARSH_UID}.backup" "${SUBDOCUMENT}" && rm -f "${SUBDOCUMENT}.${MARSH_UID}.backup"
                 # template tags
+                if [[ "${DOCUMENT_Type}" == "archive-json" ]] && [[ "${J}" -eq $((NUM_SUBDOCUMENTS - 1)) ]]; then
+                    sed -E \
+                    -e 's/\{\{[ ]*util.json-separator[ ]*\}\}//g' \
+                    -i".${MARSH_UID}.backup" "${SUBDOCUMENT}" && rm -f "${SUBDOCUMENT}.${MARSH_UID}.backup"
+                fi
                 replace_tags "${SUBDOCUMENT}" "SUBDOCUMENT_"
                 # combine with previous subdocuments
                 cat "${SUBDOCUMENT}" >> "${DOCUMENT}.${MARSH_UID}.subdocuments"
                 # unset temporary global variables
                 for VAR in ${SUBDOCUMENT_META_VARS[@]}; do unset "${VAR}"; done
             done
-            cp "${DEST}" "${DEST}.temp"
-            <"${DEST}.temp" awk 'BEGIN { while (getline < "'"${DOCUMENT}.${MARSH_UID}.subdocuments"'") txt=txt $0 "\n"; gsub(/[&]/, "\\\\&", txt) } /\{\{[ ]*subdocuments[ ]*\}\}/{ gsub(/\{\{[ ]*subdocuments[ ]*\}\}/, txt) } 1' > "${DEST}"
+            cp "${DEST}" "${DEST}.${MARSH_UID}.temp"
+            <"${DEST}.${MARSH_UID}.temp" awk 'BEGIN { while (getline < "'"${DOCUMENT}.${MARSH_UID}.subdocuments"'") txt=txt $0 "\n"; gsub(/[&]/, "\\\\&", txt) } /\{\{[ ]*subdocuments[ ]*\}\}/{ gsub(/\{\{[ ]*subdocuments[ ]*\}\}/, txt) } 1' > "${DEST}"
         fi
 
         # unset temporary global variables
@@ -1621,11 +1678,15 @@ function build_template {  # build_template dest_dir target_dir document templat
 
     # smart comment tags
     sed -E \
-    -e 's|<!--[ ]*([a-z]+)\.([^ ]*)[ ]*(.*)-->|<\1 class="\2" \3>|g' \
-    -e 's|<!--[ ]*([a-z]+)\#([^ ]*)[ ]*(.*)-->|<\1 id="\2" \3>|g' \
+    -e 's|<!--[ ]*([a-z]+)\.([^ ]*)([ ]+[^ ]+)[ ]*-->|<\1 class="\2"\3>|g' \
+    -e 's|<!--[ ]*([a-z]+)\#([^ ]*)([ ]+[^ ]+)[ ]*-->|<\1 id="\2"\3>|g' \
+    -e 's|<!--[ ]*([a-z]+)\.([^ ]*)[ ]*-->|<\1 class="\2">|g' \
+    -e 's|<!--[ ]*([a-z]+)\#([^ ]*)[ ]*-->|<\1 id="\2">|g' \
     -e 's|<!--[ ]*\/([a-z]+)([.#])([^ ]*)[ ]*-->|</\1><!-- end \1\2\3 -->|g' \
-    -e 's|<!--[ ]*\.([^ ]*)[ ]*(.*)-->|<div class="\1" \2>|g' \
-    -e 's|<!--[ ]*\#([^ ]*)[ ]*(.*)-->|<div id="\1" \2>|g' \
+    -e 's|<!--[ ]*\.([^ ]*)([ ]+[^ ]+)[ ]*-->|<div class="\1"\2>|g' \
+    -e 's|<!--[ ]*\#([^ ]*)([ ]+[^ ]+)[ ]*-->|<div id="\1"\2>|g' \
+    -e 's|<!--[ ]*\.([^ ]*)[ ]*-->|<div class="\1">|g' \
+    -e 's|<!--[ ]*\#([^ ]*)[ ]*-->|<div id="\1">|g' \
     -e 's|<!--[ ]*\/([.#])([^ ]*)[ ]*-->|</div><!-- end div\1\2 -->|g' \
     -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
 
@@ -1633,6 +1694,13 @@ function build_template {  # build_template dest_dir target_dir document templat
     sed -E \
     -e ':a' -e 's|class="([^."]+)\.([^"]+)"|class="\1 \2"|g' -e 'ta' \
     -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+
+    # escape double quotes for JSON
+    if [[ "${DOCUMENT_Type}" == "archive-json" ]]; then
+        sed -E \
+        -e ':a' -e 's|class="([^"]+)"|class=\\"\1\\"|g' -e 'ta' \
+        -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+    fi
 
     # unwrap figures
     sed -E \
@@ -1669,11 +1737,6 @@ function build_document {  # build_document dest_dir target_dir document advance
     # normalize extensions
     if echo "${DOCUMENT_EXT}" | grep -Ei '^(markdown|md|mkd|mkdn|mdown)$' >/dev/null 2>&1; then
         DOCUMENT_EXT="markdown"
-    fi
-
-    # skip existing final document
-    if [[ "${DOCUMENT_EXT}" == "markdown" ]] && [[ -e "${DOCUMENT%.*}.html" ]]; then
-        return 0
     fi
 
     # split yaml and markdown, keep original
@@ -1759,25 +1822,29 @@ function build_target {  # build_target dest_dir target advanced_nav templates_d
     if [[ "${TARGET}" == '*' ]]; then
         DOCUMENTS=$(cd "${DEST_DIR}/${TARGET_DIR}" && find *)
     elif [[ -d "${DEST_DIR}/${TARGET}" ]]; then
-        DOCUMENTS=$(cd "${DEST_DIR}/${TARGET}" && find .)
+        if [[ "${TARGET}" == "." ]]; then
+            DOCUMENTS=$(cd "${DEST_DIR}" && find . -maxdepth 1)
+        else
+            DOCUMENTS=$(cd "${DEST_DIR}/${TARGET}" && find .)
+        fi
     else
         DOCUMENTS=$(cd "${DEST_DIR}/${TARGET_DIR}" && find "${TARGET##*/}")
     fi
-    DOCUMENTS=$(echo "${DOCUMENTS}" | grep -Ei '\.(markdown|md|mkd|mkdn|mdown|xml)$' | sed 's/^\.\///')
+    DOCUMENTS=$(echo "${DOCUMENTS}" | grep -Ei '\.(markdown|md|mkd|mkdn|mdown|xml|json)$' | sed 's/^\.\///')
     PARALLEL=$(which parallel)
     PARALLEL_MARKDOWN=""
     [[ "${MARKDOWN}" != "markdown" ]] && PARALLEL_MARKDOWN="${MARKDOWN}"
     if [[ "${JOBS:-1}" -gt 1 ]] && [[ "${PARALLEL:-}" != "" ]] && [[ "$(${PARALLEL} --version --no-notice 2>/dev/null | head -n 1 | grep -o 'GNU parallel')" == "GNU parallel" ]]; then
         # in parallel
         export -f build_document
-        if ! "${PARALLEL}" --halt now,fail=1 --quote --no-notice --jobs="${JOBS:-1}" "${SELF_DIR}/${SELF_NAME}" build-document --markdown "${PARALLEL_MARKDOWN}" "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
+        if ! "${PARALLEL}" --halt now,fail=1 --quote --no-notice --env process_markdown --env build_document --jobs="${JOBS:-1}" "${SELF_DIR}/${SELF_NAME}" build-document --markdown="${PARALLEL_MARKDOWN}" --marsh-uid="${MARSH_UID}" --marsh-temp="${MARSH_TEMP}" --marsh-config-file="${MARSH_CONFIG_FILE}" --marsh-config-file-dir="${MARSH_CONFIG_FILE_DIR}" --marsh-config-path="${MARSH_CONFIG_PATH}" --marsh-config-url="${MARSH_CONFIG_URL}" "${DEST_DIR}" "${TARGET_DIR}" {} {} ::: "${DOCUMENTS[@]}" ::: "${ADVANCED_NAV}"; then
             echo "Unable to build template: ${TEMPLATES[$I]}"
             return 1
         fi
         if [[ "${TEMPLATES_DIR}" != "" ]] && [[ "${#TEMPLATES[@]}" -gt 0 ]]; then
             export -f build_template
             for I in "${!TEMPLATES[@]}"; do
-                if ! "${PARALLEL}" --halt now,fail=1 --quote --no-notice --jobs="${JOBS:-1}" "${SELF_DIR}/${SELF_NAME}" build-templates  --markdown "${PARALLEL_MARKDOWN}" "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
+                if ! "${PARALLEL}" --halt now,fail=1 --quote --no-notice --env process_markdown --env build_template --jobs="${JOBS:-1}" "${SELF_DIR}/${SELF_NAME}" build-templates --markdown="${PARALLEL_MARKDOWN}" --marsh-uid="${MARSH_UID}" --marsh-temp="${MARSH_TEMP}" --marsh-config-file="${MARSH_CONFIG_FILE}" --marsh-config-file-dir="${MARSH_CONFIG_FILE_DIR}" --marsh-config-path="${MARSH_CONFIG_PATH}" --marsh-config-url="${MARSH_CONFIG_URL}" "${DEST_DIR}" "${TARGET_DIR}" {} "${TEMPLATES_DIR}" "${TEMPLATES[$I]}" "${TEMPLATES_CONFIG_EXTRA[$I]:-}" ::: "${DOCUMENTS[@]}"; then
                     echo "Unable to build template: ${TEMPLATES[$I]}"
                     return 1
                 fi
@@ -1785,7 +1852,11 @@ function build_target {  # build_target dest_dir target advanced_nav templates_d
         fi
     else
         # serially
-        for DOCUMENT in ${DOCUMENTS[@]}; do
+        OIFS="${IFS}"
+        IFS=$'\n'
+        DOCUMENTS=($(echo "${DOCUMENTS[@]}"))
+        IFS="${OIFS}"
+        for DOCUMENT in "${DOCUMENTS[@]}"; do
             if ! build_document "${DEST_DIR}" "${TARGET_DIR}" "${DOCUMENT}" "${ADVANCED_NAV}"; then
                 echo "Unable to build document: ${DOCUMENT}"
                 return 1
@@ -1806,7 +1877,7 @@ function build_target {  # build_target dest_dir target advanced_nav templates_d
 function clean_target {  # clean_target target
     local TARGET
     TARGET="${1:-}"; [[ "${TARGET}" == "" ]] && return 1
-    find "${TARGET}" \( -iname '*.markdown' -or -iname '*.md' -or -iname '*.mkd' -or -iname '*.mkdn' -or -iname '*.mdown' -or -iname '*.marsh.feed' -or -name '*.'"${MARSH_UID}"'.*' \) -delete
+    find "${TARGET}" \( -iname '*.markdown' -or -iname '*.md' -or -iname '*.mkd' -or -iname '*.mkdn' -or -iname '*.mdown' -or -name '*.'"${MARSH_UID}"'.*' \) -delete
 }
 
 # commands
@@ -1845,6 +1916,7 @@ MARKDOWN=""
 OPTIND=1
 OPTSPEC=":-:hvj:"
 OPTARRAY=('-h' '--help' '-v' '--version' '--fetch' '--force' '-j' '--jobs' '--markdown' '--markdown-options')  # all short and long options
+OPTARRAY+=('marsh-uid' 'marsh-temp' 'marsh-config-file' 'marsh-config-file-dir' 'marsh-config-path' 'marsh-config-url')  # all private options
 while getopts "${OPTSPEC}" OPT; do
     case "${OPT}" in
         -)
@@ -1944,6 +2016,84 @@ while getopts "${OPTSPEC}" OPT; do
                     echo -e "${HELP}"
                     exit 1
                     ;;
+                marsh-uid)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARSH_UID="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                marsh-uid=*)
+                    MARSH_UID="${OPTARG#*=}"
+                    ;;
+                marsh-temp)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARSH_TEMP="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                marsh-temp=*)
+                    MARSH_TEMP="${OPTARG#*=}"
+                    ;;
+                marsh-config-file)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARSH_CONFIG_FILE="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                marsh-config-file=*)
+                    MARSH_CONFIG_FILE="${OPTARG#*=}"
+                    ;;
+                marsh-config-file-dir)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARSH_CONFIG_FILE_DIR="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                marsh-config-file-dir=*)
+                    MARSH_CONFIG_FILE_DIR="${OPTARG#*=}"
+                    ;;
+                marsh-config-path)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARSH_CONFIG_PATH="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                marsh-config-path=*)
+                    MARSH_CONFIG_PATH="${OPTARG#*=}"
+                    ;;
+                marsh-config-url)
+                    if [[ -z ${!OPTIND+isset} ]] || in_array "${!OPTIND}" "${OPTARRAY[@]}"; then
+                        # Option without required argument
+                        echo "Option --${OPTARG} requires a value" >&2
+                        echo -e "${HELP}"
+                        exit 1
+                    fi
+                    MARSH_CONFIG_URL="${!OPTIND}"
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                marsh-config-url=*)
+                    MARSH_CONFIG_URL="${OPTARG#*=}"
+                    ;;
                 *)
                     if [[ "${OPTERR}" == 1 ]]; then
                         # Invalid option specified
@@ -2004,7 +2154,7 @@ fi
 
 # parse config
 if [[ "${MARSH_CONFIG_FILE:-}" == "" ]]; then
-    MARSH_CONFIG_FILE="${1:-$SELF_DIR}"
+    MARSH_CONFIG_FILE="${1:-$(pwd -P)}"
     if [[ -d "${MARSH_CONFIG_FILE}" ]]; then
         MARSH_CONFIG_FILE=$(cd "${MARSH_CONFIG_FILE}" && (pwd -P . 2>/dev/null || command pwd))
         [[ "${MARSH_CONFIG_FILE}" != "" ]] && MARSH_CONFIG_FILE="${MARSH_CONFIG_FILE%/}/config.yaml"
@@ -2028,7 +2178,7 @@ if [[ "${MARSH_CONFIG_FILE:-}" == "" ]]; then
         exit 1
     fi
     MARSH_CONFIG_URL="${CONFIG_Build_URL:-}"
-    export MARSH_CONFIG_FILE MARSH_CONFIG_FILE_DIR MARSH_CONFIG_PATH MARSH_CONFIG_URL
+    #export MARSH_CONFIG_FILE MARSH_CONFIG_FILE_DIR MARSH_CONFIG_PATH MARSH_CONFIG_URL
 fi
 
 # dependencies
@@ -2088,7 +2238,7 @@ function process_markdown {
         "${MARKDOWN}" ${@} | sed -E -e '/<a href="#[a-z]+:[^"]+" re[lv]="footnote">/s/ re[lv]="footnote"//g'
     fi
 }
-export MARKDOWN
+#export MARKDOWN
 export -f process_markdown
 
 # create target directory
@@ -2099,7 +2249,7 @@ mkdir -p "${MARSH_CONFIG_PATH}"
 if [[ "${MARSH_UID:-}" == "" ]]; then
     MARSH_TEMP=$(mktemp -d "${TMPDIR:-/tmp/}marsh-XXXXXX")
     MARSH_UID="marsh-${MARSH_TEMP##*marsh-}"
-    export MARSH_TEMP MARSH_UID
+    #export MARSH_TEMP MARSH_UID
 fi
 TEMPLATES_DIR="${MARSH_TEMP}/templates"
 mkdir -p "${TEMPLATES_DIR}"
@@ -2201,16 +2351,16 @@ if [[ "${COMMAND}" == "build" ]]; then
                 TARGET_ARCHIVE_TYPES=(${TARGET_ARCHIVES_TYPES[$I]:-})
                 TARGET_ARCHIVE_EXCLUDED_STATES=(${TARGET_ARCHIVES_EXCLUDED_STATES[$I]:-})
                 IFS="${OIFS}"
-                if ! build_index  "archive" \
-                                  "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
-                                  "${TARGET_ARCHIVES[$I]}" \
-                                  "${TARGET_ARCHIVES_NAME[$I]:-$TARGET_NAME}" \
-                                  "${TARGET_ARCHIVES_CONTENT[$I]}" \
-                                  "${TARGET_ARCHIVES_COUNT[$I]}" \
-                                  "${#TARGET_ARCHIVE_TYPES[@]}" \
-                                  "${TARGET_ARCHIVE_TYPES[@]}" \
-                                  "${#TARGET_ARCHIVE_EXCLUDED_STATES[@]}" \
-                                  "${TARGET_ARCHIVE_EXCLUDED_STATES[@]}" \
+                if ! build_archive "${TARGET_ARCHIVES_ENCODING[$I]}" \
+                                   "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
+                                   "${TARGET_ARCHIVES[$I]}" \
+                                   "${TARGET_ARCHIVES_NAME[$I]:-$TARGET_NAME}" \
+                                   "${TARGET_ARCHIVES_CONTENT[$I]}" \
+                                   "${TARGET_ARCHIVES_COUNT[$I]}" \
+                                   "${#TARGET_ARCHIVE_TYPES[@]}" \
+                                   "${TARGET_ARCHIVE_TYPES[@]}" \
+                                   "${#TARGET_ARCHIVE_EXCLUDED_STATES[@]}" \
+                                   "${TARGET_ARCHIVE_EXCLUDED_STATES[@]}" \
                 || ! build_target "${MARSH_CONFIG_PATH}" \
                                   "${TARGET_PATH}/${TARGET_ARCHIVES[$I]}" \
                                   "" \
@@ -2223,39 +2373,6 @@ if [[ "${COMMAND}" == "build" ]]; then
                     die_gracefully
                 fi
                 unset TARGET_ARCHIVE_TYPES TARGET_ARCHIVE_EXCLUDED_STATES
-            fi
-        done
-
-        # feeds
-        for I in "${!TARGET_FEEDS[@]}"; do
-            if [[ "${TARGET_FEEDS[$I]}" != "" ]]; then
-                OIFS="${IFS}"
-                IFS=$(echo @|tr @ '\034')
-                TARGET_FEED_TYPES=(${TARGET_FEEDS_TYPES[$I]:-})
-                TARGET_FEED_EXCLUDED_STATES=(${TARGET_FEEDS_EXCLUDED_STATES[$I]:-})
-                IFS="${OIFS}"
-                if ! build_index  "feed" \
-                                  "${MARSH_CONFIG_PATH}/${TARGET_PATH}" \
-                                  "${TARGET_FEEDS[$I]}" \
-                                  "${TARGET_FEEDS_NAME[$I]:-$TARGET_NAME}" \
-                                  "${TARGET_FEEDS_CONTENT[$I]}" \
-                                  "${TARGET_FEEDS_COUNT[$I]}" \
-                                  "${#TARGET_FEEDS_TYPES[@]}" \
-                                  "${TARGET_FEEDS_TYPES[@]}" \
-                                  "${#TARGET_FEEDS_EXCLUDED_STATES[@]}" \
-                                  "${TARGET_FEEDS_EXCLUDED_STATES[@]}" \
-                || ! build_target "${MARSH_CONFIG_PATH}" \
-                                  "${TARGET_PATH}/${TARGET_FEEDS[$I]}" \
-                                  "" \
-                                  "${TEMPLATES_DIR}" \
-                                  "${#TARGET_TEMPLATES[@]}" \
-                                  "${TARGET_TEMPLATES[@]}" \
-                                  "${#TARGET_TEMPLATES_CONFIG[@]}" \
-                                  "${TARGET_TEMPLATES_CONFIG[@]}"
-                then
-                    die_gracefully
-                fi
-                unset TARGET_FEED_TYPES TARGET_FEED_EXCLUDED_STATES
             fi
         done
 
