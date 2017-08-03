@@ -20,19 +20,23 @@ Building HandBrake for Mac requires an Apple computer with a 64-bit Intel proces
 
 - [Xcode](https://developer.apple.com/xcode/) 8.2.1 or later
   - free Apple Developer registration required, or install from the Mac App Store
-- [Command Line Tools for Xcode](https://developer.apple.com/download/more/) (optional)
+- [Command Line Tools for Xcode](https://developer.apple.com/download/more/)
   - free Apple Developer registration required, or install using `xcode-select --install`
 
 Additional dependencies (may be built via included script):
 
 - autoconf
 - automake
-- cmake (3.7.2 or later recommended)
+- cmake (3.8.2 or later recommended)
 - libtool
 - pkg-config
 - yasm 1.2.0 or later (1.3.0 or later recommended)
 
-Install Xcode and open it once. You may quit Xcode after it has finished loading.
+Install Xcode[^xcode-install] and open it once. You may quit Xcode after it has finished loading.
+
+Install Command Line Tools for Xcode[^xcode-cli-tools].
+
+    xcode-select --install
 
 Clone the HandBrake repository.
 
@@ -58,5 +62,9 @@ To start over, simply remove the `build` directory.
 
     if [[ "$(basename $(pwd))" == "build" ]]; then cd ..; fi
     rm -rf build
+
+[^xcode-install]: Make sure Xcode is installed at `/Applications/Xcode.app`. When using an Xcode Beta release, you may need to rename `Xcode-beta.app` to `Xcode.app`.
+
+[^xcode-cli-tools]: When installing Command Line Tools for Xcode using the package installer (instead of `xcode-select --install`), make sure to install the package that corresponds to the installed Xcode version. A mismatch between the installed Xcode and Command Line Tools versions may cause problems.
 
 [^default-path]: `/usr/local/bin` is included in the system's `PATH` by default. It is not necessary to add it to your environment's `PATH` when installing the additional dependencies to `/usr/local`.
