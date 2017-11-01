@@ -114,7 +114,7 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
 Download the HarfBuzz spec file from the CentOS 7 [rpms/harfbuzz](https://git.centos.org/summary/rpms!harfbuzz.git) git repository and remove the `graphite2-devel` dependency.
 
     sudo mkdir -p /root/rpmbuild/SPECS
-    sudo curl -o /root/rpmbuild/SPECS/harfbuzz.spec 'https://git.centos.org/raw/rpms!harfbuzz.git/f5bd1f4920ed0fc56cd21547294f7c34deeb4e4f/SPECS!harfbuzz.spec'
+    sudo curl -o /root/rpmbuild/SPECS/harfbuzz.spec 'https://git.centos.org/raw/rpms/harfbuzz.git/f5bd1f4920ed0fc56cd21547294f7c34deeb4e4f/SPECS!harfbuzz.spec'
     sudo sed -i'' -e '/BuildRequires:[ ]*graphite2-devel/d' -e '/%configure/s/ --with-graphite2//' /root/rpmbuild/SPECS/harfbuzz.spec
 
 Download, build, and install HarfBuzz (provides the `harfbuzz-devel` package).
