@@ -38,7 +38,7 @@ When complete, you will find `HandBrakeCLI` in the `build` directory.
 
 Install HandBrake (optional).
 
-    cd build && sudo make install
+    cd build && sudo gmake install
 
 To start over, simply remove the `build` directory.
 
