@@ -44,18 +44,21 @@ Beware of online marketplaces and auction sites. HandBrake is *free software*.
 
 ## Warning about broken third-party builds
 
-Certain Linux distributions and package repositories create their own versions of HandBrake. These modified versions are often crippled (features removed for political reasons) and broken (bugs due to modifications), and should be avoided.
+Certain BSD/Linux distributions and package repositories create their own versions of HandBrake. These modified versions are often crippled (features removed for political reasons) and broken (bugs due to modifications), and should be avoided.
 
 Broken third-party packages/builds include but are not limited to:
 
 - Arch: `handbrake`, `handbrake-cli`
 - Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-cli-fdkaac`, `handbrake-fdkaac`, `handbrake-gtk-git`, `handbrake-gtk2`
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
+- FreeBSD: `handbrake`
 - Gentoo: `handbrake`
 - openSUSE Packman: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
 
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
+
+BSD users should compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
 Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), install the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), or compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
