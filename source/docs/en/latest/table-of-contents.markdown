@@ -157,6 +157,8 @@ Table of contents
 ## Developer documentation
 
 - Building HandBrake
+  - [Building HandBrake for BSD](developer/build-bsd.html)
+    - Installing dependencies on [FreeBSD](developer/install-dependencies-freebsd.html)
   - [Building HandBrake for Linux](developer/build-linux.html)
     - Installing dependencies on [Arch](developer/install-dependencies-arch.html) / [CentOS](developer/install-dependencies-centos.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
   - [Building HandBrake for Mac](developer/build-mac.html)
