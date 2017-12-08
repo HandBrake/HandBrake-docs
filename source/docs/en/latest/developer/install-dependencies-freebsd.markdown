@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on FreeBSD
 ==================================
 
-The following instructions are for [FreeBSD](https://www.freebsd.org) 11.1.
+The following instructions are for [FreeBSD](https://www.freebsd.org) 11.1 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
 
 Dependencies:
 
@@ -31,9 +31,9 @@ Dependencies:
 - fribidi
 - git
 - gcc
-- gm4
+- m4
 - gmake
-- gpatch
+- patch
 - gtar
 - harfbuzz
 - jansson
@@ -58,7 +58,7 @@ Install the `sudo` package when running as a regular user (not root).
 
 Install dependencies.
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc gm4 gmake gpatch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 opus pkgconf python yasm
+    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 opus pkgconf python yasm
 
 Build and install the `lame` source port.
 
