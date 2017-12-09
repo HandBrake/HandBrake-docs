@@ -33,5 +33,5 @@ As of January 26, 2007, our HandBrake fork was officially known as MediaFork.
 
 On February 13, 2007, we finally heard from titer, who was fully in support of our work and encouraged us to continue. We laid plans to reintegrate our projects under the HandBrake banner, relocated our web services to m0k.org, and as of March 2, 2007, all developer and end-user servers had returned to m0k.org. The next code release was officially named HandBrake and will remain so going forward.
 
-Today, HandBrake is will hosted by titer the the development team remains in contact however he is not active in the day to day running or development of the project.
+Today, HandBrake is hosted by titer and the development team remains in contact; however, he is not active in the day-to-day running or development of the project.
 
