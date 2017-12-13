@@ -54,6 +54,8 @@ This process will take a few minutes, then provide you with instructions for add
 Build HandBrake.
 
     ./configure --cross=x86_64-w64-mingw32 --enable-qsv --launch-jobs=$(nproc) --launch
+    
+    If you wish to use a higher quality AAC encoder, you can use the --enable-fdk-aac option. Please note that by doing so, HandBrake can NO LONGER BE DISTRIBUTED and can only be used for personal use. The FDK AAC encoder is not GPLv2 compatible. 
 
 When complete, you will find `HandBrakeCLI.exe` in the `build` directory and `hb.dll` in `build/libhb`.
 
@@ -68,9 +70,12 @@ To start over, simply remove the `build` directory.
 The following tools are required to build and run the [GUI](abbr:Graphical User Interface).
 
 - [Microsoft Visual Studio Community](https://www.visualstudio.com/vs/community/)
-- [Source Tree](https://www.sourcetreeapp.com) git client (optional)
-  - Visual Studio 2015 has built-in git support, if you prefer it
+- [Source Tree](https://www.sourcetreeapp.com) git client
+  - Any git client will do. Our preference is SourceTree but both GitHub and Visual Studio 2015+ have their own git clients too if you prefer.
 - `hb.dll` (see the LibHB build instructions preceding these, or download from [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php))
+- [Jetbrains Resharper](https://www.jetbrains.com/resharper/)
+  - Optional but if your considering developing on the Windows UI, we highly recommend you check it out!
+  - Jetbrains are kind enough to provide open-source licenses to us, so regular and active contributors to the HandBrake project can apply to us for one. 
 
 Clone `https://github.com/HandBrake/HandBrake.git` using your git client.
 
