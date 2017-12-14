@@ -37,10 +37,23 @@ Dependencies:
 - wget
 - yasm
 
-Install all dependencies.
+Additional MinGW-w64 toolchain dependencies:
+
+- bison
+- bzip2
+- flex
+- g++
+- gunzip
+- pax
+
+Install dependencies.
 
     sudo apt-get update
     sudo apt-get install cmake curl gcc git intltool libtool m4 make patch python tar wget yasm
+
+Install the additional dependencies required to build the MinGW-w64 toolchain.
+
+    sudo apt-get install bison bzip2 flex g++ gunzip pax
 
 Clone the HandBrake repository.
 
