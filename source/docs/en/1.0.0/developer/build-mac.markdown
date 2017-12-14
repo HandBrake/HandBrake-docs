@@ -32,7 +32,7 @@ Additional dependencies (may be built via included script):
 - pkg-config
 - yasm 1.2.0 or later (1.3.0 or later recommended)
 
-Install Xcode[^xcode-install] and open it once. You may quit Xcode after it has finished loading.
+Install Xcode[^xcode-install] and open it once. Approve any prompts to install additional tools. You may quit Xcode after it has finished.
 
 Install Command Line Tools for Xcode[^xcode-cli-tools].
 
