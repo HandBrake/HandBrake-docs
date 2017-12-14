@@ -69,6 +69,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
+    sudo apt-get update
     sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libtheora-dev libtool libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev
 
 If you are running Ubuntu 16.04 LTS, install the additional dependencies.

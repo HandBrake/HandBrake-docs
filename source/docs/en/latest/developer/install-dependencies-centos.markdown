@@ -43,6 +43,7 @@ Additional dependencies not available in the base repository:
 
 Install dependencies.
 
+    sudo yum update
     sudo yum groupinstall "Development Tools" "Additional Development"
     sudo yum install fribidi-devel jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel opus-devel
 

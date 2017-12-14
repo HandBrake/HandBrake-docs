@@ -63,6 +63,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
+    sudo yum update
     sudo yum groupinstall "Development Tools" "Development Libraries"
     sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make opus-devel patch python tar x264-devel yasm zlib-devel
 

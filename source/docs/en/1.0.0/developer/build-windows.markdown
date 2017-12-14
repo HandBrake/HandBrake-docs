@@ -39,6 +39,7 @@ Dependencies:
 
 Install all dependencies.
 
+    sudo apt-get update
     sudo apt-get install cmake curl gcc git intltool libtool m4 make patch python tar wget yasm
 
 Clone the HandBrake repository.
