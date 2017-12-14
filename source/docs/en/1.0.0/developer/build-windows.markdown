@@ -59,8 +59,9 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Check out the most recent tag in the HandBrake 1.0.x release series.
+List available tags in the HandBrake 1.0.x release series, and check out the most recent.
 
+    git tag --list | grep ^1\.0\.
     git checkout refs/tags/$(git tag -l | grep -E '^1\.0\.[0-9]+$' | tail -n 1)
 
 Build the MinGW-w64 toolchain using the included script, where `username` is your user name. Feel free to choose a different output path, if desired.
