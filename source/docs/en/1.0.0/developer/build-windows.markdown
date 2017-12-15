@@ -70,7 +70,7 @@ Build the MinGW-w64 toolchain using the included script, where `username` is you
 
 This process will take a few minutes, then provide you with instructions for adding the resulting binaries location to your environment's `PATH`. Do this now.
 
-Build HandBrake.
+Build HandBrake. For higher quality audio, enable the FDK AAC encoder by appending `--enable-fdk-aac`. Builds including FDK AAC must be for personal use only and may not be distributed.[^fdk-aac-license]
 
     ./configure --cross=x86_64-w64-mingw32 --enable-qsv --launch-jobs=$(nproc) --launch
 
@@ -87,9 +87,13 @@ To start over, simply remove the `build` directory.
 The following tools are required to build and run the [GUI](abbr:Graphical User Interface).
 
 - [Microsoft Visual Studio Community](https://www.visualstudio.com/vs/community/)
-- [Source Tree](https://www.sourcetreeapp.com) git client (optional)
-  - Visual Studio 2015 has built-in git support, if you prefer it
+- A Git client
+  - [Source Tree](https://www.sourcetreeapp.com) (recommended)
+  - Client included with Visual Studio 2015 or later
 - `hb.dll` (see the LibHB build instructions preceding these, or download from [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php))
+- [JetBrains ReSharper](https://www.jetbrains.com/resharper/) (optional)
+  - Highly recommended for developers interested in working on the Windows UI
+  - Active, regular contributors may request a free for open source ReSharper license from the HandBrake Team, courtesy JetBrains
 
 Clone `https://github.com/HandBrake/HandBrake.git` using your git client.
 
@@ -98,3 +102,5 @@ Source code for the GUI resides in the `win\CS` folder and the solution file is 
 To build the GUI, select Build Solution from the Build menu.
 
 When complete, locate the output folder where `HandBrake.exe` is created (typically in `win\CS\HandBrakeWPF\bin\...`, depending on the selected build profile). Copy `hb.dll` to this folder. This completes the build process.
+
+[^fdk-aac-license]: The FDK AAC encoder is only provided in source code form and is not fully compatible with the GNU General Public License Version 2 used by HandBrake. Builds including FDK AAC must be for personal use only and may not be distributed. Do not share the build product with others.
