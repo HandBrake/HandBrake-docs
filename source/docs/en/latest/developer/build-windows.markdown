@@ -29,9 +29,11 @@ Dependencies:
 - gcc
 - git
 - libtool
+- libtool-bin
 - m4
 - make
 - patch
+- pkg-config
 - python
 - tar
 - wget
@@ -43,17 +45,17 @@ Additional MinGW-w64 toolchain dependencies:
 - bzip2
 - flex
 - g++
-- gunzip
+- gzip
 - pax
 
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install cmake curl gcc git intltool libtool m4 make patch python tar wget yasm
+    sudo apt-get install cmake curl gcc git intltool libtool libtool-bin m4 make patch pkg-config python tar wget yasm
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
-    sudo apt-get install bison bzip2 flex g++ gunzip pax
+    sudo apt-get install bison bzip2 flex g++ gzip pax
 
 Clone the HandBrake repository.
 
