@@ -18,12 +18,15 @@ Building HandBrake for Windows
 
 ## Command line interface and LibHB
 
-Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 16.04 LTS or later is recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as most packaged versions have issues that can produce non-functioning builds.
+Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 18.04 LTS or 16.04 LTS are recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as most packaged versions have issues that can produce non-functioning builds.
 
-The following instructions are for Ubuntu 16.04 LTS.
+The following instructions are for Ubuntu 18.04 (Bionic Beaver) and 16.04 LTS (Xenial Xerus).
 
 Dependencies:
 
+- autoconf
+- automake
+- build-essential
 - cmake
 - curl
 - gcc
@@ -36,8 +39,8 @@ Dependencies:
 - pkg-config
 - python
 - tar
-- wget
 - yasm
+- zlib1g-dev
 
 Additional MinGW-w64 toolchain dependencies:
 
@@ -51,7 +54,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install cmake curl gcc git intltool libtool libtool-bin m4 make patch pkg-config python tar wget yasm
+    sudo apt-get install automake autoconf build-essential cmake curl gcc git intltool libtool libtool-bin m4 make patch pkg-config python tar yasm zlib1g-dev
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
