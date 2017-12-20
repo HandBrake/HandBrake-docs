@@ -43,17 +43,16 @@ Typically recommended that you leave this on "loose". If your source is not anam
 
 ## Upscaling
 
-The HandBrake GUI's do not allow upscaling. Most of the time this is a bad idea as it reduces (not increases) the quality of your source file along with increasing the final file size. This is less than idea. Most of the time, letting the playback device or software upscale to your screen size is much better. You don't gain anything by upscaling with HandBrake.
+The HandBrake GUI's do not allow upscaling. Most of the time this is a bad idea as it reduces (not increases) the quality of your source file along with increasing the final file size. This is less than ideal. Most of the time, letting the playback device or software upscale to your screen size is much better. You don't gain anything by upscaling with HandBrake.
 
 In the very rare cases that this is needed, it can be done with the command line interface with the --width and --height options.
-Typically you would only use this if the software or hardware your using has a problematic or broken scaler.
-
+Typically you would only use this if the software or hardware you're using has a problematic or broken scaler.
 
 ## Cropping
 
 HandBrake by default will try and detect and crop black bars from the video. Encoding black bars increases the encode time and the amount of disk space required, so it's best to let HandBrake remove them.
 
-HandBrakes auto-crop is not perfect. It's giving you a best guess at what the crop values should be. If you find it gets it wrong, which is not that common, you can adjust them by selecting the "Custom" option.
+HandBrake's auto-crop is not perfect. It's giving you a best guess at what the crop values should be. If you find it gets it wrong, which is not that common, you can adjust them by selecting the "Custom" option.
 
 You can preview the effect of your adjustments by clicking the "Preview" button on the toolbar.
 
