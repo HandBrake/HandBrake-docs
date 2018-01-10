@@ -29,6 +29,7 @@ Additional dependencies (may be built via included script):
 - automake
 - cmake (3.8.2 or later recommended)
 - libtool
+- nasm 2.13 or later
 - pkg-config
 - yasm 1.2.0 or later (1.3.0 or later recommended)
 
