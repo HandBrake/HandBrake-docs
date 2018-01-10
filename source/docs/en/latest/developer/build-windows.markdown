@@ -18,9 +18,9 @@ Building HandBrake for Windows
 
 ## Command line interface and LibHB
 
-Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 16.04 LTS is recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as most packaged versions have issues that can produce non-functioning builds.
+Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 18.04 LTS (Bionic Beaver) and 16.04 LTS (Xenial Xerus) are recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as most packaged versions have issues that can produce non-functioning builds.
 
-The following instructions are for Ubuntu 16.04 LTS (Xenial Xerus).
+The following instructions are for Ubuntu 18.04 LTS (Bionic Beaver) and 16.04 LTS (Xenial Xerus).
 
 Dependencies:
 
@@ -42,6 +42,10 @@ Dependencies:
 - yasm
 - zlib1g-dev
 
+Additional dependencies not available in the Ubuntu 16.04 LTS base repository:
+
+- nasm 2.13 or later
+
 Additional MinGW-w64 toolchain dependencies:
 
 - bison
@@ -55,6 +59,21 @@ Install dependencies.
 
     sudo apt-get update
     sudo apt-get install automake autoconf build-essential cmake curl gcc git intltool libtool libtool-bin m4 make patch pkg-config python tar yasm zlib1g-dev
+
+For Ubuntu 18.04 (Bionic Beaver), install `nasm` from the base repository.
+
+    sudo apt-get install nasm
+
+For Ubuntu 16.04 LTS (Xenial Xerus), the `nasm` version in the base repository is too old, so compile from source.
+
+    curl -O http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.bz2
+    tar -xf nasm-2.13.02.tar.bz2
+    cd nasm-2.13.02
+    ./configure --prefix=/usr/local --enable-sections --enable-lto
+    make -j$(nproc)
+    sudo make install
+    source ~/.bashrc
+    cd ..
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
