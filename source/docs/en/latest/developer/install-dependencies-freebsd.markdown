@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on FreeBSD
 ==================================
 
-The following instructions are for [FreeBSD](https://www.freebsd.org) 11.1 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
+The following instructions are for [FreeBSD](https://www.freebsd.org) 11.1 x86_64.
 
 Dependencies:
 
@@ -52,6 +52,25 @@ Dependencies:
 - python
 - yasm
 
+Graphical interface dependencies:
+
+- atk
+- cairo
+- dbus
+- dbus-glib
+- desktop-file-utils
+- gdk-pixbuf2
+- gettext
+- glib
+- gnome3
+- gstreamer1-plugins-gdkpixbuf
+- gtk3
+- intltool
+- libdvdcss
+- libnotify
+- libvpx
+- pango
+
 Install the `sudo` package when running as a regular user (not root).
 
     pkg install sudo
@@ -69,5 +88,9 @@ Build and install the `lame` source port.
     cd /usr/ports/audio/lame
     sudo make install
     cd "LASTDIR"
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo pkg install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib gnome3 gstreamer1-plugins-gdkpixbuf gtk3 intltool libdvdcss libnotify libvpx pango
 
 FreeBSD is now prepared to build HandBrake. See [Building HandBrake for BSD](build-bsd.html) for further instructions.

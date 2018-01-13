@@ -30,13 +30,13 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Build HandBrake. Since only the command line interface is supported on BSD, the graphical interface is automatically disabled (equivalent to `--disable-gtk`).
+Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
 
     ./configure --launch-jobs=$(sysctl -n hw.ncpu) --launch
 
-When complete, you will find `HandBrakeCLI` in the `build` directory.
+When complete, you will find `HandBrakeCLI` in the `build` directory. If the graphical interface is enabled, you will also find `ghb` in the `build/gtk/src` directory.
 
-Install HandBrake (optional).
+Install HandBrake (optional). When installing the graphical interface, icon and desktop files for the Applications menu will be also installed.
 
     cd build && sudo gmake install
 
