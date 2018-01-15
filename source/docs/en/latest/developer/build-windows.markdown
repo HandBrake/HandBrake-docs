@@ -97,7 +97,6 @@ When complete, you will find `HandBrakeCLI.exe` in the `build` directory and `hb
 
 To start over, simply remove the `build` directory.
 
-    if [[ "$(basename $(pwd))" == "build" ]]; then cd ..; fi
     rm -rf build
 
 

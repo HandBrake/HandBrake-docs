@@ -57,11 +57,10 @@ When complete, you will find `HandBrakeCLI` in the `build/xroot` directory. If t
 
 Install HandBrake (optional).
 
-    cd build && sudo make install
+    sudo make --directory=build install
 
 To start over, simply remove the `build` directory.
 
-    if [[ "$(basename $(pwd))" == "build" ]]; then cd ..; fi
     rm -rf build
 
 [^xcode-install]: Make sure Xcode is installed at `/Applications/Xcode.app`. When using an Xcode Beta release, you may need to rename `Xcode-beta.app` to `Xcode.app`.
