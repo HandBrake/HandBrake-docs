@@ -55,15 +55,11 @@ The following subtitle types as supported as follows:
   - Only 1 CC track can be read from the source.
   - CC tracks within an MP4 appear as a subtitle track, not a CC track.
 
-- SRT subtitle import – You can import SRT files into HandBrake through the “Subtitles tab”. 
-  - You can import multiple SRT subtitle tracks.
+- SRT Subtitles
+  - Can be read from your source file or imported through the “Subtitles tab” if you have separate files(s)
   - You can set an offset (measured in milliseconds) to change the start time that the first and subsequent SRT subtitles will appear. Use trial and error encoding a single chapter to obtain the correct offset.
   - You should make sure the correct character code is selected from the “Char Code” dropdown. Selecting the wrong code, will result in your output file having no subtitle track, and can cause the player to crash when playing that track.
-
-- SRT Passthru
-  - SRT Subtitles can also be passed through from input video files.
-  - SRT are converted to SSA for the output.
-
+  - Please note, SRT tracks are converted to SSA in the output file. This behavior is not currently configurable. 
 
 - SSA Subtitles
   - SSA Subtitles can be passed-thru or burned into the video. 
