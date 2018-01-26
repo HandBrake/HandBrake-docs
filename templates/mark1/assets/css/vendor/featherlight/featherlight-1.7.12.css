@@ -1,11 +1,16 @@
 /**
  * Featherlight – ultra slim jQuery lightbox
- * Version 1.4.0 - http://noelboss.github.io/featherlight/
+ * Version 1.7.12 - http://noelboss.github.io/featherlight/
  *
- * Copyright 2016, Noël Raoul Bossart (http://www.noelboss.com)
+ * Copyright 2017, Noël Raoul Bossart (http://www.noelboss.com)
  * MIT Licensed.
 **/
 @media all {
+	html.with-featherlight {
+		/* disable global scrolling when featherlights are visible */
+		overflow: hidden;
+	}
+
 	.featherlight {
 		display: none;
 
@@ -38,7 +43,6 @@
 		display: inline-block;
 		height: 100%;
 		vertical-align: middle;
-		margin-right: -0.25em;
 	}
 
 	.featherlight .featherlight-content {
@@ -74,6 +78,13 @@
 		display: block;
 	}
 
+	/* don't show these though */
+	.featherlight script.featherlight-inner,
+	.featherlight link.featherlight-inner,
+	.featherlight style.featherlight-inner {
+		display: none;
+	}
+
 	.featherlight .featherlight-close-icon {
 		/* position: centering vertical and horizontal */
 		position: absolute;
@@ -92,8 +103,15 @@
 		background: #fff; /* Set the background in case it overlaps the content */
 		background: rgba(255, 255, 255, 0.3);
 		color: #000;
+		border: none;
+		padding: 0;
 	}
 
+	/* See http://stackoverflow.com/questions/16077341/how-to-reset-all-default-styles-of-the-html5-button-element */
+	.featherlight .featherlight-close-icon::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
 
 	.featherlight .featherlight-image {
 		/* styling */
@@ -105,11 +123,19 @@
 		/* removed the border for image croping since iframe is edge to edge */
 		border-bottom: 0;
 		padding: 0;
+		-webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
 	}
 
 	.featherlight iframe {
 		/* styling */
 		border: none;
+	}
+
+	.featherlight * { /* See https://github.com/noelboss/featherlight/issues/42 */
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 }
 
@@ -117,11 +143,18 @@
 @media only screen and (max-width: 1024px) {
 	.featherlight .featherlight-content {
 		/* dimensions: maximize lightbox with for small screens */
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 0;
+		margin-right: 0;
 		max-height: 98%;
 
 		padding: 10px 10px 0;
 		border-bottom: 10px solid transparent;
+	}
+}
+
+/* hide non featherlight items when printing */
+@media print {
+	html.with-featherlight > * > :not(.featherlight) {
+		display: none;
 	}
 }
