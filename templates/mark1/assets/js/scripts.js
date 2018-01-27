@@ -161,5 +161,37 @@ $(document).ready(function(){
         $('article.docs nav .breadcrumbs .language-separator').add('article.docs nav .breadcrumbs .language').css('display', 'inline');
     }
 
-    docs.find('figure > a:has(img)').featherlight({type: 'image', openSpeed: 150, closeSpeed: 150});
+    $.featherlight.defaults.onResize = function(){
+        $(this.$content[0]).css('max-width', this.$content[0].naturalWidth);
+        $(this.$content[0]).css('max-height', this.$content[0].naturalHeight);
+    };
+    $.featherlight.contentFilters.image2 = {
+        regex: /\.(png|jpg|jpeg|gif|tiff?|bmp|svg)(\?\S*)?$/i,
+        process: function(url){
+            var self = this,
+                deferred = $.Deferred(),
+                img = new Image(),
+                $img = $('<img src="'+url+'" alt="" class="'+self.namespace+'-image" />');
+            var srcset = $(this.$currentTarget[0]).attr('data-srcset');
+            if (srcset.length > 0) {
+                $img = $('<img src="'+url+'" srcset="'+srcset+'" alt="" class="'+self.namespace+'-image" />');
+            };
+            img.onload  = function() {
+                /* Store naturalWidth & height for IE8 */
+                $img.naturalWidth = img.width; $img.naturalHeight = img.height;
+                deferred.resolve( $img );
+            };
+            img.onerror = function() { deferred.reject($img); };
+            img.src = url;
+            return deferred.promise();
+        }
+    };
+    $.featherlight.defaults.contentFilters.unshift('image2');
+    docs.find('figure > a:has(img)').each(function(){
+        var srcset = $(this).children('img').first().attr('srcset');
+        if (srcset.length > 0){
+            $(this).attr('data-srcset', srcset);
+        }
+        $(this).featherlight({type: 'image2', openSpeed: 150, closeSpeed: 150});
+    });
 });
