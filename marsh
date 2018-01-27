@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.6.0"
+VERSION="0.7.0"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1754,17 +1754,12 @@ function build_document {  # build_document dest_dir target_dir document advance
         # process images with multiple resolution assets
         cp "${DOCUMENT}.${MARSH_UID}.document" "${DOCUMENT}.${MARSH_UID}.document.temp"
         <"${DOCUMENT}.${MARSH_UID}.document.temp" sed -E \
-        -e 's|^!\[(.+)]\([ ]*([^ ]+)[ ]*"(.+)"[ ]*\)$|<figure><img src="\2" alt="\1" /><figcaption>\3</figcaption></figure>|' |
+        -e 's|^!\[(.+)]\([ ]*([^ ]+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' |
         process_markdown |
         sed -E \
         -e 's|<p><figure>|<figure>|' \
         -e 's|</figure></p>|</figure>|' |
-        awk -F' ' 'BEGIN { ORS=" "; } { for(i=1; i<=NF; i++) { if ($i ~ "^src=\"[^\"]+\"$") { f=$i; gsub(/^src="/, "", f); gsub(/"$/, "", f); f1=f " 1x"; f2=f; gsub(/\.[^\.]+$/, "@2x&", f2); f2abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f2; f3=f; gsub(/\.[^\.]+$/, "@3x&", f3); f3abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f3; if (getline temp < f2abs > 0) { f2=", " f2 " 2x"; } else { f2=""; } if (getline temp < f3abs > 0) { f3=", " f3 " 3x"; } else { f3=""; } print "src=\"" f "\" srcset=\"" f1 f2 f3 "\" " } else { print $i } } }' |
-        sed -E \
-        -e 's|<figure>(<img[ ]+src="[^"]+"[ ]+srcset="[^"]+[ ]+1x,[ ]*[^"]+[ ]+2x,[ ]*([^"]+)[ ]+3x"[ ]+alt="[^"]+"[ ]*/?[ ]*>)<figcaption>|<figure><a href="\2">\1</a><figcaption>|g' \
-        -e 's|<figure>(<img[ ]+src="[^"]+"[ ]+srcset="[^"]+[ ]+1x,[ ]*([^"]+)[ ]+2x"[ ]*alt="[^"]+"[ ]+/?[ ]*>)<figcaption>|<figure><a href="\2">\1</a><figcaption>|g' \
-        -e 's|<figure>(<img[ ]+src="[^"]+"[ ]+srcset="([^"]+)[ ]+1x"[ ]*alt="[^"]+"[ ]*/?[ ]*>)<figcaption>|<figure><a href="\2">\1</a><figcaption>|g' \
-        -e 's|<figure>(<img[ ]+src="([^"]+)"([ ]+srcset="[^"]*")*[ ]*alt="[^"]+"[ ]*/?[ ]*>)<figcaption>|<figure><a href="\2">\1</a><figcaption>|g' \
+        awk -F' ' 'BEGIN { ORS=" "; } { for(i=1; i<=NF; i++) { if ($i ~ "^src=\"[^\"]+\"$") { f=$i; gsub(/^src="/, "", f); gsub(/"$/, "", f); f1=f " 1x"; f2=f; gsub(/\.[^\.]+$/, "@2x&", f2); f2abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f2; f3=f; gsub(/\.[^\.]+$/, "@3x&", f3); f3abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f3; if (getline temp < f2abs > 0) { f2=", " f2 " 2x"; } else { f2=""; } if (getline temp < f3abs > 0) { f3=", " f3 " 3x"; } else { f3=""; } print "src=\"" f "\" srcset=\"" f1 f2 f3 "\" " } else { print $i } } }' \
         > "${DOCUMENT}.${MARSH_UID}.document"
     fi
 
