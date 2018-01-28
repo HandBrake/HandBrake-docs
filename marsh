@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.7.0"
+VERSION="0.7.1"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1282,12 +1282,13 @@ function build_template {  # build_template dest_dir target_dir document templat
     local DOCUMENT DOCUMENT_EXT DOCUMENT_DIR DOCUMENT_RELPATH DOCUMENT_ABSPATH DOCUMENT_URI
     local DEST DEST_NAME
     local TEMPLATE_DIR TEMPLATE TEMPLATE_CONFIG_EXTRA
-    local DOCUMENT_META DOCUMENT_META_VARS
-    local SUBDOCUMENTS NUM_SUBDOCUMENTS
-    local INDEX DOCUMENT_AUTHORS
     local TEMPLATE_PREFIX TEMPLATE_META TEMPLATE_META_VARS PARTIALS TEMPLATE_BASE TEMPLATE_TEMP
-    local NAV NAV_DIR NAV_NAME NAV_RELPATH
     local TEMPLATE_STYLES TEMPLATE_SCRIPTS
+    local INDEX DOCUMENT_AUTHORS DOCUMENT_META DOCUMENT_META_VARS
+    local SUBDOCUMENTS NUM_SUBDOCUMENTS
+    local SUBDOCUMENT SUBDOCUMENT_AUTHORS SUBDOCUMENT_CONTENT SUBDOCUMENT_META SUBDOCUMENT_META_VARS
+    local DOCUMENT_Authors DOCUMENT_State SUBDOCUMENT_Authors
+    local NAV NAV_DIR NAV_NAME NAV_RELPATH
 
     # init
     DEST_DIR="${1:-.}"
@@ -1344,34 +1345,13 @@ function build_template {  # build_template dest_dir target_dir document templat
     fi
 
     # authors
-    if [[ "${DOCUMENT_Authors}" != "" ]]; then
-        # deprecated (no brackets)
-        # Key: foo, bar, baz
-        #DOCUMENT_AUTHORS=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /' -e 's/\([^,]\) /\1\\\&nbsp;/g')
-        DOCUMENT_AUTHORS=$(echo "${DOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /')
-        DELIM_NUM=$(grep -o ',' <<< "${DOCUMENT_AUTHORS}" | wc -l)
-        if [[ "${DELIM_NUM}" -eq 1 ]]; then
-            DOCUMENT_AUTHORS=$(echo "${DOCUMENT_AUTHORS}" | sed -e  's/,//')
-        fi
-    else
-        # YAML inline array
-        # Key: [ foo, bar, baz ]
-        DOCUMENT_AUTHORS=()
-        eval $(flat_to_array "DOCUMENT_Authors" "DOCUMENT_Authors_")
-        eval $(process_authors "DOCUMENT_AUTHORS" "DOCUMENT_Authors")
-        DOCUMENT_AUTHORS=$(join_delimited ', ' ' and ' ', and ' ${DOCUMENT_AUTHORS[@]})
-    fi
+    DOCUMENT_AUTHORS=()
+    eval $(flat_to_array "DOCUMENT_Authors" "DOCUMENT_Authors_")
+    eval $(process_authors "DOCUMENT_AUTHORS" "DOCUMENT_Authors")
+    DOCUMENT_AUTHORS=$(join_delimited ', ' ' and ' ', and ' ${DOCUMENT_AUTHORS[@]})
 
     # state
-    if [[ "${DOCUMENT_State}" != "" ]]; then
-        # deprecated (no brackets)
-        # Key: foo, bar, baz
-        DOCUMENT_State=(${DOCUMENT_State//, /})
-    else
-        # YAML inline array
-        # Key: [ foo, bar, baz ]
-        eval $(flat_to_array "DOCUMENT_State" "DOCUMENT_State_")
-    fi
+    eval $(flat_to_array "DOCUMENT_State" "DOCUMENT_State_")
 
     # template
     if [[ "${TEMPLATE_DIR}" != "" ]]; then
@@ -1594,23 +1574,10 @@ function build_template {  # build_template dest_dir target_dir document templat
                 cp "${SUBDOCUMENT}" "${SUBDOCUMENT}.document"
                 SUBDOCUMENT_CONTENT="${SUBDOCUMENT}.document"
                 # authors
-                if [[ "${SUBDOCUMENT_Authors}" != "" ]]; then
-                    # deprecated (no brackets)
-                    # Authors: foo, bar, baz
-                    #SUBDOCUMENT_AUTHORS=$(echo "${SUBDOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /' -e 's/\([^,]\) /\1\\\&nbsp;/g')
-                    SUBDOCUMENT_AUTHORS=$(echo "${SUBDOCUMENT_Authors}" | sed -e 's/,[^ ]/, /g' -e 's/[ ]*<[^,]*>//g' -e 's/\(.*\), /\1, and /')
-                    DELIM_NUM=$(grep -o ',' <<< "${SUBDOCUMENT_AUTHORS}" | wc -l)
-                    if [[ "${DELIM_NUM}" -eq 1 ]]; then
-                        SUBDOCUMENT_AUTHORS=$(echo "${SUBDOCUMENT_AUTHORS}" | sed -e  's/,//')
-                    fi
-                else
-                    # YAML inline array
-                    # Authors: [ foo, bar, baz ]
-                    SUBDOCUMENT_AUTHORS=()
-                    eval $(flat_to_array "SUBDOCUMENT_Authors" "SUBDOCUMENT_Authors_")
-                    eval $(process_authors "SUBDOCUMENT_AUTHORS" "SUBDOCUMENT_Authors")
-                    SUBDOCUMENT_AUTHORS=$(join_delimited ', ' ' and ' ', and ' ${SUBDOCUMENT_AUTHORS[@]})
-                fi
+                SUBDOCUMENT_AUTHORS=()
+                eval $(flat_to_array "SUBDOCUMENT_Authors" "SUBDOCUMENT_Authors_")
+                eval $(process_authors "SUBDOCUMENT_AUTHORS" "SUBDOCUMENT_Authors")
+                SUBDOCUMENT_AUTHORS=$(join_delimited ', ' ' and ' ', and ' ${SUBDOCUMENT_AUTHORS[@]})
                 # state
                 if [[ "${SUBDOCUMENT_State}" != "" ]]; then
                     # deprecated (no brackets)
