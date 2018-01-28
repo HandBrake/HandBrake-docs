@@ -35,7 +35,7 @@ You can learn more about [Source formats](../technical/source-formats.html) in t
 
 ## Ways to open a video source
 
-By default, HandBrake presents the `Open Source` dialog on launch. It is also accessable from the `Toolbar` at the top of HandBrake's main window.
+By default, HandBrake presents the `Open Source` dialog on launch. It is also accessible from the `Toolbar` at the top of HandBrake's main window.
 
 <!-- .system-lin -->
 
