@@ -89,7 +89,7 @@ Additionally, you may open a folder of multiple single-`Title` videos (excluding
 
 ![Opening a folder containing multiple video Sources](../../images/mac/open-source-dialog-folder-1.0.0.png "The Open Source dialog allows you to select a folder containing multiple video files.")
 
-![Selecting a Title](../../images/mac/title-selection-1.0.0.png "The Title control lets you select which video clip you want to use.")
+![Selecting a Title](../../images/mac/title-selection-1.1.0.png "The Title control lets you select which video clip you want to use.")
 
 <!-- /.system-mac -->
 <!-- .system-lin -->

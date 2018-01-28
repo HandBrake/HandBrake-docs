@@ -26,7 +26,7 @@ Let's get started.
 
 Launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon. Depending on your system settings, a single click may suffice.
 
-![HandBrake icon](../../images/icon-1.0.0.png)![Double-clicking HandBrake icon](../../images/icon-click-1.0.0.gif)
+![HandBrake icon](../../images/icon-1.1.0.png)![Double-clicking HandBrake icon](../../images/icon-click-1.1.0.gif)
 
 ## Open your existing video
 
@@ -41,9 +41,9 @@ Select the `Open Source` button on the toolbar to browse your files for a video 
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Browsing for a video source to open](../../images/mac/open-source-dialog-1.0.0.png "The Open Source dialog allows you to browse your files for a video to open.")
+![Browsing for a video source to open](../../images/mac/open-source-dialog-1.1.0.png "The Open Source dialog allows you to browse your files for a video to open.")
 
-![Opening a video source via drag and drop](../../images/mac/open-source-drag-drop-1.0.0.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
+![Opening a video source via drag and drop](../../images/mac/open-source-drag-drop-1.1.0.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -63,7 +63,7 @@ Some `Sources` may contain more than one video clip, or a collection of `Titles`
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Selecting a title](../../images/mac/title-selection-1.0.0.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+![Selecting a title](../../images/mac/title-selection-1.1.0.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -87,9 +87,7 @@ The default `Fast 1080p30` preset is often a good choice because it's fast and c
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Selecting a preset](../../images/mac/preset-selection-1.0.0.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
-
-![Toggling the presets list](../../images/mac/toggle-presets-button-1.0.0.png "If the presets list is not visible, select the Toggle Presets button on the toolbar.")
+![Selecting a preset](../../images/mac/preset-selection-1.1.0.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -102,7 +100,11 @@ The default `Fast 1080p30` preset is often a good choice because it's fast and c
 
 ## Select a destination
 
-The `Destination` is where your new video will go. You can select the `Browse...` button to choose a different location and name, or type it directly in the box.
+HandBrake calls the file name and location of your new video the `Destination`.
+
+`Save As` is the file name of your new video. You can change it by typing directly in the box.
+
+`To` is the location where HandBrake will place your new video. You can select the `Browse...` button to choose a different location.
 
 <!-- .system-lin -->
 
@@ -111,9 +113,7 @@ The `Destination` is where your new video will go. You can select the `Browse...
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Selecting a destination](../../images/mac/destination-field-1.0.0.png "Destination is where HandBrake will put your new video.")
-
-![Browsing for a destination](../../images/mac/destination-dialog-1.0.0.png "Select the Browse button to choose a different location and name.")
+![Selecting a destination](../../images/mac/destination-field-1.1.0.png "The Destination is where HandBrake will place your new video.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
@@ -128,8 +128,6 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
-HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
-
 <!-- .system-lin -->
 
 <!-- TODO: Linux figures. -->
@@ -137,9 +135,17 @@ HandBrake will report its progress while it's working and alert you when it's fi
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Encode progress](../../images/mac/encode-progress-1.0.0.png "HandBrake reports its progress during encoding.")
+![Encode progress](../../images/mac/encode-progress-1.1.0.png "HandBrake reports its progress during encoding.")
 
-![Encoding complete alert](../../images/mac/encode-complete-1.0.0.png "HandBrake shows an alert when finished encoding.")
+![Encoding complete alert](../../images/mac/encode-complete-1.1.0.png "HandBrake shows a notification when finished encoding.")
+
+<!-- /.system-mac -->
+
+HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
+
+<!-- .system-mac -->
+
+![Destination in Finder](../../images/mac/destination-finder-1.1.0.png "Your new video is located at the Destination you specified.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
