@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           draft
+State:           [ draft ]
 Title:           Audio Codecs
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

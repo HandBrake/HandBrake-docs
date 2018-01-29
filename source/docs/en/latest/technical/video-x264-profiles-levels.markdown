@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           draft
+State:           [ draft ]
 Title:           x264 Profiles and Levels
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

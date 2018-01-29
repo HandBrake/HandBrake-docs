@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           draft
+State:           [ draft ]
 Title:           Modulus
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
