@@ -67,12 +67,11 @@ The following is the minimum level of hardware that HandBrake supports. While it
 - System Storage:
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
-- Intel QuickSync requires a 2nd generation or newer Intel Core Ix Series processor with integrated Intel HD Graphics enabled and a directly connected display
-- OpenCL scaling is experimental and requires an AMD or Intel GPU with OpenCL 1.2 or later
+- QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled and a directly connected display[^display-emulator-adapter]
 
 <!-- /.system-win -->
 
-HandBrake's QuickSync and OpenCL features are only supported on Windows.
+HandBrake's QuickSync feature is only supported on Windows.
 
 ## Software
 
@@ -107,3 +106,5 @@ For any other distribution, you must [compile from source](../developer/build-li
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
 <!-- /.system-win -->
+
+[^display-emulator-adapter]: In lieu of a physically connected display, a display emulator adapter such as [Headless Ghost](https://www.headlessghost.com/) will enable GPU functions such as QuickSync when connected to the Intel HD Graphics output port.
