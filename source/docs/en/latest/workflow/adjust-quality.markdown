@@ -28,7 +28,7 @@ To increase video quality, adjust the quality control toward the right. To reduc
 
 <!-- .system-mac -->
 
-![Using the constant quality control](../../images/mac/quality-control-1.0.0.png "Adjust the quality control toward the right to increase quality, or toward the left to lower it.")
+![Using the constant quality control](../../images/mac/quality-control-1.1.0.png "Adjust the quality control toward the right to increase quality, or toward the left to lower it.")
 
 <!-- /.system-mac -->
 
