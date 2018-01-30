@@ -38,9 +38,9 @@ Move your mouse cursor over the `Preview` window, and some controls will appear.
 
 <!-- .system-mac -->
 
-![Preview window](../../images/mac/preview-window-1.0.0.jpg "HandBrake's Preview feature lets you test your settings on a small portion of your Source.")
+![Preview window](../../images/mac/preview-window-1.1.0.jpg "HandBrake's Preview feature lets you test your settings on a small portion of your Source.")
 
-![Preview controls](../../images/mac/preview-controls-1.0.0.png "You can set the starting position and duration of your Preview.")
+![Preview controls](../../images/mac/preview-controls-1.1.0.png "You can set the starting position and duration of your Preview.")
 
 <!-- /.system-mac -->
 
@@ -52,9 +52,9 @@ When you're satisfied with your starting position and duration, select `Live Pre
 
 <!-- .system-mac -->
 
-![Preview progress indicator](../../images/mac/preview-progress-1.0.0.png "HandBrake will report its progress while encoding your Preview.")
+![Preview progress indicator](../../images/mac/preview-progress-1.1.0.png "HandBrake will report its progress while encoding your Preview.")
 
-![Preview playback controls](../../images/mac/preview-controls-playback-1.0.0.png "Playback controls allow you to interact with your Preview when it's ready.")
+![Preview playback controls](../../images/mac/preview-controls-playback-1.1.0.png "Playback controls allow you to interact with your Preview when it's ready.")
 
 <!-- /.system-mac -->
 
