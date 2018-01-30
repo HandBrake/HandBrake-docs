@@ -97,9 +97,11 @@ Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-
 
 ## Installing on Mac
 
-Once you've downloaded HandBrake for Mac, open the DMG file in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
+Once you've downloaded HandBrake for Mac, open the disk image in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
-![Installing HandBrake on Mac](../../images/mac/install-1.0.0.png "Drag HandBrake to your Applications folder to install it on your Mac.")
+![Opening HandBrake disk image](../../images/mac/download-file-1.1.0.png "Open the HandBrake disk image you downloaded. Your web browser may do this automatically.")
+
+![Installing HandBrake on Mac](../../images/mac/install-1.1.0.png "Drag HandBrake to your Applications folder to install it on your Mac.")
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
@@ -107,15 +109,15 @@ HandBrake is now installed. You may eject the disk image and move it to the Tras
 
 The first time you attempt to launch HandBrake, your Mac may present this message to you[^gatekeeper-disabled]:
 
-![Mac Gatekeeper message](../../images/mac/gatekeeper-message-1.0.0.png "Gatekeeper may present this message when launching HandBrake for the first time.")
+![Mac Gatekeeper message](../../images/mac/gatekeeper-message-1.1.0.png "Gatekeeper may present this message when launching HandBrake for the first time.")
 
 This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Apple's paid program to validate Mac applications. Select `OK` to dismiss the Gatekeeper message.
 
 Hold down the `Control` key and select the HandBrake icon to bring up the shortcut menu. Select `Open` and your Mac will ask whether you are certain you wish to open HandBrake. Confirm that you want to trust HandBrake by again selecting `Open`.[^gatekeeper-instructions]
 
-![Opening HandBrake using Finder's shortcut menu](../../images/mac/shortcut-menu-open-1.0.0.png "Launching HandBrake using the Open option in the Finder's shortcut menu will bypass the initial Gatekeeper message.")
+![Opening HandBrake using Finder's shortcut menu](../../images/mac/shortcut-menu-open-1.1.0.png "Launching HandBrake using the Open option in the Finder's shortcut menu will bypass the initial Gatekeeper message.")
 
-![Gatekeeper message with Open option](../../images/mac/gatekeeper-message-quarantine-1.0.0.png "Gatekeeper may also present this message when launching HandBrake for the first time. Selecting Open will tell Gatekeeper to trust HandBrake.")
+![Gatekeeper message with Open option](../../images/mac/gatekeeper-message-quarantine-1.1.0.png "Gatekeeper may also present this message when launching HandBrake for the first time. Selecting Open will tell Gatekeeper to trust HandBrake.")
 
 Now HandBrake is up and running. You should not have to repeat this process in the near future.
 
