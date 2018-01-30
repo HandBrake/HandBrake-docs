@@ -446,6 +446,16 @@ article.docs .continue p {
     margin-right: .9375rem;
 }
 
+article.docs .continue .success {
+    margin-left: .9375rem;
+    border-left: .2rem solid green;
+}
+
+article.docs .continue .fail {
+    margin-left: .9375rem;
+    border-left: .2rem solid firebrick;
+}
+
 article.docs .footnotes {
     margin-top: 2em;
     padding-top: .25rem;

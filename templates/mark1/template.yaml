@@ -28,7 +28,7 @@ Template:
       - assets/css/opensans.css?2016100501
       - assets/css/ropasans.css?2016100501
       - assets/css/vendor/featherlight/featherlight-1.7.12.min.css
-      - assets/css/style.css?2016121201
+      - assets/css/style.css?2018013001
     Scripts:
       - assets/js/vendor/jquery/jquery-3.3.1.min.js
       - assets/js/vendor/js-cookie/js.cookie-2.2.0.min.js
