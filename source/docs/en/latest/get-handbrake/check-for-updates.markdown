@@ -39,7 +39,7 @@ Automatic update checking may be enabled or disabled in HandBrake's preferences.
 
 Manually checking for updates is easy. Using the main menu at the top of your screen, select `HandBrake` and then `Check for Updates...`. If an update is available, HandBrake will offer to install it for you.
 
-![Software update dialog](../../images/mac/software-update-1.0.0.png "If an update is available, HandBrake will offer to install it for you.")
+![Software update dialog](../../images/mac/software-update-1.1.0.png "If an update is available, HandBrake will offer to install it for you.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
