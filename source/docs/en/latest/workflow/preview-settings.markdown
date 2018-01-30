@@ -72,8 +72,15 @@ When you're finished previewing your work, you may close the `Preview` window.
 
 ## Next steps
 
+<!-- .success -->
+
+Continue to [Starting encoding](start-encoding.html).
+
+<!-- /.success -->
+<!-- .fail -->
+
 If the `Preview` you created was lacking in quality or otherwise not as expected, you may need to [adjust quality](adjust-quality.html) or select a different [Preset](select-preset.html), after which you can create another `Preview` to see any changes.
 
-Once you are satisfied, continue to [Starting encoding](start-encoding.html).
+<!-- /.fail -->
 
 <!-- /.continue -->

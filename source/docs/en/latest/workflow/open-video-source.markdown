@@ -117,9 +117,16 @@ Great! At this point, HandBrake knows which video you want to use.
 
 ## Next steps
 
-If HandBrake didn't open your video as as expected or you had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Troubleshooting common issues](../help/troubleshooting-common-issues.html).
+<!-- .success -->
 
 Continue to [Selecting a preset](select-preset.html).
+
+<!-- /.success -->
+<!-- .fail -->
+
+If HandBrake didn't open your video as as expected or you had some other trouble, you can continue reading to learn more about how HandBrake works or jump right to [Troubleshooting common issues](../help/troubleshooting-common-issues.html).
+
+<!-- /.fail -->
 
 <!-- /.continue -->
 

@@ -52,6 +52,10 @@ You can learn more about [Custom presets](../advanced/custom-presets.html) in th
 
 ## Next steps
 
+<!-- .success -->
+
 Continue to [Adjusting quality](adjust-quality.html).
+
+<!-- /.success -->
 
 <!-- /.continue -->

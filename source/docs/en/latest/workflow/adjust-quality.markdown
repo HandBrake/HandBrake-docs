@@ -57,7 +57,11 @@ You may wish to slightly increase quality for viewing on larger displays (50 inc
 
 ## Next steps
 
+<!-- .success -->
+
 Continue to [Previewing your settings](preview-settings.html).
+
+<!-- /.success -->
 
 <!-- /.continue -->
 

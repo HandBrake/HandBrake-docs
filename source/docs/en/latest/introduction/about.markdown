@@ -62,7 +62,11 @@ Do not use HandBrake or any other application to copy materials you do not own o
 
 ## Next steps
 
+<!-- .success -->
+
 Continue to [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html).
+
+<!-- /.success -->
 
 <!-- /.continue -->
 

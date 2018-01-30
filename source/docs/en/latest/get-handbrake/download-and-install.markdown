@@ -166,7 +166,11 @@ You may launch HandBrake by quickly clicking twice (double-clicking) on the cock
 
 ## Next steps
 
+<!-- .success -->
+
 Continue to [Checking for updates](check-for-updates.html).
+
+<!-- /.success -->
 
 <!-- /.continue -->
 
