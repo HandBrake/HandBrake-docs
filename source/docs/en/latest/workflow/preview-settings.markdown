@@ -26,9 +26,7 @@ At the top of HandBrake's main window, you'll see a toolbar with various buttons
 
 <!-- .system-mac -->
 
-![Main window toolbar](../../images/mac/toolbar-1.0.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
-
-![Opening the Preview window](../../images/mac/preview-button-1.0.0.png "The Preview button opens a window where you can test your settings.")
+![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
 <!-- /.system-mac -->
 

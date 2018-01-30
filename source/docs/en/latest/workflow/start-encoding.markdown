@@ -40,9 +40,7 @@ Select the `Start` button on the toolbar to make your new video.
 
 <!-- .system-mac -->
 
-![Main window toolbar](../../images/mac/toolbar-1.0.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
-
-![Starting an encode](../../images/mac/start-button-1.0.0.png "The Start button begins encoding your new video.")
+![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
 <!-- /.system-mac -->
 

@@ -44,9 +44,7 @@ By default, HandBrake presents the `Open Source` dialog on launch. It is also ac
 <!-- /.system-lin -->
 <!-- .system-mac -->
 
-![Main window toolbar](../../images/mac/toolbar-1.0.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
-
-![Open Source button](../../images/mac/open-source-button-1.0.0.png "The Open Source button opens the Open Source dialog.")
+![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
 <!-- /.system-mac -->
 <!-- .system-win -->
