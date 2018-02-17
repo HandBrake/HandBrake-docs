@@ -189,7 +189,7 @@ $(document).ready(function(){
     $.featherlight.defaults.contentFilters.unshift('image2');
     docs.find('figure > a:has(img)').each(function(){
         var srcset = $(this).children('img').first().attr('srcset');
-        if (srcset.length > 0){
+        if (typeof srcset !== 'undefined'){
             $(this).attr('data-srcset', srcset);
         }
         $(this).featherlight({type: 'image2', openSpeed: 150, closeSpeed: 150});
