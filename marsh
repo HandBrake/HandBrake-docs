@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.7.2"
+VERSION="0.7.3"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1718,8 +1718,44 @@ function build_document {  # build_document dest_dir target_dir document advance
         sed -E \
         -e 's|<p><figure>|<figure>|' \
         -e 's|</figure></p>|</figure>|' |
-        awk -F' ' 'BEGIN { ORS=" "; } { for(i=1; i<=NF; i++) { if ($i ~ "^src=\"[^\"]+\"$") { f=$i; gsub(/^src="/, "", f); gsub(/"$/, "", f); f1=f " 1x"; f2=f; gsub(/\.[^\.]+$/, "@2x&", f2); f2abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f2; f3=f; gsub(/\.[^\.]+$/, "@3x&", f3); f3abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f3; if (getline temp < f2abs > 0) { f2=", " f2 " 2x"; } else { f2=""; } if (getline temp < f3abs > 0) { f3=", " f3 " 3x"; } else { f3=""; } print "src=\"" f "\" srcset=\"" f1 f2 f3 "\" " } else { print $i } } }' \
-        > "${DOCUMENT}.${MARSH_UID}.document"
+        awk '
+        {
+            if ($0 ~ " src=\"[^\"]+\"")
+            {
+                split($0, a, " ");
+                for(i=1; i<=length(a); i++)
+                {
+                    if (a[i] ~ "^src=\"[^\"]+\"$")
+                    {
+                        f=a[i]; gsub(/^src="/, "", f);
+                        gsub(/"$/, "", f);
+                        f1=f " 1x"; f2=f;
+                        gsub(/\.[^\.]+$/, "@2x&", f2);
+                        f2abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f2;
+                        f3=f;
+                        gsub(/\.[^\.]+$/, "@3x&", f3);
+                        f3abs="'${DEST_DIR}/${TARGET_DIR}/${DOCUMENT_DIR}/'" f3;
+                        if (getline temp < f2abs > 0)
+                        {
+                            f2=", " f2 " 2x";
+                        } else {
+                            f2="";
+                        }
+                        if (getline temp < f3abs > 0)
+                        {
+                            f3=", " f3 " 3x";
+                        } else {
+                            f3="";
+                        }
+                        print "src=\"" f "\" srcset=\"" f1 f2 f3 "\" ";
+                    } else {
+                        print a[i];
+                    }
+                }
+            } else {
+                print $0;
+            }
+        }' > "${DOCUMENT}.${MARSH_UID}.document"
     fi
 
     # unset temporary global variables
