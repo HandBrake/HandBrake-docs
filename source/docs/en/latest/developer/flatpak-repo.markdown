@@ -17,6 +17,17 @@ License_URL:     https://handbrake.fr/docs/license.html
 Maintaining a HandBrake flatpak repository
 ==========================================
 
+## These instructions do not currently work
+
+The flatpak gnome runtime sdk does not currently include nasm.
+HandBrake requires nasm during the build process, so following
+these instructions will result in a build error.  Hopefully
+the gnome runtime will get updated in the not too distant future
+to include nasm (and yasm as well).  The freedesktop runtime
+has already been updated to include these.
+
+See: [NASM flatpak issue](https://github.com/flatpak/freedesktop-sdk-images/issues/8)
+
 ## Creating a new empty flatpak repository
 This would be done once to set up the repo users update their HandBrake
 flatpaks from. This repo gets served via http to users.
@@ -28,6 +39,23 @@ Initialize a new repository
 Add the new repository to your flatpak remotes  
 
     flatpak --user remote-add --gpg-import=<pub-gpg-key> <repo-name> <repo-dir>
+
+## Install dependencies
+Install flatpak and flatpak-builder
+
+    sudo dnf install flatpak flatpak-builder
+
+Install flathub repository.
+
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Install flatpak gnome SDK.
+
+    flatpak install flathub org.gnome.Sdk//3.26
+
+Install flatpak gnome runtime platform.
+
+    flatpak install flathub org.gnome.Platform//3.26
 
 ## Create a new HandBrake flatpak bundle
 This may be done on a different machine than the repo.
