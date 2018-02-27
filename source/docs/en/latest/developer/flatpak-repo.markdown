@@ -19,18 +19,12 @@ Maintaining a HandBrake flatpak repository
 
 ## These instructions do not currently work
 
-The flatpak gnome runtime sdk does not currently include nasm.
-HandBrake requires nasm during the build process, so following
-these instructions will result in a build error.  Hopefully
-the gnome runtime will get updated in the not too distant future
-to include nasm (and yasm as well).  The freedesktop runtime
-has already been updated to include these.
+The flatpak gnome runtime sdk does not currently include nasm.  HandBrake requires nasm during the build process, so following these instructions will result in a build error.  Hopefully the gnome runtime will get updated in the not too distant future to include nasm (and yasm as well).  The freedesktop runtime has already been updated to include these.
 
 See: [NASM flatpak issue](https://github.com/flatpak/freedesktop-sdk-images/issues/8)
 
 ## Creating a new empty flatpak repository
-This would be done once to set up the repo users update their HandBrake
-flatpaks from. This repo gets served via http to users.
+This would be done once to set up the repo users update their HandBrake flatpaks from. This repo gets served via http to users.
 
 Initialize a new repository  
 
