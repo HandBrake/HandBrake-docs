@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Fedora
 =================================
 
-The following instructions are for [Fedora](https://getfedora.org) 20 and later.
+The following instructions are for [Fedora](https://getfedora.org) 26 and later.
 
 Dependencies:
 
@@ -45,9 +45,12 @@ Dependencies:
 - patch
 - python
 - tar
-- x264-devel
 - yasm
 - zlib-devel
+
+Additional dependencies not available in the base repository:
+
+- x264-devel [RPM Fusion]
 
 Graphical interface dependencies:
 
@@ -59,7 +62,14 @@ Graphical interface dependencies:
 - intltool
 - libgudev1-devel
 - libnotify-devel
+
+Additional graphical interface dependencies for Fedora 26:
+
 - webkitgtk3-devel
+
+Additional graphical interface dependencies for Fedora 27 and later:
+
+- webkitgtk4-devel
 
 Install dependencies.
 
@@ -67,11 +77,27 @@ Install dependencies.
     sudo yum groupinstall "Development Tools" "Development Libraries"
     sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make opus-devel patch python tar x264-devel yasm zlib-devel
 
+If you are running Fedora 26, install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
+
+    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-26.noarch.rpm
+    sudo yum install x264-devel
+
+If you are running Fedora 27 or later, install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
+
+    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-27.noarch.rpm
+    sudo yum install x264-devel
+
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo yum groupinstall "X Software Development" "GNOME Software Development"
-    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk3-devel
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
+
+If you are running Fedora 26, install the additional graphical interface dependencies.
+
+    sudo yum install webkitgtk3-devel
+
+If you are running Fedora 27 or later, install the additional graphical interface dependencies.
+
+    sudo yum install webkitgtk4-devel
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
-
-[^python-centos-6]: Installing Python from CentOS [SCL](https://wiki.centos.org/AdditionalResources/Repositories/SCL) does not impact the default system Python; newer versions are installed alongside and in addition to the system version.
