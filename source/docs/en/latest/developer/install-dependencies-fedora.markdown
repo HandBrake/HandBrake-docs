@@ -45,7 +45,7 @@ Dependencies:
 - patch
 - python
 - tar
-- x264-devel
+- x264-devel (requires [RPM Fusion Free](https://rpmfusion.org/) repository)
 - yasm
 - zlib-devel
 
@@ -59,7 +59,8 @@ Graphical interface dependencies:
 - intltool
 - libgudev1-devel
 - libnotify-devel
-- webkitgtk3-devel
+- webkitgtk3-devel (Fedora 26 and lower)
+- webkitgtk4-devel (Fedora 27 and higher)
 
 Install dependencies.
 
@@ -69,8 +70,16 @@ Install dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
+Fedora 26 and lower:
+
     sudo yum groupinstall "X Software Development" "GNOME Software Development"
     sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk3-devel
+
+Fedora 27 and higher:
+
+    sudo yum groupinstall "X Software Development" "GNOME Software Development"
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
+
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
