@@ -100,7 +100,7 @@ Install dependencies.
 Install the [Software Collections (SCL)](https://wiki.centos.org/AdditionalResources/Repositories/SCL) repository and Python 2.7.x[^python-centos-6].
 
     sudo yum install centos-release-scl
-    sudo yum install python27 python27-python-devel python27-python-setuptools python27-python-tools python27-python-virtualenv
+    sudo yum install python27
 
 Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
 
@@ -123,7 +123,11 @@ Download, build, and install HarfBuzz (provides the `harfbuzz-devel` package).
     sudo mkdir -p /root/rpmbuild/SOURCES
     sudo curl -o /root/rpmbuild/SOURCES/harfbuzz-0.9.36.tar.bz2 'https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.36.tar.bz2'
     sudo rpmbuild -ba /root/rpmbuild/SPECS/harfbuzz.spec
-    sudo yum localinstall /root/rpmbuild/RPMS/x86_64/harfbuzz-*.rpm
+    sudo find /root/rpmbuild/RPMS/x86_64 -name harfbuzz-*.rpm -exec sudo yum localinstall {} \;
+
+Launch a new shell with Python 2.7 enabled.
+
+    scl enable python27 bash
 
 CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
