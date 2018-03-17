@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Fedora
 =================================
 
-The following instructions are for [Fedora](https://getfedora.org) 20 and later.
+The following instructions are for [Fedora](https://getfedora.org) 20.
 
 Dependencies:
 
