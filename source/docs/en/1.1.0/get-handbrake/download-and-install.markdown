@@ -105,22 +105,6 @@ Once you've downloaded HandBrake for Mac, open the disk image in your Downloads 
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
-### Mac Gatekeeper
-
-The first time you attempt to launch HandBrake, your Mac may present this message to you[^gatekeeper-disabled]:
-
-![Mac Gatekeeper message](../../images/mac/gatekeeper-message-1.1.0.png "Gatekeeper may present this message when launching HandBrake for the first time.")
-
-This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Apple's paid program to validate Mac applications. Select `OK` to dismiss the Gatekeeper message.
-
-Hold down the `Control` key and select the HandBrake icon to bring up the shortcut menu. Select `Open` and your Mac will ask whether you are certain you wish to open HandBrake. Confirm that you want to trust HandBrake by again selecting `Open`.[^gatekeeper-instructions]
-
-![Opening HandBrake using Finder's shortcut menu](../../images/mac/shortcut-menu-open-1.1.0.png "Launching HandBrake using the Open option in the Finder's shortcut menu will bypass the initial Gatekeeper message.")
-
-![Gatekeeper message with Open option](../../images/mac/gatekeeper-message-quarantine-1.1.0.png "Gatekeeper may also present this message when launching HandBrake for the first time. Selecting Open will tell Gatekeeper to trust HandBrake.")
-
-Now HandBrake is up and running. You should not have to repeat this process in the near future.
-
 <!-- /.system-mac -->
 <!-- .system-win -->
 
@@ -141,18 +125,6 @@ Next, the installer will ask you where you wish to install HandBrake. Unless you
 ![HandBrake for Windows installation complete](../../images/windows/install-finish-1.0.0.png "HandBrake is now installed.")
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
-
-### Windows SmartScreen
-
-When installing on Windows 8 or 10 with Windows SmartScreen enabled, you may see a message indicating that the HandBrake installer is not recognized by Windows.
-
-![Windows SmartScreen](../../images/windows/smartscreen-1-1.0.0.png "Windows SmartScreen may present this message. Select More info to see more options.")
-
-HandBrake is not "signed" by Microsoft. This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Microsoft's paid program to validate Windows applications.
-
-By selecting `More info`, you will be able to select `Run anyway` to continue the installation.
-
-![Windows SmartScreen - Run Anyway](../../images/windows/smartscreen-2-1.0.0.png "Select Run anyway to dismiss the SmartScreen message and continue installing HandBrake.")
 
 <!-- /.system-win -->
 
@@ -179,7 +151,3 @@ Continue to [Checking for updates](check-for-updates.html).
 [^third-party-utilities-1]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
 
 [^third-party-utilities-2]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
-
-[^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
-
-[^gatekeeper-instructions]: These instructions are taken directly from Apple's Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/kb/PH21769?locale=en_US) and [here](https://support.apple.com/en-us/HT202491).
