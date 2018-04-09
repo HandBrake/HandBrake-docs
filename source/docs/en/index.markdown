@@ -18,11 +18,14 @@ Versions
 
 English documentation is currently available for the following HandBrake versions.
 
-Releases:
+Current release:
 
-- [HandBrake 1.1.0](1.1.0/)
-- [HandBrake 1.0.0–1.0.7](1.0.0/)
+- **[HandBrake 1.1.0](1.1.0/)**
 
 Nightly and snapshot builds:
 
 - [HandBrake Latest](latest/)
+
+Previous releases:
+
+- [HandBrake 1.0.0–1.0.7](1.0.0/)
