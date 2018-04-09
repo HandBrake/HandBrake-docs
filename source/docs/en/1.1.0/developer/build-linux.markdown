@@ -35,6 +35,11 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
+List available tags in the HandBrake 1.1.x release series, and check out the most recent.
+
+    git tag --list | grep ^1\.1\.
+    git checkout refs/tags/$(git tag -l | grep -E '^1\.1\.[0-9]+$' | tail -n 1)
+
 Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
 
     ./configure --launch-jobs=$(nproc) --launch
