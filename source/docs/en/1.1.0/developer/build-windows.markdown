@@ -66,7 +66,7 @@ For Ubuntu 18.04 (Bionic Beaver), install `nasm` from the base repository.
 
 For Ubuntu 16.04 LTS (Xenial Xerus), the `nasm` version in the base repository is too old, so compile from source.
 
-    curl -O http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.bz2
+    curl -O https://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.bz2
     tar -xf nasm-2.13.02.tar.bz2
     cd nasm-2.13.02
     ./configure --prefix=/usr/local --enable-sections --enable-lto
