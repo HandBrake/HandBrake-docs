@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Multiple encodes using the Queue
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
