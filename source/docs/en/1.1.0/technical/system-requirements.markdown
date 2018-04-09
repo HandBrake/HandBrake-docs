@@ -33,7 +33,6 @@ The following is the minimum level of hardware that HandBrake supports. While it
 - System Storage:
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
-- QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled and a directly connected display[^display-emulator-adapter]
 
 <!-- /.system-lin -->
 
@@ -68,11 +67,10 @@ The following is the minimum level of hardware that HandBrake supports. While it
 - System Storage:
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
-- QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled and a directly connected display[^display-emulator-adapter]
 
 <!-- /.system-win -->
 
-HandBrake's QuickSync feature is only supported on Linux (experimental) and Windows.
+HandBrake's QuickSync feature is only supported on Linux (experimental) and Windows. QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled and a directly connected display[^display-emulator-adapter].
 
 ## Software
 
