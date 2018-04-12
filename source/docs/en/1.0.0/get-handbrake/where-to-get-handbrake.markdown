@@ -49,8 +49,7 @@ Certain Linux distributions and package repositories create their own versions o
 
 Broken third-party packages/builds include but are not limited to:
 
-- Arch: `handbrake`, `handbrake-cli`
-- Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-cli-fdkaac`, `handbrake-fdkaac`, `handbrake-gtk-git`, `handbrake-gtk2`
+- Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-gtk-git`
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - Gentoo: `handbrake`
 - openSUSE Packman: `handbrake`, `handbrake-cli`, `handbrake-gtk`
