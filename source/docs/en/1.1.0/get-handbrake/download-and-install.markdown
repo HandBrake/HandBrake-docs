@@ -46,7 +46,7 @@ To verify an official source distribution tarball, consult your Linux distributi
 
 On Mac, launch Terminal from your Applications > Utilities folder and use the `shasum` command. For example, if you downloaded HandBrake 1.0.0 to your Downloads folder:
 
-    shasum -a 1 ~/Downloads/HandBrake-1.0.0.dmg && shasum -a 256 ~/Downloads/HandBrake-1.0.0.dmg
+    shasum -a 1 ~/Downloads/HandBrake-1.1.0.dmg && shasum -a 256 ~/Downloads/HandBrake-1.1.0.dmg
 
 Alternatively, the free third-party app [Hashsum](https://itunes.apple.com/us/app/hashsum/id1079442694?mt=12) available on the Mac App Store provides a convenient graphical interface for computing file checksums[^third-party-utilities-1].
 
