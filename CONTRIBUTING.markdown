@@ -127,23 +127,23 @@ Special HTML comments may be used to differentiate instructions for Linux, Mac, 
 ```
 General instructions here.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 Special instructions for Linux here.
 
-<!-- /.system-lin -->
+<!-- /.system-linux -->
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 Special instructions for Mac here.
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 Special instructions for Windows here.
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 More general instructions here.
 ```
