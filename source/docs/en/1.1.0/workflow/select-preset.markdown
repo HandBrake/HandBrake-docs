@@ -24,21 +24,21 @@ HandBrake includes a number of official `Presets` for specific devices and for g
 
 Once you've opened a `Source`, select the `Preset` that most closely describes the device you want your videos to work on. For instance, if you want to play your videos on a Roku that supports 1080p High Definition, choose the `Roku 1080p30 Surround` preset under `Devices`. See the technical documentation for more information about [official presets](../technical/official-presets.html).
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 <!-- TODO: Linux figures. -->
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ![Selecting a preset](../../images/mac/preset-selection-1.1.0.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 <!-- TODO: Windows figures. -->
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 If your device is not listed, or you wish to play your videos on a computer, the default `Fast 1080p30` preset is a good choice. It's fast and compatible across a wide range of software and devices.
 

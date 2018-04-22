@@ -26,11 +26,11 @@ HandBrake calls the file name and location of your new video the `Destination`.
 
 `To` is the location where HandBrake will place your new video. You can select the `Browse...` button to choose a different location.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Selecting a destination](../../images/mac/destination-field-1.1.0.png "The Destination is where HandBrake will place your new video.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Please take special care to *note your destination*. Otherwise, you won't be able to find your new video. You can move it later if you desire.
 
@@ -38,29 +38,29 @@ Please take special care to *note your destination*. Otherwise, you won't be abl
 
 Select the `Start` button on the toolbar to make your new video.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Video encoding requires a lot of computer resources and can take awhile to complete. Some videos may take minutes to create; others may take hours.[^encoding-time]
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Encode progress](../../images/mac/encode-progress-1.1.0.png "HandBrake reports its progress during encoding.")
 
 ![Encoding complete alert](../../images/mac/encode-complete-1.1.0.png "HandBrake shows a notification when finished encoding.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 HandBrake will report its progress while it's working and alert you when it's finished. Then you will have a new video file at the `Destination` you specified.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Destination in Finder](../../images/mac/destination-finder-1.1.0.png "Your new video is located at the Destination you specified.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Congratulations! You just encoded your first video using HandBrake. It's now ready to watch on your devices.
 

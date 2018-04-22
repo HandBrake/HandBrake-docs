@@ -23,11 +23,11 @@ Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly b
 
 HandBrake is open-source software licensed under the GNU General Public License Version 2 (GPLv2)[^license]. Anyone can download and use HandBrake *for free*.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 Ubuntu Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) or the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots). The PPA may work, but is not tested, on other Debian-compatible distributions. Users of other BSD- and *nix-like distributions may compile from source.
 
-<!-- /.system-lin -->
+<!-- /.system-linux -->
 
 HandBrake source code is available at the official [HandBrake repository on GitHub](https://github.com/HandBrake/HandBrake).
 
@@ -41,7 +41,7 @@ Beware of third-party websites and peer-to-peer downloads of HandBrake. They may
 
 Beware of online marketplaces and auction sites. HandBrake is *free software*.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 ## Warning about broken third-party builds
 
@@ -60,7 +60,7 @@ Please **do not** request support for these or any other unofficial versions. Th
 
 Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), install the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), or compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
-<!-- /.system-lin -->
+<!-- /.system-linux -->
 
 <!-- .continue -->
 

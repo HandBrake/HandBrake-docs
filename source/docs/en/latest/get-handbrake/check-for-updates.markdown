@@ -20,14 +20,14 @@ HandBrake can let you know when a newer version is available, and even automatic
 
 Before updating, please make sure there are no pending encodes in the `Queue`. If you are currently using HandBrake older than version 1.0.0, also make note of any custom `Presets` you have created, as they may not be compatible with newer versions.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 ## Updating HandBrake on Linux
 
 The Linux version of HandBrake does not have a built-in update checking feature. Your Linux distribution's package manager will handle any updates to the official PPA.
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ## Updating HandBrake on Mac
 
@@ -41,8 +41,8 @@ Manually checking for updates is easy. Using the main menu at the top of your sc
 
 ![Software update dialog](../../images/mac/software-update-1.1.0.png "If an update is available, HandBrake will offer to install it for you.")
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 ## Updating HandBrake on Windows
 
@@ -50,7 +50,7 @@ Automatic update checking may be enabled or disabled in HandBrake's preferences.
 
 Manually checking for updates is easy. From the `Help` menu, select `Check for Updates...`. If an update is available, HandBrake will offer to install it for you.
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 <!-- .continue -->
 

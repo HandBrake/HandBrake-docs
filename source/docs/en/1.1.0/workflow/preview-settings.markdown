@@ -24,11 +24,11 @@ HandBrake's `Preview` feature allows you to perform a test run on a small portio
 
 At the top of HandBrake's main window, you'll see a toolbar with various buttons.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Select the `Preview` button to open the `Preview` window.
 
@@ -36,13 +36,13 @@ Select the `Preview` button to open the `Preview` window.
 
 Move your mouse cursor over the `Preview` window, and some controls will appear.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Preview window](../../images/mac/preview-window-1.1.0.jpg "HandBrake's Preview feature lets you test your settings on a small portion of your Source.")
 
 ![Preview controls](../../images/mac/preview-controls-1.1.0.png "You can set the starting position and duration of your Preview.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Set the starting position by dragging the `Position` control left or right, and choose how many seconds of video you want to encode using the `Duration` control.
 
@@ -50,21 +50,21 @@ Set the starting position by dragging the `Position` control left or right, and 
 
 When you're satisfied with your starting position and duration, select `Live Preview` and be patient. HandBrake will report its progress while it works.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Preview progress indicator](../../images/mac/preview-progress-1.1.0.png "HandBrake will report its progress while encoding your Preview.")
 
 ![Preview playback controls](../../images/mac/preview-controls-playback-1.1.0.png "Playback controls allow you to interact with your Preview when it's ready.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 When your `Preview` is ready, the controls are updated to let you play, pause, and rewind your video. You can also adjust the audio volume, and in some cases, choose which audio track plays.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 To create a new `Preview`, select the `╳` button to start over.
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 When you're finished previewing your work, you may close the `Preview` window.
 

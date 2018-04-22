@@ -20,7 +20,7 @@ System requirements
 
 The following is the minimum level of hardware that HandBrake supports. While it may be technically possible to run HandBrake on hardware older than this, it is neither recommended nor supported.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 ### Linux
 
@@ -34,9 +34,9 @@ The following is the minimum level of hardware that HandBrake supports. While it
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
 
-<!-- /.system-lin -->
+<!-- /.system-linux -->
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ### Mac
 
@@ -52,9 +52,9 @@ The following is the minimum level of hardware that HandBrake supports. While it
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 ### Windows
 
@@ -68,13 +68,13 @@ The following is the minimum level of hardware that HandBrake supports. While it
   - 50 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 HandBrake's QuickSync feature is only supported on Linux (experimental) and Windows. QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled and a directly connected display[^display-emulator-adapter].
 
 ## Software
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 ### Linux
 
@@ -87,16 +87,16 @@ Several major versions are supported, see [Where to get HandBrake](../get-handbr
 For any other distribution, you must [compile from source](../developer/build-linux.html). 
 
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ### Mac
 
 - OS X 10.7 Lion or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing MKV (Matroska) media files
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 ### Windows
 
@@ -104,6 +104,6 @@ For any other distribution, you must [compile from source](../developer/build-li
 - Microsoft .NET Framework 4.6 or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 [^display-emulator-adapter]: In lieu of a physically connected display, a display emulator adapter such as [Headless Ghost](https://www.headlessghost.com/) will enable GPU functions such as QuickSync when connected to the Intel HD Graphics output port.

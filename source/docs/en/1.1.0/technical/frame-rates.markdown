@@ -19,11 +19,11 @@ Frame rate
 
 A video's frame rate is how many still pictures are displayed per second. Common frame rates are 23.976/24 for film, 25/50 for European broadcast standards, and 29.97/59.94 or 30/60 for North American broadcast standards. Modern video formats can be variable frame rate, switching between different frame rates on the fly, e.g. from 23.976 film to 29.97 NTSC and back.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Frame rate controls on Mac](../../images/mac/frame-rate-controls-1.0.0.png "HandBrake's frame rate controls.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Selecting `Same as Source` allows you to select `Variable Frame Rate (VFR)`, which instructs HandBrake to make your new video's frame rate an exact copy of your `Source` frame rate. No frame rate conversion is performed.
 

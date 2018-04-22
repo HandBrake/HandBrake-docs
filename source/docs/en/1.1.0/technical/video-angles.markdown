@@ -25,8 +25,8 @@ Under the source section, you will see a dropdown with the label "Angle" if your
 You can choose which angle to encode to your output file.
 HandBrake does not currently support multi-angle output.
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 ![Frame rate controls on Windows](../../images/windows/point-to-point-1.0.0.png "HandBrake's Angle Control.")
 
-<!-- /.system-win -->
+<!-- /.system-windows -->

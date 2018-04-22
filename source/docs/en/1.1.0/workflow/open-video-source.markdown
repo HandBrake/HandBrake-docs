@@ -37,79 +37,79 @@ You can learn more about [Source formats](../technical/source-formats.html) in t
 
 By default, HandBrake presents the `Open Source` dialog on launch. It is also accessible from the `Toolbar` at the top of HandBrake's main window.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 <!-- TODO: Linux figures. -->
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 <!-- TODO: Windows figures. -->
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 Select the `Open Source` button to select the video you want to open.
 
 You can also drag and drop a video `Source` onto HandBrake's main window.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 <!-- TODO: Linux figures. -->
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ![Open Source dialog](../../images/mac/open-source-dialog-1.1.0.png "The Open Source dialog allows you to browse your files for a video to open.")
 
 ![Opening a video source via drag and drop](../../images/mac/open-source-drag-drop-1.1.0.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 <!-- TODO: Windows figures. -->
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 HandBrake will scan your selection and after a few moments, the main window will show the file name of the `Source` you opened along with some additional information.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 <!-- TODO: Linux figures. -->
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ![Successfully opened source](../../images/mac/open-source-success-1.1.0.png "HandBrake's main window after sucessfully opening a source.")
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 <!-- TODO: Windows figures. -->
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 Some `Sources` may contain more than one video clip, or a collection of `Titles`. Blu-ray and DVD `Sources` often have multiple `Titles`. Use HandBrake's `Title` control to select which video clip you want to use.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 <!-- TODO: Linux figures. -->
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ![Selecting a title](../../images/mac/title-selection-1.1.0.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 <!-- TODO: Windows figures. -->
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 Great! At this point, HandBrake knows which video you want to use.
 

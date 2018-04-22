@@ -34,15 +34,15 @@ Experienced users may wish to try HandBrake's [nightly builds](https://handbrake
 
 The HandBrake Team publishes [checksums for all downloads on handbrake.fr](https://handbrake.fr/checksums.php) and the [Checksums article on GitHub](https://github.com/HandBrake/HandBrake/wiki/Checksums). You may use the provided checksums to verify the integrity of the files you download.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 When installing on Linux using the official PPA, download integrity is verified automatically. Similarly, the integrity of source code managed using `git` is verified automatically.
 
 To verify an official source distribution tarball, consult your Linux distribution's documentation for instructions on how to verify checksums.
 
-<!-- /.system-lin -->
+<!-- /.system-linux -->
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 On Mac, launch Terminal from your Applications > Utilities folder and use the `shasum` command. For example, if you downloaded HandBrake 1.0.0 to your Downloads folder:
 
@@ -50,15 +50,15 @@ On Mac, launch Terminal from your Applications > Utilities folder and use the `s
 
 Alternatively, the free third-party app [Hashsum](https://itunes.apple.com/us/app/hashsum/id1079442694?mt=12) available on the Mac App Store provides a convenient graphical interface for computing file checksums[^third-party-utilities-1].
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 On Windows, Microsoft provides the [Microsoft File Checksum Integrity Verifier](https://www.microsoft.com/en-us/download/details.aspx?id=11533) command line utility for verifying checksums. Please see the [associated Microsoft help article](https://support.microsoft.com/en-us/help/841290/availability-and-description-of-the-file-checksum-integrity-verifier-utility) for more information and usage instructions.
 
 Alternatively, free third-party apps [Compute Hash](http://www.subisoft.net/ComputeHash.aspx), [ExactFile](http://www.exactfile.com), and [MultiHasher](http://www.abelhadigital.com/multihasher) for Windows provide convenient graphical interfaces for computing file checksums[^third-party-utilities-2].
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 *If the checksums for the file you downloaded do not match the ones published by the HandBrake Team, you should delete the file and try your download again.*
 
@@ -66,7 +66,7 @@ Alternatively, free third-party apps [Compute Hash](http://www.subisoft.net/Comp
 
 The HandBrake Team also publishes [OpenPGP signatures for all downloads on GitHub](https://github.com/HandBrake/HandBrake/releases). More information is available on the [OpenPGP article on GitHub](https://github.com/HandBrake/HandBrake/wiki/OpenPGP).
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 ## Installing on Linux
 
@@ -92,8 +92,8 @@ Run `HandBrakeCLI` to use HandBrake on the command line.
 
 Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-click on the icon and select "Lock to Launcher" for easy access in the future.
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ## Installing on Mac
 
@@ -121,8 +121,8 @@ Hold down the `Control` key and select the HandBrake icon to bring up the shortc
 
 Now HandBrake is up and running. You should not have to repeat this process in the near future.
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 ## Installing on Windows
 
@@ -154,7 +154,7 @@ By selecting `More info`, you will be able to select `Run anyway` to continue th
 
 ![Windows SmartScreen - Run Anyway](../../images/windows/smartscreen-2-1.0.0.png "Select Run anyway to dismiss the SmartScreen message and continue installing HandBrake.")
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 ## Launching HandBrake
 

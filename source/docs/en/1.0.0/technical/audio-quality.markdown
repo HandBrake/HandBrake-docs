@@ -21,11 +21,11 @@ The Audio Tracks quality settings are controlled via the "Audio" tab on the main
 
 Each track can be configured to suit your needs.
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 ![HandBrake's Audio Track Settings](../../images/windows/audio-quality-1.0.0.png "HandBrake's Audio Track Settings")
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 There are several different modes HandBrake can operate in.
 

@@ -27,11 +27,11 @@ Most of HandBrake's official `Presets` use the x264 video encoder and a constant
 
 To increase video quality, adjust the quality control toward the right. To reduce video quality, adjust the quality control toward the left.
 
-<!-- .system-mac -->
+<!-- .system-macos -->
 
 ![Using the constant quality control](../../images/mac/quality-control-1.0.0.png "Adjust the quality control toward the right to increase quality, or toward the left to lower it.")
 
-<!-- /.system-mac -->
+<!-- /.system-macos -->
 
 Begin by making small adjustments. Plus or minus 1-2 RF is usually noticeable.
 

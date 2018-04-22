@@ -99,7 +99,7 @@ Activity Logs may also be pasted directly into [new support requests on GitHub](
 
 **Note:** When scanning a new source during encoding, log messages from the scan may be intermixed with log messages from your currently running encode.
 
-<!-- .system-lin -->
+<!-- .system-linux -->
 
 ### Activity Logs on Linux
 
@@ -116,8 +116,8 @@ Inside, you may find the following files:
 - `Activity.log.ProcessID`, where `ProcessID` is the process identifier given to HandBrake by Linux, contains information about the specific app session
 - Log files for individual encodes are located in the `EncodeLogs` subdirectory and named according to the pattern `Videoname Date Time.txt`; encode logs are retained until deleted manually
 
-<!-- /.system-lin -->
-<!-- .system-mac -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
 ### Activity Logs on Mac
 
@@ -134,8 +134,8 @@ Inside, you may find the following files:
 - `HandBrake-activitylog.txt` is overwritten each time HandBrake starts, and contains information about the latest app session
 - Log files for individual encodes are named according to the pattern `Videoname Date Time.txt` and are retained until deleted manually
 
-<!-- /.system-mac -->
-<!-- .system-win -->
+<!-- /.system-macos -->
+<!-- .system-windows -->
 
 ### Activity Logs on Windows
 
@@ -153,7 +153,7 @@ Inside, you may find the following files:
 - `activity_logProcessID.txt`, where `ProcessID` is the process identifier given to HandBrake by Windows, contains information about the specific app session
 - Log files for individual encodes are named according to the pattern `Videoname Date Time.txt` and are retained until deleted manually
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 ### Activity Logs on the command line
 

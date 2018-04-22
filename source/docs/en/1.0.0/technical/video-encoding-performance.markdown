@@ -43,20 +43,20 @@ Settings play a large part in encoding performance.  Most of the encoders expose
 For x264 and x265, the Medium preset is a good trade off between quality, file size and speed but you can adjust this slider to suit your needs.
 
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 ![HandBrake's Video Quality Settings](../../images/windows/video-quality-1.0.0.png "HandBrake's Video Quality Settings")
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 
 Filters are another thing that has a big effect. Particularly if you use Denoise NLMeans. This is a very memory intensive operation so can drastically slow your encodes down. Again, there are settings for the filters that tune them for speed vs quality so you can see widely different results depending on what preset / tune you use.
 
-<!-- .system-win -->
+<!-- .system-windows -->
 
 ![HandBrake's Video Filter Settings](../../images/windows/video-quality-1.0.0.png "HandBrake's Video Filter Settings")
 
-<!-- /.system-win -->
+<!-- /.system-windows -->
 
 ### Source
 
