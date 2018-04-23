@@ -17,43 +17,79 @@ License_URL:     https://handbrake.fr/docs/license.html
 Troubleshooting common issues
 =============================
 
-## Common Questions (All Platforms)
+<!-- .system-linux -->
 
-## Mac GUI
-####*HandBrake won't launch when double clicking on the icon.*
+## HandBrake for Linux
 
-We are not currently able to sign the HandBrake downloads. Since our download is not code signed, OSX will flag the application as from an unidentified developer. To work around this, please read their [Open an app from an unidentified developer](https://support.apple.com/kb/PH18657?locale=en_US)  help article.
+### Cannot find HandBrake executable
 
-This is also detailed on the [Downloading and installing HandBrake](../get-handbrake/download-and-install.html) page.
+The HandBrake graphical interface executable is `ghb`. Simply launch your terminal application and type `ghb` followed by the return key.
 
-## Linux GUI
+Please consult your distribution's documentation for how to add HandBrake to your application launcher.
 
-## Windows GUI
+### General troubleshooting
 
-####*Where can I download the Microsoft .NET framework 4.6.1 or later*
+Try each of the following steps until HandBrake is working again.
 
-If you are running Windows 7 or 8.x, it is available via Windows update. 
-Alternatively, you can download it from the ​Microsoft Website.
+1. Make sure you have official HandBrake and not a broken third-party build; see [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html)
+2. Restart your computer
+3. Delete your HandBrake configuration data and presets (replace username with your own)
+    - /home/username/.config/ghb
+4. Install/reinstall the latest version of HandBrake; see [Downloading and installing HandBrake](../get-handbrake/download-and-install.html)
 
-Windows 10 ships with this out the box so you should not need to install it.
+If the above does not solve your issue, someone may be able to help via HandBrake's [Community support](community-support.html) channels.
 
+<!-- /.system-linux -->
+<!-- .system-macos -->
 
-####*HandBrake crashes or won't launch.*
+## HandBrake for Mac
 
-There are a couple of things you can try:
+### HandBrake does not launch
 
-- Make sure you have Microsoft .NET Framework 4.6.1 or later installed on your system
+HandBrake versions prior to 1.1.0 and nightly builds are not code signed using an Apple Developer Certificate. By default, Gatekeeper prevents unsigned applications from running on your Mac.
 
-- Delete the config and preset files. You can find these in the following directories. 
-	For 2000/XP
-		C:\Documents and Settings\<username>\Application Data\HandBrake 
-		C:\Documents and Settings\<username>\Local Settings\Application Data\HandBrake
-	For Vista
-		C:\Users\<username>\Application Data\HandBrake
-		C:\Users\<username>\Local Settings\Application Data\HandBrake
-	For Windows 7 and later 
-		C:\Users\<username>\AppData\Roaming\HandBrake
-		and 
-		C:\Users\<username>\AppData\Local\HandBrake
+More information about successfully launching HandBrake is available on [Downloading and installing HandBrake](../get-handbrake/download-and-install.html).
 
-- Reinstall HandBrake. 
+### General troubleshooting
+
+Try each of the following steps until HandBrake is working again.
+
+1. Restart your computer
+2. Delete your HandBrake configuration data and presets (replace username with your own)
+    - /Users/username/Library/Application Support/HandBrake
+3. Install/reinstall the latest version of HandBrake; see [Downloading and installing HandBrake](../get-handbrake/download-and-install.html)
+
+If the above does not solve your issue, someone may be able to help via HandBrake's [Community support](community-support.html) channels.
+
+<!-- /.system-macos -->
+<!-- .system-windows -->
+
+## HandBrake for Windows
+
+### Downloading Microsoft .NET Framework
+
+Windows 10 already contains Microsoft .NET Framework 4.6 or later. Updates are available for Windows 7 and 8.1 via Windows Update.
+
+Additionally, you may download one of the following Microsoft .NET Framework standalone installers.
+
+- [Microsoft .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56116) for Windows 7 SP1, Windows 8.1, Windows 10, and Windows Server
+- [Microsoft .NET Framework 4.6](https://support.microsoft.com/en-us/help/3045557/microsoft-net-framework-4-6-offline-installer-for-windows) for Windows Vista SP2
+
+### General troubleshooting
+
+Try each of the following steps until HandBrake is working again.
+
+1. Restart your computer
+2. Install the latest version of Microsoft .NET Framework available for your Windows version
+3. Delete your HandBrake configuration data and presets (replace username with your own)
+    - Windows Vista:
+      - C:\Users\username\Application Data\HandBrake
+      - C:\Users\username\Local Settings\Application Data\HandBrake
+    - Windows 7 and later 
+      - C:\Users\username\AppData\Roaming\HandBrake
+      - C:\Users\username\AppData\Local\HandBrake
+4. Install/reinstall the latest version of HandBrake; see [Downloading and installing HandBrake](../get-handbrake/download-and-install.html)
+
+If the above does not solve your issue, someone may be able to help via HandBrake's [Community support](community-support.html) channels.
+
+<!-- /.system-windows -->
