@@ -100,10 +100,8 @@ For any other distribution, you must [compile from source](../developer/build-li
 
 ### Windows
 
-- Windows Vista (64-bit) with Service Pack 2 or later
-- Microsoft .NET Framework 4.6 or later
+- Windows 7 with Service Pack 1 (64-bit)  or later
+- Microsoft .NET Framework 4.6.2 or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
 <!-- /.system-windows -->
-
-[^display-emulator-adapter]: In lieu of a physically connected display, a display emulator adapter such as [Headless Ghost](https://www.headlessghost.com/) will enable GPU functions such as QuickSync when connected to the Intel HD Graphics output port.
