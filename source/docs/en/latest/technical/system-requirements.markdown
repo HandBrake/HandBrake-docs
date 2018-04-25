@@ -40,7 +40,7 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 ### Mac
 
-- 64-bit Intel Mac (Intel Core 2 Duo "Merom" or later)
+- Processor: Intel Core 2 Duo or better
   - 32-bit Intel Macs (2007 and earlier) cannot run recent 64-bit HandBrake releases
   - 2010 models and newer are recommended, as older Macs are often quite slow for processing video
 - Free Memory:
@@ -70,7 +70,7 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 <!-- /.system-windows -->
 
-HandBrake's QuickSync feature is only supported on Linux (experimental) and Windows. QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled and a directly connected display[^display-emulator-adapter].
+HandBrake's QuickSync feature is only supported on Windows. Experimental Linux support requires building from source with `--enable-qsv`. QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled.
 
 ## Software
 
