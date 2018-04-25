@@ -100,7 +100,7 @@ For any other distribution, you must [compile from source](../developer/build-li
 
 ### Windows
 
-- Windows 7 with Service Pack 1 (64-bit)  or later
+- Windows 7 Service Pack 1 (64-bit) or later
 - Microsoft .NET Framework 4.6.2 or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
