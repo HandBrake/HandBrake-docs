@@ -68,7 +68,7 @@ If the above does not solve your issue, someone may be able to help via HandBrak
 
 ### Downloading Microsoft .NET Framework
 
-Windows 10 already contains Microsoft .NET Framework 4.6 or later. Updates are available for Windows 7 and 8.1 via Windows Update.
+Windows 10 already contains Microsoft .NET Framework. Updates are available for Windows 7 and 8.1 via Windows Update.
 
 Additionally, you may download one of the following Microsoft .NET Framework standalone installers.
 
