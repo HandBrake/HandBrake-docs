@@ -142,6 +142,19 @@ Each Matroska `Preset` is named according to the video type, maximum resolution,
 | VP8 MKV 576p25    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
 | VP8 MKV 480p30    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
 
+## Production presets
+
+HandBrake's Production `Presets` create mastering grade, short GOP, constant frame rate video with high bit rate audio, suited for professional video editing workflows. These presets typically create files much larger than most compressed sources and are not suitable for general use.
+
+Production Proxy `Presets` create fast to encode, Intra-only video limited to one-quarter the desired editing resolution.
+
+| Preset                    | Type | Video | Audio      | Max Resolution | Picture Quality | Frame Types | GOP Size | Encoding Speed    | File Size |
+|---------------------------|------|-------|------------|----------------|-----------------|-------------|----------|-------------------|-----------|
+| Production Max            | MP4  | H.264 | AAC stereo | Unlimited      | Max Master      | I/P         | 1-12     | Depends on source | Gigantic  |
+| Production Standard       | MP4  | H.264 | AAC stereo | Unlimited      | Standard Master | I/P         | 1-12     | Depends on source | Huge      |
+| Production Proxy 1080p    | MP4  | H.264 | AAC stereo | 1/4 2160p 4K   | Proxy           | Intra-only  | 1        | Fast              | Average   |
+| Production Proxy 540p     | MP4  | H.264 | AAC stereo | 1/4 1080p HD   | Proxy           | Intra-only  | 1        | Very Fast         | Small     |
+
 ## Legacy presets
 
 HandBrake's Legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
