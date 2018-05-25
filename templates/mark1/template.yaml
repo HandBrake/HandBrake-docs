@@ -24,6 +24,10 @@ Template:
       - assets/fonts/ropasans-regular-1.002.ttf
       - assets/fonts/ropasans-regular-1.002.woff
       - assets/fonts/ropasans-regular-1.002.woff2
+    Images:
+      - assets/images/icon.png
+      - assets/images/icon@2x.png
+      - assets/images/icon@3x.png
     Styles:
       - assets/css/opensans.css?2016100501
       - assets/css/ropasans.css?2016100501

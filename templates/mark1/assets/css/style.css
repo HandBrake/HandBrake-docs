@@ -50,8 +50,54 @@ article.docs header {
     pointer-events: none; /* allows selecting elements on layers with a lower z-index */
 }
 
+article.docs header .super {
+    height: 2.5rem;
+    background-color: steelblue;
+    color: white;
+    font-size: 0.75rem;
+}
+
+article.docs header .super * {
+    pointer-events: auto; /* make sure items are selectable */
+}
+
+article.docs header .super a,
+article.docs header .super a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+article.docs header .super a:active,
+article.docs header .super a:hover {
+    text-decoration: underline;
+}
+
+article.docs header .super .logo {
+    display: inline-block;
+    padding: .25rem .5rem;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    transition: background-color .3s, margin-right .3s;
+}
+
+article.docs header .super .logo:hover {
+    margin-right: .625rem;
+    background-color: rgb(40,44,48);
+}
+
+article.docs header .super .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+article.docs header .super .title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 article.docs header + * {
-    margin-top: 6.75rem;
+    margin-top: 9.875rem; /* 6.75rem + header .super height */
 }
 
 article.docs nav {
@@ -518,8 +564,23 @@ article.docs .footnotes + footer {
         margin-top: -7.75rem;
     }
 
+    article.docs header .super {
+        height: 3.125rem;
+        font-size: 0.9375rem;
+    }
+
+    article.docs header .super .logo {
+        padding: .3125rem .625rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    article.docs header .super .logo:hover {
+        margin-right: .75rem;
+    }
+
     article.docs header + * {
-        margin-top: 7.5rem;
+        margin-top: 11.25rem; /* 7.5rem + header .super height */
     }
 
     article.docs nav {
@@ -570,8 +631,23 @@ article.docs .footnotes + footer {
         margin-top: -9.3125rem;
     }
 
+    article.docs header .super {
+        height: 3.75rem;
+        font-size: 1.125rem;
+    }
+
+    article.docs header .super .logo {
+        padding: .375rem .75rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    article.docs header .super .logo:hover {
+        margin-right: .75rem;
+    }
+
     article.docs header + * {
-        margin-top: 8.75rem;
+        margin-top: 12.5rem; /* 8.75rem + header .super height */
     }
 
     article.docs nav {
@@ -606,6 +682,21 @@ article.docs .footnotes + footer {
         padding-right: 50px;
     }
 
+    article.docs header .super {
+        height: 5rem;
+        font-size: 1.5rem;
+    }
+
+    article.docs header .super .logo {
+        padding: .5rem 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    article.docs header .super .logo:hover {
+        margin-right: 1rem;
+    }
+
     article.docs nav {
         width: 760px;
         font-size: .9rem;
@@ -633,7 +724,7 @@ article.docs .footnotes + footer {
     }
 
     article.docs header + * {
-        margin-top: 10.5rem;
+        margin-top: 15.5rem; /* 10.5rem + header .super height */
     }
 
     article.docs h1 {
@@ -709,7 +800,7 @@ article.docs .footnotes + footer {
 /* Shorter than 550 */
 @media (max-height: 549px) {
     article.docs header + * {
-        margin-top: 6.25rem;
+        margin-top: 10rem; /* 6.25rem + header .super height */
     }
 
     article.docs figure img {
@@ -729,17 +820,24 @@ article.docs .footnotes + footer {
     }
 
     article.docs header + * {
-        margin-top: 5rem;
+        /* margin-top: 8.75rem; /* 5rem + header .super height */
+        margin-top: 5.25rem; /* 2.5rem + header .super height */
     }
 
     article.docs nav {
         padding: .625rem .9375rem 1.5625rem;
+        /*
         height: 3.125rem;
+        */
+        height: 2rem;
     }
 
     article.docs nav .breadcrumbs {
+        /*
         margin-top: .5em;
         font-size: .625rem;
+        */
+        display: none;
     }
 
     article.docs figure img {
