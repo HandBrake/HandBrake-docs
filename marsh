@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.7.3"
+VERSION="0.7.4"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1804,7 +1804,7 @@ function build_target {  # build_target dest_dir target advanced_nav templates_d
             [[ $? -ne 0 ]] && return 1
             TEMPLATE_META_VARS=$(echo "${TEMPLATE_META}" | get_variables)
             eval "${TEMPLATE_META}"
-            for ASSET in ${TEMPLATE_ASSETS_FONTS[@]} ${TEMPLATE_ASSETS_STYLES[@]} ${TEMPLATE_ASSETS_SCRIPTS[@]}; do
+            for ASSET in ${TEMPLATE_ASSETS_FONTS[@]} ${TEMPLATE_ASSETS_STYLES[@]} ${TEMPLATE_ASSETS_SCRIPTS[@]} ${TEMPLATE_ASSETS_IMAGES[@]} ${TEMPLATE_ASSETS_AUDIO[@]} ${TEMPLATE_ASSETS_VIDEO[@]} ${TEMPLATE_ASSETS_DOCUMENTS[@]} ${TEMPLATE_ASSETS_BINARIES[@]} ${TEMPLATE_ASSETS_OTHER[@]}; do
                 ASSET="${ASSET%\?*}"
                 if [[ -d "${TEMPLATES_DIR}/${TEMPLATES[$I]}/${ASSET}" ]]; then
                     mkdir -p "${DEST_DIR}/${TARGET_DIR}/${ASSET}"
