@@ -50,7 +50,7 @@ Table of contents
 
 ## Advanced workflows
 
-- [Multiple encodes using the queue](advanced/queue.html)
+- [Using the queue](advanced/queue.html)
   *Set up multiple encode jobs at once*
 - [Point-to-point encoding](advanced/point-to-point.html)<span class="notice draft"><span>draft</span></span>
 - [Custom presets](advanced/custom-presets.html)<span class="notice draft"><span>draft</span></span>

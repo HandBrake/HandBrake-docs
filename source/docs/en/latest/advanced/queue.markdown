@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Multiple encodes using the Queue
+Title:           Using the Queue
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,8 +13,8 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Multiple encodes using the Queue
-================================
+Using the Queue
+===============
 
 Encoding videos takes time, and can use a lot of your computer's computational power.
 
