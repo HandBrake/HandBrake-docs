@@ -54,7 +54,7 @@ article.docs header .super {
     height: 2.5rem;
     background-color: steelblue;
     color: white;
-    font-size: 0.75rem;
+    font-size: .75rem;
 }
 
 article.docs header .super * {
@@ -259,10 +259,33 @@ article.docs .notice {
     margin-bottom: .66666em;
     padding: 0 .625rem;
     border: 1px dotted lightgreen;
+    border-radius: .3em;
     background-color: honeydew;
     font-size: .8em;
     line-height: 1.25;
     text-align: center;
+}
+
+article.docs span.notice {  /* inline notice */
+    margin: 0 .75em;
+    padding: .3em .75em;
+    color: dimgray;
+    font-size: .5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+article.docs li a + span.notice {  /* table of contents notice */
+    display: inline-block;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .25s;
+}
+
+article.docs li a:active + span.notice,
+article.docs li a:hover + span.notice {
+    transform: scaleX(1);
 }
 
 article.docs .notice.draft {
@@ -270,18 +293,27 @@ article.docs .notice.draft {
     background-color: lightyellow;
 }
 
-article.docs .notice p:first-child:before {
+article.docs .notice > :first-child:before {
     display: inline;
     margin-right: .5em;
     content: "♻";
 }
 
-article.docs .notice.draft p:first-child:before {
+article.docs .notice.draft > :first-child:before {
     content: "⚠";
 }
 
 article.docs .notice p {
     margin: .71429em 0;
+}
+
+article.docs li a + em,
+article.docs li a + span.notice + em {  /* table of contents description */
+    display: block;
+    position: relative;
+    top: -.3em;
+    font-size: .825em;
+    color: rgb(40,44,48);
 }
 
 article.docs h1,
@@ -298,38 +330,38 @@ article.docs h6 {
 article.docs h1 {
     font-size: 2.5rem;
     line-height: 1;
-    letter-spacing: -0.035em;
+    letter-spacing: -.035em;
 }
 
 article.docs h2 {
     font-size: 1.75rem;
     line-height: 1.07143;
-    letter-spacing: -0.025em;
+    letter-spacing: -.025em;
 }
 
 article.docs h3 {
     font-size: 1.3125rem;
     line-height: 1.190476;
-    letter-spacing: -0.022em;
+    letter-spacing: -.022em;
 }
 
 article.docs h4 {
     font-size: 1.1875rem;
     line-height: 1.05263;
-    letter-spacing: -0.02em;
+    letter-spacing: -.02em;
 }
 
 article.docs h5 {
     font-size: 1.0625rem;
     line-height: 1.17647;
-    letter-spacing: -0.01em;
+    letter-spacing: -.01em;
 }
 
 article.docs h6 {
     font-size: .875rem;
     line-height: 1.07143;
     text-transform: uppercase;
-    letter-spacing: -0.005em;
+    letter-spacing: -.005em;
 }
 
 article.docs code,
@@ -340,10 +372,10 @@ article.docs pre {
 article.docs p > code {
     display: inline-block;
     position: relative;
-    top: -0.08rem;
+    top: -.08rem;
     border-radius: .25rem;
     font-size: .85rem;
-    margin: -0.08rem .12rem 0;
+    margin: -.08rem .12rem 0;
     padding: .08rem .35rem 0;
     background-color: whitesmoke;
     line-height: 1.83824;
@@ -359,7 +391,7 @@ article.docs pre {
 
 article.docs p + pre {
     position: relative;
-    top: -0.75rem;
+    top: -.75rem;
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -566,7 +598,7 @@ article.docs .footnotes + footer {
 
     article.docs header .super {
         height: 3.125rem;
-        font-size: 0.9375rem;
+        font-size: .9375rem;
     }
 
     article.docs header .super .logo {
@@ -729,39 +761,39 @@ article.docs .footnotes + footer {
 
     article.docs h1 {
         font-size: 3rem;
-        letter-spacing: -0.04em;
+        letter-spacing: -.04em;
     }
 
     article.docs h2 {
         font-size: 2.1rem;
-        letter-spacing: -0.03em;
+        letter-spacing: -.03em;
     }
 
     article.docs h3 {
         font-size: 1.575rem;
-        letter-spacing: -0.023em;
+        letter-spacing: -.023em;
     }
 
     article.docs h4 {
         font-size: 1.425rem;
-        letter-spacing: -0.022em;
+        letter-spacing: -.022em;
     }
 
     article.docs h5 {
         font-size: 1.275rem;
-        letter-spacing: -0.021em;
+        letter-spacing: -.021em;
     }
 
     article.docs h6 {
         font-size: 1.05rem;
         text-transform: uppercase;
-        letter-spacing: -0.009em;
+        letter-spacing: -.009em;
     }
 
     article.docs p > code {
-        top: -0.1rem;
+        top: -.1rem;
         font-size: .9375rem;
-        margin: -0.1rem .15rem 0;
+        margin: -.1rem .15rem 0;
         padding: .1rem .35rem 0;
         line-height: 1.66666;
     }
