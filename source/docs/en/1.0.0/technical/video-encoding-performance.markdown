@@ -54,7 +54,7 @@ Filters are another thing that has a big effect. Particularly if you use Denoise
 
 <!-- .system-windows -->
 
-![HandBrake's Video Filter Settings](../../images/windows/video-quality-1.0.0.png "HandBrake's Video Filter Settings")
+![HandBrake's Video Filter Settings](../../images/windows/video-filters-1.0.0.png "HandBrake's Video Filter Settings")
 
 <!-- /.system-windows -->
 
