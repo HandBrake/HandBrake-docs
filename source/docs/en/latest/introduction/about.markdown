@@ -27,7 +27,7 @@ HandBrake is a post-production tool. Its primary purpose is to convert videos fr
 
 HandBrake takes videos you already have and makes new ones that work on your mobile phone, tablet, TV media player, game console, computer, or web browser—nearly anything that supports modern video formats.
 
-HandBrake works with most common video files and formats, including ones created by consumer and professional video cameras, mobile devices such as phones and tablets, game and computer screen recordings, and DVD and Blu-ray discs. HandBrake leverages tools such as Libav, x264, and x265 to create new MP4 or MKV video files from these `Sources`.
+HandBrake works with most common video files and formats, including ones created by consumer and professional video cameras, mobile devices such as phones and tablets, game and computer screen recordings, and DVD and Blu-ray discs. HandBrake leverages tools such as FFmpeg, x264, and x265 to create new MP4 or MKV video files from these `Sources`.
 
 HandBrake **does**:
 

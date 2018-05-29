@@ -42,7 +42,7 @@ Audio Encoders
     -   Advanced Audio Coding (AAC) is one of the most popular formats available
         in HandBrake and is widly supported by media players and mobile devices.
 
-    -   On Linux and Windows, HandBrake uses the LibAV AAC encoder.
+    -   On Linux and Windows, HandBrake uses the FFmpeg AAC encoder.
 
     -   On Mac, HandBrake uses Apple's CoreAudio AAC encoder. It's known to be
         much better quality and is the default option for Mac users.
@@ -66,11 +66,11 @@ Audio Encoders
 
 -   AC3:
 
-    -   HandBrake can encode to AC3 using LibAV.
+    -   HandBrake can encode to AC3 using FFmpeg.
 
     -   This is not the same as Passthru. You can encode any audio track to AC3.
 
--   Flac 16 and 24bit (Libav)
+-   Flac 16 and 24bit (FFmpeg)
 
     -   Loss-less audio compression.
 

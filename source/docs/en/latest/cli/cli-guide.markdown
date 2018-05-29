@@ -358,7 +358,7 @@ You can access this information at any time by running the following command:
                                    block-width=16:block-height=16
        --no-comb-detect        Disable preset comb-detect filter
        -d, --deinterlace[=string]
-                               Deinterlace video using libav yadif.
+                               Deinterlace video using FFmpeg yadif.
                                Presets:
                                    skip-spatial
                                    bob
