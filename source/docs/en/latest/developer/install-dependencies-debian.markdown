@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 9.3 (Stretch).
+The following instructions are for [Debian](https://www.debian.org) 9.4 (Stretch).
 
 Dependencies:
 
@@ -32,10 +32,12 @@ Dependencies:
 - libfribidi-dev
 - libharfbuzz-dev
 - libjansson-dev
+- liblzma-dev
 - libmp3lame-dev
 - libogg-dev
 - libopus-dev
 - libsamplerate-dev
+- libspeex-dev
 - libtheora-dev
 - libtool
 - libtool-bin
@@ -67,7 +69,7 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
