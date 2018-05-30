@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Ubuntu
 =================================
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver), 16.04 LTS (Xenial Xerus), and Ubuntu 14.04 LTS (Trusty Tahr).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver).
 
 Dependencies:
 
@@ -40,6 +40,7 @@ Dependencies:
 - libspeex-dev
 - libtheora-dev
 - libtool
+- libtool-bin
 - libvorbis-dev
 - libx264-dev
 - libxml2-dev
@@ -51,10 +52,6 @@ Dependencies:
 - tar
 - yasm
 - zlib1g-dev
-
-Additional Ubuntu 18.04 LTS and 16.04 LTS dependencies:
-
-- libtool-bin
 
 Graphical interface dependencies:
 
@@ -72,11 +69,7 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev
-
-If you are running Ubuntu 18.04 LTS or 16.04 LTS, install the additional dependencies.
-
-    sudo apt-get install libtool-bin
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
