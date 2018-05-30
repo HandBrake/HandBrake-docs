@@ -85,9 +85,9 @@ Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-
 
 Once you've downloaded HandBrake for Mac, open the disk image in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
-![Opening HandBrake disk image](../../images/mac/download-file-1.1.0.png "Open the HandBrake disk image you downloaded. Your web browser may do this automatically.")
+![Opening HandBrake disk image](../../../en/images/mac/download-file-1.1.0.png "Open the HandBrake disk image you downloaded. Your web browser may do this automatically.")
 
-![Installing HandBrake on Mac](../../images/mac/install-1.1.0.png "Drag HandBrake to your Applications folder to install it on your Mac.")
+![Installing HandBrake on Mac](../../../en/images/mac/install-1.1.0.png "Drag HandBrake to your Applications folder to install it on your Mac.")
 
 HandBrake is now installed. You may eject the disk image and move it to the Trash.
 
@@ -98,17 +98,17 @@ HandBrake is now installed. You may eject the disk image and move it to the Tras
 
 После того как вы скачали установщик HandBrake, просто дважды щелкните, чтобы запустить его.
 
-Если HandBrake уже установлен на вашем компьютере, установщик предложит удалить предыдущую версию перед установкой текущей версии. Выберите `OK` для продолжения и ознкомления с условиями лицензии HandBrake.
+Если HandBrake уже установлен на вашем компьютере, установщик предложит удалить предыдущую версию перед установкой текущей версии. Выберите `OK` для продолжения и ознакомления с условиями лицензии HandBrake.
 
-![HandBrake Windows installer: удаление предыдущих версий](../../images/windows/uninstall-1.0.0.png "Установщик HandBrake предложит удалить предыдущую версию перед установкой текущей версии.")
+![HandBrake Windows installer: удаление предыдущих версий](../../../en/images/windows/uninstall-1.0.0.png "Установщик HandBrake предложит удалить предыдущую версию перед установкой текущей версии.")
 
-![HandBrake Windows installer](../../images/windows/install-1-1.0.0.png "HandBrake's Windows installer.")
+![HandBrake Windows installer](../../../en/images/windows/install-1-1.0.0.png "HandBrake's Windows installer.")
 
 Далее, установщик спросит вас куда вы хотите установить HandBrake. Если у вас нет особых причин для изменения этого, выберите `Install` для продолжения. После завершения установки, вы можете выбрать `Finish` для выхода из программы установки.
 
-![HandBrake for Windows ход установки](../../images/windows/install-2-1.0.0.png "The installer will report its progress.")
+![HandBrake for Windows ход установки](../../../en/images/windows/install-2-1.0.0.png "The installer will report its progress.")
 
-![HandBrake for Windows installation complete](../../images/windows/install-finish-1.0.0.png "HandBrake is now installed.")
+![HandBrake for Windows installation complete](../../../en/images/windows/install-finish-1.0.0.png "HandBrake is now installed.")
 
 Вы найдете ярлыки для запуска HandBrake placed on both the Windows Desktop and Start Menu.
 
@@ -118,7 +118,7 @@ HandBrake is now installed. You may eject the disk image and move it to the Tras
 
 Вы можете запустить HandBrake быстро нажав два раза (двойной клик) on the cocktail & pineapple icon. В зависимости от настройки вашей системы, возможно одного щелчка мыши может быть достаточно.
 
-![HandBrake icon](../../images/icon-1.1.0.png)![Double-clicking HandBrake icon](../../images/icon-click-1.1.0.gif)
+![HandBrake icon](../../../en/images/icon-1.1.0.png)![Double-clicking HandBrake icon](../../../en/images/icon-click-1.1.0.gif)
 
 <!-- .continue -->
 
