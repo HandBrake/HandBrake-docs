@@ -1,36 +1,31 @@
 ---
 Type:            article
-State:           [ draft ]
-Title:           CLI Guide
+Title:           Command line reference
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Authors:         [ Scott (s55) ]
+Authors:         [ Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Scott (s55) ]
 Copyright:       2018 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-CLI Guide
-=============================
+Command line reference
+======================
 
-The following details all the available options in HandBrakeCLI
-
-You can access this information at any time by running the following command:
-
-> HandBrakeCLI --help
-
-### The HandBrakeCLI Help Output
+The following details all the available options in the command line interface. This information may be accessed at any time by running `HandBrakeCLI --help`.
 
     Usage: HandBrakeCLI [options] -i <source> -o <destination>
-
+    
     General Options --------------------------------------------------------------
 
        -h, --help              Print help
        --version               Print version
+       --json                  Log title, progress, and version info in
+                               JSON format
        -v, --verbose[=number]  Be verbose (optional argument: logging level)
        -Z. --preset <string>   Select preset by name (case-sensitive)
                                Enclose names containing spaces in double quotation
@@ -56,10 +51,10 @@ You can access this information at any time by running the following command:
        --queue-import-file <filename>
                                Import an encode queue file created by the GUI
            --no-dvdnav         Do not use dvdnav for reading DVDs
-
-
+    
+    
     Source Options ---------------------------------------------------------------
-
+    
        -i, --input <string>    Set input file or device ("source")
        -t, --title <number>    Select a title to encode (0 to scan all titles
                                only, default: 1)
@@ -85,10 +80,10 @@ You can access this information at any time by running the following command:
                                Stop encoding at a given duration (in seconds),
                                frame, or pts (on a 90kHz clock)
                                (e.g. duration:10, frame:300, pts:900000)
-
-
+    
+    
     Destination Options ----------------------------------------------------------
-
+    
        -o, --output <filename> Set destination file name
        -f, --format <string>   Select container format:
                                    av_mp4
@@ -101,13 +96,22 @@ You can access this information at any time by running the following command:
            --no-optimize       Disable preset 'optimize'
        -I, --ipod-atom         Add iPod 5G compatibility atom to MP4 container
            --no-ipod-atom      Disable iPod 5G atom
-
-
+           --align-av          Add audio silence or black video frames to start
+                               of streams so that all streams start at exactly
+                               the same time
+       --inline-parameter-sets Create adaptive streaming compatible output.
+                               Inserts parameter sets (SPS and PPS) inline
+                               in the video stream before each IDR.
+    
+    
     Video Options ----------------------------------------------------------------
-
+    
        -e, --encoder <string>  Select video encoder:
                                    x264
+                                   x264_10bit
                                    x265
+                                   x265_10bit
+                                   x265_12bit
                                    mpeg4
                                    mpeg2
                                    VP8
@@ -165,10 +169,10 @@ You can access this information at any time by running the following command:
                                timing if it's below that rate.
                                If none of these flags are given, the default
                                is --pfr when -r is given and --vfr otherwise
-
-
+    
+    
     Audio Options ----------------------------------------------------------------
-
+    
            --audio-lang-list <string>
                                Specify a comma separated list of audio
                                languages you would like to select from the
@@ -189,7 +193,6 @@ You can access this information at any time by running the following command:
                                Multiple output tracks can be used for one input.
        -E, --aencoder <string> Select audio encoder(s):
                                    none
-                                   av_aac
                                    ca_aac
                                    ca_haac
                                    copy:aac
@@ -213,8 +216,8 @@ You can access this information at any time by running the following command:
                                is supported for the audio type.
                                Separate tracks by commas.
                                Defaults:
-                                   av_mp4   ca_aac/av_aac
-                                   av_mkv   ca_aac/mp3
+                                   av_mp4   ca_aac
+                                   av_mkv   ca_aac
            --audio-copy-mask <string>
                                Set audio codecs that are permitted when the
                                "copy" audio encoder option is specified
@@ -246,7 +249,6 @@ You can access this information at any time by running the following command:
                                Separate tracks by commas.
                                Defaults:
                                    none             up to dpl2
-                                   av_aac           up to dpl2
                                    ca_aac           up to dpl2
                                    ca_haac          up to dpl2
                                    ac3              up to 5point1
@@ -262,7 +264,7 @@ You can access this information at any time by running the following command:
                                1 = Enable Normalization
        -R, --arate             Set audio samplerate(s)
                                (8/11.025/12/16/22.05/24/32/44.1/48 kHz)
-                               Separate tracks by commas.
+                               or "auto". Separate tracks by commas.
        -D, --drc <float>       Apply extra dynamic range compression to the
                                audio, making soft sounds louder. Range is 1.0
                                to 4.0 (too loud), with 1.5 - 2.5 being a useful
@@ -285,10 +287,10 @@ You can access this information at any time by running the following command:
                                    flac16
        -A, --aname <string>    Set audio track name(s).
                                Separate tracks by commas.
-
-
+    
+    
     Picture Options --------------------------------------------------------------
-
+    
        -w, --width  <number>   Set storage width in pixels
        -l, --height <number>   Set storage height in pixels
            --crop   <top:bottom:left:right>
@@ -333,10 +335,10 @@ You can access this information at any time by running the following command:
                                    ntsc (same as 601)
                                    pal
                                (default: auto-detected from source)
-
-
+    
+    
     Filters Options --------------------------------------------------------------
-
+    
        --comb-detect[=string]  Detect interlace artifacts in frames.
                                If not accompanied by the decomb or deinterlace
                                filters, this filter only logs the interlaced
@@ -421,7 +423,8 @@ You can access this information at any time by running the following command:
                                    cb-strength=c:cb-origin-tune=c:cb-patch-size=c:
                                    cb-range=c:cb-frame-count=c:cb-prefilter=c:
                                    cr-strength=c:cr-origin-tune=c:cr-patch-size=c:
-                                   cr-range=c:cr-frame-count=c:cr-prefilter=c
+                                   cr-range=c:cr-frame-count=c:cr-prefilter=c:
+                                   threads=t
                                Default:
                                    y-strength=6:y-origin-tune=1:y-patch-size=7:
                                    y-range=3:y-frame-count=2:y-prefilter=0:
@@ -511,10 +514,10 @@ You can access this information at any time by running the following command:
                                    width=w:height=h:color=c:x=x:y=y
        -g, --grayscale         Grayscale encoding
        --no-grayscale          Disable preset 'grayscale'
-
-
+    
+    
     Subtitles Options ------------------------------------------------------------
-
+    
       --subtitle-lang-list <string>
                                Specify a comma separated list of subtitle
                                languages you would like to select from the
