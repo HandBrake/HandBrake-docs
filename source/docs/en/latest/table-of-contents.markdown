@@ -114,7 +114,7 @@ Table of contents
 
 ## CLI documentation
 
-- [Command Line Reference](cli/command-line-reference.html)
+- [Command line reference](cli/command-line-reference.html)
 - [CLI options list](cli/cli-options.html)<span class="notice draft"><span>draft</span></span>
 
 
