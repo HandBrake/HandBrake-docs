@@ -48,6 +48,7 @@ Dependencies:
 - libx264
 - libxml2
 - lzma
+- nasm
 - opus
 - pkgconf
 - python
@@ -79,7 +80,7 @@ Install the `sudo` package when running as a regular user (not root).
 
 Install dependencies.
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 opus pkgconf python speex yasm
+    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 nasm opus pkgconf python speex yasm
 
 Build and install the `lame` source port.
 
