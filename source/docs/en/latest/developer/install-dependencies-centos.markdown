@@ -37,6 +37,7 @@ Additional dependencies not available in the base repository:
 
 - lame-devel [RPM Fusion]
 - libass-devel [EPEL]
+- nasm [NASM]
 - opus-devel [EPEL EL6]
 - x264-devel [RPM Fusion]
 - yasm [EPEL]
@@ -56,6 +57,11 @@ The `opus-devel` package provided by CentOS 7 is too old. Install a newer versio
 
     sudo yum localinstall $(curl -L -s 'https://dl.fedoraproject.org/pub/epel/6/x86_64/Packages/o/' | grep -Eo 'opus-[^">]+\.x86_64\.rpm' | sort -u | awk '{ print "https://dl.fedoraproject.org/pub/epel/6/x86_64/Packages/o/"$0 }')
 
+The `nasm` package provided by CentOS 7 is too old. Install a newer version provided by the NASM project[^nasm-repo].
+
+    sudo curl -L 'https://nasm.us/nasm.repo' -o /etc/yum.repos.d/nasm.repo
+    sudo yum install nasm
+
 The `lame-devel` and `x264-devel` packages are now provided by the RPM Fusion repository. If you previously installed the [ZMREPO](https://zmrepo.zoneminder.com) repository for these packages, remove them and the repository before continuing.
 
     # Only necessary if previously installed ZMREPO
@@ -70,3 +76,5 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
 CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
 [^opus-el6]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
+
+[^nasm-repo]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
