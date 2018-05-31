@@ -20,6 +20,11 @@ Installing dependencies on CentOS
 
 The following instructions are for [CentOS](https://centos.org) 7.5 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
 
+Basic requirements to run the following commands:
+
+- curl
+- sudo (for normal user accounts)
+
 Dependencies:
 
 - Development Tools

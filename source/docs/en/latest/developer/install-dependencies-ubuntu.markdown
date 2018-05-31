@@ -18,6 +18,10 @@ Installing dependencies on Ubuntu
 
 The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver).
 
+Basic requirements to run the following commands:
+
+- sudo (for normal user accounts)
+
 Dependencies:
 
 - autoconf

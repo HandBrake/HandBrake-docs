@@ -18,6 +18,11 @@ Installing dependencies on Debian
 
 The following instructions are for [Debian](https://www.debian.org) 9.4 (Stretch) x86_64.
 
+Basic requirements to run the following commands:
+
+- curl
+- sudo (for normal user accounts)
+
 Dependencies:
 
 - autoconf

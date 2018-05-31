@@ -22,6 +22,10 @@ Instructions are available for installing dependencies on [CentOS](https://cento
 
 The following instructions are for CentOS 7 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
 
+Basic requirements to run the following commands:
+
+- sudo (for normal user accounts)
+
 Dependencies:
 
 - Development Tools
@@ -68,6 +72,11 @@ CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface)
 ## CentOS 6
 
 The following instructions are for CentOS 6 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
+
+Basic requirements to run the following commands:
+
+- curl
+- sudo (for normal user accounts)
 
 Dependencies:
 

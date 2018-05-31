@@ -18,6 +18,10 @@ Installing dependencies on Gentoo
 
 The following instructions are for [Gentoo](https://gentoo.org) Base System release 2.2 and [GNOME](https://www.gnome.org).
 
+Basic requirements to run the following commands:
+
+- sudo (for normal user accounts)
+
 Dependencies[^rebuild]:
 
 - fribidi

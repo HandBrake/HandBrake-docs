@@ -18,6 +18,10 @@ Installing dependencies on Fedora
 
 The following instructions are for [Fedora](https://getfedora.org) 26 and later.
 
+Basic requirements to run the following commands:
+
+- sudo (for normal user accounts)
+
 Dependencies:
 
 - Development Tools
