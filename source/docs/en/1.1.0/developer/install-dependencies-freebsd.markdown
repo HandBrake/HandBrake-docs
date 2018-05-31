@@ -71,10 +71,6 @@ Graphical interface dependencies:
 - libvpx
 - pango
 
-Install the `sudo` package when running as a regular user (not root).
-
-    pkg install sudo
-
 Install dependencies.
 
     sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 opus pkgconf python yasm
