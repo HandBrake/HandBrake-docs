@@ -18,7 +18,7 @@ Installing dependencies on Fedora
 
 The following instructions are for [Fedora](https://getfedora.org) 26 Workstation and later.
 
-Basic requirements to run the following commands:
+Basic requirements to run commands:
 
 - sudo (for normal user accounts)
 

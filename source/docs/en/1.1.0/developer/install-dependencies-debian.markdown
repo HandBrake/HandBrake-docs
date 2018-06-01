@@ -18,7 +18,7 @@ Installing dependencies on Debian
 
 The following instructions are for [Debian](https://www.debian.org) 9.3 (Stretch).
 
-Basic requirements to run the following commands:
+Basic requirements to run commands:
 
 - sudo (for normal user accounts)
 

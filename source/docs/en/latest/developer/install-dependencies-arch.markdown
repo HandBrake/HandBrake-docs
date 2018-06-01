@@ -18,7 +18,7 @@ Installing dependencies on Arch
 
 The following instructions are for [Arch](https://www.archlinux.org) 2018.05.01 (HandBrake [CLI](abbr:Command Line Interface) only).
 
-Basic requirements to run the following commands:
+Basic requirements to run commands:
 
 - sudo (for normal user accounts)
 

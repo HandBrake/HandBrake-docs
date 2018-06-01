@@ -18,7 +18,7 @@ Installing dependencies on FreeBSD
 
 The following instructions are for [FreeBSD](https://www.freebsd.org) 11.1 x86_64.
 
-Basic requirements to run the following commands:
+Basic requirements to run commands:
 
 - sudo (for normal user accounts)
 
