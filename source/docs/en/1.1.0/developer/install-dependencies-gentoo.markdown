@@ -16,10 +16,11 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Gentoo
 =================================
 
-The following instructions are for [Gentoo](https://gentoo.org) Base System release 2.2 and [GNOME](https://www.gnome.org).
+The following instructions are for [Gentoo](https://gentoo.org) profile `default/linux/amd64/17.0` with Portage snapshot 20180520 (HandBrake [CLI](abbr:Command Line Interface) only).
 
-Basic requirements to run the following commands:
+Basic requirements to run commands:
 
+- dev-vcs/git
 - sudo (for normal user accounts)
 
 Dependencies[^rebuild]:
