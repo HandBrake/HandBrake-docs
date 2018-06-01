@@ -248,7 +248,7 @@ article.docs nav .navigation li > a.selected {
 }
 
 article.docs nav .navigation li > em {
-    display: none;
+    display: none !important;
 }
 
 article.docs nav .navigation li > ul {
