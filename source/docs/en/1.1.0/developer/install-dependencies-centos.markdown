@@ -31,6 +31,7 @@ Dependencies:
 - Development Tools
 - Additional Development
 - fribidi-devel
+- git
 - jansson-devel
 - libogg-devel
 - libsamplerate-devel
@@ -49,7 +50,7 @@ Install dependencies.
 
     sudo yum update
     sudo yum groupinstall "Development Tools" "Additional Development"
-    sudo yum install fribidi-devel jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel opus-devel
+    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel opus-devel
 
 Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
 
@@ -83,6 +84,7 @@ Dependencies:
 - Development tools
 - Additional Development
 - cmake
+- git
 - libicu-devel
 - libogg-devel
 - libsamplerate-devel
@@ -104,7 +106,7 @@ Additional dependencies not available in the base repository:
 Install dependencies.
 
     sudo yum groupinstall "Development tools" "Additional Development"
-    sudo yum install cmake libicu-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel
+    sudo yum install cmake git libicu-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel
 
 Install the [Software Collections (SCL)](https://wiki.centos.org/AdditionalResources/Repositories/SCL) repository and Python 2.7.x[^python-centos-6].
 

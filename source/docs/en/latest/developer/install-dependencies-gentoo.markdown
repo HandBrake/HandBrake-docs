@@ -20,12 +20,12 @@ The following instructions are for [Gentoo](https://gentoo.org) profile `default
 
 Basic requirements to run commands:
 
-- dev-vcs/git
 - sudo (for normal user accounts)
 
 Dependencies[^rebuild]:
 
 - fribidi
+- dev-vcs/git
 - harfbuzz
 - jansson
 - lame
@@ -42,7 +42,7 @@ Dependencies[^rebuild]:
 
 Install dependencies.
 
-    sudo emerge --ask fribidi harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis app-arch/lzma nasm opus speex x264
+    sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis app-arch/lzma nasm opus speex x264
 
 Gentoo is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
