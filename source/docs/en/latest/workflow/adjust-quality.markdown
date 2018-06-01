@@ -22,9 +22,9 @@ You can use the default setting for the `Preset` you selected, or adjust the qua
 
 ## Using the quality control
 
-Most of HandBrake's official `Presets` use the x264 video encoder and a constant quality setting between [RF](abbr:Rate Factor) 18 and 24. A lower RF number means *higher* quality.
+Most of HandBrake's official `Presets` use the x264 or x265 video encoders with a Constant Rate Factor, sometimes abbreviated CRF or simply RF. A lower RF number produces *higher* quality video, and a higher RF number produces *lower* quality video.
 
-To increase video quality, adjust the quality control toward the right. To reduce video quality, adjust the quality control toward the left.
+You can think of the RF control in HandBrake as a quality control. To increase video quality, adjust the control toward the right. To reduce video quality, adjust the control toward the left.
 
 <!-- .system-macos -->
 
