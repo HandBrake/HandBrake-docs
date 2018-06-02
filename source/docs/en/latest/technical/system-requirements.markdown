@@ -108,7 +108,7 @@ For any other distribution, you must [compile from source](../developer/build-li
 - OS X 10.7 Lion or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing MKV (Matroska) media files
 
-| MacOs Version             | Support Status | Last Version |
+| MacOS Version             | Support Status | Last Version |
 |---------------------------|----------------|--------------|
 | 10.13: "High Sierra"      | Supported      |              |
 | 10.12: "Sierra"           | Supported      |              |
@@ -129,7 +129,7 @@ For any other distribution, you must [compile from source](../developer/build-li
 - Microsoft .NET Framework 4.7.1 or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
-| MacOs Version             | Support Status | Last Version |
+| Windows Version           | Support Status | Last Version |
 |---------------------------|----------------|--------------|
 | Windows 10                | Supported      |              |
 | Windows 8.1               | Supported      |              |
