@@ -33,7 +33,7 @@ The [HandBrake Community Forums](https://forum.handbrake.fr/) are available 24/7
 
 If you need help or have encountered an error while using HandBrake, first take a look at our [Support Forums](https://forum.handbrake.fr/viewforum.php?f=16) or [Search](https://forum.handbrake.fr/search.php) using some words related to your questions. Doing this saves everyone from repeating answers to common questions. If you still haven't found an answer, feel free to start a new support request. Make sure to read [How To Request Support](https://forum.handbrake.fr/viewtopic.php?f=6&t=31236) before posting.
 
-Developers and keen users may report reproducible bugs on the [Bugs Forum](https://forum.handbrake.fr/viewforum.php?f=12). Please read the [bug reporting readme](https://forum.handbrake.fr/viewtopic.php?f=12&t=18906) before posting.
+Developers and keen users may report bugs on HandBrake's [issue tracker on GitHub](https://github.com/HandBrake/HandBrake/issues). Please make sure to fill out all requested information, including an [Activity Log](activity-log.html).
 
 ## IRC discussion channels
 
