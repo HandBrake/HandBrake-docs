@@ -17,13 +17,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Maintaining a HandBrake flatpak repository
 ==========================================
 
-## These instructions do not currently work
-
-The flatpak gnome runtime sdk does not currently include nasm.  HandBrake requires nasm during the build process, so following these instructions will result in a build error.  Hopefully the gnome runtime will get updated in the not too distant future to include nasm (and yasm as well).  The freedesktop runtime has already been updated to include these.
-
-See: [NASM flatpak issue](https://github.com/flatpak/freedesktop-sdk-images/issues/8)
-
-## Creating a new empty flatpak repository
+## Creating a new empty flatpak repository (Optional)
 This would be done once to set up the repo users update their HandBrake flatpaks from. This repo gets served via http to users.
 
 Initialize a new repository  
@@ -45,11 +39,11 @@ Install flathub repository.
 
 Install flatpak gnome SDK.
 
-    flatpak install flathub org.gnome.Sdk//3.26
+    flatpak install flathub org.gnome.Sdk//3.28
 
 Install flatpak gnome runtime platform.
 
-    flatpak install flathub org.gnome.Platform//3.26
+    flatpak install flathub org.gnome.Platform//3.28
 
 ## Create a new HandBrake flatpak bundle
 This may be done on a different machine than the repo.
@@ -64,7 +58,16 @@ Results will be in build/pkg/flatpak/
     cd build
     make pkg.create.flatpak
 
-## Importing flatpak bundles into the repository
+After the build completes, the flatpak packages for the GUI and CLI can be found in:
+
+    pkg/flatpak/*.flatpak
+
+## Install flatpak bundle
+To use the flatpak bundle directly instead of importing it into a repository and then installing from the repository:
+
+    flatpak install <flatpak-bundle>
+
+## Importing flatpak bundles into the repository (Optional)
 For each build, a GUI and CLI flatpak bundle is imported.
 
 Import a bundle  
