@@ -14,19 +14,8 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Maintaining a HandBrake flatpak repository
-==========================================
-
-## Creating a new empty flatpak repository (Optional)
-This would be done once to set up the repo users update their HandBrake flatpaks from. This repo gets served via http to users.
-
-Initialize a new repository
-
-    ostree init --mode=archive-z2 --repo=<repo-dir>
-
-Add the new repository to your flatpak remotes
-
-    flatpak --user remote-add --gpg-import=<pub-gpg-key> <repo-name> <repo-dir>
+Creating HandBrake flatpak bundles and repository
+=================================================
 
 ## Install dependencies
 Install flatpak and flatpak-builder
@@ -77,22 +66,18 @@ To use the flatpak bundle directly instead of importing it into a repository and
 
     flatpak install <flatpak-bundle>
 
-## Importing flatpak bundles into the repository (Optional)
-For each build, a GUI and CLI flatpak bundle is imported.
+## Add OSTree repo to flatpak repo list (Optional)
+This is only for test purposes currently.  Ultimately, we might want to establish an "official" repo location that we publish new bundles to.  Currently, the repo is just a product of the build and is not meant to be reused across builds.
 
-Import a bundle
+Add the new repository to your flatpak remotes
 
-    flatpak build-import-bundle <repo-dir> <flatpak-bundle>
+    flatpak --user remote-add <repo-name> <repo-dir>
 
-Update the flatpak repo index
+Of if the repos was generated without PGP signed commits
 
-    flatpak build-update-repo --generate-static-deltas <repo-dir>
+    flatpak --user remote-add --no-gpg-verify <repo-name> <repo-dir>
 
-Regenerate and gpg-sign ostree summary
-
-    ostree summary --repo=<repo-dir> --gpg-sign=<key-id> -u
-
-## Check repo and application
+## Check repo and application (Optional)
 List contents of the repo
 
     flatpak --user remote-ls <repo-name>
