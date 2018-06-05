@@ -20,11 +20,11 @@ Maintaining a HandBrake flatpak repository
 ## Creating a new empty flatpak repository (Optional)
 This would be done once to set up the repo users update their HandBrake flatpaks from. This repo gets served via http to users.
 
-Initialize a new repository  
+Initialize a new repository
 
     ostree init --mode=archive-z2 --repo=<repo-dir>
 
-Add the new repository to your flatpak remotes  
+Add the new repository to your flatpak remotes
 
     flatpak --user remote-add --gpg-import=<pub-gpg-key> <repo-name> <repo-dir>
 
@@ -48,12 +48,16 @@ Install flatpak gnome runtime platform.
 ## Create a new HandBrake flatpak bundle
 This may be done on a different machine than the repo.
 
-From the HandBrake source tree, update build versions by running configure  
+From the HandBrake source tree, update build versions by running configure
 
-    ./configure --prefix=/app --flatpak
+    ./configure --flatpak
 
-Build flatpaks for GUI and CLI.  
-Results will be in build/pkg/flatpak/  
+Build signed flatpak packages for GUI and CLI.
+
+    cd build
+    make pkg.create.flatpak PGP_ID=<optional signing key id>
+
+Or to build unsigned flatpak packages.
 
     cd build
     make pkg.create.flatpak
@@ -61,6 +65,12 @@ Results will be in build/pkg/flatpak/
 After the build completes, the flatpak packages for the GUI and CLI can be found in:
 
     pkg/flatpak/*.flatpak
+
+And an OSTree repository where the packages have been committed and signed with the above PGP ID can be found in:
+
+    pkg/flatpak/HandBrake-Flatpak.repo
+
+If PGP_ID is omitted, the OSTree commit will be unsigned.
 
 ## Install flatpak bundle
 To use the flatpak bundle directly instead of importing it into a repository and then installing from the repository:
@@ -70,23 +80,23 @@ To use the flatpak bundle directly instead of importing it into a repository and
 ## Importing flatpak bundles into the repository (Optional)
 For each build, a GUI and CLI flatpak bundle is imported.
 
-Import a bundle  
+Import a bundle
 
     flatpak build-import-bundle <repo-dir> <flatpak-bundle>
 
-Update the flatpak repo index  
+Update the flatpak repo index
 
     flatpak build-update-repo --generate-static-deltas <repo-dir>
 
-Regenerate and gpg-sign ostree summary  
+Regenerate and gpg-sign ostree summary
 
     ostree summary --repo=<repo-dir> --gpg-sign=<key-id> -u
 
 ## Check repo and application
-List contents of the repo  
+List contents of the repo
 
     flatpak --user remote-ls <repo-name>
 
-Install the application (if you wish to test it)  
+Install the application (if you wish to test it)
 
     flatpak --user install <repo-name> <app-name>
