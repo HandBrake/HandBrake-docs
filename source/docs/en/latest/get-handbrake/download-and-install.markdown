@@ -102,9 +102,8 @@ From the command line, install the Flathub repostitory.
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Install the Flatpak GNOME SDK and runtime platform[^flatpak-gnome-size].
+Install the Flatpak GNOME runtime platform.
 
-    flatpak install flathub org.gnome.Sdk//3.28
     flatpak install flathub org.gnome.Platform//3.28
 
 Download and install the HandBrake nightly build Flatpak bundles.
@@ -206,8 +205,6 @@ Continue to [Checking for updates](check-for-updates.html).
 [^third-party-utilities-1]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
 
 [^third-party-utilities-2]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
-
-[^flatpak-gnome-size]: The Flatpak GNOME SDK and runtime platform downloads are greater 500 MiB. Users with metered connections please take note.
 
 [^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
 
