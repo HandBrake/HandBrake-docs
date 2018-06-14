@@ -38,7 +38,7 @@ The HandBrake Team publishes [checksums for all downloads on handbrake.fr](https
 
 When installing on Linux using the official PPA, download integrity is verified automatically. Similarly, the integrity of source code managed using `git` is verified automatically.
 
-To verify an official source distribution tarball, consult your Linux distribution's documentation for instructions on how to verify checksums.
+To verify an official source distribution tarball or Flatpak bundle, consult your Linux distribution's documentation for instructions on how to verify checksums.
 
 <!-- /.system-linux -->
 
@@ -72,6 +72,8 @@ The HandBrake Team also publishes [OpenPGP signatures for all downloads on GitHu
 
 If you have installed a HandBrake package from your distribution or other third-party package repository, please remove it before proceeding. See the section, *Warning about broken third-party builds* on [Where to get HandBrake](where-to-get-handbrake.html) for more information.
 
+### Ubuntu PPAs
+
 The following instructions are for Ubuntu. They may also work on other `deb`-compatible distributions. For other Linux, please compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
 From the command line, add the [official releases PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) to your system.
@@ -91,6 +93,31 @@ Install HandBrake.
 Run `HandBrakeCLI` to use HandBrake on the command line.
 
 Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-click on the icon and select "Lock to Launcher" for easy access in the future.
+
+### Flatpak bundles
+
+[Nightly builds](https://handbrake.fr/nightly.php) for Linux are also available as Flatpak bundles. Install your distribution's `curl` and `flatpak` packages before running the following commands.
+
+From the command line, install the Flathub repostitory.
+
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Install the Flatpak GNOME SDK and runtime platform[^flatpak-gnome-size].
+
+    flatpak install flathub org.gnome.Sdk//3.28
+    flatpak install flathub org.gnome.Platform//3.28
+
+Download and install the HandBrake nightly build Flatpak bundles.
+
+    # HandBrake graphical interface
+    curl -O https://nightly.handbrake.fr/HandBrake-latest-master-x86_64.flatpak
+    flatpak install HandBrake-latest-master-x86_64.flatpak
+    
+    # HandBrake command line interface
+    curl -O https://nightly.handbrake.fr/HandBrakeCLI-latest-master-x86_64.flatpak
+    flatpak install HandBrakeCLI-latest-master-x86_64.flatpak
+
+Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run fr.handbrake.HandBrakeCLI` to use HandBrake on the command line.
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
@@ -179,6 +206,8 @@ Continue to [Checking for updates](check-for-updates.html).
 [^third-party-utilities-1]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
 
 [^third-party-utilities-2]: HandBrake is not associated with any third-party checksum utilities. Only use software from vendors you trust.
+
+[^flatpak-gnome-size]: The Flatpak GNOME SDK and runtime platform downloads are greater 500 MiB. Users with metered connections please take note.
 
 [^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
 
