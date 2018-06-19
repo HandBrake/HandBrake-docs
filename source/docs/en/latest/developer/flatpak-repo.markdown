@@ -26,13 +26,13 @@ Install flathub repository.
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Install flatpak gnome SDK.
+Install flatpak freedesktop SDK.
 
-    flatpak install flathub org.gnome.Sdk//3.28
+    flatpak install flathub org.freedesktop.Sdk//1.6
 
-Install flatpak gnome runtime platform.
+Install flatpak freedesktop runtime platform.
 
-    flatpak install flathub org.gnome.Platform//3.28
+    flatpak install flathub org.freedesktop.Platform//1.6
 
 ## Create a new HandBrake flatpak bundle
 This may be done on a different machine than the repo.
