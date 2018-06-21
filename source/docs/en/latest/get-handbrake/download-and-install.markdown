@@ -96,27 +96,40 @@ Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-
 
 ### Flatpak bundles
 
-[Nightly builds](https://handbrake.fr/nightly.php) for Linux are also available as Flatpak bundles. Install your distribution's `curl` and `flatpak` packages before running the following commands.
+[Flatpak](https://flatpak.org/) bundles of HandBrake for Linux are available on the [HandBrake website](https://handbrake.fr/) and [Flathub](https://flathub.org/).
+
+#### Release bundle
+
+Install your distribution's `flatpak` package before running the following commands.
 
 From the command line, install the Flathub repostitory.
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Install the Flatpak GNOME runtime platform.
+Install the latest HandBrake release from Flathub.
 
-    flatpak install flathub org.gnome.Platform//3.28
+    flatpak --user install flathub fr.handbrake.ghb
 
-Download and install the HandBrake nightly build Flatpak bundles.
+You can later update the HandBrake Flatpak to the latest release on Flathub by running the following.
 
-    # HandBrake graphical interface
+    flatpak --user update fr.handbrake.ghb
+
+Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run --command=HandBrakeCLI fr.handbrake.ghb` to use HandBrake on the command line.
+
+#### Nightly bundle
+
+Install your distribution's `curl` and `flatpak` packages before running the following commands.
+
+From the command line, install the Flathub repostitory.
+
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Download and install the latest HandBrake nightly build.
+
     curl -O https://nightly.handbrake.fr/HandBrake-latest-master-x86_64.flatpak
     flatpak install HandBrake-latest-master-x86_64.flatpak
-    
-    # HandBrake command line interface
-    curl -O https://nightly.handbrake.fr/HandBrakeCLI-latest-master-x86_64.flatpak
-    flatpak install HandBrakeCLI-latest-master-x86_64.flatpak
 
-Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run fr.handbrake.HandBrakeCLI` to use HandBrake on the command line.
+Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run --command=HandBrakeCLI fr.handbrake.ghb` to use HandBrake on the command line.
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
