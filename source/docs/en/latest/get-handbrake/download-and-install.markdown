@@ -98,8 +98,6 @@ Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-
 
 [Flatpak](https://flatpak.org/) bundles of HandBrake for Linux are available on the [HandBrake website](https://handbrake.fr/) and [Flathub](https://flathub.org/).
 
-#### Release bundle
-
 Install your distribution's `flatpak` package before running the following commands.
 
 From the command line, install the Flathub repostitory.
@@ -114,17 +112,7 @@ You can later update the HandBrake Flatpak to the latest release on Flathub by r
 
     flatpak --user update fr.handbrake.ghb
 
-Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run --command=HandBrakeCLI fr.handbrake.ghb` to use HandBrake on the command line.
-
-#### Nightly bundle
-
-Install your distribution's `curl` and `flatpak` packages before running the following commands.
-
-From the command line, install the Flathub repostitory.
-
-    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-Download and install the latest HandBrake nightly build.
+If you prefer HandBrake's nightly builds, download and install the latest available version.
 
     curl -O https://nightly.handbrake.fr/HandBrake-latest-master-x86_64.flatpak
     flatpak install HandBrake-latest-master-x86_64.flatpak

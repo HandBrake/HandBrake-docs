@@ -72,6 +72,8 @@ The HandBrake Team also publishes [OpenPGP signatures for all downloads on GitHu
 
 If you have installed a HandBrake package from your distribution or other third-party package repository, please remove it before proceeding. See the section, *Warning about broken third-party builds* on [Where to get HandBrake](where-to-get-handbrake.html) for more information.
 
+### Ubuntu PPAs
+
 The following instructions are for Ubuntu. They may also work on other `deb`-compatible distributions. For other Linux, please compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
 From the command line, add the [official releases PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) to your system.
@@ -91,6 +93,31 @@ Install HandBrake.
 Run `HandBrakeCLI` to use HandBrake on the command line.
 
 Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-click on the icon and select "Lock to Launcher" for easy access in the future.
+
+### Flatpak bundles
+
+[Flatpak](https://flatpak.org/) bundles of HandBrake for Linux are available on the [HandBrake website](https://handbrake.fr/) and [Flathub](https://flathub.org/).
+
+Install your distribution's `flatpak` package before running the following commands.
+
+From the command line, install the Flathub repostitory.
+
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Install the latest HandBrake release from Flathub.
+
+    flatpak --user install flathub fr.handbrake.ghb
+
+You can later update the HandBrake Flatpak to the latest release on Flathub by running the following.
+
+    flatpak --user update fr.handbrake.ghb
+
+If you prefer HandBrake's nightly builds, download and install the latest available version.
+
+    curl -O https://nightly.handbrake.fr/HandBrake-latest-master-x86_64.flatpak
+    flatpak install HandBrake-latest-master-x86_64.flatpak
+
+Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run --command=HandBrakeCLI fr.handbrake.ghb` to use HandBrake on the command line.
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
