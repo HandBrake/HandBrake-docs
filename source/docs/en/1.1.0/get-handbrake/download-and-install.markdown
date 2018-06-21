@@ -112,7 +112,7 @@ You can later update the HandBrake Flatpak to the latest release on Flathub by r
 
     flatpak --user update fr.handbrake.ghb
 
-If you prefer HandBrake's nightly builds, download and install the latest available version.
+If you prefer HandBrake's nightly builds, download and install the latest available version (requires your distribution's `curl` package).
 
     curl -O https://nightly.handbrake.fr/HandBrake-latest-master-x86_64.flatpak
     flatpak install HandBrake-latest-master-x86_64.flatpak
