@@ -85,3 +85,66 @@ List contents of the repo
 Install the application (if you wish to test it)
 
     flatpak --user install <repo-name> <app-name>
+
+# Maintaining a separate OSTree repository
+There are situations where you don't want to keep your repository on the same server as you built the flatpak on.  Rather than exporting the entire repo-dir that is built by flatpak-builder, you can import your bundles into a seperate OSTree repository.
+
+## Create a new empty repository
+
+```
+ostree init --mode=archive-z2 --reop=<repo-dir>
+```
+
+## Add flatpakrepo file to the repository
+This file is used by flatpak clients to add your repoitory to their list of remotes.
+
+Create a file named \<yourproject\>.flatpakrepo in \<repo-dir\>.  The format looks like this:
+
+```
+[Flatpak Repo]
+Title=Yourproject
+Url=https://dl.yourproject.org:8080/repo/
+Homepage=https://yourproject.org/
+Comment=Repository of yourproject
+Description=Repository of yourproject
+Icon=https://dl.yourproject.org/repo/logo.svg
+GPGKey=<base64 encoded raw public gpg>
+```
+
+Note that the port above is optional and defaults to 80. I use 8080 for test purposes.
+
+To base64 encode the gpg signing key
+
+```
+gpg2 --export <key-id> > key.gpg
+base64 --wrap=0 < key.gpg > key.base64
+```
+
+## Importing flatpak bundles into the repository
+
+```
+flatpak build-import-bundle --gpg-sign=<key-id> <repo-dir> <flatpak-bundle>
+```
+
+## Update repository summary information
+
+```
+flatpak build-update-repo --generate-static-deltas --gpg-sign=<key-id>
+```
+
+## Host your repository with a web server
+For test purposes, I just use pythons builtin web server.
+
+```
+python3 -m http.server 8080 --directory <repo-dir>
+```
+
+Note, requires python 3.7 or above.
+
+## Publish the location of \<yourproject\>.flatpakrepo
+Users can add your repository to their list of remotes with:
+
+```
+flatpak remote-add --if-not-exists yourproject https://dl.yourproject.org:8080/repo/yourproject.flatpakrepo
+```
+
