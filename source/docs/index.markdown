@@ -21,3 +21,4 @@ Welcome to the HandBrake Documentation.
 Documentation is currently available in the following languages:
 
 - [English](en/)
+- [German](de/)
