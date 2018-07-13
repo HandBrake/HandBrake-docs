@@ -106,7 +106,10 @@ You can access the current log by opening the Activity Log window in HandBrake.
 
 <!-- image, activity log window on linux -->
 
-On Linux, logs are stored at `Datadir/ghb`, where `Datadir` is the system default data directory (typically `$(HOME)/.config`).
+On Linux, logs are stored in one of two locations, where `~` is your home directory:
+
+- The `ghb` directory at your system's default data path (usually `~/.config`), for the official PPA and self-compiled builds
+- The `fr.handbrake.ghb/config/ghb` directory at your system's Flatpack data path (usually `~/.var/app`), for the official Flatpak bundle
 
 The full path to the log directory is shown at the top of the Activity Log window.
 
