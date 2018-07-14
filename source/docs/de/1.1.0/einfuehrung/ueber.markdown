@@ -63,7 +63,7 @@ Verwende HandBrake oder andere Applikationen nicht, um Material zu kopieren, wel
 
 <!-- .success -->
 
-Fahre fort zu [Wo bekomme ich HandBrake her](../get-handbrake/where-to-get-handbrake.html).
+Fahre fort zu [Wo bekomme ich HandBrake her](../get-handbrake/wo-bekomme-ich-handbrake-her.html).
 
 <!-- /.success -->
 

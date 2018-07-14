@@ -22,7 +22,7 @@ Dies ist die einzige *offizielle* Downloadquelle für HandBrake. Für mehr Infor
 
 ## Herunterladen
 
-*HandBrake läuft auf den meisten modernen Computern. Um sicher zu gehen, dass dein System die Mindestanforderungen erfüllt, prüfe die [Systemanforderungen](../technical/system-requirements.html) in der technischen Dokumentation.*
+*HandBrake läuft auf den meisten modernen Computern. Um sicher zu gehen, dass dein System die Mindestanforderungen erfüllt, prüfe die [Systemanforderungen](../technisches/system-requirements.html) in der technischen Dokumentation.*
 
 Um HandBrake auf deinen Computer herunterzuladen, klicke auf den Download Knopf auf der [HandBrake Webseite](https://handbrake.fr/). Du kannst außerdem eine Version für ein bestimmtes Betriebssystem auf der [Downloads Seite](https://handbrake.fr/downloads.php) auswählen.
 
@@ -125,7 +125,6 @@ Starte `flatpak run fr.handbrake.ghb` um HandBrake's grafische Benutzeroberfläc
 ## Installation auf Mac
 
 Sobald du HandBrake für Mac heruntergeladen hast, öffne das Disk Image in deinem Downloads Ordner. Dein Webbrowser (z.B.: Safari, Firefox oder Chrome) könnte das auch automatisch für dich machen. Ziehe danach die HandBrake Applikation in deinen Applikationsordner.
-Once you've downloaded HandBrake for Mac, open the disk image in your Downloads folder. Your web browser (e.g. Safari, Firefox, or Chrome) may do this for you automatically. Then drag the HandBrake application to your Applications folder.
 
 ![Opening HandBrake disk image](../../images/mac/download-file-1.1.0.png "Open the HandBrake disk image you downloaded. Your web browser may do this automatically.")
 
