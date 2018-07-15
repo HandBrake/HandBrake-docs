@@ -22,6 +22,3 @@ Aktuelle Version:
 
 - **[HandBrake 1.1.0-1.1.1](1.1.0/)**
 
-Nightly und Snapshots:
-
-- [HandBrake Latest](latest/)

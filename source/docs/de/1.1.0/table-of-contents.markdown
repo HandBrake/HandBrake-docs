@@ -50,7 +50,7 @@ Inhaltsverzeichnis
 
 ## Fortgeschrittene Workflows
 
-- [Die Warteschlange verwenden](erweitert/queue.html)
+- [Die Warteschlange verwenden](erweitert/warteschlange.html)
   *Richte mehrere Kodierungsjobs auf einmal ein*
 - [Punkt zu Punkt Kodierung](erweitert/point-to-point.html)
 - [Benutzerdefinierte Voreinstellungen](erweitert/custom-presets.html)
@@ -120,7 +120,7 @@ Inhaltsverzeichnis
 
 ## Technische Dokumentation
 
-- [Systemvoraussetzungen](technisches/system-requirements.html)
+- [Systemvoraussetzungen](technisches/systemanforderungen.html)
   *Stelle sicher, dass auf deinem System HandBrake laufen kann*
 - [Unterstützte Formate](technisches/quellformate.html)
   *Arten von Videodateien die HandBrake lesen kann*
@@ -157,15 +157,15 @@ Inhaltsverzeichnis
 ## Entwickler Dokumentation
 
 - HandBrake bauen
-  - [HandBrake für BSD bauen](developer/build-bsd.html)
-    - Abhängigkeiten unter [FreeBSD](developer/install-dependencies-freebsd.html) installieren
-  - [HandBrake für Linux bauen](developer/build-linux.html)
-    - Abhängigkeiten für [Arch Linux](developer/install-dependencies-arch.html) / [CentOS](developer/install-dependencies-centos.html) / [Debian](developer/install-dependencies-debian.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
+  - [HandBrake für BSD bauen](entwickler/build-bsd.html)
+    - Abhängigkeiten unter [FreeBSD](entwickler/freebsd-abhaengigkeiten-installieren.html) installieren
+  - [HandBrake für Linux bauen](entwickler/build-linux.html)
+    - Abhängigkeiten für [Arch Linux](entwickler/arch-abhaengigkeiten-installieren.html) / [CentOS](entwickler/centos-abhaengigkeiten-installieren.html) / [Debian](entwickler/debian-abhaengigkeiten-installieren.html) / [Fedora](entwickler/fedora-abhaengigkeiten-installieren.html) / [Gentoo](entwickler/genoo-abhaengigkeiten-installieren.html) / [Ubuntu](entwickler/ubuntu-abhaengigkeiten-installieren.html)
  installieren
-  - [HandBrake für Mac bauen](developer/build-mac.html)
-  - [HandBrake für Windows bauen](developer/build-windows.html)
+  - [HandBrake für Mac bauen](entwickler/build-mac.html)
+  - [HandBrake für Windows bauen](entwickler/build-windows.html)
 - Packaging HandBrake
-  - [Flatpak apps für Linux](developer/flatpak-repo.html)
+  - [Flatpak apps für Linux](entwickler/flatpak-repo.html)
     *Flatpak Applikationen kompatibel mit mehreren Linux distributionen*
 
 <!-- TODO: link to contributing guide -->
