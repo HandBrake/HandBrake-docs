@@ -6,7 +6,7 @@ Project_URL:     https://handbrake.fr/
 Project_Version: 1.1.0
 Language:        German
 Language_Code:   de
-Authors:         [ Bernhard Rader <b.rader@gmx.at> (raderb), Scott (s55), Bradley Sepos <bradley@bradleysepos.com> (BradleyS) ]
+Authors:         [ Bernhard Rader (raderb), Scott (s55), Bradley Sepos <bradley@bradleysepos.com> (BradleyS) ]
 Copyright:       2018 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0

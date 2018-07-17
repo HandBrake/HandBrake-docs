@@ -6,7 +6,7 @@ Project_URL:     https://handbrake.fr/
 Project_Version: 1.1.0
 Language:        German
 Language_Code:   de
-Authors:         [ Bernhard Rader <b.rader@gmx.at> (raderb) ]
+Authors:         [ Bernhard Rader (raderb) ]
 Copyright:       2018 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
@@ -97,11 +97,11 @@ Inhaltsverzeichnis
 
 ## Hilfe bekommen
 
-- [Fehlerbehebung bekannter Probleme](help/troubleshooting-common-issues.html)
+- [Fehlerbehebung bekannter Probleme](hilfe/fehlerbehebung-bekannter-probleme.html)
   *Was zu tun ist, falls etwas schiefläuft*
-- [Community Support](help/community-support.html)
+- [Community Support](hilfe/community-support.html)
   *Bekomme Hilfe von realen Menschen*
-- [Aktivitäten Logs](help/activity-log.html)
+- [Aktivitäten Logs](hilfe/aktivitaeten-log.html)
   *Aktivitäten Logs helfen dir bei Supportanfragen*
 
 

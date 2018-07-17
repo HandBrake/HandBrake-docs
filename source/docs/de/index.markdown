@@ -6,7 +6,7 @@ Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        German
 Language_Code:   de 
-Authors:         [ Bernhard Rader <b.rader@gmx.at> (raderb)]
+Authors:         [ Bernhard Rader (raderb)]
 Copyright:       2018 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
