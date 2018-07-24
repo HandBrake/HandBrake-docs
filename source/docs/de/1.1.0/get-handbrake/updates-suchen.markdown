@@ -33,13 +33,13 @@ Die Linux Version von HandBrake hat keine eingebaute Funktionalität zum Suchen 
 
 Nachdem du HandBrake installiert und mehr als ein Mal geöffnet hast, wird es dich fragen, ob du automatisch nach Updates suchen möchtest. Wähle `Suche automatisch` und Handbrake wird alle zukünftigen Updates einspielen sobald sie verfügbar sind.
 
-![Automatische Updates Fenster](../../images/mac/check-for-updates-automatically-1.1.0.png "Automatisch nach Updates suchen hilft dir up-to-date zu bleiben mit den neuesten Features und Bug fixes.")
+![Automatische Updates Fenster](../../../en/images/mac/check-for-updates-automatically-1.1.0.png "Automatisch nach Updates suchen hilft dir, mit den neuesten Features und Bug fixes auf dem aktuellen Stand zu sein.")
 
 Die Einstellung kann zu einem späteren Zeitpunkt in HandBrake's Einstellungen geändert werden. Dazu klickst du in dem Hauptmenü am oberen Bildschirmrand auf `HandBrake` und dann auf `Einstellungen`. Du findest die Option in dem `Allgemein` Bereich.
 
 Manuell nach Updates suchen ist einfach. Klicke dazu im Hauptmenü am oberen Bildschirmrand auf `Handbrake` und dann auf `Nach Updates suchen...`. Falls ein Update verfügbar ist, wird HandBrake dir anbieten es zu installieren.
 
-![Software update Fenster](../../images/mac/software-update-1.1.0.png "Falls ein Update verfügbar ist, wird HandBrake dir anbieten es für dich zu installieren.")
+![Software update Fenster](../../../en/images/mac/software-update-1.1.0.png "Falls ein Update verfügbar ist, wird HandBrake dir anbieten es für dich zu installieren.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->

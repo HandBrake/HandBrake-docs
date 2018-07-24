@@ -92,7 +92,7 @@ Installiere HandBrake.
 
 Starte `HandBrakeCLI` um HandBrake auf der Kommandozeile zu benutzen.
 
-Starte `ghb` um HandBrake's grafische Benutzeroberfläche zu starten. Wenn du möchtest kannst du auch einen Rechtsklick auf das Icon machen und "Im Starter behalten".
+Starte `ghb` um HandBrake's grafische Benutzeroberfläche zu starten. Wenn du möchtest kannst du auch einen Rechtsklick auf das Icon machen und "Im Starter behalten" auswählen um HandBrake direkt aus der Leiste starten zu können.
 
 ### Flatpak Bundles
 
@@ -126,9 +126,9 @@ Starte `flatpak run fr.handbrake.ghb` um HandBrake's grafische Benutzeroberfläc
 
 Sobald du HandBrake für Mac heruntergeladen hast, öffne das Disk Image in deinem Downloads Ordner. Dein Webbrowser (z.B.: Safari, Firefox oder Chrome) könnte das auch automatisch für dich machen. Ziehe danach die HandBrake Applikation in deinen Applikationsordner.
 
-![Opening HandBrake disk image](../../images/mac/download-file-1.1.0.png "Open the HandBrake disk image you downloaded. Your web browser may do this automatically.")
+![HandBrake Disk Image öffnen](../../../en/images/mac/download-file-1.1.0.png "Öffne das heruntergeladene Disk Image. Dein Webbrowser macht dies eventuell automatisch.")
 
-![Installing HandBrake on Mac](../../images/mac/install-1.1.0.png "Drag HandBrake to your Applications folder to install it on your Mac.")
+![HandBrake unter Mac installieren](../../../en/images/mac/install-1.1.0.png "Ziehe HandBrake auf deinen Applikationsordner um es auf deinen Mac zu installieren.")
 
 HandBrake ist jetzt installiert. Du kannst nun das Disk Image auswerfen und in den Papierkorb verschieben.
 
@@ -141,15 +141,15 @@ Wenn du den HandBrake Installer heruntergeladen hast, klicke einfach doppelt auf
 
 Sollte HandBrake bereits auf deinem Computer installiert sein, fragt dich der Installer ob er die vorhergehende Version zuerst löschen soll. Wähle `OK` um fortzufahren und HandBrake's Lizenz zu lesen.
 
-![HandBrake Windows installer: removing previous versions](../../images/windows/uninstall-1.0.0.png "The HandBrake installer will offer to remove previous versions before installing the current version.")
+![HandBrake Windows Installer: ältere Versionen entfernen](../../../en/images/windows/uninstall-1.0.0.png "Der HandBrake Installer wird dich fragen ob er die alte Version von HandBrake entfernen soll bevor er mit der Installation der aktuellen Version fortfährt.")
 
-![HandBrake Windows installer](../../images/windows/install-1-1.0.0.png "HandBrake's Windows installer.")
+![HandBrake Windows Installer](../../../en/images/windows/install-1-1.0.0.png "HandBrake's Windows Installer.")
 
 Als nächstes wird dich der Installer fragen, wo du HandBrake installieren möchtest. Falls du keinen spezifischen Grund hast, dies zu ändern, wähle `Install` um fortzufahren. Sobald die Installation abgeschlossen ist, kannst du `Finish` auswählen um den Installer zu beenden.
 
-![HandBrake for Windows installation progress](../../images/windows/install-2-1.0.0.png "The installer will report its progress.")
+![HandBrake für Windows Installations Fortschritt](../../../en/images/windows/install-2-1.0.0.png "Der Installer wird den Fortschritt anzeigen")
 
-![HandBrake for Windows installation complete](../../images/windows/install-finish-1.0.0.png "HandBrake is now installed.")
+![HandBrake für Windows Installation abgeschlossen](../../../en/images/windows/install-finish-1.0.0.png "HandBrake ist nun installiert.")
 
 Du findest Verknüpfungen um HandBrake zu starten am Desktop und im Startmenü.
 
@@ -159,7 +159,8 @@ Du findest Verknüpfungen um HandBrake zu starten am Desktop und im Startmenü.
 
 Du kannst HandBrake starten, indem du schnell doppelt auf das Cocktail & Ananas Icon klickst. Abhängig von deinen Systemeinstellungen kann auch ein einzelner Klick genügen.
 
-![HandBrake Icon](../../images/icon-1.1.0.png)![Doppelklick auf das HandBrake Icon](../../images/icon-click-1.1.0.gif)
+![HandBrake Icon](../../../en/images/icon-1.1.0.png)
+![Doppelklick auf das HandBrake Icon](../../../en/images/icon-click-1.1.0.gif)
 
 <!-- .continue -->
 

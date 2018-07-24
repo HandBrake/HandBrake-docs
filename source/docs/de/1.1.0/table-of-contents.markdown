@@ -57,7 +57,7 @@ Inhaltsverzeichnis
 - [Audio und Untertitel Standardeinstellungen](erweitert/audio-subtitle-defaults.html)
 - [Video Größenänderung](erweitert/resizing-video.html)
 - [Surround Sound beibehalten](erweitert/surround-sound.html)
-- [Untertitel hinzufügen](erweitert/subtitles.html)
+- [Untertitel hinzufügen](erweitert/untertitel.html)
 - [Kapitelmarkierungen hinzufügen](erweitert/chapter-markers.html)
 
 <!-- - [Managing Audio Tracks](erweitert/managing-audio.html) -->

@@ -20,7 +20,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 
 HandBrake ist ein quelloffener Video Transkodierer verfügbar für Linux, Mac und Windows. Jeder kann HandBrake *gratis* nutzen um Videos zu erstellen.
 
-HandBrake ist ein post-production Werkzeug. Sein Haupteinsatzzweck besteht in der Konvertierung von Videos in [unterstützen Formaten](../technical/source-formats.html)  nach MP4 oder MKV. Falls du Änderungen an deiner Quelldatei vornehmen möchtest, verwende bitte eine entsprechende [Videobearbeitungssoftware](https://de.wikipedia.org/wiki/Videoschnittsoftware).
+HandBrake ist ein post-production Werkzeug. Sein Haupteinsatzzweck besteht in der Konvertierung von Videos in [unterstützen Formaten](../technisches/source-formats.html)  nach MP4 oder MKV. Falls du Änderungen an deiner Quelldatei vornehmen möchtest, verwende bitte eine entsprechende [Videobearbeitungssoftware](https://de.wikipedia.org/wiki/Videoschnittsoftware).
 
 ## Was HandBrake kann
 

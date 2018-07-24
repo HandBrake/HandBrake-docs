@@ -26,7 +26,7 @@ Lass uns beginnen.
 
 Starte HandBrake mit einem Doppelklick auf das Cocktail & Ananas Icon. Abhängig von deinen Systemeinstellungen kann auch ein einzelner Klick genügen.
 
-![HandBrake icon](../../images/icon-1.1.0.png)![Doppelklick auf HandBrake icon](../../images/icon-click-1.1.0.gif)
+![HandBrake icon](../../../en/images/icon-1.1.0.png)![Doppelklick auf HandBrake icon](../../../en/images/icon-click-1.1.0.gif)
 
 ## Öffne ein ein bereits vorhandenes Video
 
@@ -36,14 +36,14 @@ Selektiere den `Öffne Quelldateien` Button in der Werkzeugleiste um deine Datei
 
 <!-- .system-linux -->
 
-![Suchen einer Videodatei zum öffnen](../../images/linux/open-source.png "Der Öffne Quelldateien Dialog ermöglicht es dir, deine Dateien nach einem Video zum Öffnen zu durchsuchen")
+![Suchen einer Videodatei zum öffnen](../../../en/images/linux/open-source.png "Der Öffne Quelldateien Dialog ermöglicht es dir, deine Dateien nach einem Video zum Öffnen zu durchsuchen")
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Suchen einer Videodatei zum öffnen](../../images/mac/open-source-dialog-1.1.0.png "Der Öffne Quelldateien Dialog erlaubt es dir deine Dateien nach einem Video zum Öffnen zu durchsuchen")
+![Suchen einer Videodatei zum öffnen](../../../en/images/mac/open-source-dialog-1.1.0.png "Der Öffne Quelldateien Dialog erlaubt es dir deine Dateien nach einem Video zum Öffnen zu durchsuchen")
 
-![Öffnen einer Videodatei per Drag-And-Drop](../../images/mac/open-source-drag-drop-1.1.0.png "Zusätzlich zum Öffne Quelldateien Dialog kannst du auch ein Video öffnen indem du es in das HandBrake Fenster ziehst.")
+![Öffnen einer Videodatei per Drag-And-Drop](../../../en/images/mac/open-source-drag-drop-1.1.0.png "Zusätzlich zum Öffne Quelldateien Dialog kannst du auch ein Video öffnen indem du es in das HandBrake Fenster ziehst.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -58,12 +58,12 @@ Manche `Quellen` können mehr als einen Videoclip enthalten, oder eine Kollektio
 
 <!-- .system-linux -->
 
-![Titel auswählen](../../images/linux/title-selection.png "Auswählen des zu verwendenden Videoclips")
+![Titel auswählen](../../../en/images/linux/title-selection.png "Auswählen des zu verwendenden Videoclips")
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Titel auswählen](../../images/mac/title-selection-1.1.0.png "Auswählen des zu verwendenden Videoclips")
+![Titel auswählen](../../../en/images/mac/title-selection-1.1.0.png "Auswählen des zu verwendenden Videoclips")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -82,12 +82,12 @@ Die Standard-Voreinstellung `Fast 1080p30` ist meistens eine gute Wahl, da es sc
 
 <!-- .system-linux -->
 
-![Eine Voreinstellung auswählen](../../images/linux/preset-selection.png "Voreinstellung sind Ein-Klick Einstellungen die dir Zeit sparen und dir dabei helfen, auf die Gerätekompatibilität zu achten.")
+![Eine Voreinstellung auswählen](../../../en/images/linux/preset-selection.png "Voreinstellung sind Ein-Klick Einstellungen die dir Zeit sparen und dir dabei helfen, auf die Gerätekompatibilität zu achten.")
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Eine Voreinstellung auswählen](../../images/mac/preset-selection-1.1.0.png "Voreinstellung sind Ein-Klick Einstellungen die dir Zeit sparen und dir dabei helfen, auf die Gerätekompatibilität zu achten.")
+![Eine Voreinstellung auswählen](../../../en/images/mac/preset-selection-1.1.0.png "Voreinstellung sind Ein-Klick Einstellungen die dir Zeit sparen und dir dabei helfen, auf die Gerätekompatibilität zu achten.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -104,7 +104,7 @@ HandBrake nennt den Dateinamen und den Speicherort deines neuen Videos das `Ziel
 
 `Speichern als` ist der Dateiname deines neuen Videos. Du kannst ihn durch Ändern des Textfeldes anpassen.
 
-`In` ist der Ort wo HandBrake das neue Video abspeichern wird. Durch einen Klick darauf kannst du den Speicherort verändern. 
+`In` ist der Ort wo HandBrake das neue Video abspeichern wird. Durch einen Klick darauf kannst du den Speicherort verändern.
 
 <!-- .system-linux -->
 
@@ -113,7 +113,7 @@ HandBrake nennt den Dateinamen und den Speicherort deines neuen Videos das `Ziel
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Speicherort auswählen](../../images/mac/destination-field-1.1.0.png "Der Speicherort gibt an, wo HandBrake dein neues Video ablegen wird.")
+![Speicherort auswählen](../../../en/images/mac/destination-field-1.1.0.png "Der Speicherort gibt an, wo HandBrake dein neues Video ablegen wird.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -135,9 +135,9 @@ Wähle den `Start` Knopf in der Werkzeugleiste aus, um dein neues Video zu erste
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Kodierungsfortschritt](../../images/mac/encode-progress-1.1.0.png "HandBrake stellt den Fortschritt während dem Kodieren dar.")
+![Kodierungsfortschritt](../../../en/images/mac/encode-progress-1.1.0.png "HandBrake stellt den Fortschritt während dem Kodieren dar.")
 
-![Kodierung Abgeschlossen Benachrichtigung](../../images/mac/encode-complete-1.1.0.png "HandBrake benachrichtigt wenn es mit dem Kodieren fertig ist.")
+![Kodierung Abgeschlossen Benachrichtigung](../../../en/images/mac/encode-complete-1.1.0.png "HandBrake benachrichtigt wenn es mit dem Kodieren fertig ist.")
 
 <!-- /.system-macos -->
 
@@ -145,7 +145,7 @@ HandBrake stellt den Fortschritt während des Vorganges laufend dar und wird dic
 
 <!-- .system-macos -->
 
-![Speicherort in Finder](../../images/mac/destination-finder-1.1.0.png "Dein Video liegt in dem von dir angegebenen Speicherort.")
+![Speicherort in Finder](../../../en/images/mac/destination-finder-1.1.0.png "Dein Video liegt in dem von dir angegebenen Speicherort.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->

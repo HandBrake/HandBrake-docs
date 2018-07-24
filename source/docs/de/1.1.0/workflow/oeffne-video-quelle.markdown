@@ -44,7 +44,7 @@ Standardmäßig präsentiert HandBrake den `Öffne Quelldateien` Dialog beim Sta
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
+![Hauptwerkzeugleiste](../../../en/images/mac/toolbar-1.1.0.png "Die Werkzeugleiste ermöglicht den Zugriff auf die am meisten genutzten Funktionen von HandBrake.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -64,9 +64,9 @@ Du kannst auch eine `Quelle` in HandBrake's Hauptfenster ziehen.
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Open Source dialog](../../images/mac/open-source-dialog-1.1.0.png "The Open Source dialog allows you to browse your files for a video to open.")
+![Öffne Quelle Dialog](../../../en/images/mac/open-source-dialog-1.1.0.png "Der Öffne Quelle Dialog erlaubt es dir deine Dateien nach einem Video zum Öffnen zu durchsuchen.")
 
-![Opening a video source via drag and drop](../../images/mac/open-source-drag-drop-1.1.0.png "In addition to the Open Source dialog, you may also open a video by dragging it to HandBrake's main window.")
+![Eine Videoquelle per drag and drop öffnen](../../../en/images/mac/open-source-drag-drop-1.1.0.png "Zusätzlich zum Öffne Quelle Dialog kannst du auch ein Video öffnen, indem du es in HandBrake's Hauptfenster ziehst.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -84,7 +84,7 @@ HandBrake wird deine Selektion scannen und nach kurzer Zeit wird das Hauptfenste
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Successfully opened source](../../images/mac/open-source-success-1.1.0.png "HandBrake's main window after sucessfully opening a source.")
+![Quelle erfolgreich geöffnet](../../../en/images/mac/open-source-success-1.1.0.png "HandBrake's Hauptfenster nachdem eine Quelle erfolgreich geöffnet wurde.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -102,7 +102,7 @@ Manche `Quellen` können mehr als eine Videospur enthalten, oder eine Kollektion
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Selecting a title](../../images/mac/title-selection-1.1.0.png "Some sources may contain more than one video clip. The title control lets you select which video clip you want to use.")
+![Einen Titel auswählen](../../../en/images/mac/title-selection-1.1.0.png "Manche Quellen enthalten mehr als einen Videclip. Über die Titelauswahl kann der gewünschte Videoclip ausgewählt werden.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->

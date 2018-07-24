@@ -26,29 +26,29 @@ Beginne, indem du eine [Quelle öffnest, einen Titel auswählst](../workflow/oef
 
 <!-- .system-macos -->
 
-![Adding an encode to the Queue](../../images/mac/add-to-queue-button-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![Einen Kodierungsauftrag der Warteschlange hinzufügen](../../../en/images/mac/add-to-queue-button-1.0.0.png "Wähle den Zur Warteschlange hinzufügen Knopf in der Werkzeugleiste um deinen Kodierungsauftrag der Warteschlange hinzuzufügen.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![HandBrake Werkzeugleiste unter Windows](../../../en/images/windows/toolbar-1.0.0.png "Wähle den Add to Queue Knopf in der Werkzeugleiste um deinen Kodierungsauftrag der Warteschlange hinzuzufügen.")
 
 <!-- /.system-windows -->
 
-Select the `Show Queue` button on the toolbar to see the queued encodes, or `Jobs`.
+Wähle den `Warteschlange anzeigen` Knopf in der Werkzeugleiste um die gelisteten Kodierungsaufträge (bzw. `Jobs` anzuzeigen).
 
 <!-- .system-macos -->
 
-![Opening the Queue window](../../images/mac/queue-button-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![Das Warteschlangenfenster öffnen](../../../en/images/mac/queue-button-1.0.0.png "Wähle den Warteschlange anzeigen Knopf in der Werkzeugleiste um das Warteschlangenfenster zu öffnen.")
 
-![Queue window on Mac](../../images/mac/queue-1.0.0.png "The Queue window lists pending Jobs.")
+![Warteschlangenfenster unter Mac](../../../en/images/mac/queue-1.0.0.png "Das Warteschlangenfenster listet die ausstehenden Jobs.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![HandBrake Werkzeugleiste unter Windows](../../../en/images/windows/toolbar-1.0.0.png "Wähle den Show Queue Knopf in der Werkzeugleiste um das Warteschlangenfenster zu öffnen.")
 
-![Queue window on Windows](../../images/windows/queue-1.0.0.png "The Queue window lists pending Jobs.")
+![Warteschlangenfenster unter Windows](../../../en/images/windows/queue-1.0.0.png "Das Warteschlangenfenster listet die ausstehenden Jobs.)
 
 <!-- /.system-windows -->
 
@@ -62,9 +62,9 @@ Wenn du die `Warteschlange` verwendest, kann es von Vorteil sein, mehrere `Auftr
 
 Auf Mac, öffne zuerst das `Einstellungen` Fenster aus dem `HandBrake` Menü. Stelle in dem `Allgemein` Bereich sicher, dass die `Automatische Benennung von Ausgabedateien` Einstellung aktiviert ist und der `Titel` Teil des `Format` Feldes ist.
 
-![Opening the Preferences window on Mac](../../images/mac/preferences-menu-1.0.0.png "Open the Preferences window using the HandBrake menu.")
+![Das Einstellungen Fenster unter Mac öffnen](../../../en/images/mac/preferences-menu-1.0.0.png "Öffne das Einstellungen Fenster mithilfe des HandBrake Menüs.")
 
-![Selecting the Automatically name output files setting](../../images/mac/preferences-auto-naming-1.0.0.png "Select Automatically name output files to ensure unique file names when adding multiple Titles to the Queue.")
+![Die Einstellung für die Automatische Benennung auswählen](../../../en/images/mac/preferences-auto-naming-1.0.0.png "Aktiviere die automatische Benennung von Ausgabedateien um sicherzustellen, dass eindeutige Namen für deine Jobs verwendet werden und diese sich somit nicht überschreiben.")
 
 Dies stellt sicher, dass jeder deiner `Aufträge` ein eindeutiger Dateiname zugewiesen wird und somit sich nicht überschreiben.
 
@@ -73,9 +73,9 @@ Dies stellt sicher, dass jeder deiner `Aufträge` ein eindeutiger Dateiname zuge
 
 Öffne unter Windows zuerst das `Einstellungen` Fenster im `Werkzeuge` Menü. Überprüfe in der `Ausgabedateien` Sektion, dass die `Automatische Benennung von Ausgabedateien` Einstellung aktiviert ist. Setze dann einen `Standardpfad` (wo deine neuen Videos erstellt werden) und stelle sicher, dass das Feld `Titel` in deinem `Dateiformat` Feld enthalten ist.
 
-![Opening the Preferences window on Windows](../../images/windows/preferences-menu-1.0.0.png "Open the Preferences window using the Tools menu.")
+![Einstellungen Fenster unter Windows öffnen](../../images/windows/preferences-menu-1.0.0.png "Open the Preferences window using the Tools menu.")
 
-![Selecting the Automatically name output files setting](../../images/windows/preferences-auto-naming-1.0.0.png "Set up Automatic File Naming to ensure unique file names when adding multiple Titles to the Queue.")
+![Die Einstellung für die Automatische Benennung auswählen](../../images/windows/preferences-auto-naming-1.0.0.png "Aktiviere die automatische Benennung von Ausgabedateien um sicherzustellen, dass eindeutige Namen für deine Jobs verwendet werden und diese sich somit nicht überschreiben.")
 
 Dies stellt sicher, dass jeder deiner `Jobs` einen eindeutigen Dateinamen erhält und sich nit gegenseitig überschreiben.
 
@@ -87,9 +87,9 @@ Zusätzlich kannst du einen Ordner mit mehreren Einzel-`Titel` Videos (exklusive
 
 <!-- .system-macos -->
 
-![Opening a folder containing multiple video Sources](../../images/mac/open-source-dialog-folder-1.0.0.png "The Open Source dialog allows you to select a folder containing multiple video files.")
+![Eine Verzeichnis mit mehreren Videoquellen öffnen](../../../en/images/mac/open-source-dialog-folder-1.0.0.png "Der Öffne Quelle Dialog erlaubt dir die Selektion eines Ordners mit mehreren Videodateien.")
 
-![Selecting a Title](../../images/mac/title-selection-1.1.0.png "The Title control lets you select which video clip you want to use.")
+![Einen Titel auswählen](../../../en/images/mac/title-selection-1.1.0.png "Die Titelauswahl erlaubt dir den gwünschten Titel zu selektieren.")
 
 <!-- /.system-macos -->
 <!-- .system-linux -->
@@ -101,9 +101,9 @@ Wähle unter Linux den `Mehrere hinzufügen` Punkt aus dem `Warteschlangen` Men�
 
 Wähle unter Mac den Menüpunkt `Füge Titel der Warteschlange hinzu...` aus dem `Datei` Menü und wähle dann die gewünschten `Titel` aus dem angezeigten Fenster aus.
 
-![Add Titles to Queue menu item](../../images/mac/add-titles-to-queue-menu-1.0.0.png "Select Add Titles to Queue... from the File menu to open a selection dialog.")
+![Füge Titel der Warteschlange hinzu](../../../en/images/mac/add-titles-to-queue-menu-1.0.0.png "Wähle Füge Titel der Warteschlange hinzu... aus dem Datei Menü um ein Fenster zur Auswahl zu öffnen.")
 
-![Selecting multiple Titles to add to the Queue](../../images/mac/add-titles-to-queue-1.0.0.png "Select the Titles you wish to encode from the Add Titles to Queue dialog.")
+![Mehrere Titel auswählen um sie zur Warteschlange hinzuzufügen](../../../en/images/mac/add-titles-to-queue-1.0.0.png "Wähle die gewünschten Titel aus dem Titel zur Warteschlange hinzufügen Dialog aus.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -120,12 +120,12 @@ Um Änderungen an `Jobs` in der `Warteschlange` vorzunehmen, öffne zuerst die `
 
 <!-- .system-macos -->
 
-![Opening the Queue window](../../images/mac/queue-button-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![Das Warteschlangenfenster öffnen](../../../en/images/mac/queue-button-1.0.0.png "Wähle den Warteschlange anzeigen Knopf in der Werkzeugleiste um das Warteschlangenfenster zu öffnen.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![HandBrake Werkzeugleiste unter Windows](../../../en/images/windows/toolbar-1.0.0.png "Wähle den Show Queue Knopf in der Werkzeugleiste um das Warteschlangenfenster zu öffnen.")
 
 <!-- /.system-windows -->
 
@@ -140,14 +140,14 @@ Falls du unter Linux Änderungen an einem `Job` machen willst der sich bereits i
 
 Falls du unter Mac Änderungen an einem `Job` machen willst der sich in der `Warteschlange` befindet, führe einen Ctrl+Klick oder Rechtsklick auf den `Job` aus und wähle `Bearbeiten`. Das Bearbeiten eines `Jobs` öffnet die `Quelle` in HandBrake's Hauptfenster und entfernt den `Job` aus der `Warteschlange`.
 
-![Editing an encode Job on Mac](../../images/mac/queue-edit-1.0.0.png "Control- or right-click the Job and select Edit to make changes.")
+![Einen Job unter Mac bearbeiten](../../../en/images/mac/queue-edit-1.0.0.png "Kontroll- oder Rechtsklicke den Job und wähle Bearbeiten um Änderungen vorzunehmen.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
 Falls du unter Windows Änderungen an einem `Job` machen willst der sich bereits in der `Warteschlange` befindet, wähle den Bearbeiten Knopf neben dem`Job` aus. Dies öffnet die `Quelle` in HandBrake's Hauptfenster und entfernt den `Job` aus der `Warteschlange`.
 
-![Editing an encode Job on Windows](../../images/windows/queue-1.0.0.png "Select the edit button, which looks like a sheet of paper, to make changes to a Job.")
+![Einen Job unter Windows bearbeiten](../../../en/images/windows/queue-1.0.0.png "Wähle den Edit Knopf der wie ein Blatt Papier aussieht um Änderungen am Job vorzunehmen.")
 
 <!-- /.system-windows -->
 
@@ -155,12 +155,12 @@ Wenn du deine Änderungen gemacht hast, füge den Job erneut deiner `Warteschlan
 
 <!-- .system-macos -->
 
-![Adding an encode to the Queue](../../images/mac/add-to-queue-button-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![Einen Kodierungsjob der Warteschlange hinzufügen](../../../en/images/mac/add-to-queue-button-1.0.0.png "Wähle den Zur Warteschlange hinzufügen Knopf in der Werkzeugleiste um deinen Kodierungsjob der Warteschlange hinzuzufügen.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![HandBrake Werkzeugleiste unter Windows](../../../en/images/windows/toolbar-1.0.0.png "Wähle den Zur Warteschlange hinzufügen Knopf in der Werkzeugleiste um deinen Kodierungsjob der Warteschlange hinzuzufügen.")
 
 <!-- /.system-windows -->
 
@@ -170,7 +170,7 @@ Wenn du bereit bist, wähle den `Start` Knopf im `Warteschlange` Fenster oder de
 
 <!-- .system-macos -->
 
-![Starting the Queue](../../images/mac/start-queue-button-1.0.0.png "The Start Queue button begins encoding the Jobs in the Queue.")
+![Die Warteschlange starten](../../../en/images/mac/start-queue-button-1.0.0.png "Der Warteschlange starten Knopf beginnt mit dem Kodieren der Jobs in der Warteschlange.")
 
 <!-- /.system-macos -->
 
