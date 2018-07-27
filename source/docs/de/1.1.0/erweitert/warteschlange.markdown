@@ -73,9 +73,9 @@ Dies stellt sicher, dass jeder deiner `Aufträge` ein eindeutiger Dateiname zuge
 
 Öffne unter Windows zuerst das `Einstellungen` Fenster im `Werkzeuge` Menü. Überprüfe in der `Ausgabedateien` Sektion, dass die `Automatische Benennung von Ausgabedateien` Einstellung aktiviert ist. Setze dann einen `Standardpfad` (wo deine neuen Videos erstellt werden) und stelle sicher, dass das Feld `Titel` in deinem `Dateiformat` Feld enthalten ist.
 
-![Einstellungen Fenster unter Windows öffnen](../../images/windows/preferences-menu-1.0.0.png "Open the Preferences window using the Tools menu.")
+![Einstellungen Fenster unter Windows öffnen](../../../en/images/windows/preferences-menu-1.0.0.png "Öffne das Preferences Fenster im Tools Menü.")
 
-![Die Einstellung für die Automatische Benennung auswählen](../../images/windows/preferences-auto-naming-1.0.0.png "Aktiviere die automatische Benennung von Ausgabedateien um sicherzustellen, dass eindeutige Namen für deine Jobs verwendet werden und diese sich somit nicht überschreiben.")
+![Die Einstellung für die Automatische Benennung auswählen](../../../en/images/windows/preferences-auto-naming-1.0.0.png "Aktiviere die automatische Benennung von Ausgabedateien um sicherzustellen, dass eindeutige Namen für deine Jobs verwendet werden und diese sich somit nicht überschreiben.")
 
 Dies stellt sicher, dass jeder deiner `Jobs` einen eindeutigen Dateinamen erhält und sich nit gegenseitig überschreiben.
 
@@ -174,4 +174,4 @@ Wenn du bereit bist, wähle den `Start` Knopf im `Warteschlange` Fenster oder de
 
 <!-- /.system-macos -->
 
-[^batch-scan-subdirectories]: Beim Öffnen mehrerer videos in einem Ordner ignoriert HandBrake andere zusätzliche Ordner darin. Stelle sicher, dass sich die Videos, die du öffnen möchtest, auf der obersten Ebene des ausgewählten Ordners befinden.
+[^batch-scan-subdirectories]: Beim Öffnen mehrerer Videos in einem Ordner ignoriert HandBrake andere zusätzliche Ordner darin. Stelle sicher, dass sich die Videos, die du öffnen möchtest, auf der obersten Ebene des ausgewählten Ordners befinden.

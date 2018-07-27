@@ -53,12 +53,12 @@ Inhaltsverzeichnis
 - [Die Warteschlange verwenden](erweitert/warteschlange.html)
   *Richte mehrere Kodierungsjobs auf einmal ein*
 - [Punkt zu Punkt Kodierung](erweitert/point-to-point.html)
-- [Benutzerdefinierte Voreinstellungen](erweitert/custom-presets.html)
-- [Audio und Untertitel Standardeinstellungen](erweitert/audio-subtitle-defaults.html)
-- [Video Größenänderung](erweitert/resizing-video.html)
+- [Benutzerdefinierte Voreinstellungen](erweitert/benutzerdefinierte-voreinstellungen.html)
+- [Audio und Untertitel Standardeinstellungen](erweitert/audio-untertitel-defaults.html)
+- [Video Größenänderung](erweitert/video-groessenaenderung.html)
 - [Surround Sound beibehalten](erweitert/surround-sound.html)
 - [Untertitel hinzufügen](erweitert/untertitel.html)
-- [Kapitelmarkierungen hinzufügen](erweitert/chapter-markers.html)
+- [Kapitelmarkierungen hinzufügen](erweitert/kapitelmarkierungen.html)
 
 <!-- - [Managing Audio Tracks](erweitert/managing-audio.html) -->
 <!-- - [Post-processing metadata](erweitert/post-processing.html) -->
@@ -111,12 +111,10 @@ Inhaltsverzeichnis
 
 <!-- - [About the cocktail and pineapple icon](ueber/the-icon.html)  -->
 
-
 ## Commandline Dokumentation
 
 - [CLI Guide](cli/cli-guide.html)
 - [Liste von CLI Optionen](cli/cli-options.html)
-
 
 ## Technische Dokumentation
 
@@ -124,7 +122,7 @@ Inhaltsverzeichnis
   *Stelle sicher, dass auf deinem System HandBrake laufen kann*
 - [Unterstützte Formate](technisches/quellformate.html)
   *Arten von Videodateien die HandBrake lesen kann*
-- [Offizielle Voreinstellungen](technisches/official-presets.html)
+- [Offizielle Voreinstellungen](technisches/offizielle-voreinstellungen.html)
   *Technische Zusammenfassung der offiziellen Voreinstellungen*
 - Video
   - [Video Kodierer](technisches/video-codecs.html)
@@ -147,12 +145,10 @@ Inhaltsverzeichnis
 - Filter
   - [Filter Zusammenfassung](technisches/filters-summary.html)
 
-<!--
 - [Web optimized](technisches/web-optimised.html)
 - [Video source type](erweitert/video-sources.html)
 - Advanced Filter Settings
 - Advanced preferences
--->
 
 ## Entwickler Dokumentation
 

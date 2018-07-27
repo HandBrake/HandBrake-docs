@@ -28,7 +28,7 @@ HandBrake nennt den Dateinamen und den Speicherort deines neuen Videos das `Ziel
 
 <!-- .system-macos -->
 
-![Selecting a destination](../../images/mac/destination-field-1.1.0.png "The Destination is where HandBrake will place your new video.")
+![Einen Speicherort auswählen](../../../en/images/mac/destination-field-1.1.0.png "Das Ziel ist der Ort wo HandBrake deine neuen Videos ablegt.")
 
 <!-- /.system-macos -->
 
@@ -40,7 +40,7 @@ Wähle den `Start` Knopf in der Werkzeugleiste um dein neues Video zu erstellen.
 
 <!-- .system-macos -->
 
-![Main window toolbar](../../images/mac/toolbar-1.1.0.png "The Toolbar provides easy access to HandBrake's most common functions.")
+![Werkzeugleiste im Hauptfenster](../../../en/images/mac/toolbar-1.1.0.png "Die Werkzeugleiste ermöglicht den einfachen Zugriff auf die meistgenutzen Funktionen von HandBrake.")
 
 <!-- /.system-macos -->
 
@@ -48,9 +48,9 @@ Ein Video zu kodieren benötigt sehr viel Computer Ressourcen und kann eine Weil
 
 <!-- .system-macos -->
 
-![Encode progress](../../images/mac/encode-progress-1.1.0.png "HandBrake reports its progress during encoding.")
+![Kodierungsfortschritt](../../../en/images/mac/encode-progress-1.1.0.png "HandBrake stellt den Fortschritt der Kodierung dar.")
 
-![Encoding complete alert](../../images/mac/encode-complete-1.1.0.png "HandBrake shows a notification when finished encoding.")
+![Benachrichtigung bei Fertigstellung der Kodierung](../../../en/images/mac/encode-complete-1.1.0.png "HandBrake zeigt eine Benachrichtigung an, wenn die Kodierung abgeschlossen ist.")
 
 <!-- /.system-macos -->
 
@@ -58,7 +58,7 @@ HandBrake zeigt den Fortschritt während des Kodierungsprozesses an und wird dic
 
 <!-- .system-macos -->
 
-![Destination in Finder](../../images/mac/destination-finder-1.1.0.png "Your new video is located at the Destination you specified.")
+![Ziel in Finder](../../../en/images/mac/destination-finder-1.1.0.png "Du kannst dein neues Video im angegebenen Ziel finden.")
 
 <!-- /.system-macos -->
 

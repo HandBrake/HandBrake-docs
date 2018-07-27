@@ -28,7 +28,7 @@ Du kannst dir den RF Regler in HandBrake wie einen Qualitätsregler vorstellen. 
 
 <!-- .system-macos -->
 
-![Verwendung des Reglers für konstante Qualität](../../images/mac/quality-control-1.1.0.png "Den Regler nach rechts verschieben erhöht die Qualität, nach Links verringert es die Qualität.")
+![Verwendung des Reglers für konstante Qualität](../../../en/images/mac/quality-control-1.1.0.png "Den Regler nach rechts verschieben erhöht die Qualität, nach Links verringert es die Qualität.")
 
 <!-- /.system-macos -->
 

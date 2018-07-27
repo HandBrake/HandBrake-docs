@@ -31,7 +31,7 @@ Sobald du eine `Quelle` geöffnet hast, wähle die `Voreinstellung` die am beste
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-![Voreinstellung auswählen](../../images/mac/preset-selection-1.1.0.png "Presets are one-click settings to save you time and help ensure compatibility with your devices.")
+![Voreinstellung auswählen](../../../en/images/mac/preset-selection-1.1.0.png "Voreinstellungen sind Ein-Klick Einstellungen die dir dabei helfen, die Kompatibilität mit deinen Geräten sicherzustellen.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->

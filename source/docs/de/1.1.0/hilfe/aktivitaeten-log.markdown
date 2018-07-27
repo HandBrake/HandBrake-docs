@@ -66,7 +66,7 @@ Hier sind ein paar Fragen die hilfreich in der Diagnose eines Problems mit HandB
 - Schließen sich und beenden die Threads von HandBrake ordentlich?
 - Treten in HandBrake während des Kodierens Fehler in der Speicherverwaltung (Memory leaks) auf?
 
-Offensichtlich wäre es sehr *arbeitsintensiv* diese Fragen Tausenden von Leuten, die nach Unterstützung für HandBrake suchen, zu fragen.
+Offensichtlich wäre es sehr *arbeitsintensiv* diese Fragen Tausenden von Leuten, die nach Unterstützung für HandBrake suchen, zu stellen.
 
 Einen Aktivitäten Log bereit zu stellen, ist ein einfacher Weg, um genau zu erklären was abläuft - und das ganze in einem Standardisierten Format. Dies hilft bei der Genauigkeit, beim Vermeiden von Verwirrungen/Verwechslungen und beschleunigt den Supportprozess um einiges, was jedem Zeit spart.
 
@@ -74,43 +74,43 @@ Trotz dem gerade dargestellten Grund gibt es ein paar Leute, die es ablehnen, ei
 
 Natürlich ist es das Ziel des HandBrake Team's jedem zu Helfen. Jedoch können wir nicht durch Magie erfahren was in deinem Computer abläuft. *Ohne einen Aktivitäten Log, kann das HandBrake Team keinen technischen Support geben.*
 
-## Privacy
+## Datenschutz
 
-Activity Logs are stored *only* on your computer. HandBrake does not send these logs anywhere else.
+Aktivitätenlogs werden *nu* auf deinem Computer gespeichert. HandBrake versendet diese Logs nicht.
 
-If you are concerned about retaining these logs indefinitely, feel free to delete them periodically. Be sure not to delete any other files important to HandBrake's operation.
+Falls du besorgt darüber bist, diese logs unendlich lange aufzubehalten kannst du diese periodisch manuell löschen. Passe dabei auf, dass du nicht wichtige Dateien löscht die für HandBrake wichtig sind.
 
-To provide an Activity Log for support, you must send us your log(s) manually. If you are concerned about private information an Activity Log may contain and reveal to others, feel free to read through the log and redact the parts that concern you before sharing.
+Um einen Aktivitätenlog für Supportanfragen bereit zu stellen, musst du uns deinen Log/deine Logs manuell zukommen lassen. Falls du besorgt über private Informationen bist, die ein Aktivitätenlog enhalten kann und für andere im Zuge der Anfrage sichtbar wird, kannst du dir den Log durchlesen und die Teile entfernen die du nicht teilen möchtest.
 
-## Sharing
+## Teilen
 
-To share your Activity Log publicly—for instance, to request technical support for HandBrake—you may wish to do one of the following:
+Um deinen Aktivitätenlog öffentlich zu teilen - zum Beispiel um technische Unterstützung für HandBrake zu bekommen - kannst du folgende Anbieter verwenden:
 
-- Copy and paste the text of the log to a Pastebin site such as [Pastebin.com](http://pastebin.com)
-- Upload the log file to a free temporary file sharing service such as [ExpireBox](http://expirebox.com/) or [WeTransfer](https://www.wetransfer.com/)
-- Upload the log file to a paid file sharing service such as [Box](https://www.box.com/), [Dropbox](https://www.dropbox.com), or [Jumpshare](https://jumpshare.com/)
+- Kopiere den Text des Logs auf eine Pastebin Seite wie [pastebin.com](http://pastebin.com)
+- Lade die Logdatei auf einen temporären gratis file sharing service wie [ExpireBox](http://expirebox.com/) oder [WeTransfer](https://www.wetransfer.com/) hoch
+- Lade die Logdatei auf einen bezahlten file shareing service wie [Box](https://www.box.com/), [Dropbox](https://www.dropbox.com), oder [Jumpshare](https://jumpshare.com/) hoch
 
-Once your log is available publicly, share its link with your intended recipient(s). When using a free service, be sure to note how long the service intends to store your log (typically 1-7 days).
+Sobald dein Log öffentlich verfügbar ist, teile den Link mit den beabsichtigten Empfängern. Wenn du einen gratis Service verwendest, schreibe bitte wie lange der Service deine Datei speichert (üblicherweise 1-7 Tage).
 
-Activity Logs may also be pasted directly into [new support requests on GitHub](https://github.com/HandBrake/HandBrake/issues/new).
+Aktivitätenlogs können auch direkt in einen [neuen support requests auf GitHub](https://github.com/HandBrake/HandBrake/issues/new) kopiert werden.
 
-## Where to find the logs
+## Wo die Logs zu finden sind
 
-**Note:** When scanning a new source during encoding, log messages from the scan may be intermixed with log messages from your currently running encode.
+**Beachte:** Wenn du eine neue Quelldatei öffnest während du ein Video kodierst, können sich die Log Nachrichten vermischen.
 
 <!-- .system-linux -->
 
-### Activity Logs on Linux
+### Aktivitätenlogs unter Linux
 
-You can access the current log by opening the Activity Log window in HandBrake.
+Du kannst den aktuellen Aktivitätenlog öffnen indem du das Aktivitätenlogfenster in HandBrake öffnest.
 
 <!-- image, activity log window on linux -->
 
-On Linux, logs are stored at `Datadir/ghb`, where `Datadir` is the system default data directory (typically `$(HOME)/.config`).
+Unter Linux werden die logs in `datadir/ghb` gespeichert wobei `datadir` das Standardverzeichnis des Systems ist (üblicherweise `$(HOME)/.config`).
 
-The full path to the log directory is shown at the top of the Activity Log window.
+Der absolute Pfad zu dem Log Verzeichnis wird am oberen Rand des Aktivitätenlog Fensters angezeigt.
 
-Inside, you may find the following files:
+In dem Verzeichnis findest du die folgenden Dateien:
 
 - `Activity.log.ProcessID`, where `ProcessID` is the process identifier given to HandBrake by Linux, contains information about the specific app session
 - Log files for individual encodes are located in the `EncodeLogs` subdirectory and named according to the pattern `Videoname Date Time.txt`; encode logs are retained until deleted manually
