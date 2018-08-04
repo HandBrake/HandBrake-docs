@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 HandBrake für BSD bauen
 ==========================
 
-Falls du ein HandBrake Paket von deiner Distribution oder einem anderen Drittanbieter Repository installiert hast, entferne es bitte bevor zu weitermachst. Siehe den Abschnitt *Warnung über nicht funktionierende Drittanbieter Builds* in [Wo bekomme ich HandBrake her](../get-handbrake/wo-bekomme-ich-handbrake-her.html) für mehr Informationen.
+Falls du ein HandBrake Paket von deiner Distribution oder einem anderen Drittanbieter Repository installiert hast, entferne es bitte bevor zu weitermachst. Siehe den Abschnitt *Warnung über nicht funktionierende Drittanbieter Builds* in [Wo bekomme ich HandBrake her](../get-handbrake/where-to-get-handbrake.html) für mehr Informationen.
 
 ## Abhängigkeiten installieren
 

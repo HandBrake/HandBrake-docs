@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Öffnen einer Video Quelle
 ======================
 
-Sobald du [HandBrake heruntergeladen und installiert](../get-handbrake/herunterladen-und-installieren.html) hast, ist es Zeit ein Video zum Kodieren zu öffnen.
+Sobald du [HandBrake heruntergeladen und installiert](../get-handbrake/download-and-install.html) hast, ist es Zeit ein Video zum Kodieren zu öffnen.
 
 ## Über Videoquellen
 
@@ -29,9 +29,9 @@ In HandBrake's Jargon ist das Video das du bereits hast die `Quelle`. Einer von 
 - Übertragene TV Aufnahmen (Broadcasts)
 - Digitale Aufnahmen von VHS, Beta, Video8/Hi8, LaserDisc, und andere Analoge Quellen
 
-Du kannst mehr über die [Quellformate](../technisches/quellformate.html) in der Technischen Dokumentation erfahren.
+Du kannst mehr über die [Quellformate](../technical/source-formats.html) in der Technischen Dokumentation erfahren.
 
-**Beachte:** HandBrake bricht oder umgeht keinen [Kopierschutz](https://de.wikipedia.org/wiki/Kopierschutz) irgendeiner Art. Es funktioniert nicht mit Videodateien die [[DRM](https://de.wikipedia.org/wiki/Digitale_Rechteverwaltung)](abbr:Digital Rights Management) verwenden. Siehe [Über HandBrake](../einfuehrung/ueber.html) für mehr Informationen über was HandBrake *kann* und was es *nicht kann*.
+**Beachte:** HandBrake bricht oder umgeht keinen [Kopierschutz](https://de.wikipedia.org/wiki/Kopierschutz) irgendeiner Art. Es funktioniert nicht mit Videodateien die [[DRM](https://de.wikipedia.org/wiki/Digitale_Rechteverwaltung)](abbr:Digital Rights Management) verwenden. Siehe [Über HandBrake](../introduction/about.html) für mehr Informationen über was HandBrake *kann* und was es *nicht kann*.
 
 ## Arten eine Videoquelle zu öffnen
 
@@ -119,7 +119,7 @@ Super! An diesem Punkt weiß HandBrake welches Video du verwenden möchtest.
 
 <!-- .success -->
 
-Fahre fort zu [Voreinstellung auswählen](voreinstellung-auswaehlen.html).
+Fahre fort zu [Voreinstellung auswählen](select-preset.html).
 
 <!-- /.success -->
 <!-- .fail -->

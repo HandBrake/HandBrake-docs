@@ -20,7 +20,7 @@ Willkommen bei der deutschsprachigen Dokumentation für HandBrake 1.1.0 bis 1.1.
 
 Hier sind ein paar Links damit du gleich loslegen kannst:
 
-- Um sich schnellstmöglichst in HandBrake einzuarbeiten, besuche unseren [Quick Start](einfuehrung/quick-start.html)
+- Um sich schnellstmöglichst in HandBrake einzuarbeiten, besuche unseren [Quick Start](introduction/quick-start.html)
 - Um sich ein eine Kopie von HandBrake zu holen (*es ist gratis!*), siehe [HandBrake herunterladen und installieren](get-handbrake/download-and-install.html)
 - Ein detailreicherer Guide zur Verwendung von HandBrake beginnt mit [Öffnen einer Video Quelle](workflow/open-video-source.html)
 - Hast du Probleme? Schaue hier nach: [Fehlerbehebung von bekannten Problemen](help/troubleshooting-common-issues.html)

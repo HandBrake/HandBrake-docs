@@ -30,11 +30,11 @@ Folge den Anweisungen deiner Distribution um HandBrake zu deinem Applikationslau
 
 Probiere die folgenden Schritte aus bis HandBrake wieder funktioniert.
 
-1. Stelle sicher, dass du eine offizielle HandBrake Version hast und nicht eine kaputte Drittanbieter Version; siehe [Wo bekomme ich HandBrake her](../get-handbrake/wo-bekomme-ich-handbrake-her.html).
+1. Stelle sicher, dass du eine offizielle HandBrake Version hast und nicht eine kaputte Drittanbieter Version; siehe [Wo bekomme ich HandBrake her](../get-handbrake/where-to-get-handbrake.html).
 2. Starte deinen Computer neu
 3. Lösche die Voreinstellungen und Konfigurationsdaten von HandBrake (setze für username deinen eigenen Namen ein)
     - /home/username/.config/ghb
-4. Installiere die aktuellste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/herunterladen-und-installieren.html).
+4. Installiere die aktuellste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/download-and-install.html).
 
 Falls diese Schritte nicht deine Fehler beheben, kann dir vielleicht jemand via den [Community support](community-support.html) Channels helfen.
 
@@ -47,7 +47,7 @@ Falls diese Schritte nicht deine Fehler beheben, kann dir vielleicht jemand via 
 
 HandBrake Versionen vor 1.1.0 und nightly Builds sind nicht mit einem Apple Developer Zertifikat signiert. Standardmäßig verhindert Gatekeeper unsignierte Applikationen vom Starten auf deinem Mac.
 
-Mehr Informationen wie man HandBrake erfolgreich startet ist verfügbar unter [HandBrake herunterladen und installieren](../get-handbrake/herunterladen-und-installieren.html).
+Mehr Informationen wie man HandBrake erfolgreich startet ist verfügbar unter [HandBrake herunterladen und installieren](../get-handbrake/download-and-install.html).
 
 ### Allgemeine Fehlerbehebung
 
@@ -56,7 +56,7 @@ Probiere die folgenden Schritte bis HandBrake wieder funktioniert.
 1. Starte deinen Computer neu
 2. Lösche deine HandBrake Voreinstellungen und Konfigurationsdaten (setze für username deinen eigenen Namen ein)
     - /Users/username/Library/Application Support/HandBrake
-3. Installiere die neueste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/herunterladen-und-installieren.html).
+3. Installiere die neueste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/download-and-install.html).
 
 Falls diese Schritte nicht deinen Fehler beheben, kann dir vielleicht jemand via den [Community support](community-support.html) Channels helfen.
 
@@ -87,7 +87,7 @@ Probiere die folgenden Schritte bis HandBrake wieder funktioniert.
     - Windows 7 und neuer
       - C:\Users\username\AppData\Roaming\HandBrake
       - C:\Users\username\AppData\Local\HandBrake
-3. Installiere die neueste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/herunterladen-und-installieren.html).
+3. Installiere die neueste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/download-and-install.html).
 
 Falls diese Schritte nicht deinen Fehler beheben, kann dir vielleicht jemand via den [Community support](community-support.html) Channels helfen.
 

@@ -18,11 +18,11 @@ HandBrake herunterladen und installieren
 
 HandBrake ist für Linux, Mac und Windows auf der [HandBrake Webseite](https://handbrake.fr/) verfügbar.
 
-Dies ist die einzige *offizielle* Downloadquelle für HandBrake. Für mehr Informationen, siehe [Wo kann ich HandBrake herunterladen](wo-bekomme-ich-handbrake-her.html).
+Dies ist die einzige *offizielle* Downloadquelle für HandBrake. Für mehr Informationen, siehe [Wo kann ich HandBrake herunterladen](where-to-get-handbrake.html).
 
 ## Herunterladen
 
-*HandBrake läuft auf den meisten modernen Computern. Um sicher zu gehen, dass dein System die Mindestanforderungen erfüllt, prüfe die [Systemanforderungen](../technisches/system-requirements.html) in der technischen Dokumentation.*
+*HandBrake läuft auf den meisten modernen Computern. Um sicher zu gehen, dass dein System die Mindestanforderungen erfüllt, prüfe die [Systemanforderungen](../technical/system-requirements.html) in der technischen Dokumentation.*
 
 Um HandBrake auf deinen Computer herunterzuladen, klicke auf den Download Knopf auf der [HandBrake Webseite](https://handbrake.fr/). Du kannst außerdem eine Version für ein bestimmtes Betriebssystem auf der [Downloads Seite](https://handbrake.fr/downloads.php) auswählen.
 
@@ -70,7 +70,7 @@ Das HandBrake Team veröffentlich außerdem [OpenPGP Signaturen für alle Downlo
 
 ## Installieren unter Linux
 
-Falls du bereits ein HandBrake Paket von deiner Distribution oder einem anderen Drittanbieter installiert hast, deinstalliere dies bitte bevor du fortfährst. Siehe den Abschnitt *Warnung über nicht funktionierende Drittanbieter Builds* auf der [Wo kann ich HandBrake herunterladen](wo-bekomme-ich-handbrake-her.html) Seite für mehr Informationen.
+Falls du bereits ein HandBrake Paket von deiner Distribution oder einem anderen Drittanbieter installiert hast, deinstalliere dies bitte bevor du fortfährst. Siehe den Abschnitt *Warnung über nicht funktionierende Drittanbieter Builds* auf der [Wo kann ich HandBrake herunterladen](where-to-get-handbrake.html) Seite für mehr Informationen.
 
 ### Ubuntu PPAs
 
@@ -168,7 +168,7 @@ Du kannst HandBrake starten, indem du schnell doppelt auf das Cocktail & Ananas 
 
 <!-- .success -->
 
-Fahre fort zu [Updates suchen](updates-suchen.html).
+Fahre fort zu [Updates suchen](check-for-updates.html).
 
 <!-- /.success -->
 

@@ -18,7 +18,7 @@ Quick Start
 
 HandBrake nimmt Videos die du bereits hast und erstellt neue, welche auf deinem Handy, Tablet, Fernseher, Spielekonsole, Computer oder Browser laufen - nahezu alles was moderne Videoformate unterstützt.
 
-Dieser Quick Start Guide setzt voraus, dass du bereits HandBrake heruntergeladen und installiert hast. Falls du HandBrake noch nicht hast, sehe dir bitte [HandBrake herunterladen und installieren](../get-handbrake-download-and-install.html) an.
+Dieser Quick Start Guide setzt voraus, dass du bereits HandBrake heruntergeladen und installiert hast. Falls du HandBrake noch nicht hast, sehe dir bitte [HandBrake herunterladen und installieren](../get-handbrake/download-and-install.html) an.
 
 Lass uns beginnen.
 
@@ -162,7 +162,7 @@ Herzlichen Glückwunsch! Du hast soeben dein erstes Video mit HandBrake erstellt
 
 <!-- .success -->
 
-Fahre fort zu [Über HandBrake](ueber.html).
+Fahre fort zu [Über HandBrake](about.html).
 
 <!-- /.success -->
 <!-- .fail -->

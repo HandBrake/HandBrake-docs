@@ -24,7 +24,7 @@ HandBrake ist quelloffene Software lizensiert unter der GNU General Public Licen
 
 <!-- .system-linux -->
 
-Ubuntu Linux user sollten das [offizielle Release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) oder das [offizielle Snapshot PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots) installieren. Das PPA kann auch auf anderen Debian-kompatiblen Distributionen funktionieren, dies ist aber nicht getestet. Nutzer anderer BSD- und *nix-ähnlichen Distributionen können den Quellcode kompilieren.
+Ubuntu Linux user sollten das [offizielle Release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) oder das [offizielle Snapshot PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots) installieren. Das PPA kann auch auf anderen Debian-kompatiblen Distributionen funktionieren, dies ist aber nicht getestet. Nutzer anderer BSD- und \*nix-ähnlichen Distributionen können den Quellcode kompilieren.
 
 <!-- /.system-linux -->
 
@@ -70,7 +70,7 @@ Linux Nutzer sollten das [offizielle Release PPA](https://launchpad.net/~stebbin
 
 <!-- .success -->
 
-Fahre fort zu [HandBrake herunterladen und installieren](herunterladen-und-installieren.html).
+Fahre fort zu [HandBrake herunterladen und installieren](download-and-install.html).
 
 <!-- /.success -->
 

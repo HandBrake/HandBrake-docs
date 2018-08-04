@@ -16,18 +16,18 @@ License_URL:     https://handbrake.fr/docs/license.html
 HandBrake für Linux bauen
 ============================
 
-Bitte entferne - falls vorhanden - ein bereits installiertes HandBrake Paket von deiner Distribution oder einem Drittanbieter Repository, bevor du weitermachst. Siehe die Sektion *Warnung über nicht funktionierende Drittanbieter Builds* auf der [Wo bekomme ich HandBrake her](../get-handbrake/wo-bekomme-ich-handbrake-her.html) Seite für mehr Informationen. 
+Bitte entferne - falls vorhanden - ein bereits installiertes HandBrake Paket von deiner Distribution oder einem Drittanbieter Repository, bevor du weitermachst. Siehe die Sektion *Warnung über nicht funktionierende Drittanbieter Builds* auf der [Wo bekomme ich HandBrake her](../get-handbrake/where-to-get-handbrake.html) Seite für mehr Informationen.
 
 ## Abhänigkeiten installieren
 
 Anweisungen zum Installieren von Abhängigkeiten sind für die folgenden Distributionen verfügbar.
 
-- [Arch](arch-abhängigkeiten-installieren.html)
-- [CentOS](centos-abhängigkeiten-installieren.html)
-- [Debian](debian-abhängigkeiten-installieren.html)
-- [Fedora](fedora-abhängigkeiten-installieren.html)
-- [Gentoo](gentoo-abhängigkeiten-installieren.html)
-- [Ubuntu](ubuntu-abhängigkeiten-installieren.html)
+- [Arch](install-dependencies-arch.html)
+- [CentOS](install-dependencies-centos.html)
+- [Debian](install-dependencies-debian.html)
+- [Fedora](install-dependencies-fedora.html)
+- [Gentoo](install-dependencies-gentoo.html)
+- [Ubuntu](install-dependencies-ubuntu.html)
 
 ## HandBrake bauen
 

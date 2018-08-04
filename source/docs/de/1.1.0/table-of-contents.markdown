@@ -18,50 +18,50 @@ Inhaltsverzeichnis
 
 ## Einführung
 
-- [Quick Start](einfuehrung/quick-start.html)
+- [Quick Start](introduction/quick-start.html)
   *Lernen in ein paar Minuten dein erstes Video zu erstellen*
-- [Über HandBrake](einfuehrung/ueber.html)
+- [Über HandBrake](introduction/about.html)
   *Was ist HandBrake, was kann es, und was kann es nicht*
 
 
 ## HandBrake herunterladen
 
-- [Wo kann ich HandBrake herunterladen](get-handbrake/wo-bekomme-ich-handbrake-her.html)
+- [Wo kann ich HandBrake herunterladen](get-handbrake/where-to-get-handbrake.html)
   *Die offiziell unterstütze Version*
-- [HandBrake herunterladen und installieren](get-handbrake/herunterladen-und-installieren.html)
+- [HandBrake herunterladen und installieren](get-handbrake/download-and-install.html)
   *Wie du HandBrake auf deinen Computer bringst*
-- [Nach Updates suchen](get-handbrake/updates-suchen.html)
+- [Nach Updates suchen](get-handbrake/check-for-updates.html)
   *Bleib up-to-date mit den neuesten Features und Fehlerbehebungen*
 
 
 ## Videos erstellen
 
-- [Öffnen einer Video Quelldatei](workflow/oeffne-video-quelle.html)
+- [Öffnen einer Video Quelldatei](workflow/open-video-source.html)
   *Wie du deine Videos in HandBrake importierst*
-- [Eine Voreinstellung auswählen](workflow/voreinstellung-auswaehlen.html)
+- [Eine Voreinstellung auswählen](workflow/select-preset.html)
   *Zugeschnittene Einstellungen für sofortige Kompatibilität mit vielen Geräten*
-- [Qualitätseinstellungen](workflow/qualitaet-einstellen.html)
+- [Qualitätseinstellungen](workflow/adjust-quality.html)
   *Einfach die visuelle Qualität erhöhen oder Dateigrößen reduzieren*
-- [Deine Einstellungen testen](workflow/einstellungen-testen.html)
+- [Deine Einstellungen testen](workflow/preview-settings.html)
   *Sehe wie dein Video in einer kurzen Zeitspanne aussehen würde*
-- [Kodierung starten](workflow/kodierung-starten.html)
+- [Kodierung starten](workflow/start-encoding.html)
   *Starte die Kodierung deines neuen Videos mit einem Klick*
 
 
 ## Fortgeschrittene Workflows
 
-- [Die Warteschlange verwenden](erweitert/warteschlange.html)
+- [Die Warteschlange verwenden](advanced/queue.html)
   *Richte mehrere Kodierungsjobs auf einmal ein*
-- [Punkt zu Punkt Kodierung](erweitert/point-to-point.html)
-- [Benutzerdefinierte Voreinstellungen](erweitert/benutzerdefinierte-voreinstellungen.html)
-- [Audio und Untertitel Standardeinstellungen](erweitert/audio-untertitel-defaults.html)
-- [Video Größenänderung](erweitert/video-groessenaenderung.html)
-- [Surround Sound beibehalten](erweitert/surround-sound.html)
-- [Untertitel hinzufügen](erweitert/untertitel.html)
-- [Kapitelmarkierungen hinzufügen](erweitert/kapitelmarkierungen.html)
+- [Punkt zu Punkt Kodierung](advanced/point-to-point.html)
+- [Benutzerdefinierte Voreinstellungen](advanced/custom-presets.html)
+- [Audio und Untertitel Standardeinstellungen](advanced/audio-subtitle-defaults.html)
+- [Video Größenänderung](advanced/resizing-video.html)
+- [Surround Sound beibehalten](advanced/surround-sound.html)
+- [Untertitel hinzufügen](advanced/subtitles.html)
+- [Kapitelmarkierungen hinzufügen](advanced/chapter-markers.html)
 
-<!-- - [Managing Audio Tracks](erweitert/managing-audio.html) -->
-<!-- - [Post-processing metadata](erweitert/post-processing.html) -->
+<!-- - [Managing Audio Tracks](advanced/managing-audio.html) -->
+<!-- - [Post-processing metadata](advanced/post-processing.html) -->
 
 
 <!-- ## Restoration and enhancement
@@ -85,31 +85,31 @@ Inhaltsverzeichnis
 
 <!-- ## Advanced workflows part 2
 
-- [Understanding source types](erweitert/video-sources.html)
-- [Selecting a container format and encoders](erweitert/containers.html)
-- [Selecting a video angle](erweitert/video-angles.html)
-- [Working with frame rates](erweitert/frame-rates.html)
-- [Adjusting audio quality](erweitert/audio-quality.html)
-- [Progressive download support](erweitert/web-optimised.html)
-- [Compatibility with legacy devices](erweitert/old-ipod-support.html)
-- [Automatically naming files](erweitert/automatic-file-naming.html)
+- [Understanding source types](advanced/video-sources.html)
+- [Selecting a container format and encoders](advanced/containers.html)
+- [Selecting a video angle](advanced/video-angles.html)
+- [Working with frame rates](advanced/frame-rates.html)
+- [Adjusting audio quality](advanced/audio-quality.html)
+- [Progressive download support](advanced/web-optimised.html)
+- [Compatibility with legacy devices](advanced/old-ipod-support.html)
+- [Automatically naming files](advanced/automatic-file-naming.html)
 -->
 
 ## Hilfe bekommen
 
-- [Fehlerbehebung bekannter Probleme](hilfe/fehlerbehebung-bekannter-probleme.html)
+- [Fehlerbehebung bekannter Probleme](help/troubleshooting-common-issues.html)
   *Was zu tun ist, falls etwas schiefläuft*
-- [Community Support](hilfe/community-support.html)
+- [Community Support](help/community-support.html)
   *Bekomme Hilfe von realen Menschen*
-- [Aktivitäten Logs](hilfe/aktivitaeten-log.html)
-  *Aktivitäten Logs helfen dir bei Supportanfragen*
+- [Aktivitäten Logs](help/activity-log.html)
+  *Aktivitäten Logs helfen dir, besseren Support zu erhalten*
 
 
 ## HandBrake Geschichte
 
-- [Projekt Historie](ueber/geschichte.html)
+- [Projekt Historie](about/history.html)
 
-<!-- - [About the cocktail and pineapple icon](ueber/the-icon.html)  -->
+<!-- - [About the cocktail and pineapple icon](about/the-icon.html)  -->
 
 ## Commandline Dokumentation
 
@@ -118,50 +118,52 @@ Inhaltsverzeichnis
 
 ## Technische Dokumentation
 
-- [Systemvoraussetzungen](technisches/systemanforderungen.html)
+- [Systemvoraussetzungen](technical/system-requirements.html)
   *Stelle sicher, dass auf deinem System HandBrake laufen kann*
-- [Unterstützte Formate](technisches/quellformate.html)
+- [Unterstützte Formate](technical/source-formats.html)
   *Arten von Videodateien die HandBrake lesen kann*
-- [Offizielle Voreinstellungen](technisches/offizielle-voreinstellungen.html)
+- [Offizielle Voreinstellungen](technical/official-presets.html)
   *Technische Zusammenfassung der offiziellen Voreinstellungen*
 - Video
-  - [Video Kodierer](technisches/video-codecs.html)
-  - [Video Kodierer Performance](technisches/video-encoding-performance.html)
-  - [Konstante Qualität versus durchschnittliche Bitrate](technisches/video-cq-vs-abr.html)
-  - [x264 Voreinstellungen und Anpassungen](technisches/video-x264-presets-tunes.html)
-  - [x264 Profile und Level](technisches/video-x264-profiles-levels.html)
-  - [Video Blickwinkel/Perspektiven](technisches/video-angles.html)
-  - [Anamorphisches Video](technisches/anamorphic-guide.html)
-  - [Modulus](technisches/modulus.html)
-  - [Framerate](technisches/frame-rates.html)
-  - [Intel QuickSync Video (QSV) Optionen](technisches/video-qsv-options.html)
+  - [Video Kodierer](technical/video-codecs.html)
+  - [Video Kodierer Performance](technical/video-encoding-performance.html)
+  - [Konstante Qualität versus durchschnittliche Bitrate](technical/video-cq-vs-abr.html)
+  - [x264 Voreinstellungen und Anpassungen](technical/video-x264-presets-tunes.html)
+  - [x264 Profile und Level](technical/video-x264-profiles-levels.html)
+  - [Video Blickwinkel/Perspektiven](technical/video-angles.html)
+  - [Anamorphisches Video](technical/anamorphic-guide.html)
+  - [Modulus](technical/modulus.html)
+  - [Framerate](technical/frame-rates.html)
+  - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)
 - Audio
-  - [Dynamikumfang Komprimierung (DRC)](technisches/dynamic-range-compression.html)
-  - [Audio Qualität](technisches/audio-quality.html)
+  - [Dynamikumfang Komprimierung (DRC)](technical/dynamic-range-compression.html)
+  - [Audio Qualität](technical/audio-quality.html)
 - Dateien und Kompatibilität
-  - [Container Formate](technisches/containers.html)
-  - [iPod 5. Generation Unterstützung](technisches/old-ipod-support.html)
-  - [Automatische Dateibenennung](technisches/automatische-dateibenennung.html)
+  - [Container Formate](technical/containers.html)
+  - [iPod 5. Generation Unterstützung](technical/old-ipod-support.html)
+  - [Automatische Dateibenennung](technical/automatic-file-naming.html)
 - Filter
-  - [Filter Zusammenfassung](technisches/filters-summary.html)
+  - [Filter Zusammenfassung](technical/filters-summary.html)
 
-- [Web optimized](erweitert/web-optimised.html)
-<!-- -  [Video source type](erweitert/video-sources.html)
-Advanced Filter Settings
-- Advanced preferences-->
+<!--
+-  [Web optimized](advanced/web-optimised.html)
+-  [Video source type](advanced/video-sources.html)
+-  Advanced Filter Settings
+-  Advanced preferences
+-->
 
 ## Entwickler Dokumentation
 
 - HandBrake bauen
-  - [HandBrake für BSD bauen](entwickler/build-bsd.html)
-    - Abhängigkeiten unter [FreeBSD](entwickler/freebsd-abhaengigkeiten-installieren.html) installieren
-  - [HandBrake für Linux bauen](entwickler/build-linux.html)
-    - Abhängigkeiten für [Arch Linux](entwickler/arch-abhaengigkeiten-installieren.html) / [CentOS](entwickler/centos-abhaengigkeiten-installieren.html) / [Debian](entwickler/debian-abhaengigkeiten-installieren.html) / [Fedora](entwickler/fedora-abhaengigkeiten-installieren.html) / [Gentoo](entwickler/genoo-abhaengigkeiten-installieren.html) / [Ubuntu](entwickler/ubuntu-abhaengigkeiten-installieren.html)
+  - [HandBrake für BSD bauen](developer/build-bsd.html)
+    - Abhängigkeiten unter [FreeBSD](developer/install-dependencies-freebsd.html) installieren
+  - [HandBrake für Linux bauen](developer/build-linux.html)
+    - Abhängigkeiten für [Arch Linux](developer/install-dependencies-arch.html) / [CentOS](developer/install-dependencies-centos.html) / [Debian](developer/install-dependencies-debian.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
  installieren
-  - [HandBrake für Mac bauen](entwickler/build-mac.html)
-  - [HandBrake für Windows bauen](entwickler/build-windows.html)
+  - [HandBrake für Mac bauen](developer/build-mac.html)
+  - [HandBrake für Windows bauen](developer/build-windows.html)
 - Packaging HandBrake
-  - [Flatpak apps für Linux](entwickler/flatpak-repo.html)
+  - [Flatpak apps für Linux](developer/flatpak-repo.html)
     *Flatpak Applikationen kompatibel mit mehreren Linux distributionen*
 
 <!-- TODO: link to contributing guide -->

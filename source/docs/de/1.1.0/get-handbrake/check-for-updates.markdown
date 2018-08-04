@@ -58,7 +58,7 @@ Manuell nach Updates suchen ist einfach. Wähle im `Help` Menü den `Check for U
 
 <!-- .success -->
 
-Fahre fort zu [Öffnen einer Videoquelle](../workflow/oeffne-video-quelle.html).
+Fahre fort zu [Öffnen einer Videoquelle](../workflow/open-video-source.html).
 
 <!-- /.success -->
 

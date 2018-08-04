@@ -22,9 +22,9 @@ Nichts gefunden? Lies weiter.
 
 ## Aktivitätenlogs
 
-Für alle Supportanfragen ist ein Aktivitätenlog **verpflichtend**. Es ist der schnellste und genaueste Weg für das HandBrake Team die potentiellen Problemen die du hast zu verstehen. Logs werden *nur* auf deinem Computer gespeichert, bitte lies mehr darüber wo du deine [Aktivitäten Logs](aktivitaeten-log.html) finden und teilen kannst, wenn du nach Support fragst.
+Für alle Supportanfragen ist ein Aktivitätenlog **verpflichtend**. Es ist der schnellste und genaueste Weg für das HandBrake Team die potentiellen Problemen die du hast zu verstehen. Logs werden *nur* auf deinem Computer gespeichert, bitte lies mehr darüber wo du deine [Aktivitäten Logs](activity-log.html) finden und teilen kannst, wenn du nach Support fragst.
 
-Du denkst dir vielleicht, dass für deine einfache Frage ein Log unnötigt ist. Bitte lese die Sektion *Warum Aktivitäten Logs verpflichtend für Supportanfragen sind* auf der [Aktivitaeten Log](aktivitaeten-log.html) Seite. *Ohne einen Aktivitäten Log kann das HandBrake Team keinen Support bieten.*
+Du denkst dir vielleicht, dass für deine einfache Frage ein Log unnötigt ist. Bitte lese die Sektion *Warum Aktivitäten Logs verpflichtend für Supportanfragen sind* auf der [Aktivitaeten Log](activity-log.html) Seite. *Ohne einen Aktivitäten Log kann das HandBrake Team keinen Support bieten.*
 
 ## Community Foren
 
