@@ -38,8 +38,8 @@ Eine Zahl die ohne Bruch oder Dezimalstellen geschrieben werden kann.
 Die endliche Repäsentation einer reelen Zahl.
 
 - boolean
-0 bedeuted aus
-1 bedeuted an
+0 bedeutet aus
+1 bedeutet an
 
 Verfügbare Optionen
 --------------
@@ -54,7 +54,7 @@ Verfügbare Optionen
 
 - gop-ref-dist <integer>
   - Distanz zwischen I oder P Referenzbildern, Werte von 1 bis 16.
-  - -1 bedeuted automatisch (4 in konstantem QP Modus, sonst 3).
+  - -1 bedeutet automatisch (4 in konstantem QP Modus, sonst 3).
   - 0 bedeutet unspezifiziert (wird von der Implementierung zur Laufzeit festgelegt).
   - 1 bedeutet, dass B-Frames nicht verwendet werden.
   - Standard: -1 (automatisch)
@@ -65,7 +65,7 @@ Verfügbare Optionen
   - -1 bedeutet automatisch (32 in konstantem QP Modus, sonst 1 Sekunde lang).
   - 0 bedeutet unspezifiziert (wird von der Implementierung zur Laufzeit festgelegt).
   - 1 bedeutet, dass nur I-Frames verwendet werden.
-  - 2 bedeuted, dass B-Frames nicht verwendet werden.
+  - 2 bedeutet, dass B-Frames nicht verwendet werden.
   - Standard: -1 (automatisch)
 
 - cavlc <boolean>
@@ -80,7 +80,7 @@ Verfügbare Optionen
   - Beachte, dass diese Option andere Parameter modifiziert (gop-ref-dist, num-ref-frame, gop-pic-size).
   - -1 bedeutet automatisch (ein in konstantem QP Modus, sonst aus).
   - 0 bedeutet aus (deaktiviert).
-  - 1 bedeuted ein (aktiviert).
+  - 1 bedeutet ein (aktiviert).
   - Standard: -1 (automatisch).
   - Nachteile: benötigt Hardwareunterstützung (4te Generation Intel Core Prozessoren oder äquivalentes), und Treiberunterstützung für Version 1.6 von der Media SDK API.
 

@@ -27,10 +27,11 @@ Hier kannst du den Standardpfad für die Ausgabe der Dateien und das Format des 
 Standardmäßig ist das Format {source}--{title}
 Du kannst dazu noch {chapters} hinzufügen.
 
-### Behandlung der Name der Quelle
+### Behandlung des Namens der Quelle
 Manche Quellen haben komische Namen (beispielsweise alles Großbuchstaben). HandBrake bietet dafür ein paar Optionen um es zu korrigieren.
 
 Die folgenden Optionen beeinflussen den Quellnamen:
+
 - "Change to Title case", Dies ist auch als Camel Case bekannt. Hierbei wird immer der erste Buchstabe eines Wortes groß geschrieben und der Rest klein.
 - "Replace underscores with a space"  i.e  "_" zu " "
 - "Remove common punctuation" i.e ( Bindestrich - Punkt . Kommas ,)

@@ -145,10 +145,10 @@ Inhaltsverzeichnis
 - Filter
   - [Filter Zusammenfassung](technisches/filters-summary.html)
 
-- [Web optimized](technisches/web-optimised.html)
-- [Video source type](erweitert/video-sources.html)
-- Advanced Filter Settings
-- Advanced preferences
+- [Web optimized](erweitert/web-optimised.html)
+<!-- -  [Video source type](erweitert/video-sources.html)
+Advanced Filter Settings
+- Advanced preferences-->
 
 ## Entwickler Dokumentation
 
