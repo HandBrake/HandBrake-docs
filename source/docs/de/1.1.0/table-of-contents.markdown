@@ -141,7 +141,7 @@ Inhaltsverzeichnis
 - Dateien und Kompatibilität
   - [Container Formate](technisches/containers.html)
   - [iPod 5. Generation Unterstützung](technisches/old-ipod-support.html)
-  - [Automatische Dateibenennung](technisches/automatic-file-naming.html)
+  - [Automatische Dateibenennung](technisches/automatische-dateibenennung.html)
 - Filter
   - [Filter Zusammenfassung](technisches/filters-summary.html)
 
