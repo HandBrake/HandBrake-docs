@@ -27,7 +27,7 @@ Die Hardware über die du verfügst kann einen größen Einfluss auf die Perform
 
 HandBrake unterstützt außerdem die Kodierung in der Hardware mit Intel QuickSync. Dies verwendet dedizierte ASIC Hardware auf dem Prozessor um das Video zu kodieren was die CPU entlastet. Falls du einen Intel Haswell oder neueren Intel Prozessor mit einer HD Graphics on-board besitzt kannst du damit sehr hohe Performanz mit einer vernünftigen Qualität erreichen.
 
-Lese unsere [Systemanforderungen](systemanforderungen.html) für Details über die empfohlene Hardware um HandBrake zu verwenden.
+Lese unsere [Systemanforderungen](system-requirements.html) für Details über die empfohlene Hardware um HandBrake zu verwenden.
 
 ### Einstellungen
 Einstellungen spielen eine große Roll in der Performanz. Die meisten Kodierer bieten Konfigurationsoptionen an, um den Kodierer anzupassen. In HandBrake haben wir das mit dem "Video Voreinstellung" Regler vereinfacht. Dieser bietet eine Anzahl an Möglichkeiten von Ultrafast bis Placebo (was extrem langsam ist). Er tauscht Geschwindigkeit gegen Qualität und Dateigröße. Wenn du eine schnellere Voreinstellung verwendest, erhälst du ein Video mit schlechterer Qualität ODER einer größeren Dateigröße. Die Nutzung einer langsameren Voreinstellung verwendet komplexere Algorithmen um  das Video zu komprimieren. dies benötigt mehr Zeit aber liefert ein besseres Resultat.

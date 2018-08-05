@@ -22,7 +22,7 @@ Eine `Voreinstellung` ist eine Gruppe von Einstellungen spezifisch zugeschnitten
 
 HandBrake inkludiert einige offizielle `Voreinstellungen` für bestimmte Geräte und für den Allgemeinen Gebrauch.
 
-Sobald du eine `Quelle` geöffnet hast, wähle die `Voreinstellung` die am besten/genauesten das Gerät beschreibt auf dem du dein Video abspielen möchtest, Falls du beispielsweise dein Video auf einem Roku das 1080p High Definition Videos unterstützt abspielen willst, wähle die `Roku 1080p30 Surround` Voreinstellung unter `Geräte`. Besuche die Technische Dokumentation für mehr Information über [offizielle Voreinstellungen](../technisches/offizielle-voreinstellungen.html).
+Sobald du eine `Quelle` geöffnet hast, wähle die `Voreinstellung` die am besten/genauesten das Gerät beschreibt auf dem du dein Video abspielen möchtest, Falls du beispielsweise dein Video auf einem Roku das 1080p High Definition Videos unterstützt abspielen willst, wähle die `Roku 1080p30 Surround` Voreinstellung unter `Geräte`. Besuche die Technische Dokumentation für mehr Information über [offizielle Voreinstellungen](../technical/official-presets.html).
 
 <!-- .system-linux -->
 
@@ -46,7 +46,7 @@ Falls dein Gerät nicht in aufgelistet ist oder du dein Video auf einem Computer
 
 Falls du zuvor eine deiner `Voreinstellungen` abgespeichert hast, kannst du des gleich wie die offiziellen `Voreinstellungen` auswählen.
 
-Du kannst mehr über die [Benutzerdefinierten Voreinstellungen](../erweitert/benutzerdefinierte-voreinstellungen.html) in der Erweiterten Features Sektion lesen.
+Du kannst mehr über die [Benutzerdefinierten Voreinstellungen](../advanced/custom-presets.html) in der Erweiterten Features Sektion lesen.
 
 <!-- .continue -->
 
@@ -54,7 +54,7 @@ Du kannst mehr über die [Benutzerdefinierten Voreinstellungen](../erweitert/ben
 
 <!-- .success -->
 
-Fahre fort zu [Qualität einstellen](qualitaet-einstellen.html).
+Fahre fort zu [Qualität einstellen](adjust-quality.html).
 
 <!-- /.success -->
 

@@ -59,7 +59,7 @@ Du könntest beim Betrachten auf großen Bildschirmen (50 Zoll / 125 cm Diagonal
 
 <!-- .success -->
 
-Fahre fort zu [Einstellungen testen](einstellungen-testen.html).
+Fahre fort zu [Einstellungen testen](preview-settings.html).
 
 <!-- /.success -->
 

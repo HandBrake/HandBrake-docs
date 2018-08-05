@@ -1,7 +1,7 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           Ein HandBrake flatpak Repository maintainen
+Title:           Ein HandBrake Flatpak Repository maintainen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.1.0
@@ -14,10 +14,10 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Ein HandBrake flatpak Repository maintainen
+Ein HandBrake Flatpak Repository maintainen
 ==========================================
 
-## Diese Intstruktionen funktionieren derzeit nicht
+## Diese Instruktionen funktionieren derzeit nicht
 Das Flatpak Gnome Runtime SDK inkludiert derzeit nicht nasm. HandBrake benötigt nasm während des build prozesses, deshalb bekommt man einen Build error wenn man diesen Instruktionen folgt. Hoffentlich wird die Gnome Runtime in der nahen Zukunft aktualisiert um nasm (und yasm auch) zu inkludieren. Die Freedesktop Runtime wurde bereits aktualisiert und beinhaltet diese beiden.
 
 Siehe: [NASM flatpak issue](https://github.com/flatpak/freedesktop-sdk-images/issues/8)
