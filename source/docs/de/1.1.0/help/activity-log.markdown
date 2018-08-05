@@ -101,7 +101,6 @@ Aktivitätenlogs können auch direkt in einen [neuen support requests auf GitHub
 <!-- .system-linux -->
 
 ### Aktivitätenlogs unter Linux
-
 Du kannst den aktuellen Aktivitätenlog öffnen indem du das Aktivitätenlogfenster in HandBrake öffnest.
 
 <!-- image, activity log window on linux -->
@@ -112,52 +111,49 @@ Der absolute Pfad zu dem Log Verzeichnis wird am oberen Rand des Aktivitätenlog
 
 In dem Verzeichnis findest du die folgenden Dateien:
 
-- `Activity.log.ProcessID`, where `ProcessID` is the process identifier given to HandBrake by Linux, contains information about the specific app session
-- Log files for individual encodes are located in the `EncodeLogs` subdirectory and named according to the pattern `Videoname Date Time.txt`; encode logs are retained until deleted manually
+- `Activity.log.ProcessID`, hier ist die `ProcessID` der Prozess Identifier der HandBrake von Linux gegeben wird. Diese Datei einthält Informationen über die spezifische App Session
+- Log Dateien für individuelle Kodierungen werden in dem `Encode Logs` Verzeichnis gespeichert und nach dem Muster `Videoname Datum Zeit.txt` benannt. Kodierungslogs werden aufbehalten bis sie manuell gelöscht werden.
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
-### Activity Logs on Mac
-
-You can access the current log by opening the Activity Log window in HandBrake.
+### Aktivitätenlogs unter Mac
+Du kannst den aktuellen Aktivitätenlog öffnen, indem du das Aktivitätenlogfenster in HandBrake öffnest.
 
 <!-- image, activity log window on mac -->
 
-On Mac, logs are stored at `~/Library/Application Support/HandBrake/EncodeLogs`, where `~` is your home folder.
+Unter Mac werden die Logs in dem Verzeichnis `~/Library/Application Support/HandBrake/EncodeLogs` gespeichert (`~` ist ein Heimatverzeichnis).
 
-You can open this location directly from HandBrake's Activity Log window.
+Du kannst dieses Verzeichnis direkt aus HandBrake's Aktivitätenlogfenster öffnen.
 
-Inside, you may find the following files:
+In dem Verzeichnis findest du die folgenden Dateien:
 
-- `HandBrake-activitylog.txt` is overwritten each time HandBrake starts, and contains information about the latest app session
-- Log files for individual encodes are named according to the pattern `Videoname Date Time.txt` and are retained until deleted manually
+- `HandBrake-activitylog.txt` wird bei jedem Start von HandBrake überschrieben und enthält Informationen über die letzte App Session
+- Log Dateien für individuelle Kodierungen werden in dem `Encode Logs` Verzeichnis gespeichert und nach dem Muster `Videoname Datum Zeit.txt` benannt. Kodierungslogs werden aufbehalten bis sie manuell gelöscht werden.
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-### Activity Logs on Windows
-
-You can access the current log by opening the Activity Log window in HandBrake.
+### Aktivitätenlogs unter Windows
+Du kannst den aktuellen Aktivitätenlog öffnen indem du das Aktivitätenlogfenster in HandBrake öffnest.
 
 <!-- image, activity log window on windows -->
 
-On Windows, logs are stored at the following locations, where `Username` is your user name:
+Unter Windows werden die Logs in den folgenden Verzeichnissen gespeichert (`Username` ist der Name deines Benutzers):
 
-- `C:\Users\Username\AppData\Roaming\HandBrake\logs` on Windows 7, 8, and 10
-- `C:\Users\Username\Application Data\HandBrake\logs` on Windows Vista
+- `C:\Users\Username\AppData\Roaming\HandBrake\logs` für Windows 7, 8, und 10
+- `C:\Users\Username\Application Data\HandBrake\logs` für Windows Vista
 
-Inside, you may find the following files:
+In dem Verzeichnis findest du die folgenden Dateien:
 
-- `activity_logProcessID.txt`, where `ProcessID` is the process identifier given to HandBrake by Windows, contains information about the specific app session
-- Log files for individual encodes are named according to the pattern `Videoname Date Time.txt` and are retained until deleted manually
+- `activity_logProcessID.txt`, hier ist `ProcessID` der Prozess Identifier der HandBrake von Windows gegeben wird. Diese Datei enthält Informationen über die spezifische App Session
+- Log Dateien für individuelle Kodierungen werden in dem `Encode Logs` Verzeichnis gespeichert und nach dem Muster `Videoname Datum Zeit.txt` benannt. Kodierungslogs werden aufbehalten bis sie manuell gelöscht werden.
 
 <!-- /.system-windows -->
 
-### Activity Logs on the command line
+### Aktivitätenlogs auf der Kommandozeile
+HandBrake's Kommandozeile schreibt auf die Standardstreams `stdout` und `stderr`. Auf `stdout` werden die Informationen über den Fortschritt der Kodierung geschrieben und auf `stderr` die Log Messages.
 
-HandBrake's command line interface outputs to the standard streams `stdout` and `stderr`, with encode progress information routed to the former and log messages routed to the latter.
+Um HandBrake's Log Messages in eine Datei zu schreiben, leite einfach `stderr` um:
 
-To capture HandBrake's log messages to a file, simply redirect `stderr`:
-
-    HandBrakeCLI ... 2> my-activity-log.txt
+    HandBrakeCLI ... 2> mein-aktivitaeten-lgo.txt

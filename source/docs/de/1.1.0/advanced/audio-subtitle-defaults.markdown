@@ -38,9 +38,9 @@ Um dieses Spurselektionsverhalten zu konfigurieren, klicke auf "Configure Defaul
   - Wähle alle Sprachen die du haben möchtest in der "Chosen Languages" Liste, um Spuren nach dem ausgewählten Spurselektionsverhalten auszuwählen.
 - Auto Passthru
   - HandBrake kann verschiedene Audioformate durchleiten (Passthru). Wenn du "Auto Passthru" auswählst,, wird HandBrake die ausgewählten Typen automatisch durchleiten. Du kannst die Formate mithilfe der Checkboxen einschränken. Wenn du beispielsweise immer nur AC3 oder DTS Passthru haben möchtest, wähle einfach nur diese zwei Optionen und deselektiere die restlichen.
- 
+
 - Fallback Encoder
-  - Wenn du einen Passthru Kodierer selektiert hast und es keine Spur gibt die in den ausgewählten Formaten ist, wird die Spur neu kodiert. Der Fallback Kodierer ist der Kodierer der dafür standardmäßig zum Einsatz kommt.  
+  - Wenn du einen Passthru Kodierer selektiert hast und es keine Spur gibt die in den ausgewählten Formaten ist, wird die Spur neu kodiert. Der Fallback Kodierer ist der Kodierer der dafür standardmäßig zum Einsatz kommt.
 
 ### Untertitel Standardeinstellungen
 
@@ -50,9 +50,9 @@ Um dieses Spurselektionsverhalten zu konfigurieren, klicke auf "Configure Defaul
   - None
     - Es werden keine Untertitelspuren automatisch hinzugefügt.
   - First matching selected Language
-    - Die erste Spur welche in der "Chosen Languages" Liste enhalten ist wird hinzugefügt wenn der Ausgabecontainer diese unterstützt. 
+    - Die erste Spur welche in der "Chosen Languages" Liste enhalten ist wird hinzugefügt wenn der Ausgabecontainer diese unterstützt.
   - All matching selected languages
-   - Alle Untertitelspuren welche in der "Chosen Languages" Liste enhalten sind werden hinzugefügt, falls der Ausgabecontainer diese unterstützt. 
+   - Alle Untertitelspuren welche in der "Chosen Languages" Liste enhalten sind werden hinzugefügt, falls der Ausgabecontainer diese unterstützt.
 - Burn in Behaviour
   - HandBrake kann eine Untertitelspur in die kodierte Datei einbrennen. Es gibt drei Verhaltensoptionen die du auswählen kannst um die Burn In Option automatisch zu aktivieren.
   - Suche nach fremdsprachigem Audio
@@ -63,4 +63,4 @@ Um dieses Spurselektionsverhalten zu konfigurieren, klicke auf "Configure Defaul
 - Add Closed Captions when available
   - Close captions sind textbasierte Untertitel die von MP4 und MKV unterstützt werden. Falls du diese Option wählst, wird HandBrake diese Untertitel automatisch in die Ausgabedatei kopieren.
 - Add Foreign Audio Scan
-  - HandBrake kann die Quelle nach Abschnitten untersuchen, die fremdsprachiges Audio enthalten. Falls es einen Abschnitt entdeckt, wird die Untertitelspur automatisch hinzugefügt. 
+  - HandBrake kann die Quelle nach Abschnitten untersuchen, die fremdsprachiges Audio enthalten. Falls es einen Abschnitt entdeckt, wird die Untertitelspur automatisch hinzugefügt.

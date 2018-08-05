@@ -37,7 +37,7 @@ HandBrake's Generelle `Voreinstellungen` verwenden den [MP4 container](https://e
 Each General `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
 Jede Generelle `Voreinstellung` ist benannt nach der Qualität oder Geschwindigkeit, Maximale Auflösung und Maximale Framerate die es produziert.
 
-| Voreinstellung            | Typ  | Video | Audio                            | Bildqualität    | Kodierungsgeschwindigkeit| Dateigröße |
+| Voreinstellung            | Typ  | Video | Audio                            | Bildqualität    | Geschwindigkeit| Dateigröße |
 |---------------------------|------|-------|----------------------------------|-----------------|----------------|----------------|
 | Very Fast 1080p30         | MP4  | H.264 | AAC stereo                       | Durschnittlich  | Sehr schnell   | Klein          |
 | Very Fast 720p30          | MP4  | H.264 | AAC stereo                       | Durschnittlich  | Sehr schnell   | Klein          |
@@ -63,7 +63,7 @@ Gmail `Voreinstellungen` sind designed um zu garantieren, dass ein Video mit ein
 
 Vimeo Youtube `Voreinstellungen` erzeugen Videos, die sich für das uploaden auf Video Hosting Services eignen.[^video-hosting-services] `Voreinstellungen` die mit HQ markiert sind, sind designed um höhere Qualität zu liefern und trotzdem nicht viel Zeit zum Kodieren zu benötigen.
 
-| Voreinstellung                | Typ  | Video | Audio      | Bildqualität   | Kodierungsgeschwindigkeit | Dateigröße     |
+| Voreinstellung                | Typ  | Video | Audio      | Bildqualität   | Geschwindigkeit | Dateigröße     |
 |-------------------------------|------|-------|------------|-------------------|----------------|---------------|
 | Gmail Large 3 Minutes 720p30  | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell | 25 MB oder weniger |
 | Gmail Medium 5 Minutes 480p30 | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell | 25 MB oder weniger |
@@ -81,7 +81,7 @@ Die meisten der Geräte `Voreinstellungen` verwenden den weit verbreiteten [MP4 
 
 Jede Geräte `Voreinstellung` ist benannte nach dem Gerät oder Klasse von Gerät, Maximaler Auflösung und maximaler Framerate die sie erzeugt.
 
-| Voreinstellung                      | Typ     | Video     | Audio                            | Kodierungsgeschwindigkeit  |
+| Voreinstellung                      | Typ     | Video     | Audio                            | Geschwindigkeit  |
 |-------------------------------------|---------|-----------|----------------------------------|----------------|
 | Android 1080p30                     | MP4     | H.264     | AAC stereo                       | Mittel         |
 | Android 720p30                      | MP4     | H.264     | AAC stereo                       | Mittel         |
@@ -117,7 +117,7 @@ HandBrake's Matroska `Voreinstellungen` sind für Software und Geräte gedacht, 
 
 Jede Matroska `Voreinstellung` ist benannt nach dem Videotyp, Maximaler Auflösung und Maximaler Framerate die sie erzeugt.
 
-| Voreinstellung    | Typ  | Video | Audio         | Kodierungsgeschwindigkeit |
+| Voreinstellung    | Typ  | Video | Audio         | Geschwindigkeit |
 |-------------------|------|-------|---------------|----------------|
 | H.265 MKV 2160p60 | MKV  | H.265 | AAC stereo    | **Sehr langsam**  |
 | H.265 MKV 1080p30 | MKV  | H.265 | AAC stereo    | **Sehr langsam**  |
@@ -144,7 +144,7 @@ HandBrake's Production `Voreinstellungen` erstellen Meistergrade, kurze GOP, kon
 
 Production Proxy `Voreinstellungen` erstellen schnell zu kodierende, Intra-only Videos limitiert auf ein Viertel der gewünschten Bearbeitungsauflösung.
 
-| Voreinstellung            | Typ  | Video | Audio      | Maximale Auflösung | Bildqualität | Frametypen | GOP Größe | Kodierungsgeschwindigkeit | Dateigröße |
+| Voreinstellung            | Typ  | Video | Audio      | Maximale Auflösung | Bildqualität | Frametypen | GOP Größe | Geschwindigkeit | Dateigröße |
 |---------------------------|------|-------|------------|----------------|-----------------|-------------|----------|-------------------|-----------|
 | Production Max            | MP4  | H.264 | AAC stereo | Unlimitiert      | Max Master      | I/P         | 1-12     | Hängt von Quelle ab | Gigantisch  |
 | Production Standard       | MP4  | H.264 | AAC stereo | Unlimitiert      | Standard Master | I/P         | 1-12     | Hängt von Quelle ab | Riesig      |
@@ -155,7 +155,7 @@ Production Proxy `Voreinstellungen` erstellen schnell zu kodierende, Intra-only 
 HandBrake's Legacy `Voreinstellungen` sind noch von vorherigen HandBrake Versionen übergeblieben um die Kompatibilität mit bestehenden Workflows und Scripts sicherzustellen.
 HandBrake's Legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
 
-| Voreinstellung      | Typ  | Video | Audio                            | Maximale Auflösung | Kodierungsgeschwindigkeit |
+| Voreinstellung      | Typ  | Video | Audio                            | Maximale Auflösung | Geschwindigkeit |
 |---------------------|------|-------|----------------------------------|----------------|----------------|
 | Normal              | MP4  | H.264 | AAC stereo                       | 1080p          | Sehr schnell      |
 | High Profile        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Mittel         |
