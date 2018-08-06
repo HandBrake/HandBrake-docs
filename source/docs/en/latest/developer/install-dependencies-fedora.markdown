@@ -88,4 +88,8 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
     sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
     sudo yum install webkit2gtk3-devel || sudo yum install webkitgtk4-devel || sudo yum install webkitgtk3-devel
 
+To build HandbrakeCLI with the QSV support, download, copy files over, and source the environment from the Intel Media SDK:
+
+    wget  -qO- https://github.com/Intel-Media-SDK/MediaSDK/releases/download/MediaSDK-2018-Q2.1/MediaStack.tar.gz | tar xvz && sudo cp -r MediaStack/opt MediaStack/etc / && source /etc/profile.d/intel-mediasdk*
+
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
