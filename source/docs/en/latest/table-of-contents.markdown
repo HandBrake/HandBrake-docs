@@ -105,11 +105,11 @@ Table of contents
   *Activity Logs help you receive better support*
 
 
-## HandBrake lore
+## More information
 
 - [Project history](about/history.html)<span class="notice draft"><span>draft</span></span>
-
-<!-- - [About the cocktail and pineapple icon](about/the-icon.html)  -->
+- [Contributing](contributing/contribute.html)
+  *How you can get involved*
 
 
 ## CLI documentation
@@ -166,5 +166,3 @@ Table of contents
 - Packaging HandBrake
   - [Flatpak apps for Linux](developer/flatpak-repo.html)<span class="notice draft"><span>draft</span></span>
     *Fully-contained applications compatible with multiple Linux distributions*
-
-<!-- TODO: link to contributing guide -->
