@@ -5,7 +5,7 @@ Title:           Zusammenfassung der Filter
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.1.0
-Language:        German
+Language:        Deutsch
 Language_Code:   de
 Authors:         []
 Copyright:       2018 HandBrake Team

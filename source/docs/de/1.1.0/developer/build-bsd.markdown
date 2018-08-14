@@ -4,7 +4,7 @@ Title:           HandBrake für BSD bauen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.1.0
-Language:        German
+Language:        Deutsch
 Language_Code:   de
 Authors:         [ Bernhard Rader (raderb), Bradley Sepos <bradley@bradleysepos.com> (BradleyS) ]
 Copyright:       2018 HandBrake Team

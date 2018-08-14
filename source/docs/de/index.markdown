@@ -4,7 +4,7 @@ Title:           Versionen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
-Language:        German
+Language:        Deutsch
 Language_Code:   de 
 Authors:         [ Bernhard Rader (raderb)]
 Copyright:       2018 HandBrake Team
