@@ -5,6 +5,24 @@ $(document).ready(function(){
     docs.addClass('js');
 
     if (docs.hasClass("article")){
+        var translate = function(lang, string){
+            switch (lang){
+                case 'en':
+                    break;
+                case 'de':
+                    switch (string){
+                        case 'Instructions':
+                            string = 'Instruktionen';
+                            break;
+                    }
+                break;
+                default:
+                    break;
+            }
+            return string;
+        }
+
+        var lang = docs.attr('lang');
         var header = docs.find('header').first();
         var navigation_headings = docs.find('nav .navigation > h2');
         var navigation_sections = navigation_headings.next('ul');
@@ -19,12 +37,13 @@ $(document).ready(function(){
         });
 
         var nav = docs.find('nav');
-        var system_select = docs.find('.system-select');
-        var system_select_linux = system_select.find('.system-select-linux');
-        var system_select_macos = system_select.find('.system-select-macos');
-        var system_select_windows = system_select.find('.system-select-windows');
-        var system_select_all = system_select.find('.system-select-all');
-        var system = '';
+        var system_select = $('<div>').attr({ class: 'system-select', type: 'hidden' }).text(translate(lang, 'Instructions') + ':');
+        var system_select_all     = $('<li>').attr({ class: 'system-select-all'     }).text('All');
+        var system_select_linux   = $('<li>').attr({ class: 'system-select-linux'   }).text('Linux');
+        var system_select_macos   = $('<li>').attr({ class: 'system-select-macos'   }).text('Mac');
+        var system_select_windows = $('<li>').attr({ class: 'system-select-windows' }).text('Windows');
+        $('<ul>').append(system_select_all, system_select_linux, system_select_macos, system_select_windows ).appendTo(system_select);
+        nav.prepend(system_select);
 
         var scroll_to_section = function(el, fallback_el){
             var headings = 'h1, h2, h3, h4, h5, h6';
