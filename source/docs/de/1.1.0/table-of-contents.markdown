@@ -105,11 +105,11 @@ Inhaltsverzeichnis
   *Aktivitäten Logs helfen dir, besseren Support zu erhalten*
 
 
-## HandBrake Geschichte
+## Mehr Informationen
 
 - [Projekt Historie](about/history.html)
-
-<!-- - [About the cocktail and pineapple icon](about/the-icon.html)  -->
+- [Mithelfen](contributing/contribute.html)
+  *Wie du mithelfen kannst*
 
 ## Commandline Dokumentation
 
