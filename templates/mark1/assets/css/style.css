@@ -278,6 +278,15 @@ article.docs span.notice {  /* inline notice */
     vertical-align: middle;
 }
 
+article.docs .notice p {
+    display: none;
+}
+
+article.docs[lang="de"] .notice p[lang="de"],
+article.docs[lang="en"] .notice p[lang="en"] {  /* notice matching article language */
+    display: block;
+}
+
 article.docs li a + span.notice {  /* table of contents notice */
     display: inline-block;
     transform: scaleX(0);
@@ -295,13 +304,13 @@ article.docs .notice.draft {
     background-color: lightyellow;
 }
 
-article.docs .notice > :first-child:before {
+article.docs .notice > *:before {
     display: inline;
     margin-right: .5em;
     content: "♻";
 }
 
-article.docs .notice.draft > :first-child:before {
+article.docs .notice.draft > *:before {
     content: "⚠";
 }
 

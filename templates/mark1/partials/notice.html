@@ -1,6 +1,12 @@
 {% if document.state contains "obsolete" %}
-<div class="notice obsolete" lang="en"><p>This article is for an older version of {{ document.project }}. <a href="{{ base.relpath }}{{ document.language-code | slug }}/">See all versions</a>.</p></div>
+<div class="notice obsolete">
+    <p lang="en">This article is for an older version of {{ document.project }}. <a href="{{ base.relpath }}{{ document.language-code | slug }}/">All versions</a>.</p>
+    <p lang="de">Dieser Artikel ist für eine ältere Version von {{ document.project }}. <a href="{{ base.relpath }}{{ document.language-code | slug }}/">Alle Versionen</a>.</p>
+</div>
 {% endif %}
 {% if document.state contains "draft" %}
-<div class="notice draft" lang="en"><p>This article is a draft and may contain incomplete or incorrect information.</p></div>
+<div class="notice draft">
+    <p lang="en">This article is a draft and may contain incomplete or incorrect information.</p>
+    <p lang="de">Dieser Artikel ist ein Entwurf und enthält möglicherweise unvollständige oder falsche Information.</p>
+</div>
 {% endif %}
