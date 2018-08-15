@@ -6,7 +6,7 @@
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.7.4"
+VERSION="0.8.0"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -579,6 +579,7 @@ function parse_template_metadata {  # parse_template_metadata prefix template_di
     [[ "${MARSH_TEMPLATE_Template_Partials_Document:-}" != "" ]] && echo "${PREFIX}Template_Partials_Document=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Document//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Header:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Header=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Header//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Nav:-}"      != "" ]] && echo "${PREFIX}Template_Partials_Nav=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Nav//\"/\\\"}\""
+    [[ "${MARSH_TEMPLATE_Template_Partials_Notice:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Notice=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Notice//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Footer:-}"   != "" ]] && echo "${PREFIX}Template_Partials_Footer=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Footer//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Redirect:-}" != "" ]] && echo "${PREFIX}Template_Partials_Redirect=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Redirect//\"/\\\"}\""
     [[ "${MARSH_TEMPLATE_Template_Partials_Archive_HTML_Body:-}"     != "" ]] && echo "${PREFIX}Template_Partials_Archive_HTML_Body=\"${TEMPLATE_DIR}/${MARSH_TEMPLATE_Template_Partials_Archive_HTML_Body//\"/\\\"}\""
@@ -1362,7 +1363,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         eval "${TEMPLATE_META}"
 
         # partials
-        PARTIALS=("${TEMPLATE_Template_Partials_Redirect:-}" "${TEMPLATE_Template_Partials_Base:-}" "${TEMPLATE_Template_Partials_Body:-}" "${TEMPLATE_Template_Partials_Document:-}" "${TEMPLATE_Template_Partials_Header:-}" "${TEMPLATE_Template_Partials_Footer:-}" "${TEMPLATE_Template_Partials_Nav:-}" "${TEMPLATE_Template_Partials_Archive_HTML_Body:-}" "${TEMPLATE_Template_Partials_Archive_HTML_Document:-}" "${TEMPLATE_Template_Partials_Archive_Atom_Body:-}" "${TEMPLATE_Template_Partials_Archive_Atom_Document:-}" "${TEMPLATE_Template_Partials_Archive_JSON_Body:-}" "${TEMPLATE_Template_Partials_Archive_JSON_Document:-}")
+        PARTIALS=("${TEMPLATE_Template_Partials_Redirect:-}" "${TEMPLATE_Template_Partials_Base:-}" "${TEMPLATE_Template_Partials_Body:-}" "${TEMPLATE_Template_Partials_Document:-}" "${TEMPLATE_Template_Partials_Header:-}" "${TEMPLATE_Template_Partials_Footer:-}" "${TEMPLATE_Template_Partials_Nav:-}" "${TEMPLATE_Template_Partials_Notice:-}" "${TEMPLATE_Template_Partials_Archive_HTML_Body:-}" "${TEMPLATE_Template_Partials_Archive_HTML_Document:-}" "${TEMPLATE_Template_Partials_Archive_Atom_Body:-}" "${TEMPLATE_Template_Partials_Archive_Atom_Document:-}" "${TEMPLATE_Template_Partials_Archive_JSON_Body:-}" "${TEMPLATE_Template_Partials_Archive_JSON_Document:-}")
         # conditionals
         for J in "${!PARTIALS[@]}"; do
             [[ "${PARTIALS[$J]}" == "" ]] && continue
@@ -1385,12 +1386,13 @@ function build_template {  # build_template dest_dir target_dir document templat
         TEMPLATE_Template_Partials_Header="${PARTIALS[4]:-}"
         TEMPLATE_Template_Partials_Footer="${PARTIALS[5]:-}"
         TEMPLATE_Template_Partials_Nav="${PARTIALS[6]:-}"
-        TEMPLATE_Template_Partials_Archive_HTML_Body="${PARTIALS[7]:-}"
-        TEMPLATE_Template_Partials_Archive_HTML_Document="${PARTIALS[8]:-}"
-        TEMPLATE_Template_Partials_Archive_Atom_Body="${PARTIALS[9]:-}"
-        TEMPLATE_Template_Partials_Archive_Atom_Document="${PARTIALS[10]:-}"
-        TEMPLATE_Template_Partials_Archive_JSON_Body="${PARTIALS[11]:-}"
-        TEMPLATE_Template_Partials_Archive_JSON_Document="${PARTIALS[12]:-}"
+        TEMPLATE_Template_Partials_Notice="${PARTIALS[7]:-}"
+        TEMPLATE_Template_Partials_Archive_HTML_Body="${PARTIALS[8]:-}"
+        TEMPLATE_Template_Partials_Archive_HTML_Document="${PARTIALS[9]:-}"
+        TEMPLATE_Template_Partials_Archive_Atom_Body="${PARTIALS[10]:-}"
+        TEMPLATE_Template_Partials_Archive_Atom_Document="${PARTIALS[11]:-}"
+        TEMPLATE_Template_Partials_Archive_JSON_Body="${PARTIALS[12]:-}"
+        TEMPLATE_Template_Partials_Archive_JSON_Document="${PARTIALS[13]:-}"
 
         # body template
         if [[ "${DOCUMENT_Type}" == "archive-atom" ]]; then
@@ -1492,6 +1494,15 @@ function build_template {  # build_template dest_dir target_dir document templat
             SUB=${SUB%\\}
             sed -E \
             -e "/\{\{[ ]*template\.nav[ ]*\}\}/s//${SUB:-}/g" \
+            -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
+            unset SUB
+        fi
+        if [[ -f "${TEMPLATE_Template_Partials_Notice}" ]] && [[ -r "${TEMPLATE_Template_Partials_Notice}" ]]; then
+            SUB=$(<"${TEMPLATE_Template_Partials_Notice}" sed -e ':a' -e '$!{N' -e 'ba' -e '}' -e 's/[&/\]/\\&/g' -e 's/\n/\\&/g')
+            SUB=${SUB%$'\n'}
+            SUB=${SUB%\\}
+            sed -E \
+            -e "/\{\{[ ]*template\.notice[ ]*\}\}/s//${SUB:-}/g" \
             -i".${MARSH_UID}.backup" "${DEST}" && rm -f "${DEST}.${MARSH_UID}.backup"
             unset SUB
         fi
