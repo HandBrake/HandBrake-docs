@@ -7,6 +7,7 @@ Template:
     Header:   partials/header.html
     Footer:   partials/footer.html
     Nav:      partials/nav.html
+    Notice:   partials/notice.html
     Redirect: partials/redirect.html
   Assets:
     Fonts:

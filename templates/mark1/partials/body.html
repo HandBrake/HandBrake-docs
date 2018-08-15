@@ -1,12 +1,7 @@
 <article class="docs {{ document.type }}" lang="{{ document.language-code }}">
     {{ template.styles }}
     {{ template.header }}
-    {% if document.state contains "obsolete" %}
-    <div class="notice obsolete" lang="en"><p>This article is for an older version of {{ document.project }}. <a href="{{ base.relpath }}{{ document.language-code | slug }}/">See all versions</a>.</p></div>
-    {% endif %}
-    {% if document.state contains "draft" %}
-    <div class="notice draft" lang="en"><p>This article is a draft and may contain incomplete or incorrect information.</p></div>
-    {% endif %}
+    {{ template.notice }}
     {{ template.document }}
     {{ template.footer }}
     {{ template.scripts }}
