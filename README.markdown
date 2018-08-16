@@ -12,4 +12,11 @@ The documentation is available in two public forms:
 
 Most people should use the first resource, which is the official published documentation. If you want to learn how to use HandBrake, go there now! [Official HandBrake Documentation](https://handbrake.fr/docs/)
 
-If you're interested in contributing, please read [Contributing](CONTRIBUTING.markdown).
+
+## Contributing and Translations
+
+We welcome most contributions. While it is our goal to allow everyone to contribute, contributions not meeting the project's goals or  standards may be rejected.
+
+Please read our [guide to contributing](https://handbrake.fr/docs/en/latest/contributing/contribute.html). This will provide you with all the information you need to start contributing to the project. 
+
+The documentation project has some additional [contributing guidelines](CONTRIBUTING.markdown) that you should also familiarise yourself with.
