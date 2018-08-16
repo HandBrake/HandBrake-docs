@@ -29,6 +29,8 @@ Dependency installation instructions are available for the following distributio
 - [Gentoo](install-dependencies-gentoo.html)
 - [Ubuntu](install-dependencies-ubuntu.html)
 
+HandBrake's experimental support for Intel Quick Sync Video on Linux requires the [Intel Media SDK](https://github.com/Intel-Media-SDK/MediaSDK/releases).
+
 ## Building HandBrake
 
 Clone the HandBrake repository.
@@ -40,7 +42,7 @@ List available tags in the HandBrake 1.1.x release series, and check out the mos
     git tag --list | grep ^1\.1\.
     git checkout refs/tags/$(git tag -l | grep -E '^1\.1\.[0-9]+$' | tail -n 1)
 
-Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
+Build HandBrake. To enable experimental support for Intel QSV via the [Intel Media SDK](https://github.com/Intel-Media-SDK/MediaSDK/releases), append `--enable-qsv`. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
 
     ./configure --launch-jobs=$(nproc) --launch
 
