@@ -216,4 +216,14 @@ $(document).ready(function(){
         }
         $(this).featherlight({type: 'image2', openSpeed: 150, closeSpeed: 150});
     });
+    $.featherlight.prototype.afterContent = function() {
+      var caption = this.$currentTarget.parent().find('figcaption')[0];
+      this.$instance.find('.caption').remove();
+      $('<div class="caption">').text(caption.innerText).appendTo(this.$instance.find('.featherlight-content'));
+      $(this.$content[0]).hover(function() {
+          this.nextSibling.style.opacity="0.85";
+      }, function() {
+          this.nextSibling.style.opacity="0";
+      });
+    };
 });
