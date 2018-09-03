@@ -26,9 +26,11 @@ Work not meeting this general standard is unhelpful and potentially confusing, a
 
 ### Respect others
 
-Don't be a jerk.
+Don't be a jerk. Please read and abide by the [HandBrake Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md).
 
-Most of our [forum rules](https://forum.handbrake.fr/app.php/rules) apply. Please do not attempt to document topics of dubious legality, such as illegally obtaining content (piracy or working with pirated material) or illegally circumventing copy protections. Harassment and abusive speech will not be tolerated.
+Most of our [forum rules](https://forum.handbrake.fr/app.php/rules) also apply. Please do not attempt to document topics of dubious legality, such as illegally obtaining content (piracy or working with pirated material) or illegally circumventing copy protections.
+
+Harassment and abusive speech will not be tolerated.
 
 ### Have reasonable expectations
 
