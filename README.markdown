@@ -15,8 +15,6 @@ Most people should use the first resource, which is the official published docum
 
 ## Contributing and Translations
 
-We welcome most contributions. While it is our goal to allow everyone to contribute, contributions not meeting the project's goals or  standards may be rejected.
+We welcome most contributions. While it is our goal to allow everyone to contribute, contributions not meeting the project's goals or standards may be rejected. For this reason, we suggest communicating your interests before making any broad changes.
 
-Please read our [guide to contributing](https://handbrake.fr/docs/en/latest/contributing/contribute.html). This will provide you with all the information you need to start contributing to the project. 
-
-The documentation project has some additional [contributing guidelines](CONTRIBUTING.markdown) that you should also familiarise yourself with.
+Please read the published documentation's [Contributing](https://handbrake.fr/docs/en/latest/contributing/contribute.html) article for more information, and this repository's [contributing guidelines](CONTRIBUTING.markdown) for information specific to the documentation project.
