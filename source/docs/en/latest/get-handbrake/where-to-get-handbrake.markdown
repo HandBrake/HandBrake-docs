@@ -52,7 +52,6 @@ Certain BSD/Linux distributions and package repositories create their own versio
 
 Broken third-party packages/builds include but are not limited to:
 
-- Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-gtk-git`
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - FreeBSD: `handbrake`
 - Gentoo: `handbrake`

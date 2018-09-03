@@ -48,7 +48,6 @@ Bestimmte BSD/Linux Distributionen und Package Repositories erstellen ihre eigen
 
 Ausschnitt von disfunktionalen Drittanbieter Packages/Builds (nicht vollständig):
 
-- Arch [AUR](abbr:Arch User Repository): `handbrake-cli-git`, `handbrake-gtk-git`
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - FreeBSD: `handbrake`
 - Gentoo: `handbrake`
