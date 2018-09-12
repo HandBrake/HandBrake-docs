@@ -155,24 +155,26 @@ Production Proxy `Presets` create fast to encode, Intra-only video limited to on
 | Production Proxy 1080p    | MP4  | H.264 | AAC stereo | 1/4 2160p 4K   | Proxy           | Intra-only  | 1        | Fast              | Average   |
 | Production Proxy 540p     | MP4  | H.264 | AAC stereo | 1/4 1080p HD   | Proxy           | Intra-only  | 1        | Very Fast         | Small     |
 
-## Legacy presets
+## Compatible replacements for deprecated or removed presets
 
-HandBrake's Legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
+From time to time, official `Presets` may be deprecated or removed. Compatible replacements are listed here.
 
-| Preset              | Type | Video | Audio                            | Max Resolution | Encoding Speed |
-|---------------------|------|-------|----------------------------------|----------------|----------------|
-| Normal              | MP4  | H.264 | AAC stereo                       | 1080p          | Very fast      |
-| High Profile        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Medium         |
-| Universal           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 576p/480p      | Very fast      |
-| iPod                | MP4  | H.264 | AAC stereo                       | 240p           | Ultra fast     |
-| iPhone & iPod touch | MP4  | H.264 | AAC stereo                       | 540p           | Medium         |
-| iPad                | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
-| AppleTV             | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 540p           | Medium         |
-| AppleTV 2           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 720p           | Medium         |
-| AppleTV 3           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Medium         |
-| Android             | MP4  | H.264 | AAC stereo                       | 480p           | Medium         |
-| Android Tablet      | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
-| Windows Phone 8     | MP4  | H.264 | AAC stereo                       | 720p           | Medium         |
+### Legacy 0.10.x presets
+
+| Preset              | Compatible Preset                | Notes                                                                                                                                   |
+|---------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Normal              | General > Fast 1080p30           | Decomb filter, peak limited to 30 FPS, slightly decreased video bit rate, improved motion quality, foreign audio search.                |
+| High Profile        | General > HQ 1080p30 Surround    | Peak limited to 30 FPS, reduced video bit rate spikes, foreign audio search.                                                            |
+| Universal           | None                             | General > Fast 576p25/480p30 may be suitable replacements where compatibility with ancient devices and surround sound are not required. |
+| iPod                | Devices > Apple 240p30           | Decomb filter, foreign audio search.                                                                                                    |
+| iPhone & iPod touch | Devices > Apple 540p30 Surround  | Decomb filter, slightly increased video bit rate, surround sound, foreign audio search.                                                 |
+| iPad                | Devices > Apple 720p30 Surround  | Decomb filter, slightly decreased video bit rate, surround sound, foreign audio search.                                                 |
+| AppleTV             | Devices > Apple 540p30 Surround  | Decomb filter, foreign audio search.                                                                                                    |
+| AppleTV 2           | Devices > Apple 720p30 Surround  | Decomb filter, slightly decreased video bit rate, foreign audio search.                                                                 |
+| AppleTV 3           | Devices > Apple 1080p30 Surround | Decomb filter, slightly decreased video bit rate, foreign audio search.                                                                 |
+| Android             | Devices > Android 576p25/480p30  | Decomb filter, peak limited to 25 FPS (Android 576p25 only), slightly increased video bit rate, foreign audio search, chapter markers.  |
+| Android Tablet      | Devices > Android 720p30         | Decomb filter, slightly increased video bit rate, foreign audio search, chapter markers.                                                |
+| Windows Phone 8     | None                             | Devices > Windows Mobile 720p30 may be suitable with anamorphic off and audio bit rate reduced to 128 kbps.                             |
 
 [^high-quality-settings-less-compatible]: Higher quality General `Presets` may include settings that are incompatible with older or slower devices.
 
