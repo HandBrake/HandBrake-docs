@@ -74,51 +74,57 @@ HandBrake's QuickSync feature is only supported on Windows. Experimental Linux s
 
 ## Software
 
+The following describes the level of support available for the current HandBrake version as indicated by the status for each system version.
 
-#### Support Status
-
-The following table describes the level of support available for the current version of the application against each version of the operating system. 
-
-| Status         | Description                                                                              |
-|----------------|------------------------------------------------------------------------------------------|
-| Supported      | The app is known to work as expected.                                                    |
-| Deprecated     | The app works but may have limited functionality and/or bugs that will not be corrected. |
-| Not Supported  | The app does not run on this version of the OS                                           |
-
-The last version to support the operating system, is also noted.
+| Status      | Description                                                                                                                                              |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Supported   | HandBrake is tested working on these system versions. The HandBrake Team and community members provide volunteer support, and issue reports are welcome. |
+| Deprecated  | HandBrake should work on these system versions. Support is near end of life. Limited functionality and other issues will likely not be addressed.        |
+| Unsupported | HandBrake does not work on these system versions. No support will be provided. Please update to enjoy the latest features and bug fixes.                 |
 
 <!-- .system-linux -->
 
-### Linux
+### Linux and BSD
 
 #### Ubuntu (Official PPA)
 
-Several major versions are supported, see [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html) for PPA details.
+- Recent Ubuntu LTS versions are generally supported
+- HandBrake is typically updated for non-LTS versions until their end of life
+- See [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html) for additional PPA details
 
-#### Other Linux
+| Ubuntu Version     | Status              | Last Compatible Version |
+|--------------------|---------------------|-------------------------|
+| 18.04 LTS Bionic   | Supported           |                         |
+| 16.04 LTS Xenial   | Supported           |                         |
+| 14.04 LTS Trusty   | Unsupported         | HandBrake 1.1.2         |
 
-For any other distribution, you must [compile from source](../developer/build-linux.html). 
+#### Flatpak
 
+Requires a recent Linux distribution and `flatpak` package.
+
+#### Other
+
+For other distributions, compile from source using the [Linux instructions](../developer/build-linux.html) or [BSD instructions](../developer/build-bsd.html).
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
 ### Mac
 
-- OS X 10.7 Lion or later
+- macOS 10.10 Yosemite and later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing MKV (Matroska) media files
 
-| MacOS Version             | Support Status | Last Version |
-|---------------------------|----------------|--------------|
-| 10.13: "High Sierra"      | Supported      |              |
-| 10.12: "Sierra"           | Supported      |              |
-| 10.11: "El Capitan"       | Supported      |              |
-| 10.10: "Yosemite"         | Deprecated     | 1.0.0        |
-| 10.9: "Mavericks"         | Deprecated     | 1.0.0        |
-| 10.8: "Mountain Lion"     | Deprecated     | 1.0.0        |
-| 10.7: "Lion"              | Deprecated     | 1.0.0        |
-| 10.6: "Snow Leopard"      | Not Supported  | 0.10.5       |
-
+| macOS Version      | Status              | Last Compatible Version | Notes                              |
+|--------------------|---------------------|-------------------------|------------------------------------|
+| 10.14 Mojave       | Supported           |                         | Requires HandBrake 1.1.2 or later. |
+| 10.13 High Sierra  | Supported           |                         |                                    |
+| 10.12 Sierra       | Supported           |                         |                                    |
+| 10.11 El Capitan   | Deprecated in 1.2.0 |                         |                                    |
+| 10.10 Yosemite     | Deprecated in 1.2.0 |                         |                                    |
+| 10.9 Mavericks     | Unsupported         | HandBrake 1.1.2         |                                    |
+| 10.8 Mountain Lion | Unsupported         | HandBrake 1.1.2         |                                    |
+| 10.7 Lion          | Unsupported         | HandBrake 1.1.2         |                                    |
+| 10.6 Snow Leopard  | Unsupported         | HandBrake 0.10.5        |                                    |
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -129,12 +135,12 @@ For any other distribution, you must [compile from source](../developer/build-li
 - Microsoft .NET Framework 4.7.1 or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
-| Windows Version           | Support Status | Last Version |
-|---------------------------|----------------|--------------|
-| Windows 10                | Supported      |              |
-| Windows 8.1               | Supported      |              |
-| Windows 7 SP1             | Deprecated     |              |
-| Windows Vista             | Not Supported  | 1.0.0        |
-| Windows XP                | Not Supported  | 0.9.9        |
+| Windows Version | Status              | Last Compatible Version |
+|-----------------|---------------------|-------------------------|
+| Windows 10      | Supported           |                         |
+| Windows 8.1     | Supported           |                         |
+| Windows 7 SP1   | Deprecated in 1.1.0 |                         |
+| Windows Vista   | Unsupported         | HandBrake 1.0.7         |
+| Windows XP      | Unsupported         | HandBrake 0.9.9         |
 
 <!-- /.system-windows -->
