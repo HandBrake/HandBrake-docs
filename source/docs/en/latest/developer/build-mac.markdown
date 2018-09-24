@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Mac
 ==========================
 
-Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running OS X 10.14 Mojave or later, and the following dependencies.
+Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running OS X 10.13.6 High Sierra or later[^mojave-dark-mode], and the following dependencies.
 
 - [Xcode](https://developer.apple.com/xcode/) 10 or later
   - free Apple Developer registration required, or install from the Mac App Store
@@ -62,6 +62,8 @@ Install HandBrake (optional).
 To start over, simply remove the `build` directory.
 
     rm -rf build
+
+[^mojave-dark-mode]: HandBrake must be built on macOS 10.4 Mojave or later to enable Dark Mode toolbar icons. Building on earlier macOS, even with latest Xcode, will result in Light Mode toolbar icons being displayed in Dark Mode.
 
 [^xcode-install]: Make sure Xcode is installed at `/Applications/Xcode.app`. When using an Xcode Beta release, you may need to rename `Xcode-beta.app` to `Xcode.app`.
 
