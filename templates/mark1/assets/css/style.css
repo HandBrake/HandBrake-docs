@@ -904,3 +904,14 @@ article.docs .footnotes + footer {
 @media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi) {
 
 }
+
+.caption {
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    padding: 15px;
+    width: calc(100% - 50px);
+    opacity: 0;
+    color: white;
+    transition: all 0.5s;
+}
