@@ -4,10 +4,16 @@ body {
     background-color: rgb(255,255,255);
 }
 
-article.docs {
+.featherlight .featherlight-image {
     margin: 0 auto;
-    padding: 1.875rem 15px;
-    max-width: 90%;
+}
+
+.featherlight .featherlight-content {
+    border-radius: 3px;
+}
+
+article.docs,
+.featherlight .featherlight-content p {
     background-color: transparent;
     color: rgb(20,20,20);
     font-family: 'Open Sans', -apple-system-body, 'Helvetica Neue', Helvetica, 'Droid Sans', Roboto, sans-serif;
@@ -15,6 +21,12 @@ article.docs {
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.66666;
+}
+
+article.docs {
+    margin: 0 auto;
+    padding: 1.875rem 15px;
+    max-width: 90%;
 }
 
 article.docs .hidden {
@@ -504,14 +516,22 @@ article.docs figure img {
     max-width: 100%;
 }
 
-article.docs figcaption {
+article.docs figcaption,
+.featherlight .featherlight-content p {
     margin-top: .5rem;
-    margin-bottom: -1px;
     padding-top: .454545em;
     border-top: 1px solid rgb(232,232,232);
     font-size: .6875rem;
     line-height: 1.36364;
     color: rgb(120,120,120);
+}
+
+.featherlight .featherlight-content p:last-child {
+    margin-bottom: 0;
+}
+
+article.docs figcaption {
+    margin-bottom: -1px;
 }
 
 article.docs .continue {
@@ -558,10 +578,6 @@ article.docs .footnotes hr {
 
 article.docs .footnotes + footer {
     border-top: none;
-}
-
-.featherlight .featherlight-content {
-    border-radius: 3px;
 }
 
 /* Wider than 350 */
@@ -659,6 +675,10 @@ article.docs .footnotes + footer {
         max-height: 240px;
     }
 
+    .featherlight .featherlight-content p {
+        font-size: .825rem;
+    }
+
 }
 
 /* Wider than 1000, taller than 550 */
@@ -708,6 +728,10 @@ article.docs .footnotes + footer {
 
     article.docs figure img {
         max-height: 320px;
+    }
+
+    .featherlight .featherlight-content p {
+        font-size: .9375rem;
     }
 
 }

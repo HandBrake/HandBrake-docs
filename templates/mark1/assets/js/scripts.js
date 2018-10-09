@@ -216,4 +216,49 @@ $(document).ready(function(){
         }
         $(this).featherlight({type: 'image2', openSpeed: 150, closeSpeed: 150});
     });
+    $.featherlight.prototype.resize = function(w, h){
+        if (w && h) {
+            /* Reset apparent image size first so container grows */
+            this.$content.css('width', '').css('height', '');
+            var aspect = w / h;
+            var caption = this.$instance.find('p');
+            var caption_height = caption.outerHeight(true);
+            var caption_factor = 1;
+            var parent_width  = this.$content.parent().width();
+            var parent_height = this.$content.parent().height();
+            var height = parent_height - caption_height;
+            var width  = height * aspect;
+            var new_width  = width + 0;
+            var new_height = height + 0;
+            var min_width = 0;
+            var min_height = 0;
+            /* Set minimum size for small viewports */
+            if (window.innerWidth < 550){
+                min_width  = Math.floor(window.innerWidth - 20 - 1);
+                min_height = min_width / aspect;
+            }
+            this.$content.css('min-width', '' + min_width + 'px').css('min-height', '' + min_height + 'px');
+            /* Calculate the worst ratio so that dimensions fit */
+            /* Note: -1 to avoid rounding errors */
+            var ratio = Math.max(
+                w / (parent_width  - 1),
+                h / (parent_height - 1));
+            /* Resize content */
+            if (ratio > 1) {
+                /* Round ratio down so height calc works */
+                ratio = h / Math.floor(h / ratio);
+                /* Account for caption size */
+                if (height + (caption_height * 2) > parent_height){
+                    caption_factor = caption_factor - (caption_height * 2.5 / parent_height);
+                }
+                new_width  = w * caption_factor / ratio;
+                new_height = h * caption_factor / ratio;
+                this.$content.css('width', '' + new_width + 'px').css('height', '' + new_height + 'px');
+            }
+        }
+    };
+    $.featherlight.prototype.beforeOpen = function(event){
+        this.$instance.find('p').remove();
+        $('<p></p>').text(this.$currentTarget.parent().find('figcaption')[0].innerText).appendTo(this.$instance.find('.featherlight-content'));
+    };
 });
