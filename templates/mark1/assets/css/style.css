@@ -594,8 +594,8 @@ article.docs .footnotes + footer {
     }
 }
 
-/* Wider than 750 */
-@media (min-width: 750px) {
+/* Wider than 720 */
+@media (min-width: 720px) {
     article.docs {
         padding-left: 50px;
         padding-right: 50px;
