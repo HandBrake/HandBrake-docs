@@ -62,7 +62,7 @@ Filters are another thing that has a big effect. Particularly if you use Denoise
 
 Your source will have an effect on performance in several ways.
 For example, a 1080P HD video will take longer to encode using the same settings and hardware than a 576P file.  This is because there are 5 times as many pixels to process in the 1080P file.
-Another aspect that can affect performance is what the format of the input file is. For example the H.254 decoder is highly optimised but lesser used codecs may not be so well optimised.  Within a codec, Baseline H.264 will be far quicker and less CPU intensive to decode than High Profile H.264. This is because the decoding algorithms used are simpler, this, you have more CPU time to spend on encoding. 
+Another aspect that can affect performance is what the format of the input file is. For example the H.264 decoder is highly optimised but lesser used codecs may not be so well optimised.  Within a codec, Baseline H.264 will be far quicker and less CPU intensive to decode than High Profile H.264. This is because the decoding algorithms used are simpler, thus, you have more CPU time to spend on encoding. 
 
 
 
