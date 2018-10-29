@@ -1,4 +1,4 @@
-HandBrake Documentation
+HandBrake Documentation ![Documentation Build Status](https://travis-ci.com/HandBrake/HandBrake-docs.svg?branch=master) 
 =======================
 
 HandBrake's documentation exists to provide a well researched, reasonably tested, and clearly written layperson's guide to using HandBrake.
