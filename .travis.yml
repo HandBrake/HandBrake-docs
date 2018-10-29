@@ -1,0 +1,16 @@
+git:
+  depth: 1
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+      
+language: c
+
+script:
+- ./build-tools
+- bash ./marsh build  
+- cd public
+- tar cvzf docs.tar.gz docs/
