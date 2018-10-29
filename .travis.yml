@@ -10,7 +10,8 @@ matrix:
 language: c
 
 script:
-- ./build-tools
-- bash ./marsh build  
+- ls
+- ./build-tools 
+- bash ./marsh build --markdown="tools/local/bin/markdown"
 - cd public
 - tar cvzf docs.tar.gz docs/
