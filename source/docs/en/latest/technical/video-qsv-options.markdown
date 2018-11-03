@@ -20,7 +20,7 @@ Intel Quick Sync Video Advanced Configuration
 Using the Advanced Options
 --------------
 
-From the command line, you can use the --encopts paramater as follows:
+From the command line, you can use the --encopts parameter as follows:
 
 	--encopts="option1=value1:option2=value2"
 
