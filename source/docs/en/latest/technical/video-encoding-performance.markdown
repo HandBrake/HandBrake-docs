@@ -29,10 +29,11 @@ There are many factors what affect encode performance. The hardware you are runn
 
 ### Hardware
 
-The hardware you run on can have a large effect on performance. HandBrake can scale well up to 6 CPU cores with diminishing returns thereafter.  
-So a 4 Core CPU can be nearly twice as fast as a Dual Core equivalent. 
+The hardware you run on can have a large effect on performance. HandBrake can scale well up to 6 to 8 CPU cores with diminishing returns thereafter.
+So a 4 core CPU can be nearly twice as fast as a dual Core equivalent, however a 16 core may not be twice as fast as an 8 core but may still offer significant increases in performance. 
+The CPU scaling curve does vary greatly by source and settings used.
 
-HandBrake also supports encoding in Hardware with Intel QuickSync. This uses dedicated ASIC hardware on the processor to encode the video which leaves much of the CPU free for other tasks. This offers very high performance encoding at a reasonable quality if you have a Haswell or newer Intel Processor with HD Graphics on-board.
+HandBrake also supports encoding in ASIC hardware with Intel QuickSync, Nvidia NVEnc, and AMD VCE.
 
 See our [System Requirements](../technical/system-requirements.html) for details on recommended hardware for running HandBrake.
 
