@@ -100,13 +100,9 @@ Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-
 
 Install your distribution's `flatpak` package before running the following commands.
 
-From the command line, install the Flathub repostitory.
-
-    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
 Install the latest HandBrake release from Flathub.
 
-    flatpak --user install flathub fr.handbrake.ghb
+    flatpak --user install https://flathub.org/repo/appstream/fr.handbrake.ghb.flatpakref
 
 You can later update the HandBrake Flatpak to the latest release on Flathub by running the following.
 
