@@ -81,7 +81,6 @@ Available Options
 | weighted_pred    | boolean     |   X   |   X   |                                                                                |
 | rc-lookahead     | int         |   X   |   X   | 0 to 27                                                                        |
 | b_adapt          | boolean     |   X   |       | Set this to 0 to disable adaptive B-frame decision when lookahead is enabled   |
-| forced-idr       | boolean     |   X   |   X   | Force IDR Key frames                                                           |
 | no-scenecut      | boolean     |   X   |   X   | 1 = Disable adaptive I-frame insertion at scene cuts when using lookahead      |
 
 
