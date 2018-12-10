@@ -71,6 +71,10 @@ Graphical interface dependencies:
 - libnotify-dev
 - libwebkitgtk-3.0-dev
 
+Additional Ubuntu 18.04 LTS graphical interface dependencies:
+
+- gstreamer1.0-libav
+
 Install dependencies.
 
     sudo apt-get update
@@ -83,5 +87,9 @@ If you are running Ubuntu 18.04 LTS or 16.04 LTS, install the additional depende
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkitgtk-3.0-dev
+
+If you are running Ubuntu 18.04 LTS, install the additional graphical interface dependencies.
+
+    sudo apt-get install gstreamer1.0-libav
 
 Ubuntu is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
