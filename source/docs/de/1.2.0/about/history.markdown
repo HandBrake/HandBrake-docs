@@ -4,7 +4,7 @@ State:           [ draft ]
 Title:           HandBrake Geschichte
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: 1.1.0
+Project_Version: 1.2.0
 Language:        Deutsch
 Language_Code:   de
 Authors:         [ Bernhard Rader (raderb) ]

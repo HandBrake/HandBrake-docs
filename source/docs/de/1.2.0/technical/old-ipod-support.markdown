@@ -4,7 +4,7 @@ State:           [ draft ]
 Title:           iPod 5G Support
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: 1.1.0
+Project_Version: 1.2.0
 Language:        English
 Language_Code:   en
 Authors:         [ Scott (s55) ]

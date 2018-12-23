@@ -135,6 +135,8 @@ Inhaltsverzeichnis
   - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
   - [Framerate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
   - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
+  - [AMD VCE](technical/video-vce.html)<span class="notice draft"><span>draft</span></span>
+  - [NVidia NVENC](technical/video-nvenc.html)<span class="notice draft"><span>draft</span></span>
 - Audio
   - [Dynamikumfang Komprimierung (DRC)](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
   - [Audio Qualität](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>

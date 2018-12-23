@@ -4,7 +4,7 @@ State:           [ draft ]
 Title:           Benutzerdefinierte Voreinstellungen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: 1.1.0
+Project_Version: 1.2.0
 Language:        Deutsch
 Language_Code:   de
 Authors:         [ Bernhard Rader (raderb), Scott (s55) ]
