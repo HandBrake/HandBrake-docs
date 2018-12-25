@@ -23,9 +23,9 @@ Die Geschwindigkeit in der deine Quelle kodiert wird, wird in Frames pro Sekunde
 Es gibt viele Faktoren die sich auf die Performanz auswirken. Die Hardware auf der das Programm läuft, die Einstellungen für die Kodierung und die Quelle.
 
 ### Hardware
-Die Hardware über die du verfügst kann einen größen Einfluss auf die Performanz haben. HandBrake skaliert gut auf bis zu 6 CPU Kerne. Eine 4-Kern-CPU kann also fast doppelt so schnell sein wie eine äquivalente 2-Kern-CPU.
+Die Hardware über die du verfügst, kann einen größen Einfluss auf die Performanz haben. HandBrake skaliert gut auf bis zu 6 oder 8 CPU Kerne. Eine 4-Kern-CPU kann also fast doppelt so schnell sein wie eine äquivalente 2-Kern-CPU. Ein 16-Kerner ist möglicherweise nicht doppelt so schnell wie ein 8-Kerner, aber er kann trotzdem noch signifikante Performancesteigerungen bieten.
 
-HandBrake unterstützt außerdem die Kodierung in der Hardware mit Intel QuickSync. Dies verwendet dedizierte ASIC Hardware auf dem Prozessor um das Video zu kodieren was die CPU entlastet. Falls du einen Intel Haswell oder neueren Intel Prozessor mit einer HD Graphics on-board besitzt kannst du damit sehr hohe Performanz mit einer vernünftigen Qualität erreichen.
+HandBrake unterstützt außerdem die Kodierung in der ASIC Hardware mit Intel QuickSync, NVIDIA NVEnc, und AMD VCE. Dies verwendet dedizierte ASIC Hardware auf dem Prozessor um das Video zu kodieren was die CPU entlastet. Falls du einen Intel Haswell oder neueren Intel Prozessor mit einer HD Graphics on-board besitzt kannst du damit sehr hohe Performanz mit einer vernünftigen Qualität erreichen.
 
 Lese unsere [Systemanforderungen](system-requirements.html) für Details über die empfohlene Hardware um HandBrake zu verwenden.
 

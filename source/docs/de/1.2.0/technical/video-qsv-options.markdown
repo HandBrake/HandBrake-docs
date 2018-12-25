@@ -21,11 +21,11 @@ Verwendung der erweiterten Optionen
 --------------
 Von der Kommandozeile kannst du den --encopts Parameter wie folgt verwenden:
 
-    --encopts="option1=value1:option2=value2"
+    --encopts="option1=wert1:option2=wert2"
 
 In der grafischen Benutzeroberfläche kannst du die Optionen in der dafür bereitgestellten Textbox eingeben:
 
-    option1=value1:option2=value2
+    option1=wert1:option2=wert2
 
 Optionstypen
 --------------

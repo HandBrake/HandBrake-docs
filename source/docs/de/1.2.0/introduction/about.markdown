@@ -26,7 +26,7 @@ HandBrake ist ein post-production Werkzeug. Sein Haupteinsatzzweck besteht in de
 
 HandBrake nimmt Videos die du bereits hast und erstellt neue, welche auf deinem Handy, Tablet, Fernseher, Spielekonsole, Computer oder Browser laufen - nahezu alles was moderne Videoformate unterstützt.
 
-HandBrake funktioniert mit den meisten üblichen Videodateien und Formaten, inklusive jener die von Konsumenten und professionellen Videokameras, Mobilgeräten wie Handy und Tablet, Spiel- und Bildschirmaufnahmen, und DVD und Blu-ray Disks erstellt werden. HandBrake nutzt dabei Werkzeuge wie Libav, x264 und x265, um neue MP4 und MKV Videodatein von diesen Quelldateien zu erstellen.
+HandBrake funktioniert mit den meisten üblichen Videodateien und Formaten, inklusive jener die von Konsumenten und professionellen Videokameras, Mobilgeräten wie Handy und Tablet, Spiel- und Bildschirmaufnahmen, und DVD und Blu-ray Disks erstellt werden. HandBrake nutzt dabei Werkzeuge wie FFmpeg, x264 und x265, um neue MP4 und MKV Videodatein von diesen Quelldateien zu erstellen.
 
 HandBrake **kann**:
 

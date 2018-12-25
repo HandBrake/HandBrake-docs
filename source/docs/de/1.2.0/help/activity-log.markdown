@@ -105,7 +105,10 @@ Du kannst den aktuellen Aktivitätenlog öffnen indem du das Aktivitätenlogfens
 
 <!-- image, activity log window on linux -->
 
-Unter Linux werden die logs in `datadir/ghb` gespeichert wobei `datadir` das Standardverzeichnis des Systems ist (üblicherweise `$(HOME)/.config`).
+Auf Linux werden die Logs in einem von zwei Orten gespeichert (`~` ist dein Home Verzeichnis):
+
+- Das `ghb` Verzeichnis in dem Standarddatenpfad deines Systems (üblicherweise `~/.config`) für das offizielle PPA und selbstkompilierte Builds
+- Das `fr.handbrake.ghb/config/ghb` Verzeichnis in dem Flatpak-Datenpfad deines Systems (üblicherweise `~/.var/app`) für die offiziellen Flatpak Bundles
 
 Der absolute Pfad zu dem Log Verzeichnis wird am oberen Rand des Aktivitätenlog Fensters angezeigt.
 

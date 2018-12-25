@@ -18,9 +18,9 @@ HandBrake für Windows bauen
 
 ## Kommandozeileninterface und LibHB
 
-Um die HandBrake [CLI](abbr:Command Line Interface - Kommandozeile) und LibHB(`hb.dll`) für Windows zu bauen, benötigt man Linux und eine aktuelle [MinGW-w64](https://mingw-w64.org) toolchain. Empfohlen sind Ubuntu 18.04 LTS (Bionic Beaver) und 16.04 LTS (Xenial Xerus); andere Distributionen könnten auch funktionieren. Auf jeden Fall empfehlen wir die MinGW-w64 toolchain mithilfe unserer Anweisungen und dem mitgeliefertem Script zu installieren, da die meisten als Paket angebotenen Versionen Probleme haben, die zu einem nicht funktionierenden Build führen können.
+Um die HandBrake [CLI](abbr:Command Line Interface - Kommandozeile) und LibHB(`hb.dll`) für Windows zu bauen, benötigt man Linux und eine aktuelle [MinGW-w64](https://mingw-w64.org) toolchain. Empfohlen ist Ubuntu 18.04 LTS (Bionic Beaver); andere Distributionen könnten auch funktionieren. Auf jeden Fall empfehlen wir die MinGW-w64 toolchain mithilfe unserer Anweisungen und dem mitgeliefertem Script zu installieren, da die meisten als Paket angebotenen Versionen Probleme haben, die zu einem nicht funktionierenden Build führen können.
 
-Die folgenden Anweisungen sind für Ubuntu 18.04 LTS (Bionic Beaver) und 16.04 LTS (Xenial Xerus).
+Die folgenden Anweisungen sind für Ubuntu 18.04 LTS (Bionic Beaver).
 
 Abhängigkeiten:
 
@@ -35,16 +35,13 @@ Abhängigkeiten:
 - libtool-bin
 - m4
 - make
+- nasm
 - patch
 - pkg-config
 - python
 - tar
 - yasm
 - zlib1g-dev
-
-Zusätzliche Abhängigkeiten die nicht im Ubuntu 16.04 LTS Base Repository sind:
-
-- nasm 2.13 oder neuer
 
 Zusätzliche MinGW-w64 toolchain Abhängigkeiten:
 
@@ -58,22 +55,7 @@ Zusätzliche MinGW-w64 toolchain Abhängigkeiten:
 Abhängigkeiten installieren:
 
     sudo apt-get update
-    sudo apt-get install automake autoconf build-essential cmake curl gcc git intltool libtool libtool-bin m4 make patch pkg-config python tar yasm zlib1g-dev
-
-Für Ubuntu 18.04 (Bionic Beaver), installiere `nasm` aus dem base repository:
-
-    sudo apt-get install nasm
-
-Für Ubuntu 16.04 LTS (Xenial Xerus), kompiliere den `nasm` Quellcode da die Version im Base Repository zu alt ist.
-
-    curl -O https://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.bz2
-    tar -xf nasm-2.13.02.tar.bz2
-    cd nasm-2.13.02
-    ./configure --prefix=/usr/local --enable-sections --enable-lto
-    make -j$(nproc)
-    sudo make install
-    source ~/.bashrc
-    cd ..
+	sudo apt-get install automake autoconf build-essential cmake curl gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar yasm zlib1g-dev
 
 Installiere zusätzliche Abhängigkeiten die für den Build der MinGW-w64 toolchain benötigt werden:
 
@@ -96,7 +78,7 @@ Dieser Prozess wird ein paar Minuten in Anspruch nehmen und dir nach Abschluss A
 
 Baue HandBrake. Für Audio mit höherer Qualität, aktivere den FDK AAC Kodierer indem du `--enable-fdk-aac` anhängst. Builds die FDK AAC inkludieren dürfen nur für persönlichen Gebrauch genutzt werden und dürfen nicht weitergegeben werden.[^fdk-aac-license]
 
-    ./configure --cross=x86_64-w64-mingw32 --enable-qsv --launch-jobs=$(nproc) --launch
+    ./configure --cross=x86_64-w64-mingw32 --enable-qsv --enable-vce --enable-nvenc --launch-jobs=$(nproc) --launch
 
 Wenn der Prozess abgeschlossen ist, findest du `HandBrakeCLI.exe` in deinem `build` Ordner und `hb.dll` in dem `build/libhb` Verzeichnis.
 

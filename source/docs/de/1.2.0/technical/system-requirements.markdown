@@ -73,26 +73,55 @@ Folgende Auflistung ist das Minimum an Hardware das HandBrake unterstützt. Es k
 HandBrake's QuickSync Feature ist nur auf Windows verfügbar. Experimenteller Linux Support ist verfügbar wenn der Quellcode mit `--enable-qsv` kompiliert wird. QuickSync benötigt mindestens einen Intel Core Prozessor der zweiten Generation (Sandy Bridge) mit integrierten Intel HD Graphics aktiviert.
 
 ## Software
+Folgende Auflistung beschreibt die Unterstützung der aktuellen HandBrake Version für verschiedene Systeme.
+
+| Status      | Beschreibung                                                                                                                                              |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unterstützt   | HandBrake wurde auf diesen Systemversionen erfolgreich getestet. Das HandBrake Team und Communitymitglieder bieten freiwillig Unterstützung. Zudem sind Problemberichte willkommen. |
+| Veraltet  | HandBrake sollte auf diesen Systemversionen laufen. Unterstützung ist kurz vorm auslaufen. Eingeschränkte Funktionalität und andere Probleme werden wahrscheinlich nicht beachtet.  |
+| Nicht unterstützt | HandBrake funktioniert auf diesen Systemversionen nicht. Es wird keine Unterstützung geboten. Bitte aktualisiere deine Software um von den neuesten Features und Bugfixes zu profitieren.  |
 
 <!-- .system-linux -->
 
-### Linux
+### Linux und BSD
 
 #### Ubuntu (Offizielles PPA)
+- Neuere Ubuntu LTS Versionen werden üblicherweise unterstützt
+- HandBrake wird üblicherweise für nicht-LTS Versionen bis zum Lebensende der Version mit Updates versorgt
+- Besuche [Wo bekomme ich HandBrake her](../get-handbrake/where-to-get-handbrake.html) für mehr Informationen über das PPA
 
-Siehe [Wo bekomme ich HandBrake her](../get-handbrake/where-to-get-handbrake.html) für PPA Details.
+| Ubuntu Version     | Status              | Letzte Kompatible Version |
+|--------------------|---------------------|---------------------------|
+| 18.04 LTS Bionic   | Unterstützt         |                           |
+| 16.04 LTS Xenial   | Unterstützt         |                           |
+| 14.04 LTS Trusty   | Nicht Unterstützt   | HandBrake 1.1.2           |
 
-#### Andere Linuxdistributionen
+#### Flatpak
+Benötigt eine aktuelle Linux Distribution und das `flatpak` Paket.
 
-Für andere Linux Distributionen musst du den [Quellcode kompilieren](../developer/build-linux.html).
+#### Andere Distributionen
+Für andere Distributionen musst du mithilfe der verlinkten Artikel den [Linux](../developer/build-linux.html) bzw. den [BSD](../developer/build-bsd.html) Quellcode kompilieren.
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
 
 ### Mac
 
-- OS X 10.7 Lion oder neuer
+- macOS 10.10 Yosemite und neuer
 - [VLC](https://www.videolan.org/vlc/) ist empfohlen um MKV (Matroska) Mediendateien abzuspielen
+
+| macOS Version      | Status              | Letzte Kompatible Version | Notizen                             |
+|--------------------|---------------------|---------------------------|-------------------------------------|
+| 10.14 Mojave       | Unterstützt         |                           | Benötigt HandBrake 1.1.2 oder neuer.|
+| 10.13 High Sierra  | Unterstützt         |                           |                                     |
+| 10.12 Sierra       | Unterstützt         |                           |                                     |
+| 10.11 El Capitan   | Veraltet seit 1.2.0 |                           |                                     |
+| 10.10 Yosemite     | Veraltet seit 1.2.0 |                           |                                     |
+| 10.9 Mavericks     | Nicht unterstützt   | HandBrake 1.1.2           |                                     |
+| 10.8 Mountain Lion | Nicht unterstützt   | HandBrake 1.1.2           |                                     |
+| 10.7 Lion          | Nicht unterstützt   | HandBrake 1.1.2           |                                     |
+| 10.6 Snow Leopard  | Nicht unterstützt   | HandBrake 0.10.5          |                                     |
+
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
@@ -100,7 +129,15 @@ Für andere Linux Distributionen musst du den [Quellcode kompilieren](../develop
 ### Windows
 
 - Windows 7 Service Pack 1 (64-bit) oder neuer
-- Microsoft .NET Framework 4.6.1 oder neuer
+- Microsoft .NET Framework 4.7.1 oder neuer
 - [VLC](https://www.videolan.org/vlc/) ist empfohlen um Mediadateien abzuspielen
+
+| Windows Version | Status              | Letzte Kompatible Version |
+|-----------------|---------------------|---------------------------|
+| Windows 10      | Unterstützt         |                           |
+| Windows 8.1     | Unterstützt         |                           |
+| Windows 7 SP1   | Veraltet seit 1.1.0 |                           |
+| Windows Vista   | Nicht unterstützt   | HandBrake 1.0.7           |
+| Windows XP      | Nicht unterstützt   | HandBrake 0.9.9           |
 
 <!-- /.system-windows -->

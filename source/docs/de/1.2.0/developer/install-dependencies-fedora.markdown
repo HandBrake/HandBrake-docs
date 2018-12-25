@@ -45,10 +45,13 @@ Dependencies:
 - libxml2-devel
 - m4
 - make
+- nasm
 - opus-devel
 - patch
 - python
+- speex-devel
 - tar
+- xz-devel
 - yasm
 - zlib-devel
 
@@ -72,8 +75,8 @@ Abhängigkeiten installieren:
 
     sudo yum update
     sudo yum groupinstall "Development Tools" "Development Libraries"
-    sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make opus-devel patch python tar yasm zlib-devel
-
+	sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make nasm opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
+ 
 Installiere das freie [RPM Fusion](http://rpmfusion.org) Repository und zugehörige Abhängigkeiten.
 
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(cat /etc/system-release | awk '{ print $3}').noarch.rpm

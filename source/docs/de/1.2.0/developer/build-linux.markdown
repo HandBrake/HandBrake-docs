@@ -42,7 +42,7 @@ Liste verfügbare Tags in der HandBrake 1.2.x Release Serie und checke den aktue
     git tag --list | grep ^1\.2\.
     git checkout refs/tags/$(git tag -l | grep -E '^1\.2\.[0-9]+$' | tail -n 1)
 
-Baue HandBrake. Um die experimentelle Unterstützung für Intel QSV via dem [Intel Media SDK](https://github.com/Intel-Media-SDK/MediaSDK/releases) zu aktivieren, füge dem Aufruf `--enable-qsv` hinzu. Um nur das Komanndozeileninterface zu bauen, deaktivere die grafische Oberfläche indem du die Option `--disable-gtk` anhängst.
+Baue HandBrake. Um die experimentelle Unterstützung für Intel QSV via dem [Intel Media SDK](https://github.com/Intel-Media-SDK/MediaSDK/releases) zu aktivieren, füge dem Aufruf `--enable-qsv` hinzu. Um nur das Komanndozeileninterface zu bauen, deaktivere die grafische Oberfläche, indem du die Option `--disable-gtk` anhängst.
 
     ./configure --launch-jobs=$(nproc) --launch
 

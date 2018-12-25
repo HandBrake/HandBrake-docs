@@ -34,7 +34,6 @@ Die Standardvoreinstellung `Fast 1080p30` ist eine gute Wahl, wenn du gerade ers
 ## Generelle Voreinstellungen
 HandBrake's Generelle `Voreinstellungen` verwenden den [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) und sind gedacht, mit einer großen Menge an verschiedensten Geräten und Software kompatibel zu sein.[^high-quality-settings-less-compatible]
 
-Each General `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
 Jede Generelle `Voreinstellung` ist benannt nach der Qualität oder Geschwindigkeit, Maximale Auflösung und Maximale Framerate die es produziert.
 
 | Voreinstellung            | Typ  | Video | Audio                            | Bildqualität    | Geschwindigkeit| Dateigröße |
@@ -151,24 +150,24 @@ Production Proxy `Voreinstellungen` erstellen schnell zu kodierende, Intra-only 
 | Production Proxy 1080p    | MP4  | H.264 | AAC stereo | 1/4 2160p 4K   | Proxy           | Intra-only  | 1        | Schnell              | Durchschnittlich   |
 | Production Proxy 540p     | MP4  | H.264 | AAC stereo | 1/4 1080p HD   | Proxy           | Intra-only  | 1        | Sehr Schnell      | Klein     |
 
-## Legacy Voreinstellungen
-HandBrake's Legacy `Voreinstellungen` sind noch von vorherigen HandBrake Versionen übergeblieben um die Kompatibilität mit bestehenden Workflows und Scripts sicherzustellen.
-HandBrake's Legacy `Presets` are retained from previous HandBrake releases for compatibility with existing workflows and scripts.
+## Kompatible Ersatzvoreinstellungen für veraltete oder entfernte Voreinstellungen
+Von Zeit zu Zeit kann es passieren, dass offizielle `Voreinstellungen` ausrangiert oder entfernt werden. Kompatible Ersatzvoreinstellungen werden hier aufgelistet.
 
-| Voreinstellung      | Typ  | Video | Audio                            | Maximale Auflösung | Geschwindigkeit |
-|---------------------|------|-------|----------------------------------|----------------|----------------|
-| Normal              | MP4  | H.264 | AAC stereo                       | 1080p          | Sehr schnell      |
-| High Profile        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Mittel         |
-| Universal           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 576p/480p      | Sehr schnell      |
-| iPod                | MP4  | H.264 | AAC stereo                       | 240p           | Ultra schnell     |
-| iPhone & iPod touch | MP4  | H.264 | AAC stereo                       | 540p           | Mittel         |
-| iPad                | MP4  | H.264 | AAC stereo                       | 720p           | Mittel         |
-| AppleTV             | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 540p           | Mittel         |
-| AppleTV 2           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 720p           | Mittel         |
-| AppleTV 3           | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | 1080p          | Mittel         |
-| Android             | MP4  | H.264 | AAC stereo                       | 480p           | Mittel         |
-| Android Tablet      | MP4  | H.264 | AAC stereo                       | 720p           | Mittel         |
-| Windows Phone 8     | MP4  | H.264 | AAC stereo                       | 720p           | Mittel         |
+### Legacy Voreinstellungen
+| Voreinstellung      | Kompatible Voreinstellungen      | Notizen                                                                                                                                 |
+|---------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Normal              | General > Fast 1080p30           | Decomb filter, maximale Rate auf 30FPS limitiert, leicht verringerte Video Bitrate, verbesserte Bewegungsqualität, Suche nach fremdsprachiger Tonspur. |
+| High Profile        | General > HQ 1080p30 Surround    | Maximal 30 FPS, verringerte Video Bitrate Obergrenzen, Suche nach fremdsprachiger Tonspur.                                              |
+| Universal           | None                             | General > Fast 576p25/480p30 könnten passend sein, wenn Kompatibilität mit uralten Geräten und Surround Sound nicht benötigt werden.    |
+| iPod                | Devices > Apple 240p30           | Decomb filter, Suche nach fremdsprachiger Tonspur.                                                                                      |
+| iPhone & iPod touch | Devices > Apple 540p30 Surround  | Decomb filter, leicht erhöhte Video Bitrate, Surround Sound, Suche nach fremdsprachiger Tonspur.                                        |
+| iPad                | Devices > Apple 720p30 Surround  | Decomb filter, leicht verringerte Video Bitrate, Surround sound, Suche nach fremdsprachiger Tonspur.                                    |
+| AppleTV             | Devices > Apple 540p30 Surround  | Decomb filter, Suche nach fremdsprachiger Tonspur.                                                                                      |
+| AppleTV 2           | Devices > Apple 720p30 Surround  | Decomb filter, leicht verringerte Video Bitrate, Suche nach fremdsprachiger Tonspur.                                                    |
+| AppleTV 3           | Devices > Apple 1080p30 Surround | Decomb filter, leicht verringerte Video Bitrate, Suche nach fremdsprachiger Tonspur.                                                    |
+| Android             | Devices > Android 576p25/480p30  | Decomb filter, maximale Rate auf 25 FPS limitiert (nur Android 576p25), leicht erhöhte Video Bitrate, Suche nach fremdsprachiger Tonspur, Kapitelmarkierungen.  |
+| Android Tablet      | Devices > Android 720p30         | Decomb filter, leicht erhöhte Video Bitrate, Suche nach fremdsprachiger Tonspur, Kapitelmarkierungen.                                   |
+| Windows Phone 8     | None                             | Devices > Windows Mobile 720p30 könnte passend sein mit Anamorphic deaktiviert und Audio Bitrate auf 128 kbps reduziert.                |
 
 [^high-quality-settings-less-compatible]: Generelle `Voreinstellungen` mit einer höheren Qualität könnten Einstellungen inkludieren die mit alten oder langsamen Geräten inkompatibel sind.
 

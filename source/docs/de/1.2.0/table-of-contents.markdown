@@ -52,13 +52,13 @@ Inhaltsverzeichnis
 
 - [Die Warteschlange verwenden](advanced/queue.html)
   *Richte mehrere Kodierungsjobs auf einmal ein*
-- [Punkt zu Punkt Kodierung](advanced/point-to-point.html)
-- [Benutzerdefinierte Voreinstellungen](advanced/custom-presets.html)
-- [Audio und Untertitel Standardeinstellungen](advanced/audio-subtitle-defaults.html)
-- [Video Größenänderung](advanced/resizing-video.html)
-- [Surround Sound beibehalten](advanced/surround-sound.html)
-- [Untertitel hinzufügen](advanced/subtitles.html)
-- [Kapitelmarkierungen hinzufügen](advanced/chapter-markers.html)
+- [Punkt zu Punkt Kodierung](advanced/point-to-point.html)<span class="notice draft"><span>draft</span></span>
+- [Benutzerdefinierte Voreinstellungen](advanced/custom-presets.html)<span class="notice draft"><span>draft</span></span>
+- [Audio und Untertitel Standardeinstellungen](advanced/audio-subtitle-defaults.html)<span class="notice draft"><span>draft</span></span>
+- [Video Größenänderung](advanced/resizing-video.html)<span class="notice draft"><span>draft</span></span>
+- [Surround Sound beibehalten](advanced/surround-sound.html)<span class="notice draft"><span>draft</span></span>
+- [Untertitel hinzufügen](advanced/subtitles.html)<span class="notice draft"><span>draft</span></span>
+- [Kapitelmarkierungen hinzufügen](advanced/chapter-markers.html)<span class="notice draft"><span>draft</span></span>
 
 <!-- - [Managing Audio Tracks](advanced/managing-audio.html) -->
 <!-- - [Post-processing metadata](advanced/post-processing.html) -->
@@ -85,14 +85,14 @@ Inhaltsverzeichnis
 
 <!-- ## Advanced workflows part 2
 
-- [Understanding source types](advanced/video-sources.html)
-- [Selecting a container format and encoders](advanced/containers.html)
-- [Selecting a video angle](advanced/video-angles.html)
-- [Working with frame rates](advanced/frame-rates.html)
-- [Adjusting audio quality](advanced/audio-quality.html)
-- [Progressive download support](advanced/web-optimised.html)
-- [Compatibility with legacy devices](advanced/old-ipod-support.html)
-- [Automatically naming files](advanced/automatic-file-naming.html)
+- [Understanding source types](advanced/video-sources.html)<span class="notice draft"><span>draft</span></span>
+- [Selecting a container format and encoders](advanced/containers.html)<span class="notice draft"><span>draft</span></span>
+- [Selecting a video angle](advanced/video-angles.html)<span class="notice draft"><span>draft</span></span>
+- [Working with frame rates](advanced/frame-rates.html)<span class="notice draft"><span>draft</span></span>
+- [Adjusting audio quality](advanced/audio-quality.html)<span class="notice draft"><span>draft</span></span>
+- [Progressive download support](advanced/web-optimised.html)<span class="notice draft"><span>draft</span></span>
+- [Compatibility with legacy devices](advanced/old-ipod-support.html)<span class="notice draft"><span>draft</span></span>
+- [Automatically naming files](advanced/automatic-file-naming.html)<span class="notice draft"><span>draft</span></span>
 -->
 
 ## Hilfe bekommen
@@ -107,14 +107,14 @@ Inhaltsverzeichnis
 
 ## Mehr Informationen
 
-- [Projekt Historie](about/history.html)
+- [Projekt Historie](about/history.html)<span class="notice draft"><span>draft</span></span>
 - [Mithelfen](contributing/contribute.html)
   *Wie du mithelfen kannst*
 
 ## Commandline Dokumentation
 
-- [CLI Guide](cli/cli-guide.html)
-- [Liste von CLI Optionen](cli/cli-options.html)
+- [CLI Guide](cli/cli-command-line-reference.html)
+- [Liste von CLI Optionen](cli/cli-options.html)<span class="notice draft"><span>draft</span></span>
 
 ## Technische Dokumentation
 
@@ -125,25 +125,27 @@ Inhaltsverzeichnis
 - [Offizielle Voreinstellungen](technical/official-presets.html)
   *Technische Zusammenfassung der offiziellen Voreinstellungen*
 - Video
-  - [Video Kodierer](technical/video-codecs.html)
-  - [Video Kodierer Performance](technical/video-encoding-performance.html)
-  - [Konstante Qualität versus durchschnittliche Bitrate](technical/video-cq-vs-abr.html)
-  - [x264 Voreinstellungen und Anpassungen](technical/video-x264-presets-tunes.html)
-  - [x264 Profile und Level](technical/video-x264-profiles-levels.html)
-  - [Video Blickwinkel/Perspektiven](technical/video-angles.html)
-  - [Anamorphisches Video](technical/anamorphic-guide.html)
-  - [Modulus](technical/modulus.html)
-  - [Framerate](technical/frame-rates.html)
-  - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)
+  - [Video Kodierer](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
+  - [Video Kodierer Performance](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
+  - [Konstante Qualität versus durchschnittliche Bitrate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
+  - [x264 Voreinstellungen und Anpassungen](technical/video-x264-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
+  - [x264 Profile und Level](technical/video-x264-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
+  - [Video Blickwinkel/Perspektiven](technical/video-angles.html)<span class="notice draft"><span>draft</span></span>
+  - [Anamorphisches Video](technical/anamorphic-guide.html)<span class="notice draft"><span>draft</span></span>
+  - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
+  - [Framerate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
+  - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
+  - [AMD VCE](technical/video-vce.html)<span class="notice draft"><span>draft</span></span>
+  - [NVidia NVENC](technical/video-nvenc.html)<span class="notice draft"><span>draft</span></span>
 - Audio
-  - [Dynamikumfang Komprimierung (DRC)](technical/dynamic-range-compression.html)
-  - [Audio Qualität](technical/audio-quality.html)
+  - [Dynamikumfang Komprimierung (DRC)](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
+  - [Audio Qualität](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>
 - Dateien und Kompatibilität
-  - [Container Formate](technical/containers.html)
-  - [iPod 5. Generation Unterstützung](technical/old-ipod-support.html)
-  - [Automatische Dateibenennung](technical/automatic-file-naming.html)
+  - [Container Formate](technical/containers.html)<span class="notice draft"><span>draft</span></span>
+  - [iPod 5. Generation Unterstützung](technical/old-ipod-support.html)<span class="notice draft"><span>draft</span></span>
+  - [Automatische Dateibenennung](technical/automatic-file-naming.html)<span class="notice draft"><span>draft</span></span>
 - Filter
-  - [Filter Zusammenfassung](technical/filters-summary.html)
+  - [Filter Zusammenfassung](technical/filters-summary.html)<span class="notice draft"><span>draft</span></span>
 
 <!--
 -  [Web optimized](advanced/web-optimised.html)
@@ -163,7 +165,7 @@ Inhaltsverzeichnis
   - [HandBrake für Mac bauen](developer/build-mac.html)
   - [HandBrake für Windows bauen](developer/build-windows.html)
 - Packaging HandBrake
-  - [Flatpak apps für Linux](developer/flatpak-repo.html)
+  - [Flatpak apps für Linux](developer/flatpak-repo.html)<span class="notice draft"><span>draft</span></span>
     *Flatpak Applikationen kompatibel mit mehreren Linux distributionen*
 
 <!-- TODO: link to contributing guide -->

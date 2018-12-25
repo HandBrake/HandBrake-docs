@@ -51,9 +51,12 @@ Abhängigkeiten:
 - libvorbis
 - libx264
 - libxml2
+- lzma
+- nasm
 - opus
 - pkgconf
 - python
+- speex
 - yasm
 
 Abhängigkeiten für die Grafische Benutzeroberfläche:
@@ -77,8 +80,8 @@ Abhängigkeiten für die Grafische Benutzeroberfläche:
 
 Abhängigkeiten installieren:
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 opus pkgconf python yasm
-
+	sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 nasm opus pkgconf python speex yasm
+ 
 Baue und installiere den `lame` Source Port.
 
     sudo portsnap fetch

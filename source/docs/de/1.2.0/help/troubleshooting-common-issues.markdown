@@ -72,7 +72,6 @@ Windows 10 liefert das Microsoft .NET Framework bereits mit. Updates gibt es fü
 Zusätzlich kannst du einen der folgenden Microsoft .NET Framework Standalone installers herunterladen.
 
 - [Microsoft .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56116) für Windows 7 SP1, Windows 8.1, Windows 10, und Windows Server
-- [Microsoft .NET Framework 4.6](https://support.microsoft.com/en-us/help/3045557/microsoft-net-framework-4-6-offline-installer-for-windows) für Windows Vista SP2
 
 ### Allgemeine Fehlerbehebung
 
@@ -81,10 +80,6 @@ Probiere die folgenden Schritte bis HandBrake wieder funktioniert.
 1. Starte deinen Computer neu
 2. Installiere die neueste Version von Microsoft .NET Framework die für deine Windows Version verfügbar ist
 3. Lösche deine HandBrake Voreinstellungen und Konfigurationsdaten (setze für username deinen eigenen Namen ein)
-    - Windows Vista:
-      - C:\Users\username\Application Data\HandBrake
-      - C:\Users\username\Local Settings\Application Data\HandBrake
-    - Windows 7 und neuer
       - C:\Users\username\AppData\Roaming\HandBrake
       - C:\Users\username\AppData\Local\HandBrake
 3. Installiere die neueste Version von HandBrake; siehe [HandBrake herunterladen und installieren](../get-handbrake/download-and-install.html).

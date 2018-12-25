@@ -14,24 +14,8 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Ein HandBrake Flatpak Repository maintainen
+HandBrake Flatpak Bundles und Repositoriy erstellen
 ==========================================
-
-## Diese Instruktionen funktionieren derzeit nicht
-Das Flatpak Gnome Runtime SDK inkludiert derzeit nicht nasm. HandBrake benötigt nasm während des build prozesses, deshalb bekommt man einen Build error wenn man diesen Instruktionen folgt. Hoffentlich wird die Gnome Runtime in der nahen Zukunft aktualisiert um nasm (und yasm auch) zu inkludieren. Die Freedesktop Runtime wurde bereits aktualisiert und beinhaltet diese beiden.
-
-Siehe: [NASM flatpak issue](https://github.com/flatpak/freedesktop-sdk-images/issues/8)
-
-## Ein neues leeres Flatpak Repository erstellen
-Dies wird einmal aufgesetzt und served via http für die User.
-
-Initialisiere ein neues Repository
-
-    ostree init --mode=archive-z2 --repo=<repo-dir>
-
-Füge das neue Repository deinen Flatpak Remotes hinzu
-
-    flatpak --user remote-add --gpg-import=<pub-gpg-key> <repo-name> <repo-dir>
 
 ## Installiere Abhängigkeiten
 Installiere flatpak und flatpak-builder
@@ -42,43 +26,58 @@ Installiere flathub repository.
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-Installiere flatpak gnome SDK.
+Installiere flatpak freedesktop SDK.
 
-    flatpak install flathub org.gnome.Sdk//3.26
+    flatpak install flathub org.freedesktop.Sdk//1.6
 
-Installiere flatpak gnome runtime platform.
+Installiere flatpak freedesktop runtime platform.
 
-    flatpak install flathub org.gnome.Platform//3.26
+    flatpak install flathub org.freedesktop.Platform//1.6
 
 ## Erstelle ein neues HandBrake Flatpak Bundle
 Dies kann auf einer anderen Maschine gemacht werden die nicht das Repo enthält.
 
-Aus dem HandBrake Quellbaum aktualisiere Buildversionen indem du configure startest
+Aktualisiere Buildversionen aus dem HandBrake Quellverzeichnis heraus, indem du configure startest
 
-    ./configure --prefix=/app --flatpak
+    ./configure --flatpak
 
-Baue Flatpaks für GUI und CLI.
-Resultate werden in build/pkg/flatpak/ gespeichert
+Baue signierte flatpak Pakete für GUI und CLI.
+
+    cd build
+    make pkg.create.flatpak PGP_ID=<optional signing key id>
+
+Oder um unsignierte flatpak Pakete zu bauen.
 
     cd build
     make pkg.create.flatpak
 
-## Import von Flatpak Bundles in das Repository
-Für jeden Build wird ein GUI und ein CLI Flatpak Bundle importiert.
+Nachdem der Build abgeschlossen ist, können die Pakete für das GUI und CLI in folgendem Ordner gefunden werden:
 
-Importiere ein bundle
+	pkg/flatpak/*.flatpak
 
-    flatpak build-import-bundle <repo-dir> <flatpak-bundle>
+Zusätzlich kann ein OSTree Repository, indem die Pakete committed und mit der oben angegebenen PGP ID signiert wurden, in folgendem Verzeichnis gefunden werden:
 
-Aktualisiere den Flatpak Repo Index
+	pkg/flatpak/HandBrake-Flatpak.repo
 
-    flatpak build-update-repo --generate-static-deltas <repo-dir>
+Falls die PGP_ID nicht angegeben wird, ist der OSTree commit unsigniert.
 
-Generiere und gpg-sign die ostree summary neu
+## Installation des Flatpak Bundles
+Um das Flatpak Bundle direkt zu verwenden anstatt es in das Repository zu importieren und dann von dort aus zu installieren ist folgender Befehl zu verwenden:
 
-    ostree summary --repo=<repo-dir> --gpg-sign=<key-id> -u
+	flatpak install <flatpak-bundle>
 
-## Überprüfe repo und Applikation
+## Füge OSTree Repository der Flatpak Repo Liste hinzu (Optional)
+Dies wird derzeit nur zum Testen verwendet. Wir möchten eventuell eine "offizielle" Repo Location erstellen in welcher wir neue Bundles veröffentlichen. Derzeit ist das Repo nur ein Produkt des Builds und ist nicht zur Wiederverwendung in anderen Builds gedacht.
+
+Füge das neue Repository deinen Flatpak Remotes hinzu
+
+	flatpak --user remote-add <repo-name> <repo-dir>
+
+Falls das Repo ohne PGP signierte Commits erzeugt wurde
+
+	flatpak --user remote-add --no-gpg-verify <repo-name> <repo-dir>
+
+## Überprüfe Repo und Applikation (Optional)
 Liste Inhalte des Repos
 
     flatpak --user remote-ls <repo-name>
@@ -86,3 +85,66 @@ Liste Inhalte des Repos
 Installiere die Applikation (falls du es testen möchtest)
 
     flatpak --user install <repo-name> <app-name>
+
+# Ein separates OSTree Repository maintainen
+Es gibt Situationen, in denen du dein Repository nicht auf demselben Server haben möchtest, auf welchem du dein Flatpak gebaut hast. Anstatt das gesamte repo-dir das vom flatpak-builder erstellt wird zu exportieren, kannst du deine Bundles in ein separates OSTree Repository importieren.
+
+## Ein neues leeres Repository erstellen
+
+```
+ostree init --mode=archive-z2 --reop=<repo-dir>
+```
+
+## Eine Flatpakrepo Datei dem Repository hinzufügen
+Diese Datei wird von Flatpak Clients verwendet, um dein Repository ihren Remote-Listen hinzuzufügen.
+
+Erstelle eine Datei mit dem Namen \<dein-Projekt\>.flatpakrepo in \<repo-dir\>. Das Format sieht wie folgt aus:
+
+```
+[Flatpak Repo]
+Title=Yourproject
+Url=https://dl.yourproject.org:8080/repo/
+Homepage=https://yourproject.org/
+Comment=Repository of yourproject
+Description=Repository of yourproject
+Icon=https://dl.yourproject.org/repo/logo.svg
+GPGKey=<base64 encoded raw public gpg>
+```
+
+Beachte, dass die Portangabe optional ist und standardmäßig auf 80 eingestellt ist. Ich verwende 8080 zum Testen.
+
+Kodiere den GPG Signierschlüssel in base64
+
+```
+gpg2 --export <key-id> > key.gpg
+base64 --wrap=0 < key.gpg > key.base64
+```
+
+## Flatpak Bundles in das Repository importieren
+
+```
+flatpak build-import-bundle --gpg-sign=<key-id> <repo-dir> <flatpak-bundle>
+```
+
+## Repository Informationen aktualisieren
+
+```
+flatpak build-update-repo --generate-static-deltas --gpg-sign=<key-id>
+```
+
+## Dein Repository mit einem Webserver hosten
+Für Testzwecke verwende ich einfach pythons builtin Webserver.
+
+```
+python3 -m http.server 8080 --directory <repo-dir>
+```
+
+Beachte, dass hierfür mindestens Python 3.7 benötigt wird.
+
+## Veröffentliche die Lokation von \<dein-projekt\>.flatpakrepo
+Benutzer können dein Repository zu ihrer Liste von Remotes mit folgendem Kommando hinzufügen:
+
+```
+flatpak remote-add --if-not-exists deinprojekt https://dl.yourproject.org:8080/repo/deinprojekt.flatpakrepo
+```
+

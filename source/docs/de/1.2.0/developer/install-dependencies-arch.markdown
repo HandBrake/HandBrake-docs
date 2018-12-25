@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Arch
 ===============================
 
-Die folgenden Instruktionen sind für [Arch](https://www.archlinux.org) 2016.12.01 (nur HandBrake [CLI](abbr:Command Line Interface - Kommandozeile)).
+Die folgenden Instruktionen sind für [Arch](https://www.archlinux.org) 2018.05.01 (nur HandBrake [CLI](abbr:Command Line Interface - Kommandozeile)).
 
 Grundvorraussetzungen um Kommandos abzusetzen:
 
@@ -42,14 +42,17 @@ Abhängigkeiten:
 - libvorbis
 - libvpx
 - libxml2
+- nasm
 - opus
 - python2
+- speex
 - x264
 - x265
+- xz
 - yasm
 
 Installiere Abhängigkeiten:
 
-    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 opus python2 x264 x265 yasm
+	sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 nasm opus python2 speex x264 x265 xz yasm
 
 Arch ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weitere Instruktionen.

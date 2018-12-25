@@ -16,7 +16,6 @@ License_URL:     https://handbrake.fr/docs/license.html
 
 Audio Codecs
 ============
- 
 
 Kodierung vs Passthrough (Durchleiten)
 -----------------------
@@ -33,7 +32,7 @@ Audio Kodierer
 
 -   AAC:
     -   Advanced Audio Coding (AAC) ist eine der beliebtesten Formate die in HandBrake verfügbar ist und wird von sehr vielen Mediaplayern und Mobilgeräten unterstützt.
-    -   Unter Linux und Windows verwendet HandBrake den LibAV AAC Kodierer.
+    -   Unter Linux und Windows verwendet HandBrake den FFmpeg AAC Kodierer.
     -   Unter Mac verwendet HandBrake Apple's CoreAudio AAC Kodierer. Es ist bekannt für seine überragene Qualität und ist die Standardoption für Mac Benutzer.
 
 -   HE-AAC (nur unter Mac)
@@ -47,10 +46,10 @@ Audio Kodierer
     -   HandBrake bietet zudem auch Vorbis Audiokodierung an, für den es den aoTuV Branch verwendet der Anpassungen für die Qualität beinhaltet.
 
 -   AC3:
-    -   HandBrake kann mithilfe von LibAV nach AC3 kodieren.
+    -   HandBrake kann mithilfe von FFmpeg nach AC3 kodieren.
     -   Dies ist nicht dasselbe wie Passthru. Du kannst jede beliebige Audiospur nach AC3 kodieren.
 
--   Flac 16 and 24bit (Libav)
+-   Flac 16 and 24bit (FFmpeg)
     -   Verlustfreie Audiokompression.
     -   Verfügbar in MKV Dateien.
     -   Es ist derzeit nicht möglich den Kompressionsgrad der standardmäßig auf "5" gesetzt ist, zu dem ffmpeg Kodierer durchzuleiten.

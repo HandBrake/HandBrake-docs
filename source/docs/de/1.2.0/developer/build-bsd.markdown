@@ -30,7 +30,7 @@ Das HanBrake Repository klonen.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Alle verfügbaren Tags in der HandBrake 1.2.x Release Serie auflisten und den aktuellsten auschecken.
+Liste verfügbare Tags in der HandBrake 1.2.x Release Serie und checke den aktuellsten aus.
 
     git tag --list | grep ^1\.2\.
     git checkout refs/tags/$(git tag -l | grep -E '^1\.2\.[0-9]+$' | tail -n 1)

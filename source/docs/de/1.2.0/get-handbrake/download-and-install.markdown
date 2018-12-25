@@ -38,7 +38,7 @@ Das HandBrake Team veröffentlicht [Prüfsummen für alle Downloads auf handbrak
 
 Wenn du HandBrake auf Linux aus den offiziellen PPAs installierst, wird der Prüfsummencheck automatisch durchgeführt. Ähnlich wird die Integrität des Quellcodes gemanaged durch `git` automatisch durchgeführt.
 
-Um einen offiziellen Quellcode-Tarball einer Distribution zu verifizieren, suche in der Dokumentation deiner Linux Distribution nach Instruktionen, wie Prüfsummen zu verifizieren sind.
+Um einen offiziellen Quellcode-Tarball einer Distribution oder ein Flatpak Bundle zu verifizieren, suche in der Dokumentation deiner Linux Distribution nach Instruktionen, wie Prüfsummen zu verifizieren sind.
 
 <!-- /.system-linux -->
 
@@ -48,7 +48,7 @@ Auf Mac kannst du das Terminal aus dem Programme > Zubehör Ordner starten und d
 
     shasum -a 1 ~/Downloads/HandBrake-*.dmg && shasum -a 256 ~/Downloads/HandBrake-*.dmg
 
-Alternativ gibt es die gratis Drittanbieter Applikation [Hashsum](https://itunes.apple.com/us/app/hashsum/id1079442694?mt=12) im Mac App Store, welche über eine bequeme grafische Oberfläche zum Berechnen von Prüfsummen verfügt.
+Alternativ gibt es die gratis Drittanbieter Applikation [Hashsum](https://itunes.apple.com/us/app/hashsum/id1079442694?mt=12) im Mac App Store, welche über eine bequeme grafische Oberfläche zum Berechnen von Prüfsummen verfügt[^third-party-utilities-1].
 
 <!-- /.system-macos -->
 
@@ -56,7 +56,7 @@ Alternativ gibt es die gratis Drittanbieter Applikation [Hashsum](https://itunes
 
 Für Windows stellt Microsoft das Kommandozeilenwerkzeug [Microsoft File Checksum Integrity Verifier](https://www.microsoft.com/en-us/download/details.aspx?id=11533) zur Verfügung. Bitte besuche den zugehörigen [Microsoft help article](https://support.microsoft.com/en-us/help/841290/availability-and-description-of-the-file-checksum-integrity-verifier-utility) für mehr Informationen und Anwendungsinstruktionen.
 
-Alternativ gibt es für Windows folgende Tools mit einer grafischen Oberfläche: [Compute Hash](http://www.subisoft.net/ComputeHash.aspx), [ExactFile](http://www.exactfile.com), und [MultiHasher](http://www.abelhadigital.com/multihasher)[^third-party-utilities-1].
+Alternativ gibt es für Windows folgende Tools mit einer grafischen Oberfläche: [Compute Hash](http://www.subisoft.net/ComputeHash.aspx), [ExactFile](http://www.exactfile.com), und [MultiHasher](http://www.abelhadigital.com/multihasher)[^third-party-utilities-2].
 
 <!-- /.system-windows -->
 
@@ -100,13 +100,9 @@ Starte `ghb` um HandBrake's grafische Benutzeroberfläche zu starten. Wenn du m�
 
 Installiere das `flatpak` Paket deiner Distribution bevor du folgende Kommandos ausführst.
 
-Installiere das Flathub Repository auf der Kommandozeile.
-
-    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
 Installiere den aktuellsten HandBrake Release von Flathub.
 
-    flatpak --user install flathub fr.handbrake.ghb
+    flatpak --user install https://flathub.org/repo/appstream/fr.handbrake.ghb.flatpakref
 
 Du kannst später dein HandBrake Flatpak auf den neuesten Stand von Flathub bringen indem du folgenden Befehl ausführst.
 
@@ -132,6 +128,22 @@ Sobald du HandBrake für Mac heruntergeladen hast, öffne das Disk Image in dein
 
 HandBrake ist jetzt installiert. Du kannst nun das Disk Image auswerfen und in den Papierkorb verschieben.
 
+### Mac Gatekeeper
+
+Wenn du HandBrake das erste Mal startest, könnte dein Mac dir folgende Nachricht anzeigen[^gatekeeper-disabled]:
+
+![Mac Gatekeeper Nachricht](../../../en/images/mac/gatekeeper-message-1.1.0.png "Gatekeeper könnte diese Nachricht beim ersten Start von HandBrake anzeigen")
+
+Diese Nachricht bedeutet nicht, dass etwas falsch ist; es zeigt nur an, dass HandBrake nicht Teil von Apple's bezahltem Programm zur Validierung von Mac Applikationen ist. Wähle `Ok` um die Nachricht zu bestätigen.
+
+Halte die `Steuerung` Taste und wähle das HandBrake Icon aus, um das Shortcut Menü anzuzeigen. Mit einem Klick auf `Öffnen` wird dich dein Mac fragen, ob du sicher bist, dass du HandBrake öffnen möchtest. Bestätige, dass du HandBrake vertrauen möchtest, indem du wieder `Öffnen` auswählst[^gatekeeper-instructions].
+
+![HandBrake mithilfe von Finder's shortcut menu öffnen](../../../en/images/mac/shortcut-menu-open-1.1.0.png "Wenn HandBrake mit der Öffnen Option in Finder's Shortcut Menü geöffnet wird, wird die Gatekeeper Nachricht umgangen.")
+
+![Gatekeeper Nachricht mit Öffnen Option](../../../en/images/mac/gatekeeper-message-quarantine-1.1.0.png "Gatekeeper könnte auch diese Nachricht beim ersten Öffnen von HandBrake anzeigen. Das Auswählen von Öffnen weist Gatekeeper an, HandBrake zu vertrauen.")
+
+HandBrake läuft ab diesem Punkt. Du solltest diesen Prozess in der nahen Zukunft nicht wiederholen müssen.
+
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
@@ -152,6 +164,18 @@ Als nächstes wird dich der Installer fragen, wo du HandBrake installieren möch
 ![HandBrake für Windows Installation abgeschlossen](../../../en/images/windows/install-finish-1.0.0.png "HandBrake ist nun installiert.")
 
 Du findest Verknüpfungen um HandBrake zu starten am Desktop und im Startmenü.
+
+### Windows SmartScreen
+
+Wenn die Installation auf Windows 8 oder 10 mit Windows SmartScreen aktiviert durchgeführt wird, könnte eine Nachricht angezeigt werden, die darauf hinweist, dass der HandBrake Installer nicht von Windows erkannt wird.
+
+![Windows SmartScreen](../../../en/images/windows/smartscreen-1-1.0.0.png "Windows SmartScreen könnte diese Nachricht anzeigen. Wähle Mehr Info um mehrere Option zu sehen.")
+
+HandBrake ist nicht von Microsoft "signiert". Diese Nachricht bedeutet nicht, dass etwas falsch ist; es bedeutet nur, dass HandBrake nicht Teil von Microsoft's bezahltem Programm zur Validierung von Windows Applikationen ist.
+
+Wenn du `Mehr Informationen` auswählst, kannst du `Trotzdem ausführen` auswählen, um mit der Installation fortzufahren.
+
+![Windows SmartScreen - Trotzdem fortfahren](../../../en/images/windows/smartscreen-2-1.0.0.png "Wähle Trotzdem Ausführen um die SmartScreen Nachricht zu ignorieren und mit der Installation fortzufahren..")
 
 <!-- /.system-windows -->
 
@@ -177,3 +201,9 @@ Fahre fort zu [Updates suchen](check-for-updates.html).
 [^nightly-builds]: Nightly Builds basieren auf HandBrake's aktuellstem Quellcode, dies inkludiert neue und experimentelle Features, welche noch instabil oder grundlegend verschieden zum vorherigen Release sind. Obwohl jeder eingeladen ist sie auszuprobieren, sind Nightly Builds am besten für erfahrene Benutzer und Entwickler geeignet.
 
 [^third-party-utilities-1]: HandBrake steht nicht in Verbindung mit irgendwelchen Prüfsummen Programmen von Drittanbietern. Verwende nur Software von Anbietern, denen zu vertraust.
+
+[^third-party-utilities-2]: HandBrake steht nicht in Verbindung mit irgendwelchen Prüfsummen Programmen von Drittanbietern. Verwende nur Software von Anbietern, denen zu vertraust.
+
+[^gatekeeper-disabled]: Falls Gatekeeper auf deinem Mac deaktiviert ist, wirst du diese Nachricht vermutlich nicht sehen.
+
+[^gatekeeper-instructions]: Diese Instruktionen sind direkt von Apple's Gatekeeper Support Dokumentation übernommen. Du kannst [hier](https://support.apple.com/kb/PH21769?locale=en_US) und [hier](https://support.apple.com/de-at/HT202491) mehr über Gatekeeper lernen.
