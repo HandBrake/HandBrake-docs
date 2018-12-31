@@ -78,7 +78,7 @@ The following details all the available options in the command line interface. T
                                (e.g. duration:10, frame:300, pts:900000)
        --stop-at  <string:number>
                                Stop encoding at a given duration (in seconds),
-                               frame, or pts (on a 90kHz clock)
+                               frame, or pts (on a 90kHz clock). Relative to --start-at
                                (e.g. duration:10, frame:300, pts:900000)
     
     
