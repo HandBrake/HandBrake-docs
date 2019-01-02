@@ -18,7 +18,7 @@ Installing dependencies on CentOS
 
 ## CentOS 7
 
-The following instructions are for [CentOS](https://centos.org) 7.5 x86_64 (HandBrake [CLI](abbr:Command Line Interface) only).
+The following instructions are for [CentOS](https://centos.org) 7.6 x86_64.
 
 Basic requirements to run commands:
 
@@ -41,12 +41,28 @@ Dependencies:
 
 Additional dependencies not available in the base repository:
 
+- devtoolset-7 [SCL] (optional/recommended for HandBrake [CLI](abbr:Command Line Interface))
 - lame-devel [RPM Fusion]
 - libass-devel [EPEL]
 - nasm [NASM]
 - opus-devel [EPEL EL6]
 - x264-devel [RPM Fusion]
 - yasm [EPEL]
+
+Graphical interface dependencies:
+
+- dbus-glib-devel
+- gstreamer1-devel
+- gstreamer1-plugins-base-devel
+- intltool
+- libgudev1-devel
+- libnotify-devel
+- webkitgtk4-devel
+
+Additional graphical interface dependencies not available in the base repository:
+
+- devtoolset-7 [SCL]
+- gstreamer1-libav [RPM Fusion]
 
 Install dependencies.
 
@@ -79,8 +95,20 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
     sudo yum install lame-devel x264-devel
 
+The GNU Compiler Collection and related packages provided by CentOS 7 are old. Install and enable a newer version provided by Software Collections (SCL)[^gcc-scl]. This is recommended for building the HandBrake [CLI](abbr:Command Line Interface) and required for building the GTK [GUI](abbr:Graphical User Interface).
+
+    sudo yum install centos-release-scl
+    sudo yum install devtoolset-7
+    sudo scl enable devtoolset-7 bash
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
+
 CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
 [^opus-el6]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
 
 [^nasm-repo]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
+
+[^gcc-scl]: SCL packages are isolated from base repository versions of similar packages. You can enable and disable these packages using the `scl` command line tool. For example, disable newer developer tools after compiling HandBrake by running `sudo scl disable devtoolset-7 bash`.
