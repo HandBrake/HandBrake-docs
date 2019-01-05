@@ -18,7 +18,7 @@ CentOS Abhängigkeiten installieren
 
 ## CentOS 7
 
-Die folgenden Instruktionen sind für [CentOS](https://centos.org) 7.5 x86_64 (nur HandBrake [CLI](abbr:Command Line Interface - Kommandozeile)).
+Die folgenden Instruktionen sind für [CentOS](https://centos.org) 7.6 x86_64.
 
 Grundvoraussetzungen um Kommandos zu starten:
 
@@ -41,6 +41,7 @@ Abhängigkeiten:
 
 Zusätzliche Abhängigkeiten die nicht im Base Repository sind:
 
+- devtoolset-7 [SCL] (optional/empfohlen für HandBrake's [CLI](abbr:Command Line Interface))
 - lame-devel [RPM Fusion]
 - libass-devel [EPEL]
 - nasm [NASM]
@@ -48,7 +49,22 @@ Zusätzliche Abhängigkeiten die nicht im Base Repository sind:
 - x264-devel [RPM Fusion]
 - yasm [EPEL]
 
-Abhängigkeiten installieren
+Abhängigkeiten für die Grafische Benutzeroberfläche:
+
+- dbus-glib-devel
+- gstreamer1-devel
+- gstreamer1-plugins-base-devel
+- intltool
+- libgudev1-devel
+- libnotify-devel
+- webkitgtk4-devel
+
+Zusätzliche Abhängigkeiten für die grafische Benutzeroberfläche, die nicht im Base Reposiroy verfügbar sind:
+
+- devtoolset-7 [SCL]
+- gstreamer1-libav [RPM Fusion]
+
+Abhängigkeiten installieren:
 
     sudo yum update
     sudo yum groupinstall "Development Tools" "Additional Development"
@@ -68,7 +84,7 @@ Das `nasm` Paket von CentOS 7 ist zu alt. Installiere eine neuere Version über 
     sudo curl -L 'https://nasm.us/nasm.repo' -o /etc/yum.repos.d/nasm.repo
     sudo yum install nasm
 
-Die `lame-devel` und `x264-devel` Pakete gibt es jetzt im RPM Fusion Repository. Falls du zuvor das [ZMREPO](https://zmrepo.zoneminder.com) Repository für diese Pakete installiert hast, entferne Sie und das Repository bevor du weitermachst.
+Die `lame-devel` und `x264-devel` Pakete gibt es jetzt im RPM Fusion Repository. Falls du zuvor das [ZMREPO](https://zmrepo.zoneminder.com) Repository für diese Pakete installiert hast, entferne sie und das Repository bevor du weitermachst.
 
     # Nur notwendig falls zuvor ZMREPO installiert wurde
     sudo yum repo-pkgs zmrepo remove
@@ -79,8 +95,20 @@ Installiere das freie [RPM Fusion](http://rpmfusion.org) Repository und zugehör
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
     sudo yum install lame-devel x264-devel
 
+Die GNU Compiler Collection und zugehörige Pakete die von CentOS 7 bereitgestellt werden sind zu alt. Installiere und aktiviere eine neuere Versiion über die Software Collections (SCL)[^gcc-scl]. Dies ist für das bauen der HandBrake [CLI](abbr:Command Line Interface - Kommandozeile) empfohlen und für das Bauen der GTK [GUI](abbr:Graphical User Interface - Grafische Benutzeroberfläche) erforderlich.
+
+    sudo yum install centos-release-scl
+    sudo yum install devtoolset-7
+    sudo scl enable devtoolset-7 bash
+
+Installiere die notwendigen Abhängigkeiten für die grafische Benutzeroberfläche falls diese mitgebaut werden soll.
+
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
+
 CentOS ist nun bereit die HandBrake [CLI](abbr:Command Line Interface - Kommandozeile) zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weiterführende Instruktionen.
 
 [^opus-el6]: Die Installation von Paketen, die neuer sind als die aus dem base Repository, könnte zu Inkompatibilitäten mit anderer Software führen, welche eine bestimmte Paketversion erwarten.
 
 [^nasm-repo]: Die Installation von Paketen, die neuer sind als die aus dem base Repository, könnte zu Inkompatibilitäten mit anderer Software führen, welche eine bestimmte Paketversion erwarten.
+
+[^gcc-scl]: SCL Pakete sind isoliert von Versionen aus dem Base Repository ähnlicher Pakete. Du kannst diese Pakete mithilfe des `scl` Kommandozeilenwerkzeugs aktivieren beziehungsweise deaktivieren. Um beispielsweise die neueren developer tools nach dem Kompilieren von HandBrake zu deaktivieren, ist folgendes Kommando auszuführen: `sudo scl disable devtoolset-7 bash`.
