@@ -43,6 +43,7 @@ Dependencies:
 - libtool
 - libvorbis-devel
 - libxml2-devel
+- libvpx-devel
 - m4
 - make
 - nasm
@@ -73,19 +74,19 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo yum update
-    sudo yum groupinstall "Development Tools" "Development Libraries"
-    sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make nasm opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
+    sudo dnf update
+    sudo dnf groupinstall "Development Tools" "Development Libraries"
+    sudo dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make nasm opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
 
 Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
 
-    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(cat /etc/system-release | awk '{ print $3}').noarch.rpm
-    sudo yum install x264-devel
+    sudo dnf localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(cat /etc/system-release | awk '{ print $3}').noarch.rpm
+    sudo dnf install x264-devel
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo yum groupinstall "X Software Development" "GNOME Software Development"
-    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
-    sudo yum install webkit2gtk3-devel || sudo yum install webkitgtk4-devel || sudo yum install webkitgtk3-devel
+    sudo dnf groupinstall "X Software Development" "GNOME Software Development"
+    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
+    sudo dnf install webkit2gtk3-devel || sudo dnf install webkitgtk4-devel || sudo dnf install webkitgtk3-devel
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
