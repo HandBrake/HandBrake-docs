@@ -1,7 +1,7 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           Intel QuickSync Encoder Options
+Title:           Intel QuickSync
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
