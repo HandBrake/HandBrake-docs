@@ -26,9 +26,9 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 - Processor: Intel Core 2 Duo, AMD Athlon X2, or better
 - Free Memory:
-  - 256 MB for transcoding standard definition video
-  - 1 GB for transcoding high definition video
-  - 2 GB or more for transcoding 4K video
+  - 512 MB for transcoding standard definition video
+  - 1.5 GB for transcoding high definition video
+  - 4 GB or more for transcoding 4K video
 - Screen Resolution: 1024x768 or better
 - System Storage:
   - 50 MB for the HandBrake app
@@ -44,9 +44,9 @@ The following is the minimum level of hardware that HandBrake supports. While it
   - 32-bit Intel Macs (2007 and earlier) cannot run recent 64-bit HandBrake releases
   - 2010 models and newer are recommended, as older Macs are often quite slow for processing video
 - Free Memory:
-  - 256 MB for transcoding standard definition video
-  - 1 GB for transcoding high definition video
-  - 2 GB or more for transcoding 4K video
+  - 512 MB for transcoding standard definition video
+  - 1.5 GB for transcoding high definition video
+  - 4 GB or more for transcoding 4K video
 - Screen Resolution: 1024x768 or better
 - System Storage:
   - 50 MB for the HandBrake app
@@ -60,9 +60,9 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 - Processor: Intel Core 2 Duo, AMD Athlon X2, or better
 - Free Memory:
-  - 256 MB for transcoding standard definition video
-  - 1 GB for transcoding high definition video
-  - 2 GB or more for transcoding 4K video
+  - 512 MB for transcoding standard definition video
+  - 1.5 GB for transcoding high definition video
+  - 4 GB or more for transcoding 4K video
 - Screen Resolution: 1024x768 or better (higher if running in High-DPI Mode, above 96 DPI or 100%)
 - System Storage:
   - 50 MB for the HandBrake app
@@ -79,7 +79,7 @@ The following describes the level of support available for the current HandBrake
 | Status      | Description                                                                                                                                              |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Supported   | HandBrake is tested working on these system versions. The HandBrake Team and community members provide volunteer support, and issue reports are welcome. |
-| Deprecated  | HandBrake should work on these system versions. Support is near end of life. Limited functionality and other issues will likely not be addressed.        |
+| Deprecated  | HandBrake may work on these system versions. Support is near end of life. Limited functionality and other issues will likely not be addressed.           |
 | Unsupported | HandBrake does not work on these system versions. No support will be provided. Please update to enjoy the latest features and bug fixes.                 |
 
 <!-- .system-linux -->
@@ -120,7 +120,7 @@ For other distributions, compile from source using the [Linux instructions](../d
 | 10.13 High Sierra  | Supported           |                         |                                    |
 | 10.12 Sierra       | Supported           |                         |                                    |
 | 10.11 El Capitan   | Deprecated in 1.2.0 |                         |                                    |
-| 10.10 Yosemite     | Deprecated in 1.2.0 |                         |                                    |
+| 10.10 Yosemite     | Unsupported         | HandBrake 1.1.2         |                                    |
 | 10.9 Mavericks     | Unsupported         | HandBrake 1.1.2         |                                    |
 | 10.8 Mountain Lion | Unsupported         | HandBrake 1.1.2         |                                    |
 | 10.7 Lion          | Unsupported         | HandBrake 1.1.2         |                                    |
