@@ -19,7 +19,7 @@ Nvidia NVEnc Encoder
 
 Supported Hardware and Configurations 
 --------------
-- Nvidia GeForce 10 and 20 Series graphics cards are supported. 
+- Nvidia GeForce GTX 10 and RTX 20 Series graphics cards are supported. 
 - Driver "399.24" or later must be installed. 
 - Windows 7 SP1 and Later. (Linux *may* work but via the command line interface only)
 
