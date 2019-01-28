@@ -205,4 +205,4 @@ Continue to [Checking for updates](check-for-updates.html).
 
 [^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
 
-[^gatekeeper-instructions]: These instructions are taken directly from Apple's Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/kb/PH21769?locale=en_US) and [here](https://support.apple.com/en-us/HT202491).
+[^gatekeeper-instructions]: These instructions are taken directly from Apple's Gatekeeper support documents. You can learn more about Gatekeeper [here](https://support.apple.com/en-us/HT202491).
