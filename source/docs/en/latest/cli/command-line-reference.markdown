@@ -75,11 +75,11 @@ The following details all the available options in the command line interface. T
        --start-at <string:number>
                                Start encoding at a given offset in seconds,
                                frames, or pts (on a 90kHz clock)
-                               (e.g. duration:10, frame:300, pts:900000).
+                               (e.g. seconds:10, frames:300, pts:900000).
        --stop-at  <string:number>
                                Stop encoding after a given duration in seconds,
                                frames, or pts (on a 90kHz clock) has passed
-                               (e.g. duration:10, frame:300, pts:900000).
+                               (e.g. seconds:10, frames:300, pts:900000).
                                Duration is relative to --start-at, if specified.
     
     
