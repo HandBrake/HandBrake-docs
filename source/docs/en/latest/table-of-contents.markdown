@@ -130,8 +130,8 @@ Table of contents
   - [Video encoders](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
   - [Video encoding speed](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
-  - [x264 presets and tunes](technical/video-x264-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
-  - [x264 profile and level](technical/video-x264-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
+  - [Presets and tunes](technical/video-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
+  - [Profiles and levels](technical/video-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
   - [Video angles](technical/video-angles.html)<span class="notice draft"><span>draft</span></span>
   - [Anamorphic video](technical/anamorphic-guide.html)<span class="notice draft"><span>draft</span></span>
   - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
