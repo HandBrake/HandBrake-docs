@@ -5,7 +5,7 @@ Thank you for your interest in contributing documentation for HandBrake.
 
 *Everyone should first [read the existing docs](https://handbrake.fr/docs/) before submitting changes*.
 
-If you're a non-technical person, feel free to suggest changes via the [HandBrake Community Forums](https://handbrake.fr/forum/) (registration is free) or [open an issue on GitHub](https://github.com/HandBrake/HandBrake-docs/issues) (also free). To report minor issues (typos, etc.) or to ask questions, say hi on the [HandBrake IRC channel](https://handbrake.fr/community.php).
+If you're a non-technical person, feel free to suggest changes via the [HandBrake Community Forums](https://forum.handbrake.fr) (registration is free) or [open an issue on GitHub](https://github.com/HandBrake/HandBrake-docs/issues) (also free). To report minor issues (typos, etc.) or to ask questions, say hi on the [HandBrake IRC channel](https://handbrake.fr/community.php).
 
 You may work directly on the source documents by [creating a GitHub account](https://github.com/join) and forking [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). See *Working with the source files* for more information.
 
@@ -205,5 +205,5 @@ While it is our goal to allow everyone to contribute, contributions not meeting 
 ## More information
 
 [HandBrake Website](https://handbrake.fr)  
-[HandBrake Community Forums](https://handbrake.fr/forum/)  
+[HandBrake Community Forums](https://forum.handbrake.fr)  
 [HandBrake on GitHub](https://github.com/HandBrake)
