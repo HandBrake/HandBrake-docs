@@ -1,7 +1,7 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           Formats / containers
+Title:           Container formats
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -14,18 +14,18 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Formats / containers
-=============================
+Container formats
+=================
 
 Containers are files that wrap around video and audio tracks—indexing and organizing the streams for playback—in addition to providing advanced features, like chapters similar to those on DVDs.
 
-HandBrake supports two widely supported formats. MKV and MP4 (Sometimes seen as M4v)
+HandBrake creates the widely supported container formats MKV and MP4 (sometimes seen as M4V), in addition to the [WebM](https://www.webmproject.org/) container format, which is subset of MKV.
 
 ## Features 
 
-Features and playback compatiblity varies between MKV and MP4. The following is a summary of some of these differences:
+Features and playback compatiblity varies between MKV, WebM, and MP4. The following is a summary of some of these differences:
 
-- In an MP4 file, you can store MPEG-4 video created by ffmpeg or x264.
+- In an MP4 container, you can store MPEG-4 video created by ffmpeg or x264.
   - Supports H.264, H.265, MPEG-4, MPEG-2 video. 
   - It stores audio in the AAC format. It is also possible to pass through Dolby Digital 5.1 Surround Sound (AC3) audio from a DVD in an MP4 file, although it is a new standard and not widely supported. VLC can decode it, and the AppleTV can pass it through to a surround sound receiver. 
   - MP4 also supports chapters, for which HandBrake uses Apple's chapter format. 
@@ -34,15 +34,20 @@ Features and playback compatiblity varies between MKV and MP4. The following is 
   - The MP4 format can also be optimized for "fast start" progressive downloads over the Web. 
   - It can also include "soft" text subtitles that can be turned on or off, instead of always being hard burned into the video frames.
    
-- In an MKV, you can store MPEG-4 video created by ffmpeg or x264, or Theora video. 
+- In an MKV container, you can store MPEG-4 video created by ffmpeg or x264, or Theora video. 
   - Supports H.264, H.265, MPEG-4, MPEG-2 video and VP3 (Vorbis) 
   - It stores audio in the AAC, MP3, Vorbis or FLAC formats. It can also pass through the Dolby Digital 5.1 (AC3) and Digital Theater Systems (DTS) surround sound formats used by DVDs. 
   - It supports chapters, as well as [VariableFrameRate Variable Frame Rate] video. 
   - It can include "soft" subtitles that can be turned on or off, instead of always being hard burned into the video frame. These can either be bitmap images of the subtitles included on a DVD (known as vobsub) or text.
 
-## MP4 vs M4v
+- In a WebM container, you can store VP8 or VP9 video.
+  - Supports VP8 and VP9 video codecs.
+  - It stores audio in either Vorbis or Opus formats.
+  - It can include "hard" burned in subtitles. "Soft" subtitles are currently unsupported.
 
-They are the exact same file, the only difference is the extension. MP4 vs M4v.
+## MP4 vs M4V
+
+They are the exact same file, the only difference is the extension. MP4 vs M4V.
 
 For MP4 files, HandBrake will automatically use the extension M4V when you pass-through audio (AC3), use SRT subtitles or have chapter markers enabled.
 

@@ -39,6 +39,8 @@ HandBrake has two methods of subtitle OUTPUT:
 - Hard Burn: This means the subtitles are written on top of the image permanently. They cannot be turned on or off like on the DVD.
 - Soft Subtitles: This means the subtitles will appear as separate selectable tracks in your output file. With the correct playback software, you’ll be able to enable / disable these subtitles as required.
 
+Soft subtitles are currently unsupported in the WebM container.
+
 The following subtitle types as supported as follows:
 
 - Bluray PGS Subtitles

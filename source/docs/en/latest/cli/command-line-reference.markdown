@@ -19,7 +19,7 @@ Command line reference
 The following details all the available options in the command line interface. This information may be accessed at any time by running `HandBrakeCLI --help`.
 
     Usage: HandBrakeCLI [options] -i <source> -o <destination>
-    
+
     General Options --------------------------------------------------------------
 
        -h, --help              Print help
@@ -51,10 +51,10 @@ The following details all the available options in the command line interface. T
        --queue-import-file <filename>
                                Import an encode queue file created by the GUI
            --no-dvdnav         Do not use dvdnav for reading DVDs
-    
-    
+
+
     Source Options ---------------------------------------------------------------
-    
+
        -i, --input <string>    Set input file or device ("source")
        -t, --title <number>    Select a title to encode (0 to scan all titles
                                only, default: 1)
@@ -81,14 +81,15 @@ The following details all the available options in the command line interface. T
                                frames, or pts (on a 90kHz clock) has passed
                                (e.g. seconds:10, frames:300, pts:900000).
                                Duration is relative to --start-at, if specified.
-    
-    
+
+
     Destination Options ----------------------------------------------------------
-    
+
        -o, --output <filename> Set destination file name
        -f, --format <string>   Select container format:
                                    av_mp4
                                    av_mkv
+                                   av_webm
                                default: auto-detected from destination file name)
        -m, --markers           Add chapter markers
            --no-markers        Disable preset chapter markers
@@ -103,10 +104,10 @@ The following details all the available options in the command line interface. T
        --inline-parameter-sets Create adaptive streaming compatible output.
                                Inserts parameter sets (SPS and PPS) inline
                                in the video stream before each IDR.
-    
-    
+
+
     Video Options ----------------------------------------------------------------
-    
+
        -e, --encoder <string>  Select video encoder:
                                    x264
                                    x264_10bit
@@ -170,10 +171,10 @@ The following details all the available options in the command line interface. T
                                timing if it's below that rate.
                                If none of these flags are given, the default
                                is --pfr when -r is given and --vfr otherwise
-    
-    
+
+
     Audio Options ----------------------------------------------------------------
-    
+
            --audio-lang-list <string>
                                Specify a comma separated list of audio
                                languages you would like to select from the
@@ -219,6 +220,7 @@ The following details all the available options in the command line interface. T
                                Defaults:
                                    av_mp4   ca_aac
                                    av_mkv   ca_aac
+                                   av_webm  vorbis
            --audio-copy-mask <string>
                                Set audio codecs that are permitted when the
                                "copy" audio encoder option is specified
@@ -250,8 +252,8 @@ The following details all the available options in the command line interface. T
                                Separate tracks by commas.
                                Defaults:
                                    none             up to dpl2
-                                   ca_aac           up to dpl2
-                                   ca_haac          up to dpl2
+                                   ca_aac           up to 7point1
+                                   ca_haac          up to 7point1
                                    ac3              up to 5point1
                                    eac3             up to 5point1
                                    mp3              up to dpl2
@@ -282,16 +284,34 @@ The following details all the available options in the command line interface. T
                                    rectangular
                                    triangular
                                    triangular_hp
-                                   triangular_ns
+                                   lipshitz_ns
                                Separate tracks by commas.
                                Supported by encoder(s):
+                                   none
+                                   ca_aac
+                                   ca_haac
+                                   copy:aac
+                                   ac3
+                                   copy:ac3
+                                   eac3
+                                   copy:eac3
+                                   copy:truehd
+                                   copy:dts
+                                   copy:dtshd
+                                   mp3
+                                   copy:mp3
+                                   vorbis
                                    flac16
+                                   flac24
+                                   copy:flac
+                                   opus
+                                   copy
        -A, --aname <string>    Set audio track name(s).
                                Separate tracks by commas.
-    
-    
+
+
     Picture Options --------------------------------------------------------------
-    
+
        -w, --width  <number>   Set storage width in pixels
        -l, --height <number>   Set storage height in pixels
            --crop   <top:bottom:left:right>
@@ -336,10 +356,10 @@ The following details all the available options in the command line interface. T
                                    ntsc (same as 601)
                                    pal
                                (default: auto-detected from source)
-    
-    
+
+
     Filters Options --------------------------------------------------------------
-    
+
        --comb-detect[=string]  Detect interlace artifacts in frames.
                                If not accompanied by the decomb or deinterlace
                                filters, this filter only logs the interlaced
@@ -515,10 +535,10 @@ The following details all the available options in the command line interface. T
                                    width=w:height=h:color=c:x=x:y=y
        -g, --grayscale         Grayscale encoding
        --no-grayscale          Disable preset 'grayscale'
-    
-    
+
+
     Subtitles Options ------------------------------------------------------------
-    
+
       --subtitle-lang-list <string>
                                Specify a comma separated list of subtitle
                                languages you would like to select from the
@@ -555,7 +575,7 @@ The following details all the available options in the command line interface. T
                                Example: "1,2,3" for multiple tracks.
                                If "string" is omitted, the first track is
                                forced.
-          --subtitle-burned[=number]
+          --subtitle-burned[=number, "native", or "none"]
                                "Burn" the selected subtitle into the video
                                track. If "subtitle" is omitted, the first
                                track is burned. "subtitle" is an index into
@@ -608,3 +628,23 @@ The following details all the available options in the command line interface. T
                                the video track.
                                If 'number' is omitted, the first SRT is burned.
                                'number' is a 1-based index into the 'srt-file' list
+         --ssa-file <string>   SubStationAlpha SSA filename(s), separated by
+                               commas.
+         --ssa-offset <string> Offset (in milliseconds) to apply to the SSA
+                               file(s), separated by commas. If not specified,
+                               zero is assumed. Offsets may be negative.
+         --ssa-lang <string>   SSA track language as an ISO 639-2 code
+                               (e.g. fre, eng, spa, dut, et cetera)
+                               If not specified, then 'und' is used.
+                               Separate by commas.
+         --ssa-default[=number]
+                               Flag the selected SSA as the default subtitle
+                               to be displayed during playback.
+                               Setting no default means no subtitle will be
+                               automatically displayed. If 'number' is omitted,
+                               the first SSA is the default.
+                               'number' is a 1-based index into the 'ssa-file' list
+         --ssa-burn[=number]   "Burn" the selected SSA subtitle into
+                               the video track.
+                               If 'number' is omitted, the first SSA is burned.
+                               'number' is a 1-based index into the 'ssa-file' list

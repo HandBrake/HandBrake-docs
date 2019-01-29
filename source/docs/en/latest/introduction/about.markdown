@@ -20,18 +20,18 @@ About HandBrake
 
 HandBrake is an open-source video transcoder available for Linux, Mac, and Windows. Everyone can use HandBrake to make videos *for free*.
 
-HandBrake is a post-production tool. Its primary purpose is to convert videos from supported [source formats](../technical/source-formats.html) to MP4 or MKV format. If you wish to make changes to your `Source` video, please use an appropriate [video editing software](https://en.wikipedia.org/wiki/List_of_video_editing_software).
+HandBrake is a post-production tool. Its primary purpose is to convert videos from supported [source formats](../technical/source-formats.html) to MP4, MKV, or WebM format. If you wish to make changes to your `Source` video, please use an appropriate [video editing software](https://en.wikipedia.org/wiki/List_of_video_editing_software).
 
 
 ## What HandBrake does
 
 HandBrake takes videos you already have and makes new ones that work on your mobile phone, tablet, TV media player, game console, computer, or web browser—nearly anything that supports modern video formats.
 
-HandBrake works with most common video files and formats, including ones created by consumer and professional video cameras, mobile devices such as phones and tablets, game and computer screen recordings, and DVD and Blu-ray discs. HandBrake leverages tools such as FFmpeg, x264, and x265 to create new MP4 or MKV video files from these `Sources`.
+HandBrake works with most common video files and formats, including ones created by consumer and professional video cameras, mobile devices such as phones and tablets, game and computer screen recordings, and DVD and Blu-ray discs. HandBrake leverages tools such as FFmpeg, x264, and x265 to create new MP4, MKV, or WebM video files from these `Sources`.
 
 HandBrake **does**:
 
-- Convert nearly any video to MP4 or MKV
+- Convert nearly any video to MP4, MKV, or WebM
 - Crop and resize video
 - Restore old and low-quality video
 - Remove combing artifacts caused by interlacing and telecine

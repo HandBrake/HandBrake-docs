@@ -15,21 +15,21 @@ License_URL:     https://handbrake.fr/docs/license.html
 ---
 
 Chapter Markers
-=============================
+===============
 
 ## Chapters
 
-HandBrake can copy Chatper Markers from your source to the MP4 or MKV output file.
+HandBrake can copy chapter markers from your source to the MP4, MKV, or WebM output file.
 
-In HandBrake, if you click on the 'Chapters' tab, you'll see a list of detected chapters. HandBrake will automatically generated chapter names in the following format:  "Chatper n" where n is the chapter number.
+In HandBrake, if you click on the Chapters tab, you'll see a list of detected chapters. HandBrake will automatically generate chapter names in the following format:  "Chatper n" where n is the chapter number.
 
 ![Chapters Tab](../../images/windows/chapters-1.0.0.png "Chapters Tab")
 
-## Renaming Chapters.
+## Renaming chapters
 
-If you wish, you can re-name these by simply simply altering the names shown in the chapters tab.
+If you wish, you can rename these by simply simply altering the names shown in the chapters tab.
 
-You can also import or export the set of chapter markers.  HandBrake supports importing of CSV (Command seperated Values) files.
+You can also import or export the set of chapter markers. HandBrake supports importing of CSV (Command seperated Values) files.
 
 Click the Import button to choose a CSV file. The file must be in the following format:
 
@@ -45,4 +45,4 @@ Finally, you can export the current chapter list to CSV format by clicking the '
 
 ## Sources without chapters
 
-Unfortunatly, HandBrake can not currently add chapter markers if they did not already exist in the source.
+Unfortunately, HandBrake can not currently add chapter markers if they did not already exist in the source.

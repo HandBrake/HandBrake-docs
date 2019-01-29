@@ -107,7 +107,7 @@ With this method, you can preserve the full frame on the DVD, without having to 
 
 Now, how do we go about doing this?
 
-Vide on a computer is stored in a container file, be it .mp4 or .mkv or .avi or .ogm or something else. Inside that container are tracks or streams. Usually, there will be one video track and one audio track.
+Video on a computer is stored in a container file, be it .mp4 or .mkv or .avi or .ogm or something else. Inside that container are tracks or streams. Usually, there will be one video track and one audio track.
 
 The smart way of handling anamorphic is to store the display information in the video track. And this is exactly what HandBrake does:
 
