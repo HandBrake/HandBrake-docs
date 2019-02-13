@@ -50,16 +50,8 @@ Please read the documentation project's [Contributing](https://github.com/HandBr
 
 ### Translation
 
-HandBrake is written and maintained in English, and translated into multiple international languages by a community of volunteers.
+HandBrake is written and maintained in English, and translated into multiple international languages by a community of volunteers. The HandBrake Team is working on bringing full technical support for multiple languages to all supported platforms; in the meantime, you will likely find translations available for some platforms and not others.
 
-The following projects host translations of the user interface strings used by the HandBrake application:
+To view and contribute translations of the user interface strings in HandBrake, visit [HandBrake on Transifex](https://www.transifex.com/HandBrakeProject/public/).
 
-- HandBrake for Linux on Transifex
-  - [HandBrake 1.1.1](https://www.transifex.com/victorr2007/handbrake-111/)
-  - [HandBrake 1.1.0](https://www.transifex.com/victorr2007/handbrake-110/)
-- HandBrake for Mac on Transifex
-  - [HandBrake 1.1.x](https://www.transifex.com/subler/handbrake-1/)
-
-The HandBrake Team is working on bringing full technical support for multiple languages to all supported platforms; in the meantime, you will likely find translations available for some platforms and not others.
-
-If you would like to contribute a translation of the HandBrake Documentation, please base it on the English documentation and submit a pull request to the documentation project on GitHub.
+If you would like to contribute a translation of the HandBrake Documentation, please base it on the English documentation and submit a pull request to [HandBrake Documentation on GitHub](https://github.com/HandBrake/HandBrake-docs).
