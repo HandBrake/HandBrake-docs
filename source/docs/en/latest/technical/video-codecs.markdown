@@ -1,78 +1,68 @@
 ---
 Type:            article
-State:           [ draft ]
-Title:           Video Codecs
+Title:           Video codecs
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Authors:         [ Scott (s55) ]
+Authors:         [ Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Scott (s55) ]
 Copyright:       2019 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Video Codecs
+Video codecs
 ============
 
- 
+The following video codecs are available for encoding in HandBrake.
 
--   H.264 (x264): For MPEG-4 part 10, also known as H.264/AVC.
+- H.264 (x264):
 
-    -   This is HandBrakes default encoder. It provides excellent performance,
-        filesizes and quality.
+    - MPEG-4 Part 10, also known as H.264/AVC
+    - Provides excellent quality, performance, and file size
+    - Widely supported by media players, including mobile devices
 
-    -   It is widely supported by players and mobile devices.
+- H.264 (Intel QuickSync):
 
--   H.264 (Intel QuickSync): For MPEG-4 part 10, also known as H.264/AVC.
+    - MPEG-4 Part 10, also known as H.264/AVC
+    - Hardware based encoder available on Intel processors with Intel HD Graphics (Haswell or newer series CPUs recommended for best quality and file size)
+    - Very fast with significantly lower CPU usage than software H.264 encoders such as x264
+    - Produces larger (but usually not significantly larger) file sizes and slightly lower quality to an equivalent x264 encode, a trade-off that is typically acceptable, especially on lower performance systems
 
-    -   Available on Intel processors with Intel HD Graphics.
+- H.265 (x265)
 
-    -   QuickSync is a hardware based H.264 encoder so is very fast, with
-        significantly lower CPU usage than x264.
+    - MPEG-H Part 2, also known as H.265/HEVC
+    - Successor to H.264/AVC offering higher quality encodes and smaller file sizes
+    - Current strengths of x265 are improved quality and compression for low bit rate encodes, and for ultra high definition content
+    - Significantly slower than software H.264/AVC encoders
+    - Limited device compatibility compared to H.264/AVC, but this is improving rapidly
 
-    -   Intel Haswell or newer CPU's are recommended as these offer the best
-        results in terms of Quality and Filesize.
+- MPEG-4 (ffmpeg):
 
-    -   You can typically expect larger (but usually not significantly larger)
-        file sizes and slightly lower quality to an equivilent x264 encode. This
-        is a trade off that is fine for most.
+    - MPEG-4 Part 2, also known as MPEG-4 Visual
+    - Predecessor to H.264/AVC offering fast encoding with lower overall quality than H.264/AVC
+    - Compatible with older devices, inexpensive DVD/flash/network players
 
--   H.265 (x265): Also known as HEVC
+- MPEG-2 (ffmpeg):
 
-    -   This is the next generation of encoder that offers even higher quality
-        encodes and better filesizes over H.264
+    - MPEG-2 Part 2, also known as MPEG-2 Visual and H.262
+    - Predecessor to MPEG-4 Visual offering very fast encoding with lower quality than modern codecs
+    - Creates larger files than modern encoders
 
-    -   Note, encoding to H.265 is a significantly more complicated process, so
-        it is expected to be slower than HandBrake's H.264 encoders.
+- VP9 (libvpx):
 
-    -   Playback support is rather limited at the moment, particularly with
-        mobile devices but this should improve drastically throughout 2015/16
+    - Developed by Google and the successor to VP8, VP9 is a free and open video codec
+    - Comparable to HEVC/H.265 in quality and file size
+    - Slower encoding compared to x265
 
--   MPEG-4 (ffmpeg): HandBrake offers FFmpeg's MPEG-4 part 2 encoder for fast,
-    low quality encoding.
+- VP8 (libvpx):
 
-    -   Better support from older devices such as DVD players and cheap "MP4
-        Players"
+    - Developed by On2 Technologies and acquired by Google, VP8 is a free and open video codec
+    - Successor to Theora offering significant improvements, comparable to H.264/AVC
 
-    -   Lower quality than the H.264 encode option but typically faster encodes.
+- Theora:
 
--   MPEG-2 (ffmpeg): HandBrake offers FFmpeg's MPEG-2 part 2 encoder for fast,
-    low quality encoding.
-
-    -   Fast Encoding, but requires larger files than MPEG-4 for the same
-        quality level. Useful for testing but not much else.
-
--   VP8 (Libvpx):
-
-    -   A free and open video codec which offers significant improvements over
-        Theora.
-
--   VP3 (Theora): HandBrake can also encode Theora video. Theora video with
-    Vorbis audio in the Matroska container represents a truly free option for
-    multimedia encoding.
-
-    -   However, Theora has yet to reach maturity when measured by quality at a
-        given bitrate.
+    - Developed by Xiph.Org Foundation and based on On2 Technologies' VP3, Theora is a free and open video codec
+    - Comparable to MPEG-4 Visual in quality and file size

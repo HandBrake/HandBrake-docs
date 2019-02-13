@@ -127,7 +127,7 @@ Table of contents
 - [Official presets](technical/official-presets.html)
   *Technical summary of the official presets*
 - Video
-  - [Video encoders](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
+  - [Video codecs](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
   - [Video encoding speed](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
   - [Presets and tunes](technical/video-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
