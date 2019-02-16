@@ -20,7 +20,7 @@ HandBrake ist ein quelloffenes Projekt, welches vom HandBrake Team erstellt wurd
 
 ## Verhalten
 
-Zu allererst, lese dir genau den [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md) und die [Community Forum Rules](https://forum.handbrake.fr/app.php/rules) des Projektes durch. Das HandBrake Team erwartet, dass alle Mithelfer sich laut diesen Regeln verhalten.
+Lese dir zuerst den [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md) und die [Community Forum Rules](https://forum.handbrake.fr/app.php/rules) des Projektes genau durch. Das HandBrake Team erwartet, dass alle Mithelfer sich laut diesen Regeln verhalten.
 
 ## Kommunikation
 
@@ -34,12 +34,12 @@ Bitte frage das HandBrake Team über einen der [Community Support](../help/commu
 
 HandBrake's Benutzeroberfläche verändert sich laufend. Spezielle Pflege und Kentnisse werden benötigt, um die Verwendbarkeit zu verbessern und zeitgleich die vielen professionellen Features beizubehalten und zu erweitern. Icons und andere grafische Assets werden auch manchmal benötigt wenn sich die Oberfläche verändert und modernisiert wird.
 
-Das HandBrake Team freut sich über Beiträge von Benutzeroberflächen und Grafikdesignern. Bitte stelle dich in einen der [Community Support](../help/community-support.html) channels vor. Jemand wird sich gerne mit dir über die Arbeiten die andere gerade vornehmen, deine Interessen und wie du helfen kannst unterhalten.
+Das HandBrake Team freut sich über Beiträge von Benutzeroberflächen und Grafikdesignern. Bitte stelle dich in einen der [Community Support](../help/community-support.html) channels vor. Jemand wird sich gerne mit dir über die Arbeiten die andere gerade vornehmen, deine Interessen und wie du helfen kannst, unterhalten.
 
 ### Code
 Entwickler die Quellcode beitragen möchten, sollten den [HandBrake Quellcode auf GitHub](https://github.com/HandBrake/HandBrake) auschecken und einen Pull Request auf GitHub für jeden Beitrag erstellen. Um mehr über diesen Workflow zu erfahren, lese den offiziellen GitHub Guide: [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
 
-[Open issues](https://github.com/HandBrake/HandBrake/issues) sind gute Kandidaten um mehr über den Quellcode zu lernen und Teile des Codes zu fixen.
+[Open issues](https://github.com/HandBrake/HandBrake/issues) sind ein guter Weg, um mehr über den Quellcode zu lernen und Teile des Codes zu fixen.
 
 ### Dokumentation
 
@@ -49,16 +49,8 @@ Bitte lese den [Contributing Guide](https://github.com/HandBrake/HandBrake-docs/
 
 ### Übersetzung
 
-HandBrake wird in Englisch verfasst, instandgehalten und in mehrere internationale Sprachen von einer Community von Freiwilligen übersetzt.
+HandBrake wird in Englisch verfasst, instandgehalten und in mehrere internationale Sprachen von einer Community von Freiwilligen übersetzt. Das HandBrake Team arbeitet daran, vollen technischen Support für mehrere Sprachen zu allen unterstützten Plattformen zu bringen. In der Zwischenzeit wirst du vermutlich Übersetzungen für eine Plattform finden, die es für eine andere nicht gibt.
 
-Die folgenden Projekte hosten die Übersetzung der Benutzeroberfläche die von der HandBrake Applikation verwendet wird:
+Um den Übersetzungsstatus der User Interface Strings von HandBrake einzusehen und Übersetzungen beizusteuern, besuche das [HandBrake Transifex Project](https://www.transifex.com/HandBrakeProject/public/).
 
-- HandBrake für Linux auf Transifex
-  - [HandBrake 1.1.1](https://www.transifex.com/victorr2007/handbrake-111/)
-  - [HandBrake 1.1.0](https://www.transifex.com/victorr2007/handbrake-110/)
-- HandBrake für Mac auf Transifex
-  - [HandBrake 1.1.x](https://www.transifex.com/subler/handbrake-1/)
-
-Das HandBrake Team arbeitet daran, vollen technischen Support für mehrere Sprachen zu allen unterstützten Plattformen zu bringen. In der Zwischenzeit wirst du vermutlich Übersetzungen für eine Plattform finden die es für eine andere nicht gibt.
-
-Falls du eine Übersetzung für die HandBrake Dokumentation beitragen möchtest, halte dich bitte an die Englische Dokumentation und erstelle einen Pull Request für das Dokumentationsprojekt auf GitHub.
+Falls du eine Übersetzung für die HandBrake Dokumentation beitragen möchtest, halte dich bitte an die Englische Dokumentation und erstelle einen Pull Request für das [Dokumentationsprojekt auf GitHub](https://github.com/HandBrake/HandBrake-docs).

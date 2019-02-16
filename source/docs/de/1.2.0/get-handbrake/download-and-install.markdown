@@ -206,4 +206,4 @@ Fahre fort zu [Updates suchen](check-for-updates.html).
 
 [^gatekeeper-disabled]: Falls Gatekeeper auf deinem Mac deaktiviert ist, wirst du diese Nachricht vermutlich nicht sehen.
 
-[^gatekeeper-instructions]: Diese Instruktionen sind direkt von Apple's Gatekeeper Support Dokumentation übernommen. Du kannst und [hier](https://support.apple.com/de-at/HT202491) mehr über Gatekeeper lernen.
+[^gatekeeper-instructions]: Diese Instruktionen sind direkt von Apple's Gatekeeper Support Dokumentation übernommen. Du kannst [hier](https://support.apple.com/de-at/HT202491) mehr über Gatekeeper lernen.
