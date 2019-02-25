@@ -88,7 +88,7 @@ To provide an Activity Log for support, you must send us your log(s) manually. I
 To share your Activity Log publicly—for instance, to request technical support for HandBrake—you may wish to do one of the following:
 
 - Copy and paste the text of the log to a Pastebin site such as [Pastebin.com](http://pastebin.com)
-- Upload the log file to a free temporary file sharing service such as [ExpireBox](http://expirebox.com/) or [WeTransfer](https://www.wetransfer.com/)
+- Upload the log file to a free temporary file sharing service such as [WeTransfer](https://www.wetransfer.com/)
 - Upload the log file to a paid file sharing service such as [Box](https://www.box.com/), [Dropbox](https://www.dropbox.com), or [Jumpshare](https://jumpshare.com/)
 
 Once your log is available publicly, share its link with your intended recipient(s). When using a free service, be sure to note how long the service intends to store your log (typically 1-7 days).

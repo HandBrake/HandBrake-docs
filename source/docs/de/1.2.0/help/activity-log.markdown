@@ -87,7 +87,7 @@ Um einen Aktivitätenlog für Supportanfragen bereit zu stellen, musst du uns de
 Um deinen Aktivitätenlog öffentlich zu teilen - zum Beispiel um technische Unterstützung für HandBrake zu bekommen - kannst du folgende Anbieter verwenden:
 
 - Kopiere den Text des Logs auf eine Pastebin Seite wie [pastebin.com](http://pastebin.com)
-- Lade die Logdatei auf einen temporären gratis file sharing service wie [ExpireBox](http://expirebox.com/) oder [WeTransfer](https://www.wetransfer.com/) hoch
+- Lade die Logdatei auf einen temporären gratis file sharing service wie [WeTransfer](https://www.wetransfer.com/) hoch
 - Lade die Logdatei auf einen bezahlten file shareing service wie [Box](https://www.box.com/), [Dropbox](https://www.dropbox.com), oder [Jumpshare](https://jumpshare.com/) hoch
 
 Sobald dein Log öffentlich verfügbar ist, teile den Link mit den beabsichtigten Empfängern. Wenn du einen gratis Service verwendest, schreibe bitte wie lange der Service deine Datei speichert (üblicherweise 1-7 Tage).
