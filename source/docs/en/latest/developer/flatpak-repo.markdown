@@ -28,11 +28,11 @@ Install flathub repository.
 
 Install flatpak freedesktop SDK.
 
-    flatpak install flathub org.freedesktop.Sdk//1.6
+    flatpak install flathub org.freedesktop.Sdk//18.08
 
 Install flatpak freedesktop runtime platform.
 
-    flatpak install flathub org.freedesktop.Platform//1.6
+    flatpak install flathub org.freedesktop.Platform//18.08
 
 ## Create a new HandBrake flatpak bundle
 This may be done on a different machine than the repo.
