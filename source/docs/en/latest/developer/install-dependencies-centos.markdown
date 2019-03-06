@@ -64,6 +64,11 @@ Additional graphical interface dependencies not available in the base repository
 - devtoolset-7 [SCL]
 - gstreamer1-libav [RPM Fusion]
 
+Quick Sync Video dependencies (configure --enable-qsv)
+
+- libva
+- libdrm
+
 Install dependencies.
 
     sudo yum update
@@ -104,6 +109,10 @@ The GNU Compiler Collection and related packages provided by CentOS 7 are old. I
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
+
+To build with Quick Sync Video support, install QSV dependencies.
+
+    sudo yum install libva-devel libdrm-devel
 
 CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface). See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
