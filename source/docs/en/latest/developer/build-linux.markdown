@@ -54,3 +54,4 @@ To start over, simply remove the `build` directory.
 ## Building Intel MediaSDK (QSV support only)
 
 For Quick Sync Video support, the Intel MediaSDK and it's dependencies must be built and installed separately.  [Intel MediaSDK Build Instructions](https://github.com/Intel-Media-SDK/MediaSDK#how-to-build), and [Releases](https://github.com/Intel-Media-SDK/MediaSDK/releases) are available on their GitHub repository.  MediaSDK dependencies are listed on the releases page.
+

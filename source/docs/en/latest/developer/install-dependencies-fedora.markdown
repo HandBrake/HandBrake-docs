@@ -100,3 +100,4 @@ To build with Quick Sync Video support, install QSV dependencies.
     sudo dnf install libva-devel libdrm-devel
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
+

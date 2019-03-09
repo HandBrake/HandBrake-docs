@@ -102,3 +102,4 @@ To build with Quick Sync Video support, install QSV dependencies.
 Debian is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
 [^nasm-sid]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
+

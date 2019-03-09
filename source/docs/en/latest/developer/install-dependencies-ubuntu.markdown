@@ -92,3 +92,4 @@ To build with Quick Sync Video support, install QSV dependencies.
     sudo apt-get install libva-dev libdrm-dev
 
 Ubuntu is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
+

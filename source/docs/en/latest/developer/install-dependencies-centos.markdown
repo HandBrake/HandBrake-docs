@@ -121,3 +121,4 @@ CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface)
 [^nasm-repo]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
 
 [^gcc-scl]: SCL packages are isolated from base repository versions of similar packages. You can enable these packages using the `scl` command line tool. When you are finished using these packages, simply log out of the active shell. New sessions will use the packages provided by the base repository.
+

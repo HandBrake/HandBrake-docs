@@ -158,4 +158,3 @@ Users can add your repository to their list of remotes with:
 ```
 flatpak remote-add --if-not-exists yourproject https://dl.yourproject.org:8080/repo/yourproject.flatpakrepo
 ```
-
