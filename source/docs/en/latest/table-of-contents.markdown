@@ -126,9 +126,10 @@ Table of contents
   *Types of video files HandBrake can read*
 - [Official presets](technical/official-presets.html)
   *Technical summary of the official presets*
+- [Performance](technical/performance.html)
+  *How various settings affect encoding speed*
 - Video
   - [Video codecs](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
-  - [Video encoding speed](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
   - [Presets and tunes](technical/video-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
   - [Profiles and levels](technical/video-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
