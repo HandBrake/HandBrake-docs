@@ -26,7 +26,7 @@ To provide a comparison of how various features and settings affect encoding per
 
 A `Preset` is a group of settings specifically tailored for the software or device you want your videos to play on. Read more about HandBrake’s [Official presets](official-presets.html).
 
-`Presets` may differ from each other in multiple ways. For example: video resolution, filters, encoder, encoder preset, and quality; audio tracks (stereo, surround sound, or both), encoders, and quality; subtitle tracks and types; chapter markers; container options; and compatibility concerns. Because so many variables can differ between HandBrake’s presets, performance can vary greatly.
+`Presets` may differ from each other in multiple ways. For example: video resolution, filters, encoder, encoder preset, and quality; audio tracks (stereo, surround sound, or both), encoders, and quality; subtitle tracks and types; chapter markers; container options; and compatibility concerns. Because so many variables can differ between HandBrake’s `Presets`, performance can vary greatly.
 
 HandBrake’s General `Presets` are designed to maintain compatibility with a broad range of modern devices and software, and provide logical steps in encoding performance, quality, and file size.
 
@@ -123,7 +123,7 @@ Encoder quality versus file size efficiency, ranked best to worst:
 3. Hardware encoders (AMD VCE, Intel QSV, Nvidia NVENC)
 4. VP8
 
-x264 presents an excellent balance between speed and quality, and it is compatible with all modern devices. It is the default video encoder in most of HandBrake’s official presets.
+x264 presents an excellent balance between speed and quality, and it is compatible with all modern devices. It is the default video encoder in most of HandBrake’s official `Presets`.
 
 Hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC are very fast and may be a good choice on less powerful computers where performance is the greatest concern, and the highest quality and smallest file sizes are not a priority.
 
@@ -137,9 +137,9 @@ Some of HandBrake’s video encoders have their own presets. These are different
 
 Some encoder presets are designed to affect the speed of the encoding process. For example, the x264 and x265 encoders’ presets are all speed related. By enabling certain optimizations or disabling certain computationally expensive features of the encoder, greater encoding speeds can be achieved, although this is usually at the expense of larger file sizes and/or slight quality losses.
 
-Other encoders, notably HandBrake’s hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC, also have quality-based presets to enable advanced features that can improve quality.
+Other encoders, notably HandBrake’s hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC, also have quality-based encoder presets to enable advanced features that can improve quality.
 
-Here, we’ve encoded the same high quality 2160p 4K video source to 1080p using the various speed-based presets provided by the x264 and x265 software encoders.
+Here, we’ve encoded the same high quality 2160p 4K video source to 1080p using the various speed-based encoder presets provided by the x264 and x265 software encoders.
 
 The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
 
@@ -155,7 +155,7 @@ The following results were produced using a PC equipped with an Intel Xeon E5-26
 | H.264 (x264) | Slower         | RF 24   | 39.8 FPS       | 1.66x          |  3.76 Mb/s     | 345.5 MB   |
 | H.264 (x264) | Veryslow       | RF 24   | 33.9 FPS       | 1.41x          |  3.50 Mb/s     | 321.0 MB   |
 
-Even on this powerful computer and with a fast software encoder like x264, the slowest encoder preset takes twice the time to encode as the faster presets.
+Even on this powerful computer and with a fast software encoder like x264, the slowest encoder preset takes twice the time to encode as the faster encoder presets.
 
 Generally speaking, the additional computation performed by x264’s slower encoder presets creates smaller files, and sometimes increases quality very slightly (usually negligibly). However, since so many settings differ between the various encoder presets, this isn’t strictly true in practice. Notice how the veryfast encoder preset actually produces a smaller file than the slower presets, at the expense of some quality loss.
 
@@ -175,7 +175,7 @@ Let’s look at the same test, this time using the x265 encoder.
 | H.265 (x265) | Slower         | RF 24   |  3.2 FPS       | 0.13x          |  3.47 Mb/s     | 318.4 MB   |
 | H.265 (x265) | Veryslow       | RF 24   |  1.8 FPS       | 0.08x          |  3.46 Mb/s     | 317.2 MB   |
 
-Compared to x264, the x265 encoder is better optimized for high core count CPUs like the E5-2699 v4, and this shows in the faster presets, which are as fast or faster than x264 on this computer. However, the significant computation time required by x265’s slower presets make encoding extremely slow even on powerful computers, and actually increase file sizes in attempts to better preserve quality.
+Compared to x264, the x265 encoder is better optimized for high core count CPUs like the E5-2699 v4, and this shows in the faster encoder presets, nearly as fast as x264 on this computer, despite the additional computation required for H.265 video. However, the significant computation time required by x265’s slower encoder presets make encoding extremely slow even on powerful computers, and actually increase file sizes in attempts to better preserve quality.
 
 The recommended best practice when adjusting these settings manually is to choose the slowest encoder preset that encodes comfortably fast on your computer, and accept subtle quality and file size variations. Even better, use one of HandBrake’s all-encompassing `Presets`, which will select a suitable encoder preset and other settings for you based on what is appropriate for the intended purpose.
 
@@ -214,7 +214,7 @@ Resolution is calculated in two dimensions (width and height). For example, 1080
 
 From this, we can assume that encoding a High Definition Blu-ray video in its original resolution will require more encoding time and create a larger file than encoding a Standard Definition DVD video.
 
-Here, we’ve encoded the same high quality 2160p 4K video source in four different output resolutions using the x265 video encoder with the medium encoder preset.
+Here, we’ve encoded the same high quality 2160p 4K video source in six different output resolutions using the x265 video encoder with the medium encoder preset.
 
 The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
 
