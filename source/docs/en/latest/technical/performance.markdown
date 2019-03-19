@@ -20,7 +20,7 @@ Video encoding is one of the most resource intensive activities for computers.
 
 HandBrake’s software video encoders, video filters, audio encoders, and other processes benefit from fast CPU and memory. HandBrake’s hardware video encoders also benefit from modern GPU hardware. See the [System requirements](system-requirements.html) article for minimum hardware requirements to use HandBrake.
 
-To provide a comparison of how various features and settings affect encoding performance, we encoded a high quality, 4K 2160p24 (3840x1714 actual) version of the open film *[Tears Of Steel](https://mango.blender.org/)*. The source duration is 12 minutes 14 seconds and contains H.264 video, lossless FLAC stereo audio, and Dolby Digital (AC-3) 5.1 surround audio.
+To provide a comparison of how various features and settings affect encoding performance, we encoded a high quality, 4K 2160p24 (3840x1714 actual) version of the open film *[Tears Of Steel](https://mango.blender.org/)*. The `Source` duration is 12 minutes 14 seconds and contains H.264 video, lossless FLAC stereo audio, and Dolby Digital (AC-3) 5.1 surround audio.
 
 ## Performance comparison between official presets
 
@@ -45,7 +45,7 @@ The Very Fast `Preset` starts with a faster video encoder preset (x264 veryfast)
 
 Likewise, the HQ and Super HQ `Presets` use even slower video encoder presets (x264 slow and veryslow, respectively) and even higher quality (RF 20 and 18, respectively), while also including surround audio. The price for higher quality and more features is again larger file sizes, and longer time to encode.
 
-Encoding a large, high quality, 4K 2160p source to 1080p can be slow on an aging computer. Only the fastest `Preset` completed faster than realtime, meaning the encode finished in a shorter time than it would take to watch the video.
+Encoding a large, high quality, 4K 2160p `Source` to 1080p can be slow on an aging computer. Only the fastest `Preset` completed faster than realtime, meaning the encode finished in a shorter time than it would take to watch the video.
 
 Let’s look at the same encodes on a faster computer. The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
 
@@ -66,17 +66,17 @@ Open a video `Source` in HandBrake and encode using each of these `Presets`. Obs
 
 Video encoders employ advanced mathematical algorithms to reduce the size of your videos while retaining perceived quality. While some techniques are similar between encoders, each encoder is different, and some encoders are more efficient than others.
 
-x264 is default video encoder used by many of HandBrake’s official `Presets`. x264 creates standard H.264/AVC video with high quality and reasonable file sizes, and encodes reasonably fast on modern computers. Most modern mobile devices have hardware decoders for energy-efficient playback of H.264/AVC video. It is arguably the most compatible modern video format.
+x264 is the default video encoder used by many of HandBrake’s official `Presets`. x264 creates standard H.264/AVC video with high quality and reasonable file sizes, and encodes reasonably fast on modern computers. Most modern mobile devices have hardware decoders for energy-efficient playback of H.264/AVC video. It is arguably the most compatible modern video format.
 
 x265 is a newer video encoder that creates standard H.265/HEVC video that is becoming more popular as newer mobile devices have hardware decoders for energy-efficient playback. In some situations, such as encoding in 4K Ultra High Definition or making smaller, lower bit rate videos, x265 can produce the same or better quality as x264 with smaller file sizes, at the expense of much slower encoding speed.
 
-Other software video encoders such as VP8 and VP9 promise similar results to x264 and x265, but generally take longer to encode. VP8 and VP9 hardware decoders for mobile devices are not widespread, which can lead to faster battery drain while playing these types of videos. Most modern computers can play back VP8 and VP9 video with ease.
+Other software video encoders such as VP8 and VP9 promise similar results to x264 and x265, but generally take longer to encode. VP8 and VP9 hardware decoders for mobile devices are not widespread, which can lead to faster battery drain while playing these types of videos. Most modern computers can play VP8 and VP9 video with ease.
 
 HandBrake also includes support for AMD VCE, Intel QSV, and Nvidia NVENC hardware encoders. These encoders produce H.264 and/or H.265 video at extremely high speed, at the expense of some quality and larger file sizes.
 
-Let’s compare. Here, we’ve encoded the same high quality 2160p 4K video source to 1080p using six different video encoders.
+Let’s compare. Here, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p using six different video encoders.
 
-The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
+The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, an Nvidia GeForce GTX 1060, and Windows 10 Professional.
 
 | Official Preset   | Encoder       | Type     | Quality / Bit Rate   | Audio Tracks  | Encoding Speed | Realtime Speed | Total Bit Rate | Total Size |
 |-------------------|---------------|----------|----------------------|---------------|----------------|----------------|----------------|------------|
@@ -89,9 +89,9 @@ The following results were produced using a PC equipped with an Intel Xeon E5-26
 
 Some encoders are noticeably faster than others. Hardware encoders are typically much faster than software encoders, at the expense of some loss in quality and/or larger file sizes. In this case, x264 is a clear winner in the balance between speed, quality, and file size.
 
-The official `Presets` in this test are designed to produce similar quality encodes regardless of the specific encoders used, and as such, this test isn’t an entirely fair comparison of speed. Some encodes use quality-based encoding, while others use average bit rate, which prioritizes file size while allowing more variation in quality. Additional variables such as filters and audio can also have an impact.
+The official `Presets` in this test are designed to produce similar quality encodes regardless of the specific encoders used, so this test isn’t an entirely fair comparison of speed. Some encodes use quality-based encoding, while others use average bit rate, which prioritizes file size while allowing more variation in quality. Additional variables such as filters and audio can also have an impact.
 
-Let’s compare again with fewer variables. Here, we’ve removed the Decomb deinterlacing filter and the audio tracks, and encoded only the video tracks in average bit rate, 2-pass mode. We’ve reduced the bit rate to 3000 kb/s to better highlight the efficiency of each encoder in terms of quality related to file size. Note that the NVENC hardware encoders only support 1-pass mode.
+Let’s compare again with fewer variables. Here, we’ve removed the Decomb deinterlacing filter, audio tracks, and Foreign Audio Search, and encoded only video in average bit rate, 2-pass mode. We’ve reduced the bit rate to 3000 kb/s to better highlight the efficiency of each encoder in terms of quality related to file size. Note that the NVENC hardware encoders only support 1-pass mode.
 
 | Encoder       | Type     | Encoder Preset | Video Bit Rate       | Encoding Speed | Realtime Speed | Total Bit Rate | Total Size |
 |---------------|----------|----------------|----------------------|----------------|----------------|----------------|------------|
@@ -104,7 +104,7 @@ Let’s compare again with fewer variables. Here, we’ve removed the Decomb dei
 
 ![Quality comparison of HandBrake’s video encoders](../../images/performance-quality-video-encoders-1.3.0.png "Quality comparison of HandBrake’s video encoders.")
 
-In this more balanced example, we again see x264 and the hardware encoders can be more than 2.5 times faster than x265 and VP8, and over six times faster than VP9. For fast H.265 encoding, the NVENC hardware encoder is considerably faster than the x265 software encoder, at the expense of some quality loss.
+In this more balanced example, we see x264 and the hardware encoders can be more than 2.5 times faster than x265 and VP8, and over six times faster than VP9. For fast H.265 encoding, the NVENC hardware encoder is considerably faster than the x265 software encoder, at the expense of some quality loss.
 
 Although compatible hardware was not available on the computer used in these tests, the AMD VCE and Intel QSV hardware encoders perform similarly to NVENC, with Intel QSV producing slightly higher quality encodes.
 
@@ -123,23 +123,23 @@ Encoder quality versus file size efficiency, ranked best to worst:
 3. Hardware encoders (AMD VCE, Intel QSV, Nvidia NVENC)
 4. VP8
 
-x264 presents an excellent balance between speed and quality, and it is compatible with all modern devices. It is the default video encoder in most of HandBrake’s official `Presets`.
+The x264 software encoder presents an excellent balance between speed and quality, and the H.264/AVC video it creates is widely compatible with all modern devices. It is the default video encoder in most of HandBrake’s official `Presets`.
 
-Hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC are very fast and may be a good choice on less powerful computers where performance is the greatest concern, and the highest quality and smallest file sizes are not a priority.
+Hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC are very fast and may be a good choice on less powerful computers where performance is the greatest concern, and the highest quality and smallest file sizes are not top priority.
 
 x265 and VP9 produce excellent quality encodes, but are much slower performers. Expect long encoding times on all except the best computers.
 
-VP8 is now showing its age as an older encoder. Compared to other more modern encoders, it is unable to produce good quality encodes at reasonable file sizes. This is also true of the older MPEG-4, MPEG-2, and Theora encoders not compared in this article.
+VP8 is now showing its age as an older encoder. Compared to other, more modern encoders, it is unable to produce good quality encodes at reasonable file sizes. This is also true of the older MPEG-4, MPEG-2, and Theora encoders not compared in this article.
 
 ## Performance comparison between video encoder presets
 
-Some of HandBrake’s video encoders have their own presets. These are different than HandBrake’s `Presets`, which contain all the video, filters, audio, subtitles, chapters, and container information. The video encoder presets are specific to each individual video encoder, and control which features of the video encoder are enabled.
+Some of HandBrake’s video encoders have their own presets. These are different than HandBrake’s `Presets`, which contain all the video, filters, audio, subtitles, chapters, and container settings. The video encoder presets are specific to each individual video encoder, and control which features of the video encoder are enabled.
 
-Some encoder presets are designed to affect the speed of the encoding process. For example, the x264 and x265 encoders’ presets are all speed related. By enabling certain optimizations or disabling certain computationally expensive features of the encoder, greater encoding speeds can be achieved, although this is usually at the expense of larger file sizes and/or slight quality losses.
+Some encoder presets are designed to affect the speed of the encoding process. By enabling certain optimizations or disabling certain computationally expensive features of the encoder, greater encoding speeds can be achieved, although this is usually at the expense of larger file sizes and/or slight quality losses. The x264 and x265 encoder presets are all speed related.
 
-Other encoders, notably HandBrake’s hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC, also have quality-based encoder presets to enable advanced features that can improve quality.
+Other encoders, notably hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC, also have quality-based encoder presets to enable advanced features that can improve quality, usually at the expense of encoding speed.
 
-Here, we’ve encoded the same high quality 2160p 4K video source to 1080p using the various speed-based encoder presets provided by the x264 and x265 software encoders.
+Here, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p using the various speed-based encoder presets provided by the x264 software encoder.
 
 The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
 
@@ -159,7 +159,7 @@ Even on this powerful computer and with a fast software encoder like x264, the s
 
 Generally speaking, the additional computation performed by x264’s slower encoder presets creates smaller files, and sometimes increases quality very slightly (usually negligibly). However, since so many settings differ between the various encoder presets, this isn’t strictly true in practice. Notice how the veryfast encoder preset actually produces a smaller file than the slower presets, at the expense of some quality loss.
 
-Additionally, while the x264 encoder presets with “fast” in their names do not prove much faster on this high performance computer, they may be significantly faster than slower encoder presets on less powerful computers.
+Note that while the x264 encoder presets with “fast” in their names do not prove much faster on this high performance computer, they may be significantly faster than slower encoder presets on less powerful computers.
 
 Let’s look at the same test, this time using the x265 encoder.
 
@@ -175,15 +175,15 @@ Let’s look at the same test, this time using the x265 encoder.
 | H.265 (x265) | Slower         | RF 24   |  3.2 FPS       | 0.13x          |  3.47 Mb/s     | 318.4 MB   |
 | H.265 (x265) | Veryslow       | RF 24   |  1.8 FPS       | 0.08x          |  3.46 Mb/s     | 317.2 MB   |
 
-Compared to x264, the x265 encoder is better optimized for high core count CPUs like the E5-2699 v4, and this shows in the faster encoder presets, nearly as fast as x264 on this computer, despite the additional computation required for H.265 video. However, the significant computation time required by x265’s slower encoder presets make encoding extremely slow even on powerful computers, and actually increase file sizes in attempts to better preserve quality.
+Compared to x264, the x265 encoder is better optimized for high core count CPUs like the E5-2699 v4, and this shows in the faster encoder presets, which are nearly as fast as x264 on this computer despite the additional computation required for H.265 video. However, the significant computation time required by x265’s slower encoder presets make encoding extremely slow even on powerful computers, and actually increase file sizes in attempts to better preserve quality.
 
 The recommended best practice when adjusting these settings manually is to choose the slowest encoder preset that encodes comfortably fast on your computer, and accept subtle quality and file size variations. Even better, use one of HandBrake’s all-encompassing `Presets`, which will select a suitable encoder preset and other settings for you based on what is appropriate for the intended purpose.
 
 ## Performance comparison between video quality settings
 
-The General `Presets` maximize compatibility and flexibility by offering a choice between high performance and larger, higher quality files that take longer to encode and include additional features such as surround audio.
+Video quality can have a substantial impact on encoding speed and file size.
 
-Let’s see what happens when we change only the video quality, leaving all other settings alone.
+In this test, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p while adjusting only the video quality, leaving all other settings alone.
 
 Higher RF values lead to lower picture quality and smaller file sizes, while lower RF values lead to higher picture quality and larger file sizes. You can read more about this on the [Adjusting quality](../workflow/adjust-quality.html) article.
 
@@ -206,15 +206,15 @@ Here, we see that lower quality encodes complete faster. In essence, discarding 
 
 ## Performance comparison between picture resolutions
 
+Video resolution can have a major impact on encoding speed and file size.
+
 A video’s resolution is its width and height in pixels, or individual points on a display. HandBrake includes official `Presets` targeting multiple standard picture resolutions, such as 2160p UHD 4K, 1080p Full HD, 720p HD, and 576p/480p SD, as well as certain intermediate resolutions.
 
-Resolution is calculated in two dimensions (width and height). For example, 1080p High Definition video is 1920 pixels wide and 1080 pixels tall, sometimes expressed as 1920x1080. By multiplying these figures, we can calculate how many pixels each video frame comprises.
+Resolution is calculated in two dimensions (width and height). For example, 1080p High Definition video is 1920 pixels wide and 1080 pixels tall, sometimes expressed as 1920x1080. By multiplying these figures, we can calculate how many pixels each video frame comprises. 1920 multiplied by 1080 is 2,073,600 pixels, or about 2 megapixels.
 
-1920 times 1080 is 2,073,600 pixels, or about 2 megapixels. Compared to 480p Standard Definition video (720x480), which is 345,600 pixels or about 0.35 megapixels, 1080p is approximately six times more detailed. This requires more computation to encode and larger file sizes to store all the extra information.
+Compared to 480p Standard Definition video (720x480), which is 345,600 pixels or about 0.35 megapixels, 1080p is approximately six times more detailed. From this, we can infer the additional computation encoding a High Definition Blu-ray video in its original resolution will require longer encoding times and create larger file sizes to store all the extra information compared to encoding a Standard Definition DVD video.
 
-From this, we can assume that encoding a High Definition Blu-ray video in its original resolution will require more encoding time and create a larger file than encoding a Standard Definition DVD video.
-
-Here, we’ve encoded the same high quality 2160p 4K video source in six different output resolutions using the x265 video encoder with the medium encoder preset.
+Here, we’ve encoded the same high quality 2160p 4K video `Source` in six different output resolutions using the x265 video encoder’s medium encoder preset.
 
 The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
 
@@ -237,9 +237,9 @@ In practical terms, the resolution of your `Source` video and the `Preset` you s
 
 ## How filters affect encoding performance
 
-Some filters have a negligible impact on performance, while others can be slower than video encoders.
+Some filters, such as HandBrake’s sharpening filters, require minimal computation and have a negligible impact on performance. Others, such as the EEDI2 deinterlacing filter or NLMeans denoising filter, are more computationally expensive and can be even slower than video encoders.
 
-Here, we’ve encoded the same high quality 2160p 4K video source with and without the NLMeans denoising filter.
+Here, we’ve encoded the same high quality 2160p 4K video `Source` in its original resolution, with and without the NLMeans denoising filter.
 
 The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, and Windows 10 Professional.
 
@@ -248,7 +248,9 @@ The following results were produced using a PC equipped with an Intel Xeon E5-26
 | H.265 MKV 2160p60 | *none*           | RF 24   | AAC stereo   | 7.9 FPS        | 0.33x          | 10.80 Mb/s     | 993.4 MB   |
 | H.265 MKV 2160p60 | NLMeans Medium   | RF 24   | AAC stereo   | 5.3 FPS        | 0.22x          |  8.72 Mb/s     | 800.0 MB   |
 
-As you can see, NLMeans can significantly increase encoding time, even on a powerful computer. Despite this, it is excellent for restoring picture quality for videos with prominent noise and grain. Even with a relatively clean source like the one used here, the noise reduction performed by NLMeans allowed the video encoder to achieve a 19.5% reduction in file size, at the expense of a 50% increase in encoding time.
+As you can see, NLMeans can significantly increase encoding time, even on a powerful computer.
+
+Despite this, it is excellent for restoring `Sources` with prominent visual noise and grain. Even with a relatively clean `Source` like the one used here, the noise reduction performed by NLMeans allowed the video encoder to achieve a 19.5% reduction in file size, at the expense of a 50% increase in encoding time.
 
 ## Summary of factors affecting encoding performance
 
@@ -262,7 +264,7 @@ Most video encoders we compared have speed presets, and faster encoder presets w
 
 The overall quality setting or average bit rate will also impact encoding speed, with higher quality and bit rate settings significantly increasing the time required to complete encodes.
 
-You can improve encoding performance by using a faster video encoder, a faster encoder preset, and lowering the video quality or average bit rate. Where the highest quality and smallest file sizes are not a priority, hardware encoders may be a good choice on less powerful computers.
+You can improve encoding performance by using a faster video encoder, a faster encoder preset, and lowering the video quality or average bit rate. Where the highest quality and smallest file sizes are not top priority, hardware encoders may be a good choice on less powerful computers.
 
 ### Resolution
 
@@ -272,9 +274,9 @@ Higher resolution encodes take longer and produce larger file sizes, while retai
 
 ### Filters
 
-Some filters are slow and can bottleneck the encoding process regardless of video encoder settings, notably the EEDI2 deinterlacer and the NLMeans denoiser. Other filters such as the Decomb deinterlacer and the hqdn3d denoiser are much faster, but can still be a bottleneck when using hardware video encoders such as AMD VCE, Intel QSV, and Nvidia NVENC.
+Some filters are computationally expensive and can bottleneck the encoding process regardless of video encoder settings, notably the EEDI2 deinterlacer and the NLMeans denoiser. Other filters such as the Decomb deinterlacer and the hqdn3d denoiser are much faster, but can still be a bottleneck when using hardware video encoders such as AMD VCE, Intel QSV, and Nvidia NVENC.
 
-Due to the widespread availability of interlaced content in the world today, the Decomb deinterlacer is enabled in all HandBrake official `Presets` except the Production `Presets`. The Interlacing Detection filter ensures only interlaced frames are deinterlaced, leaving progressive frames untouched, but this analysis can sometimes be a limiting factor for performance. If you are certain your `Source` contains no interlaced frames, you can disable these filters for a small increase in performance.
+Due to the widespread availability of interlaced content in the world today, the Decomb deinterlacer is enabled in all HandBrake official `Presets` except the Production `Presets`. Also enabled is the Interlacing Detection filter, which ensures only interlaced frames are deinterlaced, leaving progressive frames untouched. This analysis can sometimes be a limiting factor for performance. If you are certain your `Source` contains no interlaced frames, you can disable these filters for a small increase in performance.
 
 ### Audio
 
@@ -282,6 +284,6 @@ Audio encoders generally have less work to do than video encoders, so their impa
 
 ### Other factors
 
-Most other features such as subtitles, chapter markers, and container options have a negligible affect on performance.
+Most other features such as subtitles, chapter markers, and container options have a negligible impact on performance.
 
 One notable exception is the Web Optimized option for the MP4 container, which moves some of the video metadata from the end to the beginning of the final video file, mostly useful for streaming on the internet. This requires rewriting the entire file at the end of the encode, which can take some time on slower computers. CPU and memory speed, along with faster storage (such as an SSD) can help minimize the time the Web Optimized option needs to rewrite large output files.
