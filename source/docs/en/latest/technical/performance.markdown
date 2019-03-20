@@ -37,7 +37,7 @@ The following results were produced using a Mid-2010 Mac Pro equipped with an In
 | Very Fast 1080p30         | H.264 (x264) | RF 24   | AAC stereo                       | 33.1 FPS       | 1.38x          |  3.50 Mb/s     | 320.8 MB   |
 | Fast 1080p30              | H.264 (x264) | RF 22   | AAC stereo                       | 19.1 FPS       | 0.80x          |  5.49 Mb/s     | 503.6 MB   |
 | HQ 1080p30 Surround       | H.264 (x264) | RF 20   | AAC stereo; Dolby Digital (AC-3) | 12.7 FPS       | 0.53x          |  8.15 Mb/s     | 748.0 MB   |
-| Super HQ 1080p30 Surround | H.264 (x264) | RF 20   | AAC stereo; Dolby Digital (AC-3) |  6.7 FPS       | 0.28x          | 10.71 Mb/s     | 983.7 MB   |
+| Super HQ 1080p30 Surround | H.264 (x264) | RF 18   | AAC stereo; Dolby Digital (AC-3) |  6.7 FPS       | 0.28x          | 10.71 Mb/s     | 983.7 MB   |
 
 ![Comparison of official 1080p general presets](../../images/performance-general-presets-1.3.0.png "HandBrake’s faster General Presets produce smaller files with average quality, while its high quality General Presets produce larger files that take longer to encode.")
 
@@ -66,7 +66,7 @@ Open a video `Source` in HandBrake and encode using each of these `Presets`. Obs
 
 Video encoders employ advanced mathematical algorithms to reduce the size of your videos while retaining perceived quality. While some techniques are similar between encoders, each encoder is different, and some encoders are more efficient than others.
 
-x264 is the default video encoder used by many of HandBrake’s official `Presets`. x264 creates standard H.264/AVC video with high quality and reasonable file sizes, and encodes reasonably fast on modern computers. Most modern mobile devices have hardware decoders for energy-efficient playback of H.264/AVC video. It is arguably the most compatible modern video format.
+x264 is the default video encoder used by many of HandBrake’s official `Presets`. x264 creates standard H.264/AVC video with high quality and reasonable file sizes, and encodes relatively fast on modern computers. Most modern mobile devices have hardware decoders for energy-efficient playback of H.264/AVC video. It is arguably the most compatible modern video format.
 
 x265 is a newer video encoder that creates standard H.265/HEVC video that is becoming more popular as newer mobile devices have hardware decoders for energy-efficient playback. In some situations, such as encoding in 4K Ultra High Definition or making smaller, lower bit rate videos, x265 can produce the same or better quality as x264 with smaller file sizes, at the expense of much slower encoding speed.
 
@@ -175,7 +175,7 @@ Let’s look at the same test, this time using the x265 encoder.
 | H.265 (x265) | Slower         | RF 24   |  3.2 FPS       | 0.13x          |  3.47 Mb/s     | 318.4 MB   |
 | H.265 (x265) | Veryslow       | RF 24   |  1.8 FPS       | 0.08x          |  3.46 Mb/s     | 317.2 MB   |
 
-Compared to x264, the x265 encoder is better optimized for high core count CPUs like the E5-2699 v4, and this shows in the faster encoder presets, which are nearly as fast as x264 on this computer despite the additional computation required for H.265 video. However, the significant computation time required by x265’s slower encoder presets make encoding extremely slow even on powerful computers, and actually increase file sizes in attempts to better preserve quality.
+Compared to x264, the x265 encoder is better optimized for high core count CPUs like the E5-2699 v4, and this shows in the faster encoder presets, which are nearly as fast as x264 on this computer despite the additional computation required for H.265 video. However, the significant computation time required by x265’s slower encoder presets make encoding extremely slow even on powerful computers, and actually increases file sizes while attempting to better preserve quality.
 
 The recommended best practice when adjusting these settings manually is to choose the slowest encoder preset that encodes comfortably fast on your computer, and accept subtle quality and file size variations. Even better, use one of HandBrake’s all-encompassing `Presets`, which will select a suitable encoder preset and other settings for you based on what is appropriate for the intended purpose.
 
