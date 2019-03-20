@@ -71,6 +71,10 @@ Abhängigkeiten für die Grafische Benutzeroberfläche:
 - libnotify-dev
 - libwebkitgtk-3.0-dev
 
+Zusätzliche Ubuntu 18.04 LTS Abhängigkeiten für die Grafische Benutzeroberfläch:
+
+- gstreamer1.0-libav
+
 Abhängigkeiten installieren:
 
     sudo apt-get update
@@ -83,5 +87,9 @@ Falls du Ubuntu 18.04 LTS oder 16.04 LTS verwendest, installiere folgende zusät
 Um die GTK [GUI](abbr:Graphical User Interface - Grafische Benutzeroberfläche) zu bauen, installiere folgende Abhängigkeiten:
 
     sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkitgtk-3.0-dev
+
+Falls du Ubuntu 18.04 LTS verwendest, installiere folgende zusätzliche Abhängigkeiten für die Grafische Benutzeroberfläche.
+
+    sudo apt-get install gstreamer1.0-libav
 
 Ubuntu ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weitere Anweisungen.

@@ -62,6 +62,7 @@ Abhängigkeiten für die Grafische Benutzeroberfläche:
 - GNOME Software Development
 - dbus-glib-devel
 - gstreamer1-devel
+- gstreamer1-libav
 - gstreamer1-plugins-base-devel
 - intltool
 - libgudev1-devel
@@ -82,7 +83,7 @@ Installiere das freie [RPM Fusion](http://rpmfusion.org) Repository und zugehör
 Um die GTK [GUI](abbr:Graphical User Interface) zu bauen, installiere folgende Abhängigkeiten.
 
     sudo yum groupinstall "X Software Development" "GNOME Software Development"
-    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
     sudo yum install webkit2gtk3-devel || sudo yum install webkitgtk4-devel || sudo yum install webkitgtk3-devel
 
 Fedora ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weitere Anweisungen.

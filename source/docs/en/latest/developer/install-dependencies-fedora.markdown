@@ -67,6 +67,7 @@ Graphical interface dependencies:
 - GNOME Software Development
 - dbus-glib-devel
 - gstreamer1-devel
+- gstreamer1-libav
 - gstreamer1-plugins-base-devel
 - intltool
 - libgudev1-devel
@@ -92,7 +93,7 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo dnf groupinstall "X Software Development" "GNOME Software Development"
-    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
+    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
     sudo dnf install webkit2gtk3-devel || sudo dnf install webkitgtk4-devel || sudo dnf install webkitgtk3-devel
 
 To build with Quick Sync Video support, install QSV dependencies.
