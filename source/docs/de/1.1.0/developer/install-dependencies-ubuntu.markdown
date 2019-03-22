@@ -71,7 +71,7 @@ Abhängigkeiten für die Grafische Benutzeroberfläche:
 - libnotify-dev
 - libwebkitgtk-3.0-dev
 
-Zusätzliche Ubuntu 18.04 LTS Abhängigkeiten für die Grafische Benutzeroberfläch:
+Zusätzliche Ubuntu 18.04 LTS Abhängigkeiten für die Grafische Benutzeroberfläche:
 
 - gstreamer1.0-libav
 
