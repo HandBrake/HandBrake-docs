@@ -74,9 +74,9 @@ Other software video encoders such as VP8 and VP9 promise similar results to x26
 
 HandBrake also includes support for AMD VCE, Intel QSV, and Nvidia NVENC hardware encoders. These encoders produce H.264 and/or H.265 video at extremely high speed, at the expense of some quality and larger file sizes.
 
-Let’s compare. Here, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p using six different video encoders.
+Let’s compare. Here, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p using eight different video encoders.
 
-The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, an Nvidia GeForce GTX 1060, and Windows 10 Professional.
+The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, an AMD Radeon RX 580, an Nvidia GeForce GTX 1060, and Windows 10 Professional.
 
 | Official Preset   | Encoder       | Type     | Quality / Bit Rate   | Audio Tracks  | Encoding Speed | Realtime Speed | Total Bit Rate | Total Size |
 |-------------------|---------------|----------|----------------------|---------------|----------------|----------------|----------------|------------|
@@ -84,6 +84,8 @@ The following results were produced using a PC equipped with an Intel Xeon E5-26
 | H.264 MKV 1080p30 | H.264 (x264)  | Software | RF 22                | AAC stereo    | 53.9 FPS       | 2.25x          |  5.19 Mb/s     |   476.2 MB |
 | VP9 MKV 1080p30   | VP9           | Software | ABR 4500 kb/s 2-pass | Opus stereo   | 10.2 FPS       | 0.43x          |  4.64 Mb/s     |   425.5 MB |
 | VP8 MKV 1080p30   | VP8           | Software | ABR 6000 kb/s 2-pass | Vorbis stereo | 21.2 FPS       | 0.88x          |  8.40 Mb/s     |   770.2 MB |
+| *custom*          | H.265 (VCE)   | Hardware | CQ 22                | AAC stereo    | 60.9 FPS       | 2.54x          | 10.70 Mb/s     |   978.1 MB |
+| *custom*          | H.264 (VCE)   | Hardware | CQ 22                | AAC stereo    | 61.3 FPS       | 2.55x          | 11.20 Mb/s     | 1,026.0 MB |
 | *custom*          | H.265 (NVENC) | Hardware | CQ 22                | AAC stereo    | 63.4 FPS       | 2.64x          |  9.88 Mb/s     |   906.5 MB |
 | *custom*          | H.264 (NVENC) | Hardware | CQ 22                | AAC stereo    | 63.6 FPS       | 2.65x          | 11.20 Mb/s     | 1,024.0 MB |
 
@@ -91,7 +93,7 @@ Some encoders are noticeably faster than others. Hardware encoders are typically
 
 The official `Presets` in this test are designed to produce similar quality encodes regardless of the specific encoders used, so this test isn’t an entirely fair comparison of speed. Some encodes use quality-based encoding, while others use average bit rate, which prioritizes file size while allowing more variation in quality. Additional variables such as filters and audio can also have an impact.
 
-Let’s compare again with fewer variables. Here, we’ve removed the Decomb deinterlacing filter, audio tracks, and Foreign Audio Search, and encoded only video in average bit rate, 2-pass mode. We’ve reduced the bit rate to 3000 kb/s to better highlight the efficiency of each encoder in terms of quality related to file size. Note that the NVENC hardware encoders only support 1-pass mode.
+Let’s compare again with fewer variables. Here, we’ve removed the Decomb deinterlacing filter, audio tracks, and Foreign Audio Search, and encoded only video in average bit rate, 2-pass mode. We’ve reduced the bit rate to 3000 kb/s to better highlight the efficiency of each encoder in terms of quality related to file size. Note that the VCE and NVENC hardware encoders only support 1-pass mode.
 
 | Encoder       | Type     | Encoder Preset | Video Bit Rate       | Encoding Speed | Realtime Speed | Total Bit Rate | Total Size |
 |---------------|----------|----------------|----------------------|----------------|----------------|----------------|------------|
@@ -99,14 +101,16 @@ Let’s compare again with fewer variables. Here, we’ve removed the Decomb dei
 | H.264 (x264)  | Software | Medium         | ABR 3000 kb/s 2-pass | 72.1 FPS       | 3.00x          |  3.00 Mb/s     | 275.5 MB   |
 | VP9           | Software | Medium         | ABR 3000 kb/s 2-pass | 11.3 FPS       | 0.47x          |  2.96 Mb/s     | 277.1 MB   |
 | VP8           | Software | Medium         | ABR 3000 kb/s 2-pass | 29.1 FPS       | 1.21x          |  2.94 Mb/s     | 275.2 MB   |
+| H.265 (VCE)   | Hardware | Medium         | ABR 3000 kb/s 1-pass | 76.0 FPS       | 3.17x          |  3.52 Mb/s     | 323.2 MB   |
+| H.264 (VCE)   | Hardware | Medium         | ABR 3000 kb/s 1-pass | 73.6 FPS       | 3.07x          |  2.99 Mb/s     | 274.4 MB   |
 | H.265 (NVENC) | Hardware | Medium         | ABR 3000 kb/s 1-pass | 75.9 FPS       | 3.16x          |  2.87 Mb/s     | 268.3 MB   |
 | H.264 (NVENC) | Hardware | Medium         | ABR 3000 kb/s 1-pass | 76.0 FPS       | 3.17x          |  3.00 Mb/s     | 272.5 MB   |
 
 ![Quality comparison of HandBrake’s video encoders](../../images/performance-quality-video-encoders-1.3.0.png "Quality comparison of HandBrake’s video encoders.")
 
-In this more balanced example, we see x264 and the hardware encoders can be more than 2.5 times faster than x265 and VP8, and over six times faster than VP9. For fast H.265 encoding, the NVENC hardware encoder is considerably faster than the x265 software encoder, at the expense of some quality loss.
+In this more balanced example, we see x264 and the hardware encoders can be more than 2.5 times faster than x265 and VP8, and over six times faster than VP9. For fast H.265 encoding, the VCE and NVENC hardware encoders are considerably faster than the x265 software encoder, at the expense of some quality loss.
 
-Although compatible hardware was not available on the computer used in these tests, the AMD VCE and Intel QSV hardware encoders perform similarly to NVENC, with Intel QSV producing slightly higher quality encodes.
+Although compatible hardware was not available on the computer used in these tests, the Intel QSV hardware encoder performs similarly to VCE and NVENC, with Intel QSV producing slightly higher quality encodes.
 
 Encoders ranked fastest to slowest:
 
