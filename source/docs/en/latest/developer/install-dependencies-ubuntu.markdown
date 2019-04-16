@@ -38,6 +38,7 @@ Dependencies:
 - libjansson-dev
 - liblzma-dev
 - libmp3lame-dev
+- libnuma-dev
 - libogg-dev
 - libopus-dev
 - libsamplerate-dev
@@ -81,7 +82,7 @@ Quick Sync Video dependencies (configure --enable-qsv)
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make nasm patch pkg-config python tar yasm zlib1g-dev
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make nasm patch pkg-config python tar yasm zlib1g-dev
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 

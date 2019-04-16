@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 9.4 (Stretch) x86_64.
+The following instructions are for [Debian](https://www.debian.org) 9.8 (Stretch) x86_64.
 
 Basic requirements to run commands:
 
@@ -39,6 +39,7 @@ Dependencies:
 - libjansson-dev
 - liblzma-dev
 - libmp3lame-dev
+- libnuma-dev
 - libogg-dev
 - libopus-dev
 - libsamplerate-dev
@@ -84,7 +85,7 @@ Quick Sync Video dependencies (configure --enable-qsv)
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make patch pkg-config python tar yasm zlib1g-dev
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make patch pkg-config python tar yasm zlib1g-dev
 
 The `nasm` package provided by Debian 9 is too old. Install a newer version provided by Debian sid (unstable/development distribution)[^nasm-sid].
 

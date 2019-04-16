@@ -36,13 +36,14 @@ Dependencies[^rebuild]:
 - libvorbis
 - app-arch/lzma
 - nasm
+- numactl
 - opus
 - speex
 - x264
 
 Install dependencies.
 
-    sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis app-arch/lzma nasm opus speex x264
+    sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis app-arch/lzma nasm numactl opus speex x264
 
 Gentoo is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 

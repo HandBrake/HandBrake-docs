@@ -96,4 +96,6 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
     sudo pkg install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib gnome3 gstreamer1-plugins-gdkpixbuf gtk3 intltool libdvdcss libnotify libvpx pango
 
+Since FreeBSD does not have `libnuma`/`numactl`, please add `--disable-numa` when configuring HandBrake.
+
 FreeBSD is now prepared to build HandBrake. See [Building HandBrake for BSD](build-bsd.html) for further instructions.
