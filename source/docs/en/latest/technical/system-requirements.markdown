@@ -132,7 +132,7 @@ For other distributions, compile from source using the [Linux instructions](../d
 ### Windows
 
 - Windows 7 Service Pack 1 (64-bit) or later
-- Microsoft .NET Framework 4.7.1 or later
+- Microsoft .NET Framework 4.8 or later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing media files
 
 | Windows Version | Status              | Last Compatible Version |
