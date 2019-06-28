@@ -26,8 +26,19 @@ If you open the programs Preferences screen, you'll see a section that referes t
 Here you can define the default path where output files will be stored, and the format the file name will take.
 
 By default, it will be {source}-{title}
-You can add in addition to this: {chapters}
 
+These are all of the placeholder field options:
+* Live Update:
+  * {source}
+  * {title}
+  * {chapters}
+* Non-live Update: These only change if you scan a new source, change title or chapters.
+  * {date}
+  * {time}
+  * {creation-date}
+  * {creation-time}
+  * {quality}
+  * {bitrate}
 
 ### Source Name Handling.
 
