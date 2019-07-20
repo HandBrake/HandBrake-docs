@@ -63,7 +63,7 @@ To start over, simply remove the `build` directory.
 
     rm -rf build
 
-[^mojave-dark-mode]: HandBrake must be built on macOS 10.4 Mojave or later to enable Dark Mode toolbar icons. Building on earlier macOS, even with latest Xcode, will result in Light Mode toolbar icons being displayed in Dark Mode.
+[^mojave-dark-mode]: HandBrake must be built on macOS 10.14 Mojave or later to enable Dark Mode toolbar icons. Building on earlier macOS, even with latest Xcode, will result in Light Mode toolbar icons being displayed in Dark Mode.
 
 [^xcode-install]: Make sure Xcode is installed at `/Applications/Xcode.app`. When using an Xcode Beta release, you may need to rename `Xcode-beta.app` to `Xcode.app`.
 
