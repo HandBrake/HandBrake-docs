@@ -24,14 +24,14 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 ### Linux
 
-- Processor: Intel Core 2 Duo, AMD Athlon X2, or better
+- Processor: Intel Core i3, AMD FX / 2014+ APU, or better
 - Free Memory:
   - 512 MB for transcoding standard definition video
   - 1.5 GB for transcoding high definition video
   - 4 GB or more for transcoding 4K video
 - Screen Resolution: 1024x768 or better
 - System Storage:
-  - 50 MB for the HandBrake app
+  - 100 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
 
 <!-- /.system-linux -->
@@ -40,16 +40,15 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 ### Mac
 
-- Processor: Intel Core 2 Duo or better
-  - 32-bit Intel Macs (2007 and earlier) cannot run recent 64-bit HandBrake releases
-  - 2010 models and newer are recommended, as older Macs are often quite slow for processing video
+- Processor: Intel Core i3 or better
+  - 2012 models and newer are recommended as older Macs are often quite slow for processing video
 - Free Memory:
   - 512 MB for transcoding standard definition video
   - 1.5 GB for transcoding high definition video
   - 4 GB or more for transcoding 4K video
 - Screen Resolution: 1024x768 or better
 - System Storage:
-  - 50 MB for the HandBrake app
+  - 100 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
 
 <!-- /.system-macos -->
@@ -58,7 +57,7 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 ### Windows
 
-- Processor: Intel Core 2 Duo, AMD Athlon X2, or better
+- Processor: Intel Core i3, AMD FX / 2014+ APU, or better
 - Free Memory:
   - 512 MB for transcoding standard definition video
   - 1.5 GB for transcoding high definition video
@@ -70,7 +69,17 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 <!-- /.system-windows -->
 
-HandBrake's QuickSync feature is only supported on Windows. Experimental Linux support requires building from source with `--enable-qsv`. QuickSync requires a 2nd generation (Sandy Bridge) or newer Intel Core series processor with integrated Intel HD Graphics enabled.
+## Hardware Encoders
+
+| Encoder            | Status                                      |
+|--------------------|---------------------------------------------|
+| Intel QuickSync    | Intel 6th Gen Skylake CPUs                  |
+| AMD VCE            | Radeon RX 400, 500, Vega/II and Navi Series |
+| Nvidia NvENC       | Pascal (1050+) and Turing (1650+, 2060+)    |
+| Apple VideoToolbox | Most 2015+ Mac Computers                    |
+
+Please see the specific documentation pages for these encoders for further details. 
+
 
 ## Software
 
@@ -94,13 +103,17 @@ The following describes the level of support available for the current HandBrake
 
 | Ubuntu Version     | Status              | Last Compatible Version |
 |--------------------|---------------------|-------------------------|
+| 19.04 LTS Xenial   | Supported           |                         |
 | 18.04 LTS Bionic   | Supported           |                         |
-| 16.04 LTS Xenial   | Supported           |                         |
+| 16.04 LTS Xenial   | Unsupported         | HandBrake 1.1.2         |
 | 14.04 LTS Trusty   | Unsupported         | HandBrake 1.1.2         |
 
 #### Flatpak
 
 Requires a recent Linux distribution and `flatpak` package.
+
+The download is availabe from our main site, and also [FlatHub](https://flathub.org/apps/details/fr.handbrake.ghb)
+
 
 #### Other
 
@@ -111,11 +124,12 @@ For other distributions, compile from source using the [Linux instructions](../d
 
 ### Mac
 
-- macOS 10.10 Yosemite and later
+- macOS 10.11 Yosemite and later
 - [VLC](https://www.videolan.org/vlc/) is recommended for previewing/playing MKV (Matroska) media files
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
 | 10.14 Mojave       | Supported           |                         | Requires HandBrake 1.1.2 or later. |
 | 10.13 High Sierra  | Supported           |                         |                                    |
 | 10.12 Sierra       | Supported           |                         |                                    |

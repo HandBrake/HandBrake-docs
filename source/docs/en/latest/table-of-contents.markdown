@@ -137,9 +137,11 @@ Table of contents
   - [Anamorphic video](technical/anamorphic-guide.html)<span class="notice draft"><span>draft</span></span>
   - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
   - [Frame rate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
+- Hardware Encoders
   - [Intel QuickSync Video (QSV) options](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
   - [AMD VCE](technical/video-vce.html)<span class="notice draft"><span>draft</span></span>
   - [NVidia NVENC](technical/video-nvenc.html)<span class="notice draft"><span>draft</span></span>
+  - [Apple Video Toolbox](technical/video-videotoolbox.html) <span class="notice draft"><span>draft</span></span>
 - Audio
   - [Dynamic range compression](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
   - [Audio quality](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>

@@ -17,12 +17,11 @@ License_URL:     https://handbrake.fr/docs/license.html
 Intel Quick Sync Video 
 ==========================
 
-
 Supported Hardware and Configurations 
 --------------
-- Intel Sandy Bridge (2nd Generation Core) CPU's with Intel HD Graphics better
+- Intel Skylake Processors (6th Generation Core) CPU's with Intel HD Graphics better
 - Windows 10 (GUI and CLI)
-- Linux (CLI Only when compiled from source with --enable-qsv. Considered experimental)
+- Linux (Available in our flatpak build via a plugin)
 
 Please note, these are not hard limits and the feature *may* work on older cards and operating systems, but this is not officially supported.
 
