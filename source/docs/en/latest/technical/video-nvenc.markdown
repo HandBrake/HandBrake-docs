@@ -19,7 +19,7 @@ Nvidia Nvenc
 ## Supported Hardware and Configurations 
 
 - Nvidia GeForce GTX Pascal (1050+) and RTX Turing (1650+, 2060+) series GPU or better
-- Nvidia Graphics Driver “399.24” or later
+- Nvidia Graphics Driver 399.24 or later
 - Windows 7 SP1 and later
 
 Please note, these are not hard limits. Hardware encoding via Nvenc *might* work on older series GPUs and older operating systems, but this is not officially supported.
@@ -32,7 +32,7 @@ Support for the Nvidia Nvenc encoder is enabled in preferences on the video tab.
 
 Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimise this effect, disable any filters that you do not require.
+It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 
@@ -69,7 +69,7 @@ The following value types are supported (each option only accepts one value type
 | spatial-aq       | boolean     |   X   |   X   | For H.265, use "spatial_aq" for H.265 encodes. Note the underscore             |
 | aq-strength      | int         |   X   |   X   | When Spatial AQ is enabled, the scale is from 1 (low) - 15 (aggressive)        |
 | nonref_p         | boolean     |   X   |   X   | Enable automatic insertion of non-reference P-frames                           |
-| strict_gop       | boolean     |   X   |   X   | Minimise GOP to GOP rate fluctuations                                          |
+| strict_gop       | boolean     |   X   |   X   | Minimize GOP to GOP rate fluctuations                                          |
 | weighted_pred    | boolean     |   X   |   X   |                                                                                |
 | rc-lookahead     | int         |   X   |   X   | 0 to 27                                                                        |
 | b_adapt          | boolean     |   X   |       | Set this to 0 to disable adaptive B-frame decision when lookahead is enabled   |

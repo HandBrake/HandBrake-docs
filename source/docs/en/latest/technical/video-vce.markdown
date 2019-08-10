@@ -31,7 +31,7 @@ Support for the AMD VCE encoder is enabled in preferences on the video tab. If y
 
 Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimise this effect, disable any filters that you do not require.
+It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 

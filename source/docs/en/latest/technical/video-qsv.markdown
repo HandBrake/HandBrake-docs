@@ -20,9 +20,11 @@ Intel QuickSync Video (QSV)
 
 - Intel Skylake (6th Generation Core) CPU or later with Intel HD Graphics or better
 - Windows 10
-- Linux (Available in our flatpak build via a plugin)
+- Linux
 
 Please note, these are not hard limits. Hardware encoding via Intel QSV *might* work on older series GPUs and older operating systems, but this is not officially supported.
+
+A plugin with all required components for Intel QSV encoding using the Flatpak distribution of HandBrake is available on the official [HandBrake website](https://handbrake.fr).
 
 ## Enabling support
 
@@ -32,7 +34,7 @@ Support for the Intel QSV encoder is enabled in preferences on the video tab. If
 
 Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimise this effect, disable any filters that you do not require.
+It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 

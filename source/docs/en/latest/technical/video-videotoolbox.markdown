@@ -18,7 +18,7 @@ Apple VideoToolbox
 
 ## Supported hardware
 
-- Most 2015 or later Macs
+- Most 2015 and later Macs
 
 Please note, these are not hard limits. Hardware encoding via VideoToolbox *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
@@ -35,7 +35,7 @@ Choice of the underlying hardware encoder (AMD VCE or Intel QuickSync Video) is 
 
 Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimise this effect, disable any filters that you do not require.
+It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 
