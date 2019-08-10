@@ -1,72 +1,66 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           AMD VCE Encoder
+Title:           AMD VCE
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Authors:         [ Scott (s55) ]
+Authors:         [ Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Scott (s55) ]
 Copyright:       2019 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-AMD VCE Encoder
-==========================
+AMD VCE
+=======
 
-Supported Hardware and Configurations 
---------------
-- AMD Radeon RX 400 Series, Vega or better
+## Supported hardware 
+
+- AMD Radeon RX 400, 500, Vega/II, Navi series GPU or better
 - Windows 10
 
-Please note, these are not hard limits and the feature *may* work on older cards and operating systems, but this is not officially supported.
+Please note, these are not hard limits. Hardware encoding via VCE *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
-Enabling support
---------------
-Support for the VCE encoder can be enabled in preferences under the video tab. If your system is not supported, the option will be greyed out.
+## Enabling support
 
+Support for the AMD VCE encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
 
-Performance
---------------
-Take note that only the encode portion of the encode pipeline is done on the AMD hardware. 
-Every stage prior and after in the pipeline including (decoding, filters, a/v sync, muxing etc.) all happen on the CPU. As a result, it is normal to have high, or 100% CPU utilisation during encodes. 
+## Performance
 
-It is common, particularly on lower end hardware that the CPU may be a bottleneck for the encoder. To minimise this effect, turn off any filters that you do not require. 
+Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
 
+It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimise this effect, disable any filters that you do not require.
 
-Using the Advanced Options
---------------
-VCE does have a limited set of advanced encoder options that can be used.  Generally speaking is is not recommended to change these parameters. The built-in presets offer a good range of options.
+## Advanced options
 
-From the command line, you can use the --encopts parameter as follows:
+The AMD VCE hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
+
+From HandBrake’s command line interface, use the `--encopts` parameter as follows:
 
     --encopts="option1=value1:option2=value2"
 
-
-From the graphical user interface, just set the options in the dedicated options text box on the Video tab.
+From HandBrake’s graphical interface, set the options in the `Advanced Options` field on the `Video` tab:
 
     option1=value1:option2=value2
 
-Option Types
---------------
+### Option value types
+
 The following value types are supported (each option only accepts one value type):
 
-- integer
+- integer  
   A number that can be written without a fractional or decimal component.
 
-- boolean
-  0 means off (or disabled).
+- boolean  
+  0 means off (or disabled).  
   1 means on (or enabled).
  
-- string
-  Takes a setting defined as s string. See comment for details. 
+- string  
+  An alphanumeric string of characters. See the option’s comments for acceptable values.
 
-
-Available Options
---------------
+### Options list
 
 | Option           | Type        | H.264 | H.265 | Comment                                                                        |
 |------------------|-------------|------------------------------------------------------------------------------------------------|
