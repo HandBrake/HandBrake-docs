@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           AMD VCE
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Apple VideoToolbox
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

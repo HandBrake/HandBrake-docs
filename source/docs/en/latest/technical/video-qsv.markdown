@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Intel QuickSync Video (QSV)
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
