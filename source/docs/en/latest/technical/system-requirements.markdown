@@ -71,15 +71,12 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 ## Hardware Encoders
 
-| Encoder            | Status                                      |
-|--------------------|---------------------------------------------|
-| Intel QuickSync    | Intel 6th Gen Skylake CPUs                  |
-| AMD VCE            | Radeon RX 400, 500, Vega/II and Navi Series |
-| Nvidia NvENC       | Pascal (1050+) and Turing (1650+, 2060+)    |
-| Apple VideoToolbox | Most 2015+ Mac Computers                    |
+Please see the specific documentation pages for these encoders for further details.
 
-Please see the specific documentation pages for these encoders for further details. 
-
+- [AMD VCE](video-vce.html)
+- [Apple VideoToolbox](video-videotoolbox.html)
+- [Intel QuickSync Video](video-qsv.html)
+- [Nvidia Nvenc](video-nvenc.html)
 
 ## Software
 
