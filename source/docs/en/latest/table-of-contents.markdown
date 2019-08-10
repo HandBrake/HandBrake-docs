@@ -138,8 +138,8 @@ Table of contents
   - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
   - [Frame rate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
 - Hardware encoders
-  - [Apple VideoToolbox](technical/video-videotoolbox.html)
   - [AMD VCE](technical/video-vce.html)
+  - [Apple VideoToolbox](technical/video-videotoolbox.html)
   - [NVidia NVENC](technical/video-nvenc.html)
   - [Intel QuickSync Video (QSV)](technical/video-qsv-options.html)
 - Audio
