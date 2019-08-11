@@ -141,7 +141,7 @@ Table of contents
   - [AMD VCE](technical/video-vce.html)
   - [Apple VideoToolbox](technical/video-videotoolbox.html)
   - [NVidia NVENC](technical/video-nvenc.html)
-  - [Intel QuickSync Video (QSV)](technical/video-qsv-options.html)
+  - [Intel QuickSync Video (QSV)](technical/video-qsv.html)
 - Audio
   - [Dynamic range compression](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
   - [Audio quality](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>
