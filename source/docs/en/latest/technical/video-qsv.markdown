@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Intel QuickSync Video (QSV)
+Title:           Intel QuickSync Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,8 +13,8 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Intel QuickSync Video (QSV)
-===========================
+Intel QuickSync Video
+=====================
 
 ## Supported hardware
 
