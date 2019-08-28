@@ -20,8 +20,14 @@ AMD VCE
 
 - AMD Radeon RX 400, 500, Vega/II, Navi series GPU or better
 - Windows 10
+- Linux
 
 Please note, these are not hard limits. Hardware encoding via VCE *might* work on older series GPUs and older operating systems, but this is not officially supported.
+
+## Linux Drivers
+To use this encoder on linux amdgru-pro version 19.20+ and amf-amdgpu-pro packages are required. (amdgru-pro contains, but does not install automatically) 
+
+This driver can be installed using amdgpu-pro-install script in official amd driver archive.
 
 ## Enabling support
 
