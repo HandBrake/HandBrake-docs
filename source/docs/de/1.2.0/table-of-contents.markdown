@@ -113,7 +113,7 @@ Inhaltsverzeichnis
 
 ## Commandline Dokumentation
 
-- [CLI Guide](cli/cli-command-line-reference.html)
+- [CLI Guide](cli/command-line-reference.html)
 - [Liste von CLI Optionen](cli/cli-options.html)<span class="notice draft"><span>draft</span></span>
 
 ## Technische Dokumentation
