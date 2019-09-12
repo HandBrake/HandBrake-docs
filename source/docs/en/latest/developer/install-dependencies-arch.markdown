@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Arch
 ===============================
 
-The following instructions are for [Arch](https://www.archlinux.org) 2019.04.01 (HandBrake [CLI](abbr:Command Line Interface) only).
+The following instructions are for [Arch](https://www.archlinux.org) 2019.09.01.
 
 Basic requirements to run commands:
 
@@ -52,8 +52,23 @@ Dependencies:
 - xz
 - yasm
 
+Graphical interface dependencies:
+
+- dbus-glib
+- gstreamer
+- gst-libav
+- gst-plugins-base
+- intltool
+- libgudev
+- libnotify
+- webkit2gtk
+
 Install dependencies.
 
     sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 nasm numactl opus python2 speex x264 x265 xz yasm
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies. Requires the GNOME desktop and associated packages, e.g. installed using `pacman -S xorg xorg-server && pacman -S gnome gnome-extra`.
+
+    sudo pacman -S dbus-glib gstreamer gst-libav gst-plugins-base intltool libgudev libnotify webkit2gtk
 
 Arch is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
