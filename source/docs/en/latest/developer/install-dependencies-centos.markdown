@@ -36,6 +36,7 @@ Dependencies:
 - libsamplerate-devel
 - libtheora-devel
 - libvorbis-devel
+- libvpx-devel
 - numactl-devel
 - speex-devel
 - xz-devel
@@ -74,7 +75,7 @@ Install dependencies.
 
     sudo yum update
     sudo yum groupinstall "Development Tools" "Additional Development"
-    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel numactl-devel opus-devel speex-devel xz-devel
+    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libvpx-devel numactl-devel opus-devel speex-devel xz-devel
 
 Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
 
