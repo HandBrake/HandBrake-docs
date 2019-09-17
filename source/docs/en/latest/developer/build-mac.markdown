@@ -22,6 +22,8 @@ Building HandBrake for Mac requires an Apple computer with a 64-bit Intel proces
   - free Apple Developer registration required, or install from the Mac App Store
 - [Command Line Tools for Xcode](https://developer.apple.com/download/more/)
   - free Apple Developer registration required, or install using `xcode-select --install`
+- [Python](https://www.python.org/downloads/) 3.7.0 or later
+  - ensure your Python installation has properly created `/Library/Frameworks/Python.framework/Versions/<version>`
 
 Additional dependencies (may be built via included script):
 
