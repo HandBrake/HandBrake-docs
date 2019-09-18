@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Fedora
 =================================
 
-The following instructions are for [Fedora](https://getfedora.org) 26 Workstation and later.
+The following instructions are for [Fedora](https://getfedora.org) 28 through 30.
 
 Basic requirements to run commands:
 
@@ -25,7 +25,7 @@ Basic requirements to run commands:
 Dependencies:
 
 - Development Tools
-- Development Libraries
+- C Development Tools and Libraries
 - bzip2-devel
 - cmake
 - fontconfig-devel
@@ -47,7 +47,9 @@ Dependencies:
 - libvpx-devel
 - m4
 - make
+- meson
 - nasm
+- ninja-build
 - numactl-devel
 - opus-devel
 - patch
@@ -73,7 +75,7 @@ Graphical interface dependencies:
 - intltool
 - libgudev1-devel
 - libnotify-devel
-- webkit2gtk3-devel (webkitgtk4-devel for Fedora 27, webkitgtk3-devel for Fedora 26)
+- webkit2gtk3-devel
 
 Quick Sync Video dependencies (configure --enable-qsv)
 
@@ -83,8 +85,8 @@ Quick Sync Video dependencies (configure --enable-qsv)
 Install dependencies.
 
     sudo dnf update
-    sudo dnf groupinstall "Development Tools" "Development Libraries"
-    sudo dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make nasm numactl-devel opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
+    sudo dnf groupinstall "Development Tools" "C Development Tools and Libraries"
+    sudo dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja-build numactl-devel opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
 
 Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
 
@@ -94,8 +96,7 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo dnf groupinstall "X Software Development" "GNOME Software Development"
-    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
-    sudo dnf install webkit2gtk3-devel || sudo dnf install webkitgtk4-devel || sudo dnf install webkitgtk3-devel
+    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkit2gtk3-devel
 
 To build with Quick Sync Video support, install QSV dependencies.
 
