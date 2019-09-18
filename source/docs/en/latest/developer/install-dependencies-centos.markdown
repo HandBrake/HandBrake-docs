@@ -16,9 +16,11 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on CentOS
 =================================
 
+*Building HandBrake’s latest code on CentOS 7 is not currently possible due to the system providing an outdated `libvpx-devel` package.*
+
 ## CentOS 7
 
-The following instructions are for [CentOS](https://centos.org) 7.6 x86_64.
+The following instructions are for [CentOS](https://centos.org) 7.6.
 
 Basic requirements to run commands:
 
@@ -38,6 +40,7 @@ Dependencies:
 - libvorbis-devel
 - libvpx-devel
 - numactl-devel
+- python3
 - speex-devel
 - xz-devel
 
@@ -46,7 +49,9 @@ Additional dependencies not available in the base repository:
 - devtoolset-7 [SCL] (optional/recommended for HandBrake [CLI](abbr:Command Line Interface))
 - lame-devel [RPM Fusion]
 - libass-devel [EPEL]
+- meson [EPEL]
 - nasm [NASM]
+- ninja-build [EPEL]
 - opus-devel [EPEL EL6]
 - x264-devel [RPM Fusion]
 - yasm [EPEL]
@@ -75,12 +80,12 @@ Install dependencies.
 
     sudo yum update
     sudo yum groupinstall "Development Tools" "Additional Development"
-    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libvpx-devel numactl-devel opus-devel speex-devel xz-devel
+    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libvpx-devel numactl-devel python3 opus-devel speex-devel xz-devel
 
 Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
 
     sudo yum install epel-release
-    sudo yum install libass-devel yasm
+    sudo yum install libass-devel meson ninja-build yasm
 
 The `opus-devel` package provided by CentOS 7 is too old. Install a newer version provided by EPEL for CentOS 6[^opus-el6].
 

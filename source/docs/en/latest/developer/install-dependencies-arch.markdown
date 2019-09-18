@@ -42,7 +42,9 @@ Dependencies:
 - libvorbis
 - libvpx
 - libxml2
+- meson
 - nasm
+- ninja
 - numactl
 - opus
 - python2
@@ -65,7 +67,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 nasm numactl opus python2 speex x264 x265 xz yasm
+    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 x265 xz yasm
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies. Requires the GNOME desktop and associated packages, e.g. installed using `pacman -S xorg xorg-server && pacman -S gnome gnome-extra`.
 
