@@ -49,10 +49,13 @@ Dependencies:
 - libtheora
 - libtool
 - libvorbis
+- libvpx
 - libx264
 - libxml2
 - lzma
+- meson
 - nasm
+- ninja
 - opus
 - pkgconf
 - python
@@ -80,7 +83,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 nasm opus pkgconf python speex yasm
+    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 meson nasm ninja opus pkgconf python speex yasm
 
 Build and install the `lame` source port.
 
@@ -89,13 +92,11 @@ Build and install the `lame` source port.
     sudo portsnap update
     LASTDIR="`pwd`"
     cd /usr/ports/audio/lame
-    sudo make install
-    cd "LASTDIR"
+    sudo make install || sudo make reinstall
+    cd "$LASTDIR"
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo pkg install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib gnome3 gstreamer1-plugins-gdkpixbuf gtk3 intltool libdvdcss libnotify libvpx pango
-
-Since FreeBSD does not have `libnuma`/`numactl`, please add `--disable-numa` when configuring HandBrake.
 
 FreeBSD is now prepared to build HandBrake. See [Building HandBrake for BSD](build-bsd.html) for further instructions.
