@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on FreeBSD
 ==================================
 
-The following instructions are for [FreeBSD](https://www.freebsd.org) 11.1 x86_64.
+The following instructions are for [FreeBSD](https://www.freebsd.org) 11 and 12.
 
 Basic requirements to run commands:
 
