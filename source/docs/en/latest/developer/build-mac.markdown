@@ -29,11 +29,11 @@ Additional dependencies (may be built via included script):
 
 - autoconf 2.69 or later
 - automake 1.16 or later
-- cmake 3.14 or later
+- cmake 3.1.0 or later
 - libtool 2.4.6 or later
 - meson 0.47.0 or later
 - nasm 2.13 or later
-- ninja 1.8 or later
+- ninja 1.8.0 or later
 - pkg-config 0.29.2 or later
 
 Install Xcode and open it once. Approve any prompts to install additional tools. You may quit Xcode after it has finished loading.
