@@ -24,6 +24,7 @@ Dependency installation instructions are available for the following distributio
 
 - [Arch](install-dependencies-arch.html)
 - [CentOS](install-dependencies-centos.html)
+- [Clear](install-dependencies-clear.html)
 - [Debian](install-dependencies-debian.html)
 - [Fedora](install-dependencies-fedora.html)
 - [Gentoo](install-dependencies-gentoo.html)
