@@ -65,6 +65,11 @@ Graphical interface dependencies:
 - libnotify
 - webkit2gtk
 
+Intel Quick Sync Video dependencies (optional):
+
+- libva
+- libdrm
+
 Install dependencies.
 
     sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 x265 xz yasm
@@ -72,5 +77,9 @@ Install dependencies.
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies. Requires the GNOME desktop and associated packages, e.g. installed using `pacman -S xorg xorg-server && pacman -S gnome gnome-extra`.
 
     sudo pacman -S dbus-glib gstreamer gst-libav gst-plugins-base intltool libgudev libnotify webkit2gtk
+
+To build with Intel Quick Sync Video support, install the QSV dependencies.
+
+    sudo pacman -S libva libdrm
 
 Arch is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
