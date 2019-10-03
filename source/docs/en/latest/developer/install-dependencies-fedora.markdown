@@ -77,7 +77,7 @@ Graphical interface dependencies:
 - libnotify-devel
 - webkit2gtk3-devel
 
-Quick Sync Video dependencies (configure --enable-qsv)
+Intel Quick Sync Video dependencies (optional):
 
 - libva
 - libdrm
@@ -98,9 +98,8 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
     sudo dnf groupinstall "X Software Development" "GNOME Software Development"
     sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkit2gtk3-devel
 
-To build with Quick Sync Video support, install QSV dependencies.
+To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo dnf install libva-devel libdrm-devel
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
-

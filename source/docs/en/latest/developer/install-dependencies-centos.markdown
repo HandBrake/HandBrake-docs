@@ -71,7 +71,7 @@ Additional graphical interface dependencies not available in the base repository
 - devtoolset-7 [SCL]
 - gstreamer1-libav [RPM Fusion]
 
-Quick Sync Video dependencies (configure --enable-qsv)
+Intel Quick Sync Video dependencies (optional):
 
 - libva
 - libdrm
@@ -117,7 +117,7 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
     sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
 
-To build with Quick Sync Video support, install QSV dependencies.
+To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo yum install libva-devel libdrm-devel
 
@@ -128,4 +128,3 @@ CentOS is now prepared to build the HandBrake [CLI](abbr:Command Line Interface)
 [^nasm-repo]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
 
 [^gcc-scl]: SCL packages are isolated from base repository versions of similar packages. You can enable these packages using the `scl` command line tool. When you are finished using these packages, simply log out of the active shell. New sessions will use the packages provided by the base repository.
-

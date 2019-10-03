@@ -84,7 +84,7 @@ Graphical interface dependencies:
 - libnotify-dev
 - libwebkit2gtk-4.0-dev (libwebkitgtk-3.0-dev for Debian 9)
 
-Quick Sync Video dependencies (configure --enable-qsv)
+Intel Quick Sync Video dependencies (optional):
 
 - libva
 - libdrm
@@ -114,11 +114,10 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
     sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev
     sudo apt-get install libwebkit2gtk-4.0-dev || sudo apt-get install libwebkitgtk-3.0-dev
 
-To build with Quick Sync Video support, install QSV dependencies.
+To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo apt-get install libva-dev libdrm-dev
 
 Debian is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
 [^nasm-sid]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
-
