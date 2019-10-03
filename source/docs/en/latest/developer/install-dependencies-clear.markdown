@@ -47,7 +47,7 @@ Graphical interface dependencies:
 
 - desktop-dev
 
-Quick Sync Video dependencies (optional).
+Intel Quick Sync Video dependencies (optional):
 
 - devpkg-libva
 - devpkg-libdrm
@@ -83,7 +83,7 @@ Build and install the dependencies not available in the base repository.
     export LDFLAGS="${LDFLAGS:-} -L/usr/local/lib"
     echo 'export CFLAGS="${CFLAGS:-} -I/usr/local/include"' >> "${HOME}/.bashrc"
     echo 'export LDFLAGS="${LDFLAGS:-} -L/usr/local/lib"' >> "${HOME}/.bashrc"
-    if ! grep '\/usr\/local\/lib' /etc/ld.so.conf; then
+    if ! grep '\/usr\/local\/lib' /etc/ld.so.conf >/dev/null 2>&1; then
         echo '/usr/local/lib' | sudo tee --append /etc/ld.so.conf
         sudo ldconfig
     fi
@@ -92,7 +92,7 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
     sudo swupd bundle-add desktop-dev
 
-To build with Quick Sync Video support (`configure --enable-qsv`), install QSV dependencies.
+To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo swupd bundle-add devpkg-libva devpkg-libdrm
 
