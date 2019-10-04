@@ -57,7 +57,6 @@ Dependencies:
 - speex-devel
 - tar
 - xz-devel
-- yasm
 - zlib-devel
 
 Additional dependencies not available in the base repository:
@@ -86,7 +85,7 @@ Install dependencies.
 
     sudo dnf update
     sudo dnf groupinstall "Development Tools" "C Development Tools and Libraries"
-    sudo dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja-build numactl-devel opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
+    sudo dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja-build numactl-devel opus-devel patch python speex-devel tar xz-devel zlib-devel
 
 Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
 

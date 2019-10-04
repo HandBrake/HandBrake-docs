@@ -60,7 +60,6 @@ Dependencies:
 - pkgconf
 - python
 - speex
-- yasm
 
 Graphical interface dependencies:
 
@@ -83,7 +82,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 meson nasm ninja opus pkgconf python speex yasm
+    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 meson nasm ninja opus pkgconf python speex
 
 Build and install the `lame` source port.
 
