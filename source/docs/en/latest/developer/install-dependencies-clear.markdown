@@ -78,7 +78,7 @@ Build and install the dependencies not available in the base repository.
     sudo make install
     cd ..
 
-    # make deps available
+    # make shared libraries findable
     export CFLAGS="${CFLAGS:-} -I/usr/local/include"
     export LDFLAGS="${LDFLAGS:-} -L/usr/local/lib"
     echo 'export CFLAGS="${CFLAGS:-} -I/usr/local/include"' >> "${HOME}/.bashrc"
