@@ -76,7 +76,7 @@ Some `Sources` have only one `Title`. Blu-ray and DVD `Sources` often have multi
 
 ## Select a preset
 
-HandBrake provides a number of settings `Presets` to make your new video work well with your playback devices and software. For instance, if you have a Playstation 4, you may wish to select the `Playstation 1080p30 Surround` preset under `Devices`.
+HandBrake provides a number of settings `Presets` to make your new video work well with your playback devices and software. For instance, if you have a PlayStation 4, you may wish to select the `Playstation 1080p30 Surround` preset under `Devices`.
 
 The default `Fast 1080p30` preset is often a good choice because it's fast and compatible with most devices.
 
