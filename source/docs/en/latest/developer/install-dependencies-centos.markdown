@@ -28,7 +28,6 @@ Basic requirements to run commands:
 Dependencies:
 
 - Development Tools
-- Additional Development
 - fribidi-devel
 - git
 - jansson-devel
