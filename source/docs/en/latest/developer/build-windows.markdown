@@ -29,7 +29,6 @@ Dependencies:
 - autopoint
 - build-essential
 - cmake
-- curl
 - gcc
 - git
 - libtool
@@ -58,6 +57,7 @@ Additional MinGW-w64 toolchain dependencies:
 
 - bison
 - bzip2
+- curl
 - flex
 - g++
 - gzip
@@ -66,7 +66,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake curl gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar yasm zlib1g-dev
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar yasm zlib1g-dev
 
 If you are running Ubuntu 18.10 or later, install the additional dependencies.
 
@@ -79,7 +79,7 @@ If you are running Ubuntu 18.04 LTS, the `meson` package is too old. Install a n
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
-    sudo apt-get install bison bzip2 flex g++ gzip pax
+    sudo apt-get install bison bzip2 curl flex g++ gzip pax
 
 Clone the HandBrake repository.
 
