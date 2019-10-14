@@ -18,9 +18,9 @@ Building HandBrake for Windows
 
 ## Command line interface and LibHB
 
-Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 18.04 LTS (Bionic Beaver) is recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as most packaged versions have issues that can produce non-functioning builds.
+Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 18.04 LTS (Bionic Beaver) or later is recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as some packaged versions have issues that can produce non-functioning builds.
 
-The following instructions are for Ubuntu 18.04 LTS (Bionic Beaver).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 19.10 (Eoan Ermine).
 
 Dependencies:
 
@@ -36,12 +36,22 @@ Dependencies:
 - m4
 - make
 - nasm
+- ninja-build
 - patch
 - pkg-config
 - python
 - tar
 - yasm
 - zlib1g-dev
+
+Additional dependencies for Ubuntu 18.10 and later:
+
+- meson
+
+Additional Ubuntu 18.04 LTS dependencies:
+
+- python3-pip
+- meson (via pip3)
 
 Additional MinGW-w64 toolchain dependencies:
 
@@ -56,6 +66,15 @@ Install dependencies.
 
     sudo apt-get update
     sudo apt-get install automake autoconf build-essential cmake curl gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar yasm zlib1g-dev
+
+If you are running Ubuntu 18.10 or later, install the additional dependencies.
+
+    sudo apt-get install meson
+
+If you are running Ubuntu 18.04 LTS, the `meson` package is too old. Install a newer version provided by the [Python Package Index](https://pypi.org/).
+
+    sudo apt-get install python3-pip
+    sudo pip3 install meson
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
@@ -73,7 +92,7 @@ This process will take a few minutes, then provide you with instructions for add
 
 Build HandBrake. For higher quality audio, enable the FDK AAC encoder by appending `--enable-fdk-aac`. Builds including FDK AAC must be for personal use only and may not be distributed.[^fdk-aac-license]
 
-    ./configure --cross=x86_64-w64-mingw32 --enable-qsv --enable-vce --enable-nvenc --launch-jobs=$(nproc) --launch
+    ./configure --cross=x86_64-w64-mingw32 --launch-jobs=$(nproc) --launch
 
 When complete, you will find `HandBrakeCLI.exe` in the `build` directory and `hb.dll` in `build/libhb`.
 
