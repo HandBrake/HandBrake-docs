@@ -78,8 +78,8 @@ Graphical interface dependencies:
 
 Intel Quick Sync Video dependencies (optional):
 
-- libva
-- libdrm
+- libva-devel
+- libdrm-devel
 
 Install dependencies.
 

@@ -70,8 +70,8 @@ Additional graphical interface dependencies not available in the base repository
 
 Intel Quick Sync Video dependencies (optional):
 
-- libva
-- libdrm
+- libva-devel
+- libdrm-devel
 
 Install dependencies.
 
