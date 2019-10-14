@@ -22,6 +22,10 @@ Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) f
 
 The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 19.10 (Eoan Ermine).
 
+Basic requirements to run commands:
+
+- sudo (for normal user accounts)
+
 Dependencies:
 
 - autoconf
