@@ -41,7 +41,6 @@ Dependencies:
 - pkg-config
 - python
 - tar
-- yasm
 - zlib1g-dev
 
 Additional dependencies for Ubuntu 18.10 and later:
@@ -66,7 +65,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar yasm zlib1g-dev
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar zlib1g-dev
 
 If you are running Ubuntu 18.10 or later, install the additional dependencies.
 
