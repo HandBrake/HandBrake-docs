@@ -60,20 +60,27 @@ Each General `Preset` is named according to the quality or speed, maximum resolu
 
 HandBrake's Web `Presets` use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are tailored for sharing videos on the Internet.
 
+Discord Nitro `Presets` are designed to guarantee video up to a certain duration will produce a file less than 50 [MB](abbr:megabytes) for use with [Discord Nitro Classic](https://discordapp.com/nitro) or 100 [MB](abbr:megabytes) for use with [Discord Nitro](https://discordapp.com/nitro). Likewise, Discord `Presets` are designed to guarantee video up to a certain duration will produce a file less than 8 [MB](abbr:megabytes) for use with [Discord](https://discordapp.com/) free accounts. The maximum duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
+
 Gmail `Presets` are designed to guarantee video up to a certain duration will produce a file less than 25 [MB](abbr:megabytes) for attaching to an email.[^email-size-limit] The maximum duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
 
 Vimeo YouTube `Presets` produce videos suitable for uploading to popular video hosting services.[^video-hosting-services] `Presets` marked HQ are designed to deliver higher quality while encoding in a resonable amount of time.
 
-| Preset                        | Type | Video | Audio      | Picture Quality   | Encoding Speed | File Size     |
-|-------------------------------|------|-------|------------|-------------------|----------------|---------------|
-| Gmail Large 3 Minutes 720p30  | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 25 MB or less |
-| Gmail Medium 5 Minutes 480p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 25 MB or less |
-| Gmail Small 10 Minutes 288p30 | MP4  | H.264 | AAC mono   | Depends on source | Fast           | 25 MB or less |
-| Vimeo YouTube HQ 2160p60 4K   | MP4  | H.264 | AAC stereo | High              | Medium         | Large         |
-| Vimeo YouTube HQ 1440p60 2.5K | MP4  | H.264 | AAC stereo | High              | Medium         | Large         |
-| Vimeo YouTube HQ 1080p60      | MP4  | H.264 | AAC stereo | High              | Medium         | Large         |
-| Vimeo YouTube HQ 720p60       | MP4  | H.264 | AAC stereo | High              | Medium         | Large         |
-| Vimeo YouTube 720p30          | MP4  | H.264 | AAC stereo | Standard          | Medium         | Average       |
+| Preset                                   | Type | Video | Audio      | Picture Quality   | Encoding Speed | File Size         |
+|------------------------------------------|------|-------|------------|-------------------|----------------|-------------------|
+| Discord Nitro Large 3-6 Minutes 1080p30  | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 50/100 MB or less |
+| Discord Nitro Medium 5-10 Minutes 720p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 50/100 MB or less |
+| Discord Nitro Small 10-20 Minutes 480p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 50/100 MB or less |
+| Discord Small 2 Minutes 360p30           | MP4  | H.264 | AAC mono   | Depends on source | Very Fast      |      8 MB or less |
+| Discord Tiny 5 Minutes 240p30            | MP4  | H.264 | AAC mono   | Depends on source | Very Fast      |      8 MB or less |
+| Gmail Large 3 Minutes 720p30             | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
+| Gmail Medium 5 Minutes 480p30            | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
+| Gmail Small 10 Minutes 288p30            | MP4  | H.264 | AAC mono   | Depends on source | Fast           |     25 MB or less |
+| Vimeo YouTube HQ 2160p60 4K              | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Vimeo YouTube HQ 1440p60 2.5K            | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Vimeo YouTube HQ 1080p60                 | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Vimeo YouTube HQ 720p60                  | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Vimeo YouTube 720p30                     | MP4  | H.264 | AAC stereo | Standard          | Medium         |           Average |
 
 ## Devices presets
 
@@ -107,10 +114,6 @@ Each Devices `Preset` is named according to the device name or class, maximum re
 | Roku 720p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Roku 576p25                         | MP4     | H.264     | AAC stereo                       | Medium         |
 | Roku 480p30                         | MP4     | H.264     | AAC stereo                       | Medium         |
-| Windows Mobile 1080p30              | MP4     | H.264     | AAC stereo                       | Medium         |
-| Windows Mobile 720p30               | MP4     | H.264     | AAC stereo                       | Medium         |
-| Windows Mobile 540p30               | MP4     | H.264     | AAC stereo                       | Medium         |
-| Windows Mobile 480p30               | MP4     | H.264     | AAC stereo                       | Medium         |
 | Xbox 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Xbox Legacy 1080p30 Surround        | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 
@@ -158,6 +161,15 @@ Production Proxy `Presets` create fast to encode, Intra-only video limited to on
 ## Compatible replacements for deprecated or removed presets
 
 From time to time, official `Presets` may be deprecated or removed. Compatible replacements are listed here.
+
+### Windows Mobile presets
+
+| Preset                 | Compatible Preset      | Notes                                                                                        |
+|------------------------|------------------------|----------------------------------------------------------------------------------------------|
+| Windows Mobile 1080p30 | General > Fast 1080p30 | Later Windows Mobile and Windows Phone devices, and Windows 10 Mobile devices.               |
+| Windows Mobile 720p30  | General > Fast 720p30  | Add vbv-bufsize=10000:vbv-maxrate=10000 to the additional encoder options for older devices. |
+| Windows Mobile 540p30  | General > Fast 480p30  | Add vbv-bufsize=4000:vbv-maxrate=4000 to the additional encoder options for older devices.   |
+| Windows Mobile 480p30  | General > Fast 480p30  | Add vbv-bufsize=2000:vbv-maxrate=2000 to the additional encoder options for older devices.   |
 
 ### Legacy 0.10.x presets
 
