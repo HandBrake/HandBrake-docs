@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Source formats
+Title:           Supported source formats
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,8 +13,8 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Source formats
-==============
+Supported source formats
+========================
 
 One of HandBrake's strengths is its ability to open a wide variety of video formats. HandBrake uses [FFmpeg](https://ffmpeg.org/) under the hood and generally can open whatever FFmpeg will, in addition to disc-based formats like DVD and Blu-ray.
 
