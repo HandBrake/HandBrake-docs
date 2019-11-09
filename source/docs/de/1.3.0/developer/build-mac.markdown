@@ -43,10 +43,10 @@ Klone das HandBrake Repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Liste die verfügbaren Tags in der HandBrake 1.2.x Release Serie und checke den aktuellsten aus.
+Liste verfügbare Tags in der HandBrake 1.3.x Release Serie und checke den aktuellsten aus.
 
-    git tag --list | grep ^1\.2\.
-    git checkout refs/tags/$(git tag -l | grep -E '^1\.2\.[0-9]+$' | tail -n 1)
+    git tag --list | grep ^1\.3\.
+    git checkout refs/tags/$(git tag -l | grep -E '^1\.3\.[0-9]+$' | tail -n 1)
 
 Du kannst die zusätzlichen Abhängigkeiten mit dem mitgelieferten Script bauen und installieren. Wenn du möchtest, kannst du den Ausgabepfad abändern.
 

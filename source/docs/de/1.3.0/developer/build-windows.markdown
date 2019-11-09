@@ -65,10 +65,10 @@ Klone das HandBrake Repository:
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Liste alle verfügbaren Tags in der HandBrake 1.2.x Release Serie, und checke den aktuellsten aus.
+Liste verfügbare Tags in der HandBrake 1.3.x Release Serie und checke den aktuellsten aus.
 
-    git tag --list | grep ^1\.2\.
-    git checkout refs/tags/$(git tag -l | grep -E '^1\.2\.[0-9]+$' | tail -n 1)
+    git tag --list | grep ^1\.3\.
+    git checkout refs/tags/$(git tag -l | grep -E '^1\.3\.[0-9]+$' | tail -n 1)
 
 Baue die MinGW-w64 toolchain mit dem mitgelieferten Script und ersetze `username` durch deinen Benutzernamen. Du kannst natürlich einen anderen Ausgabepfad einstellen wenn du möchtest.
 
@@ -100,7 +100,7 @@ Die folgenden Tools werden benötigt um die [GUI](abbr:Graphical User Interface 
   - Sehr empfohlen für Entwickler die an der Arbeit der Windows UI interessiert sind
   - Aktive, reguläre Kontributoren können eine gratis ReSharper Lizenz für quelloffene Projekte beim HandBrake Team anfragen, courtesy JetBrains
 
-Klone `https://github.com/HandBrake/HandBrake.git` mit deinem Git Client.
+Klone `https://github.com/HandBrake/HandBrake.git` mit deinem Git Client, und checke den Tag aktuellsten aus in der HandBrake 1.3.x Release Serie.
 
 Der Quellcode für die GUI befindet sich im `win\CS` Ordner und der Name der Projektdatei ist `HandBrake.sln`. Stelle sicher, dass HandBrakeWPF als Startup Projekt im Solution Explorer eingestellt ist, indem du einen Rechtsklick auf den Namen ausführst und "Set as startup projekt" auswählst.
 
