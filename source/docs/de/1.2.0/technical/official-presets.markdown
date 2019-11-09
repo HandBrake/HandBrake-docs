@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Offizielle Voreinstellungen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Ubuntu Abhängigkeiten installieren
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

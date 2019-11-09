@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Qualität einstellen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

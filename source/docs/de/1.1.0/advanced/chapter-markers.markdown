@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           [ draft ]
+State:           [ obsolete ]
 Title:           Kapitelmarkierungen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

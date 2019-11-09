@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Die Warteschlange
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

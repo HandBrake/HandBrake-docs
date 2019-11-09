@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Kommandozeilen Optionen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Arch Abhängigkeiten Installieren
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

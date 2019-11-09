@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Wo bekomme ich HandBrake her
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

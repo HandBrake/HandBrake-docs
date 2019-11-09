@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Abhängigkeiten für Fedora installieren
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

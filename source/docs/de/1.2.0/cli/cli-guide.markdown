@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           CLI Guide
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

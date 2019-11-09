@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Öffnen einer Video Quelle
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

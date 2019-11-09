@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           [ draft ]
+State:           [ obsolete ]
 Title:           Benutzerdefinierte Voreinstellungen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
