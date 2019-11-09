@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Table of contents
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
@@ -52,13 +53,13 @@ Table of contents
 
 - [Using the queue](advanced/queue.html)
   *Set up multiple encode jobs at once*
-- [Point-to-point encoding](advanced/point-to-point.html)<span class="notice draft"><span>draft</span></span>
-- [Custom presets](advanced/custom-presets.html)<span class="notice draft"><span>draft</span></span>
-- [Audio and subtitle defaults](advanced/audio-subtitle-defaults.html)<span class="notice draft"><span>draft</span></span>
-- [Resizing video](advanced/resizing-video.html)<span class="notice draft"><span>draft</span></span>
-- [Preserving surround sound](advanced/surround-sound.html)<span class="notice draft"><span>draft</span></span>
-- [Adding subtitles](advanced/subtitles.html)<span class="notice draft"><span>draft</span></span>
-- [Adding chapter markers](advanced/chapter-markers.html)<span class="notice draft"><span>draft</span></span>
+- [Point-to-point encoding](advanced/point-to-point.html)
+- [Custom presets](advanced/custom-presets.html)
+- [Audio and subtitle defaults](advanced/audio-subtitle-defaults.html)
+- [Resizing video](advanced/resizing-video.html)
+- [Preserving surround sound](advanced/surround-sound.html)
+- [Adding subtitles](advanced/subtitles.html)
+- [Adding chapter markers](advanced/chapter-markers.html)
 
 <!-- - [Managing Audio Tracks](advanced/managing-audio.html) -->
 <!-- - [Post-processing metadata](advanced/post-processing.html) -->
@@ -85,14 +86,14 @@ Table of contents
 
 <!-- ## Advanced workflows part 2
 
-- [Understanding source types](advanced/video-sources.html)<span class="notice draft"><span>draft</span></span>
-- [Selecting a container format and encoders](advanced/containers.html)<span class="notice draft"><span>draft</span></span>
-- [Selecting a video angle](advanced/video-angles.html)<span class="notice draft"><span>draft</span></span>
-- [Working with frame rates](advanced/frame-rates.html)<span class="notice draft"><span>draft</span></span>
-- [Adjusting audio quality](advanced/audio-quality.html)<span class="notice draft"><span>draft</span></span>
-- [Progressive download support](advanced/web-optimised.html)<span class="notice draft"><span>draft</span></span>
-- [Compatibility with legacy devices](advanced/old-ipod-support.html)<span class="notice draft"><span>draft</span></span>
-- [Automatically naming files](advanced/automatic-file-naming.html)<span class="notice draft"><span>draft</span></span>
+- [Understanding source types](advanced/video-sources.html)
+- [Selecting a container format and encoders](advanced/containers.html)
+- [Selecting a video angle](advanced/video-angles.html)
+- [Working with frame rates](advanced/frame-rates.html)
+- [Adjusting audio quality](advanced/audio-quality.html)
+- [Progressive download support](advanced/web-optimised.html)
+- [Compatibility with legacy devices](advanced/old-ipod-support.html)
+- [Automatically naming files](advanced/automatic-file-naming.html)
 -->
 
 ## Getting help
@@ -107,7 +108,7 @@ Table of contents
 
 ## More information
 
-- [Project history](about/history.html)<span class="notice draft"><span>draft</span></span>
+- [Project history](about/history.html)
 - [Contributing](contributing/contribute.html)
   *How you can get involved*
 
@@ -115,7 +116,7 @@ Table of contents
 ## CLI documentation
 
 - [Command line reference](cli/command-line-reference.html)
-- [CLI options list](cli/cli-options.html)<span class="notice draft"><span>draft</span></span>
+- [CLI options list](cli/cli-options.html)
 
 
 ## Technical documentation
@@ -127,27 +128,27 @@ Table of contents
 - [Official presets](technical/official-presets.html)
   *Technical summary of the official presets*
 - Video
-  - [Video encoders](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
-  - [Video encoding speed](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
-  - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
-  - [x264 presets and tunes](technical/video-x264-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
-  - [x264 profile and level](technical/video-x264-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
-  - [Video angles](technical/video-angles.html)<span class="notice draft"><span>draft</span></span>
-  - [Anamorphic video](technical/anamorphic-guide.html)<span class="notice draft"><span>draft</span></span>
-  - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
-  - [Frame rate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
-  - [Intel QuickSync Video (QSV) options](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
-  - [AMD VCE](technical/video-vce.html)<span class="notice draft"><span>draft</span></span>
-  - [NVidia NVENC](technical/video-nvenc.html)<span class="notice draft"><span>draft</span></span>
+  - [Video encoders](technical/video-codecs.html)
+  - [Video encoding speed](technical/video-encoding-performance.html)
+  - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html)
+  - [x264 presets and tunes](technical/video-x264-presets-tunes.html)
+  - [x264 profile and level](technical/video-x264-profiles-levels.html)
+  - [Video angles](technical/video-angles.html)
+  - [Anamorphic video](technical/anamorphic-guide.html)
+  - [Modulus](technical/modulus.html)
+  - [Frame rate](technical/frame-rates.html)
+  - [Intel QuickSync Video (QSV) options](technical/video-qsv-options.html)
+  - [AMD VCE](technical/video-vce.html)
+  - [NVidia NVENC](technical/video-nvenc.html)
 - Audio
-  - [Dynamic range compression](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
-  - [Audio quality](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>
+  - [Dynamic range compression](technical/dynamic-range-compression.html)
+  - [Audio quality](technical/audio-quality.html)
 - Files and compatibility
-  - [Container formats](technical/containers.html)<span class="notice draft"><span>draft</span></span>
-  - [iPod 5th Generation support](technical/old-ipod-support.html)<span class="notice draft"><span>draft</span></span>
-  - [Automatic file naming](technical/automatic-file-naming.html)<span class="notice draft"><span>draft</span></span>
+  - [Container formats](technical/containers.html)
+  - [iPod 5th Generation support](technical/old-ipod-support.html)
+  - [Automatic file naming](technical/automatic-file-naming.html)
 - Filters
-  - [Filters summary](technical/filters-summary.html)<span class="notice draft"><span>draft</span></span>
+  - [Filters summary](technical/filters-summary.html)
 
 <!--
 - [Web optimized](technical/web-optimised.html)
@@ -166,5 +167,5 @@ Table of contents
   - [Building HandBrake for Mac](developer/build-mac.html)
   - [Building HandBrake for Windows](developer/build-windows.html)
 - Packaging HandBrake
-  - [Flatpak apps for Linux](developer/flatpak-repo.html)<span class="notice draft"><span>draft</span></span>
+  - [Flatpak apps for Linux](developer/flatpak-repo.html)
     *Fully-contained applications compatible with multiple Linux distributions*

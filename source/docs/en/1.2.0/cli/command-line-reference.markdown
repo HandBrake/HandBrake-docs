@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Command line reference
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
