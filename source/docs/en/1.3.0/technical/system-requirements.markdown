@@ -128,8 +128,8 @@ For other distributions, compile from source using the [Linux instructions](../d
 |--------------------|---------------------|-------------------------|------------------------------------|
 | 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
 | 10.14 Mojave       | Supported           |                         | Requires HandBrake 1.1.2 or later. |
-| 10.13 High Sierra  | Supported           |                         |                                    |
-| 10.12 Sierra       | Supported           |                         |                                    |
+| 10.13 High Sierra  | Deprecated in 1.3.0 |                         |                                    |
+| 10.12 Sierra       | Deprecated in 1.3.0 |                         |                                    |
 | 10.11 El Capitan   | Deprecated in 1.2.0 |                         |                                    |
 | 10.10 Yosemite     | Unsupported         | HandBrake 1.1.2         |                                    |
 | 10.9 Mavericks     | Unsupported         | HandBrake 1.1.2         |                                    |
