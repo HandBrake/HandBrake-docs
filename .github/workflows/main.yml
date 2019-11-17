@@ -19,8 +19,17 @@ jobs:
     steps:
     - uses: actions/checkout@master
     
+    - name: Toolchain Cache
+      id: build-toolchain
+      uses: actions/cache@v1
+      with:
+        path: tools/local
+        key: build-toolchain
+        
     - name: Build Toolchain
+      if: steps.build-toolchain.outputs.cache-hit != 'true'
       run: |
+        git submodule update --init
         ./build-tools 
         ls -la
         
