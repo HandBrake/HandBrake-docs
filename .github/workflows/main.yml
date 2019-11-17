@@ -36,8 +36,6 @@ jobs:
     - name: Build
       run: |
         bash ./marsh build --markdown="tools/local/bin/markdown"
-        cd public
-        tar cvzf docs.tar.gz docs/
 
     - uses: actions/upload-artifact@master
       with:
