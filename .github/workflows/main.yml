@@ -1,0 +1,36 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  handle_forks:
+    name: Forked Repo
+    runs-on: ubuntu-latest
+    if: github.repository != 'HandBrake/HandBrake-docs'
+    steps:
+    - name: Print Warning
+      run: |
+        echo "Builds are disabled for forked repositories."      
+
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-latest
+    if: github.repository == 'HandBrake/HandBrake-docs'
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: Build Toolchain
+      run: |
+        ./build-tools 
+        ls -la
+        
+    - name: Build
+      run: |
+        bash ./marsh build --markdown="tools/local/bin/markdown"
+        cd public
+        tar cvzf docs.tar.gz docs/
+
+    - uses: actions/upload-artifact@master
+      with:
+         name: docs
+         path: public/
