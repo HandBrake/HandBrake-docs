@@ -156,9 +156,9 @@ The following tools are required to build and run the [GUI](abbr:Graphical User 
   - [Source Tree](https://www.sourcetreeapp.com) (recommended)
   - Client included with Visual Studio 2015 or later
 - `hb.dll` (see the LibHB build instructions preceding these, or download from [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php))
-- [JetBrains ReSharper](https://www.jetbrains.com/resharper/) (optional)
-  - Highly recommended for developers interested in working on the Windows UI
-  - Active, regular contributors may request a free for open source ReSharper license from the HandBrake Team, courtesy JetBrains
+- [JetBrains ReSharper](https://www.jetbrains.com/?from=HandBrake) (optional)
+  - Recommended for developers interested in working on the Windows UI
+  - Active, regular contributors may request a free for open source ReSharper license from the HandBrake Team, courtesy of JetBrains
 
 Clone `https://github.com/HandBrake/HandBrake.git` using your git client.
 
