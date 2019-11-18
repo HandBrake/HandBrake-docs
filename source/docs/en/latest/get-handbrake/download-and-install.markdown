@@ -167,7 +167,7 @@ You will find shortcuts for launching HandBrake placed on both the Windows Deskt
 
 ### Windows SmartScreen
 
-When installing on Windows 8 or 10 with Windows SmartScreen enabled, you may see a message indicating that the HandBrake installer is not recognized by Windows.
+When installing on Windows 8.1 or 10 with Windows SmartScreen enabled, you may see a message indicating that the HandBrake installer is not recognized by Windows.
 
 ![Windows SmartScreen](../../images/windows/smartscreen-1-1.0.0.png "Windows SmartScreen may present this message. Select More info to see more options.")
 
