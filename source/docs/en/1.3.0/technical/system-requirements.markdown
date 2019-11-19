@@ -101,7 +101,7 @@ The following describes the level of support available for the current HandBrake
 | Ubuntu Version     | Status              | Last Compatible Version |
 |--------------------|---------------------|-------------------------|
 | 19.04 LTS Xenial   | Supported           |                         |
-| 18.04 LTS Bionic   | Supported           |                         |
+| 18.04 LTS Bionic   | Unsupported         | Use Flatpak for 1.3.0   |
 | 16.04 LTS Xenial   | Unsupported         | HandBrake 1.1.2         |
 | 14.04 LTS Trusty   | Unsupported         | HandBrake 1.1.2         |
 
