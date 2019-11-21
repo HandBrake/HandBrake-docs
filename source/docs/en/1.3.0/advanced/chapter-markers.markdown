@@ -21,7 +21,7 @@ Chapter Markers
 
 HandBrake can copy chapter markers from your source to the MP4, MKV, or WebM output file.
 
-In HandBrake, if you click on the Chapters tab, you'll see a list of detected chapters. HandBrake will automatically generate chapter names in the following format:  "Chatper n" where n is the chapter number.
+In HandBrake, if you click on the Chapters tab, you'll see a list of detected chapters. HandBrake will automatically generate chapter names in the following format:  "Chapter n" where n is the chapter number.
 
 ![Chapters Tab](../../images/windows/chapters-1.0.0.png "Chapters Tab")
 
