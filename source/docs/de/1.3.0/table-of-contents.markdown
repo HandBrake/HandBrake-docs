@@ -123,23 +123,29 @@ Inhaltsverzeichnis
 - [Unterstützte Formate](technical/source-formats.html)
   *Arten von Videodateien die HandBrake lesen kann*
 - [Offizielle Voreinstellungen](technical/official-presets.html)
+- [Performance](technical/performance.html)
+  *Wie bestimmte Einstellungen die Performance beeinflussen*
   *Technische Zusammenfassung der offiziellen Voreinstellungen*
 - Video
-  - [Video Kodierer](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
-  - [Video Kodierer Performance](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
+  - [Video Codecs](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
   - [Konstante Qualität versus durchschnittliche Bitrate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
-  - [x264 Voreinstellungen und Anpassungen](technical/video-x264-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
-  - [x264 Profile und Level](technical/video-x264-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
+  - [Voreinstellungen und Anpassungen](technical/video-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
+  - [Profile und Level](technical/video-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
   - [Video Blickwinkel/Perspektiven](technical/video-angles.html)<span class="notice draft"><span>draft</span></span>
   - [Anamorphisches Video](technical/anamorphic-guide.html)<span class="notice draft"><span>draft</span></span>
   - [Modulus](technical/modulus.html)<span class="notice draft"><span>draft</span></span>
   - [Framerate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
+- Hardware Encoders
+  - [AMD VCE](technical/video-vce.html)
+  - [Apple VideoToolbox](technical/video-videotoolbox.html)
+  - [Intel QuickSync Video](technical/video-qsv.html)
+  - [NVidia NVENC](technical/video-nvenc.html)
+
+  - [Video Kodierer Performance](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
   - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
-  - [AMD VCE](technical/video-vce.html)<span class="notice draft"><span>draft</span></span>
-  - [NVidia NVENC](technical/video-nvenc.html)<span class="notice draft"><span>draft</span></span>
 - Audio
   - [Dynamikumfang Komprimierung (DRC)](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
-  - [Audio Qualität](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>
+  - [Audioqualität](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>
 - Dateien und Kompatibilität
   - [Container Formate](technical/containers.html)<span class="notice draft"><span>draft</span></span>
   - [iPod 5. Generation Unterstützung](technical/old-ipod-support.html)<span class="notice draft"><span>draft</span></span>
@@ -160,12 +166,12 @@ Inhaltsverzeichnis
   - [HandBrake für BSD bauen](developer/build-bsd.html)
     - Abhängigkeiten unter [FreeBSD](developer/install-dependencies-freebsd.html) installieren
   - [HandBrake für Linux bauen](developer/build-linux.html)
-    - Abhängigkeiten für [Arch Linux](developer/install-dependencies-arch.html) / [CentOS](developer/install-dependencies-centos.html) / [Debian](developer/install-dependencies-debian.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
+    - Abhängigkeiten für [Arch Linux](developer/install-dependencies-arch.html) / [CentOS](developer/install-dependencies-centos.html) / [Clear](developer/install-dependencies-clear.html) / [Debian](developer/install-dependencies-debian.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html)
  installieren
   - [HandBrake für Mac bauen](developer/build-mac.html)
   - [HandBrake für Windows bauen](developer/build-windows.html)
 - Packaging HandBrake
   - [Flatpak apps für Linux](developer/flatpak-repo.html)<span class="notice draft"><span>draft</span></span>
-    *Flatpak Applikationen kompatibel mit mehreren Linux distributionen*
+    *Flatpak Applikationen welche mit mehreren Linux distributionen kompatibel sind*
 
 <!-- TODO: link to contributing guide -->

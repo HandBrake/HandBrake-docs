@@ -106,7 +106,7 @@ Mit dieser Methode kannst du den vollen Frame der DVD beibehalten ohne ihn unter
 
 Wie erreichen wir so etwas?
 
-Video auf einem Computer wird in einer Container datei gespeichert. Das kann .mp4, .mkv, .avi, .ogm oder etwas anders sein. In diesem Container befinden sich Spuren (Tracks) oder Streams. Üblicherweise enthält ein Container eine Videospur und eine Audiospur.
+Video auf einem Computer wird in einer Containerdatei gespeichert. Das kann .mp4, .mkv, .avi, .ogm oder etwas anders sein. In diesem Container befinden sich Spuren (Tracks) oder Streams. Üblicherweise enthält ein Container eine Videospur und eine Audiospur.
 
 Die intelligente Art und Weise Anamorphic zu handhaben ist, die Informationen zur Darstellung in der Videospur zu speichern. Und genau das macht HandBrake:
 

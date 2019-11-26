@@ -22,14 +22,14 @@ Untertitel
 Es gibt verschiedene Arten von Untertitel:
 
 - Bitmaps (Bilder), z.B.: DVD VOBSUBs, Bluray PGS
-- Text mit Markup, z.B.: Closed Captions und SRT Dateien.
+- Text mit Markup, z.B.: Closed Captions und SRT Dateien
 - Styled SSA, z.B.: viele Anime Untertitel in MKV Dateien
 
 HandBrake kann Untertitel aus den folgenden Quellen lesen:
 
-- Von DVD’s – Entweder eingebettete VOBSUB oder CC Spuren.
-- Von Bluray - PGS Untertitel.
-- Vom Benutzer bereitgestellte SRT Dateien.
+- Von DVD’s – Entweder eingebettete VOBSUB oder CC Spuren
+- Von Bluray - PGS Untertitel
+- Vom Benutzer bereitgestellte SRT Dateien
 - Eingebettete SSA/SRT/CC innerhalb von Dateien (wie zum Beispiel mkv oder mp4)
 
 ## Unterstütze Ausgabeformate
@@ -39,13 +39,15 @@ HandBrake hat zwei Ausgabemethoden für Untertitelspuren:
 - Hard Burn: Dies bedeuted, dass die Untertitel permanent in das Video *eingebrannt* werden. Sie können nicht an- oder ausgeschalten werden wie bei einer DVD.
 - Soft Subtitles: Dies bedeuted, dass die Untertitel als separat auswählbare Spuren in deiner Ausgabedatei auftauchen. Mit einer Abspielsoftware die es unterstützt, kannst du diese Untertitel an- oder abschalten wie du willst.
 
+Soft Subtitles werden derzeit nicht für den WebM Container unterstützt.
+
 Die folgenden Untertiteltypen werden wie folgt unterstützt:
 
 - Bluray PGS Untertitel
   - Mit MP4 kannst du NUR 1 Untertitelspur in das Video einbrennen.
   - Du kannst keine PGS Titel für das MP4 Format durchleiten da das Dateiformat es nicht unterstützt.
   - Mit MKV kannst du mehrere PGS Untertitelspuren durchleiten. Diese werden nicht in das Video eingebrennt außer du möchtest es. In diesem Fall kann jedoch nur 1 Untertitelspur eingebrannt werden. Der Rest muss durchgeleitet werden.
- 
+
 - DVD Bitmap Unteritel (VOBSUB)
   - Mit MP4 kannst du NUR 1 Untertitel in das Video einbrennen.
   - Mit MKV kannst du mehrere VOBSUB Unteritelspuren durchleiten. Diese werden nicht in das Video eingebrennt außer du möchtest es. In diesem Fall kann jedoch nur 1 Untertitelspur eingebrannt werden. Der Rest muss durchgeleitet werden.
@@ -72,7 +74,7 @@ Die folgenden Untertiteltypen werden wie folgt unterstützt:
 Bei manchen DVD Quellen gibt es eine Untertitelspur welche nur bei fremdsprachigen Sektionen im Video angezeigt wird. Bei manchen Titeln ist dies eine einzige Untertitelspur in derselben Sprache wie die Hauptaudiospur. Bei anderen wird es als standard Untertitelspur in derselben Sprache wie die Hauptaudiospur angezeigt und markiert nur einen Teil der Untertitelspur als forced.
 
 Um diese Untertitel auszuwählen, kann HandBrake die Quelle nach Untertitel scannen welche nur 10% (oder weniger) der Zeit gezeigt werden und zusätzlich nach der Präsenz einer Forced Untertitelspur suchen.
- 
-Um diese Funktionalität in der grafischen Benutzeroberfläche von HandBrake zu aktivieren, selektiere im "Untertitel" Tab die "Suche nach fremdsprachigem Audio" Option aus dem "Spur" Menü und klicke auf die "Forced" Checkbox.
 
-Falls du keine Fremdsprachige Sektion sondern nur reguläre Untertitel in deiner Ausgabedatei erhälst, musst du möglicherweise den Untertitel im "Spur" Menü manuell finden und hinzufügen.
+Um diese Funktionalität in der grafischen Benutzeroberfläche von HandBrake zu aktivieren, selektiere im "Untertitel" Tab die "Suche nach fremdsprachigem Audio" Option aus dem "Spuren Liste" Menü und klicke auf die "Nur Forced Untertitel" Checkbox.
+
+Falls du keine Fremdsprachige Sektion sondern nur reguläre Untertitel in deiner Ausgabedatei erhälst, musst du möglicherweise den Untertitel im "Spuren Liste" Menü manuell finden und hinzufügen.

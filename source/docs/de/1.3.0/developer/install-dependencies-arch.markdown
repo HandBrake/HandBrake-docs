@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Arch
 ===============================
 
-Die folgenden Instruktionen sind für [Arch](https://www.archlinux.org) 2018.05.01 (nur HandBrake [CLI](abbr:Command Line Interface - Kommandozeile)).
+Die folgenden Instruktionen gelten für [Arch](https://www.archlinux.org) 2019.09.01.
 
 Grundvorraussetzungen um Kommandos abzusetzen:
 
@@ -42,17 +42,43 @@ Abhängigkeiten:
 - libvorbis
 - libvpx
 - libxml2
+- meson
 - nasm
+- ninja
+- numactl
 - opus
 - python2
 - speex
 - x264
 - x265
 - xz
-- yasm
+
+Abhängigkeiten für die grafische Oberfläche:
+
+- dbus-glib
+- gstreamer
+- gst-libav
+- gst-plugins-base
+- intltool
+- libgudev
+- libnotify
+- webkit2gtk
+
+Intel Quick Sync Video Abhängigkeiten:
+
+- libva
+- libdrm
 
 Installiere Abhängigkeiten:
 
-	sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 nasm opus python2 speex x264 x265 xz yasm
+    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 x265 xz
+
+Um die grafische Benutzeroberfläche zu bauen, installiere zusätzlich die Abhängigkeiten. Hierfür ist der GNOME Desktop mit den zugehörigen Paketen Voraussetzung; z.B.: installiert mit `pacman -S xorg xorg-server && pacman -S gnome gnome-extra`:
+
+    sudo pacman -S dbus-glib gstreamer gst-libav gst-plugins-base intltool libgudev libnotify webkit2gtk
+
+Für die Intel Quick Video Sync Unterstützung, installiere die QSV Abhängigkeiten:
+
+    sudo pacman -S libva libdrm
 
 Arch ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weitere Instruktionen.

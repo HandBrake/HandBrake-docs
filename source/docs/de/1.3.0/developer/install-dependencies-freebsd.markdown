@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Abhängigkeiten für FreeBSD installieren
 ==================================
 
-Die folgenden Anweisungen sind für [FreeBSD](https://www.freebsd.org) 11.1 x86_64.
+Die folgenden Anweisungen gelten für [FreeBSD](https://www.freebsd.org) 11 und 12.
 
 Grundvoraussetzungen um Kommandos zu starten:
 
@@ -49,15 +49,17 @@ Abhängigkeiten:
 - libtheora
 - libtool
 - libvorbis
+- libvpx
 - libx264
 - libxml2
 - lzma
+- meson
 - nasm
+- ninja
 - opus
 - pkgconf
 - python
 - speex
-- yasm
 
 Abhängigkeiten für die Grafische Benutzeroberfläche:
 
@@ -80,7 +82,7 @@ Abhängigkeiten für die Grafische Benutzeroberfläche:
 
 Abhängigkeiten installieren:
 
-	sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libx264 libxml2 nasm opus pkgconf python speex yasm
+    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gcc lzma m4 gmake patch gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 meson nasm ninja opus pkgconf python speex
  
 Baue und installiere den `lame` Source Port.
 
@@ -89,7 +91,7 @@ Baue und installiere den `lame` Source Port.
     sudo portsnap update
     LASTDIR="`pwd`"
     cd /usr/ports/audio/lame
-    sudo make install
+    sudo make install || sudo make reinstall
     cd "LASTDIR"
 
 Um die GTK [GUI](abbr:Graphical User Interface - Grafische Benutzeroberfläche) zu bauen, installiere folgende Abhängigkeiten.

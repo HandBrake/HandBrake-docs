@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Abhängigkeiten für Fedora installieren
 =================================
 
-Die folgenden Anweisungen sind für [Fedora](https://getfedora.org) 26 Workstation und neuer.
+Die folgenden Anweisungen gelten für [Fedora](https://getfedora.org) 28 bis 30.
 
 Grundvoraussetzung um Kommandos zu starten:
 
@@ -25,7 +25,7 @@ Grundvoraussetzung um Kommandos zu starten:
 Dependencies:
 
 - Development Tools
-- Development Libraries
+- C Development Tools and Libraries
 - bzip2-devel
 - cmake
 - fontconfig-devel
@@ -44,16 +44,19 @@ Dependencies:
 - libtool
 - libvorbis-devel
 - libxml2-devel
+- libvpx-devel
 - m4
 - make
+- meson
 - nasm
+- ninja-build
+- numactl-devel
 - opus-devel
 - patch
 - python
 - speex-devel
 - tar
 - xz-devel
-- yasm
 - zlib-devel
 
 Zusätzliche Abhängigkeiten die nicht im Base Repository verfügbar sind:
@@ -71,23 +74,31 @@ Abhängigkeiten für die Grafische Benutzeroberfläche:
 - intltool
 - libgudev1-devel
 - libnotify-devel
-- webkit2gtk3-devel (webkitgtk4-devel for Fedora 27, webkitgtk3-devel for Fedora 26)
+- webkit2gtk3-devel
+
+Intel Quick Sync Video Abhängigkeiten (optional):
+
+- libva-devel
+- libdrm-devel
 
 Abhängigkeiten installieren:
 
-    sudo yum update
-    sudo yum groupinstall "Development Tools" "Development Libraries"
-	sudo yum install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel m4 make nasm opus-devel patch python speex-devel tar xz-devel yasm zlib-devel
+    sudo dnf update
+    sudo dnf groupinstall "Development Tools" "C Development Tools and Libraries"
+    sudo dnf install bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja-build numactl-devel opus-devel patch python speex-devel tar xz-devel zlib-devel
  
 Installiere das freie [RPM Fusion](http://rpmfusion.org) Repository und zugehörige Abhängigkeiten.
 
-    sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(cat /etc/system-release | awk '{ print $3}').noarch.rpm
-    sudo yum install x264-devel
+    sudo dnf localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(cat /etc/system-release | awk '{ print $3}').noarch.rpm
+    sudo dnf install x264-devel
 
 Um die GTK [GUI](abbr:Graphical User Interface) zu bauen, installiere folgende Abhängigkeiten.
 
-    sudo yum groupinstall "X Software Development" "GNOME Software Development"
-    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel
-    sudo yum install webkit2gtk3-devel || sudo yum install webkitgtk4-devel || sudo yum install webkitgtk3-devel
+    sudo dnf groupinstall "X Software Development" "GNOME Software Development"
+    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkit2gtk3-devel
+
+Für Intel Quick Sync Video Unterstützung, installiere die QSV Abhängigkeiten.
+
+    sudo dnf install libva-devel libdrm-devel
 
 Fedora ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weitere Anweisungen.

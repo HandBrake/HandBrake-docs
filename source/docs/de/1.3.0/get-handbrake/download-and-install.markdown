@@ -128,6 +128,22 @@ Sobald du HandBrake für Mac heruntergeladen hast, öffne das Disk Image in dein
 
 HandBrake ist jetzt installiert. Du kannst nun das Disk Image auswerfen und in den Papierkorb verschieben.
 
+### Mac Gatekeeper
+
+Wenn du das erste Mal HandBrake startest, könnte es sein, dass dir dein Mac folgende Nachricht anzeigt[^gatekeeper-disabled]:
+
+![Mac Gatekeeper Nachricht](../../../en/images/mac/gatekeeper-message-1.1.0.png "Gatekeeper könnte dir diese Nachricht beim ersten Start von HandBrake anzeigen.")
+
+Diese Nachricht bedeutet nicht, dass etwas schief gelaufen ist; es heißt nur, dass HandBrake nicht Teil von Apple's kostenpflichtigen Programm zur Validierung von Mac Programmen ist. Wähle `OK` um fortzufahren.
+
+Halte `Strg` gedrückt und wähle das HandBrake Icon aus um das Kontextmenü zu öffnen. Wähle `Öffnen` und dein Mac wird dich fragen, ob du sicher bist, dass du HandBrake öffnen möchtest. Bestätige, dass du HandBrake vertrauen möchtest indem du erneut `Öffnen` auswählst.[^gatekeeper-instructions]
+
+![HandBrake mit dem Kontextmenü öffnen](../../../en/images/mac/shortcut-menu-open-1.1.0.png "Die Gatekeeper Nachricht wird umgangen wenn HandBrake über das Kontextmenü gestartet wird.")
+
+![Gatekeeper Nachricht mit Öffnen Option](../../../en/images/mac/gatekeeper-message-quarantine-1.1.0.png "Gatekeeper könnte auch folgende Nachricht beim ersten Start von HandBrake anzeigen. Ein Klick auf Öffnen weist Gatekeeper an, HandBrake zu vertrauen.")
+
+HandBrake ist nun bereit für die Verwendung. Du solltest diesen Prozess nicht wiederholen müssen.
+
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
@@ -187,3 +203,7 @@ Fahre fort zu [Updates suchen](check-for-updates.html).
 [^third-party-utilities-1]: HandBrake steht nicht in Verbindung mit irgendwelchen Prüfsummen Programmen von Drittanbietern. Verwende nur Software von Anbietern, denen zu vertraust.
 
 [^third-party-utilities-2]: HandBrake steht nicht in Verbindung mit irgendwelchen Prüfsummen Programmen von Drittanbietern. Verwende nur Software von Anbietern, denen zu vertraust.
+
+[^gatekeeper-disabled]: Falls Gatekeeper auf deinem Mac deaktiviert ist, wird dir diese Nachricht eventuell nicht angezeigt.
+
+[^gatekeeper-instructions]: Diese Anweisungen sind direkt von Apple's Gatekeeper Support Documents übernommen. Du kannst [hier](https://support.apple.com/de-de/HT202491) mehr darüber lernen.

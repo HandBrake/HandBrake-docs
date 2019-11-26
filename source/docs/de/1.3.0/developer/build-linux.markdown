@@ -24,12 +24,13 @@ Anweisungen zum Installieren von Abhängigkeiten sind für die folgenden Distrib
 
 - [Arch](install-dependencies-arch.html)
 - [CentOS](install-dependencies-centos.html)
+- [Clear](install-dependencies-clear.html)
 - [Debian](install-dependencies-debian.html)
 - [Fedora](install-dependencies-fedora.html)
 - [Gentoo](install-dependencies-gentoo.html)
 - [Ubuntu](install-dependencies-ubuntu.html)
 
-HandBrake bietet experimentelle Unterstützung für Intel Quick Sync Video unter Linux. Dafür wird das [Intel Media SDK](https://github.com/Intel-Media-SDK/MediaSDK/releases) benötigt.
+HandBrake bietet optionale experimentelle Unterstützung für Intel Quick Sync Video unter Linux. Dafür wird das  inklusive Abhängigkeiten benötigt. Mehr Informationen gibt es bei [Intel Media SDK Releases](https://github.com/Intel-Media-SDK/MediaSDK/releases) und [Intel Media SDK Build Instructions](ihttps://github.com/Intel-Media-SDK/MediaSDK#how-to-build)(in English).
 
 ## HandBrake bauen
 
@@ -42,7 +43,7 @@ Liste verfügbare Tags in der HandBrake 1.3.x Release Serie und checke den aktue
     git tag --list | grep ^1\.3\.
     git checkout refs/tags/$(git tag -l | grep -E '^1\.3\.[0-9]+$' | tail -n 1)
 
-Baue HandBrake. Um die experimentelle Unterstützung für Intel QSV via dem [Intel Media SDK](https://github.com/Intel-Media-SDK/MediaSDK/releases) zu aktivieren, füge dem Aufruf `--enable-qsv` hinzu. Um nur das Komanndozeileninterface zu bauen, deaktivere die grafische Oberfläche, indem du die Option `--disable-gtk` anhängst.
+Baue HandBrake. Um die experimentelle Unterstützung für Intel Quick Sync Video zu aktivieren, füge dem Aufruf `--enable-qsv` hinzu. Um nur das Komanndozeileninterface zu bauen, deaktivere die grafische Oberfläche, indem du die Option `--disable-gtk` anhängst.
 
     ./configure --launch-jobs=$(nproc) --launch
 

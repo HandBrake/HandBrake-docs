@@ -15,21 +15,21 @@ License_URL:     https://handbrake.fr/docs/license.html
 ---
 
 Kapitelmarkierungen
-=============================
+===============
 
 ## Kapitel
 
-HandBrake kann Kapitelmarkierungen von deiner Quelle in die MP4 oder MKV Ausgabedatei kopieren.
+HandBrake kann Kapitelmarkierungen von deiner Quelle in die MP4, MKV oder WebM Ausgabedatei kopieren.
 
-In HandBrake kannst du auf den den 'Kapitel' Tab klicken um eine Liste der erkannten Kapitel zu sehen. HandBrake generiert automatisch Kapitelnamen in dem folgenden Format: "Chapter n". Dabei ist n die Kapitelnummer.
+In HandBrake kannst du auf den Kapitel Tab klicken um eine Liste der erkannten Kapitel zu sehen. HandBrake generiert automatisch Kapitelnamen in dem folgenden Format: "Chapter n". Dabei ist n die Kapitelnummer.
 
 ![Kapitel Tab](../../../en/images/windows/chapters-1.0.0.png "Kapitel Tab")
 
 ## Kapitel umbenennen
 
-Wenn du möchtest kannst du die Kapitel umbenennen in dem du die Namen im Kapitel Tab änderst.
+Wenn du möchtest, kannst du die Kapitel umbenennen in dem du einfach die Namen im Kapitel Tab änderst.
 
-Du kannst zudem einen Satz an Kapiteln importieren oder exportieren. HandBrake unterstützt den Import von CSV (Comma separated Values) Dateien.
+Du kannst zudem einen Satz an Kapiteln importieren oder exportieren. HandBrake unterstützt den Import von CSV (Command separated Values) Dateien.
 
 Klicke den Import Knopf um eine CSV Datei auszuwählen. Die Datei muss in dem folgenden Format sein:
 
@@ -45,4 +45,4 @@ Abschließend kannst du die aktuelle Kapitellist in eine CSV Datei exportieren i
 
 ## Quellen ohne Kapitel
 
-Leider kann HandBrake aktuell keine Kapitelmarkierungen hinzufügen, falls sie nicht in der Quelle existierten.
+Leider kann HandBrake aktuell keine Kapitelmarkierungen hinzufügen, falls sie nicht bereits in der Quelle existieren.

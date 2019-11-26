@@ -20,17 +20,17 @@ License_URL:     https://handbrake.fr/docs/license.html
 
 HandBrake ist ein quelloffener Video Transkodierer verfügbar für Linux, Mac und Windows. Jeder kann HandBrake *gratis* nutzen um Videos zu erstellen.
 
-HandBrake ist ein post-production Werkzeug. Sein Haupteinsatzzweck besteht in der Konvertierung von Videos in [unterstützen Formaten](../technical/source-formats.html)  nach MP4 oder MKV. Falls du Änderungen an deiner Quelldatei vornehmen möchtest, verwende bitte eine entsprechende [Videobearbeitungssoftware](https://de.wikipedia.org/wiki/Videoschnittsoftware).
+HandBrake ist ein post-production Werkzeug. Sein Haupteinsatzzweck besteht in der Konvertierung von Videos in [unterstützen Formaten](../technical/source-formats.html) nach MP4, MKV oder WebM. Falls du Änderungen an deiner Quelldatei vornehmen möchtest, verwende bitte eine entsprechende [Videobearbeitungssoftware](https://de.wikipedia.org/wiki/Videoschnittsoftware).
 
 ## Was HandBrake kann
 
 HandBrake nimmt Videos die du bereits hast und erstellt neue, welche auf deinem Handy, Tablet, Fernseher, Spielekonsole, Computer oder Browser laufen - nahezu alles was moderne Videoformate unterstützt.
 
-HandBrake funktioniert mit den meisten üblichen Videodateien und Formaten, inklusive jener die von Konsumenten und professionellen Videokameras, Mobilgeräten wie Handy und Tablet, Spiel- und Bildschirmaufnahmen, und DVD und Blu-ray Disks erstellt werden. HandBrake nutzt dabei Werkzeuge wie FFmpeg, x264 und x265, um neue MP4 und MKV Videodatein von diesen Quelldateien zu erstellen.
+HandBrake funktioniert mit den meisten üblichen Videodateien und Formaten, inklusive jener die von Konsumenten und professionellen Videokameras, Mobilgeräten wie Handy und Tablet, Spiel- und Bildschirmaufnahmen, und DVD und Blu-ray Disks erstellt werden. HandBrake nutzt dabei Werkzeuge wie FFmpeg, x264 und x265, um neue MP4, MKV oder WebM Videodatein von diesen Quelldateien zu erstellen.
 
 HandBrake **kann**:
 
-- Nahezu jedes Video in ein MP4 oder MKV Format konvertieren
+- Nahezu jedes Video in ein MP4, MKV oder WebM Format konvertieren
 - Größe und Zuschnitt von Videos verändern
 - Videos die alt sind oder niedrige Qualität haben wiederherstellen
 - Artifakte die durch Interlacing und Telecine entstehen entfernen

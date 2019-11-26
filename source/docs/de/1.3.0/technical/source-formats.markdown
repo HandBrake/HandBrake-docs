@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Quellformate
+Title:           Unterstützte Quellformate
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
@@ -13,28 +13,32 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Quellformate
+Unterstützte Quellformate
 ==============
 Eine von HandBrake's Stärken ist seine Fähigkeit eine große Anzahl verschiedener Videoformate einlesen zu können. HandBrake verwendet [FFmpeg](https://ffmpeg.org/) und kann somit alles öffnen was FFmpeg öffnet und zusätzlich disk basierte Formate wie DVD und Blu-Ray.
 
 **Beachte:** HandBrake bricht oder umgeht keinen [Kopierschutz](https://de.wikipedia.org/wiki/Kopierschutz) irgendeiner Art. Es funktioniert nicht mit Videodateien die [Digitale Rechteverwaltung](https://de.wikipedia.org/wiki/Digitale_Rechteverwaltung) (kurz: DRM) verwenden. Siehe [Über HandBrake](../about.html) für mehr Informationen über was HandBrake *kann* und was es *nicht kann*.
 
 ## Videos die von Handys, Tablets und vielen Videokameras und Spiegelreflexkameras erstellt wurden
+
 Üblicherweise wird jedes Video eine einzige Datei sein die du auf deinen Computer kopieren kannst und mit HandBrake öffnen kannst. Typischerweise sind es Dateiformate wie MP4 (oder M4V), MOV, MPG (oder MPEG) und AVI.
 
 Manche Kameras speichern mehrere Videos in einer Ordnerstruktur mit einer Playlist die ähnlich der von Blu-Ray Disks ist. Genauer sind dies Kameras die in AVCHD oder AVCHD Lite aufnehmen. HandBrake ist normalerweise in der Lage einzelen Videodateien aus dem Stream Ordner in dem BDMV Ordner zu öffnen. In manchen Fällen ist das jedoch nicht verlässlich, zum Beispiel wenn ein einzelner Videostream über mehrere Dateien aufgeteilt ist.
 
 ## Bildschirm und Spielaufnahmen, Web Videos, Videobearbeitungsprojekte und andere Computerbezogene Quellen
-Manche Bildschirmaufnahmesoftware kann direkt in einem Format aufnehmen oder in eines exportieren das HandBrake öffnen kann. Übliche Video Dateiformate sind MP4 (oder M4V), MKV, MPG (oder MPEG), AVI und WMV.
+
+Manche Bildschirmaufnahmesoftware kann direkt in einem Format aufnehmen oder in eines exportieren das HandBrake öffnen kann. Übliche Video Dateiformate sind MP4 oder M4V, MKV, MOV, MPG oder MPEG, AVI und WMV.
 
 HandBrake kann Web Videos in FLV, WEBM, MP4 und vielen anderen Formaten öffnen.
 
-Videos welche mit Videobearbeitungssoftware wie zum Beispiel [iMovie](https://www.apple.com/mac/imovie/) erstellt wurde, müssen zuerst in ein geläufiges Format exportiert werden um mit HandBrake kompatibel zu sein.
+Videos, welche mit Videobearbeitungssoftware wie zum Beispiel [iMovie](https://www.apple.com/mac/imovie/) und [Shotcut](https://www.shotcut.org/) erstellt wurden, müssen zuerst in ein geläufiges Format exportiert werden, um mit HandBrake kompatibel zu sein.
 
 ## Professionelle Videoproduktionsformate
-HandBrake kann eine Reihe von Produktionsformaten öffnen, die von professionellen Videokameras und [NLE](abbr:Non-linear editing system)s erstellt werden, inklusive [ProRes](https://en.wikipedia.org/wiki/Apple_ProRes) und [DNxHD](https://en.wikipedia.org/wiki/DNxHD_codec).
+
+HandBrake kann eine Reihe von Produktionsformaten öffnen, die von professionellen Videokameras und [NLE](abbr:Non-linear editing system)s erstellt werden, inklusive [MXF](https://de.wikipedia.org/wiki/Material_Exchange_Format), [MPEG-TS](https://de.wikipedia.org/wiki/MPEG-Transportstrom) und [QuickTime](https://de.wikipedia.org/wiki/QuickTime). Des weiteren unterstützt HandBrake gängige Videocodecs wie [CineForm](https://en.wikipedia.org/wiki/CineForm), [DNxHD](https://de.wikipedia.org/wiki/DNxHD), [DNxHR](https://en.wikipedia.org/wiki/DNxHR_codec), [ProRes](https://de.wikipedia.org/wiki/ProRes), [XAVC](https://de.wikipedia.org/wiki/XAVC), und [XDCAM](https://de.wikipedia.org/wiki/XDCAM).
 
 ## DVD, Blu-ray, AVCHD/AVCHD Lite[^avchd-partial-support], und HD-DVD[^hddvd-partial-support] Disks oder Disk Backups
+
 HandBrake kann DVD und Blu-Ray Disks direkt öffnen. Meistens ist es jedoch besser die Inhalte der Disks zuerst auf die Festplatte deines Computers zu übertragen[^uncopyable]. Übliche Ordner sind VIDEO_TS und BDMV. Übliche Videoformate VOB, EVO und MTS oder M2TS.
 
 Bestimmte Drittanbieter Werkzeuge für die Kopie von Disks so wie MakeMKV erzeugen üblicherweise... kannst du es erraten?... MKV Videodateien. Andere Werkzeuge erstellen ISO (manchmal als CDR bezeichnet) images von DVD oder Blu-Ray Disks. HandBrake kann diese meistens direkt öffnen.

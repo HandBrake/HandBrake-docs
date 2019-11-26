@@ -1,47 +1,47 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           Nvidia NVEnc Encoder
+Title:           Nvidia Nvenc
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
 Language:        Deutsch
 Language_Code:   de
-Authors:         [ Scott (s55), Bernhard Rader ]
+Authors:         [ Scott (s55), Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Bernhard Rader ]
 Copyright:       2019 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Nvidia NVEnc Encoder
-==========================
+Nvidia Nvenc
+============
 
-Unterstützte Hardware und Konfigurationen
---------------
-- Nvidia GeForce 10 und 20 Series Grafikkarten werden unterstützt
-- Treiber "399.24" oder neuer muss installiert sein
-- Windows 7 SP1 und neuer (Linux *könnte* funktionieren aber nur via der Kommandozeile)
+## Unterstützte Hardware und Konfigurationen
+
+- Nvidia GeForce GTX Pascal (1050+) und RTX Turing (1650+, 2060+) series GPU oder besser
+- Nvidia Graphics Driver 418.81 oder neuer
+- Windows 10
+- Experimentelle Unterstützung für Linux ist via der Kommandozeile verfügbar
 
 Beachte bitte, dass trotz diesen Einschränkungen das Feature *möglicherweise* auf älteren Grafikkarten und Betriebssystemen funktioniert. Dies wird jedoch nicht offiziell unterstützt.
 
 
-Unterstützung aktivieren
---------------
-Unterstützung für den NVEnc Kodierer kann in den Einstellungen im Video Tab aktiviert werden. Falls dein System nicht unterstützt wird, ist diese Option ausgegraut.
+## Unterstützung aktivieren
+
+Unterstützung für den NVEnc Kodierer kann in den Einstellungen im Video Tab aktiviert werden. Falls dein System nicht unterstützt wird, ist diese Option deaktiviert.
 
 
-Performance
---------------
-Beachte, dass nur die Kodierung der gesamten Pipeline in der NVIDIA ASIC Hardware ausgeführt wird.
-Jeder Schritt davor oder danach in der Pipeline (inklusive dekodieren, filtern a/v sync, muxing etc.) passieren alle auf der CPU. Dadurch ist es normal, hohe oder 100%ige CPU Auslastung während Kodiervorgängen zu haben.
+## Performance
+
+Nur die Videokodierung wird von dem Hardwarekodierer ausgeführt. Alles vor und nach dem Videokodieren inklusive Decoding, Filter, Audio/Video Sync, Audiokodierung, Muxing, usw. wird von der CPU erledigt. Dadurch ist eine hohe CPU Auslastung (sogar 100%) normal.
 
 Es ist vor allem auf lower-end-hardware üblich, dass die CPU ein Bottleneck für den NVIDIA Kodierer darstellt. Um diesen Effekt zu minimieren, deaktiviere jeden Filter den du nicht benötigst.
 
 
-Verwendung der Fortgeschrittenen Optionen
---------------
-NVEnc hat ein limitiertes Set von Fortgeschrittenen Kodieroptionen welche verwendet werden können. Grundsätzlich ist es nicht empfohlen, diese Parameter zu ändern. Die Built-in Voreinstellungen bieten eine gute Auswahl von Optionen.
+## Fortgeschrittene Optionen
+
+Der Nividia Nvenc Hardwarekodierer hat ein limitiertes Set von Fortgeschrittenen Kodieroptionen welche verwendet werden können. Grundsätzlich ist es nicht empfohlen, diese Parameter zu ändern, da die Built-in Voreinstellungen eine gute Auswahl von Optionen bieten.
 
 Auf der Kommandozeile kannst du den --encopts Parameter wie folgt benutzen:
 
@@ -51,8 +51,8 @@ In der Grafischen Benutzeroberfläche kannst du die Optionen in der Optionen Tex
 
     option1=wert1:option2=wert2
 
-Optionstypen
---------------
+## Optionstypen
+
 Die folgenden Werttypen werden unterstützt (jede Option akzeptiert nur einen Typ):
 
 - integer
@@ -63,11 +63,10 @@ Die folgenden Werttypen werden unterstützt (jede Option akzeptiert nur einen Ty
   1 bedeutet an (oder aktiviert).
  
 - string
-  Übernimmt eine Einstellung als String (= Zeichenkette). Schaue in die Kommentare für Details.
+  Übernimmt eine Einstellung als String (= Zeichenkette). Schaue in die Kommentare der Optionen für mögliche Werte.
 
   
-Verfügbare Optionen
---------------
+## Liste von Optionen
 
 | Option           | Type        | H.264 | H.265 | Comment                                                                        |
 |------------------|-------------|------------------------------------------------------------------------------------------------|
@@ -81,6 +80,4 @@ Verfügbare Optionen
 | rc-lookahead     | int         |   X   |   X   | 0 bis 27                                                                       |
 | b_adapt          | boolean     |   X   |       | Setze dies auf 0, um Adaptive B-Frame Entscheidungen bei lookahead zu deaktivieren|
 | no-scenecut      | boolean     |   X   |   X   | 1 = Deaktivere Adaptives I-Frame-Einfügen bei Scene cuts wenn lookahead verwendet wird|
-
-
 

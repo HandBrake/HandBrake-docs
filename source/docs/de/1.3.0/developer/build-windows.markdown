@@ -18,17 +18,56 @@ HandBrake für Windows bauen
 
 ## Kommandozeileninterface und LibHB
 
-Um die HandBrake [CLI](abbr:Command Line Interface - Kommandozeile) und LibHB(`hb.dll`) für Windows zu bauen, benötigt man Linux und eine aktuelle [MinGW-w64](https://mingw-w64.org) toolchain. Empfohlen ist Ubuntu 18.04 LTS (Bionic Beaver); andere Distributionen könnten auch funktionieren. Auf jeden Fall empfehlen wir die MinGW-w64 toolchain mithilfe unserer Anweisungen und dem mitgeliefertem Script zu installieren, da die meisten als Paket angebotenen Versionen Probleme haben, die zu einem nicht funktionierenden Build führen können.
+Um die HandBrake [CLI](abbr:Command Line Interface - Kommandozeile) und LibHB(`hb.dll`) für Windows zu bauen, benötigt man Linux und eine aktuelle [MinGW-w64](https://mingw-w64.org) toolchain. Empfohlen ist Fedora 28 oder neuer und Ubuntu 18.04 LTS (Bionic Beaver) oder neuer; andere Distributionen könnten auch funktionieren. Auf jeden Fall empfehlen wir die MinGW-w64 toolchain mithilfe unserer Anweisungen und dem mitgeliefertem Script zu installieren, da die meisten als Paket angebotenen Versionen Probleme haben, die zu einem nicht funktionierenden Build führen können.
 
-Die folgenden Anweisungen sind für Ubuntu 18.04 LTS (Bionic Beaver).
+### Installationsanleitung für Fedora
+
+Folgende Anweisungen felten für [Fedora](https://getfedora.org) 28 bis 30.
+
+Grundlegende Voraussetzungen um Kommandos starten zu können:
+- sudo (for normal user accounts)
+
+Abhängigkeiten:
+- Development Tools
+- C Development Tools and Libraries
+- cmake
+- gcc-c++
+- git
+- libtool
+- m4
+- make
+- meson
+- nasm
+- ninja-build
+- patch
+- python
+- tar
+- zlib-devel
+
+Abhängigkeiten installieren:
+
+    sudo dnf update
+    sudo dnf groupinstall "Development Tools" "C Development Tools and Libraries"
+    sudo dnf install cmake gcc-c++ git libtool m4 make meson nasm ninja-build patch python tar zlib-devel
+
+Zusätzliche Abhängigkeiten die für das erstellen der MinGW-w64 toolchain benötigt werden:
+
+    sudo dnf install bison bzip2 curl flex g++ gzip pax
+
+### Installationsanleitung für Ubuntu
+
+Folgende Anweisungen felten für [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) bis 19.10 (Eoan Ermine).
+
+Grundlegende Voraussetzungen um Kommandos starten zu können:
+- sudo (for normal user accounts)
 
 Abhängigkeiten:
 
 - autoconf
 - automake
+- autopoint
 - build-essential
 - cmake
-- curl
 - gcc
 - git
 - libtool
@@ -36,17 +75,25 @@ Abhängigkeiten:
 - m4
 - make
 - nasm
+- ninja-build
 - patch
 - pkg-config
 - python
 - tar
-- yasm
 - zlib1g-dev
+
+Zusätzliche Abhängigkeiten für Ubuntu 18.10 und neuer:
+- meson
+
+Zusätzliche Abhängigkeiten für Ubuntu 18.04 LTS:
+- python3-pip
+- meson (via pip3)
 
 Zusätzliche MinGW-w64 toolchain Abhängigkeiten:
 
 - bison
 - bzip2
+- curl
 - flex
 - g++
 - gzip
@@ -55,11 +102,22 @@ Zusätzliche MinGW-w64 toolchain Abhängigkeiten:
 Abhängigkeiten installieren:
 
     sudo apt-get update
-	sudo apt-get install automake autoconf build-essential cmake curl gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar yasm zlib1g-dev
+	sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar zlib1g-dev
+
+Falls du Ubuntu 18.10 oder neuer verwendest, musst du folgendes installieren:
+
+    sudo apt-get install meson
+
+Solltest du Ubuntu 18.04 LTS verwenden, installiere folgendes:
+
+    sudo apt-get install python3-pip
+    sudo pip3 install meson
 
 Installiere zusätzliche Abhängigkeiten die für den Build der MinGW-w64 toolchain benötigt werden:
 
-    sudo apt-get install bison bzip2 flex g++ gzip pax
+    sudo apt-get install bison bzip2 curl flex g++ gzip pax
+
+### Bauen der MinGW-w64 toolchain und HandBrake
 
 Klone das HandBrake Repository:
 
@@ -78,7 +136,7 @@ Dieser Prozess wird ein paar Minuten in Anspruch nehmen und dir nach Abschluss A
 
 Baue HandBrake. Für Audio mit höherer Qualität, aktivere den FDK AAC Kodierer indem du `--enable-fdk-aac` anhängst. Builds die FDK AAC inkludieren dürfen nur für persönlichen Gebrauch genutzt werden und dürfen nicht weitergegeben werden.[^fdk-aac-license]
 
-    ./configure --cross=x86_64-w64-mingw32 --enable-qsv --enable-vce --enable-nvenc --launch-jobs=$(nproc) --launch
+    ./configure --cross=x86_64-w64-mingw32 --launch-jobs=$(nproc) --launch
 
 Wenn der Prozess abgeschlossen ist, findest du `HandBrakeCLI.exe` in deinem `build` Ordner und `hb.dll` in dem `build/libhb` Verzeichnis.
 
@@ -100,7 +158,7 @@ Die folgenden Tools werden benötigt um die [GUI](abbr:Graphical User Interface 
   - Sehr empfohlen für Entwickler die an der Arbeit der Windows UI interessiert sind
   - Aktive, reguläre Kontributoren können eine gratis ReSharper Lizenz für quelloffene Projekte beim HandBrake Team anfragen, courtesy JetBrains
 
-Klone `https://github.com/HandBrake/HandBrake.git` mit deinem Git Client, und checke den Tag aktuellsten aus in der HandBrake 1.3.x Release Serie.
+Klone `https://github.com/HandBrake/HandBrake.git` mit deinem Git Client, und checke den Tag aktuellsten in der HandBrake 1.3.x Release Serie aus.
 
 Der Quellcode für die GUI befindet sich im `win\CS` Ordner und der Name der Projektdatei ist `HandBrake.sln`. Stelle sicher, dass HandBrakeWPF als Startup Projekt im Solution Explorer eingestellt ist, indem du einen Rechtsklick auf den Namen ausführst und "Set as startup projekt" auswählst.
 

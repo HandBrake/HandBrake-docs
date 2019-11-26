@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Abhängigkeiten für Gentoo installieren
 =================================
 
-Die folgenden Anweisungen sind für [Gentoo](https://gentoo.org) Profil `default/linux/amd64/17.0` mit Portage snapshot 20180520 (nur HandBrake [CLI](abbr:Command Line Interface - Kommandozeile)).
+Die folgenden Anweisungen gelten für [Gentoo](https://gentoo.org) Profil `default/linux/amd64/17.1` mit Portage snapshot 20190915 (nur HandBrake [CLI](abbr:Command Line Interface - Kommandozeile)).
 
 Grundvoraussetzungen um Kommandos zu starten:
 
@@ -34,16 +34,20 @@ Abhängigkeiten[^rebuild]:
 - libsamplerate
 - libtheora
 - libvorbis
+- libvpx
 - app-arch/lzma
+- meson
 - nasm
+- ninja
+- numactl
 - opus
 - speex
 - x264
 
 Abhängigkeiten installieren:
 
-	sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis app-arch/lzma nasm opus speex x264
- 
+    sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis libvpx app-arch/lzma meson nasm ninja numactl opus speex x264
+  
 Gentoo ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für mehr Anweisungen.
 
 [^rebuild]: Zuvor installierte Abhängigkeiten müssen eventuell vor dem HandBrake Build neu gebaut werden.

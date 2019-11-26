@@ -24,8 +24,20 @@ Wenn du die Optionen des Programmes öffnest, wirst du einen Abschnitt sehen der
 
 Hier kannst du den Standardpfad für die Ausgabe der Dateien und das Format des Dateinamens einstellen.
 
-Standardmäßig ist das Format {source}--{title}
-Du kannst dazu noch {chapters} hinzufügen.
+Standardmäßig ist das Format {source}--{title} eingestellt.
+
+Hier sind alle Platzhalter aufgelistet:
+* Live Update:
+  * {source}
+  * {title}
+  * {chapters}
+* Non-live Update: Diese verändern sich nur wenn du eine neue Quelldatei einliest oder den Titel oder Kapitel änderst.
+  * {date}
+  * {time}
+  * {creation-date}
+  * {creation-time}
+  * {quality}
+  * {bitrate}
 
 ### Behandlung des Namens der Quelle
 Manche Quellen haben komische Namen (beispielsweise alles Großbuchstaben). HandBrake bietet dafür ein paar Optionen um es zu korrigieren.

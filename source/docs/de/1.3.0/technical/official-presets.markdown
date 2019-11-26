@@ -58,12 +58,19 @@ Jede Generelle `Voreinstellung` ist benannt nach der Qualität oder Geschwindigk
 ## Web Voreinstellungen
 HandBrake's Web `Voreinstellungen` verwenden den weit verbreiteten [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) und sind für das Teilen von Videos im Internet angepasst.
 
+Discord Nitro `Voreinstellungen` sind so designed, dass sie garantiert Videos bis zu einer bestimmten Länge mit weniger als 50 [MB](abbr:megabytes) produzieren. Diese können mit [Discord Nitro Classic](https://discordapp.com/nitro) verwendet werden. Für [Discord Nitro](https://discordapp.com/nitro) gibt es noch eine `Voreinstellung` welche bis zu 100 [MB](abbr:megabytes) große Dateien erzeugt. Zudem gibt es noch `Voreinstellungen` für gratis [Discord](https://discordapp.com/) accounts, welche garantieren, dass Videos bis zu einer bestimmten Länge nicht 8 [MB](abbr:megabytes) überschreiten. Die maximale Videolänge ist Teil des jeweiligen Namens der `Voreinstellung`. Die Audioqualität wird hierbei leicht reduziert und bestimmte Szenen (noisy/grainy/high motion) können eine Reduktion der Qualität aufweisen um die angepeilte Dateigröße nicht zu überschreiten.
+
 Gmail `Voreinstellungen` sind designed um zu garantieren, dass ein Video mit einer bestimten maximalen Länge, eine Datei mit weniger als 25 [MB](abbr:Megabytes) erzeugt um für den Mailversand verwendet zu werden.[^email-size-limit] Die maximale Länge ist Teil des Namens der `Voreinstellung`. Audioqualität ist leicht reduziert und visuell verrauschte oder szenen mit viel bewegung könnten eine Reduktion in der Qualität aufweisen, um die angepeilte Dateigröße zu erreichen.
 
 Vimeo Youtube `Voreinstellungen` erzeugen Videos, die sich für das uploaden auf Video Hosting Services eignen.[^video-hosting-services] `Voreinstellungen` die mit HQ markiert sind, sind designed um höhere Qualität zu liefern und trotzdem nicht viel Zeit zum Kodieren zu benötigen.
 
 | Voreinstellung                | Typ  | Video | Audio      | Bildqualität   | Geschwindigkeit | Dateigröße     |
 |-------------------------------|------|-------|------------|-------------------|----------------|---------------|
+| Discord Nitro Large 3-6 Minutes 1080p30  | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell           | 50/100 MB oder weniger |
+| Discord Nitro Medium 5-10 Minutes 720p30 | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell           | 50/100 MB oder weniger |
+| Discord Nitro Small 10-20 Minutes 480p30 | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell           | 50/100 MB oder weniger |
+| Discord Small 2 Minutes 360p30           | MP4  | H.264 | AAC mono   | hängt von der Quelle ab | Sehr Schnell      |      8 MB oder weniger |
+| Discord Tiny 5 Minutes 240p30            | MP4  | H.264 | AAC mono   | hängt von der Quelle ab | Sehr Schnell      |      8 MB oder weniger |
 | Gmail Large 3 Minutes 720p30  | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell | 25 MB oder weniger |
 | Gmail Medium 5 Minutes 480p30 | MP4  | H.264 | AAC stereo | hängt von der Quelle ab | Schnell | 25 MB oder weniger |
 | Gmail Small 10 Minutes 288p30 | MP4  | H.264 | AAC mono   | hängt von der Quelle ab | Schnell | 25 MB oder weniger |
@@ -104,10 +111,6 @@ Jede Geräte `Voreinstellung` ist benannte nach dem Gerät oder Klasse von Gerä
 | Roku 720p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Mittel         |
 | Roku 576p25                         | MP4     | H.264     | AAC stereo                       | Mittel         |
 | Roku 480p30                         | MP4     | H.264     | AAC stereo                       | Mittel         |
-| Windows Mobile 1080p30              | MP4     | H.264     | AAC stereo                       | Mittel         |
-| Windows Mobile 720p30               | MP4     | H.264     | AAC stereo                       | Mittel         |
-| Windows Mobile 540p30               | MP4     | H.264     | AAC stereo                       | Mittel         |
-| Windows Mobile 480p30               | MP4     | H.264     | AAC stereo                       | Mittel         |
 | Xbox 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Mittel         |
 | Xbox Legacy 1080p30 Surround        | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Mittel         |
 
@@ -152,6 +155,16 @@ Production Proxy `Voreinstellungen` erstellen schnell zu kodierende, Intra-only 
 
 ## Kompatible Ersatzvoreinstellungen für veraltete oder entfernte Voreinstellungen
 Von Zeit zu Zeit kann es passieren, dass offizielle `Voreinstellungen` ausrangiert oder entfernt werden. Kompatible Ersatzvoreinstellungen werden hier aufgelistet.
+
+### Windows Mobile Voreinstellungen
+
+| Preset                 | Compatible Preset      | Notes                                                                                        |
+|------------------------|------------------------|----------------------------------------------------------------------------------------------|
+| Windows Mobile 1080p30 | General > Schnell 1080p30 | Neuere Windows Mobile und Windows Phone Geräte, und Windows 10 Mobile devices.               |
+| Windows Mobile 720p30  | General > Schnell 720p30  | Füge vbv-bufsize=10000:vbv-maxrate=10000 zu den zusätzlichen encoder options für ältere Geräte hinzu. |
+| Windows Mobile 540p30  | General > Schnell 480p30  | Füge vbv-bufsize=4000:vbv-maxrate=4000 zu den zusätzlichen encoder options für ältere Geräte hinzu. |
+| Windows Mobile 480p30  | General > Schnell 480p30  | Füge vbv-bufsize=2000:vbv-maxrate=2000 zu den zusätzlichen encoder options für ältere Geräte hinzu. |
+
 
 ### Legacy Voreinstellungen
 | Voreinstellung      | Kompatible Voreinstellungen      | Notizen                                                                                                                                 |

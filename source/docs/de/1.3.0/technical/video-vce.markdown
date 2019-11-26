@@ -1,45 +1,46 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           AMD VCE Encoder
+Title:           AMD VCE
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
 Language:        Deutsch
 Language_Code:   de
-Authors:         [ Scott (s55), Bernhard Rader ]
+Authors:         [ Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Scott (s55), Bernhard Rader ]
 Copyright:       2019 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-AMD VCE Encoder
-==========================
+AMD VCE
+=======
 
-Unterstützte Hardware und Konfigurationen
---------------
-- AMD Radeon RX 400 Series, Vega oder besser
-- Windows 10
+## Unterstützte Hardware
 
-Bitte beachte, dass trotz dieser Limitierungen das Feature *möglicherweise* auf älteren Grafikkarten und Betriebssystemen funktioniert. Dies wird jedoch offiziel nicht unterstützt.
+- AMD Radeon RX 400, 500, Vega/II, Navi series GPU or better
+- Ubuntu Linux 18.04.3 or later, Windows 10
 
-Unterstützung aktivieren
---------------
-Unterstützung für den VCE Kodierer kann in den Einstellungen im Video Tab aktiviert werden. Falls dein System nicht unterstützt wird, ist diese Option ausgegraut.
+Bitte beachte, dass trotz dieser Limitierungen die Hardwarekodierung mit VCE *möglicherweise* auf älteren Grafikkarten und Betriebssystemen funktioniert. Dies wird jedoch offiziell nicht unterstützt.
+
+Unter Ubuntu Linux, wird [AMD Radeon Software for Linux version 19.20 or later](https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux) benötigt, um den VCE Kodierer zu verwenden. Installiere die Software mit dem `amdgpu-pro-install` Script wie in AMD’s [Installation Guide](https://amdgpu-install.readthedocs.io/en/latest/) beschrieben. Zusätzlich must du das Paket `amf-amdgpu-pro` manuell installieren welches im Download inkludiert ist.
+
+## Unterstützung aktivieren
+
+Unterstützung für den VCE Kodierer kann in den Einstellungen im Video Tab aktiviert werden. Falls dein System nicht unterstützt wird, ist diese Option deaktiviert.
 
 
-Performance
---------------
-Beachte, dass nur die Kodierung der gesamten Pipeline in der AMD Hardware ausgeführt wird.
-Jeder Schritt davor oder danach in der Pipeline (inklusive dekodieren, filtern a/v sync, muxing etc.) passieren alle auf der CPU. Dadurch ist es normal, hohe oder 100%ige CPU Auslastung während Kodiervorgängen zu haben.
+## Performance
+
+Nur die Videokodierung wird von dem Hardwarekodierer erledigt. Alles vor und nach dem Videokodieren wie Decoding, Filter, Audio/Video Sync, Audio Encoding, Muxing, usw. wird von der CPU erledigt. Eine hohe CPU Auslastung (auch 100%) ist während dem Kodieren also normal.
 
 Es ist vor allem auf lower-end-hardware üblich, dass die CPU ein Bottleneck für den NVIDIA Kodierer darstellt. Um diesen Effekt zu minimieren, deaktiviere jeden Filter den du nicht benötigst.
 
 
-Verwendung der Fortgeschrittenen Optionen
---------------
-VCE hat ein limitiertes Set von Fortgeschrittenen Kodieroptionen welche verwendet werden können. Grundsätzlich ist es nicht empfohlen, diese Parameter zu ändern. Die Built-in Voreinstellungen bieten eine gute Auswahl von Optionen.
+## Fortgeschrittene Optionen
+
+VCE hat ein limitiertes Set von Fortgeschrittenen Kodieroptionen welche verwendet werden können. Grundsätzlich ist es nicht empfohlen, diese Parameter zu ändern, da die Built-in Voreinstellungen eine gute Auswahl von Optionen bieten.
 
 Auf der Kommandozeile kannst du den --encopts Parameter wie folgt benutzen:
 
@@ -50,8 +51,8 @@ In der Grafischen Benutzeroberfläche kannst du die Optionen in der Optionen Tex
     option1=wert1:option2=wert2
 
 
-Optionstypen
---------------
+## Optionstypen
+
 Die folgenden Werttypen werden unterstützt (jede Option akzeptiert nur einen Typ):
 
 - integer
@@ -60,14 +61,14 @@ Die folgenden Werttypen werden unterstützt (jede Option akzeptiert nur einen Ty
 - boolean
   0 bedeutet aus (oder deaktiviert).
   1 bedeutet an (oder aktiviert).
- 
+
 - string
-  Übernimmt eine Einstellung als String (= Zeichenkette). Schaue in die Kommentare für Details.
+  Übernimmt eine Einstellung als String (= Zeichenkette). Die Kommentare zeigen die möglichen Werte.
 
-Verfügbare Optionen
---------------
+## Verfügbare Optionen
 
-| Option           | Type        | H.264 | H.265 | Comment                                                                        |
+
+| Option           | Type        | H.264 | H.265 | Kommentar                                                                      |
 |------------------|-------------|------------------------------------------------------------------------------------------------|
 | preanalysis      | boolean     |   X   |   X   |                                                                                |
 | vbaq             | boolean     |   X   |   X   |                                                                                |
