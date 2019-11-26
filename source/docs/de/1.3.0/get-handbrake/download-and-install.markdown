@@ -167,7 +167,7 @@ Du findest Verknüpfungen um HandBrake zu starten am Desktop und im Startmenü.
 
 ### Windows SmartScreen
 
-Wenn die Installation auf Windows 8 oder 10 mit Windows SmartScreen aktiviert durchgeführt wird, könnte eine Nachricht angezeigt werden, die darauf hinweist, dass der HandBrake Installer nicht von Windows erkannt wird.
+Wenn die Installation auf Windows 8.1 oder 10 mit Windows SmartScreen aktiviert durchgeführt wird, könnte eine Nachricht angezeigt werden, die darauf hinweist, dass der HandBrake Installer nicht von Windows erkannt wird.
 
 ![Windows SmartScreen](../../../en/images/windows/smartscreen-1-1.0.0.png "Windows SmartScreen könnte diese Nachricht anzeigen. Wähle Mehr Info um mehrere Option zu sehen.")
 

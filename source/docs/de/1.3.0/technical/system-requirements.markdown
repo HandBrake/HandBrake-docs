@@ -100,7 +100,7 @@ Folgende Auflistung beschreibt die Unterstützung der aktuellen HandBrake Versio
 | Ubuntu Version     | Status              | Letzte Kompatible Version |
 |--------------------|---------------------|---------------------------|
 | 19.04 LTS Disco    | Unterstützt         |                           |
-| 18.04 LTS Bionic   | Unterstützt         |                           |
+| 18.04 LTS Bionic   | Nicht Unterstützt   | Verwende Flatpak für 1.30 |
 | 16.04 LTS Xenial   | Nicht Unterstützt   | HandBrake 1.1.2           |
 | 14.04 LTS Trusty   | Nicht Unterstützt   | HandBrake 1.1.2           |
 
@@ -126,8 +126,8 @@ Für andere Distributionen musst du mithilfe der verlinkten Artikel den [Linux](
 |--------------------|---------------------|---------------------------|-------------------------------------|
 | 10.14 Catalina     | Unterstützt         |                           | Benötigt HandBrake 1.2.2 oder neuer.|
 | 10.14 Mojave       | Unterstützt         |                           | Benötigt HandBrake 1.1.2 oder neuer.|
-| 10.13 High Sierra  | Unterstützt         |                           |                                     |
-| 10.12 Sierra       | Unterstützt         |                           |                                     |
+| 10.13 High Sierra  | Veraltet seit 1.3.0 |                           |                                     |
+| 10.12 Sierra       | Veraltet seit 1.3.0 |                           |                                     |
 | 10.11 El Capitan   | Veraltet seit 1.2.0 |                           |                                     |
 | 10.10 Yosemite     | Nicht unterstützt   | HandBrake 1.1.2           |                                     |
 | 10.9 Mavericks     | Nicht unterstützt   | HandBrake 1.1.2           |                                     |

@@ -102,7 +102,7 @@ Zusätzliche MinGW-w64 toolchain Abhängigkeiten:
 Abhängigkeiten installieren:
 
     sudo apt-get update
-	sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm patch pkg-config python tar zlib1g-dev
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm ninja-build patch pkg-config python tar zlib1g-dev
 
 Falls du Ubuntu 18.10 oder neuer verwendest, musst du folgendes installieren:
 
@@ -154,8 +154,8 @@ Die folgenden Tools werden benötigt um die [GUI](abbr:Graphical User Interface 
   - [Source Tree](https://www.sourcetreeapp.com) (empfohlen)
   - Client inkludiert in Visual Studio 2015 oder neuer
 - `hb.dll` (siehe die oben angeführten Anweisungen um LibHB zu bauen, oder lade sie von [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php)) herunter.
-- [JetBrains ReSharper](https://www.jetbrains.com/resharper/) (optional)
-  - Sehr empfohlen für Entwickler die an der Arbeit der Windows UI interessiert sind
+- [JetBrains ReSharper](https://www.jetbrains.com/?from=HandBrake) (optional)
+  - Empfohlen für Entwickler die an der Arbeit der Windows UI interessiert sind
   - Aktive, reguläre Kontributoren können eine gratis ReSharper Lizenz für quelloffene Projekte beim HandBrake Team anfragen, courtesy JetBrains
 
 Klone `https://github.com/HandBrake/HandBrake.git` mit deinem Git Client, und checke den Tag aktuellsten in der HandBrake 1.3.x Release Serie aus.
