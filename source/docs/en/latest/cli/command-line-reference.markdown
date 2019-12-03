@@ -566,6 +566,8 @@ The following details all the available options in the command line interface. T
                                or less is selected. This should locate subtitles
                                for short foreign language segments. Best used in
                                conjunction with --subtitle-forced.
+      -S, --subname <string>   Set subtitle track name(s).
+                               Separate tracks by commas.
       -F, --subtitle-forced[=string]
                                Only display subtitles from the selected stream
                                if the subtitle has the forced flag set. The
