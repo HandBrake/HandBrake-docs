@@ -76,7 +76,7 @@ Manche `Quellen` haben nur einen `Titel`. Blu-ray und DVD `Quellen` haben oft me
 
 ## Eine Voreinstellung auswählen
 
-HandBrake liefert einige `Voreinstellungen` um dein neues Video für deine Geräte und Software ideal anzupassen. Falls du zum Beispiel eine Playstation 4 hast, könntest du die `Playstation 1080p30 Surround` Voreinstellung unter `Geräte` wählen.
+HandBrake liefert einige `Voreinstellungen` um dein neues Video für deine Geräte und Software ideal anzupassen. Falls du zum Beispiel eine PlayStation 4 hast, könntest du die `Playstation 1080p30 Surround` Voreinstellung unter `Geräte` wählen.
 
 Die Standard-Voreinstellung `Fast 1080p30` ist meistens eine gute Wahl, da es schnell und mit den meisten Geräten kompatibel ist.
 
