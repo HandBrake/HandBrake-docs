@@ -26,7 +26,7 @@ Should you need technical support, providing an Activity Log is **required** and
 
 Frequently, people ask the HandBrake Team, "Why should I be *required* to provide an Activity Log to receive technical support?" Good question!
 
-For starters, most applications log information about their operation. Your operating system keeps countless logs as well. Logs are often used for informational purposes and to diagnose technical problems with a system or application that isn't behaving as expected.
+For starters, most applications log information about their operation. Your operating system keeps countless logs as well. Logs are often used for informational purposes and to diagnose technical problems with a system or application that isn’t behaving as expected.
 
 Here are some questions that may be helpful in diagnosing a problem with HandBrake, that an Activity Log can answer:
 
@@ -38,7 +38,7 @@ Here are some questions that may be helpful in diagnosing a problem with HandBra
 - What type of GPU are you using? What version of OpenCL does it support?
 - Is HandBrake able to use your GPU for certain features?
 - What is your display resolution?
-- What is your system's temporary files directory? Is HandBrake able to use it?
+- What is your system’s temporary files directory? Is HandBrake able to use it?
 - Is HandBrake using dvdread or dvdnav for reading DVDs?
 - Is HandBrake able to open your `Source`?
 - Is HandBrake able to detect the media type of your `Source`? What type (DVD, Blu-ray, MKV/MP4, etc.)?
@@ -59,26 +59,26 @@ Here are some questions that may be helpful in diagnosing a problem with HandBra
 - What are the final settings used for the encode?
 - Is HandBrake able to write to your `Destination` file? If not, why not?
 - While encoding, is HandBrake able to read your entire `Source` without errors?
-- Are there any problems with your `Source`'s timestamps?
+- Are there any problems with your `Source`’s timestamps?
 - How many frames did HandBrake decode from the `Source` during encoding? More or less than expected?
 - Is HandBrake dropping or duplicating frames to enforce a constant frame rate setting? How many frames of each?
 - What is the average bitrate of each encoded track in the `Destination`?
-- Are HandBrake's work threads finishing and exiting properly?
+- Are HandBrake’s work threads finishing and exiting properly?
 - Is HandBrake leaking memory during encoding?
 
 Obviously, it would be *laborious* to ask these questions to thousands of people requesting support for HandBrake.
 
 In contrast, providing an Activity Log is an easy way to explain exactly what is going on in a standardized manner, which helps ensure accuracy and prevent confusion. This speeds up the support process significantly, which saves time for everybody.
 
-Despite this, some people refuse to provide logs even after being given the above reasoning. Often times, these people think their question is simple enough that a log shouldn't be required. This is almost never the case in practice, and time is wasted asking and answering questions that Activity Logs are designed for.
+Despite this, some people refuse to provide logs even after being given the above reasoning. Often times, these people think their question is simple enough that a log shouldn’t be required. This is almost never the case in practice, and time is wasted asking and answering questions that Activity Logs are designed for.
 
-While it is the HandBrake Team's goal to help everyone we can, the fact remains that we can't magically infer what may or may not be happening inside your computer. *Without an Activity Log, the HandBrake Team simply cannot provide technical support.*
+While it is the HandBrake Team’s goal to help everyone we can, the fact remains that we can’t magically infer what may or may not be happening inside your computer. *Without an Activity Log, the HandBrake Team simply cannot provide technical support.*
 
 ## Privacy
 
 Activity Logs are stored *only* on your computer. HandBrake does not send these logs anywhere else.
 
-If you are concerned about retaining these logs indefinitely, feel free to delete them periodically. Be sure not to delete any other files important to HandBrake's operation.
+If you are concerned about retaining these logs indefinitely, feel free to delete them periodically. Be sure not to delete any other files important to HandBrake’s operation.
 
 To provide an Activity Log for support, you must send us your log(s) manually. If you are concerned about private information an Activity Log may contain and reveal to others, feel free to read through the log and redact the parts that concern you before sharing.
 
@@ -108,8 +108,8 @@ You can access the current log by opening the Activity Log window in HandBrake.
 
 On Linux, logs are stored in one of two locations, where `~` is your home directory:
 
-- The `ghb` directory at your system's default data path (usually `~/.config`), for the official PPA and self-compiled builds
-- The `fr.handbrake.ghb/config/ghb` directory at your system's Flatpack data path (usually `~/.var/app`), for the official Flatpak bundle
+- The `ghb` directory at your system’s default data path (usually `~/.config`), for the official PPA and self-compiled builds
+- The `fr.handbrake.ghb/config/ghb` directory at your system’s Flatpack data path (usually `~/.var/app`), for the official Flatpak bundle
 
 The full path to the log directory is shown at the top of the Activity Log window.
 
@@ -127,9 +127,12 @@ You can access the current log by opening the Activity Log window in HandBrake.
 
 <!-- image, activity log window on mac -->
 
-On Mac, logs are stored at `~/Library/Application Support/HandBrake/EncodeLogs`, where `~` is your home folder.
+On Mac, logs are stored at the following locations, where `Username` is your user name:
 
-You can open this location directly from HandBrake's Activity Log window.
+- `/Users/Username/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/EncodeLogs` for HandBrake 1.3.0 and later, sandboxed nightly/snapshot builds, and sandboxed personal builds
+- `/Users/Username/Library/Application Support/HandBrake/EncodeLogs` for HandBrake 1.2.2 and earlier, older non-sandboxed nightly/snapshot builds, and non-sandboxed personal builds
+
+You can open the applicable location directly from HandBrake’s Activity Log window.
 
 Inside, you may find the following files:
 
@@ -159,8 +162,8 @@ Inside, you may find the following files:
 
 ### Activity Logs on the command line
 
-HandBrake's command line interface outputs to the standard streams `stdout` and `stderr`, with encode progress information routed to the former and log messages routed to the latter.
+HandBrake’s command line interface outputs to the standard streams `stdout` and `stderr`, with encode progress information routed to the former and log messages routed to the latter.
 
-To capture HandBrake's log messages to a file, simply redirect `stderr`:
+To capture HandBrake’s log messages to a file, simply redirect `stderr`:
 
     HandBrakeCLI ... 2> my-activity-log.txt
