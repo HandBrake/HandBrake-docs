@@ -75,12 +75,12 @@ Abhängigkeiten installieren
 
     sudo dnf update
     sudo dnf groupinstall "Development Tools"
-    sudo dnf install cmake fribidi-devel git jansson-devel numactl-devel python3 opus-devel xz-devel
+    sudo dnf install cmake fribidi-devel git jansson-devel numactl-devel python3 xz-devel
 
 Aktiviere das CentOS PowerTools Repository und installiere zusätzliche Abhängigkeiten.
 
     sudo dnf config-manager --set-enabled PowerTools
-    sudo dnf install lame-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel meson nasm ninja-build opus-devel speex-devel
+    sudo dnf install lame-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libvpx-devel meson nasm ninja-build opus-devel speex-devel
 
 Installiere das [EPEL](https://fedoraproject.org/wiki/EPEL) repository und zusätzliche Abhängigkeiten.
 
@@ -163,7 +163,7 @@ Abhängigkeiten installieren:
 
     sudo yum update
     sudo yum groupinstall "Development Tools"
-    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel numactl-devel python3 opus-devel speex-devel xz-devel
+    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel numactl-devel python3 speex-devel xz-devel
 
 Installiere das [EPEL](https://fedoraproject.org/wiki/EPEL) repository und zugehörige Abhängigkeiten.
 
