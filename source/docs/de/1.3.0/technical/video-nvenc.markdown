@@ -8,7 +8,7 @@ Project_Version: 1.3.0
 Language:        Deutsch
 Language_Code:   de
 Authors:         [ Scott (s55), Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Bernhard Rader ]
-Copyright:       2019 HandBrake Team
+Copyright:       2020 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
