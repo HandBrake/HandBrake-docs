@@ -61,6 +61,10 @@ Dependencies:
 - python
 - speex
 
+Intel Quick Sync Video dependencies (optional):
+
+- intel-media-sdk
+
 Graphical interface dependencies:
 
 - atk
@@ -93,6 +97,10 @@ Build and install the `lame` source port.
     cd /usr/ports/audio/lame
     sudo make install || sudo make reinstall
     cd "$LASTDIR"
+
+To build with Intel Quick Sync Video support, install the QSV dependencies.
+
+    sudo pkg install intel-media-sdk
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
