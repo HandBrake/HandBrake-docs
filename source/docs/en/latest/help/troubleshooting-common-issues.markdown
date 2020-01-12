@@ -54,8 +54,9 @@ More information about successfully launching HandBrake is available on [Downloa
 Try each of the following steps until HandBrake is working again.
 
 1. Restart your computer
-2. Delete your HandBrake configuration data and presets (replace username with your own)
-    - /Users/username/Library/Application Support/HandBrake
+2. Delete your HandBrake configuration data and presets (replace `Username` with your user name)
+    - /Users/Username/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/
+    - /Users/Username/Library/Application Support/HandBrake
 3. Install/reinstall the latest version of HandBrake; see [Downloading and installing HandBrake](../get-handbrake/download-and-install.html)
 
 If the above does not solve your issue, someone may be able to help via HandBrake's [Community support](community-support.html) channels.
