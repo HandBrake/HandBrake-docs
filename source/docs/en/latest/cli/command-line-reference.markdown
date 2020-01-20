@@ -111,9 +111,11 @@ The following details all the available options in the command line interface. T
        -e, --encoder <string>  Select video encoder:
                                    x264
                                    x264_10bit
+                                   nvenc_h264
                                    x265
                                    x265_10bit
                                    x265_12bit
+                                   nvenc_h265
                                    mpeg4
                                    mpeg2
                                    VP8
