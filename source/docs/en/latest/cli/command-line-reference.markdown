@@ -55,7 +55,12 @@ The following details all the available options in the command line interface. T
 
     Source Options ---------------------------------------------------------------
 
-       -i, --input <string>    Set input file or device ("source")
+       -i, --input <string>    Set input file or device ("source"). 
+                               For single-file sources, specify the relative or
+                               absolute path to the file. 
+                               For DVD or Blu-ray discs, specify the path to the 
+                               root of the disk (you may also need to specify a 
+                               title number, see below).
        -t, --title <number>    Select a title to encode (0 to scan all titles
                                only, default: 1)
            --min-duration      Set the minimum title duration (in seconds).
