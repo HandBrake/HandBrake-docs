@@ -135,7 +135,8 @@ The following details all the available options in the command line interface. T
                                    theora
            --encoder-preset <string>
                                Adjust video encoding settings for a particular
-                               speed/efficiency tradeoff (encoder-specific)
+                               speed/efficiency tradeoff (e.g. fast, medium, 
+                               slow, slower, etc. - these are encoder-specific)
        --encoder-preset-list <string>
                                List supported --encoder-preset values for the
                                specified video encoder
@@ -160,7 +161,31 @@ The following details all the available options in the command line interface. T
        --encoder-level-list <string>
                                List supported --encoder-level values for the
                                specified video encoder
-       -q, --quality <float>   Set video quality (e.g. 22.0)
+       -q, --quality <float>   Set video quality (e.g. 22.0) and specify that
+                               video should be encoded using constant quality
+                               mode (a.k.a. constant rate factor or "CRF"). 
+                               Higher values compress more and result in
+                               lower quality. Lower values increase the quality.
+                               Possible values vary by codec:
+                               - x264:       0 is lossless
+                                             18 is close to visually perfect
+                                             19-21 is good for SD/DVD sources
+                                             21-23 is good for HD sources
+                                             23 is the default
+                                             51 is worst quality possible
+                                             (a subjectively sane range is 
+                                             17–28)
+                               - x264_10bit: 0 is lossless
+                                             63 is worst quality possible
+                               - x265:       0 is lossless
+                                             24 is close to visually perfect
+                                             28 is the default (should visually
+                                               match x264 quality 23, but with
+                                               a smaller filesize)
+                                             51 is worst quality possible
+                               Since these values use a logarithmic scale, 
+                               changing ±6 will result in approx half or twice 
+                               the original bitrate/filesize.
        -b, --vb <number>       Set video bitrate in kbit/s (default: 1000)
        -2, --two-pass          Use two-pass mode
            --no-two-pass       Disable two-pass mode
