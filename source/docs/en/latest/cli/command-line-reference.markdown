@@ -61,8 +61,15 @@ The following details all the available options in the command line interface. T
                                For DVD or Blu-ray discs, specify the path to the 
                                root of the disk (you may also need to specify a 
                                title number, see below).
-       -t, --title <number>    Select a title to encode (0 to scan all titles
-                               only, default: 1)
+                               (Notes: You cannot concatenate multiple video files
+                               using Handbrake. You also cannot batch-convert 
+                               multiple video files by passing a folder or 
+                               multiple inputs into this parameter - 
+                               Handbrake CLI must be called once for each output
+                               file. Use a shell script or BAT file if you need
+                               to process multiple files.)
+       -t, --title <number>    Select a title number to encode 
+                               (0 to scan all titles only, default: 1)
            --min-duration      Set the minimum title duration (in seconds).
                                Shorter titles will be ignored (default: 10).
            --scan              Scan selected title only.
@@ -95,7 +102,7 @@ The following details all the available options in the command line interface. T
                                    av_mp4
                                    av_mkv
                                    av_webm
-                               default: auto-detected from destination file name)
+                               (default: auto-detected from destination file name)
        -m, --markers           Add chapter markers
            --no-markers        Disable preset chapter markers
        -O, --optimize          Optimize MP4 files for HTTP streaming (fast start,
