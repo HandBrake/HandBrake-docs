@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 9.11 Stretch through 10.1 Buster.
+The following instructions are for [Debian](https://www.debian.org) 9.11 Stretch through 10.2 Buster.
 
 Basic requirements to run commands:
 

@@ -18,7 +18,7 @@ Installing dependencies on CentOS
 
 ## CentOS 8
 
-The following instructions are for [CentOS](https://centos.org) 8.0.
+The following instructions are for [CentOS](https://centos.org) 8.1.
 
 Basic requirements to run commands:
 

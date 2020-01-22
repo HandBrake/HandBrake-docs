@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Ubuntu
 =================================
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 19.10 (Eoan Ermine).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 20.04 (Focal Fossa).
 
 Basic requirements to run commands:
 
