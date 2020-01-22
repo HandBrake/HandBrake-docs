@@ -43,14 +43,14 @@ Additional dependencies not available in the base repository:
 - lame
 - x264
 
-Graphical interface dependencies:
-
-- desktop-dev
-
 Intel Quick Sync Video dependencies (optional):
 
 - devpkg-libva
 - devpkg-libdrm
+
+Graphical interface dependencies:
+
+- desktop-dev
 
 Install dependencies.
 
@@ -88,12 +88,12 @@ Build and install the dependencies not available in the base repository.
         sudo ldconfig
     fi
 
-To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
-
-    sudo swupd bundle-add desktop-dev
-
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo swupd bundle-add devpkg-libva devpkg-libdrm
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo swupd bundle-add desktop-dev
 
 Clear is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.

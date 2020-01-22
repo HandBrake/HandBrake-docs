@@ -70,6 +70,11 @@ Additional Ubuntu 18.04 LTS dependencies:
 - python3-pip
 - meson (via pip3)
 
+Intel Quick Sync Video dependencies (optional):
+
+- libva-dev
+- libdrm-dev
+
 Graphical interface dependencies:
 
 - gstreamer1.0-libav
@@ -83,11 +88,6 @@ Graphical interface dependencies:
 - libgudev-1.0-dev
 - libnotify-dev
 - libwebkit2gtk-4.0-dev
-
-Intel Quick Sync Video dependencies (optional):
-
-- libva-dev
-- libdrm-dev
 
 Install dependencies.
 
@@ -103,12 +103,12 @@ If you are running Ubuntu 18.04 LTS, the `meson` package is too old. Install a n
     sudo apt-get install python3-pip
     sudo pip3 install meson
 
-To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
-
-    sudo apt-get install gstreamer1.0-libav intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkit2gtk-4.0-dev
-
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo apt-get install libva-dev libdrm-dev
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo apt-get install gstreamer1.0-libav intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkit2gtk-4.0-dev
 
 Ubuntu is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.

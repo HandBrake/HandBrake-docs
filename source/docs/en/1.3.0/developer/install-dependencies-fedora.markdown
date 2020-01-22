@@ -63,6 +63,11 @@ Additional dependencies not available in the base repository:
 
 - x264-devel [RPM Fusion]
 
+Intel Quick Sync Video dependencies (optional):
+
+- libva-devel
+- libdrm-devel
+
 Graphical interface dependencies:
 
 - X Software Development
@@ -76,11 +81,6 @@ Graphical interface dependencies:
 - libnotify-devel
 - webkit2gtk3-devel
 
-Intel Quick Sync Video dependencies (optional):
-
-- libva-devel
-- libdrm-devel
-
 Install dependencies.
 
     sudo dnf update
@@ -92,13 +92,13 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
     sudo dnf localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(cat /etc/system-release | awk '{ print $3}').noarch.rpm
     sudo dnf install x264-devel
 
+To build with Intel Quick Sync Video support, install the QSV dependencies.
+
+    sudo dnf install libva-devel libdrm-devel
+
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo dnf groupinstall "X Software Development" "GNOME Software Development"
     sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkit2gtk3-devel
-
-To build with Intel Quick Sync Video support, install the QSV dependencies.
-
-    sudo dnf install libva-devel libdrm-devel
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.

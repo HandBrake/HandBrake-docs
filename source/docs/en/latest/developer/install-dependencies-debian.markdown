@@ -70,6 +70,11 @@ Additional Debian 9 dependencies not available in the base repository:
 - meson [backports]
 - nasm [sid]
 
+Intel Quick Sync Video dependencies (optional):
+
+- libva-dev
+- libdrm-dev
+
 Graphical interface dependencies:
 
 - intltool
@@ -82,11 +87,6 @@ Graphical interface dependencies:
 - libgudev-1.0-dev
 - libnotify-dev
 - libwebkit2gtk-4.0-dev (libwebkitgtk-3.0-dev for Debian 9)
-
-Intel Quick Sync Video dependencies (optional):
-
-- libva-dev
-- libdrm-dev
 
 Install dependencies.
 
@@ -108,14 +108,14 @@ If you are running Debian 9, the `nasm` package is too old. Install a newer vers
     sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.13.03-1_amd64.deb' -o /var/cache/apt/archives/nasm_2.13.03-1_amd64.deb
     sudo dpkg -i /var/cache/apt/archives/nasm_2.13.03-1_amd64.deb
 
+To build with Intel Quick Sync Video support, install the QSV dependencies.
+
+    sudo apt-get install libva-dev libdrm-dev
+
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
     sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev
     sudo apt-get install libwebkit2gtk-4.0-dev || sudo apt-get install libwebkitgtk-3.0-dev
-
-To build with Intel Quick Sync Video support, install the QSV dependencies.
-
-    sudo apt-get install libva-dev libdrm-dev
 
 Debian is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 

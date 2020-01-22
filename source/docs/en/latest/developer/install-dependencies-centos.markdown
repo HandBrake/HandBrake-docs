@@ -52,6 +52,11 @@ Additional dependencies not available in the base repository:
 - speex-devel [PowerTools]
 - x264-devel [RPM Fusion]
 
+Intel Quick Sync Video dependencies (optional):
+
+- libva-devel
+- libdrm-devel
+
 Graphical interface dependencies:
 
 - dbus-glib-devel
@@ -65,11 +70,6 @@ Additional graphical interface dependencies not available in the base repository
 
 - gstreamer1-libav [RPM Fusion]
 - libgudev1-devel [PowerTools]
-
-Intel Quick Sync Video dependencies (optional):
-
-- libva-devel
-- libdrm-devel
 
 Install dependencies.
 
@@ -92,13 +92,13 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
     sudo dnf localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
     sudo dnf install x264-devel
 
-To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
-
-    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkit2gtk3-devel
-
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo dnf install libva-devel libdrm-devel
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo dnf install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkit2gtk3-devel
 
 CentOS is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
@@ -139,6 +139,11 @@ Additional dependencies not available in the base repository:
 - opus-devel [EPEL EL6]
 - x264-devel [RPM Fusion]
 
+Intel Quick Sync Video dependencies (optional):
+
+- libva-devel
+- libdrm-devel
+
 Graphical interface dependencies:
 
 - dbus-glib-devel
@@ -153,11 +158,6 @@ Additional graphical interface dependencies not available in the base repository
 
 - devtoolset-7 [SCL]
 - gstreamer1-libav [RPM Fusion]
-
-Intel Quick Sync Video dependencies (optional):
-
-- libva-devel
-- libdrm-devel
 
 Install dependencies.
 
@@ -214,13 +214,13 @@ Install the [RPM Fusion](http://rpmfusion.org) Free repository and related addit
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
     sudo yum install lame-devel x264-devel
 
-To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
-
-    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
-
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
     sudo yum install libva-devel libdrm-devel
+
+To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
+
+    sudo yum install dbus-glib-devel gstreamer1-devel gstreamer1-libav gstreamer1-plugins-base-devel intltool libgudev1-devel libnotify-devel webkitgtk4-devel
 
 The GNU Compiler Collection and related packages provided by CentOS 7 are old. Install and enable a newer version provided by Software Collections (SCL)[^gcc-scl]. This is recommended for building the HandBrake [CLI](abbr:Command Line Interface) and required for building the GTK [GUI](abbr:Graphical User Interface).
 
