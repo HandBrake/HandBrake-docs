@@ -41,7 +41,7 @@ cd Downloads
 
 HandBrakeCLI -i /path/to/source -o ../Desktop/my_output.mp4
 
-If HandBrake is in a different directory than your in, you can always access it via the full path. i.en
+If HandBrake is in a different directory than you'rr in, you can always access it via the full path. i.e.
 
 ./path/to/HandBrakeCLI -i /path/to/source -o ../Desktop/my_output.mp4
 
