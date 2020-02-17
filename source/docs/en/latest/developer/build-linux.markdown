@@ -29,6 +29,7 @@ Dependency installation instructions are available for the following distributio
 - [Fedora](install-dependencies-fedora.html)
 - [Gentoo](install-dependencies-gentoo.html)
 - [Ubuntu](install-dependencies-ubuntu.html)
+- [Void](install-dependencies-void.html)
 
 HandBrake’s optional experimental support for Intel Quick Sync Video on Linux requires installing the Intel Media SDK and its dependencies. See the [Intel Media SDK Releases](https://github.com/Intel-Media-SDK/MediaSDK/releases) page and [Intel Media SDK Build Instructions](https://github.com/Intel-Media-SDK/MediaSDK#how-to-build).
 
