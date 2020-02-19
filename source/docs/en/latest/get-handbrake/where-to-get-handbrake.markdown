@@ -58,6 +58,7 @@ Broken third-party packages/builds include but are not limited to:
 - openSUSE Packman: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - RPM Fusion: `handbrake`, `handbrake-cli`
 - Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
+- Void: `handbrake`, `handbrake-cli`, `handbrake-cli-dbg`, `handbrake-dbg`
 
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
 
