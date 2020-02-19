@@ -23,6 +23,7 @@ If you have installed a HandBrake package from your distribution or other third-
 Dependency installation instructions are available for the following distributions.
 
 - [FreeBSD](install-dependencies-freebsd.html)
+- [NetBSD](install-dependencies-netbsd.html)
 
 ## Building HandBrake
 

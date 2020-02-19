@@ -163,7 +163,7 @@ Table of contents
 
 - Building HandBrake
   - [Building HandBrake for BSD](developer/build-bsd.html)
-    - Installing dependencies on [FreeBSD](developer/install-dependencies-freebsd.html)
+    - Installing dependencies on [FreeBSD](developer/install-dependencies-freebsd.html) / [NetBSD](developer/install-dependencies-netbsd.html)
   - [Building HandBrake for Linux](developer/build-linux.html)
     - Installing dependencies on [Arch](developer/install-dependencies-arch.html) / [CentOS](developer/install-dependencies-centos.html) / [Clear](developer/install-dependencies-clear.html) / [Debian](developer/install-dependencies-debian.html) / [Fedora](developer/install-dependencies-fedora.html) / [Gentoo](developer/install-dependencies-gentoo.html) / [Ubuntu](developer/install-dependencies-ubuntu.html) / [Void](developer/install-dependencies-void.html)
   - [Building HandBrake for Mac](developer/build-mac.html)
