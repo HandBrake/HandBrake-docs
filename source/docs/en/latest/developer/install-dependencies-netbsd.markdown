@@ -96,9 +96,8 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
     sudo pkgin install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib2 glib2-tools gstreamer1 gst-plugins1-base gst-plugins1-gdk_pixbuf gst-plugins1-libav gtk3+ intltool libnotify libvpx pango
 
-Ensure the `msgfmt` version installed with `gettext` has priority according to your `PATH`.
+Ensure the newly installed packages have search path priority.
 
-    mkdir -p "${HOME}/bin"
-    ln -s /usr/pkg/bin/msgfmt "${HOME}/bin"
+    export PATH="${LOCALBASE:-/usr/pkg}/bin:${PATH}"
 
 NetBSD is now prepared to build HandBrake. See [Building HandBrake for BSD](build-bsd.html) for further instructions.
