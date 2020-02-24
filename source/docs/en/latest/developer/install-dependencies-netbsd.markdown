@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on NetBSD
 =================================
 
-The following instructions are for [NetBSD](https://www.netbsd.org/) 8.
+The following instructions are for [NetBSD](https://www.netbsd.org/) 8 and 9.
 
 Basic requirements to run commands:
 
@@ -36,11 +36,7 @@ Dependencies:
 - freetype2
 - fribidi
 - git
-- lzma
-- m4
 - gmake
-- patch
-- gtar
 - harfbuzz
 - jansson
 - lame
@@ -50,17 +46,31 @@ Dependencies:
 - libopus
 - libsamplerate
 - libtheora
-- libtool
 - libvorbis
 - libvpx
 - libxml2
+- m4
 - meson
 - nasm
-- ninja
+- patch
 - pkgconf
 - python37
 - speex
 - x264-devel (pkgsrc)
+
+Additional NetBSD 9 dependencies:
+
+- gtar-base
+- libtool-base
+- lzmalib
+- ninja-build
+
+Additional NetBSD 8 dependencies:
+
+- gtar
+- libtool
+- lzma
+- ninja
 
 Graphical interface dependencies:
 
@@ -73,10 +83,10 @@ Graphical interface dependencies:
 - gettext
 - glib2
 - glib2-tools
-- gstreamer1
 - gst-plugins1-base
 - gst-plugins1-gdk_pixbuf
 - gst-plugins1-libav
+- gstreamer1
 - gtk3+
 - intltool
 - libnotify
@@ -85,16 +95,24 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pkgin install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git lzma m4 gmake patch gtar harfbuzz jansson lame libass libiconv libogg libopus libsamplerate libtheora libtool libvorbis libvpx libxml2 meson nasm ninja pkgconf python37 speex
+    sudo pkgin install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gmake harfbuzz jansson lame libass libiconv libogg libopus libsamplerate libtheora libvorbis libvpx libxml2 m4 meson nasm patch pkgconf python37 speex
 
 Build and install `x264-devel` from [pkgsrc](https://www.netbsd.org/docs/software/packages.html).
 
     cd /usr/pkgsrc/multimedia/x264-devel
     sudo make install
 
+If you are running NetBSD 9, install the additional dependencies.
+
+    sudo pkgin install gtar-base libtool-base lzmalib ninja-build
+
+If you are running NetBSD 8, install the additional dependencies.
+
+    sudo pkgin install gtar libtool lzma ninja
+
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pkgin install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib2 glib2-tools gstreamer1 gst-plugins1-base gst-plugins1-gdk_pixbuf gst-plugins1-libav gtk3+ intltool libnotify libvpx pango
+    sudo pkgin install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib2 glib2-tools gst-plugins1-base gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk3+ intltool libnotify libvpx pango
 
 Ensure the newly installed packages have search path priority.
 
