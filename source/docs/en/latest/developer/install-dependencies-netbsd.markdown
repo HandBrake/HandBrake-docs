@@ -37,6 +37,7 @@ Dependencies:
 - fribidi
 - git
 - gmake
+- gtar-base
 - harfbuzz
 - jansson
 - lame
@@ -46,31 +47,20 @@ Dependencies:
 - libopus
 - libsamplerate
 - libtheora
+- libtool-base
 - libvorbis
 - libvpx
 - libxml2
+- lzmalib
 - m4
 - meson
 - nasm
+- ninja-build
 - patch
 - pkgconf
 - python37
 - speex
-- x264-devel (pkgsrc)
-
-Additional NetBSD 9 dependencies:
-
-- gtar-base
-- libtool-base
-- lzmalib
-- ninja-build
-
-Additional NetBSD 8 dependencies:
-
-- gtar
-- libtool
-- lzma
-- ninja
+- x264-devel
 
 Graphical interface dependencies:
 
@@ -95,20 +85,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pkgin install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gmake harfbuzz jansson lame libass libiconv libogg libopus libsamplerate libtheora libvorbis libvpx libxml2 m4 meson nasm patch pkgconf python37 speex
-
-Build and install `x264-devel` from [pkgsrc](https://www.netbsd.org/docs/software/packages.html).
-
-    cd /usr/pkgsrc/multimedia/x264-devel
-    sudo make install
-
-If you are running NetBSD 9, install the additional dependencies.
-
-    sudo pkgin install gtar-base libtool-base lzmalib ninja-build
-
-If you are running NetBSD 8, install the additional dependencies.
-
-    sudo pkgin install gtar libtool lzma ninja
+    sudo pkgin install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gmake gtar-base harfbuzz jansson lame libass libiconv libogg libopus libsamplerate libtheora libtool-base libvorbis libvpx libxml2 lzmalib m4 meson nasm ninja-build patch pkgconf python37 speex x264-devel
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
