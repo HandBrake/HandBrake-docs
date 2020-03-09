@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 9.11 Stretch through 10.2 Buster.
+The following instructions are for [Debian](https://www.debian.org) 9.12 Stretch through 10.3 Buster.
 
 Basic requirements to run commands:
 
@@ -68,7 +68,7 @@ Additional Debian 10 dependencies:
 Additional Debian 9 dependencies not available in the base repository:
 
 - meson [backports]
-- nasm [sid]
+- nasm [buster]
 
 Intel Quick Sync Video dependencies (optional):
 
@@ -103,10 +103,10 @@ If you are running Debian 9, the `meson` package is too old. Install a newer ver
     sudo apt-get update
     sudo apt-get -t stretch-backports install meson
 
-If you are running Debian 9, the `nasm` package is too old. Install a newer version provided by Debian sid (unstable/development distribution)[^nasm-sid].
+If you are running Debian 9, the `nasm` package is too old. Install a newer version provided by the Buster (Debian 10) repository[^nasm-newer].
 
-    sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.13.03-1_amd64.deb' -o /var/cache/apt/archives/nasm_2.13.03-1_amd64.deb
-    sudo dpkg -i /var/cache/apt/archives/nasm_2.13.03-1_amd64.deb
+    sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14.02-1_amd64.deb' -o /var/cache/apt/archives/nasm_2.14.02-1_amd64.deb
+    sudo dpkg -i /var/cache/apt/archives/nasm_2.14.02-1_amd64.deb
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
@@ -119,4 +119,4 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
 
 Debian is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 
-[^nasm-sid]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
+[^nasm-newer]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.

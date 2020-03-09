@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Debian Abhängigkeiten installieren
 =================================
 
-Die folgenden Anweisungen gelten für [Debian](https://www.debian.org) 9.11 Stretch bis 10.1 Buster.
+Die folgenden Anweisungen gelten für [Debian](https://www.debian.org) 9.12 Stretch bis 10.1 Buster.
 
 Grundvoraussetzung um Kommandos zu starten:
 
@@ -68,7 +68,7 @@ Zusätzliche Debian 10 Abhängigkeiten:
 Zusätzliche Debian 9 Abhängigkeiten die nicht im Base Repository zu finden sind:
 
 - meson [backports]
-- nasm [sid]
+- nasm [buster]
 
 Abhängigkeiten für die Grafische Benutzeroberfläche:
 
@@ -97,10 +97,16 @@ Solltest du Debian 10 verwenden, installiere die zusätzlichen Abhängigkeiten d
 
     sudo apt-get install meson nasm
 
-Falls du Debian 9 verwendest, ist das `nasm` Paket zu alt. Installiere eine neuere Version welche von Debian sid (unstable/development distribution) bereitgestellt wird[^nasm-sid].
+Falls du Debian 9 verwendest, ist das `meson` Paket zu alt. Installiere eine neuere Version welche von Backports Repository bereitgestellt wird.
 
-    sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.13.03-1_amd64.deb' -o /var/cache/apt/archives/nasm_2.13.03-1_amd64.deb
-    sudo dpkg -i /var/cache/apt/archives/nasm_2.13.03-1_amd64.deb
+    sudo add-apt-repository -s 'deb http://deb.debian.org/debian stretch-backports main'
+    sudo apt-get update
+    sudo apt-get -t stretch-backports install meson
+
+Falls du Debian 9 verwendest, ist das `nasm` Paket zu alt. Installiere eine neuere Version welche von Buster (Debian 10) Repository bereitgestellt wird[^nasm-newer].
+
+    sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14.02-1_amd64.deb' -o /var/cache/apt/archives/nasm_2.14.02-1_amd64.deb
+    sudo dpkg -i /var/cache/apt/archives/nasm_2.14.02-1_amd64.deb
 
 Um die GTK [GUI](abbr:Grafische Benutzeroberfläche) zu bauen, installiere folgende abhängigkeiten.
 
@@ -113,5 +119,5 @@ Für Intel Quick Sync Video Unterstützung, installiere die QSV Abhängigkeiten.
  
 Debian ist nun bereit HandBrake zu bauen. Siehe [HandBrake für Linux bauen](build-linux.html) für weiter Anweisungen.
 
-[^nasm-sid]: Die Installation von Paketen, die neuer sind als die aus dem base Repository, könnte zu Inkompatibilitäten mit anderer Software führen, welche eine bestimmte Paketversion erwarten.
+[^nasm-newer]: Die Installation von Paketen, die neuer sind als die aus dem base Repository, könnte zu Inkompatibilitäten mit anderer Software führen, welche eine bestimmte Paketversion erwarten.
 
