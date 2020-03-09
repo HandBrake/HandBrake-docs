@@ -924,6 +924,35 @@ article.docs .footnotes + footer {
     }
 }
 
+/* Get a new phone? */
+@media (max-height: 349px) and (max-width: 349px) {
+    article.docs header + * {
+        margin-top: 3.75rem; /* 2rem + header .super height */
+    }
+
+    article.docs header .super {
+        height: 2rem;
+    }
+
+    article.docs header .super .logo {
+        padding: .25rem .25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    article.docs header .super .logo:hover {
+        margin-right: .46875rem;
+    }
+
+    article.docs nav {
+        padding: .3125rem .9375rem .9375rem;
+    }
+
+    article.docs h1 {
+        font-size: 2em;
+    }
+}
+
 /* @2x */
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
 
