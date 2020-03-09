@@ -244,7 +244,6 @@ article.docs nav .navigation ul {
 
 article.docs.js nav .navigation > ul {
     display: none;
-    max-height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -781,13 +780,21 @@ article.docs .footnotes + footer {
         left: 0;
         margin: .166666em 15px .166666em;
         width: 275px;
-        max-height: 900px;
+        max-height: 100vh;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 
     article.docs.article.js nav .navigation {
         display: block;
+    }
+
+    article.docs.js nav .navigation > ul {
+        max-height: calc(80vh - 20rem);
+    }
+
+    article.docs.article.js nav .navigation > ul:last-child {
+        border-bottom: 1px solid whitesmoke;
     }
 
     article.docs header + * {
