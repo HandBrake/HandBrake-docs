@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Debian Abhängigkeiten installieren
 =================================
 
-Die folgenden Anweisungen gelten für [Debian](https://www.debian.org) 9.12 Stretch bis 10.1 Buster.
+Die folgenden Anweisungen gelten für [Debian](https://www.debian.org) 9.12 Stretch bis 10.3 Buster.
 
 Grundvoraussetzung um Kommandos zu starten:
 
