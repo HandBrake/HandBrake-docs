@@ -134,7 +134,7 @@ See [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html), [Bui
 
 ### Mac
 
-HandBrake is supported on recent versions of macOS[^apple-eol]. [VLC](https://www.videolan.org/vlc/) is recommended for viewing MKV (Matroska) media files.
+HandBrake is supported on recent versions of macOS[^apple-eol].
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
@@ -149,12 +149,14 @@ HandBrake is supported on recent versions of macOS[^apple-eol]. [VLC](https://ww
 | 10.7 Lion          | Unsupported         | HandBrake 1.1.2         | End of life.                       |
 | 10.6 Snow Leopard  | Unsupported         | HandBrake 0.10.5        | End of life.                       |
 
+[VLC](https://www.videolan.org/vlc/) is recommended for viewing media files, notably Matroska (MKV), which is not natively supported on macOS.
+
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
 ### Windows
 
-HandBrake is supported on most recent Windows versions and requires Microsoft .NET Framework 4.8 or later. [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
+HandBrake is supported on recent Windows versions and requires [Microsoft .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) 4.8 or later.
 
 | Windows Version | Status              | Last Compatible Version | Notes        |
 |-----------------|---------------------|-------------------------|--------------|
@@ -163,6 +165,8 @@ HandBrake is supported on most recent Windows versions and requires Microsoft .N
 | Windows 7 SP1   | Deprecated in 1.1.0 |                         | End of life. |
 | Windows Vista   | Unsupported         | HandBrake 1.0.7         | End of life. |
 | Windows XP      | Unsupported         | HandBrake 0.9.9         | End of life. |
+
+[VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
 
 <!-- /.system-windows -->
 
