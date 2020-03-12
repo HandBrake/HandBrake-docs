@@ -22,7 +22,7 @@ The following is the minimum level of hardware that HandBrake supports. While it
 
 <!-- .system-linux -->
 
-### Linux
+### BSD and Linux
 
 - Processor: Intel Core i3, AMD FX / 2014+ APU, or better
 - Free Memory:
