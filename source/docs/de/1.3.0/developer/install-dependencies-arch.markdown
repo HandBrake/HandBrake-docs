@@ -50,7 +50,6 @@ Abhängigkeiten:
 - python2
 - speex
 - x264
-- x265
 - xz
 
 Abhängigkeiten für die grafische Oberfläche:
@@ -71,7 +70,7 @@ Intel Quick Sync Video Abhängigkeiten:
 
 Installiere Abhängigkeiten:
 
-    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 x265 xz
+    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 xz
 
 Um die grafische Benutzeroberfläche zu bauen, installiere zusätzlich die Abhängigkeiten. Hierfür ist der GNOME Desktop mit den zugehörigen Paketen Voraussetzung; z.B.: installiert mit `pacman -S xorg xorg-server && pacman -S gnome gnome-extra`:
 
