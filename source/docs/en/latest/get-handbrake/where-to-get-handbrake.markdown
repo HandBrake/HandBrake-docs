@@ -55,6 +55,7 @@ Broken third-party packages/builds include but are not limited to:
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - FreeBSD: `handbrake`
 - Gentoo: `handbrake`
+- NixOS: `handbrake`
 - openSUSE Packman: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - RPM Fusion: `handbrake`, `handbrake-cli`
 - Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`

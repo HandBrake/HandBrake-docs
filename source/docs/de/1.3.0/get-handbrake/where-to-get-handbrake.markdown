@@ -55,6 +55,7 @@ Ausschnitt von disfunktionalen Drittanbieter Packages/Builds (nicht vollständig
 - Debian Multimedia: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - FreeBSD: `handbrake`
 - Gentoo: `handbrake`
+- NixOS: `handbrake`
 - openSUSE Packman: `handbrake`, `handbrake-cli`, `handbrake-gtk`
 - RPM Fusion: `handbrake`, `handbrake-cli`
 - Ubuntu Universe: `handbrake`, `handbrake-cli`, `handbrake-dbg`
