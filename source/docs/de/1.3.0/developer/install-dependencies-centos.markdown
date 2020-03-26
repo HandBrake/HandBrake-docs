@@ -116,6 +116,8 @@ Grundvoraussetzungen um Kommandos zu starten:
 Abhängigkeiten:
 
 - Development Tools
+- bzip2-devel
+- cmake
 - fribidi-devel
 - git
 - jansson-devel
@@ -132,7 +134,7 @@ Abhängigkeiten:
 Zusätzliche Abhängigkeiten die nicht im Base Repository sind:
 
 - devtoolset-7 [SCL] (optional/empfohlen für HandBrake's [CLI](abbr:Command Line Interface))
-- lame-devel [RPM Fusion]
+- lame-devel [EPEL]
 - libass-devel [EPEL]
 - libvpx
 - meson [EPEL]
@@ -165,12 +167,18 @@ Abhängigkeiten installieren:
 
     sudo yum update
     sudo yum groupinstall "Development Tools"
-    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libxml2-devel numactl-devel python3 speex-devel xz-devel
+    sudo yum install bzip2-devel cmake fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libxml2-devel numactl-devel python3 speex-devel xz-devel
+
+Die `lame-devel` und `x264-devel` Pakete gibt es jetzt im EPEL Repository und im RPM Fusion Repository. Falls du zuvor das [ZMREPO](https://zmrepo.zoneminder.com) Repository für diese Pakete installiert hast, entferne sie und das Repository bevor du weitermachst.
+
+    # Nur notwendig falls zuvor ZMREPO installiert wurde
+    sudo yum repo-pkgs zmrepo remove
+    sudo yum remove zmrepo
 
 Installiere das [EPEL](https://fedoraproject.org/wiki/EPEL) repository und zugehörige Abhängigkeiten.
 
     sudo yum install epel-release
-    sudo yum install libass-devel meson ninja-build
+    sudo yum install lame-devel libass-devel meson ninja-build
 
 Das `opus-devel` Paket von CentOS 7 ist zu alt. Installiere eine neuere Version via EPEL für CentOS 6[^opus-el6].
 
@@ -193,7 +201,7 @@ Das `libvpx-devel` package von CentOS 7 ist zu alt. Baue und installiere eine ne
     ./configure --enable-shared --enable-static --as=nasm --enable-pic --enable-runtime-cpu-detect --enable-vp8 --enable-vp9
     make -j$(nproc)
     sudo make install
-    ..
+    cd ..
 
     # Shared Libraries auffindbar machen
     export CFLAGS="${CFLAGS:-} -I/usr/local/include"
@@ -205,17 +213,10 @@ Das `libvpx-devel` package von CentOS 7 ist zu alt. Baue und installiere eine ne
         sudo ldconfig
     fi
 
-
-Die `lame-devel` und `x264-devel` Pakete gibt es jetzt im RPM Fusion Repository. Falls du zuvor das [ZMREPO](https://zmrepo.zoneminder.com) Repository für diese Pakete installiert hast, entferne sie und das Repository bevor du weitermachst.
-
-    # Nur notwendig falls zuvor ZMREPO installiert wurde
-    sudo yum repo-pkgs zmrepo remove
-    sudo yum remove zmrepo
-
 Installiere das freie [RPM Fusion](http://rpmfusion.org) Repository und zugehörige Abhängigkeiten.
 
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
-    sudo yum install lame-devel x264-devel
+    sudo yum install x264-devel
 
 Um die GTK [GUI](abbr:Grafische Benutzeroberfläche) zu bauen, installiere die zugehörigen Abhängigkeiten.
 

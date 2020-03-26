@@ -116,6 +116,8 @@ Basic requirements to run commands:
 Dependencies:
 
 - Development Tools
+- bzip2-devel
+- cmake
 - fribidi-devel
 - git
 - jansson-devel
@@ -132,7 +134,7 @@ Dependencies:
 Additional dependencies not available in the base repository:
 
 - devtoolset-7 [SCL] (optional/recommended for HandBrake [CLI](abbr:Command Line Interface))
-- lame-devel [RPM Fusion]
+- lame-devel [EPEL]
 - libass-devel [EPEL]
 - libvpx
 - meson [EPEL]
@@ -165,12 +167,18 @@ Install dependencies.
 
     sudo yum update
     sudo yum groupinstall "Development Tools"
-    sudo yum install fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libxml2-devel numactl-devel python3 speex-devel xz-devel
+    sudo yum install bzip2-devel cmake fribidi-devel git jansson-devel libogg-devel libsamplerate-devel libtheora-devel libvorbis-devel libxml2-devel numactl-devel python3 speex-devel xz-devel
+
+The `lame-devel` and `x264-devel` packages are now provided by the EPEL and RPM Fusion repositories, respectively. If you previously installed the [ZMREPO](https://zmrepo.zoneminder.com) repository for these packages, remove them and the repository before continuing.
+
+    # Only necessary if previously installed ZMREPO
+    sudo yum repo-pkgs zmrepo remove
+    sudo yum remove zmrepo
 
 Install the [EPEL](https://fedoraproject.org/wiki/EPEL) repository and related additional dependencies.
 
     sudo yum install epel-release
-    sudo yum install libass-devel meson ninja-build
+    sudo yum install lame-devel libass-devel meson ninja-build
 
 The `opus-devel` package provided by CentOS 7 is too old. Install a newer version provided by EPEL for CentOS 6[^opus-el6].
 
@@ -193,7 +201,7 @@ The `libvpx-devel` package provided by CentOS 7 is too old. Build and install a 
     ./configure --enable-shared --enable-static --as=nasm --enable-pic --enable-runtime-cpu-detect --enable-vp8 --enable-vp9
     make -j$(nproc)
     sudo make install
-    ..
+    cd ..
 
     # make shared libraries findable
     export CFLAGS="${CFLAGS:-} -I/usr/local/include"
@@ -205,16 +213,10 @@ The `libvpx-devel` package provided by CentOS 7 is too old. Build and install a 
         sudo ldconfig
     fi
 
-The `lame-devel` and `x264-devel` packages are now provided by the RPM Fusion repository. If you previously installed the [ZMREPO](https://zmrepo.zoneminder.com) repository for these packages, remove them and the repository before continuing.
-
-    # Only necessary if previously installed ZMREPO
-    sudo yum repo-pkgs zmrepo remove
-    sudo yum remove zmrepo
-
 Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
 
     sudo yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
-    sudo yum install lame-devel x264-devel
+    sudo yum install x264-devel
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
