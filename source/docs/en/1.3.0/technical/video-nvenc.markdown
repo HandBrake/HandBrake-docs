@@ -64,7 +64,8 @@ The following value types are supported (each option only accepts one value type
 ### Options list
 
 | Option           | Type        | H.264 | H.265 | Comment                                                                        |
-|------------------|-------------|------------------------------------------------------------------------------------------------|
+|------------------|-------------|-------|-------|--------------------------------------------------------------------------------|
+| gpu              | string      |   X   |   X   | GPU selection. Options: any (default), 0 (first GPU), 1 (second GPU), etc.     |
 | coder            | string      |   X   |       | Options: auto, cabac, cavlc                                                    |
 | temporal-aq      | boolean     |   X   |   X   |                                                                                |
 | spatial-aq       | boolean     |   X   |   X   | For H.265, use "spatial_aq" for H.265 encodes. Note the underscore             |
