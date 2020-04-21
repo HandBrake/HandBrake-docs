@@ -63,16 +63,16 @@ The following value types are supported (each option only accepts one value type
 
 ### Options list
 
-| Option           | Type        | H.264 | H.265 | Comment                                                                        |
-|------------------|-------------|:-----:|:-----:|--------------------------------------------------------------------------------|
-| preanalysis      | boolean     |   ✓   |   ✓   |                                                                                |
-| vbaq             | boolean     |   ✓   |   ✓   |                                                                                |
-| enforce_hrd      | boolean     |   ✓   |   ✓   |                                                                                |
-| max_au_size      | int         |   ✓   |   ✓   |                                                                                |
-| me_half_pel      | boolean     |   ✓   |   ✓   |                                                                                |
-| me_quarter_pel   | boolean     |   ✓   |   ✓   |                                                                                |
-| coder            | string      |       |   ✓   | Options: auto, cabac, cavlc                                                    |
-| bf_delta_qp      | boolean     |       |   ✓   | B-Picture Delta QP                                                             |
-| bf_ref           | boolean     |       |   ✓   | Enable Reference to B-Frames                                                   |
-| bf_ref_delta_qp  | boolean     |       |   ✓   | Reference B-Picture Delta QP                                                   |
-| intra_refresh_mb | int         |       |   ✓   |                                                                                |
+| Option           | Type        | H.264 | H.265 | Detail                                                                               |
+|------------------|-------------|:-----:|:-----:|--------------------------------------------------------------------------------------|
+| coder            | string      |   ✓   |       | Coder selection. Values: `auto` (default), `cabac`, `cavlc`.                         |
+| preanalysis      | boolean     |   ✓   |   ✓   | Set to `1` to enable preliminary analysis, `0` to disable (default).                 |
+| vbaq             | boolean     |   ✓   |   ✓   | Set to `1` to enable Variance Based Adaptive Quantization, `0` to disable (default). |
+| enforce_hrd      | boolean     |   ✓   |   ✓   | Set to `1` to enforce Hypothetical Reference Decoder, `0` to disable (default).      |
+| max_au_size      | int         |   ✓   |   ✓   | Maximum Access Unit size for rate control, in bits. Default: `0` (automatic).        |
+| me_half_pel      | boolean     |   ✓   |   ✓   | Set to `1` to enable half-pixel motion estimation (default), `0` to disable.         |
+| me_quarter_pel   | boolean     |   ✓   |   ✓   | Set to `1` to enable quarter-pixel motion estimation (default), `0` to disable.      |
+| bf_delta_qp      | int         |   ✓   |       | B-Picture Delta QP. The values scale is `-10`–`10`. Default: `4`.                    |
+| bf_ref           | boolean     |   ✓   |       | Set to `1` to enable Reference B-Frames (default), `0` to disable.                   |
+| bf_ref_delta_qp  | int         |   ✓   |       | Reference B-Picture Delta QP. The values scale is `-10`–`10`. Default: `4`.          |
+| intra_refresh_mb | int         |   ✓   |       | Number of Intra-Refresh Macroblocks per slot. Default: `0` (automatic).              |
