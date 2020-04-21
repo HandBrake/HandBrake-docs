@@ -64,15 +64,15 @@ The following value types are supported (each option only accepts one value type
 ### Options list
 
 | Option           | Type        | H.264 | H.265 | Comment                                                                        |
-|------------------|-------------|------------------------------------------------------------------------------------------------|
-| preanalysis      | boolean     |   X   |   X   |                                                                                |
-| vbaq             | boolean     |   X   |   X   |                                                                                |
-| enforce_hrd      | boolean     |   X   |   X   |                                                                                |
-| max_au_size      | int         |   X   |   X   |                                                                                |
-| me_half_pel      | boolean     |   X   |   X   |                                                                                |
-| me_quarter_pel   | boolean     |   X   |   X   |                                                                                |
-| coder            | string      |       |   X   | Options: auto, cabac, cavlc                                                    |
-| bf_delta_qp      | boolean     |       |   X   | B-Picture Delta QP                                                             |
-| bf_ref           | boolean     |       |   X   | Enable Reference to B-Frames                                                   |
-| bf_ref_delta_qp  | boolean     |       |   X   | Reference B-Picture Delta QP                                                   |
-| intra_refresh_mb | int         |       |   X   |                                                                                |
+|------------------|-------------|:-----:|:-----:|--------------------------------------------------------------------------------|
+| preanalysis      | boolean     |   ✓   |   ✓   |                                                                                |
+| vbaq             | boolean     |   ✓   |   ✓   |                                                                                |
+| enforce_hrd      | boolean     |   ✓   |   ✓   |                                                                                |
+| max_au_size      | int         |   ✓   |   ✓   |                                                                                |
+| me_half_pel      | boolean     |   ✓   |   ✓   |                                                                                |
+| me_quarter_pel   | boolean     |   ✓   |   ✓   |                                                                                |
+| coder            | string      |       |   ✓   | Options: auto, cabac, cavlc                                                    |
+| bf_delta_qp      | boolean     |       |   ✓   | B-Picture Delta QP                                                             |
+| bf_ref           | boolean     |       |   ✓   | Enable Reference to B-Frames                                                   |
+| bf_ref_delta_qp  | boolean     |       |   ✓   | Reference B-Picture Delta QP                                                   |
+| intra_refresh_mb | int         |       |   ✓   |                                                                                |

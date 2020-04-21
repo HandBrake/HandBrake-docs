@@ -64,15 +64,15 @@ The following value types are supported (each option only accepts one value type
 ### Options list
 
 | Option           | Type        | H.264 | H.265 | Comment                                                                        |
-|------------------|-------------|-------|-------|--------------------------------------------------------------------------------|
-| gpu              | string      |   X   |   X   | GPU selection. Options: any (default), 0 (first GPU), 1 (second GPU), etc.     |
-| coder            | string      |   X   |       | Options: auto, cabac, cavlc                                                    |
-| temporal-aq      | boolean     |   X   |   X   |                                                                                |
-| spatial-aq       | boolean     |   X   |   X   | For H.265, use "spatial_aq" for H.265 encodes. Note the underscore             |
-| aq-strength      | int         |   X   |   X   | When Spatial AQ is enabled, the scale is from 1 (low) - 15 (aggressive)        |
-| nonref_p         | boolean     |   X   |   X   | Enable automatic insertion of non-reference P-frames                           |
-| strict_gop       | boolean     |   X   |   X   | Minimize GOP to GOP rate fluctuations                                          |
-| weighted_pred    | boolean     |   X   |   X   |                                                                                |
-| rc-lookahead     | int         |   X   |   X   | 0 to 27                                                                        |
-| b_adapt          | boolean     |   X   |       | Set this to 0 to disable adaptive B-frame decision when lookahead is enabled   |
-| no-scenecut      | boolean     |   X   |   X   | 1 = Disable adaptive I-frame insertion at scene cuts when using lookahead      |
+|------------------|-------------|:-----:|:-----:|--------------------------------------------------------------------------------|
+| gpu              | string      |   ✓   |   ✓   | GPU selection. Options: any (default), 0 (first GPU), 1 (second GPU), etc.     |
+| coder            | string      |   ✓   |       | Options: auto, cabac, cavlc                                                    |
+| temporal-aq      | boolean     |   ✓   |   ✓   |                                                                                |
+| spatial-aq       | boolean     |   ✓   |   ✓   | For H.265, use "spatial_aq" for H.265 encodes. Note the underscore             |
+| aq-strength      | int         |   ✓   |   ✓   | When Spatial AQ is enabled, the scale is from 1 (low) - 15 (aggressive)        |
+| nonref_p         | boolean     |   ✓   |   ✓   | Enable automatic insertion of non-reference P-frames                           |
+| strict_gop       | boolean     |   ✓   |   ✓   | Minimize GOP to GOP rate fluctuations                                          |
+| weighted_pred    | boolean     |   ✓   |   ✓   |                                                                                |
+| rc-lookahead     | int         |   ✓   |   ✓   | 0 to 27                                                                        |
+| b_adapt          | boolean     |   ✓   |       | Set this to 0 to disable adaptive B-frame decision when lookahead is enabled   |
+| no-scenecut      | boolean     |   ✓   |   ✓   | 1 = Disable adaptive I-frame insertion at scene cuts when using lookahead      |
