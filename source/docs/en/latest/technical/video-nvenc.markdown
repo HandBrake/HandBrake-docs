@@ -63,16 +63,17 @@ The following value types are supported (each option only accepts one value type
 
 ### Options list
 
-| Option           | Type        | H.264 | H.265 | Comment                                                                        |
-|------------------|-------------|:-----:|:-----:|--------------------------------------------------------------------------------|
-| gpu              | string      |   ✓   |   ✓   | GPU selection. Options: any (default), 0 (first GPU), 1 (second GPU), etc.     |
-| coder            | string      |   ✓   |       | Options: auto, cabac, cavlc                                                    |
-| temporal-aq      | boolean     |   ✓   |   ✓   |                                                                                |
-| spatial-aq       | boolean     |   ✓   |   ✓   | For H.265, use "spatial_aq" for H.265 encodes. Note the underscore             |
-| aq-strength      | int         |   ✓   |   ✓   | When Spatial AQ is enabled, the scale is from 1 (low) - 15 (aggressive)        |
-| nonref_p         | boolean     |   ✓   |   ✓   | Enable automatic insertion of non-reference P-frames                           |
-| strict_gop       | boolean     |   ✓   |   ✓   | Minimize GOP to GOP rate fluctuations                                          |
-| weighted_pred    | boolean     |   ✓   |   ✓   |                                                                                |
-| rc-lookahead     | int         |   ✓   |   ✓   | 0 to 27                                                                        |
-| b_adapt          | boolean     |   ✓   |       | Set this to 0 to disable adaptive B-frame decision when lookahead is enabled   |
-| no-scenecut      | boolean     |   ✓   |   ✓   | 1 = Disable adaptive I-frame insertion at scene cuts when using lookahead      |
+| Option           | Type        | H.264 | H.265 | Detail                                                                                                    |
+|------------------|-------------|:-----:|:-----:|-----------------------------------------------------------------------------------------------------------|
+| gpu              | string      |   ✓   |   ✓   | GPU selection. Values: `any` (default), `0` (first GPU), `1` (second GPU), etc.                           |
+| coder            | string      |   ✓   |       | Coder selection. Values: `auto` (default), `cabac`, `cavlc`.                                              |
+| temporal-aq      | boolean     |   ✓   |   ✓   | Set to `1` to enable Temporal Adaptive Quality, `0` to disable (default).                                 |
+| spatial-aq       | boolean     |   ✓   |       | Set to `1` to enable Spatial Adaptive Quality, `0` to disable (default). Note the hyphen for H.264.       |
+| spatial_aq       | boolean     |       |   ✓   | Set to `1` to enable Spatial Adaptive Quality, `0` to disable (default). Note the underscore for H.265.   |
+| aq-strength      | int         |   ✓   |   ✓   | When Spatial AQ is enabled, the values scale is `1` (low) – `15` (aggressive). Default: `8`.              |
+| nonref_p         | boolean     |   ✓   |   ✓   | Set to `1` to enable automatic insertion of non-reference P-frames, `0` to disable (default).             |
+| strict_gop       | boolean     |   ✓   |   ✓   | Set to `1` to minimize GOP-to-GOP rate fluctuations, `0` to disable (default).                            |
+| weighted_pred    | boolean     |   ✓   |   ✓   | Set to `1` to enable weighted prediction, `0` to disable (default).                                       |
+| rc-lookahead     | int         |   ✓   |   ✓   | Number of frames to look ahead for rate control. Default: `0`.                                            |
+| b_adapt          | boolean     |   ✓   |       | When lookahead is enabled, set this to `1` to enable adaptive B-frame decision (default), `0` to disable. |
+| no-scenecut      | boolean     |   ✓   |   ✓   | When lookahead is enabled, set this to `1` to enable adaptive I-frame insertion at scene cuts (default), `0` to disable. |
