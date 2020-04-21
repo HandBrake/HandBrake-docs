@@ -38,7 +38,7 @@ The HandBrake Team welcomes contributions from user interface and graphic design
 
 ### Code
 
-Developers wanting to contribute code should check out the [HandBrake source code on GitHub](https://github.com/HandBrake/HandBrake) and a create pull request on GitHub for each contribution. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
+Developers wanting to contribute code should check out the [HandBrake source code on GitHub](https://github.com/HandBrake/HandBrake) and create a pull request on GitHub for each contribution. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
 
 [Open issues](https://github.com/HandBrake/HandBrake/issues) are good candidates for learning and fixing various parts of the code base.
 
