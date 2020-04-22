@@ -460,6 +460,12 @@ article.docs td {
     padding: .5em .66666em;
 }
 
+article.docs td > code {
+    padding: 0 .2em;
+    text-decoration: underline dotted steelblue;
+    text-decoration-thickness: .1em;
+}
+
 article.docs footer {
 	border-top: 1px solid lightgray;
 	margin-top: 2em;
