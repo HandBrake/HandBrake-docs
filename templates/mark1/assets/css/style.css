@@ -467,8 +467,8 @@ article.docs td > code {
 }
 
 article.docs footer {
-	border-top: 1px solid lightgray;
-	margin-top: 2em;
+    border-top: 1px solid lightgray;
+    margin-top: 2em;
 }
 
 article.docs.license footer {
