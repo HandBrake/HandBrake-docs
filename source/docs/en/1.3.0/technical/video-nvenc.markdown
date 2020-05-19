@@ -67,7 +67,8 @@ The following value types are supported (each option only accepts one value type
 |------------------|-------------|:-----:|:-----:|-----------------------------------------------------------------------------------------------------------|
 | gpu              | string      |   ✓   |   ✓   | GPU selection. Values: `any` (default), `0` (first GPU), `1` (second GPU), etc.                           |
 | coder            | string      |   ✓   |       | Coder selection. Values: `auto` (default), `cabac`, `cavlc`.                                              |
-| temporal-aq      | boolean     |   ✓   |   ✓   | Set to `1` to enable Temporal Adaptive Quality, `0` to disable (default).                                 |
+| temporal-aq      | boolean     |   ✓   |       | Set to `1` to enable Temporal Adaptive Quality, `0` to disable (default). Note the hyphen for H.264.      |
+| temporal_aq      | boolean     |       |   ✓   | Set to `1` to enable Temporal Adaptive Quality, `0` to disable (default). Note the underscore for H.265. *Requires RTX Turing 1660 or better.* |
 | spatial-aq       | boolean     |   ✓   |       | Set to `1` to enable Spatial Adaptive Quality, `0` to disable (default). Note the hyphen for H.264.       |
 | spatial_aq       | boolean     |       |   ✓   | Set to `1` to enable Spatial Adaptive Quality, `0` to disable (default). Note the underscore for H.265.   |
 | aq-strength      | int         |   ✓   |   ✓   | When Spatial AQ is enabled, the values scale is `1` (low) – `15` (aggressive). Default: `8`.              |
