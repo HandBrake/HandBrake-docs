@@ -73,8 +73,9 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
+| Fedora 32      | Supported           |                         |                               |
 | Fedora 31      | Supported           |                         |                               |
-| Fedora 30      | Deprecated in 1.3.0 |                         | End of life expected Q4 2020. |
+| Fedora 30      | Deprecated in 1.3.0 |                         | End of life.                  |
 | Fedora 29      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 | Fedora 28      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 

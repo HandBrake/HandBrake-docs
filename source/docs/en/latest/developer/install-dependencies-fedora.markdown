@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Fedora
 =================================
 
-The following instructions are for [Fedora](https://getfedora.org) 30 and 31.
+The following instructions are for [Fedora](https://getfedora.org) 30 through 32.
 
 Basic requirements to run commands:
 
