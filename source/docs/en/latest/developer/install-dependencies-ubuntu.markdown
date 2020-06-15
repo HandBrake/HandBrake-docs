@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Ubuntu
 =================================
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 20.04 (Focal Fossa).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 20.04 (Focal Fossa).
 
 Basic requirements to run commands:
 
@@ -47,12 +47,14 @@ Dependencies:
 - libtheora-dev
 - libtool
 - libtool-bin
+- libturbojpeg0-dev
 - libvorbis-dev
 - libx264-dev
 - libxml2-dev
 - libvpx-dev
 - m4
 - make
+- meson
 - nasm
 - ninja-build
 - patch
@@ -60,15 +62,6 @@ Dependencies:
 - python
 - tar
 - zlib1g-dev
-
-Additional dependencies for Ubuntu 18.10 and later:
-
-- meson
-
-Additional Ubuntu 18.04 LTS dependencies:
-
-- python3-pip
-- meson (via pip3)
 
 Intel Quick Sync Video dependencies (optional):
 
@@ -92,16 +85,7 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake autopoint build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make nasm ninja-build patch pkg-config python tar zlib1g-dev
-
-If you are running Ubuntu 18.10 or later, install the additional dependencies.
-
-    sudo apt-get install meson
-
-If you are running Ubuntu 18.04 LTS, the `meson` package is too old. Install a newer version provided by the [Python Package Index](https://pypi.org/).
-
-    sudo apt-get install python3-pip
-    sudo pip3 install meson
+    sudo apt-get install autoconf automake autopoint build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
