@@ -36,6 +36,7 @@ Dependencies:
 - lame
 - libass
 - libbluray
+- libjpeg-turbo
 - libogg
 - libsamplerate
 - libtheora
@@ -70,7 +71,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 xz
+    sudo pacman -S base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libjpeg-turbo libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python2 speex x264 xz
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 

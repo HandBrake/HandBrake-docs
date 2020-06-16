@@ -16,7 +16,9 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 9.12 Stretch through 10.3 Buster.
+The following instructions are for [Debian](https://www.debian.org) 9 Stretch through 10 Buster.
+
+*HandBrake requires gettext 0.20.0, which Debian does not yet provide. See [https://tracker.debian.org/pkg/gettext](https://tracker.debian.org/pkg/gettext). As a temporary workaround, you may wish to build and install a newer version of gettext from source. While no obvious issues have been observed, be aware that installing software newer than the packages provided by your distribution may affect other system packages relying on a specific version.*
 
 Basic requirements to run commands:
 
