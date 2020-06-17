@@ -30,6 +30,7 @@ Dependencies[^rebuild]:
 - jansson
 - lame
 - libass
+- libjpeg-turbo
 - libogg
 - libsamplerate
 - libtheora
@@ -46,7 +47,7 @@ Dependencies[^rebuild]:
 
 Install dependencies.
 
-    sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libogg libsamplerate libtheora libvorbis libvpx app-arch/lzma meson nasm ninja numactl opus speex x264
+    sudo emerge --ask fribidi dev-vcs/git harfbuzz jansson lame libass libjpeg-turbo libogg libsamplerate libtheora libvorbis libvpx app-arch/lzma meson nasm ninja numactl opus speex x264
 
 Gentoo is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
 

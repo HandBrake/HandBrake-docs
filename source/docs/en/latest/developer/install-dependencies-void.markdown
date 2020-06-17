@@ -39,6 +39,7 @@ Dependencies:
 - lbzip2
 - libass-devel
 - libflac-devel
+- libjpeg-turbo
 - liblzma-devel
 - libnuma-devel
 - libogg-devel
@@ -81,7 +82,7 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo xbps-install -S
-    sudo xbps-install autoconf automake bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel git gcc harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libflac-devel liblzma-devel libnuma-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libvpx-devel libxml2-devel m4 make meson nasm ninja opus-devel patch pkg-config python3 speex-devel x264-devel
+    sudo xbps-install autoconf automake bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel git gcc harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libflac-devel libjpeg-turbo liblzma-devel libnuma-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libvpx-devel libxml2-devel m4 make meson nasm ninja opus-devel patch pkg-config python3 speex-devel x264-devel
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 

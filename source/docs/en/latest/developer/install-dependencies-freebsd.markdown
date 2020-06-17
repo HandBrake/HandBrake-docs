@@ -42,6 +42,7 @@ Dependencies:
 - lame (source port)
 - libass
 - libiconv
+- libjpeg-turbo
 - libogg
 - libsamplerate
 - libtheora
@@ -86,7 +87,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi gcc git lzma gmake gtar harfbuzz jansson libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 m4 meson nasm ninja opus patch pkgconf python speex
+    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi gcc git lzma gmake gtar harfbuzz jansson libass libiconv libjpeg-turbo libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 m4 meson nasm ninja opus patch pkgconf python speex
 
 Build and install the `lame` source port.
 
