@@ -22,7 +22,7 @@ Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) f
 
 ### Installing dependencies on Fedora
 
-The following instructions are for [Fedora](https://getfedora.org) 28 through 30.
+The following instructions are for [Fedora](https://getfedora.org) 30 through 32.
 
 Basic requirements to run commands:
 
@@ -59,7 +59,7 @@ Install the additional dependencies required to build the MinGW-w64 toolchain.
 
 ### Installing dependencies on Ubuntu
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 19.10 (Eoan Ermine).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 20.04 (Focal Fossa).
 
 Basic requirements to run commands:
 
@@ -78,6 +78,7 @@ Dependencies:
 - libtool-bin
 - m4
 - make
+- meson
 - nasm
 - ninja-build
 - patch
@@ -85,15 +86,6 @@ Dependencies:
 - python
 - tar
 - zlib1g-dev
-
-Additional dependencies for Ubuntu 18.10 and later:
-
-- meson
-
-Additional Ubuntu 18.04 LTS dependencies:
-
-- python3-pip
-- meson (via pip3)
 
 Additional MinGW-w64 toolchain dependencies:
 
@@ -108,16 +100,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make nasm ninja-build patch pkg-config python tar zlib1g-dev
-
-If you are running Ubuntu 18.10 or later, install the additional dependencies.
-
-    sudo apt-get install meson
-
-If you are running Ubuntu 18.04 LTS, the `meson` package is too old. Install a newer version provided by the [Python Package Index](https://pypi.org/).
-
-    sudo apt-get install python3-pip
-    sudo pip3 install meson
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 

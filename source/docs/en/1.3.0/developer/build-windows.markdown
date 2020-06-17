@@ -22,7 +22,7 @@ Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) f
 
 ### Installing dependencies on Fedora
 
-The following instructions are for [Fedora](https://getfedora.org) 28 through 30.
+The following instructions are for [Fedora](https://getfedora.org) 30 through 32.
 
 Basic requirements to run commands:
 
@@ -59,7 +59,7 @@ Install the additional dependencies required to build the MinGW-w64 toolchain.
 
 ### Installing dependencies on Ubuntu
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 19.10 (Eoan Ermine).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 18.04 LTS (Bionic Beaver) through 20.04 (Focal Fossa).
 
 Basic requirements to run commands:
 
