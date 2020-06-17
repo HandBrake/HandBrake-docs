@@ -79,10 +79,10 @@ Build and install the dependencies not available in the base repository.
     cd ..
 
     # make shared libraries findable
-    export CFLAGS="${CFLAGS:-} -I/usr/local/include"
-    echo 'export CFLAGS="${CFLAGS:-} -I/usr/local/include"' >> "${HOME}/.bashrc"
     if ! grep '\/usr\/local\/lib' /etc/ld.so.conf >/dev/null 2>&1; then
+        export CFLAGS="${CFLAGS:-} -I/usr/local/include"
         export LDFLAGS="${LDFLAGS:-} -L/usr/local/lib"
+        echo 'export CFLAGS="${CFLAGS:-} -I/usr/local/include"' >> "${HOME}/.bashrc"
         echo 'export LDFLAGS="${LDFLAGS:-} -L/usr/local/lib"' >> "${HOME}/.bashrc"
         echo '/usr/local/lib' | sudo tee --append /etc/ld.so.conf
         sudo ldconfig
