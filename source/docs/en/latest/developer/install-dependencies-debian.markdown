@@ -16,9 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 9 Stretch through 10 Buster.
-
-*HandBrake requires gettext 0.20.0, which Debian does not yet provide. See [https://tracker.debian.org/pkg/gettext](https://tracker.debian.org/pkg/gettext). As a temporary workaround, you may wish to build and install a newer version of gettext from source. While no obvious issues have been observed, be aware that installing software newer than the packages provided by your distribution may affect other system packages relying on a specific version.*
+The following instructions are for [Debian](https://www.debian.org) 10 Buster.
 
 Basic requirements to run commands:
 
@@ -49,28 +47,21 @@ Dependencies:
 - libtheora-dev
 - libtool
 - libtool-bin
+- libturbojpeg0-dev
 - libvorbis-dev
 - libx264-dev
 - libxml2-dev
 - libvpx-dev
 - m4
 - make
+- meson
+- nasm
 - ninja-build
 - patch
 - pkg-config
 - python
 - tar
 - zlib1g-dev
-
-Additional Debian 10 dependencies:
-
-- meson
-- nasm
-
-Additional Debian 9 dependencies not available in the base repository:
-
-- meson [backports]
-- nasm [buster]
 
 Intel Quick Sync Video dependencies (optional):
 
@@ -93,22 +84,11 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make ninja-build patch pkg-config python tar zlib1g-dev
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev
 
 If you are running Debian 10, install the additional dependencies.
 
     sudo apt-get install meson nasm
-
-If you are running Debian 9, the `meson` package is too old. Install a newer version provided by the backports repository.
-
-    sudo add-apt-repository -s 'deb http://deb.debian.org/debian stretch-backports main'
-    sudo apt-get update
-    sudo apt-get -t stretch-backports install meson
-
-If you are running Debian 9, the `nasm` package is too old. Install a newer version provided by the Buster (Debian 10) repository[^nasm-newer].
-
-    sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14.02-1_amd64.deb' -o /var/cache/apt/archives/nasm_2.14.02-1_amd64.deb
-    sudo dpkg -i /var/cache/apt/archives/nasm_2.14.02-1_amd64.deb
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
@@ -120,5 +100,3 @@ To build the GTK [GUI](abbr:Graphical User Interface), install the graphical int
     sudo apt-get install libwebkit2gtk-4.0-dev || sudo apt-get install libwebkitgtk-3.0-dev
 
 Debian is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
-
-[^nasm-newer]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
