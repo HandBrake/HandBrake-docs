@@ -90,32 +90,35 @@ Most Devices `Presets` use the broadly compatible [MP4 container](https://en.wik
 
 Each Devices `Preset` is named according to the device name or class, maximum resolution, and maximum frame rate it produces.
 
-| Preset                              | Type    | Video     | Audio                            | Encoding Speed |
-|-------------------------------------|---------|-----------|----------------------------------|----------------|
-| Android 1080p30                     | MP4     | H.264     | AAC stereo                       | Medium         |
-| Android 720p30                      | MP4     | H.264     | AAC stereo                       | Medium         |
-| Android 576p25                      | MP4     | H.264     | AAC stereo                       | Medium         |
-| Android 480p30                      | MP4     | H.264     | AAC stereo                       | Medium         |
-| Apple 2160p60 4K HEVC Surround      | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
-| Apple 1080p60 Surround              | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Apple 1080p30 Surround              | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Apple 720p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Apple 540p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Apple 240p30                        | MP4     | H.264     | AAC stereo                       | Medium         |
-| Chromecast 2160p60 4K HEVC Surround | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
-| Chromecast 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Fire TV 2160p60 4K HEVC Surround    | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
-| Fire TV 1080p30 Surround            | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Playstation 1080p30 Surround        | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Playstation 720p30                  | MP4     | H.264     | AAC stereo                       | Medium         |
-| Playstation 540p30                  | MP4     | H.264     | AAC stereo                       | Medium         |
-| Roku 2160p60 4K HEVC Surround       | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | **Very slow** |
-| Roku 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Roku 720p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Roku 576p25                         | MP4     | H.264     | AAC stereo                       | Medium         |
-| Roku 480p30                         | MP4     | H.264     | AAC stereo                       | Medium         |
-| Xbox 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Xbox Legacy 1080p30 Surround        | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Preset                               | Type    | Video     | Audio                            | Encoding Speed |
+|--------------------------------------|---------|-----------|----------------------------------|----------------|
+| Amazon Fire 2160p60 4K HEVC Surround | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
+| Amazon Fire 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Amazon Fire 720p30 Surround          | MP4     | H.264     | AAC stereo                       | Medium         |
+| Android 1080p30                      | MP4     | H.264     | AAC stereo                       | Medium         |
+| Android 720p30                       | MP4     | H.264     | AAC stereo                       | Medium         |
+| Android 576p25                       | MP4     | H.264     | AAC stereo                       | Medium         |
+| Android 480p30                       | MP4     | H.264     | AAC stereo                       | Medium         |
+| Apple 2160p60 4K HEVC Surround       | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
+| Apple 1080p60 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 720p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 540p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Apple 240p30                         | MP4     | H.264     | AAC stereo                       | Medium         |
+| Chromecast 2160p60 4K HEVC Surround  | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
+| Chromecast 1080p60 Surround          | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Chromecast 1080p30 Surround          | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Playstation 2160p60 4K Surround      | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Slow           |
+| Playstation 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Playstation 720p30                   | MP4     | H.264     | AAC stereo                       | Medium         |
+| Playstation 540p30                   | MP4     | H.264     | AAC stereo                       | Medium         |
+| Roku 2160p60 4K HEVC Surround        | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | **Very slow** |
+| Roku 1080p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Roku 720p30 Surround                 | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Roku 576p25                          | MP4     | H.264     | AAC stereo                       | Medium         |
+| Roku 480p30                          | MP4     | H.264     | AAC stereo                       | Medium         |
+| Xbox 1080p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
+| Xbox Legacy 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 
 ## Matroska presets
 
