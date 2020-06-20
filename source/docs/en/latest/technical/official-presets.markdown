@@ -104,7 +104,6 @@ Each Devices `Preset` is named according to the device name or class, maximum re
 | Apple 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Apple 720p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Apple 540p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Apple 240p30                         | MP4     | H.264     | AAC stereo                       | Medium         |
 | Chromecast 2160p60 4K HEVC Surround  | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
 | Chromecast 1080p60 Surround          | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Chromecast 1080p30 Surround          | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
@@ -118,7 +117,6 @@ Each Devices `Preset` is named according to the device name or class, maximum re
 | Roku 576p25                          | MP4     | H.264     | AAC stereo                       | Medium         |
 | Roku 480p30                          | MP4     | H.264     | AAC stereo                       | Medium         |
 | Xbox 1080p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Xbox Legacy 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 
 ## Matroska presets
 
@@ -165,14 +163,16 @@ Production Proxy `Presets` create fast to encode, Intra-only video limited to on
 
 From time to time, official `Presets` may be deprecated or removed. Compatible replacements are listed here.
 
-### Windows Mobile presets
+### Legacy Devices presets
 
-| Preset                 | Compatible Preset      | Notes                                                                                        |
-|------------------------|------------------------|----------------------------------------------------------------------------------------------|
-| Windows Mobile 1080p30 | General > Fast 1080p30 | Later Windows Mobile and Windows Phone devices, and Windows 10 Mobile devices.               |
-| Windows Mobile 720p30  | General > Fast 720p30  | Add vbv-bufsize=10000:vbv-maxrate=10000 to the additional encoder options for older devices. |
-| Windows Mobile 540p30  | General > Fast 480p30  | Add vbv-bufsize=4000:vbv-maxrate=4000 to the additional encoder options for older devices.   |
-| Windows Mobile 480p30  | General > Fast 480p30  | Add vbv-bufsize=2000:vbv-maxrate=2000 to the additional encoder options for older devices.   |
+| Preset                       | Compatible Preset                | Notes                                                                                           |
+|------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------|
+| Apple 240p30                 | None                             | Obsolete.                                                                                       |
+| Windows Mobile 1080p30       | General > Fast 1080p30           | Later Windows Mobile and Windows Phone devices, and Windows 10 Mobile devices.                  |
+| Windows Mobile 720p30        | General > Fast 720p30            | Add vbv-bufsize=10000:vbv-maxrate=10000 to the additional encoder options for older devices.    |
+| Windows Mobile 540p30        | General > Fast 480p30            | Add vbv-bufsize=4000:vbv-maxrate=4000 to the additional encoder options for older devices.      |
+| Windows Mobile 480p30        | General > Fast 480p30            | Add vbv-bufsize=2000:vbv-maxrate=2000 to the additional encoder options for older devices.      |
+| Xbox Legacy 1080p30 Surround | Devices > Apple 1080p30 Surround | Disable anamorphic, dimensions must be evenly divisible by 8, video must be H.264 Main Profile. |
 
 ### Legacy 0.10.x presets
 
@@ -181,7 +181,7 @@ From time to time, official `Presets` may be deprecated or removed. Compatible r
 | Normal              | General > Fast 1080p30           | Decomb filter, peak limited to 30 FPS, slightly decreased video bit rate, improved motion quality, foreign audio search.                |
 | High Profile        | General > HQ 1080p30 Surround    | Peak limited to 30 FPS, reduced video bit rate spikes, foreign audio search.                                                            |
 | Universal           | None                             | General > Fast 576p25/480p30 may be suitable replacements where compatibility with ancient devices and surround sound are not required. |
-| iPod                | Devices > Apple 240p30           | Decomb filter, foreign audio search.                                                                                                    |
+| iPod                | None                             | Obsolete.                                                                                                                               |
 | iPhone & iPod touch | Devices > Apple 540p30 Surround  | Decomb filter, slightly increased video bit rate, surround sound, foreign audio search.                                                 |
 | iPad                | Devices > Apple 720p30 Surround  | Decomb filter, slightly decreased video bit rate, surround sound, foreign audio search.                                                 |
 | AppleTV             | Devices > Apple 540p30 Surround  | Decomb filter, foreign audio search.                                                                                                    |
@@ -189,7 +189,7 @@ From time to time, official `Presets` may be deprecated or removed. Compatible r
 | AppleTV 3           | Devices > Apple 1080p30 Surround | Decomb filter, slightly decreased video bit rate, foreign audio search.                                                                 |
 | Android             | Devices > Android 576p25/480p30  | Decomb filter, peak limited to 25 FPS (Android 576p25 only), slightly increased video bit rate, foreign audio search, chapter markers.  |
 | Android Tablet      | Devices > Android 720p30         | Decomb filter, slightly increased video bit rate, foreign audio search, chapter markers.                                                |
-| Windows Phone 8     | None                             | Devices > Windows Mobile 720p30 may be suitable with anamorphic off and audio bit rate reduced to 128 kbps.                             |
+| Windows Phone 8     | None                             | Obsolete.                                                                                                                               |
 
 [^high-quality-settings-less-compatible]: Higher quality General `Presets` may include settings that are incompatible with older or slower devices.
 
