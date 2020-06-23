@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Welcome
 =======
 
-Welcome to the English documentation for HandBrake 1.3.0 through 1.3.1.
+Welcome to the English documentation for HandBrake 1.3.0 through 1.3.3.
 
 Here are some quick links to get you started:
 
