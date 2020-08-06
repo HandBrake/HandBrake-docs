@@ -52,6 +52,10 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
+Initialize and update all submodules.
+
+    git submodule update --init --recursive
+
 You may build and install the additional dependencies using the included script. Feel free to choose a different output path, if desired.
 
     scripts/mac-toolchain-build /usr/local
