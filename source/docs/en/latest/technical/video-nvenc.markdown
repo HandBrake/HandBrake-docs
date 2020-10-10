@@ -18,8 +18,8 @@ Nvidia Nvenc
 
 ## Supported Hardware and Configurations 
 
-- Nvidia GeForce GTX Pascal (1050+) and RTX Turing (1650+, 2060+) series GPU or better
-- Nvidia Graphics Driver 418.81 or later
+- Nvidia GeForce GTX Pascal (1050+), GTX/RTX Turing (1650+, 2060+) or Ampere (3060+) series GPU or better
+- Nvidia Graphics Driver 456.71 or later
 - Windows 10
 - Experimental Linux support is available in HandBrake’s command line interface
 
@@ -31,9 +31,19 @@ Support for the Nvidia Nvenc encoder is enabled in preferences on the video tab.
 
 ## Performance
 
-Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
+HandBrake supports the Nvidia NVEnc NVEnc encoder but does not support the NVDec (decoder).
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
+The CPU will still be used for:
+- Video decoding 
+- All video filters
+- Audio encoding 
+- HandBrake's engine, A/V sync etc
+- Subtitles
+- Muxing
+
+These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using QuickSync.
+
+It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 

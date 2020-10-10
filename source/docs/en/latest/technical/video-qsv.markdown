@@ -16,9 +16,10 @@ License_URL:     https://handbrake.fr/docs/license.html
 Intel QuickSync Video
 =====================
 
-## Supported hardware
+## Supported hardware and Configurations 
 
 - Intel Skylake (6th Generation Core) CPU or later with Intel HD Graphics or better
+
 - Windows 10
 - Linux
 - FreeBSD
@@ -33,9 +34,20 @@ Support for the Intel QSV encoder is enabled in preferences on the video tab. If
 
 ## Performance
 
-Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
+HandBrake supports both QuickSync video encode and decode. 
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
+The CPU will still be used for:
+- Video decoding (if QuickSync decode is disabled or your source is in a format which is not supported by the QuickSync hardware)
+- Most video filters
+- Audio encoding 
+- HandBrake's engine, A/V sync etc
+- Subtitles
+- Muxing
+
+These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using QuickSync.
+
+It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
+
 
 ## Advanced options
 

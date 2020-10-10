@@ -16,10 +16,11 @@ License_URL:     https://handbrake.fr/docs/license.html
 AMD VCE
 =======
 
-## Supported hardware 
+## Supported hardware and Configurations 
 
 - AMD Radeon RX 400, 500, Vega/II, Navi series GPU or better
-- Ubuntu Linux 18.04.3 or later, Windows 10
+- Ubuntu Linux 20.04 or later
+- Windows 10
 
 Please note, these are not hard limits. Hardware encoding via VCE *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
@@ -31,9 +32,19 @@ Support for the AMD VCE encoder is enabled in preferences on the video tab. If y
 
 ## Performance
 
-Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
+HandBrake supports the Nvidia AMD VCE encoder but does not support the VCN (decoder).
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
+The CPU will still be used for:
+- Video decoding 
+- All video filters
+- Audio encoding 
+- HandBrake's engine, A/V sync etc
+- Subtitles
+- Muxing
+
+These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using QuickSync.
+
+It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 
