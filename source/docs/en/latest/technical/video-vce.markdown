@@ -32,7 +32,7 @@ Support for the AMD VCE encoder is enabled in preferences on the video tab. If y
 
 ## Performance
 
-HandBrake supports the Nvidia AMD VCE encoder but does not support the VCN (decoder).
+HandBrake supports the AMD VCE encoder but does not support the VCN (decoder).
 
 The CPU will still be used for:
 - Video decoding 
