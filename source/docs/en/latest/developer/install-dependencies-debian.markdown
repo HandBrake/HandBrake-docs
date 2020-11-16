@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 10 Buster.
+The following instructions are for [Debian](https://www.debian.org) 10 Buster and 11 Bullseye.
 
 Basic requirements to run commands:
 
@@ -62,6 +62,10 @@ Dependencies:
 - python
 - tar
 - zlib1g-dev
+
+Additional Debian 11 dependencies:
+
+- appstream
 
 Intel Quick Sync Video dependencies (optional):
 
