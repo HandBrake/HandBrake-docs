@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Intel QuickSync Video
+Title:           Intel Quick Sync Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
@@ -13,10 +13,10 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Intel QuickSync Video
-=====================
+Intel Quick Sync Video
+======================
 
-## Supported hardware
+## Supported Hardware and Configurations
 
 - Intel Skylake (6th Generation Core) CPU or later with Intel HD Graphics or better
 - Windows 10
@@ -38,7 +38,7 @@ It is common, particularly on lower-end hardware, for the CPU to be a bottleneck
 
 ## Advanced options
 
-The Intel QuickSync hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
+The QSV hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
 
 From HandBrake’s command line interface, use the `--encopts` parameter as follows:
 

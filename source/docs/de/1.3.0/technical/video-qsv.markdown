@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Intel QuickSync Video
+Title:           Intel Quick Sync Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
@@ -13,10 +13,10 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Intel QuickSync Video
-=====================
+Intel Quick Sync Video
+======================
 
-## Unterstütze Hardware
+## Unterstütze Hardware und Konfigurationen
 
 - Intel Skylake (6th Generation Core) CPU oder neuer mit Intel HD Graphics oder besser
 - Windows 10
@@ -38,7 +38,7 @@ Besonders auf Lower-End Hardware ist es für die CPU üblich, das Bottleneck fü
 
 ## Fortgeschrittene Optionen
 
-Der Intel QuickSync Hardwarekodierer hat einen limiterten Satz an fortgeschrittenen Optionen. Üblicherweise ist es nicht empfohlen, diese Parameter abzuändern, da die Built-In Voreinstellungen eine gute Bandbreite der Optionen für gebräuchliche Zwecke abdecken.
+Der QSV Hardwarekodierer hat einen limiterten Satz an fortgeschrittenen Optionen. Üblicherweise ist es nicht empfohlen, diese Parameter abzuändern, da die Built-In Voreinstellungen eine gute Bandbreite der Optionen für gebräuchliche Zwecke abdecken.
 
 Wenn du HandBrake's command line interface benützt, verwende den `--encopts`` parameter wie folgt:
 

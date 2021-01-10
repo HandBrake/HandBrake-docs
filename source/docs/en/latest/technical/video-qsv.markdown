@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Intel QuickSync Video
+Title:           Intel Quick Sync Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,13 +13,12 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Intel QuickSync Video
-=====================
+Intel Quick Sync Video
+======================
 
-## Supported hardware and Configurations 
+## Supported Hardware and Configurations
 
 - Intel Skylake (6th Generation Core) CPU or later with Intel HD Graphics or better
-
 - Windows 10
 - Linux
 - FreeBSD
@@ -30,28 +29,29 @@ A plugin with all required components for Intel QSV encoding using the Flatpak d
 
 ## Enabling support
 
-Support for the Intel QSV encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
+Support for the Intel Quick Sync Video encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
 
 ## Performance
 
-HandBrake supports both QuickSync video encode and decode. 
+HandBrake supports both QSV encode and decode.
 
 The CPU will still be used for:
-- Video decoding (if QuickSync decode is disabled or your source is in a format which is not supported by the QuickSync hardware)
+
+- Video decoding (if QSV decode is disabled or your source is in a format which is not supported by the QSV hardware)
 - Most video filters
 - Audio encoding 
 - HandBrake's engine, A/V sync etc
 - Subtitles
 - Muxing
 
-These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using QuickSync.
+These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using QSV.
 
 It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
 
 
 ## Advanced options
 
-The Intel QuickSync hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
+The QSV hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
 
 From HandBrake’s command line interface, use the `--encopts` parameter as follows:
 
