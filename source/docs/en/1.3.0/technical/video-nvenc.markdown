@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           Nvidia Nvenc
+Title:           NVIDIA NVENC
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
@@ -13,21 +13,21 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Nvidia Nvenc
+NVIDIA NVENC
 ============
 
 ## Supported Hardware and Configurations 
 
-- Nvidia GeForce GTX Pascal (1050+) and RTX Turing (1650+, 2060+) series GPU or better
-- Nvidia Graphics Driver 418.81 or later
+- NVIDIA GeForce GTX Pascal (1050+) and RTX Turing (1650+, 2060+) series GPU or better
+- NVIDIA Graphics Driver 418.81 or later
 - Windows 10
 - Experimental Linux support is available in HandBrake’s command line interface
 
-Please note, these are not hard limits. Hardware encoding via Nvenc *might* work on older series GPUs and older operating systems, but this is not officially supported.
+Please note, these are not hard limits. Hardware encoding via NVENC *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
 ## Enabling support
 
-Support for the Nvidia Nvenc encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
+Support for the NVIDIA NVENC encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
 
 ## Performance
 
@@ -37,7 +37,7 @@ It is common, particularly on lower-end hardware, for the CPU to be a bottleneck
 
 ## Advanced options
 
-The Nvidia Nvenc hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
+The NVIDIA NVENC hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
 
 From HandBrake’s command line interface, use the `--encopts` parameter as follows:
 
@@ -77,4 +77,4 @@ The following value types are supported (each option only accepts one value type
 | weighted_pred    | boolean     |   ✓   |   ✓   | Set to `1` to enable weighted prediction, `0` to disable (default).                                       |
 | rc-lookahead     | int         |   ✓   |   ✓   | Number of frames to look ahead for rate control. Default: `0`.                                            |
 | b_adapt          | boolean     |   ✓   |       | When lookahead is enabled, set this to `1` to enable adaptive B-frame decision (default), `0` to disable. |
-| no-scenecut      | boolean     |   ✓   |   ✓   | When lookahead is enabled, set this to `1` to enable adaptive I-frame insertion at scene cuts (default), `0` to disable. |
+| no-scenecut      | boolean     |   ✓   |   ✓   | When lookahead is enabled, set this to `1` to disable adaptive I-frame insertion at scene cuts, `0` to enable (default). |
