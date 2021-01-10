@@ -17,7 +17,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 AMD VCE
 =======
 
-## Unterstützte Hardware
+## Unterstützte Hardware und Konfigurationen
 
 - AMD Radeon RX 400, 500, Vega/II, Navi series GPU or better
 - Ubuntu Linux 18.04.3 or later, Windows 10
