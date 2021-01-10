@@ -139,7 +139,7 @@ Inhaltsverzeichnis
   - [AMD VCE](technical/video-vce.html)
   - [Apple VideoToolbox](technical/video-videotoolbox.html)
   - [Intel QuickSync Video](technical/video-qsv.html)
-  - [NVidia NVENC](technical/video-nvenc.html)
+  - [NVIDIA NVENC](technical/video-nvenc.html)
 
   - [Video Kodierer Performance](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
   - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>

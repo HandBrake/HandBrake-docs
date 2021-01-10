@@ -71,11 +71,11 @@ x265 ist ein neuerer Videokodierer welcher Standard H.265/HEVC Videos erstellt. 
 
 Andere Videokodierer wie beispielsweise VP8 und VP9 versprechen Resultate änhlich denen von x264 und x265 aber benötigen üblicherweise länger zum Kodieren. VP8 und VP9 Hardware Dekodierer für Mobilgeräte sind nicht weit verbreitet, dadurch kann die Batterie schneller aufgebraucht werden wenn Videos dieser Typen angeschaut werden.
 
-HandBrake unterstützt zudem AMD VCE, Intel QSV und Nvidia NVENC Hardware Kodierer. Diese Kodierer produzieren H.264 und/oder H.265 Videos mit extrem hoher Geschwindigkeit jedoch mit etwas geringerer Qualität und größeren Dateien.
+HandBrake unterstützt zudem AMD VCE, Intel QSV und NVIDIA NVENC Hardware Kodierer. Diese Kodierer produzieren H.264 und/oder H.265 Videos mit extrem hoher Geschwindigkeit jedoch mit etwas geringerer Qualität und größeren Dateien.
 
 Vergleichen wir einmal ein paar Kodierer. Wir haben dieselbe High Quality 2160p 4K Video `Quelle` zu 1080p mit acht verschiedenen Kodieren kodiert.
 
-Die folgenden Resultate wurden mit einem PC mit einer Intel Xeon E5-2699 v4 CPU mit 22 Kernen und 44 Threads bei 2.6-2.8 GHz (konstanter Turbo), 32 GB Memory, einer AMD Radeon RX 580, einer Nvidia GeForce GTX 1060 und Windows 10 Professional erzeugt.
+Die folgenden Resultate wurden mit einem PC mit einer Intel Xeon E5-2699 v4 CPU mit 22 Kernen und 44 Threads bei 2.6-2.8 GHz (konstanter Turbo), 32 GB Memory, einer AMD Radeon RX 580, einer NVIDIA GeForce GTX 1060 und Windows 10 Professional erzeugt.
 
 | Offizielle Voreinstellung   | Kodierer       | Typ     | Qualität / Bit Rate   | Audiospuren  | Kodiergeschwindigkeit | Realtime Speed | Gesamte Bit Rate | Gesamtgröße |
 |-------------------|---------------|----------|----------------------|---------------|----------------|----------------|----------------|------------|
@@ -113,7 +113,7 @@ Obwohl keine kompatible Hardware für diesen Test zur Verfügung stand, würde d
 
 Kodierer nach Schnelligkeit absteigend sortiert:
 
-1. Hardware Kodierer (AMD VCE, Intel QSV, Nvidia NVENC)
+1. Hardware Kodierer (AMD VCE, Intel QSV, NVIDIA NVENC)
 2. x264
 3. VP8
 4. x265
@@ -123,12 +123,12 @@ Kodierer nach Qualität vs. Dateigröße absteigend sortiert:
 
 1. x265 and VP9
 2. x264
-3. Hardware encoders (AMD VCE, Intel QSV, Nvidia NVENC)
+3. Hardware encoders (AMD VCE, Intel QSV, NVIDIA NVENC)
 4. VP8
 
 Der x264 Software Kodierer stellt eine exzellente Balance zwischen Geschwindigkeit und Qualität dar und das H.264/AVC Video das erstellt wird ist mit einem Großteil moderner Geräte kompatibel. Er ist der Standard Videokodierer bei den meisten der offiziellen `Voreinstellungen` von HandBrake.
 
-Hardware Kodierer wie zum Beispiel AMD VCE, Intel QSV und Nvidia NVENC sind sehr schnell und sind die beste Wahl auf langsameren Computern wo die Performance im Vordergrund steht, und höchste Qualität und sehr kleine Dateien nicht so wichtig sind.
+Hardware Kodierer wie zum Beispiel AMD VCE, Intel QSV und NVIDIA NVENC sind sehr schnell und sind die beste Wahl auf langsameren Computern wo die Performance im Vordergrund steht, und höchste Qualität und sehr kleine Dateien nicht so wichtig sind.
 
 x265 und VP9 produzieren Videos mit exzellenter Qualität, brauchen dafür jedoch lange. Hier musst du, mit Ausnahme von sehr schnellen Computern, mit langen Zeiten rechnen.
 
@@ -140,7 +140,7 @@ Ein Teil von HandBrake's Videokodierer haben ihre eigenen Voreinstellungen. Dies
 
 Manche Kodierer Voreinstellungen sind so gestaltet, dass die Geschwindigkeit des Kodierungsprozesses beeinflusst wird. Die Aktivierung von bestimmten Optimierungen oder die Deaktivierung von bestimmten rechenintensiven Features des Kodierers hat eine Beschleunigung des Kodierungsprozesses zur Folge. Dies kann jedoch die resultierende Dateigröße und/oder die Qualität negativ beeinflussen. Alle x264 und x265 Kodierer Voreinstellungen beziehen sich auf die Geschwindigkeit.
 
-Andere Kodierer, vor allem Hardware Kodierer wie AMD VCE, Intel QSV und Nvidia NVENC, haben zudem Qualitätsbasierte Kodierer Voreinstellungen um fortgeschrittene Features zu aktivieren welche die Qualität verbessern; wiederum auf Kosten der Geschwindigkeit.
+Andere Kodierer, vor allem Hardware Kodierer wie AMD VCE, Intel QSV und NVIDIA NVENC, haben zudem Qualitätsbasierte Kodierer Voreinstellungen um fortgeschrittene Features zu aktivieren welche die Qualität verbessern; wiederum auf Kosten der Geschwindigkeit.
 
 Hier haben wir dieselbe High Quality 2160p 4K Video `Quelle` zu 1080p mit den unterschiedlichen Geschwindigkeitsbasierten Kodierer Voreinstellungen des x264 Kodierers kodiert.
 
@@ -262,7 +262,7 @@ Trotzdem ist der NLMeans Filter ein großartiger Weg, um `Quellen` mit sichtbare
 
 Die Einstellungen des Videokodierers haben einen großen Einfluss auf die Performance.
 
-Verglichen mit x264 und Hardwarekodierer wie AMD VCE, Intel QSV und Nvidia NVENC, benötigen langsamere Kodierer wie x265 und VP9 mehr Zeit.
+Verglichen mit x264 und Hardwarekodierer wie AMD VCE, Intel QSV und NVIDIA NVENC, benötigen langsamere Kodierer wie x265 und VP9 mehr Zeit.
 
 Ein Großteil der verglichenen Kodierer haben Geschwindigkeitsvoreinstellungen. Schnellere Kodierervoreinstellungen haben eine bessere Performance wobei hier die Qualität und die Dateigröße darunter leiden kann.
 
@@ -278,7 +278,7 @@ Prozesse, die eine höhere Auflösung verwenden, benötigen länger und erzeugen
 
 ### Filter
 
-Manche Filter sind rechenintensiv und können ein Bottleneck für den Kodierprozess unabhängig von den Kodiereinstellungen darstellen. Dies trifft vor allem für den EEDI2 Deinterlacer und den NLMeans Denoiser zu. Andere Filter wie der Decomb Deinterlacer und der hqdn3d Denoiser sind viel schneller, können aber trotzdem noch ein Bottleneck darstellen, wenn Hardware Kodierer wie AMD VCE, Intel QSV und Nvidia NVENC verwendet wird.
+Manche Filter sind rechenintensiv und können ein Bottleneck für den Kodierprozess unabhängig von den Kodiereinstellungen darstellen. Dies trifft vor allem für den EEDI2 Deinterlacer und den NLMeans Denoiser zu. Andere Filter wie der Decomb Deinterlacer und der hqdn3d Denoiser sind viel schneller, können aber trotzdem noch ein Bottleneck darstellen, wenn Hardware Kodierer wie AMD VCE, Intel QSV und NVIDIA NVENC verwendet wird.
 
 Aufgrund der weiten Verbreitung von interlaced Content, ist der Decomb Deinterlacer in allen offiziellen `Voreinstellungen` von HandBrake (ausgenommen den Production `Voreinstellungen`) aktiv. Zusätzlich aktiviert ist der Interlacing Detection Filter, welcher sicherstellt, dass nur interlaced frames deinterlaced werden und progressive frames unberührt bleiben. Diese Analyse könnte ein limitierender Factor für die Performance sein. Solltest du dir sicher sein, dass es in der `Quelle` keine interlaced frames gibt, kannst du diese Filter für einen kleinen Performanceboost deaktivieren.
 

@@ -1,7 +1,7 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           Nvidia Nvenc
+Title:           NVIDIA NVENC
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
@@ -14,13 +14,13 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Nvidia Nvenc
+NVIDIA NVENC
 ============
 
 ## Unterstützte Hardware und Konfigurationen
 
-- Nvidia GeForce GTX Pascal (1050+) und RTX Turing (1650+, 2060+) series GPU oder besser
-- Nvidia Graphics Driver 418.81 oder neuer
+- NVIDIA GeForce GTX Pascal (1050+) und RTX Turing (1650+, 2060+) series GPU oder besser
+- NVIDIA Graphics Driver 418.81 oder neuer
 - Windows 10
 - Experimentelle Unterstützung für Linux ist via der Kommandozeile verfügbar
 
@@ -29,7 +29,7 @@ Beachte bitte, dass trotz diesen Einschränkungen das Feature *möglicherweise* 
 
 ## Unterstützung aktivieren
 
-Unterstützung für den NVEnc Kodierer kann in den Einstellungen im Video Tab aktiviert werden. Falls dein System nicht unterstützt wird, ist diese Option deaktiviert.
+Unterstützung für den NVENC Kodierer kann in den Einstellungen im Video Tab aktiviert werden. Falls dein System nicht unterstützt wird, ist diese Option deaktiviert.
 
 
 ## Performance
@@ -41,7 +41,7 @@ Es ist vor allem auf lower-end-hardware üblich, dass die CPU ein Bottleneck fü
 
 ## Fortgeschrittene Optionen
 
-Der Nividia Nvenc Hardwarekodierer hat ein limitiertes Set von Fortgeschrittenen Kodieroptionen welche verwendet werden können. Grundsätzlich ist es nicht empfohlen, diese Parameter zu ändern, da die Built-in Voreinstellungen eine gute Auswahl von Optionen bieten.
+Der Nividia NVENC Hardwarekodierer hat ein limitiertes Set von Fortgeschrittenen Kodieroptionen welche verwendet werden können. Grundsätzlich ist es nicht empfohlen, diese Parameter zu ändern, da die Built-in Voreinstellungen eine gute Auswahl von Optionen bieten.
 
 Auf der Kommandozeile kannst du den --encopts Parameter wie folgt benutzen:
 

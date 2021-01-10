@@ -42,7 +42,7 @@ Please see the specific documentation pages for these encoders for further detai
 - [AMD VCE](video-vce.html)
 - [Apple VideoToolbox](video-videotoolbox.html)
 - [Intel QuickSync Video](video-qsv.html)
-- [Nvidia Nvenc](video-nvenc.html)
+- [NVIDIA NVENC](video-nvenc.html)
 
 ## Software
 

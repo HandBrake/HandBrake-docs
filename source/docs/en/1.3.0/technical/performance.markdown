@@ -72,11 +72,11 @@ x265 is a newer video encoder that creates standard H.265/HEVC video that is bec
 
 Other software video encoders such as VP8 and VP9 promise similar results to x264 and x265, but generally take longer to encode. VP8 and VP9 hardware decoders for mobile devices are not widespread, which can lead to faster battery drain while playing these types of videos. Most modern computers can play VP8 and VP9 video with ease.
 
-HandBrake also includes support for AMD VCE, Intel QSV, and Nvidia NVENC hardware encoders. These encoders produce H.264 and/or H.265 video at extremely high speed, at the expense of some quality and larger file sizes.
+HandBrake also includes support for AMD VCE, Intel QSV, and NVIDIA NVENC hardware encoders. These encoders produce H.264 and/or H.265 video at extremely high speed, at the expense of some quality and larger file sizes.
 
 Let’s compare. Here, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p using eight different video encoders.
 
-The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, an AMD Radeon RX 580, an Nvidia GeForce GTX 1060, and Windows 10 Professional.
+The following results were produced using a PC equipped with an Intel Xeon E5-2699 v4 CPU with 22 cores and 44 threads running at a sustained turbo between 2.6-2.8 GHz, 32 GB memory, an AMD Radeon RX 580, an NVIDIA GeForce GTX 1060, and Windows 10 Professional.
 
 | Official Preset   | Encoder       | Type     | Quality / Bit Rate   | Audio Tracks  | Encoding Speed | Realtime Speed | Total Bit Rate | Total Size |
 |-------------------|---------------|----------|----------------------|---------------|----------------|----------------|----------------|------------|
@@ -114,7 +114,7 @@ Although compatible hardware was not available on the computer used in these tes
 
 Encoders ranked fastest to slowest:
 
-1. Hardware encoders (AMD VCE, Intel QSV, Nvidia NVENC)
+1. Hardware encoders (AMD VCE, Intel QSV, NVIDIA NVENC)
 2. x264
 3. VP8
 4. x265
@@ -124,12 +124,12 @@ Encoder quality versus file size efficiency, ranked best to worst:
 
 1. x265 and VP9
 2. x264
-3. Hardware encoders (AMD VCE, Intel QSV, Nvidia NVENC)
+3. Hardware encoders (AMD VCE, Intel QSV, NVIDIA NVENC)
 4. VP8
 
 The x264 software encoder presents an excellent balance between speed and quality, and the H.264/AVC video it creates is widely compatible with all modern devices. It is the default video encoder in most of HandBrake’s official `Presets`.
 
-Hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC are very fast and may be a good choice on less powerful computers where performance is the greatest concern, and the highest quality and smallest file sizes are not top priority.
+Hardware encoders such as AMD VCE, Intel QSV, and NVIDIA NVENC are very fast and may be a good choice on less powerful computers where performance is the greatest concern, and the highest quality and smallest file sizes are not top priority.
 
 x265 and VP9 produce excellent quality encodes, but are much slower performers. Expect long encoding times on all except the best computers.
 
@@ -141,7 +141,7 @@ Some of HandBrake’s video encoders have their own presets. These are different
 
 Some encoder presets are designed to affect the speed of the encoding process. By enabling certain optimizations or disabling certain computationally expensive features of the encoder, greater encoding speeds can be achieved, although this is usually at the expense of larger file sizes and/or slight quality losses. The x264 and x265 encoder presets are all speed related.
 
-Other encoders, notably hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC, also have quality-based encoder presets to enable advanced features that can improve quality, usually at the expense of encoding speed.
+Other encoders, notably hardware encoders such as AMD VCE, Intel QSV, and NVIDIA NVENC, also have quality-based encoder presets to enable advanced features that can improve quality, usually at the expense of encoding speed.
 
 Here, we’ve encoded the same high quality 2160p 4K video `Source` to 1080p using the various speed-based encoder presets provided by the x264 software encoder.
 
@@ -262,7 +262,7 @@ Despite this, it is excellent for restoring `Sources` with prominent visual nois
 
 Video encoder settings have a major impact on performance.
 
-Compared to x264 and hardware encoders such as AMD VCE, Intel QSV, and Nvidia NVENC, encodes will take longer to complete when using slower video encoders such as x265 and VP9.
+Compared to x264 and hardware encoders such as AMD VCE, Intel QSV, and NVIDIA NVENC, encodes will take longer to complete when using slower video encoders such as x265 and VP9.
 
 Most video encoders we compared have speed presets, and faster encoder presets will perform better, potentially at the expense of larger file sizes and slight quality losses.
 
@@ -278,7 +278,7 @@ Higher resolution encodes take longer and produce larger file sizes, while retai
 
 ### Filters
 
-Some filters are computationally expensive and can bottleneck the encoding process regardless of video encoder settings, notably the EEDI2 deinterlacer and the NLMeans denoiser. Other filters such as the Decomb deinterlacer and the hqdn3d denoiser are much faster, but can still be a bottleneck when using hardware video encoders such as AMD VCE, Intel QSV, and Nvidia NVENC.
+Some filters are computationally expensive and can bottleneck the encoding process regardless of video encoder settings, notably the EEDI2 deinterlacer and the NLMeans denoiser. Other filters such as the Decomb deinterlacer and the hqdn3d denoiser are much faster, but can still be a bottleneck when using hardware video encoders such as AMD VCE, Intel QSV, and NVIDIA NVENC.
 
 Due to the widespread availability of interlaced content in the world today, the Decomb deinterlacer is enabled in all HandBrake official `Presets` except the Production `Presets`. Also enabled is the Interlacing Detection filter, which ensures only interlaced frames are deinterlaced, leaving progressive frames untouched. This analysis can sometimes be a limiting factor for performance. If you are certain your `Source` contains no interlaced frames, you can disable these filters for a small increase in performance.
 

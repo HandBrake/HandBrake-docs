@@ -76,7 +76,7 @@ Bitte lese den jeweiligen Dokumentationsartikel für die Kodierer für mehr Deta
 - [AMD VCE](video-vce.html)
 - [Apple VideoToolbox](video-videotoolbox.html)
 - [Intel QuickSync Video](video-qsv.html)
-- [Nvidia Nvenc](video-nvenc.html)
+- [NVIDIA NVENC](video-nvenc.html)
 
 ## Software
 Folgende Auflistung beschreibt die Unterstützung der aktuellen HandBrake Version für verschiedene Systeme.
