@@ -23,7 +23,8 @@ Building HandBrake for Mac requires an Apple computer with a 64-bit Intel proces
 - [Command Line Tools for Xcode](https://developer.apple.com/download/more/)
   - free Apple Developer registration required, or install using `xcode-select --install`
 - [Python](https://www.python.org/downloads/) 3.7.0 or later
-  - ensure your Python installation has properly created `/Library/Frameworks/Python.framework/Versions/<version>`
+
+Python 3 as included with macOS 11.0 Big Sur is sufficient. For macOS prior to Big Sur, after installing an updated Python 3 from an official source, please ensure the installation has properly created `/Library/Frameworks/Python.framework/Versions/<version>`.
 
 Additional dependencies (may be built via included script):
 
@@ -42,7 +43,7 @@ Install Command Line Tools for Xcode using the package installer provided by App
 
     xcode-select --install
 
-Install Python 3 using the latest package installer provided by [Python](https://www.python.org/downloads/).
+For macOS prior to Big Sur, install Python 3 using the latest package installer provided by [Python](https://www.python.org/downloads/).
 
 If you installed Python 3 from a different source, such as Homebrew, it is necessary to check whether Python 3 can properly open HTTPS connections. The following test prints `0` for success, or `1` for failure. Upon failure, you will need to ensure SSL certificates are installed and accessible to your Python 3 installation, or remove the installation and reinstall from the official package.
 
