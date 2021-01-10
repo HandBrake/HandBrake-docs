@@ -1,7 +1,7 @@
 ---
 Type:            article
 State:           [ draft ]
-Title:           Intel QuickSync
+Title:           Intel Quick Sync Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: 1.3.0
@@ -18,4 +18,4 @@ Redirect_URL:    video-qsv.html
 CLI guide
 =========
 
-Dieser Artikel wurde nach [Intel QuickSync Video (QSV)](video-qsv.html) verschoben.
+Dieser Artikel wurde nach [Intel Quick Sync Video (QSV)](video-qsv.html) verschoben.

@@ -34,7 +34,7 @@ Here are some questions that may be helpful in diagnosing a problem with HandBra
 - Where is HandBrake installed on your system?
 - What HandBrake version are you using?
 - What operating system and version are you using?
-- What type of CPU are you using? Does it support Intel QuickSync Video?
+- What type of CPU are you using? Does it support Intel Quick Sync Video?
 - What type of GPU are you using? What version of OpenCL does it support?
 - Is HandBrake able to use your GPU for certain features?
 - What is your display resolution?

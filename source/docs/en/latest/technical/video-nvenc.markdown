@@ -42,7 +42,7 @@ The CPU will still be used for:
 - Subtitles
 - Muxing
 
-These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using QuickSync.
+These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using NVENC.
 
 It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
 

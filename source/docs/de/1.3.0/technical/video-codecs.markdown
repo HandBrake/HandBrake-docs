@@ -24,7 +24,7 @@ Folgende Videocodecs sind zur Verwendung in HandBrake verfügbar:
     - Bietet exzellente Performance, Dateigröße und Qualität
     - Er wird von vielen Playern und Mobilgeräten unterstützt
 
-- H.264 (Intel QuickSync):
+- H.264 (Intel QSV):
     - MPEG-4 Part 10, auch bekannt als H.264/AVC
     - Hardwarebasierter Kodierer verfügbar auf Intel Prozessoren mit Intel HD Graphics (Haswell oder neuere CPU's sind empfohlen, da diese die besten Resultate in Bezug auf Qualität und Dateigröße liefern).
     - Sehr schnell und belastet die CPU weit weniger als H.264 Softwarekodierer wie x264.

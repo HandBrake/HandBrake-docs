@@ -34,7 +34,7 @@ Hier sind ein paar Fragen die hilfreich in der Diagnose eines Problems mit HandB
 - Wo ist HandBrake auf deinem System installiert?
 - Welche Version von HandBrake verwendest du?
 - Welches Betriebssystem inklusive Version verwendest du?
-- Welchen Typ von CPU verwendest du? Unterstützt es Intel QuickSync Video?
+- Welchen Typ von CPU verwendest du? Unterstützt es Intel Quick Sync Video?
 - Welchen Typ von GPU verwendest du? Welche version von OpenCL unterstützt es?
 - Kann HandBrake deine GPU für bestimmte Features verwenden?
 - Was ist deine Bildschirmauflösung?

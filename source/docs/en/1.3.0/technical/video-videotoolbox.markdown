@@ -29,7 +29,7 @@ If your computer is supported you will see one or more of the following video en
 - H.264 (VideoToolbox)
 - H.265 (VideoToolbox)
 
-Choice of the underlying hardware encoder (AMD VCE or Intel QuickSync Video) is not available. The highest quality option will typically be chosen.
+Choice of the underlying hardware encoder (AMD VCE or Intel Quick Sync Video) is not available. The highest quality option will typically be chosen.
 
 ## Performance
 

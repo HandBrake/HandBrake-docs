@@ -75,7 +75,7 @@ Bitte lese den jeweiligen Dokumentationsartikel für die Kodierer für mehr Deta
 
 - [AMD VCE](video-vce.html)
 - [Apple VideoToolbox](video-videotoolbox.html)
-- [Intel QuickSync Video](video-qsv.html)
+- [Intel Quick Sync Video](video-qsv.html)
 - [NVIDIA NVENC](video-nvenc.html)
 
 ## Software

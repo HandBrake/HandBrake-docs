@@ -140,7 +140,7 @@ Table of contents
 - Hardware encoders
   - [AMD VCE](technical/video-vce.html)
   - [Apple VideoToolbox](technical/video-videotoolbox.html)
-  - [Intel QuickSync Video](technical/video-qsv.html)
+  - [Intel Quick Sync Video](technical/video-qsv.html)
   - [NVIDIA NVENC](technical/video-nvenc.html)
 - Audio
   - [Dynamic range compression](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>

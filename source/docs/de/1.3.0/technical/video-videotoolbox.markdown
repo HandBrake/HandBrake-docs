@@ -29,7 +29,7 @@ Falls dein Computer unterstützt wird, wirst du einen oder mehr der folgenden Vi
 - H.264 (VideoToolbox)
 - H.265 (VideoToolbox)
 
-Eine Auswahl des darunterliegenden Hardwarekodierers (AMD VCE oder Intel QuickSync Video) ist nicht verfügbar. Üblicherweise wird die Option mit der besten Qualität ausgewählt.
+Eine Auswahl des darunterliegenden Hardwarekodierers (AMD VCE oder Intel Quick Sync Video) ist nicht verfügbar. Üblicherweise wird die Option mit der besten Qualität ausgewählt.
 
 ## Performance
 

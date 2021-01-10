@@ -138,11 +138,11 @@ Inhaltsverzeichnis
 - Hardware Encoders
   - [AMD VCE](technical/video-vce.html)
   - [Apple VideoToolbox](technical/video-videotoolbox.html)
-  - [Intel QuickSync Video](technical/video-qsv.html)
+  - [Intel Quick Sync Video](technical/video-qsv.html)
   - [NVIDIA NVENC](technical/video-nvenc.html)
 
   - [Video Kodierer Performance](technical/video-encoding-performance.html)<span class="notice draft"><span>draft</span></span>
-  - [Intel QuickSync Video (QSV) Optionen](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
+  - [Intel Quick Sync Video (QSV) Optionen](technical/video-qsv-options.html)<span class="notice draft"><span>draft</span></span>
 - Audio
   - [Dynamikumfang Komprimierung (DRC)](technical/dynamic-range-compression.html)<span class="notice draft"><span>draft</span></span>
   - [Audioqualität](technical/audio-quality.html)<span class="notice draft"><span>draft</span></span>
