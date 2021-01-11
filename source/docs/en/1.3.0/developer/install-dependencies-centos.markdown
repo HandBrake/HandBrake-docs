@@ -18,7 +18,7 @@ Installing dependencies on CentOS
 
 ## CentOS 8
 
-The following instructions are for [CentOS](https://centos.org) 8.1.
+The following instructions are for [CentOS](https://centos.org) 8.
 
 Basic requirements to run commands:
 
@@ -106,7 +106,7 @@ CentOS is now prepared to build HandBrake. See [Building HandBrake for Linux](bu
 
 ## CentOS 7
 
-The following instructions are for [CentOS](https://centos.org) 7.7.
+The following instructions are for [CentOS](https://centos.org) 7.
 
 Basic requirements to run commands:
 
@@ -184,10 +184,19 @@ The `opus-devel` package provided by CentOS 7 is too old. Install a newer versio
 
     sudo yum localinstall $(curl -L -s 'https://dl.fedoraproject.org/pub/epel/6/x86_64/Packages/o/' | grep -Eo 'opus-[^">]+\.x86_64\.rpm' | sort -u | awk '{ print "https://dl.fedoraproject.org/pub/epel/6/x86_64/Packages/o/"$0 }')
 
-The `nasm` package provided by CentOS 7 is too old. Install a newer version provided by the NASM project[^nasm-repo].
+The `nasm` package provided by CentOS 7 is too old. Build and install a newer version from source[^nasm-source].
 
-    sudo curl -L 'https://nasm.us/nasm.repo' -o /etc/yum.repos.d/nasm.repo
-    sudo yum install nasm
+    # remove old package if installed
+    sudo yum remove nasm
+
+    # nasm
+    sudo curl -LO https://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.bz2
+    tar -xf nasm-2.14.02.tar.bz2
+    cd nasm-2.14.02
+    ./configure
+    make -j$(nproc)
+    sudo make install
+    cd ..
 
 The `libvpx-devel` package provided by CentOS 7 is too old. Build and install a newer version from source[^libvpx-source].
 
@@ -242,7 +251,7 @@ CentOS is now prepared to build HandBrake. See [Building HandBrake for Linux](bu
 
 [^opus-el6]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
 
-[^nasm-repo]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
+[^nasm-source]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
 
 [^libvpx-source]: Installing newer packages than those available in the base repository may lead to incompatibility with other software expecting specific package versions.
 
