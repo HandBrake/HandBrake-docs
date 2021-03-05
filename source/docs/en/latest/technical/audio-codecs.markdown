@@ -64,11 +64,15 @@ Audio Encoders
     -   HandBrake offers Vorbis audio encoding as well, for which it uses the
         aoTuV branch that offers quality tweaks.
 
--   AC3:
+-   AC3 and E-AC3:
 
     -   HandBrake can encode to AC3 using FFmpeg.
 
     -   This is not the same as Passthru. You can encode any audio track to AC3.
+
+-   Opus (FFmpeg)
+    
+    -   Available in MKV files.
 
 -   Flac 16 and 24bit (FFmpeg)
 
@@ -85,7 +89,7 @@ Passthru options.
 -----------------
 
 HandBrake supports passthru for a limited number of popular source formats.
-These are: AC3, DTS, DTS-HD, TrueHD, MP3 or AAC (Passthru)
+These are: AC3, E-AC3, DTS, DTS-HD, TrueHD, MP3, MP2, AAC or flac (Passthru)
 
 This copies the audio bit-for-bit from the source so offers no loss in audio
 quality. These audio tracks can be quite large so can impact the final size of

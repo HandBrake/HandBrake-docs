@@ -18,7 +18,7 @@ AMD VCE
 
 ## Supported Hardware and Configurations
 
-- AMD Radeon RX 400, 500, Vega/II, Navi series GPU or better
+- AMD Radeon RX400, RX500, Vega, RX5000 and RX6000 series GPU or better
 - Ubuntu Linux 20.04 or later
 - Windows 10
 

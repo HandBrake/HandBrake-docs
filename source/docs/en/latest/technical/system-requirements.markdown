@@ -21,14 +21,14 @@ System requirements
 The following is the minimum level of hardware that HandBrake supports.
 
 - Processor:
-  - Intel Core i3 or better
-  - AMD FX / 2014+ APU or better
-- Free memory:
-  - 512 MB for transcoding standard definition video (480p/576p)
-  - 1.5 GB for transcoding high definition video (720p/1080p)
-  - 4 GB or more for transcoding ultra high definition video (2160p 4K)
+  - Intel Core (4th generation and newer) i3, i5, i7, i9 or equivalent Xeon
+  - AMD Ryzen, Threadripper or Epyc
+- Free memory:  
+  - 1 GB for transcoding standard definition video (480p/576p)
+  - 2 GB for transcoding high definition video (720p/1080p)
+  - 6 GB or more for transcoding ultra high definition video (2160p 4K)
 - System storage:
-  - 100 MB for the HandBrake app
+  - 150 MB for the HandBrake app
   - 2 GB or more recommended for processing and storing your new videos
 - Display resolution:
   - 1024x768 minimum, proportionately higher with display scaling
@@ -88,7 +88,7 @@ Interim (non-LTS) versions are typically supported until their end of life.
 | Ubuntu Version          | Status              | Last Compatible Version | Notes                              |
 |-------------------------|---------------------|-------------------------|------------------------------------|
 | 20.04 LTS Focal Fossa   | Supported           |                         | Flatpak, PPA, and source.          |
-| 18.04 LTS Bionic Beaver | Deprecated in 1.3.0 |                         | Flatpak only.                      |
+| 18.04 LTS Bionic Beaver | Deprecated in 1.3.0 | HandBrake 1.3.0         | Flatpak only.                      |
 | 16.04 LTS Xenial Xerus  | Unsupported         | HandBrake 1.1.2         | Various issues affect operability. |
 | 14.04 LTS Trusty Tahr   | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 
@@ -107,16 +107,17 @@ HandBrake is supported on recent versions of macOS[^apple-eol].
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4 or later.   |
 | 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
 | 10.14 Mojave       | Supported           |                         | Requires HandBrake 1.1.2 or later. |
-| 10.13 High Sierra  | Deprecated in 1.3.0 |                         | End of life expected Q4 2020.      |
-| 10.12 Sierra       | Deprecated in 1.3.0 |                         | End of life.                       |
-| 10.11 El Capitan   | Deprecated in 1.2.0 |                         | End of life.                       |
-| 10.10 Yosemite     | Unsupported         | HandBrake 1.1.2         | End of life.                       |
-| 10.9 Mavericks     | Unsupported         | HandBrake 1.1.2         | End of life.                       |
-| 10.8 Mountain Lion | Unsupported         | HandBrake 1.1.2         | End of life.                       |
-| 10.7 Lion          | Unsupported         | HandBrake 1.1.2         | End of life.                       |
-| 10.6 Snow Leopard  | Unsupported         | HandBrake 0.10.5        | End of life.                       |
+| 10.13 High Sierra  | Unsupported         | 1.3.3                   | End of life                        |
+| 10.12 Sierra       | Unsupported         | 1.3.3                   | End of life.                       |
+| 10.11 El Capitan   | Unsupported         | 1.2.0                   | End of life.                       |
+| 10.10 Yosemite     | Unsupported         | 1.1.2                   | End of life.                       |
+| 10.9 Mavericks     | Unsupported         | 1.1.2                   | End of life.                       |
+| 10.8 Mountain Lion | Unsupported         | 1.1.2                   | End of life.                       |
+| 10.7 Lion          | Unsupported         | 1.1.2                   | End of life.                       |
+| 10.6 Snow Leopard  | Unsupported         | 0.10.5                  | End of life.                       |
 
 [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files, notably Matroska (MKV), which is not natively supported on macOS.
 
@@ -125,15 +126,15 @@ HandBrake is supported on recent versions of macOS[^apple-eol].
 
 ### Windows
 
-HandBrake is supported on recent Windows versions and requires [Microsoft .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) 4.8 or later.
+HandBrake requires the [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) 5.0.x
 
 | Windows Version | Status              | Last Compatible Version | Notes        |
 |-----------------|---------------------|-------------------------|--------------|
 | Windows 10      | Supported           |                         |              |
-| Windows 8.1     | Supported           |                         |              |
-| Windows 7 SP1   | Deprecated in 1.1.0 |                         | End of life. |
-| Windows Vista   | Unsupported         | HandBrake 1.0.7         | End of life. |
-| Windows XP      | Unsupported         | HandBrake 0.9.9         | End of life. |
+| Windows 8.1     | Unsupported         | 1.3.3                   | End of life. |
+| Windows 7 SP1   | Unsupported         | 1.3.3                   | End of life. |
+| Windows Vista   | Unsupported         | 1.0.7                   | End of life. |
+| Windows XP      | Unsupported         | 0.9.9                   | End of life. |
 
 [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
 

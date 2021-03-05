@@ -18,26 +18,25 @@ Video codecs
 
 The following video codecs are available for encoding in HandBrake.
 
-- H.264 (x264):
+- H.264:
 
     - MPEG-4 Part 10, also known as H.264/AVC
     - Provides excellent quality, performance, and file size
     - Widely supported by media players, including mobile devices
+    - Several different encoders are supported: 
+      - In software: x264  
+      - In hardware: Intel QuickSync, AMD VCE, Nvidia NVENC and ARM devices though MediaFoundation.
 
-- H.264 (Intel QSV):
-
-    - MPEG-4 Part 10, also known as H.264/AVC
-    - Hardware based encoder available on Intel processors with Intel HD Graphics (Haswell or newer series CPUs recommended for best quality and file size)
-    - Very fast with significantly lower CPU usage than software H.264 encoders such as x264
-    - Produces larger (but usually not significantly larger) file sizes and slightly lower quality to an equivalent x264 encode, a trade-off that is typically acceptable, especially on lower performance systems
-
-- H.265 (x265)
+- H.265 (HEVC)
 
     - MPEG-H Part 2, also known as H.265/HEVC
     - Successor to H.264/AVC offering higher quality encodes and smaller file sizes
-    - Current strengths of x265 are improved quality and compression for low bit rate encodes, and for ultra high definition content
+    - Current strengths are improved quality and compression for low bit rate encodes, and for ultra high definition content
     - Significantly slower than software H.264/AVC encoders
     - Limited device compatibility compared to H.264/AVC, but this is improving rapidly
+    - Several different encoders are supported: 
+      - In software: x265  
+      - In hardware: Intel QuickSync, AMD VCE, Nvidia NVENC and ARM devices though MediaFoundation.
 
 - MPEG-4 (ffmpeg):
 
