@@ -128,13 +128,13 @@ HandBrake is supported on recent versions of macOS[^apple-eol].
 
 HandBrake requires the [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) 5.0.x
 
-| Windows Version | Status              | Last Compatible Version | Notes        |
-|-----------------|---------------------|-------------------------|--------------|
-| Windows 10      | Supported           |                         |              |
-| Windows 8.1     | Unsupported         | 1.3.3                   | End of life. |
-| Windows 7 SP1   | Unsupported         | 1.3.3                   | End of life. |
-| Windows Vista   | Unsupported         | 1.0.7                   | End of life. |
-| Windows XP      | Unsupported         | 0.9.9                   | End of life. |
+| Windows Version | Status              | Last Compatible Version | Notes          |
+|-----------------|---------------------|-------------------------|----------------|
+| Windows 10      | Supported           |                         | 1909 or later  |
+| Windows 8.1     | Unsupported         | 1.3.3                   | End of life.   |
+| Windows 7 SP1   | Unsupported         | 1.3.3                   | End of life.   |
+| Windows Vista   | Unsupported         | 1.0.7                   | End of life.   |
+| Windows XP      | Unsupported         | 0.9.9                   | End of life.   |
 
 [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
 
