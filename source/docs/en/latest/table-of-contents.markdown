@@ -130,6 +130,7 @@ Table of contents
   *How various settings affect encoding speed*
 - Video
   - [Video codecs](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
+  - [10/12-bit encoding](technical/video-bit-depth.html)<span class="notice draft"><span>draft</span></span>
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.html)<span class="notice draft"><span>draft</span></span>
   - [Presets and tunes](technical/video-presets-tunes.html)<span class="notice draft"><span>draft</span></span>
   - [Profiles and levels](technical/video-profiles-levels.html)<span class="notice draft"><span>draft</span></span>
