@@ -103,7 +103,7 @@ See [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html), [Bui
 
 ### Mac
 
-HandBrake is supported on recent versions of macOS[^apple-eol].
+Since version 1.4.0 HandBrake for macOS is shipped as a Universal Binary 2 (x86_64 / arm64). HandBrake is supported on recent versions of macOS[^apple-eol].
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
