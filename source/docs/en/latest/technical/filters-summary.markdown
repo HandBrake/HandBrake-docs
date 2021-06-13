@@ -59,7 +59,7 @@ Overly strong Denoise settings may damage picture quality by discarding detail.
 NLMeans is a high quality denoise filter with a cost to speed. Use where quality is more important than speed.
 HQDN3D is an adaptive low-pass filter, faster than NLMeans but less effective at preserving fine detail.
 
-The following Denoise tunes are available:
+For NLMeans the following Denoise tunes are available:
 - None: Uses the default preset settings.
 - Film: Refines settings for use with most live action content.
 - Grain: Only processes color channels. Useful for preserving the film-like look of luminance grain while reducing or removing color noise.
@@ -78,7 +78,7 @@ Deblock reduces blocky artifacts caused by low quality video compression.
 Chroma Smooth
 -------------
 
-Reduces chroma noise, rainbows, and other prominent visual artifacts. Useful for resolving various color-related issues, especially with lower resolution content from analog sources, e.g. not great DVD and VHS sources. The blurring/smoothing algorithm is the same as used by the unsharp filter.
+Reduces chroma noise, rainbows, and other prominent visual artifacts. Useful for resolving various color-related issues, especially with lower resolution content from analog sources, e.g. poor quality DVD and VHS sources. The blurring/smoothing algorithm is the same as used by the unsharp filter.
 
 
 Grayscale
