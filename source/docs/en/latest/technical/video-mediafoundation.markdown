@@ -13,7 +13,7 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Apple VideoToolbox
+Media Foundation
 ==================
 
 ## Supported hardware
@@ -27,6 +27,14 @@ If your computer is supported you will see one or more of the following video en
 - H.264 (MediaFoundation)
 - H.265 (MediaFoundation)
 
+## Presets
+
+The following presets are available under the 'Hardware' category in the presets menu:
+
+- H.265 MF 2160P 4K
+- H.265 MF 1080p
+
+These are a good starting point for configuring HandBrake to use these encoders.
 
 ## Performance
 

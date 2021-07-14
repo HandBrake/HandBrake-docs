@@ -31,6 +31,15 @@ A plugin with all required components for Intel QSV encoding using the Flatpak d
 
 Support for the Intel Quick Sync Video encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
 
+## Presets
+
+The following presets are available under the 'Hardware' category in the presets menu:
+
+- H.265 QSV 2160P 4K
+- H.265 QSV 1080p
+
+These are a good starting point for configuring HandBrake to use these encoders.
+
 ## Performance
 
 HandBrake supports both QSV encode and decode.
@@ -53,13 +62,13 @@ It is also common, particularly on lower-end or older hardware, for the CPU to b
 
 The QSV hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
 
-From HandBrake’s command line interface, use the `--encopts` parameter as follows:
-
-    --encopts="option1=value1:option2=value2"
-
-From HandBrake’s graphical interface, set the options in the `Advanced Options` field on the `Video` tab:
+If using HandBrake’s graphical interface, you can set the options in the `Advanced Options` field on the `Video` tab in the following format:
 
     option1=value1:option2=value2
+    
+If using HandBrake’s command line interface, use the `--encopts` parameter as follows:
+
+    --encopts="option1=value1:option2=value2"
 
 ### Option value types
 

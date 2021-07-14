@@ -18,10 +18,10 @@ System requirements
 
 ## Hardware
 
-The following is the minimum level of hardware that HandBrake supports.
+The following is the minimum level of hardware that HandBrake formally supports.
 
 - Processor:
-  - Intel Core (4th generation and newer) i3, i5, i7, i9 or equivalent Xeon
+  - Intel Core (6th generation and newer) i3, i5, i7, i9 or equivalent Xeon
   - AMD Ryzen, Threadripper or Epyc
 - Free memory:  
   - 1 GB for transcoding standard definition video (480p/576p)
@@ -29,11 +29,11 @@ The following is the minimum level of hardware that HandBrake supports.
   - 6 GB or more for transcoding ultra high definition video (2160p 4K)
 - System storage:
   - 150 MB for the HandBrake app
-  - 2 GB or more recommended for processing and storing your new videos
+  - 10 GB or more recommended for processing and storing your new videos
 - Display resolution:
   - 1024x768 minimum, proportionately higher with display scaling
 
-While it may be technically possible to run HandBrake on hardware not meeting these requirements, it is neither recommended nor supported.
+While it may be technically possible to run HandBrake on hardware not meeting these requirements, it is not recommended. 
 
 ### Hardware encoders
 
@@ -64,6 +64,7 @@ HandBrake is supported on FreeBSD stable and maintenance versions.
 
 | FreeBSD Version | Status    | Last Compatible Version | Notes |
 |-----------------|-----------|-------------------------|-------|
+| FreeBSD 13      | Supported |                         |       |
 | FreeBSD 12      | Supported |                         |       |
 | FreeBSD 11      | Supported |                         |       |
 
@@ -73,8 +74,10 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
-| Fedora 32      | Supported           |                         |                               |
-| Fedora 31      | Supported           |                         |                               |
+| Fedora 34      | Supported           |                         |                               |
+| Fedora 33      | Supported           |                         |                               |
+| Fedora 32      | Deprecated in 1.3.0 |                         |                               |
+| Fedora 31      | Deprecated in 1.3.0 |                         |                               |
 | Fedora 30      | Deprecated in 1.3.0 |                         | End of life.                  |
 | Fedora 29      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 | Fedora 28      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
