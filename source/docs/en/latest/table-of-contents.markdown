@@ -128,6 +128,8 @@ Table of contents
   *Technical summary of the official presets*
 - [Performance](technical/performance.html)
   *How various settings affect encoding speed*
+- [Process Isolation](technical/process-isolation.html)
+  *Process Isolation and Multiple Simultaneous Jobs supports*
 - Video
   - [Video codecs](technical/video-codecs.html)<span class="notice draft"><span>draft</span></span>
   - [10/12-bit encoding](technical/video-bit-depth.html)<span class="notice draft"><span>draft</span></span>
