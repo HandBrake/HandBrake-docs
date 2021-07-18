@@ -113,9 +113,9 @@ Since version 1.4.0 HandBrake for macOS is shipped as a Universal Binary 2 (x86_
 | 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4 or later.   |
 | 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
 | 10.14 Mojave       | Supported           |                         | Requires HandBrake 1.1.2 or later. |
-| 10.13 High Sierra  | Unsupported         | 1.3.3                   | End of life                        |
-| 10.12 Sierra       | Unsupported         | 1.3.3                   | End of life.                       |
-| 10.11 El Capitan   | Unsupported         | 1.2.0                   | End of life.                       |
+| 10.13 High Sierra  | Deprecated          | 1.4.0                   | End of life                        |
+| 10.12 Sierra       | Deprecated          | 1.4.x                   | End of life.                       |
+| 10.11 El Capitan   | Unsupported         | 1.3.x                   | End of life.                       |
 | 10.10 Yosemite     | Unsupported         | 1.1.2                   | End of life.                       |
 | 10.9 Mavericks     | Unsupported         | 1.1.2                   | End of life.                       |
 | 10.8 Mountain Lion | Unsupported         | 1.1.2                   | End of life.                       |
@@ -134,10 +134,13 @@ HandBrake requires the [.NET Desktop Runtime](https://dotnet.microsoft.com/downl
 | Windows Version | Status              | Last Compatible Version | Notes          |
 |-----------------|---------------------|-------------------------|----------------|
 | Windows 10      | Supported           |                         | 1909 or later  |
-| Windows 8.1     | Unsupported         | 1.3.3                   | End of life.   |
-| Windows 7 SP1   | Unsupported         | 1.3.3                   | End of life.   |
+| Windows 8.1     | Unsupported         | 1.3.3                   | See Note Below |
+| Windows 7 SP1   | Unsupported         | 1.3.3                   | See Note Below   |
 | Windows Vista   | Unsupported         | 1.0.7                   | End of life.   |
 | Windows XP      | Unsupported         | 0.9.9                   | End of life.   |
+
+Note: HandBrake will still run on Windows 7 and 8.1.  You will receive a notice that it is not supported when starting the app (twice) after which it will continue to run normally.
+Please note, some functionality may not work correctly on these OSes. 
 
 [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
 
