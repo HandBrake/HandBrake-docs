@@ -54,3 +54,4 @@ The following source format's can be passed thru.
 - FLAC   (MKV files only)
 - AAC
 - MP3
+- MP2

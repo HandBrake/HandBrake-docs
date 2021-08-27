@@ -19,13 +19,39 @@ Custom Presets
 
 HandBrake comes with many built-in presets which cover the most common use case scenarios. However there are many scenarios and devices that many not be covered.
 
-You can create your own presets by clicking the "Add" button on the preset pane.
+On the main window, below the title selection controls, you can click the "Save New Preset" button to create your own preset.
 
-![Preset Controls](../../images/windows/preset-controls-1.0.0.png "Preset Controls")
+<!-- .system-linux -->
+<!-- /.system-linux -->
+<!-- .system-macos -->
+![macOS Preset Controls](../../images/windows/preset-controls-mac-1.4.0.png "Preset Controls (macOS)")
+<!-- /.system-macos -->
+<!-- .system-windows -->
+![Windows Preset Controls](../../images/windows/preset-controls-win-1.4.0.png "Preset Controls (Windows)")
+<!-- /.system-windows -->
 
 When you've pressed this button, you'll see the following window appear:
 
-![Preset Add Window](../../images/windows/add-preset-1.0.0.png "Preset Add Window")
+<!-- .system-macos -->
+![macOS Add Preset](../../images/windows/add-preset-mac-1.4.0.png "Add Preset (macOS)")
+<!-- /.system-macos -->
+<!-- .system-windows -->
+![Windows Add Prese](../../images/windows/add-preset-win-1.4.0.png "Add Preset (Windows)")
+<!-- /.system-windows -->
 
-When you press save, HandBrake will use the default behaviour  rules you've set and any settings from the main window just before you pressed "Add Preset".
+Pressing "add" will save a new preset with the details you've entered based on the settings that are currently on the main window. 
+
+
+## Audio and Subtitles Beavhiours 
+
+Audio and Subtitle settings are special. The preset does not store selected audio and subtitle tracks from the main window. It uses rules to automatically select them for each new source or title that you selected.
+You can modify these rules by editing the settings on the relevant "selection behaviour" screen.
+
+Please note, these rules do not cover all possible use cases. If the behaviours don't meet your requirements, audio and subtitle tracks will need to be handled manually after you've scanned a source. 
+
+For more information, please see [Audio and Subtitle Defaults](../workflow/audio-subtitle-defaults.html).
+
+## Default Preset
+
+If you regularly use the same preset, you can make it the default preset that HandBrake starts with by selecting the "Make Default" (macOS) or "Set Current as Default" (Window) option in the presets menu or by using the preset manager accessed via the toolbar.
 

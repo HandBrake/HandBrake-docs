@@ -18,15 +18,13 @@ Where to get HandBrake
 
 ## HandBrake releases and nightly builds
 
-Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly builds](https://handbrake.fr/nightly.php) are available for Linux, Mac, and Windows.
+Official [HandBrake releases](https://handbrake.fr/downloads.php) and [nightly builds](https://github.com/HandBrake/HandBrake-snapshots) are available for Linux, Mac, and Windows.
 
 HandBrake is open-source software licensed under the GNU General Public License Version 2 (GPLv2)[^license]. Anyone can download and use HandBrake *for free*.
 
 <!-- .system-linux -->
 
-Ubuntu Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) or the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots). The PPA may work, but is not tested, on other Debian-compatible distributions.
-
-[Nightly builds](https://handbrake.fr/nightly.php) for Linux are also available as Flatpak bundles.
+For linux users, we provide FlatPak bundles which are available for download on our site, or via <a href="https://flathub.org/apps/details/fr.handbrake.ghb">flathub.org</a>
 
 Users of other BSD- and *nix-like distributions may compile from source.
 
@@ -62,10 +60,6 @@ Broken third-party packages/builds include but are not limited to:
 - Void: `handbrake`, `handbrake-cli`, `handbrake-cli-dbg`, `handbrake-dbg`
 
 Please **do not** request support for these or any other unofficial versions. The HandBrake Team has zero control over them and therefore cannot provide meaningful support.
-
-BSD users should compile from the [official source code](https://github.com/HandBrake/HandBrake).
-
-Linux users should install the [official release PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), install the [official snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases), or compile from the [official source code](https://github.com/HandBrake/HandBrake).
 
 <!-- /.system-linux -->
 

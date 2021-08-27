@@ -36,8 +36,9 @@ Developers and keen users may report bugs on HandBrake's [issue tracker on GitHu
 
 ## IRC discussion channels
 
-Real-time chat is available on our [Freenode](http://freenode.net/irc_servers.shtml) IRC channel, [#handbrake](irc://irc.freenode.net/#handbrake). Make sure to provide an [Activity Log](activity-log.html) when requesting support.
+Real-time chat is available via #HandBrake on the [Libera.Chat](https://libera.chat/) IRC Network. Make sure to provide an [Activity Log](activity-log.html) when requesting support.
+
 
 Note that HandBrake's developers are located in various timezones around the world, and have lives and jobs outside of HandBrake and its community. It's possible that nobody will be able to answer your support request on IRC right away. Be patient for awhile or ask on the forums.
 
-Developer discussion happens on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), which is moderated for the team's sanity. If you're a developer and would like to speak on [#handbrake-dev](irc://irc.freenode.net/#handbrake-dev), you may ask politely on [#handbrake](irc://irc.freenode.net/#handbrake).
+Developer discussion happens on the channel #HandBrake-dev, which is moderated for the team's sanity. If you're a developer and would like to speak on #HandBrake-dev, you may ask politely in #Handbrake

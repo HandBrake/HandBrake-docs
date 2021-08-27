@@ -26,7 +26,7 @@ This is the *only* official download source for HandBrake. For more information,
 
 To download HandBrake to your computer, click the download button on the HandBrake website's [Home page](https://handbrake.fr/). You can also choose a version for a specific operating system from the [Downloads page](https://handbrake.fr/downloads.php).
 
-Experienced users may wish to try HandBrake's [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].
+Experienced users may wish to try HandBrake's [development snapshot builds](https://github.com/HandBrake/HandBrake-snapshots)[^nightly-builds] that are available via GitHub.
 
 ## Verifying your download
 
@@ -71,28 +71,6 @@ The HandBrake Team also publishes [OpenPGP signatures for all downloads on GitHu
 ## Installing on Linux
 
 If you have installed a HandBrake package from your distribution or other third-party package repository, please remove it before proceeding. See the section, *Warning about broken third-party builds* on [Where to get HandBrake](where-to-get-handbrake.html) for more information.
-
-### Ubuntu PPAs
-
-The following instructions are for Ubuntu. They may also work on other `deb`-compatible distributions. For other Linux, please compile from the [official source code](https://github.com/HandBrake/HandBrake).
-
-From the command line, add the [official releases PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases) to your system.
-
-    sudo add-apt-repository ppa:stebbins/handbrake-releases
-    sudo apt-get update
-
-If you prefer HandBrake's nightly builds, add the [official git-snapshots PPA](https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-git-snapshots).
-
-    sudo add-apt-repository ppa:stebbins/handbrake-git-snapshots
-    sudo apt-get update
-
-Install HandBrake.
-
-    sudo apt-get install handbrake-cli handbrake-gtk
-
-Run `HandBrakeCLI` to use HandBrake on the command line.
-
-Run `ghb` to launch HandBrake's graphical user interface. You may wish to right-click on the icon and select "Lock to Launcher" for easy access in the future.
 
 ### Flatpak bundles
 

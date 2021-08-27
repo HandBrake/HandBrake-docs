@@ -24,7 +24,7 @@ Before updating, please make sure there are no pending encodes in the `Queue`. I
 
 ## Updating HandBrake on Linux
 
-The Linux version of HandBrake does not have a built-in update checking feature. Your Linux distribution's package manager will handle any updates to the official PPA.
+The Linux version of HandBrake does not have a built-in update checking feature. Updates are provided via FlatPak bundles. 
 
 <!-- /.system-linux -->
 <!-- .system-macos -->

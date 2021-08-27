@@ -21,32 +21,22 @@ Resizing Video
 
 The picture settings tab is located on HandBrake's main window and becomes active after you've scanned a source.
 
-![Picture settings tab](../../images/windows/picture-settings-1.0.0.png "Picture settings tab")
-
-### Width and Height
-
-These allow you to adjust the size of the output.  When you press the up or down arrows, the number will jump by the number selected in the "Modulus" dropdown.
-
-When anamorphic strict is selected, both the "width" and "height" boxes will be disabled. You will get the maximum source size as output.
-
-When loose is selected, you can downscale with the "width" or leave at the source width.
-
-When none is selected, you can alter both "width" and "height"
-
-### Modulus
-
-The width and height must be divisible by this number. It's best left at 2, but if you have a problematic player, you can try setting it to 16.
+![Picture settings tab](../../images/windows/picture-settings-win-1.4.0.png "Picture settings tab")
 
 ### Anamorphic
 
-Typically recommended that you leave this on "loose". If your source is not anamorphic, having this set to an anamorphic option will not affect the output. Thus, it is safe to leave on.
+Typically recommended that you leave this on "automatic". If your source is not anamorphic, having this set to an anamorphic option will not affect the output. Thus, it is safe to leave on.
 
-## Upscaling
+When "Automatic" is selected, HandBrake will maximise the output size of the video, up to the source resolution or set "Resolution Limit".
 
-The HandBrake GUI's do not allow upscaling. Most of the time this is a bad idea as it reduces (not increases) the quality of your source file along with increasing the final file size. This is less than ideal. Most of the time, letting the playback device or software upscale to your screen size is much better. You don't gain anything by upscaling with HandBrake.
+When "Off" is selected along with unchecking "Optimal Size", you can alter both "width" and "height". Otherwise, the source size, or resolution limit will be used. 
 
-In the very rare cases that this is needed, it can be done with the command line interface with the --width and --height options.
-Typically you would only use this if the software or hardware you're using has a problematic or broken scaler.
+When "Custom" is selected, you have full control of the output dimensions. 
+
+### Upscaling
+
+While upscaling is NOT recommended, there are some instances where it is useful (i.e. uploading to YouTube). To enable this, check the "Allow upscaling" checkbox. 
+The "Resolution Limit" will still be honoured. 
 
 ## Cropping
 
@@ -56,7 +46,7 @@ HandBrake's auto-crop is not perfect. It's giving you a best guess at what the c
 
 You can preview the effect of your adjustments by clicking the "Preview" button on the toolbar.
 
-![HandBrake toolbar](../../images/windows/toolbar-1.0.0.png "HandBrake toolbar")
+![HandBrake toolbar](../../images/windows/toolbar-win-1.4.0.png "HandBrake toolbar")
 
 The preview window will then appear and will display in real-time any changes you make on the picture settings screen.
 If the size of the output exceeds the window size, the preview window will scale it to fit to screen.
