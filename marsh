@@ -1089,7 +1089,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         for ITEM in ${LIST[@]}; do
             cp "${FILE}" "${FILE_TEMP}"
             <"${FILE_TEMP}" \
-            awk '/^[ ]*\{\%[ ]*if[ ]+'${TAG//\./\.}'[ ]+'${COMPARITOR// /[ ]+}'[ ]+"'${ITEM}'"[ ]*\%\}[ ]*$/ {
+            awk '/^[ ]*\{%[ ]*if[ ]+'${TAG//\./\.}'[ ]+'${COMPARITOR// /[ ]+}'[ ]+"'${ITEM}'"[ ]*%\}[ ]*$/ {
                     tag=1;
                     line=1;
                     delete buffer;
@@ -1097,16 +1097,16 @@ function build_template {  # build_template dest_dir target_dir document templat
                 {
                     buffer[line++]=$0;
                 }
-                (tag==1 && (/^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/ || /^[ ]*\{\%[ ]*else[ ]*\%\}[ ]*$/)) {
+                (tag==1 && (/^[ ]*\{%[ ]*endif[ ]*%\}[ ]*$/ || /^[ ]*\{%[ ]*else[ ]*%\}[ ]*$/)) {
                     for (i=2; i < line-1; i++) {
                         print buffer[i];
                     }
                 }
-                (tag>0 && /^[ ]*\{\%[ ]*else[ ]*\%\}[ ]*$/) {
+                (tag>0 && /^[ ]*\{%[ ]*else[ ]*%\}[ ]*$/) {
                     tag=2;
                     next;
                 }
-                (tag>0 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {
+                (tag>0 && /^[ ]*\{%[ ]*endif[ ]*%\}[ ]*$/) {
                     tag=0;
                     next;
                 }
@@ -1118,7 +1118,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         # process else
         cp "${FILE}" "${FILE_TEMP}"
         <"${FILE_TEMP}" \
-        awk '/^[ ]*\{\%[ ]*if[ ]+'${TAG//\./\.}'[ ]+'${COMPARITOR// /[ ]+}'[ ]+".+"[ ]*\%\}[ ]*$/ {
+        awk '/^[ ]*\{%[ ]*if[ ]+'${TAG//\./\.}'[ ]+'${COMPARITOR// /[ ]+}'[ ]+".+"[ ]*%\}[ ]*$/ {
                 tag=1;
                 line=1;
                 delete buffer;
@@ -1129,16 +1129,16 @@ function build_template {  # build_template dest_dir target_dir document templat
             (tag==1) {
                 delete buffer;
             }
-            (tag==2 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {
+            (tag==2 && /^[ ]*\{%[ ]*endif[ ]*%\}[ ]*$/) {
                 for (i=2; i < line-1; i++) {
                     print buffer[i];
                 }
             }
-            (tag>0 && /^[ ]*\{\%[ ]*else[ ]*\%\}[ ]*$/) {
+            (tag>0 && /^[ ]*\{%[ ]*else[ ]*%\}[ ]*$/) {
                 tag=2;
                 next;
             }
-            (tag>0 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {
+            (tag>0 && /^[ ]*\{%[ ]*endif[ ]*%\}[ ]*$/) {
                 tag=0;
                 next;
             }
@@ -1154,7 +1154,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         FILE_TEMP=$(mktemp "${MARSH_TEMP}/conditional-XXXXXX")
         # remove unsupported conditionals
         cp "${FILE}" "${FILE_TEMP}"
-        <"${FILE_TEMP}" awk '/^[ ]*\{\%[ ]*if[^%]+\%\}[ ]*$/ {k=1;i=1;delete a} {a[i++]=$0} (k==1 && /^[ ]*\{\%[ ]*endif[ ]*\%\}[ ]*$/) {k=0;next} (k==0) { print }' > "${FILE}"
+        <"${FILE_TEMP}" awk '/^[ ]*\{%[ ]*if[^%]+%\}[ ]*$/ {k=1;i=1;delete a} {a[i++]=$0} (k==1 && /^[ ]*\{%[ ]*endif[ ]*%\}[ ]*$/) {k=0;next} (k==0) { print }' > "${FILE}"
         return 0
     }
 
