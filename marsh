@@ -1724,7 +1724,7 @@ function build_document {  # build_document dest_dir target_dir document advance
         # process images with multiple resolution assets
         cp "${DOCUMENT}.${MARSH_UID}.document" "${DOCUMENT}.${MARSH_UID}.document.temp"
         <"${DOCUMENT}.${MARSH_UID}.document.temp" sed -E \
-        -e 's|^!\[(.+)]\([ ]*([^ ]+)[ ]*"(.+)"[ ]*\)$|<figure><a href="\2"><img src="\2" alt="\1" /></a><figcaption>\3</figcaption></figure>|' |
+        -e 's|^!\[(.+)]\([ ]*([^ ]+)[ ]*"(.+)"[ ]*\)$|<figure>\n<a href="\2">\n<img src="\2" alt="\1" />\n</a>\n<figcaption>\3</figcaption>\n</figure>|' |
         process_markdown |
         sed -E \
         -e 's|<p><figure>|<figure>|' \
@@ -1733,7 +1733,7 @@ function build_document {  # build_document dest_dir target_dir document advance
         {
             if ($0 ~ " src=\"[^\"]+\"")
             {
-                split($0, a, " ");
+                split($0, a, " ", ws);
                 for(i=1; i<=length(a); i++)
                 {
                     if (a[i] ~ "^src=\"[^\"]+\"$")
@@ -1758,11 +1758,11 @@ function build_document {  # build_document dest_dir target_dir document advance
                         } else {
                             f3="";
                         }
-                        print "src=\"" f "\" srcset=\"" f1 f2 f3 "\" ";
-                    } else {
-                        print a[i];
+                        a[i] = "src=\"" f "\" srcset=\"" f1 f2 f3 "\"";
                     }
+                printf "%s%s", a[i], ws[i];
                 }
+                printf "\n";
             } else {
                 print $0;
             }
