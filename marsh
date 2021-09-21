@@ -2233,7 +2233,7 @@ for I in "${!MARKDOWN_OPTIONS[@]}"; do
 done
 OIFS="${IFS}"
 IFS=$'\n'
-MARKDOWN_UNKNOWN=($(echo "test options" | "${MARKDOWN}" ${MARKDOWN_OPTIONS[@]} -VV 2>&1 >/dev/null | grep -i "unknown" | sed -E -e 's/^markdown: unknown option <([^>]+)>$/\1/'))
+MARKDOWN_UNKNOWN=($("${MARKDOWN}" ${MARKDOWN_OPTIONS[@]} -VV 2>&1 >/dev/null | grep -i "unknown" | sed -E -e 's/^markdown: unknown option <([^>]+)>$/\1/'))
 IFS="${OIFS}"
 if [[ "${#MARKDOWN_UNKNOWN[@]}" -gt 0 ]]; then
     echo -n "Unknown markdown options:" >&2
