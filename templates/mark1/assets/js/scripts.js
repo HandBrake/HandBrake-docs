@@ -247,8 +247,8 @@ $(document).ready(function(){
             if (ratio > 1) {
                 /* Round ratio down so height calc works */
                 ratio = h / Math.floor(h / ratio);
-                /* Account for caption size */
-                if (height + (caption_height * 2) > parent_height){
+                /* Account for caption size, except short images */
+                if (height > 300 && height + (caption_height * 2) > parent_height){
                     caption_factor = caption_factor - (caption_height * 2.5 / parent_height);
                 }
                 new_width  = w * caption_factor / ratio;
