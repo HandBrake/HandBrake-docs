@@ -27,7 +27,7 @@ The follow encoders support higher than 8-bit.
 | Intel QuickSync     |
 | Apple Video Toolbox |
 
-Please note, you must select a "10-bit" or "12-bit" encoder from the "Video codec" dropdown on the "Video" tab to enable this feature.
+Please note, you must select a "10-bit" or "12-bit" encoder from the "Video Encoder" dropdown on the "Video" tab to enable this feature.
 For hardware encoders, the option will only be shown if the system supports it. 
 
 ### Limitations
