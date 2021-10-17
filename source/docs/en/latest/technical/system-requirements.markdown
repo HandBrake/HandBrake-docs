@@ -31,7 +31,7 @@ The following is the minimum level of hardware that HandBrake formally supports.
   - 150 MB for the HandBrake app
   - 10 GB or more recommended for processing and storing your new videos
 - Display resolution:
-  - 1024x768 minimum, proportionately higher with display scaling
+  - 1280x960 minimum, proportionately higher with display scaling. (See section below)
 
 While it may be technically possible to run HandBrake on hardware not meeting these requirements, it is not recommended. 
 
@@ -145,27 +145,16 @@ Please note, some functionality may not work correctly on these OSes.
 [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
 
 <!-- /.system-windows -->
-<!-- .system-linux.system-windows -->
 
+<!-- .system-linux.system-windows -->
 ### Display scaling
 
-Display scaling beyond 100% requires a proportionately higher resolution to fit the higher density interface graphics in the same physical space. For example, HandBrake will fit within the bounds of a 1920x1080 (FHD) resolution display at 100% and 125% scaling, but not at 150% and higher.
+Display scaling beyond 100% requires a proportionately higher resolution to fit the higher density interface graphics in the same physical space. 
+For example, HandBrake will fit within the bounds of a 1920x1080 (FHD) resolution display at 100% and 125% scaling, but not at 150% and higher.
 
-The following is a list of common display scales and corresponding standard resolutions that meet HandBrake’s requirements. Higher resolutions may also be used.
+In addition, changes to system themes, font-sizes, padding etc may also impact the ability of the window to render in the space provided. 
 
-| Scaling | Minimum Height | 4:3 Aspect                          | 16:10 Wide Aspect                       | 16:9 Wide Aspect                     | 21:9 Ultrawide Aspect  |
-|---------|----------------|-------------------------------------|-----------------------------------------|--------------------------------------|------------------------|
-| 100%    | 768 pixels     | 1024x768 (XGA)                      | 1280x800 (WXGA), 1440x900 (WSXGA/WXGA+) | 1366x768 (WXGA), 1600x900 (HD+)      | 2160x900 (WHD+)        |
-| 125%    | 960 pixels     | 1280x960 (SXGA−), 1400x1050 (SXGA+) | 1680x1050 (WSXGA+)                      | 1920x1080 (FHD)                      | 2560x1080 (WFHD)       |
-| 150%    | 1152 pixels    | 1600x1200 (UXGA)                    | 1920x1200 (WUXGA)                       | 2048x1152 (QWXGA)                    | 2880x1200 (WFHD+)      |
-| 175%    | 1344 pixels    | 2048x1536 (QXGA)                    | 2560x1600 (WQXGA)                       | 2560x1440 (WQHD)                     | 3440x1440 (WQHD)       |
-| 200%    | 1536 pixels    | 2048x1536 (QXGA)                    | 2560x1600 (WQXGA)                       | 3200x1800 (QWXGA+)                   | 3840x1600 (UW4K)       |
-| 225%    | 1728 pixels    | 2800x2100 (QSXGA+)                  | 3840x2400 (WQUXGA)                      | 3200x1800 (QWXGA+)                   | 4320x1800 (WQHD+)      |
-| 250%    | 1920 pixels    | 2800x2100 (QSXGA+)                  | 3840x2400 (WQUXGA)                      | 3840x2160 (4K UHD-1)                 | 5120x2160 (WUHD)       |
-| 300%    | 2304 pixels    | 3200x2400 (QUXGA)                   | 3840x2400 (WQUXGA)                      | 5120x2880 (5K)                       | 5760x2400 (UW5K)       |
-| 350%    | 2688 pixels    | 4096x3072 (HXGA)                    | 5120x3200 (WHXGA)                       | 5120x2880 (5K)                       | 6880x2880 (UW6K)       |
-
-HandBrake will fit within any display resolution, 4:3 aspect ratio or wider, meeting or exceeding the minimum height for the associated scaling amount. If your display resolution meets or exceeds the minimum and HandBrake does not fit within its bounds, you will need to reduce your display scaling.
+If HandBrake does not fit, you can change the "Scale and Layout" setting on Windows or "Scaling Factor" setting on Linux to a lower value to allow HandBrake to operate.
 
 <!-- /.system-linux.system-windows -->
 
