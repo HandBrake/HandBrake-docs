@@ -21,11 +21,18 @@ HandBrake does not store Audio and Subtitle tracks in presets.
 
 Instead, we store behaviour rules for automatically selecting audio and subtitle tracks each time you scan a new source or select a title.
 
-In order to configure the track selection behaviour, click the "Configure Defaults" button on the Audio or Subtitle Defaults tab.
+In order to configure the track selection behaviour, click the "Selection Behaviour" button on the Audio or Subtitle Defaults tab.
+
+![Audio Defaults Access Button](../../images/windows/audio-configure-defaults-button-win-1.4.0.png "Audio Defaults Window")
 
 ### Audio Defaults
 
+<!-- .system-macos -->
+![Audio Defaults Window](../../images/mac/audio-defaults-mac-1.4.0.png "Audio Defaults Window")
+<!-- /.system-macos -->
+<!-- .system-windows -->
 ![Audio Defaults Window](../../images/windows/audio-defaults-win-1.4.0.png "Audio Defaults Window")
+<!-- /.system-windows -->
 
 - Track Selection Behaviour
   - None
@@ -35,8 +42,8 @@ In order to configure the track selection behaviour, click the "Configure Defaul
   - All matching selected languages
     - All the tracks that match the "Chosen Languages".
     
-- Choose Languages
-  - Move any languages you are interested in into the "Chosen Languages" list in order to have tracks selected based on the track selection behaviour.
+- Languages
+  - Select the languages you wish to encode. Note that not all sources will have track languages. You may also have to use the "Unknown" option or "Any" options to have tracks added in that case.
 
 - Auto Passthru
   - HandBrake can pass thru several different audio formats. There are separate options the audio encoder dropdown for these. When you select "Auto Passthru", it will pass thru any of those supported types.  You can limit what it will automatically passthru. For example, if you only ever want AC3 or DTS passthru, but not any of the other choices, untick the relevant checkboxes.
@@ -50,7 +57,12 @@ In order to configure the track selection behaviour, click the "Configure Defaul
 
 ### Subtitle Defaults
 
+<!-- .system-macos -->
+![Subtitle Defaults Window](../../images/mac/subtitle-defaults-mac-1.4.0.png "Audio Defaults Window")
+<!-- /.system-macos -->
+<!-- .system-windows -->
 ![Subtitle Defaults Window](../../images/windows/subtitle-defaults-win-1.4.0.png "Subtitle Defaults Window")
+<!-- /.system-windows -->
 
 - Track Selection Behaviour
   - None
