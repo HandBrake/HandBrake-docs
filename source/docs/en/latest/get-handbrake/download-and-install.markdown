@@ -88,8 +88,8 @@ You can later update the HandBrake Flatpak to the latest release on Flathub by r
 
 If you prefer HandBrake's nightly builds, download and install the latest available version (requires your distribution's `curl` package).
 
-    curl -O https://nightly.handbrake.fr/HandBrake-latest-master-x86_64.flatpak
-    flatpak install HandBrake-latest-master-x86_64.flatpak
+    Download the latest snapshot from the [development snapshot builds](https://github.com/HandBrake/HandBrake-snapshots)[^nightly-builds]
+    flatpak install <filename>
 
 Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run --command=HandBrakeCLI fr.handbrake.ghb` to use HandBrake on the command line.
 
