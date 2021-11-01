@@ -36,7 +36,7 @@ The HandBrake Team publishes [checksums for all downloads on handbrake.fr](https
 
 <!-- .system-linux -->
 
-When installing on Linux using the official PPA, download integrity is verified automatically. Similarly, the integrity of source code managed using `git` is verified automatically.
+When installing on Linux from Flathub, download integrity is verified automatically. Similarly, the integrity of source code managed using `git` is verified automatically.
 
 To verify an official source distribution tarball or Flatpak bundle, consult your Linux distribution's documentation for instructions on how to verify checksums.
 
@@ -72,26 +72,42 @@ The HandBrake Team also publishes [OpenPGP signatures for all downloads on GitHu
 
 If you have installed a HandBrake package from your distribution or other third-party package repository, please remove it before proceeding. See the section, *Warning about broken third-party builds* on [Where to get HandBrake](where-to-get-handbrake.html) for more information.
 
-### Flatpak bundles
+### Flathub Flatpak
 
-[Flatpak](https://flatpak.org/) bundles of HandBrake for Linux are available on the [HandBrake website](https://handbrake.fr/) and [Flathub](https://flathub.org/).
+The most convenient way to install HandBrake and manage updates is to install the release we publish to Flathub. Please see Flathub's Quick Setup page for instructions to enable Flatpak and Flathub on your Linux distribution.
+
+Once Flathub is enabled on your system, you may install HandBrake directly from Flathub, from the Gnome Software GUI ('gnome-software'), or from the command line.
+
+Installing from Flathub and Gnome Software are fairly self explanatory. To install from the command line for system wide use:
+
+    flatpak install fr.handbrake.ghb
+
+During install it will ask for your password (assuming you have sudo privilege). Once installed, HandBrake will be available to all users of the system.
+
+To install without sudo privileges:
+
+    flatpak --user install fr.handbrake.ghb
+    
+Once installed, HandBrake will only be available to the user that installed it.
+
+### Flatpak Bundles
+
+Alternatively, you may manually download, verify, and install [Flatpak](https://flatpak.org/) bundles of HandBrake for Linux which are available on the [HandBrake download page](https://handbrake.fr/downloads.php), the [HandBrakeCLI download page](https://handbrake.fr/downloads2.php) or [development snapshot builds page](https://github.com/HandBrake/HandBrake-snapshots)[^nightly-builds].
 
 Install your distribution's `flatpak` package before running the following commands.
 
-Install the latest HandBrake release from Flathub.
+Install the latest HandBrake GUI release (after download and verify)
 
-    flatpak --user install https://flathub.org/repo/appstream/fr.handbrake.ghb.flatpakref
+    flatpak --user install HandBrake-1.4.2-x86_64.flatpak
 
-You can later update the HandBrake Flatpak to the latest release on Flathub by running the following.
+Install the latest HandBrake CLI release (after download and verify)
 
-    flatpak --user update fr.handbrake.ghb
+    flatpak --user install HandBrakeCLI-1.4.2-x86_64.flatpak
 
-If you prefer HandBrake's nightly builds, download and install the latest available version (requires your distribution's `curl` package).
+Install the nightly build (example, filename changes nightly)
 
     Download the latest snapshot from the [development snapshot builds](https://github.com/HandBrake/HandBrake-snapshots)[^nightly-builds]
-    flatpak install <filename>
-
-Run `flatpak run fr.handbrake.ghb` to launch HandBrake's graphical user interface, or `flatpak run --command=HandBrakeCLI fr.handbrake.ghb` to use HandBrake on the command line.
+    flatpak --user install fr.handbrake.ghb-20210720182537-a01549c9c-master-x86_64.flatpak
 
 <!-- /.system-linux -->
 <!-- .system-macos -->
@@ -148,6 +164,39 @@ You may launch HandBrake by quickly clicking twice (double-clicking) on the cock
 ![HandBrake icon](../../images/icon-1.1.0.png)![Double-clicking HandBrake icon](../../images/icon-click-1.1.0.gif)
 
 <!-- .continue -->
+
+
+<!-- .system-linux -->
+### Launching HandBrake Flatpak from the command line
+
+To launch the HandBrake GUI from the command line
+
+    flatpak run fr.handbrake.ghb
+
+The HandBrake GUI Flatpak package also includes the CLI which may be run with
+
+    flatpak run --command=HandBrakeCLI fr.handbrake.ghb
+
+Additional HandBrakeCLI options go at the end of the above command line.
+
+If you installed the stand-alone HandBrakeCLI Flatpak package, it can be run with
+
+    flatpak run fr.handbrake.HandBrakeCLI
+
+The developers of Flatpak have also provided some useful helper scripts that get installed whenever a Flatpak package is installed.  Unfortunately, the PATH environment usually does not include the location these are installed to.  If you wish to use these helper scripts, update your PATH (usually performed in a shell initialization file such as ~/.bash_profile)
+
+    export PATH=$PATH:$HOME/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin
+
+Once your PATH includes these directories, the GUI may be run with
+
+    fr.handbrake.ghb
+
+And the CLI may be run with
+
+    fr.handbrake.HandBrakeCLI
+
+<!-- /.system-linux -->
+
 
 ## Next steps
 
