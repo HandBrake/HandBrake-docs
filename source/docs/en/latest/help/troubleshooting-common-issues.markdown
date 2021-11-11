@@ -89,7 +89,7 @@ Download the "Arm64" for ARM based devices running Windows.
 Try each of the following steps until HandBrake is working again.
 
 1. Restart your computer
-2. Install the latest version of Microsoft .NET Framework available for your Windows version
+2. Make sure you have the latest version of .NET Desktop Runtime installed for your system. 
 3. Delete your HandBrake configuration data and presets (replace username with your own)
     - C:\Users\username\AppData\Roaming\HandBrake
     - C:\Users\username\AppData\Local\HandBrake
