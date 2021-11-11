@@ -76,13 +76,13 @@ If the above does not solve your issue, someone may be able to help via HandBrak
 
 ## HandBrake for Windows
 
-### Downloading Microsoft .NET Framework
+### Downloading Microsoft .NET Core
 
-Windows 10 already contains Microsoft .NET Framework. Updates are available for Windows 7 and 8.1 via Windows Update.
+- [Microsoft .NET Core 5.x](https://dotnet.microsoft.com/download/dotnet/5.0/runtime) 
+Please make sure to download the "Desktop Runtime".
+Download the "x64" versionf or Intel or AMD based systems.
+Download the "Arm64" for ARM based devices running Windows. 
 
-Additionally, you may download one of the following Microsoft .NET Framework standalone installers.
-
-- [Microsoft .NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56116) for Windows 7 SP1, Windows 8.1, Windows 10, and Windows Server
 
 ### General troubleshooting
 
