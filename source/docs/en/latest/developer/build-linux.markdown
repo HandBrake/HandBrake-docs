@@ -48,6 +48,10 @@ When complete, you will find `HandBrakeCLI` in the `build` directory. If the gra
 Install HandBrake (optional). When installing the graphical interface, icon and desktop files for the Applications menu will be also installed.
 
     sudo make --directory=build install
+    
+If you wish to then uninstall
+    
+    sudo make --directory=build uninstall
 
 To start over, simply remove the `build` directory.
 
