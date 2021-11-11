@@ -20,14 +20,14 @@ English documentation is currently available for the following HandBrake version
 
 Current release:
 
-- **[HandBrake 1.3.0-1.3.3](1.3.0/)**
+- **[HandBrake 1.4](latest/)**
 
-Nightly and snapshot builds:
+Development release:
 
 - [HandBrake Latest](latest/)
 
 Previous releases:
-
+- [HandBrake 1.3.0-1.3.3](1.3.0/)
 - [HandBrake 1.2.0-1.2.2](1.2.0/)
 - [HandBrake 1.1.0-1.1.2](1.1.0/)
 - [HandBrake 1.0.0–1.0.7](1.0.0/)
