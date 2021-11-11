@@ -62,11 +62,11 @@ The following describes the level of support available for the current HandBrake
 
 HandBrake is supported on FreeBSD stable and maintenance versions.
 
-| FreeBSD Version | Status    | Last Compatible Version | Notes |
-|-----------------|-----------|-------------------------|-------|
-| FreeBSD 13      | Supported |                         |       |
-| FreeBSD 12      | Supported |                         |       |
-| FreeBSD 11      | Supported |                         |       |
+| FreeBSD Version | Status      | Last Compatible Version | Notes |
+|-----------------|-------------|-------------------------|-------|
+| FreeBSD 13      | Supported   |                         |       |
+| FreeBSD 12      | Supported   |                         |       |
+| FreeBSD 11      | Unsupported | 1.3.3                   |       |
 
 #### Fedora
 
@@ -90,8 +90,8 @@ Interim (non-LTS) versions are typically supported until their end of life.
 
 | Ubuntu Version          | Status              | Last Compatible Version | Notes                              |
 |-------------------------|---------------------|-------------------------|------------------------------------|
-| 20.04 LTS Focal Fossa   | Supported           |                         | Flatpak, PPA, and source.          |
-| 18.04 LTS Bionic Beaver | Deprecated in 1.3.0 | HandBrake 1.3.0         | Flatpak only.                      |
+| 20.04 LTS Focal Fossa   | Supported           |                         | Flatpak, and source.               |
+| 18.04 LTS Bionic Beaver | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
 | 16.04 LTS Xenial Xerus  | Unsupported         | HandBrake 1.1.2         | Various issues affect operability. |
 | 14.04 LTS Trusty Tahr   | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 
@@ -106,14 +106,15 @@ See [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html), [Bui
 
 ### Mac
 
-Since version 1.4.0 HandBrake for macOS is shipped as a Universal Binary 2 (x86_64 / arm64). HandBrake is supported on recent versions of macOS[^apple-eol].
+Since version 1.4.0 HandBrake for macOS is shipped as a Universal Binary 2 (x86_64 / arm64). HandBrake is supported on recent versions of macOS.
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 12 Monterey        | Supported           |                         | Requires HandBrake 1.4 or later.   |
 | 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4 or later.   |
 | 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
-| 10.14 Mojave       | Supported           |                         | Requires HandBrake 1.1.2 or later. |
-| 10.13 High Sierra  | Deprecated          | 1.4.0                   | End of life                        |
+| 10.14 Mojave       | Deprecated          | 1.4.0                   | Requires HandBrake 1.1.2 or later. |
+| 10.13 High Sierra  | Deprecated          | 1.4.0                   | End of life.                       |
 | 10.12 Sierra       | Deprecated          | 1.4.x                   | End of life.                       |
 | 10.11 El Capitan   | Unsupported         | 1.3.x                   | End of life.                       |
 | 10.10 Yosemite     | Unsupported         | 1.1.2                   | End of life.                       |
@@ -133,16 +134,15 @@ HandBrake requires the [.NET Desktop Runtime](https://dotnet.microsoft.com/downl
 
 | Windows Version | Status              | Last Compatible Version | Notes          |
 |-----------------|---------------------|-------------------------|----------------|
+| Windows 11      | Supported           |                         |                |
 | Windows 10      | Supported           |                         | 1909 or later  |
 | Windows 8.1     | Unsupported         | 1.3.3                   | See Note Below |
-| Windows 7 SP1   | Unsupported         | 1.3.3                   | See Note Below   |
+| Windows 7 SP1   | Unsupported         | 1.3.3                   | See Note Below |
 | Windows Vista   | Unsupported         | 1.0.7                   | End of life.   |
 | Windows XP      | Unsupported         | 0.9.9                   | End of life.   |
 
 Note: HandBrake will still run on Windows 7 and 8.1.  You will receive a notice that it is not supported when starting the app (twice) after which it will continue to run normally.
 Please note, some functionality may not work correctly on these OSes. 
-
-[VLC](https://www.videolan.org/vlc/) is recommended for viewing media files.
 
 <!-- /.system-windows -->
 
@@ -157,6 +157,3 @@ In addition, changes to system themes, font-sizes, padding etc may also impact t
 If HandBrake does not fit, you can change the "Scale and Layout" setting on Windows or "Scaling Factor" setting on Linux to a lower value to allow HandBrake to operate.
 
 <!-- /.system-linux.system-windows -->
-
-
-[^apple-eol]: Since Apple does not publish support periods, common convention is to consider a macOS version end of life once [security updates](https://support.apple.com/en-us/HT201222) cease being offered, typically 2–3 years after initial release.
