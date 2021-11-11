@@ -27,6 +27,7 @@ Development release:
 - [HandBrake Latest](latest/)
 
 Previous releases:
+
 - [HandBrake 1.3.0-1.3.3](1.3.0/)
 - [HandBrake 1.2.0-1.2.2](1.2.0/)
 - [HandBrake 1.1.0-1.1.2](1.1.0/)
