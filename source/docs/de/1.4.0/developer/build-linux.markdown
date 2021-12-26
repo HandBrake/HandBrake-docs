@@ -38,10 +38,10 @@ Klone das HandBrake Repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Liste verfügbare Tags in der HandBrake 1.3.x Release Serie und checke den aktuellsten aus.
+Liste verfügbare Tags in der HandBrake 1.4.x Release Serie und checke den aktuellsten aus.
 
-    git tag --list | grep ^1\.3\.
-    git checkout refs/tags/$(git tag -l | grep -E '^1\.3\.[0-9]+$' | tail -n 1)
+    git tag --list | grep ^1\.4\.
+    git checkout refs/tags/$(git tag -l | grep -E '^1\.4\.[0-9]+$' | tail -n 1)
 
 Baue HandBrake. Um die experimentelle Unterstützung für Intel Quick Sync Video zu aktivieren, füge dem Aufruf `--enable-qsv` hinzu. Um nur das Komanndozeileninterface zu bauen, deaktivere die grafische Oberfläche, indem du die Option `--disable-gtk` anhängst.
 
