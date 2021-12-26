@@ -47,7 +47,7 @@ Audio Encoders
     -   On Mac, HandBrake uses Apple's CoreAudio AAC encoder. It's known to be
         much better quality and is the default option for Mac users.
 
--   HE-AAC ( Mac Only)
+-   HE-AAC (Mac Only)
 
     -   High Efficiency AAC encoder. This encoder is optimized for low-bitrate
         applications which may be useful for streaming.
@@ -64,19 +64,19 @@ Audio Encoders
     -   HandBrake offers Vorbis audio encoding as well, for which it uses the
         aoTuV branch that offers quality tweaks.
 
+-   Opus (FFmpeg)
+
+    -   Available in MKV files, Opus is the successor to Vorbis. HandBrake uses libopus for encoding.
+
 -   AC3 and E-AC3:
 
     -   HandBrake can encode to AC3 using FFmpeg.
 
     -   This is not the same as Passthru. You can encode any audio track to AC3.
 
--   Opus (FFmpeg)
-    
-    -   Available in MKV files.
-
 -   Flac 16 and 24bit (FFmpeg)
 
-    -   Loss-less audio compression.
+    -   Lossless audio compression.
 
     -   Available in MKV files.
 
