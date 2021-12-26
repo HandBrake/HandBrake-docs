@@ -20,7 +20,7 @@ English documentation is currently available for the following HandBrake version
 
 Current release:
 
-- **[HandBrake 1.4](latest/)**
+- **[HandBrake 1.4.0-1.4.2](1.4.0/)**
 
 Development release:
 
