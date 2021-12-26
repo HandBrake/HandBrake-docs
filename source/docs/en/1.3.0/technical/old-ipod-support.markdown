@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           [ draft ]
+State:           [ obsolete ]
 Title:           iPod 5G Support
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

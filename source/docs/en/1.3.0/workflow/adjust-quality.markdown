@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Adjusting quality
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

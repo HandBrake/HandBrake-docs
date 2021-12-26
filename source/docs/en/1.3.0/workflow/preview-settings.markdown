@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Previewing your settings
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
