@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Fehlerbehebung bekannter Probleme
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

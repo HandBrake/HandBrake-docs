@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           CentOS Abhängigkeiten installieren
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

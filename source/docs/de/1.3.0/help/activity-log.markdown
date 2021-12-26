@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Aktivitäten Log
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

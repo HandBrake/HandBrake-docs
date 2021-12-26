@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           HandBrake für BSD bauen
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

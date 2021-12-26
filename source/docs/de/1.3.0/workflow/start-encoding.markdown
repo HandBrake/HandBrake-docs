@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Kodierung starten
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
