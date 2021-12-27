@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 11 Bullseye.
+The following instructions are for [Debian](https://www.debian.org) 10 Buster and 11 Bullseye.
 
 Basic requirements to run commands:
 
@@ -27,6 +27,7 @@ Dependencies:
 
 - autoconf
 - automake
+- autopoint
 - build-essential
 - cmake
 - git
@@ -63,6 +64,10 @@ Dependencies:
 - tar
 - zlib1g-dev
 
+Additional Debian 10 dependencies:
+
+- libappindicator-dev
+
 Additional Debian 11 dependencies:
 
 - appstream
@@ -88,7 +93,15 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev autopoint
+    sudo apt-get install autoconf automake autopoint build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev
+
+If you are running Debian 10, install the additional dependencies.
+
+    sudo apt-get install libappindicator-dev
+
+If you are running Debian 11, install the additional dependencies.
+
+    sudo apt-get install appstream
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
