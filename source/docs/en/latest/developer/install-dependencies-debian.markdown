@@ -25,8 +25,10 @@ Basic requirements to run commands:
 
 Dependencies:
 
+- appstream
 - autoconf
 - automake
+- autopoint
 - build-essential
 - cmake
 - git
@@ -63,10 +65,6 @@ Dependencies:
 - tar
 - zlib1g-dev
 
-Additional Debian 11 dependencies:
-
-- appstream
-
 Intel Quick Sync Video dependencies (optional):
 
 - libva-dev
@@ -88,7 +86,7 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev autopoint
+    sudo apt-get install appstream autoconf automake autopoint build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
