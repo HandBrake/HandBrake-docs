@@ -18,11 +18,12 @@ System requirements
 
 ## Hardware
 
-The following is the minimum level of hardware that HandBrake formally supports.
+The following is the minimum level of hardware HandBrake formally supports.
 
 - Processor:
-  - Intel Core (6th generation and newer) i3, i5, i7, i9 or equivalent Xeon
-  - AMD Ryzen, Threadripper or Epyc
+  - AMD Ryzen, Threadripper, or Epyc
+  - Intel Core (6th generation and newer) i3, i5, i7, i9, or equivalent Xeon
+  - Apple Silicon M1 and newer, recent Intel Macs supported per the above
 - Free memory:  
   - 1 GB for transcoding standard definition video (480p/576p)
   - 2 GB for transcoding high definition video (720p/1080p)
@@ -74,11 +75,12 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
+| Fedora 35      | Supported           |                         |                               |
 | Fedora 34      | Supported           |                         |                               |
-| Fedora 33      | Supported           |                         |                               |
-| Fedora 32      | Deprecated in 1.3.0 |                         |                               |
-| Fedora 31      | Deprecated in 1.3.0 |                         |                               |
-| Fedora 30      | Deprecated in 1.3.0 |                         | End of life.                  |
+| Fedora 33      | Deprecated in 1.4.0 |                         | End of life.                  |
+| Fedora 32      | Deprecated in 1.3.0 | HandBrake 1.4.2         | End of life.                  |
+| Fedora 31      | Deprecated in 1.3.0 | HandBrake 1.4.2         | End of life.                  |
+| Fedora 30      | Deprecated in 1.3.0 | HandBrake 1.4.2         | End of life.                  |
 | Fedora 29      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 | Fedora 28      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 
@@ -92,7 +94,7 @@ Interim (non-LTS) versions are typically supported until their end of life.
 |-------------------------|---------------------|-------------------------|------------------------------------|
 | 20.04 LTS Focal Fossa   | Supported           |                         | Flatpak, and source.               |
 | 18.04 LTS Bionic Beaver | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
-| 16.04 LTS Xenial Xerus  | Unsupported         | HandBrake 1.1.2         | Various issues affect operability. |
+| 16.04 LTS Xenial Xerus  | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 | 14.04 LTS Trusty Tahr   | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 
 #### Other
@@ -106,17 +108,17 @@ See [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html), [Bui
 
 ### Mac
 
-Since version 1.4.0 HandBrake for macOS is shipped as a Universal Binary 2 (x86_64 / arm64). HandBrake is supported on recent versions of macOS.
+HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a Universal Binary supporting both Intel and Apple Silicon Macs.
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
-| 12 Monterey        | Supported           |                         | Requires HandBrake 1.4 or later.   |
-| 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4 or later.   |
+| 12 Monterey        | Supported           |                         | Requires HandBrake 1.4.0 or later. |
+| 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4.0 or later. |
 | 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
-| 10.14 Mojave       | Deprecated          | 1.4.0                   | Requires HandBrake 1.1.2 or later. |
-| 10.13 High Sierra  | Deprecated          | 1.4.0                   | End of life.                       |
-| 10.12 Sierra       | Deprecated          | 1.4.x                   | End of life.                       |
-| 10.11 El Capitan   | Unsupported         | 1.3.x                   | End of life.                       |
+| 10.14 Mojave       | Deprecated          |                         | End of life.                       |
+| 10.13 High Sierra  | Deprecated          |                         | End of life.                       |
+| 10.12 Sierra       | Unsupported         | 1.4.2                   | End of life.                       |
+| 10.11 El Capitan   | Unsupported         | 1.3.3                   | End of life.                       |
 | 10.10 Yosemite     | Unsupported         | 1.1.2                   | End of life.                       |
 | 10.9 Mavericks     | Unsupported         | 1.1.2                   | End of life.                       |
 | 10.8 Mountain Lion | Unsupported         | 1.1.2                   | End of life.                       |
@@ -130,30 +132,27 @@ Since version 1.4.0 HandBrake for macOS is shipped as a Universal Binary 2 (x86_
 
 ### Windows
 
-HandBrake requires the [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) 5.0.x
+HandBrake requires [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) 5.0.x.
 
-| Windows Version | Status              | Last Compatible Version | Notes          |
-|-----------------|---------------------|-------------------------|----------------|
-| Windows 11      | Supported           |                         |                |
-| Windows 10      | Supported           |                         | 1909 or later  |
-| Windows 8.1     | Unsupported         | 1.3.3                   | See Note Below |
-| Windows 7 SP1   | Unsupported         | 1.3.3                   | See Note Below |
-| Windows Vista   | Unsupported         | 1.0.7                   | End of life.   |
-| Windows XP      | Unsupported         | 0.9.9                   | End of life.   |
-
-Note: HandBrake will still run on Windows 7 and 8.1.  You will receive a notice that it is not supported when starting the app (twice) after which it will continue to run normally.
-Please note, some functionality may not work correctly on these OSes. 
+| Windows Version | Status              | Last Compatible Version | Notes                        |
+|-----------------|---------------------|-------------------------|------------------------------|
+| Windows 11      | Supported           |                         |                              |
+| Windows 10      | Supported           |                         | 1909 or later.               |
+| Windows 8.1     | Unsupported         | 1.3.3                   | 1.4.2 runs with limitations. |
+| Windows 7 SP1   | Unsupported         | 1.3.3                   | 1.4.2 runs with limitations. |
+| Windows Vista   | Unsupported         | 1.0.7                   | End of life.                 |
+| Windows XP      | Unsupported         | 0.9.9                   | End of life.                 |
 
 <!-- /.system-windows -->
 
 <!-- .system-linux.system-windows -->
+
 ### Display scaling
 
-Display scaling beyond 100% requires a proportionately higher resolution to fit the higher density interface graphics in the same physical space. 
-For example, HandBrake will fit within the bounds of a 1920x1080 (FHD) resolution display at 100% and 125% scaling, but not at 150% and higher.
+Display scaling beyond 100% requires a proportionately higher resolution to fit the higher density interface graphics in the same physical space. For example, HandBrake will fit within the bounds of a 1920x1080 HD resolution display at 100% and 125% scaling, but not at 150% and higher.
 
-In addition, changes to system themes, font-sizes, padding etc may also impact the ability of the window to render in the space provided. 
+Customization to system themes, such as font sizes and padding, may also impact the ability of the window to render in the space provided. 
 
-If HandBrake does not fit, you can change the "Scale and Layout" setting on Windows or "Scaling Factor" setting on Linux to a lower value to allow HandBrake to operate.
+If HandBrake does not fit within the bounds of your display, you can try changing the *Scale and Layout* setting on Windows, or the *Scaling Factor* setting on Linux, to a smaller value.
 
 <!-- /.system-linux.system-windows -->
