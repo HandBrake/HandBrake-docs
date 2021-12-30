@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Clear
 ================================
 
-The following instructions are for [Clear](https://clearlinux.org) 33370 and later.
+The following instructions are for [Clear](https://clearlinux.org) 35470 and later.
 
 Basic requirements to run commands:
 
