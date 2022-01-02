@@ -46,7 +46,7 @@ To verify an official source distribution tarball or Flatpak bundle, consult you
 
 On Mac, launch Terminal from your Applications > Utilities folder and use the `shasum` command. For example, if you downloaded HandBrake to your Downloads folder:
 
-    shasum -a 1 ~/Downloads/HandBrake-*.dmg && shasum -a 256 ~/Downloads/HandBrake-*.dmg
+    shasum -a 256 ~/Downloads/HandBrake-*.dmg
 
 Alternatively, the free third-party app [Hashsum](https://itunes.apple.com/us/app/hashsum/id1079442694?mt=12) available on the Mac App Store provides a convenient graphical interface for computing file checksums[^third-party-utilities-1].
 
@@ -54,9 +54,12 @@ Alternatively, the free third-party app [Hashsum](https://itunes.apple.com/us/ap
 
 <!-- .system-windows -->
 
-On Windows, Microsoft provides the [Microsoft File Checksum Integrity Verifier](https://www.microsoft.com/en-us/download/details.aspx?id=11533) command line utility for verifying checksums. Please see the [associated Microsoft help article](https://support.microsoft.com/en-us/help/841290/availability-and-description-of-the-file-checksum-integrity-verifier-utility) for more information and usage instructions.
+On Windows, launch a Command Prompt Window and use the `certutil` command. For example, if you downloaded HandBrake to your Downloads folder:
 
-Alternatively, free third-party apps [Compute Hash](http://www.subisoft.net/ComputeHash.aspx), [ExactFile](http://www.exactfile.com), and [MultiHasher](http://www.abelhadigital.com/multihasher) for Windows provide convenient graphical interfaces for computing file checksums[^third-party-utilities-2].
+    cd Downloads
+    certUtil -hashfile <filename> SHA256
+    
+Alternatively, free third-party apps [7-Zip](https://www.7-zip.org)  [Compute Hash](http://www.subisoft.net/ComputeHash.aspx), [ExactFile](http://www.exactfile.com), and [MultiHasher](http://www.abelhadigital.com/multihasher) for Windows provide convenient graphical interfaces for computing file checksums[^third-party-utilities-2].
 
 <!-- /.system-windows -->
 
@@ -142,20 +145,6 @@ Next, the installer will ask you where you wish to install HandBrake. Unless you
 ![HandBrake for Windows installation complete](../../images/windows/install-finish-1.0.0.png "HandBrake is now installed.")
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
-
-### Windows SmartScreen
-
-When installing on Windows 8.1 or 10 with Windows SmartScreen enabled, you may see a message indicating that the HandBrake installer is not recognized by Windows.
-
-![Windows SmartScreen](../../images/windows/smartscreen-1-1.0.0.png "Windows SmartScreen may present this message. Select More info to see more options.")
-
-HandBrake is not "signed" by Microsoft. This message doesn't mean anything is wrong; rather, it indicates that HandBrake is not part of Microsoft's paid program to validate Windows applications.
-
-By selecting `More info`, you will be able to select `Run anyway` to continue the installation.
-
-![Windows SmartScreen - Run Anyway](../../images/windows/smartscreen-2-1.0.0.png "Select Run anyway to dismiss the SmartScreen message and continue installing HandBrake.")
-
-<!-- /.system-windows -->
 
 ## Launching HandBrake
 
