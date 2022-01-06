@@ -20,7 +20,7 @@ Die deutschsprachige Dokumentation ist derzeit für folgende Versionen verfügba
 
 Aktuelle Version:
 
-- **[HandBrake 1.4.0-1.4.2](1.4.0/)**
+- **[HandBrake 1.5.0](1.5.0/)** (in Arbeit)
 
 Ältere Versionen:
 
