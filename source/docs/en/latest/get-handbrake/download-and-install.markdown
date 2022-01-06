@@ -146,6 +146,8 @@ Next, the installer will ask you where you wish to install HandBrake. Unless you
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
 
+<!-- /.system-windows -->
+
 ## Launching HandBrake
 
 You may launch HandBrake by quickly clicking twice (double-clicking) on the cocktail & pineapple icon. Depending on your system settings, a single click may suffice.
