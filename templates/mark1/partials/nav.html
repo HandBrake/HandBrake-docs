@@ -1,5 +1,5 @@
 <nav>
-    <div class="breadcrumbs"><a href="{{ base.relpath }}">Docs</a><span class="language-separator" hidden>&nbsp;> </span><span class="language" hidden><a href="{{ base.relpath }}{{ document.language-code | slug }}/">{{ document.language }}</a></span><span class="version-separator" hidden>&nbsp;> </span><span class="version" hidden><a class="version" href="{{ base.relpath }}{{ document.language-code | slug }}/{{ document.project-version | slug }}/">{{ document.project }} {{ document.project-version }}</a></span>&nbsp;> {{ document.title }}</div>
+    <div class="breadcrumbs"><a href="{{ base.relpath }}">Docs</a><span class="language-separator" hidden>&nbsp;&gt; </span><span class="language" hidden><a href="{{ base.relpath }}{{ document.language-code | slug }}/">{{ document.language }}</a></span><span class="version-separator" hidden>&nbsp;&gt; </span><span class="version" hidden><a class="version" href="{{ base.relpath }}{{ document.language-code | slug }}/{{ document.project-version | slug }}/">{{ document.project }} {{ document.project-version }}</a></span>&nbsp;&gt; {{ document.title }}</div>
     <div class="navigation" hidden>
         {{ navigation }}
     </div>
