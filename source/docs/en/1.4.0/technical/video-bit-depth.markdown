@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           10 and 12bit encoding.
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
