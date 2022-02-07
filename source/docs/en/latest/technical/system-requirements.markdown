@@ -132,7 +132,9 @@ HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a
 
 ### Windows
 
-HandBrake requires [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) 5.0.x.
+HandBrake requires [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime) 6.0.x.
+Please becareful when selecting hte correct version to download. See the links under the "Run Desktop Apps" section in hte middle of the page!
+
 
 | Windows Version | Status              | Last Compatible Version | Notes                        |
 |-----------------|---------------------|-------------------------|------------------------------|
