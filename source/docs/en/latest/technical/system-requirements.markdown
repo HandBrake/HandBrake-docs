@@ -36,6 +36,16 @@ The following is the minimum level of hardware HandBrake formally supports.
 
 While it may be technically possible to run HandBrake on hardware not meeting these requirements, it is not recommended. 
 
+### Notice: Users with Intel CPU's
+
+If you are using Windows 10 and also have an Intel 12th generation CPU (or newer), we recommend using the "High Performance" power profile in Windows.
+
+In HandBrake Preferences, we also recommend you set the "Priority Level" to "Normal" on the Advanced tab. 
+
+This should help maintain performance when HandBrake is not a foreground window. 
+
+This should not be necessary if you are running Windows 11.
+
 ### Hardware encoders
 
 Please see the specific documentation pages for these encoders for further details.
