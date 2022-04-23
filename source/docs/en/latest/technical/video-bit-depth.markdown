@@ -25,6 +25,7 @@ The follow encoders support higher than 8-bit.
 | x264                |
 | x265                |
 | Intel QuickSync     |
+| Nvidia NVEnc        |
 | Apple Video Toolbox |
 
 Please note, you must select a "10-bit" or "12-bit" encoder from the "Video Encoder" dropdown on the "Video" tab to enable this feature.
