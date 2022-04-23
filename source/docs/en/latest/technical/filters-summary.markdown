@@ -44,6 +44,7 @@ Yadif is a popular and fast deinterlacer.
 Decomb switches between multiple interpolation algorithms for speed and quality.
 
 The following Deinterlace tunes are available:
+
 - Default: Is well balanced for speed and quality.
 - Skip Spatial Check: Lets Yadif skip correcting certain avoidable artifacts for a slight speed boost.
 - EEDI2: Uses a slower, higher quality interpolation algorithm for Decomb. Useful for the most difficult sources.
@@ -60,6 +61,7 @@ NLMeans is a high quality denoise filter with a cost to speed. Use where quality
 HQDN3D is an adaptive low-pass filter, faster than NLMeans but less effective at preserving fine detail.
 
 For NLMeans the following Denoise tunes are available:
+
 - None: Uses the default preset settings.
 - Film: Refines settings for use with most live action content.
 - Grain: Only processes color channels. Useful for preserving the film-like look of luminance grain while reducing or removing color noise.

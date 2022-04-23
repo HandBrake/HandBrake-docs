@@ -37,12 +37,5 @@ Some filters that ship with HandBrake, do not currently support higher than 8-bi
 When these filters are enabled, HandBrake's pipeline will run at 8-bit rather than 10-bit or 12-bit.
 This applies to the following filters:
 
+- NLMeans
 - Detelecine
-- Decomb
-- Comb Detect
-- Denoise
-- Nlmeans
-- Chroma Smooth
-- Lapsharp
-- Unsharp
-- Grayscale 
