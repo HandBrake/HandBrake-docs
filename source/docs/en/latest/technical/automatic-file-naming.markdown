@@ -21,24 +21,29 @@ HandBrake can automatically name your output files for you based on a number of 
 
 If you open the programs Preferences screen, you'll see a section that referes to the "Output Files"
 
-![File output preferences](../../images/windows/output-file-preferences-1.0.0.png "File output preferences")
+<!-- .system-macos -->
+![File output preferences](../../images/mac/output-file-preferences-1.5.0.png "File output preferences macOS")
+<!-- /.system-macos -->
+
+<!-- .system-windows -->
+![File output preferences](../../images/windows/output-file-preferences-1.5.0.png "File output preferences Windwos")
+<!-- /.system-windows -->
 
 Here you can define the default path where output files will be stored, and the format the file name will take.
 
 By default, it will be {source}-{title}
 
-These are all of the placeholder field options:
-* Live Update:
-  * {source}
-  * {title}
-  * {chapters}
-* Non-live Update: These only change if you scan a new source, change title or chapters.
-  * {date}
-  * {time}
-  * {creation-date}
-  * {creation-time}
-  * {quality}
-  * {bitrate}
+| Placeholder     | Description | Windows| macOS | Linux  |
+|-----------------|-----|------|-----|-----|
+| Source          | Name of the source file or drive label | Supported | Supported | Supported |
+| Title           | The number of the title (dvd/bluray) or file index | Supported | Supported | Supported |
+| Chapters        | The chapter range selected in the UI | Supported | Supported | Supported |
+| Date            | Current Date (in system short format) | Supported | Supported | Supported |
+| Time            | Current Time  (HH:mm) format | Supported | Supported | Supported |
+| Creation-Date   | Date the file source created from source file metadata | Supported | Supported | Supported |
+| Creation-Time   | Time the file source created from source file metadata  | Supported | Supported | Supported |
+| quality_bitrate | Quality or Bitrate value from the video tab. | Supported | Supported | Supported but separate options |
+| preset          | The name of the currently selected preset | Not Supported | Not Supported | Supported |
 
 ### Source Name Handling.
 
