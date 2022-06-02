@@ -27,16 +27,7 @@ The follow encoders support higher than 8-bit.
 | Intel QuickSync     |
 | Nvidia NVEnc        |
 | Apple Video Toolbox |
+| SVT-AV1             |
 
 Please note, you must select a "10-bit" or "12-bit" encoder from the "Video Encoder" dropdown on the "Video" tab to enable this feature.
 For hardware encoders, the option will only be shown if the system supports it. 
-
-### Limitations
-
-Some filters that ship with HandBrake, do not currently support higher than 8-bit.
-
-When these filters are enabled, HandBrake's pipeline will run at 8-bit rather than 10-bit or 12-bit.
-This applies to the following filters:
-
-- NLMeans
-- Detelecine
