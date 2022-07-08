@@ -19,9 +19,9 @@ NVIDIA NVENC
 ## Supported Hardware and Configurations 
 
 - NVIDIA GeForce GTX Pascal (1050+), GTX/RTX Turing (1650+, 2060+) or Ampere (3060+) series GPU or better
-- NVIDIA Graphics Driver 456.71 or later
-- Windows 10
-- Experimental Linux support is available in HandBrake’s command line interface
+- NVIDIA Graphics Driver 472.12 or later
+- Windows 10 or Windows 11
+- Limited support is available on some modern Linux Distro's
 
 Please note, these are not hard limits. Hardware encoding via NVENC *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
