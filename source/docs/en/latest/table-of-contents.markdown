@@ -142,7 +142,7 @@ Table of contents
   - [Frame rate](technical/frame-rates.html)<span class="notice draft"><span>draft</span></span>
   - [Filters](technical/filters-summary.html)<span class="notice draft"><span>draft</span></span>
 - Hardware encoders
-  - [AMD VCE](technical/video-vce.html)
+  - [AMD VCN](technical/video-vcn.html)
   - [Apple VideoToolbox](technical/video-videotoolbox.html)
   - [Intel Quick Sync Video](technical/video-qsv.html)
   - [NVIDIA NVENC](technical/video-nvenc.html)

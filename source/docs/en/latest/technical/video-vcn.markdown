@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           AMD VCE
+Title:           AMD VCN
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,7 +13,7 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-AMD VCE
+AMD VCN
 =======
 
 ## Supported Hardware and Configurations
@@ -22,13 +22,13 @@ AMD VCE
 - Ubuntu Linux 20.04 or later
 - Windows 10
 
-Please note, these are not hard limits. Hardware encoding via VCE *might* work on older series GPUs and older operating systems, but this is not officially supported.
+Please note, these are not hard limits. Hardware encoding via VCN *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
-On Ubuntu Linux, [AMD Radeon Software for Linux version 19.20 or later](https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux) is required to use the VCE encoder. Install using the `amdgpu-pro-install` script according to AMD’s [installation guide](https://amdgpu-install.readthedocs.io/en/latest/). Additionally, you must manually install the `amf-amdgpu-pro` package included in the download.
+On Ubuntu Linux, [AMD Radeon Software for Linux version 19.20 or later](https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux) is required to use the VCN encoder. Install using the `amdgpu-pro-install` script according to AMD’s [installation guide](https://amdgpu-install.readthedocs.io/en/latest/). Additionally, you must manually install the `amf-amdgpu-pro` package included in the download.
 
 ## Enabling support
 
-Support for the AMD VCE encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
+Support for the AMD VCN encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
 
 ## Presets
 
@@ -42,7 +42,7 @@ These are a good starting point for configuring HandBrake to use these encoders.
 
 ## Performance
 
-HandBrake supports the AMD VCE encoder but does not support the VCN decoder.
+HandBrake supports the AMD VCN hardware encoder but does NOT support the hardware decoder.
 
 The CPU will still be used for:
 
@@ -53,13 +53,13 @@ The CPU will still be used for:
 - Subtitles
 - Muxing
 
-These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using VCE.
+These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using VCN.
 
 It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
 
 ## Advanced options
 
-The AMD VCE hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
+The AMD VCN hardware encoder has a limited set of advanced encoder options. Generally speaking, it is not recommended to change these parameters, as the built-in presets offer a good range of options for common uses.
 
 If using HandBrake’s graphical interface, you can set the options in the `Advanced Options` field on the `Video` tab in the following format:
 
