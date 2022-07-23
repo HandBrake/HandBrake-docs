@@ -19,8 +19,8 @@ Intel Quick Sync Video
 ## Supported Hardware and Configurations
 
 - Intel Skylake (6th Generation Core) CPU or later with Intel HD Graphics or better
-- Windows 10
-- Linux
+- Windows 10 or Later
+- Some Modern Linux versions. 
 - FreeBSD
 
 Please note, these are not hard limits. Hardware encoding via Intel QSV *might* work on older series GPUs and older operating systems, but this is not officially supported.

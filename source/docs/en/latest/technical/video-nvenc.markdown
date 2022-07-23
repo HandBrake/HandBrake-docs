@@ -20,7 +20,7 @@ NVIDIA NVENC
 
 - NVIDIA GeForce GTX Pascal (1050+), GTX/RTX Turing (1650+, 2060+) or Ampere (3060+) series GPU or better
 - NVIDIA Graphics Driver 472.12 or later
-- Windows 10 or Windows 11
+- Windows 10 or later
 - Limited support is available on some modern Linux Distro's
 
 Please note, these are not hard limits. Hardware encoding via NVENC *might* work on older series GPUs and older operating systems, but this is not officially supported.
