@@ -18,12 +18,11 @@ Building HandBrake for Windows
 
 ## Command line interface and LibHB
 
-Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. Ubuntu 20.04 LTS or later are recommended; other distros may work as well. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as some packaged versions have issues that can produce non-functioning builds.
+Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) for Windows requires Linux and a recent [MinGW-w64](https://mingw-w64.org/) toolchain. A recent Ubuntu LTS release is recommended; recent releases from other distros may work as well. Virtual machines and [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) are supported. In all cases, we recommend you build the MinGW-w64 toolchain using our instructions and the included script, as some packaged versions have issues that can produce non-functioning builds.
 
 ### Installing dependencies on Ubuntu
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 20.04 (Focal Fossa).
-These should also work with Windows Subsystem for Linux.
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 22.04 (Jammy Jellyfish) and 20.04 (Focal Fossa).
 
 Basic requirements to run commands:
 
@@ -47,7 +46,6 @@ Dependencies:
 - ninja-build
 - patch
 - pkg-config
-- python
 - tar
 - zlib1g-dev
 
@@ -64,7 +62,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config python tar zlib1g-dev
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
