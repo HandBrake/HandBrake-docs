@@ -78,10 +78,10 @@ If the above does not solve your issue, someone may be able to help via HandBrak
 
 ### Downloading Microsoft .NET Core
 
-- [Microsoft .NET Core 5.x](https://dotnet.microsoft.com/download/dotnet/5.0/runtime) 
-Please make sure to download the "Desktop Runtime".
-Download the "x64" versionf or Intel or AMD based systems.
-Download the "Arm64" for ARM based devices running Windows. 
+- [Microsoft .NET Core 6.0.x](https://dotnet.microsoft.com/download/dotnet/6.0/runtime) 
+  - Please make sure to download the "Desktop Runtime" under the "run desktop apps" section of the page.
+  - Download the "x64" version for Intel or AMD based systems.
+  - Download the "Arm64" for ARM based devices running Windows. 
 
 
 ### General troubleshooting

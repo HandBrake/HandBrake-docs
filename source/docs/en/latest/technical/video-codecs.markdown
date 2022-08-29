@@ -50,6 +50,13 @@ The following video codecs are available for encoding in HandBrake.
     - Predecessor to MPEG-4 Visual offering very fast encoding with lower quality than modern codecs
     - Creates larger files than modern encoders
 
+- AV1:
+
+    - Developed by Alliance for Open Media and the successor to VP9, is a free and open video codec.
+    - Several different encoders are supported: 
+      - In software: SVT-AV1  
+      - In hardware: Intel QuickSync
+
 - VP9 (libvpx):
 
     - Developed by Google and the successor to VP8, VP9 is a free and open video codec
@@ -65,3 +72,4 @@ The following video codecs are available for encoding in HandBrake.
 
     - Developed by Xiph.Org Foundation and based on On2 Technologies' VP3, Theora is a free and open video codec
     - Comparable to MPEG-4 Visual in quality and file size
+    - This encoder is considered deprecated. 

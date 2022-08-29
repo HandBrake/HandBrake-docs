@@ -103,7 +103,8 @@ you do go higher, your output will be larger than your input!
 
 ### Recommended values for other encoders
 
-[TODO]
+HandBrake will default to a sensible default when the encoder is changed.  As with x264
+small adjustments can be made to achieve the desired result. 
 
 ## Average Bitrate
 

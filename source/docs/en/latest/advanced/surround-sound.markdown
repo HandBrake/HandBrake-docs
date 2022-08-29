@@ -50,8 +50,9 @@ The following source format's can be passed thru.
 - E-AC3
 - DTS    (Limited player compatibility in MP4)
 - DTS-HD (Limited player compatibility in MP4)
-- TrueHD (MKV files only)
+- TrueHD (Limited player compatibility in MP4)
 - FLAC   (MKV files only)
 - AAC
 - MP3
 - MP2
+- Opus

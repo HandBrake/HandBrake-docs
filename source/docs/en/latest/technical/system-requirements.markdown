@@ -24,10 +24,11 @@ The following is the minimum level of hardware HandBrake formally supports.
   - AMD Ryzen, Threadripper, or Epyc
   - Intel Core (6th generation and newer) i3, i5, i7, i9, or equivalent Xeon
   - Apple Silicon M1 and newer, recent Intel Macs supported per the above
-- Free memory:  
+- Free memory:
+  - Depends on settings used but as a general guide:
   - 1 GB for transcoding standard definition video (480p/576p)
-  - 2 GB for transcoding high definition video (720p/1080p)
-  - 6 GB or more for transcoding ultra high definition video (2160p 4K)
+  - 2 to 8 GB for transcoding high definition video (720p/1080p)
+  - 6 to 16 GB or more for transcoding ultra high definition video (2160p 4K)
 - System storage:
   - 150 MB for the HandBrake app
   - 10 GB or more recommended for processing and storing your new videos
@@ -100,12 +101,13 @@ HandBrake is supported on the most recent Ubuntu LTS version until a new LTS ver
 
 Interim (non-LTS) versions are typically supported until their end of life.
 
-| Ubuntu Version          | Status              | Last Compatible Version | Notes                              |
-|-------------------------|---------------------|-------------------------|------------------------------------|
-| 20.04 LTS Focal Fossa   | Supported           |                         | Flatpak, and source.               |
-| 18.04 LTS Bionic Beaver | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
-| 16.04 LTS Xenial Xerus  | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
-| 14.04 LTS Trusty Tahr   | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
+| Ubuntu Version            | Status              | Last Compatible Version | Notes                              |
+|---------------------------|---------------------|-------------------------|------------------------------------|
+| 22.04 LTS Jammy Jellyfish | Supported           |                         | Flatpak, and source.               |
+| 20.04 LTS Focal Fossa     | Supported           |                         | Flatpak, and source.               |
+| 18.04 LTS Bionic Beaver   | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
+| 16.04 LTS Xenial Xerus    | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
+| 14.04 LTS Trusty Tahr     | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 
 #### Other
 
@@ -122,9 +124,10 @@ HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 13 Ventura         | Supported           |                         | Requires HandBrake 1.5.0 or later. |
 | 12 Monterey        | Supported           |                         | Requires HandBrake 1.4.0 or later. |
 | 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4.0 or later. |
-| 10.15 Catalina     | Supported           |                         | Requires HandBrake 1.2.2 or later. |
+| 10.15 Catalina     | Deprecated          |                         | Requires HandBrake 1.2.2 or later. |
 | 10.14 Mojave       | Deprecated          |                         | End of life.                       |
 | 10.13 High Sierra  | Deprecated          |                         | End of life.                       |
 | 10.12 Sierra       | Unsupported         | 1.4.2                   | End of life.                       |
