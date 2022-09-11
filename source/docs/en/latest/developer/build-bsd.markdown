@@ -24,6 +24,7 @@ Dependency installation instructions are available for the following distributio
 
 - [FreeBSD](install-dependencies-freebsd.html)
 - [NetBSD](install-dependencies-netbsd.html)
+- [OpenBSD](install-dependencies-openbsd.html)
 
 ## Building HandBrake
 
@@ -33,7 +34,17 @@ Clone the HandBrake repository.
 
 Build HandBrake. To enable experimental support for Intel Quick Sync Video, append `--enable-qsv`. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
 
+For FreeBSD
+
     ./configure --launch-jobs=$(sysctl -n hw.ncpu) --launch
+
+For NetBSD
+
+    ./configure --launch-jobs=$(sysctl -n hw.ncpuonline) --launch
+
+For OpenBSD
+
+    env AUTOCONF_VERSION=2.71 AUTOMAKE_VERSION=1.16 CC=cc ./configure --launch-jobs=$(sysctl -n hw.ncpuonline) --launch
 
 When complete, you will find `HandBrakeCLI` in the `build` directory. If the graphical interface is enabled, you will also find `ghb` in the `build/gtk/src` directory.
 
