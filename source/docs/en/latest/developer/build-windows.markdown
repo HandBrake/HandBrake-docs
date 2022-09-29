@@ -35,6 +35,7 @@ Dependencies:
 - autopoint
 - build-essential
 - cmake
+- clang
 - gcc
 - git
 - libtool
@@ -62,7 +63,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev clang
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 

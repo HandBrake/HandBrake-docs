@@ -29,11 +29,20 @@ Install flathub repository.
 
 Install flatpak freedesktop SDK.
 
-    flatpak install flathub org.freedesktop.Sdk//18.08
+    flatpak install flathub org.freedesktop.Sdk//21.08
 
 Install flatpak freedesktop runtime platform.
 
-    flatpak install flathub org.freedesktop.Platform//18.08
+    flatpak install flathub org.freedesktop.Platform//21.08
+    
+Install flatpak gnome 42.
+
+    flatpak install flathub org.gnome.Platform//42
+    flatpak intsall flathub org.gnome.Sdk//42
+    
+Install LLVM 14
+    flatpak install flathub org.freedesktop.Sdk.Extension.llvm14//21.08
+
 
 ## Create a new HandBrake flatpak bundle
 
@@ -44,6 +53,12 @@ From the HandBrake source tree, update build versions by running configure
 Or to build HandBrake with Quick Sync Video support and HandBrake's Intel MediaSDK flatpak plugin
 
     ./configure --flatpak --enable-qsv
+    
+You may also want the following additional flags:
+
+    (AMD VCN) --enable-vce  
+    or  
+    (NVidia NVEnc) --enable-nvenc --enable-nvdec
 
 Build signed flatpak packages for GUI and CLI.
 
