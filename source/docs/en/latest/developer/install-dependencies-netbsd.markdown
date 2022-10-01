@@ -81,7 +81,6 @@ Graphical interface dependencies:
 - gtk3+
 - intltool
 - libnotify
-- libvpx
 - pango
 
 Install dependencies.
@@ -90,7 +89,7 @@ Install dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pkgin install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib2 glib2-tools gst-plugins1-base gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk3+ intltool libnotify libvpx pango
+    sudo pkgin install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib2 glib2-tools gst-plugins1-base gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk3+ intltool libnotify pango
 
 Ensure the newly installed packages have search path priority.
 
