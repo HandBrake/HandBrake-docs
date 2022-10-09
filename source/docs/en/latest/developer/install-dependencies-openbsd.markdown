@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on OpenBSD
 =================================
 
-The following instructions are for [OpenBSD](https://www.openbsd.org/) 7.1.
+The following instructions are for [OpenBSD](https://www.openbsd.org/) 7.2.
 
 Basic requirements to run commands:
 
@@ -25,7 +25,7 @@ Basic requirements to run commands:
 Dependencies:
 
 - autoconf 2.71
-- automake 1.16.3
+- automake 1.16.5
 - bash
 - bzip2
 - cmake
@@ -78,7 +78,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pkg_add autoconf-2.71 automake-1.16.3 bash bzip2 cmake flac fribidi git gmake gpatch gtar-- harfbuzz jansson jpeg lame libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libxml m4 meson nasm ninja opus pkgconf python3 speex x264 xz
+    sudo pkg_add autoconf-2.71 automake-1.16.5 bash bzip2 cmake flac fribidi git gmake gpatch gtar-- harfbuzz jansson jpeg lame libass libiconv libogg libsamplerate libtheora libtool libvorbis libvpx libxml m4 meson nasm ninja opus pkgconf python3 speex x264 xz
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
