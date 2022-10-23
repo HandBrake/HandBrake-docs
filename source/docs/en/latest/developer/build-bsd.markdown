@@ -36,7 +36,7 @@ Build HandBrake. To enable experimental support for Intel Quick Sync Video, appe
 
 For FreeBSD
 
-    ./configure --launch-jobs=$(sysctl -n hw.ncpu) --launch
+    env CC=cc ./configure --launch-jobs=$(sysctl -n hw.ncpu) --launch
 
 For NetBSD
 
