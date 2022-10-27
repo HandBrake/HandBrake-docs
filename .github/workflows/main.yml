@@ -36,11 +36,12 @@ jobs:
     - name: Build
       run: |
         bash ./marsh build --markdown="tools/local/bin/markdown"
+        tar cvzf HandBrake_Documentation.tar.gz public/
 
     - uses: actions/upload-artifact@master
       with:
          name: docs
-         path: public/
+         path: HandBrake_Documentation.tar.gz
 
 
   publish:
