@@ -40,7 +40,10 @@ jobs:
       run: |
         bash ./marsh build --markdown="tools/local/bin/markdown"
         gitrev=$(git rev-parse --short HEAD)
-        tar cvzf HandBrake_Documentation.$gitrev.tar.gz public/
+        cd public
+        tar cvzf HandBrake_Documentation.$gitrev.tar.gz docs
+        cp *.tar.gz ../
+        cd ..
 
     - uses: actions/upload-artifact@master
       with:
@@ -93,5 +96,5 @@ jobs:
           prerelease: true
           replacesArtifacts: false
           allowUpdates: false
-          tag: lin
+          tag: docs
           token: ${{ secrets.GITHUB_TOKEN }}
