@@ -1,6 +1,9 @@
 name: Build
 
-on: [push, pull_request]
+on: 
+   push:
+   pull_request:
+   workflow_dispatch: 
 
 jobs:
   handle_forks:
@@ -36,12 +39,13 @@ jobs:
     - name: Build
       run: |
         bash ./marsh build --markdown="tools/local/bin/markdown"
-        tar cvzf HandBrake_Documentation.tar.gz public/
+        gitrev=$(git rev-parse --short HEAD)
+        tar cvzf HandBrake_Documentation.$gitrev.tar.gz public/
 
     - uses: actions/upload-artifact@master
       with:
          name: docs
-         path: HandBrake_Documentation.tar.gz
+         path: HandBrake_Documentation*.tar.gz
 
 
   publish:
