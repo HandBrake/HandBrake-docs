@@ -26,7 +26,7 @@ Chapters, then, divide the movie/episode up logically. In a DVD or Blu-ray disc 
 
 ![Point to Point controls](../../images/windows/point-to-point-1.0.0.png "Point to Point controls")
 
-For a given title, you can choose to encode only part of it unstead of the whole thing.
+For a given title, you can choose to encode only part of it instead of the whole thing.
 
 There are three options:
 
