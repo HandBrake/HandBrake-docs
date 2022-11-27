@@ -22,9 +22,12 @@ You can use the default setting for the `Preset` you selected, or adjust the qua
 
 ## Using the quality control
 
-Most of HandBrake's official `Presets` use the x264 or x265 video encoders with a Constant Rate Factor, sometimes abbreviated CRF or simply RF. A lower RF number produces *higher* quality video, and a higher RF number produces *lower* quality video.
+Most of HandBrake's official `Presets` use the x264 or x265 video encoders with a Constant Rate Factor, sometimes abbreviated CRF or simply RF. For these specific encoders, a lower RF number produces *higher* quality video, and a higher RF number produces *lower* quality video for those encoders.  
+
+The Quality Scale varies between encoders and values are not comparable between encodes. Note also that for some encoders, lower numbers are higher quality and for other encoders, higher numbers are higher quality. 
 
 You can think of the RF control in HandBrake as a quality control. To increase video quality, adjust the control toward the right. To reduce video quality, adjust the control toward the left.
+
 
 <!-- .system-macos -->
 
@@ -33,6 +36,7 @@ You can think of the RF control in HandBrake as a quality control. To increase v
 <!-- /.system-macos -->
 
 Begin by making small adjustments. Plus or minus 1-2 RF is usually noticeable.
+
 
 ## Recommended quality settings
 
@@ -48,6 +52,8 @@ These values may seem counter intuitive.  When using higher resolution source co
 Raising quality minus 1-2 RF may produce better results when encoding animated `Sources` (anime, cartoons). Lower quality settings may be used to produce smaller files. Drastically lower settings may show significant loss of detail.
 
 Using higher than recommended quality settings can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
+
+For other encodes, start in the centre and encode short previews to dial in an appropriate setting. 
 
 ## Display size and viewing distance
 
