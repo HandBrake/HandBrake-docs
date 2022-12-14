@@ -37,6 +37,7 @@ The following is the minimum level of hardware HandBrake formally supports.
 
 While it may be technically possible to run HandBrake on hardware not meeting these requirements, it is not recommended. 
 
+<!-- .system-windows -->
 ### Notice: Users with Intel CPU's
 
 If you are using Windows 10 and also have an Intel 12th generation CPU (or newer), we recommend using the "High Performance" power profile in Windows.
@@ -46,6 +47,7 @@ In HandBrake Preferences, we also recommend you set the "Priority Level" to "Nor
 This should help maintain performance when HandBrake is not a foreground window. 
 
 This should not be necessary if you are running Windows 11.
+<!-- /.system-windows -->
 
 ### Hardware encoders
 
@@ -86,12 +88,14 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
-| Fedora 35      | Supported           |                         |                               |
-| Fedora 34      | Supported           |                         |                               |
-| Fedora 33      | Deprecated in 1.4.0 |                         | End of life.                  |
-| Fedora 32      | Deprecated in 1.3.0 | HandBrake 1.4.2         | End of life.                  |
-| Fedora 31      | Deprecated in 1.3.0 | HandBrake 1.4.2         | End of life.                  |
-| Fedora 30      | Deprecated in 1.3.0 | HandBrake 1.4.2         | End of life.                  |
+| Fedora 37      | Supported           |                         |                               |
+| Fedora 36      | Supported           |                         |                               |
+| Fedora 35      | Unsupported         | HandBrake 1.5.1         |                               |
+| Fedora 34      | Unsupported         | HandBrake 1.5.1         |                               |
+| Fedora 33      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
+| Fedora 32      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
+| Fedora 31      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
+| Fedora 30      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
 | Fedora 29      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 | Fedora 28      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
 
