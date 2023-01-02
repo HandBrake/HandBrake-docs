@@ -35,10 +35,10 @@ Install flatpak freedesktop runtime platform.
 
     flatpak install flathub org.freedesktop.Platform//21.08
     
-Install flatpak gnome 42.
+Install flatpak gnome 43.
 
-    flatpak install flathub org.gnome.Platform//42
-    flatpak intsall flathub org.gnome.Sdk//42
+    flatpak install flathub org.gnome.Platform//43
+    flatpak install flathub org.gnome.Sdk//43
     
 Install LLVM 14
     flatpak install flathub org.freedesktop.Sdk.Extension.llvm14//21.08
