@@ -41,6 +41,7 @@ Install flatpak gnome 43.
     flatpak install flathub org.gnome.Sdk//43
     
 Install LLVM 14
+
     flatpak install flathub org.freedesktop.Sdk.Extension.llvm14//21.08
 
 
