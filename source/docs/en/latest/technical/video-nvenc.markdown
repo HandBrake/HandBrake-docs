@@ -40,11 +40,11 @@ These are a good starting point for configuring HandBrake to use these encoders.
 
 ## Performance
 
-HandBrake supports the NVIDIA NVENC encoder but does not support the NVDEC decoder.
+HandBrake supports both the NVIDIA NVENC encoder and the NVDEC decoder.
 
 The CPU will still be used for:
 
-- Video decoding 
+- Video decoding (if NVDEC decode is disabled or your source is in a format which is not supported by the NVDEC hardware)
 - All video filters
 - Audio encoding 
 - HandBrake's engine, A/V sync etc
