@@ -37,50 +37,56 @@ HandBrake's General `Presets` use the [MP4 container](https://en.wikipedia.org/w
 
 Each General `Preset` is named according to the quality or speed, maximum resolution, and maximum frame rate it produces.
 
-| Preset                    | Type | Video | Audio                            | Picture Quality | Encoding Speed | File Size      |
-|---------------------------|------|-------|----------------------------------|-----------------|----------------|----------------|
-| Very Fast 1080p30         | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
-| Very Fast 720p30          | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
-| Very Fast 576p25          | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
-| Very Fast 480p30          | MP4  | H.264 | AAC stereo                       | Average         | Very fast      | Small          |
-| **Fast 1080p30**          | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
-| Fast 720p30               | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
-| Fast 576p25               | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
-| Fast 480p30               | MP4  | H.264 | AAC stereo                       | Standard        | Fast           | Average        |
-| HQ 1080p30 Surround       | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
-| HQ 720p30 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
-| HQ 576p25 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
-| HQ 480p30 Surround        | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
-| Super HQ 1080p30 Surround | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
-| Super HQ 720p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
-| Super HQ 576p25 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
-| Super HQ 480p30 Surround  | MP4  | H.264 | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Preset                            | Type | Video     | Audio                            | Picture Quality | Encoding Speed | File Size      |
+|-----------------------------------|------|-----------|----------------------------------|-----------------|----------------|----------------|
+| Very Fast 2160p60 4K AV1          | MP4  | **AV1**   | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 2160p60 4K HEVC         | MP4  | **H.265** | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 1080p30                 | MP4  | H.264     | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 720p30                  | MP4  | H.264     | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 576p25                  | MP4  | H.264     | AAC stereo                       | Average         | Very fast      | Small          |
+| Very Fast 480p30                  | MP4  | H.264     | AAC stereo                       | Average         | Very fast      | Small          |
+| Fast 2160p60 4K AV1               | MP4  | **AV1**   | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 2160p60 4K HEVC              | MP4  | **H.265** | AAC stereo                       | Standard        | Fast           | Average        |
+| **Fast 1080p30**                  | MP4  | H.264     | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 720p30                       | MP4  | H.264     | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 576p25                       | MP4  | H.264     | AAC stereo                       | Standard        | Fast           | Average        |
+| Fast 480p30                       | MP4  | H.264     | AAC stereo                       | Standard        | Fast           | Average        |
+| HQ 2160p60 4K AV1 Surround        | MP4  | **AV1**   | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 2160p60 4K HEVC Surround       | MP4  | **H.265** | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 1080p30 Surround               | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 720p30 Surround                | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 576p25 Surround                | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| HQ 480p30 Surround                | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | High            | Slow           | Large          |
+| Super HQ 2160p60 4K AV1 Surround  | MP4  | **AV1**   | AAC stereo; Dolby Digital (AC-3) | Super High      | **Very slow**  | **Very large** |
+| Super HQ 2160p60 4K HEVC Surround | MP4  | **H.265** | AAC stereo; Dolby Digital (AC-3) | Super High      | **Very slow**  | **Very large** |
+| Super HQ 1080p30 Surround         | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Super HQ 720p30 Surround          | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Super HQ 576p25 Surround          | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
+| Super HQ 480p30 Surround          | MP4  | H.264     | AAC stereo; Dolby Digital (AC-3) | Super high      | **Very slow**  | **Very large** |
 
 ## Web presets
 
 HandBrake's Web `Presets` use the broadly compatible [MP4 container](https://en.wikipedia.org/wiki/MPEG-4_Part_14) and are tailored for sharing videos on the Internet.
 
-Discord Nitro `Presets` are designed to guarantee video up to a certain duration will produce a file less than 50 [MB](abbr:megabytes) for use with [Discord Nitro Classic](https://discordapp.com/nitro) or 100 [MB](abbr:megabytes) for use with [Discord Nitro](https://discordapp.com/nitro). Likewise, Discord `Presets` are designed to guarantee video up to a certain duration will produce a file less than 8 [MB](abbr:megabytes) for use with [Discord](https://discordapp.com/) free accounts. The maximum duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
+Creator `Presets` produce videos suitable for uploading to video hosting services such as [Vimeo](https://vimeo.com/) and [YouTube](https://www.youtube.com/).[^video-hosting-services] These `Presets` generally produce higher quality audio and video to reduce generational loss commonly accrued during re-encoding into multiple formats and resolutions by video hosting services.
 
-Gmail `Presets` are designed to guarantee video up to a certain duration will produce a file less than 25 [MB](abbr:megabytes) for attaching to an email.[^email-size-limit] The maximum duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
+Email `Presets` are designed to guarantee video up to a certain duration will produce a file less than 25 [MB](abbr:megabytes) for sharing via an online email service such as [Gmail](https://www.google.com/gmail/).[^email-size-limit] The maximum `Source` duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
 
-Vimeo YouTube `Presets` produce videos suitable for uploading to popular video hosting services.[^video-hosting-services] `Presets` marked HQ are designed to deliver higher quality while encoding in a resonable amount of time.
+Social `Presets` are designed to guarantee video up to a certain duration will produce a file smaller than a specific size for sharing with online social communities such as [Discord](https://discordapp.com/).[^social-services] The maximum `Source` duration and target file size are part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
 
-| Preset                                   | Type | Video | Audio      | Picture Quality   | Encoding Speed | File Size         |
-|------------------------------------------|------|-------|------------|-------------------|----------------|-------------------|
-| Discord Nitro Large 3-6 Minutes 1080p30  | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 50/100 MB or less |
-| Discord Nitro Medium 5-10 Minutes 720p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 50/100 MB or less |
-| Discord Nitro Small 10-20 Minutes 480p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           | 50/100 MB or less |
-| Discord Small 2 Minutes 360p30           | MP4  | H.264 | AAC mono   | Depends on source | Very Fast      |      8 MB or less |
-| Discord Tiny 5 Minutes 240p30            | MP4  | H.264 | AAC mono   | Depends on source | Very Fast      |      8 MB or less |
-| Gmail Large 3 Minutes 720p30             | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
-| Gmail Medium 5 Minutes 480p30            | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
-| Gmail Small 10 Minutes 288p30            | MP4  | H.264 | AAC mono   | Depends on source | Fast           |     25 MB or less |
-| Vimeo YouTube HQ 2160p60 4K              | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
-| Vimeo YouTube HQ 1440p60 2.5K            | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
-| Vimeo YouTube HQ 1080p60                 | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
-| Vimeo YouTube HQ 720p60                  | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
-| Vimeo YouTube 720p30                     | MP4  | H.264 | AAC stereo | Standard          | Medium         |           Average |
+| Preset                              | Type | Video | Audio      | Picture Quality   | Encoding Speed | File Size         |
+|-------------------------------------|------|-------|------------|-------------------|----------------|-------------------|
+| Creator 2160p60 4K                  | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Creator 1440p60 2.5K                | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Creator 1080p60                     | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Creator 720p60                      | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
+| Email 25 MB Large 3 Minutes 720p30  | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
+| Email 25 MB Medium 5 Minutes 480p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
+| Email 25 MB Small 10 Minutes 288p30 | MP4  | H.264 | AAC mono   | Depends on source | Fast           |     25 MB or less |
+| Social 100 MB 5 Minutes 1080p30     | MP4  | H.264 | AAC stereo | Depends on source | Fast           |    100 MB or less |
+| Social 50 MB 5 Minutes 720p30       | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     50 MB or less |
+| Social 50 MB 10 Minutes 480p30      | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     50 MB or less |
+| Social 8 MB 3 Minutes 360p30        | MP4  | H.264 | AAC mono   | Depends on source | Fast           |      8 MB or less |
 
 ## Devices presets
 
@@ -92,26 +98,26 @@ Each Devices `Preset` is named according to the device name or class, maximum re
 
 | Preset                               | Type    | Video     | Audio                            | Encoding Speed |
 |--------------------------------------|---------|-----------|----------------------------------|----------------|
-| Amazon Fire 2160p60 4K HEVC Surround | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
+| Amazon Fire 2160p60 4K HEVC Surround | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | Slow           |
 | Amazon Fire 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Amazon Fire 720p30 Surround          | MP4     | H.264     | AAC stereo                       | Medium         |
 | Android 1080p30                      | MP4     | H.264     | AAC stereo                       | Medium         |
 | Android 720p30                       | MP4     | H.264     | AAC stereo                       | Medium         |
 | Android 576p25                       | MP4     | H.264     | AAC stereo                       | Medium         |
 | Android 480p30                       | MP4     | H.264     | AAC stereo                       | Medium         |
-| Apple 2160p60 4K HEVC Surround       | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
+| Apple 2160p60 4K HEVC Surround       | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | Slow           |
 | Apple 1080p60 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Apple 1080p30 Surround               | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Apple 720p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Apple 540p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
-| Chromecast 2160p60 4K HEVC Surround  | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | **Very slow**  |
+| Chromecast 2160p60 4K HEVC Surround  | MP4     | **H.265** | AAC stereo; Dolby Digital (AC-3) | Slow           |
 | Chromecast 1080p60 Surround          | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Chromecast 1080p30 Surround          | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Playstation 2160p60 4K Surround      | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Slow           |
 | Playstation 1080p30 Surround         | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Playstation 720p30                   | MP4     | H.264     | AAC stereo                       | Medium         |
 | Playstation 540p30                   | MP4     | H.264     | AAC stereo                       | Medium         |
-| Roku 2160p60 4K HEVC Surround        | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | **Very slow** |
+| Roku 2160p60 4K HEVC Surround        | **MKV** | **H.265** | AAC stereo; AAC, Dolby Digital (AC-3), Dolby Digital Plus (E-AC-3), DTS, or MP3 | Slow |
 | Roku 1080p30 Surround                | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Roku 720p30 Surround                 | MP4     | H.264     | AAC stereo; Dolby Digital (AC-3) | Medium         |
 | Roku 576p25                          | MP4     | H.264     | AAC stereo                       | Medium         |
@@ -124,27 +130,50 @@ HandBrake's Matroska `Presets` target software and devices supporting the [Matro
 
 Each Matroska `Preset` is named according to the video type, maximum resolution, and maximum frame rate it produces.
 
-| Preset            | Type | Video | Audio         | Encoding Speed |
-|-------------------|------|-------|---------------|----------------|
-| H.265 MKV 2160p60 | MKV  | H.265 | AAC stereo    | **Very slow**  |
-| H.265 MKV 1080p30 | MKV  | H.265 | AAC stereo    | **Very slow**  |
-| H.265 MKV 720p30  | MKV  | H.265 | AAC stereo    | **Very slow**  |
-| H.265 MKV 576p25  | MKV  | H.265 | AAC stereo    | **Very slow**  |
-| H.265 MKV 480p30  | MKV  | H.265 | AAC stereo    | **Very slow**  |
-| H.264 MKV 2160p60 | MKV  | H.264 | AAC stereo    | Standard       |
-| H.264 MKV 1080p30 | MKV  | H.264 | AAC stereo    | Standard       |
-| H.264 MKV 720p30  | MKV  | H.264 | AAC stereo    | Standard       |
-| H.264 MKV 576p25  | MKV  | H.264 | AAC stereo    | Standard       |
-| H.264 MKV 480p30  | MKV  | H.264 | AAC stereo    | Standard       |
-| VP9 MKV 2160p60   | MKV  | VP9   | Opus stereo   | **Ultra slow** |
-| VP9 MKV 1080p30   | MKV  | VP9   | Opus stereo   | **Ultra slow** |
-| VP9 MKV 720p30    | MKV  | VP9   | Opus stereo   | **Ultra slow** |
-| VP9 MKV 576p25    | MKV  | VP9   | Opus stereo   | **Ultra slow** |
-| VP9 MKV 480p30    | MKV  | VP9   | Opus stereo   | **Ultra slow** |
-| VP8 MKV 1080p30   | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
-| VP8 MKV 720p30    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
-| VP8 MKV 576p25    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
-| VP8 MKV 480p30    | MKV  | VP8   | Vorbis stereo | **Ultra slow** |
+| Preset               | Type | Video | Audio         | Encoding Speed |
+|----------------------|------|-------|---------------|----------------|
+| AV1 MKV 2160p60 4K   | MKV  | AV1   | AAC stereo    | **Slow**       |
+| H.265 MKV 2160p60 4K | MKV  | H.265 | AAC stereo    | **Slow**       |
+| H.265 MKV 1080p30    | MKV  | H.265 | AAC stereo    | **Slow**       |
+| H.265 MKV 720p30     | MKV  | H.265 | AAC stereo    | **Slow**       |
+| H.265 MKV 576p25     | MKV  | H.265 | AAC stereo    | **Slow**       |
+| H.265 MKV 480p30     | MKV  | H.265 | AAC stereo    | **Slow**       |
+| H.264 MKV 2160p60 4K | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 1080p30    | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 720p30     | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 576p25     | MKV  | H.264 | AAC stereo    | Standard       |
+| H.264 MKV 480p30     | MKV  | H.264 | AAC stereo    | Standard       |
+| VP9 MKV 2160p60 4K   | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 1080p30      | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 720p30       | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 576p25       | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+| VP9 MKV 480p30       | MKV  | VP9   | Opus stereo   | **Ultra slow** |
+
+## Hardware presets
+
+HandBrake's Hardware `Presets` encode video using dedicated media engines provided by modern graphics hardware, and are optimized for maximum encoding speed.
+
+More information on specific hardware encoders:
+
+- [Intel Quick Sync Video (QSV)](video-qsv.html)
+- [Nvidia NVENC](video-nvenc.html)
+- [AMD VCN](video-vcn.html)
+- [Microsoft Media Foundation (MF)](video-mediafoundation.html)
+  - For Windows on ARM devices such as Qualcomm Snapdragon
+
+HandBrake will disable any Hardware `Preset` where the associated hardware and software drivers are not detected, or are outdated.
+
+| Preset                 | Type | Video | Audio      | Encoding Speed |
+|------------------------|------|-------|------------|----------------|
+| AV1 QSV 2160p60 4K     | MP4  | AV1   | AAC stereo | Very Fast      |
+| H.265 NVENC 2160p60 4K | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 NVENC 1080p60    | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 QSV 2160p60 4K   | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 QSV 1080p60      | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 VCN 2160p60 4K   | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 VCN 1080p60      | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 MF 2160p60 4K    | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 MF 1080p60       | MP4  | H.265 | AAC stereo | Very Fast      |
 
 ## Production presets
 
@@ -163,6 +192,15 @@ Production Proxy `Presets` create fast to encode, Intra-only video limited to on
 
 From time to time, official `Presets` may be deprecated or removed. Compatible replacements are listed here.
 
+### Legacy Web presets
+
+| Preset                        | Compatible Preset                  | Notes                                                                                           |
+|-------------------------------|------------------------------------|-------------------------------------------------------------------------------------------------|
+| Discord Tiny 5 Minutes 240p30 | None                               | Web > Social 8 MB 3 Minutes 360p30 may be suitable for durations up to 3 minutes.               |
+| Vimeo YouTube 720p30          | Web > Creator 720p60               |                                                                                                 |
+
+As of HandBrake 1.6.0, the Vimeo YouTube HQ `Presets` have been renamed Creator, the Gmail `Presets` have been renamed Email 25 MB, and the Discord `Presets` have been renamed Social.
+
 ### Legacy Devices presets
 
 | Preset                       | Compatible Preset                | Notes                                                                                           |
@@ -173,6 +211,17 @@ From time to time, official `Presets` may be deprecated or removed. Compatible r
 | Windows Mobile 540p30        | General > Fast 480p30            | Add vbv-bufsize=4000:vbv-maxrate=4000 to the additional encoder options for older devices.      |
 | Windows Mobile 480p30        | General > Fast 480p30            | Add vbv-bufsize=2000:vbv-maxrate=2000 to the additional encoder options for older devices.      |
 | Xbox Legacy 1080p30 Surround | Devices > Apple 1080p30 Surround | Disable anamorphic, dimensions must be evenly divisible by 8, video must be H.264 Main Profile. |
+
+### Legacy Matroska presets
+
+| Preset          | Compatible Preset | Notes                                                                 |
+|-----------------|-------------------|-----------------------------------------------------------------------|
+| VP8 MKV 1080p30 | None              | Obsolete. AV1 is the successor to VP9, which is the successor to VP8. |
+| VP8 MKV 720p30  | None              | Obsolete. AV1 is the successor to VP9, which is the successor to VP8. |
+| VP8 MKV 576p30  | None              | Obsolete. AV1 is the successor to VP9, which is the successor to VP8. |
+| VP8 MKV 480p30  | None              | Obsolete. AV1 is the successor to VP9, which is the successor to VP8. |
+
+As of HandBrake 1.6.0, all 2160p60 presets have been renamed 2160p60 4K.
 
 ### Legacy 0.10.x presets
 
@@ -193,6 +242,8 @@ From time to time, official `Presets` may be deprecated or removed. Compatible r
 
 [^high-quality-settings-less-compatible]: Higher quality General `Presets` may include settings that are incompatible with older or slower devices.
 
-[^email-size-limit]: The 25 [MB](abbr:megabytes) per message size limit for email attachments is specific to the [Gmail](https://www.google.com/gmail/) service and may change in the future. Other email services may set different limits. It is generally recommended to use a [file hosting service](https://en.wikipedia.org/wiki/Comparison_of_file_hosting_services) when sharing large or long videos.
+[^video-hosting-services]: Creator presets are designed and tested to meet these specific services' video guidelines. Compatibility with other services is possible, but neither tested nor guaranteed.
 
-[^video-hosting-services]: The [Vimeo](https://vimeo.com/) [YouTube](https://www.youtube.com/) presets are designed and tested to meet these specific services' video guidelines. Compatibility with other services is possible, but neither tested nor guaranteed.
+[^email-size-limit]: Email presets are designed and tested to meet these specific services' file attachment size limits, which may change in the future. Compatibility with other services is possible, but neither tested nor guaranteed. It is generally recommended to use a [file hosting service](https://en.wikipedia.org/wiki/Comparison_of_file_hosting_services) when sharing large or long videos.
+
+[^social-services]: Social presets are designed and tested to meet these specific services' video guidelines. Compatibility with other services is possible, but neither tested nor guaranteed.
