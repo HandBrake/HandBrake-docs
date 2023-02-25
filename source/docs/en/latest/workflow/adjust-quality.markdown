@@ -22,12 +22,7 @@ You can use the default setting for the `Preset` you selected, or adjust the qua
 
 ## Using the quality control
 
-Most of HandBrake's official `Presets` use the x264 or x265 video encoders with a Constant Rate Factor, sometimes abbreviated CRF or simply RF. For these specific encoders, a lower RF number produces *higher* quality video, and a higher RF number produces *lower* quality video for those encoders.  
-
-The Quality Scale varies between encoders and values are not comparable between encodes. Note also that for some encoders, lower numbers are higher quality and for other encoders, higher numbers are higher quality. 
-
-You can think of the RF control in HandBrake as a quality control. To increase video quality, adjust the control toward the right. To reduce video quality, adjust the control toward the left.
-
+On the `Video` tab, increase video quality by adjusting the control toward the right, and reduce video quality by adjusting the control toward the left. Begin by making small adjustments; plus or minus a few steps is usually noticeable.
 
 <!-- .system-macos -->
 
@@ -35,25 +30,38 @@ You can think of the RF control in HandBrake as a quality control. To increase v
 
 <!-- /.system-macos -->
 
-Begin by making small adjustments. Plus or minus 1-2 RF is usually noticeable.
+You can test your settings by encoding and watching short clips using HandBrake's [Preview feature](../workflow/preview-settings.html).
 
 
 ## Recommended quality settings
 
-Recommended settings for **x264** and **x265** encoders:
+Recommended settings for the **x264** and **x265** encoders:
 
 - RF 18-22 for 480p/576p Standard Definition[^SD]
 - RF 19-23 for 720p High Definition[^720p]
 - RF 20-24 for 1080p Full High Definition[^1080p]
 - RF 22-28 for 2160p 4K Ultra High Definition[^2160p]
 
-These values may seem counter intuitive.  When using higher resolution source content, i.e. 4K, you have more data and quality to start with. Therefore, you can get away with using higher RF values than you can with lower resolution content as the loss is less perceptible.
+Recommended settings for the **SVT-AV1** encoder:
 
-Raising quality minus 1-2 RF may produce better results when encoding animated `Sources` (anime, cartoons). Lower quality settings may be used to produce smaller files. Drastically lower settings may show significant loss of detail.
+- RF 22-32 for 480p/576p Standard Definition
+- RF 25-35 for 720p High Definition
+- RF 25-35 for 1080p Full High Definition
+- RF 25-40 for 2160p 4K Ultra High Definition
+
+*For other encoders, start with a value in the middle of the scale, and adjust in small increments as desired.*
+
+These values may seem counterintuitive at first, but the reasoning is simple and easy to demonstrate in practice. When encoding higher resolution content, you have more information to work with. Therefore, you can get away with using lower quality values than you can with lower resolution content, as any loss is a smaller percent of the whole, and ultimately less perceptible.
+
+Raising quality by a few steps may produce better results when encoding animated `Sources` (anime, cartoons). Lower quality settings may be used to produce smaller files. Drastically lower settings may show significant loss of detail.
 
 Using higher than recommended quality settings can lead to *extremely large files* that may not be compatible with your devices. When in doubt, stick to the recommended range or use the default setting for the `Preset` you selected.
 
-For other encodes, start in the centre and encode short previews to dial in an appropriate setting. 
+## Differences between encoder quality scales
+
+Most of HandBrake's official `Presets` use the x264, x265, or SVT-AV1 video encoders with a Constant Rate Factor, sometimes abbreviated CRF or simply RF. For these encoders, a lower RF number produces *higher* quality video, and a higher RF number produces *lower* quality video. This is reversed for other encoders, such as Apple VideoToolbox, where a higher number produces higher quality. In all cases, adjusting HandBrake's quality control to the right always increases quality, and adjusting the control to the left always decreases quality.
+
+Even where the quality scale is similarly labeled, quality values are not comparable between encodes across multiple encoders. You should not expect an x264 encode at RF 25 to be similar to an x265 encode at RF 25 or an SVT-AV1 encode at RF 25, as each encoder's quality scale corresponds only to its own internal rate control method, and these are three separate encoders corresponding to three different video coding standards.
 
 ## Display size and viewing distance
 
