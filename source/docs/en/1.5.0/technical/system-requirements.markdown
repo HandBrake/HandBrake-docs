@@ -7,7 +7,7 @@ Project_Version: 1.5.0
 Language:        English
 Language_Code:   en
 Authors:         [ Scott (s55), Bradley Sepos <bradley@bradleysepos.com> (BradleyS) ]
-Copyright:       2022 HandBrake Team
+Copyright:       2023 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
