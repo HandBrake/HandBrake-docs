@@ -18,14 +18,42 @@ Intel Quick Sync Video
 
 ## Supported Hardware and Configurations
 
-- Intel Skylake (6th Generation Core) CPU or later with Intel HD Graphics or better
+- Intel Skylake (6th Generation Core) CPU or later with Intel HD, Iris Xe or Arc graphics.
 - Windows 10 or Later
+  - Please make sure your Intel GPU drivers are up-to-date. Driver version should be >= 31.0.x.x
 - Some Modern Linux versions. 
 - FreeBSD
 
 Please note, these are not hard limits. Hardware encoding via Intel QSV *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
 A plugin with all required components for Intel QSV encoding using the Flatpak distribution of HandBrake is available on the official [HandBrake website](https://handbrake.fr).
+
+<!-- .system-linux -->
+
+### Low Power Encoding.
+
+By default, HandBrake will try default to the "lowpower" encoding path available in QSV. In order for this to work, the following requirements must be met:
+
+- HuC firmware is required for pre-Alderlake systems. Please see https://github.com/intel/media-driver#known-issues-and-limitations for more details.
+
+Alternatively, you can disable lowpower mode by adding the following option in the "More Settings" box on the video tab:
+
+- "lowpower=0"
+ 
+To avoid having to set this each time, we recommend you save this as a new preset.
+
+### Intel ARC support on Linux
+
+Please note, support for Intel Arc currently has some complex system requirements.
+Making changes to your system kernel / drivers can be risky. As such, you do so at your own risk.
+
+- Linux Kernel version 6.2 or later is required.
+- Up-to-date MESA package 
+- HuC firmware must be enabled. 
+- Latest Intel GPU Firmware. (Available from https://github.com/intel-gpu/intel-gpu-firmware.git)
+
+
+<!-- /.system-linux -->
 
 ## Enabling support
 
