@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Supported source formats
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

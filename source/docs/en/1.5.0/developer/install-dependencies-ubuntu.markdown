@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Installing dependencies on Ubuntu
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
