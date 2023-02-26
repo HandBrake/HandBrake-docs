@@ -27,6 +27,21 @@ Please note, these are not hard limits. Hardware encoding via Intel QSV *might* 
 
 A plugin with all required components for Intel QSV encoding using the Flatpak distribution of HandBrake is available on the official [HandBrake website](https://handbrake.fr).
 
+<!-- .system-linux -->
+
+### Intel ARC support on Linux
+
+Please note, support for Intel Arc currently has some complex system requirements.
+Making changes to your system kernel / drivers can be risky. As such, you do so at your own risk.
+
+- Linux Kernel version 6.2 or later is required.
+- Up-to-date MESA package 
+- HuC firmware must be enabled. 
+- Latest Intel GPU Firmware. (Available from https://github.com/intel-gpu/intel-gpu-firmware.git)
+
+
+<!-- /.system-linux -->
+
 ## Enabling support
 
 Support for the Intel Quick Sync Video encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
