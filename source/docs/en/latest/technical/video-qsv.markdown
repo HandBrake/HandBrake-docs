@@ -28,9 +28,10 @@ Please note, these are not hard limits. Hardware encoding via Intel QSV *might* 
 
 A plugin with all required components for Intel QSV encoding using the Flatpak distribution of HandBrake is available on the official [HandBrake website](https://handbrake.fr).
 
+
 <!-- .system-linux -->
 
-### Low Power Encoding.
+### Linux support for Low Power Encoding mode
 
 By default, HandBrake will try default to the "lowpower" encoding path available in QSV. In order for this to work, the following requirements must be met:
 
@@ -42,7 +43,7 @@ Alternatively, you can disable lowpower mode by adding the following option in t
  
 To avoid having to set this each time, we recommend you save this as a new preset.
 
-### Intel ARC support on Linux
+### Linux support for Intel ARC
 
 Please note, support for Intel Arc currently has some complex system requirements.
 Making changes to your system kernel / drivers can be risky. As such, you do so at your own risk.

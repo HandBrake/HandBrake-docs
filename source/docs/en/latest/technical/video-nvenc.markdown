@@ -19,7 +19,7 @@ NVIDIA NVENC
 ## Supported Hardware and Configurations 
 
 - NVIDIA GeForce GTX Pascal (1050+), GTX/RTX Turing (1650+, 2060+) or Ampere (3060+) series GPU or better
-- NVIDIA Graphics Driver 472.12 or later
+- NVIDIA Graphics Driver 522.25 or later
 - Windows 10 or later
 - Limited support is available on some modern Linux Distro's
 
@@ -27,7 +27,13 @@ Please note, these are not hard limits. Hardware encoding via NVENC *might* work
 
 ## Enabling support
 
-Support for the NVIDIA NVENC encoder is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
+<!-- .system-windows -->
+Support for the NVIDIA NVEEnc and NVDec is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
+<!-- /.system-windows -->
+
+<!-- .system-linux -->
+On Linux, there is no preference to enable the encoder. It will be available if the hardware / drivers report it as available.
+<!-- /.system-linux -->
 
 ## Presets
 
@@ -40,11 +46,11 @@ These are a good starting point for configuring HandBrake to use these encoders.
 
 ## Performance
 
-HandBrake supports the NVIDIA NVENC encoder but does not support the NVDEC decoder.
+HandBrake supports the NVIDIA NVENC encoder and NVDEC encoder.
 
 The CPU will still be used for:
 
-- Video decoding 
+- Video decoding (If hardware decoding is turned off or unavailable) 
 - All video filters
 - Audio encoding 
 - HandBrake's engine, A/V sync etc
@@ -54,6 +60,10 @@ The CPU will still be used for:
 These operations all happen in parallel as the job progresses. As such, it is normal to see high (or even 100%) CPU utilisation even when using NVENC.
 
 It is also common, particularly on lower-end or older hardware, for the CPU to be a bottleneck which will cause lower than expected performance. To minimize this effect, disable any filters that you do not require.
+
+## Decoder Limitations
+
+HandBrake will automatically fallback to software decoding when any filter is enabled in the pipline. This includes the crop/scale filter. 
 
 ## Advanced options
 
