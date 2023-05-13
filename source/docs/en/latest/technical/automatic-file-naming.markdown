@@ -33,17 +33,26 @@ Here you can define the default path where output files will be stored, and the 
 
 By default, it will be {source}-{title}
 
-| Placeholder     | Description | Windows| macOS | Linux  |
-|-----------------|-----|------|-----|-----|
-| Source          | Name of the source file or drive label | Supported | Supported | Supported |
-| Title           | The number of the title (dvd/bluray) or file index | Supported | Supported | Supported |
-| Chapters        | The chapter range selected in the UI | Supported | Supported | Supported |
-| Date            | Current Date (in system short format) | Supported | Supported | Supported |
-| Time            | Current Time  (HH:mm) format | Supported | Supported | Supported |
-| Creation-Date   | Date the file source created from source file metadata | Supported | Supported | Supported |
-| Creation-Time   | Time the file source created from source file metadata  | Supported | Supported | Supported |
-| quality_bitrate | Quality or Bitrate value from the video tab. | Supported | Supported | Supported but separate options |
-| preset          | The name of the currently selected preset | Not Supported | Not Supported | Supported |
+| Placeholder             | Description                                            | Windows   | macOS         | Linux  |
+|-------------------------|-----|------|-----|-----|
+| Source                  | Name of the source file or drive label                 | Supported | Supported     | Supported |
+| Title                   | The number of the title (dvd/bluray) or file index     | Supported | Supported     | Supported |
+| Chapters                | The chapter range selected in the UI                   | Supported | Supported     | Supported |
+| Date                    | Current Date (in system short format)                  | Supported | Supported     | Supported |
+| Time                    | Current Time  (HH:mm) format                           | Supported | Supported     | Supported |
+| Creation-Date           | Date the file was created from source file metadata    | Supported | Supported     | Supported |
+| Creation-Time           | Time the file was created from source file metadata    | Supported | Supported     | Supported |
+| Modification-Date       | Date the file was modified from source file metadata   | Supported | Not Supported | Supported |
+| Modification-Time       | Time the file was modified from source file metadata   | Supported | Not Supported | Supported |
+| preset                  | The name of the currently selected preset              | Supported | Not Supported | Supported |
+| width                   | The storage width of the output file                   | Supported | Not Supported | Supported |
+| height                  | The height width of the output file                    | Supported | Not Supported | Supported |
+| preset                  | The name of the currently selected preset              | Supported | Not Supported | Supported |
+| codec                   | The video format name                                  | Supported | Not Supported | Supported |
+| encoder                 | The short hand key of they video encoder used          | Supported | Not Supported | Not Supported |
+| encoder_bit_depth       | The bit-depth of the encoding                          | Supported | Not Supported | Supported |
+| quality_bitrate         | Quality or Bitrate value from the video tab.           | Supported | Supported     | Supported but separate options |
+| quality_type            | "Q" Quality or "kbps" for avg bitrate                  | Supported | Not Supported | Supported but separate options |
 
 ### Source Name Handling.
 

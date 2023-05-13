@@ -153,6 +153,7 @@ Table of contents
 - Files and compatibility
   - [Container formats](technical/containers.html)<span class="notice draft"><span>draft</span></span>
   - [iPod 5th Generation support](technical/old-ipod-support.html)<span class="notice draft"><span>draft</span></span>
+- [Preferences](technical/preferences.html)
   - [Automatic file naming](technical/automatic-file-naming.html)<span class="notice draft"><span>draft</span></span>
 
 ## Developer documentation
