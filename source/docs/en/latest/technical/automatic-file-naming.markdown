@@ -26,7 +26,7 @@ If you open the programs Preferences screen, you'll see a section that referes t
 <!-- /.system-macos -->
 
 <!-- .system-windows -->
-![File output preferences](../../images/windows/output-file-preferences-1.5.0.png "File output preferences Windwos")
+![File output preferences](../../images/windows/output-file-preferences-1.7.0.png "File output preferences Windwos")
 <!-- /.system-windows -->
 
 Here you can define the default path where output files will be stored, and the format the file name will take.
@@ -72,7 +72,7 @@ The last option allows you to choose the MP4 file extension handling.
 
 MP4 and M4V are identical files. It's just a different file extension.
 
-For MP4 files, HandBrake will automatically use the extension M4V when you pass-through audio (AC3), use SRT subtitles or have chapter markers enabled.
+For MP4 files, you can set HandBrake to automatically use the extension M4V when you pass-through audio (AC3), use SRT subtitles or have chapter markers enabled.
 
 You can simply change the file extension between .mp4 and .m4v as the file is exactly the same. There are no differences in the content or container itself.
 
