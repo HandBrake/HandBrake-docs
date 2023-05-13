@@ -16,8 +16,6 @@ License_URL:     https://handbrake.fr/docs/license.html
 Preferences
 ===================
 
-## Supported Encoders
-
 <!-- .system-windows -->
 The Preferences menu can be accessed via the "Tools" Menu -> "Preferences" option.
 <!-- /.system-windows -->
