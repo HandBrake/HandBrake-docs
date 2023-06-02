@@ -42,17 +42,17 @@ By default, it will be {source}-{title}
 | Time                    | Current Time  (HH:mm) format                           | Supported | Supported     | Supported |
 | Creation-Date           | Date the file was created from source file metadata    | Supported | Supported     | Supported |
 | Creation-Time           | Time the file was created from source file metadata    | Supported | Supported     | Supported |
-| Modification-Date       | Date the file was modified from source file metadata   | Supported | Not Supported | Supported |
-| Modification-Time       | Time the file was modified from source file metadata   | Supported | Not Supported | Supported |
-| preset                  | The name of the currently selected preset              | Supported | Not Supported | Supported |
-| width                   | The storage width of the output file                   | Supported | Not Supported | Supported |
-| height                  | The height width of the output file                    | Supported | Not Supported | Supported |
-| preset                  | The name of the currently selected preset              | Supported | Not Supported | Supported |
-| codec                   | The video format name                                  | Supported | Not Supported | Supported |
-| encoder                 | The short hand key of they video encoder used          | Supported | Not Supported | Not Supported |
-| encoder_bit_depth       | The bit-depth of the encoding                          | Supported | Not Supported | Supported |
+| Modification-Date       | Date the file was modified from source file metadata   | Supported | Supported     | Supported |
+| Modification-Time       | Time the file was modified from source file metadata   | Supported | Supported     | Supported |
+| preset                  | The name of the currently selected preset              | Supported | Supported     | Supported |
+| width                   | The storage width of the output file                   | Supported | Supported     | Supported |
+| height                  | The height width of the output file                    | Supported | Supported     | Supported |
+| preset                  | The name of the currently selected preset              | Supported | Supported     | Supported |
+| codec                   | The video format name                                  | Supported | Supported     | Supported |
+| encoder                 | The short hand key of they video encoder used          | Supported | Supported     | Not Supported |
+| encoder_bit_depth       | The bit-depth of the encoding                          | Supported | Supported     | Supported |
 | quality_bitrate         | Quality or Bitrate value from the video tab.           | Supported | Supported     | Supported but separate options |
-| quality_type            | "Q" Quality or "kbps" for avg bitrate                  | Supported | Not Supported | Supported but separate options |
+| quality_type            | "Q" Quality or "kbps" for avg bitrate                  | Supported | Supported     | Supported but separate options |
 
 ### Source Name Handling.
 
@@ -72,7 +72,7 @@ The last option allows you to choose the MP4 file extension handling.
 
 MP4 and M4V are identical files. It's just a different file extension.
 
-For MP4 files, you can set HandBrake to automatically use the extension M4V when you pass-through audio (AC3), use SRT subtitles or have chapter markers enabled.
+For MP4 files, you can set HandBrake to automatically use the extension M4V when you pass-through audio (AC3), use 3GPP subtitles or have chapter markers enabled.
 
 You can simply change the file extension between .mp4 and .m4v as the file is exactly the same. There are no differences in the content or container itself.
 
