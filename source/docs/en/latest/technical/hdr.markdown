@@ -1,6 +1,6 @@
 ---
 Type:            article
-Title:           HDR10 encoding.
+Title:           HDR encoding.
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
@@ -13,10 +13,10 @@ License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-HDR10 encoding 
+HDR encoding 
 ===================
 
-## Supported Encoders
+## HDR10
 
 All encoders that support 10-bit encoding are also capable of HDR10 encoding. The follow encoders support higher than 8-bit.
 
@@ -24,6 +24,10 @@ All encoders that support 10-bit encoding are also capable of HDR10 encoding. Th
 |---------------------|
 | x264                |
 | x265                |
+| SVT-AV1             |
+| VP9                 |
+| NVIDIA NVEnc        |
+| AMD VCN             |
 | Intel QuickSync     |
 | Apple Video Toolbox |
 
@@ -31,5 +35,21 @@ HandBrake will automatically passthru mastering display metadata and content lig
 
 ### Limitations
 
-HandBrake will only handle HDR10 metadata. HDR10+ and Dolby Vision is currently not supported.
+HDR10 metadata will be written only in the container and not in the bitstream when using NVIDIA NVEnc or AMD VCN.
 
+## HDR10+
+
+The following 10-bit encoders support HDR10+ Dynamic metadata:
+
+| Encoder             |
+|---------------------|
+| x265                |
+| SVT-AV1             |
+
+## Dolby Vision
+
+Dolby Vision is supported only when using the x265 10-bit encoder, the following Dolby Vision profiles and cross compatibility IDs are supported:
+  - 5.0
+  - 7.6 (base layer only, converted to 8.1)
+  - 8.1
+  - 8.4
