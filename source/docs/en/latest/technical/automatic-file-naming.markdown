@@ -47,7 +47,6 @@ By default, it will be {source}-{title}
 | preset                  | The name of the currently selected preset              | Supported | Supported     | Supported |
 | width                   | The storage width of the output file                   | Supported | Supported     | Supported |
 | height                  | The height width of the output file                    | Supported | Supported     | Supported |
-| preset                  | The name of the currently selected preset              | Supported | Supported     | Supported |
 | codec                   | The video format name                                  | Supported | Supported     | Supported |
 | encoder                 | The short hand key of they video encoder used          | Supported | Supported     | Not Supported |
 | encoder_bit_depth       | The bit-depth of the encoding                          | Supported | Supported     | Supported |
