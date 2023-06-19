@@ -135,7 +135,7 @@ HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a
 | 10.14 Mojave       | Deprecated          |                         | End of life.                       |
 | 10.13 High Sierra  | Deprecated          |                         | End of life.                       |
 | 10.12 Sierra       | Unsupported         | 1.4.2                   | End of life.                       |
-| 10.11 El Capitan   | Unsupported         | 1.3.3                   | End of life.                       |
+| 10.11 El Capitan   | Unsupported         | 1.4.2                   | End of life.                       |
 | 10.10 Yosemite     | Unsupported         | 1.1.2                   | End of life.                       |
 | 10.9 Mavericks     | Unsupported         | 1.1.2                   | End of life.                       |
 | 10.8 Mountain Lion | Unsupported         | 1.1.2                   | End of life.                       |
