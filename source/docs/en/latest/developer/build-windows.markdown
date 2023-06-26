@@ -22,7 +22,7 @@ Building the HandBrake [CLI](abbr:Command Line Interface) and LibHB (`hb.dll`) f
 
 ### Installing dependencies on Ubuntu
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 22.04 (Jammy Jellyfish) and 20.04 (Focal Fossa).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 22.04 (Jammy Jellyfish)
 
 Basic requirements to run commands:
 
@@ -49,6 +49,8 @@ Dependencies:
 - pkg-config
 - tar
 - zlib1g-dev
+- rustc
+- cargo
 
 Additional MinGW-w64 toolchain dependencies:
 
@@ -63,7 +65,11 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev clang
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev clang curl
+    curl https://sh.rustup.rs -sSf | sh
+    source "$HOME/.cargo/env"
+    cargo install cargo-c
+    rustup target add x86_64-pc-windows-gnu
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
