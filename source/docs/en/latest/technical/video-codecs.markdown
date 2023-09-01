@@ -38,13 +38,13 @@ The following video codecs are available for encoding in HandBrake.
       - In software: x265  
       - In hardware: Intel QuickSync, AMD VCE, Nvidia NVENC and ARM devices though MediaFoundation.
 
-- MPEG-4 (ffmpeg):
+- MPEG-4:
 
     - MPEG-4 Part 2, also known as MPEG-4 Visual
     - Predecessor to H.264/AVC offering fast encoding with lower overall quality than H.264/AVC
     - Compatible with older devices, inexpensive DVD/flash/network players
 
-- MPEG-2 (ffmpeg):
+- MPEG-2:
 
     - MPEG-2 Part 2, also known as MPEG-2 Visual and H.262
     - Predecessor to MPEG-4 Visual offering very fast encoding with lower quality than modern codecs

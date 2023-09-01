@@ -61,10 +61,9 @@ Audio Encoders
 
 -   Vorbis:
 
-    -   HandBrake offers Vorbis audio encoding as well, for which it uses the
-        aoTuV branch that offers quality tweaks.
+    -   HandBrake offers Vorbis audio encoding as well.
 
--   Opus (FFmpeg)
+-   Opus
 
     -   Available in MKV files, Opus is the successor to Vorbis. HandBrake uses libopus for encoding.
 
