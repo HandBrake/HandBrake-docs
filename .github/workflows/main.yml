@@ -57,7 +57,7 @@ jobs:
     needs: build
     if: github.repository == 'HandBrake/HandBrake-docs'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
        
       - name: Download Artifacts - Documentation
         uses: actions/download-artifact@v3
