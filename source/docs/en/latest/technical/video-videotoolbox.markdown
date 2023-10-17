@@ -18,9 +18,13 @@ Apple VideoToolbox
 
 ## Supported hardware
 
+Encoding:
 - Most 2011 and later Macs
 
 Please note, these are not hard limits. Hardware encoding via VideoToolbox *might* work on older series GPUs and older operating systems, but this is not officially supported.
+
+Decoding:
+- macOS 13 and later
 
 ## Enabling support
 
@@ -30,13 +34,35 @@ If your computer is supported you will see one or more of the following video en
 - H.265 (VideoToolbox)
 - H.265 10bit (VideoToolbox)
 
-Choice of the underlying hardware encoder (AMD VCE or Intel Quick Sync Video) is not available. The highest quality option will typically be chosen.
+Choice of the underlying hardware encoder (AMD VCE, Intel Quick Sync Video, or Apple Media Engine) is not available. The highest quality option will typically be chosen.
+
+## Presets
+
+The following presets are available under the 'Hardware' category in the presets menu:
+
+- H.265 Apple VideoToolbox 2160P 4K
+- H.265 Apple VideoToolbox 1080p
+
+These are a good starting point for configuring HandBrake to use these encoders.
 
 ## Performance
 
-Only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
+By default only video encoding is performed by the hardware encoder. Every stage prior to and after video encoding including decoding, filters, audio/video sync, audio encoding, muxing, etc., is performed by the CPU. As a result, it is normal to have high (even 100%) CPU utilisation during encodes.
 
-It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, disable any filters that you do not require.
+To decrease CPU utilisation, hardware decoders can be enabled in the Advanced preferences panel on macOS 13 and later, either to be used only in combination with the hardware encoders, or always.
+
+Additionally, the following filters will be run on the GPU when both hardware decoders & encoders are selected:
+- Rotate
+- Crop & Scale
+- Pad
+- Yadif
+- Bwdif
+- Chroma Smooth
+- Unsharp
+- Lapsharp
+- Grayscale
+
+It is common, particularly on lower-end hardware, for the CPU to be a bottleneck for the hardware video encoder. To minimize this effect, enable the hardware decoders, and disable any filters that you do not require and can't be run on the GPU.
 
 ## Advanced options
 
