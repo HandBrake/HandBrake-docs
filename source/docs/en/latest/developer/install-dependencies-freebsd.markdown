@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on FreeBSD
 ==================================
 
-The following instructions are for [FreeBSD](https://www.freebsd.org) 11 and 12.
+The following instructions are for [FreeBSD](https://www.freebsd.org) 13 and 14.
 
 Basic requirements to run commands:
 
@@ -26,20 +26,17 @@ Dependencies:
 
 - autoconf
 - automake
-- bash
 - bzip2
 - cmake
 - flac
 - fontconfig
 - freetype2
 - fribidi
-- gcc
 - git
 - gmake
-- gtar
 - harfbuzz
 - jansson
-- lame (source port)
+- lame
 - libass
 - libiconv
 - libjpeg-turbo
@@ -65,45 +62,26 @@ Dependencies:
 Intel Quick Sync Video dependencies (optional):
 
 - intel-media-sdk
+- oneVPL
 
 Graphical interface dependencies:
 
-- atk
-- cairo
-- dbus
-- dbus-glib
 - desktop-file-utils
-- gdk-pixbuf2
 - gettext
-- glib
-- gnome3
+- gstreamer1-libav
 - gstreamer1-plugins-gdkpixbuf
 - gtk3
-- intltool
-- libdvdcss
-- libnotify
-- pango
 
 Install dependencies.
 
-    sudo pkg install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi gcc git lzma gmake gtar harfbuzz jansson libass libiconv libjpeg-turbo libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 m4 meson nasm ninja opus patch pkgconf python speex
-
-Build and install the `lame` source port.
-
-    sudo portsnap fetch
-    bash -c 'if [[ ! -e /usr/ports ]]; then sudo portsnap extract; fi'
-    sudo portsnap update
-    LASTDIR="`pwd`"
-    cd /usr/ports/audio/lame
-    sudo make install || sudo make reinstall
-    cd "$LASTDIR"
+    sudo pkg install autoconf automake bzip2 cmake flac fontconfig freetype2 fribidi git gmake harfbuzz jansson lame libass libiconv libjpeg-turbo libogg libsamplerate libtheora libtool libvorbis libvpx libx264 libxml2 lzma m4 meson nasm ninja opus patch pkgconf python speex
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
-    sudo pkg install intel-media-sdk
+    sudo pkg install intel-media-sdk oneVPL
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pkg install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib gnome3 gstreamer1-plugins-gdkpixbuf gtk3 intltool libdvdcss libnotify pango
+    sudo pkg install desktop-file-utils gettext gstreamer1-libav gstreamer1-plugins-gdkpixbuf gtk3
 
 FreeBSD is now prepared to build HandBrake. See [Building HandBrake for BSD](build-bsd.html) for further instructions.
