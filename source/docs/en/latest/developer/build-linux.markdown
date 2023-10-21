@@ -31,6 +31,7 @@ Dependency installation instructions are available for the following distributio
 - [Gentoo](install-dependencies-gentoo.html)
 - [Mageia](install-dependencies-mageia.html)
 - [OpenSUSE](install-dependencies-opensuse.html)
+- [Solus](install-dependencies-solus.html)
 - [Ubuntu](install-dependencies-ubuntu.html)
 - [Void](install-dependencies-void.html)
 
