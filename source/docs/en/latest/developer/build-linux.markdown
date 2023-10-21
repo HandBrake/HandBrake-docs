@@ -22,6 +22,7 @@ If you have installed a HandBrake package from your distribution or other third-
 
 Dependency installation instructions are available for the following distributions.
 
+- [Alpine](install-dependencies-alpine.html)
 - [Arch](install-dependencies-arch.html)
 - [CentOS](install-dependencies-centos.html)
 - [Clear](install-dependencies-clear.html)
