@@ -44,7 +44,7 @@ For NetBSD
 
 For OpenBSD
 
-    env AUTOCONF_VERSION=2.71 AUTOMAKE_VERSION=1.16 CC=cc ./configure --launch-jobs=$(sysctl -n hw.ncpuonline) --launch
+    env AUTOCONF_VERSION=2.71 AUTOMAKE_VERSION=1.16 ./configure --launch-jobs=$(sysctl -n hw.ncpuonline) --launch
 
 When complete, you will find `HandBrakeCLI` in the `build` directory. If the graphical interface is enabled, you will also find `ghb` in the `build/gtk/src` directory.
 
