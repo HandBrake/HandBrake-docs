@@ -26,16 +26,13 @@ Dependencies:
 
 - autoconf
 - automake
-- autopoint
-- appstream
 - build-essential
 - cmake
-- clang
 - git
 - libass-dev
 - libbz2-dev
-- libfontconfig1-dev
-- libfreetype6-dev
+- libfontconfig-dev
+- libfreetype-dev
 - libfribidi-dev
 - libharfbuzz-dev
 - libjansson-dev
@@ -44,7 +41,7 @@ Dependencies:
 - libnuma-dev
 - libogg-dev
 - libopus-dev
-- libsamplerate-dev
+- libsamplerate0-dev
 - libspeex-dev
 - libtheora-dev
 - libtool
@@ -71,20 +68,18 @@ Intel Quick Sync Video dependencies (optional):
 
 Graphical interface dependencies:
 
+- appstream
+- desktop-file-utils
+- gettext
 - gstreamer1.0-libav
-- intltool
-- libappindicator-dev
-- libdbus-glib-1-dev
-- libglib2.0-dev
-- libgstreamer1.0-dev
+- gstreamer1.0-plugins-good
+- libgstreamer-plugins-base1.0-dev
 - libgtk-3-dev
-- libnotify-dev
-- libwebkit2gtk-4.0-dev
 
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake autopoint appstream build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev clang
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig-dev libfreetype-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate0-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
@@ -92,6 +87,6 @@ To build with Intel Quick Sync Video support, install the QSV dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo apt-get install gstreamer1.0-libav intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgtk-3-dev libnotify-dev libwebkit2gtk-4.0-dev
+    sudo apt-get install appstream desktop-file-utils gettext gstreamer1.0-libav gstreamer1.0-plugins-good libgstreamer-plugins-base1.0-dev libgtk-3-dev
 
 Ubuntu is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
