@@ -30,6 +30,7 @@ Dependency installation instructions are available for the following distributio
 - [Fedora](install-dependencies-fedora.html)
 - [Gentoo](install-dependencies-gentoo.html)
 - [Mageia](install-dependencies-mageia.html)
+- [OpenSUSE](install-dependencies-opensuse.html)
 - [Ubuntu](install-dependencies-ubuntu.html)
 - [Void](install-dependencies-void.html)
 
