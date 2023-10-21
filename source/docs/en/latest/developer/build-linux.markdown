@@ -24,9 +24,9 @@ Dependency installation instructions are available for the following distributio
 
 - [Alpine](install-dependencies-alpine.html)
 - [Arch](install-dependencies-arch.html)
-- [CentOS](install-dependencies-centos.html)
 - [Clear](install-dependencies-clear.html)
 - [Debian](install-dependencies-debian.html)
+- [Enterprise Linux](install-dependencies-el.html)
 - [Fedora](install-dependencies-fedora.html)
 - [Gentoo](install-dependencies-gentoo.html)
 - [Mageia](install-dependencies-mageia.html)
