@@ -28,7 +28,6 @@ Dependencies:
 
 - autoconf
 - automake
-- bash
 - bzip2
 - cmake
 - flac
@@ -43,7 +42,6 @@ Dependencies:
 - lame
 - libass
 - libiconv
-- libjpeg-turbo
 - libogg
 - libopus
 - libsamplerate
@@ -52,44 +50,34 @@ Dependencies:
 - libvorbis
 - libvpx
 - libxml2
-- lzmalib
 - m4
 - meson
 - nasm
 - ninja-build
 - patch
 - pkgconf
-- python37
 - speex
-- x264-devel
+- x264
+- xz
 
 Graphical interface dependencies:
 
-- atk
-- cairo
-- dbus
-- dbus-glib
 - desktop-file-utils
-- gdk-pixbuf2
 - gettext
-- glib2
 - glib2-tools
-- gst-plugins1-base
+- gnome-themes-standard
 - gst-plugins1-gdk_pixbuf
 - gst-plugins1-libav
 - gstreamer1
 - gtk3+
-- intltool
-- libnotify
-- pango
 
 Install dependencies.
 
-    sudo pkgin install autoconf automake bash bzip2 cmake flac fontconfig freetype2 fribidi git gmake gtar-base harfbuzz jansson lame libass libiconv libjpeg-turbo libogg libopus libsamplerate libtheora libtool-base libvorbis libvpx libxml2 lzmalib m4 meson nasm ninja-build patch pkgconf python37 speex x264-devel
+    sudo pkgin in autoconf automake cmake flac fontconfig freetype2 fribidi git gmake gtar-base harfbuzz jansson lame libass libiconv libogg libopus libsamplerate libtheora libtool-base libvorbis libvpx libxml2 m4 meson nasm ninja-build patch pkgconf speex x264 xz
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pkgin install atk cairo dbus dbus-glib desktop-file-utils gdk-pixbuf2 gettext glib2 glib2-tools gst-plugins1-base gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk3+ intltool libnotify pango
+    sudo pkgin in desktop-file-utils gettext glib2-tools gnome-themes-standard gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk3+
 
 Ensure the newly installed packages have search path priority.
 
