@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # marsh - build static websites using markdown and bash
 #
-# Copyright 2022 Bradley Sepos
+# Copyright 2023 Bradley Sepos
 # Released under the MIT License. See LICENSE for details.
 # https://github.com/bradleysepos/marsh
 
 NAME="marsh"
-VERSION="0.8.2"
+VERSION="0.8.3"
 SELF="${BASH_SOURCE[0]}"
 SELF_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd -P)
 SELF_DIR="${SELF_DIR:-$(pwd)}"
@@ -1170,13 +1170,13 @@ function build_template {  # build_template dest_dir target_dir document templat
         # find template tags
         OIFS="${IFS}"
         IFS=$'\n'
-        TAGS=($(<"${DOCUMENT}" grep -Eo '\{\{[ ]*([a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)?)[ ]*(([ ]*\|[ ]*[a-z][a-z0-9-]*(\:[a-z0-9][a-z0-9-]*)*)*)[ ]*\}\}'))
+        TAGS=($(<"${DOCUMENT}" grep -Eo '\{\{[ ]*([a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)?)[ ]*(([ ]*\|[ ]*[a-z][a-z0-9-]*(:[a-z0-9][a-z0-9-]*)*)*)[ ]*\}\}'))
         IFS="${OIFS}"
 
         # loop over tags
         for I in "${!TAGS[@]}"; do
             TAG_ESC=$(echo "${TAGS[$I]}" | sed 's/[][/.|$(){}?+*^]/\\&/g')
-            TAG_VAL=$(echo "${TAGS[$I]}" | sed -E -e 's/\{\{[ ]*([a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)?)[ ]*(([ ]*\|[ ]*[a-z][a-z0-9-]*(\:[a-z0-9][a-z0-9-]*)*)*)[ ]*\}\}/\1\3/')
+            TAG_VAL=$(echo "${TAGS[$I]}" | sed -E -e 's/\{\{[ ]*([a-z][a-z0-9-]*(\.[a-z][a-z0-9-]*)?)[ ]*(([ ]*\|[ ]*[a-z][a-z0-9-]*(:[a-z0-9][a-z0-9-]*)*)*)[ ]*\}\}/\1\3/')
             TAG_NAME="${TAG_VAL%%|*}"
             TAG_FILTERS="${TAG_VAL#$TAG_NAME}"
             TAG_FILTERS=(${TAG_FILTERS//|/ })
@@ -1368,7 +1368,7 @@ function build_template {  # build_template dest_dir target_dir document templat
         for J in "${!PARTIALS[@]}"; do
             [[ "${PARTIALS[$J]}" == "" ]] && continue
             # grep to avoid unnecessary processing
-            if [[ "$(<${PARTIALS[$J]} grep -Eo '\{\%[ ]*if[ ]+')" != "" ]]; then
+            if [[ "$(<${PARTIALS[$J]} grep -Eo '\{%[ ]*if[ ]+')" != "" ]]; then
                 # template contains conditionals, operate using a copy
                 TEMPLATE_TEMP=$(mktemp "${MARSH_TEMP}/template-XXXXXX")
                 cp "${PARTIALS[$J]}" "${TEMPLATE_TEMP}"
