@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Clear
 ================================
 
-The following instructions are for [Clear](https://clearlinux.org) 35470 and later.
+The following instructions are for [Clear](https://clearlinux.org) 40470 and later.
 
 Basic requirements to run commands:
 
@@ -25,10 +25,14 @@ Basic requirements to run commands:
 
 Dependencies:
 
+- c-basic
 - dev-utils
-- dev-utils-dev
+- devpkg-bzip2
+- devpkg-fontconfig
+- devpkg-freetype
 - devpkg-fribidi
 - devpkg-jansson
+- devpkg-harfbuzz
 - devpkg-libass
 - devpkg-libjpeg-turbo
 - devpkg-libogg
@@ -36,8 +40,13 @@ Dependencies:
 - devpkg-libtheora
 - devpkg-libvorbis
 - devpkg-libvpx
+- devpkg-libxml2
+- devpkg-numactl
 - devpkg-opus
 - devpkg-speex
+- devpkg-xz
+- devpkg-zlib
+- git
 
 Additional dependencies not available in the base repository:
 
@@ -55,8 +64,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo swupd update
-    sudo swupd bundle-add dev-utils dev-utils-dev devpkg-fribidi devpkg-jansson devpkg-libass devpkg-libjpeg-turbo devpkg-libogg devpkg-libsamplerate devpkg-libtheora devpkg-libvorbis devpkg-libvpx devpkg-opus devpkg-speex
+    sudo swupd bundle-add c-basic dev-utils devpkg-bzip2 devpkg-fontconfig devpkg-freetype devpkg-fribidi devpkg-jansson devpkg-harfbuzz devpkg-libass devpkg-libjpeg-turbo devpkg-libogg devpkg-libsamplerate devpkg-libtheora devpkg-libvorbis devpkg-libvpx devpkg-libxml2 devpkg-numactl devpkg-opus devpkg-speex devpkg-xz devpkg-zlib git
 
 Build and install the dependencies not available in the base repository.
 
@@ -79,7 +87,7 @@ Build and install the dependencies not available in the base repository.
     cd ..
 
     # make shared libraries findable
-    if ! grep '\/usr\/local\/lib' /etc/ld.so.conf >/dev/null 2>&1; then
+    if ! grep '/usr/local/lib' /etc/ld.so.conf >/dev/null 2>&1; then
         export CFLAGS="${CFLAGS:-} -I/usr/local/include"
         export LDFLAGS="${LDFLAGS:-} -L/usr/local/lib"
         echo 'export CFLAGS="${CFLAGS:-} -I/usr/local/include"' >> "${HOME}/.bashrc"
