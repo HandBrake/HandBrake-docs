@@ -18,8 +18,8 @@ NVIDIA NVENC
 
 ## Supported Hardware and Configurations 
 
-- NVIDIA GeForce GTX Pascal (1050+), GTX/RTX Turing (1650+, 2060+) or Ampere (3060+) series GPU or better
-- NVIDIA Graphics Driver 522.25 or later
+- NVIDIA GeForce GTX Pascal (1050+), GTX/RTX Turing (1650+, 2060+), Ampere (3060+) or Ada Lovelace (4060+) series GPU or better
+- NVIDIA Graphics Driver 546.33 or later
 - Windows 10 or later
 - Limited support is available on some modern Linux Distro's
 
@@ -28,7 +28,7 @@ Please note, these are not hard limits. Hardware encoding via NVENC *might* work
 ## Enabling support
 
 <!-- .system-windows -->
-Support for the NVIDIA NVEEnc and NVDec is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
+Support for the NVIDIA NVENC and NVDec is enabled in preferences on the video tab. If your system is not supported, the option will be disabled.
 <!-- /.system-windows -->
 
 <!-- .system-linux -->

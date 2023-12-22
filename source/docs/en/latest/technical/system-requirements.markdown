@@ -88,10 +88,12 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
-| Fedora 37      | Supported           |                         |                               |
-| Fedora 36      | Supported           |                         |                               |
-| Fedora 35      | Unsupported         | HandBrake 1.5.1         |                               |
-| Fedora 34      | Unsupported         | HandBrake 1.5.1         |                               |
+| Fedora 39      | Supported           |                         |                               |
+| Fedora 38      | Supported           |                         |                               |
+| Fedora 37      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
+| Fedora 36      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
+| Fedora 35      | Unsupported         | HandBrake 1.5.1         | End of life.                  |
+| Fedora 34      | Unsupported         | HandBrake 1.5.1         | End of life.                  |
 | Fedora 33      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
 | Fedora 32      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
 | Fedora 31      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
@@ -108,7 +110,7 @@ Interim (non-LTS) versions are typically supported until their end of life.
 | Ubuntu Version            | Status              | Last Compatible Version | Notes                              |
 |---------------------------|---------------------|-------------------------|------------------------------------|
 | 22.04 LTS Jammy Jellyfish | Supported           |                         | Flatpak, and source.               |
-| 20.04 LTS Focal Fossa     | Supported           |                         | Flatpak, and source.               |
+| 20.04 LTS Focal Fossa     | Deprecated          |                         | Flatpak, and source.               |
 | 18.04 LTS Bionic Beaver   | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
 | 16.04 LTS Xenial Xerus    | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 | 14.04 LTS Trusty Tahr     | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
@@ -128,9 +130,10 @@ HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 14 Sonoma          | Supported           |                         | Requires HandBrake 1.5.0 or later. |
 | 13 Ventura         | Supported           |                         | Requires HandBrake 1.5.0 or later. |
 | 12 Monterey        | Supported           |                         | Requires HandBrake 1.4.0 or later. |
-| 11 Big Sur         | Supported           |                         | Requires HandBrake 1.4.0 or later. |
+| 11 Big Sur         | Deprecated          |                         | Requires HandBrake 1.4.0 or later. |
 | 10.15 Catalina     | Deprecated          |                         | Requires HandBrake 1.2.2 or later. |
 | 10.14 Mojave       | Deprecated          |                         | End of life.                       |
 | 10.13 High Sierra  | Deprecated          |                         | End of life.                       |
