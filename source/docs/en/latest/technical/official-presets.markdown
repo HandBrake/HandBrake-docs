@@ -70,9 +70,7 @@ HandBrake's Web `Presets` use the broadly compatible [MP4 container](https://en.
 
 Creator `Presets` produce videos suitable for uploading to video hosting services such as [Vimeo](https://vimeo.com/) and [YouTube](https://www.youtube.com/).[^video-hosting-services] These `Presets` generally produce higher quality audio and video to reduce generational loss commonly accrued during re-encoding into multiple formats and resolutions by video hosting services.
 
-Email `Presets` are designed to guarantee video up to a certain duration will produce a file less than 25 [MB](abbr:megabytes) for sharing via an online email service such as [Gmail](https://www.google.com/gmail/).[^email-size-limit] The maximum `Source` duration is part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
-
-Social `Presets` are designed to guarantee video up to a certain duration will produce a file smaller than a specific size for sharing with online social communities such as [Discord](https://discordapp.com/).[^social-services] The maximum `Source` duration and target file size are part of each `Preset` name. Audio quality is slightly reduced, and visually noisy/grainy or high motion scenes may show a reduction in quality in order to achieve the target file size.
+Social `Presets` are designed to guarantee video up to a certain duration will produce a file smaller than a specific size for sharing with online social communities such as [Discord](https://discordapp.com/).[^social-services] The maximum `Source` duration and target file size are part of each `Preset` name.
 
 | Preset                              | Type | Video | Audio      | Picture Quality   | Encoding Speed | File Size         |
 |-------------------------------------|------|-------|------------|-------------------|----------------|-------------------|
@@ -80,13 +78,10 @@ Social `Presets` are designed to guarantee video up to a certain duration will p
 | Creator 1440p60 2.5K                | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
 | Creator 1080p60                     | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
 | Creator 720p60                      | MP4  | H.264 | AAC stereo | High              | Medium         |             Large |
-| Email 25 MB Large 3 Minutes 720p30  | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
-| Email 25 MB Medium 5 Minutes 480p30 | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     25 MB or less |
-| Email 25 MB Small 10 Minutes 288p30 | MP4  | H.264 | AAC mono   | Depends on source | Fast           |     25 MB or less |
-| Social 100 MB 5 Minutes 1080p30     | MP4  | H.264 | AAC stereo | Depends on source | Fast           |    100 MB or less |
-| Social 50 MB 5 Minutes 720p30       | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     50 MB or less |
-| Social 50 MB 10 Minutes 480p30      | MP4  | H.264 | AAC stereo | Depends on source | Fast           |     50 MB or less |
-| Social 8 MB 3 Minutes 360p30        | MP4  | H.264 | AAC mono   | Depends on source | Fast           |      8 MB or less |
+| Social 25 MB 30 Seconds 1080p60     | MP4  | H.264 | AAC stereo | Depends on source | Medium         |     25 MB or less |
+| Social 25 MB 1 Minute 720p60        | MP4  | H.264 | AAC stereo | Depends on source | Medium         |     25 MB or less |
+| Social 25 MB 2 Minutes 540p60       | MP4  | H.264 | AAC stereo | Depends on source | Medium         |     25 MB or less |
+| Social 25 MB 5 Minutes 360p60       | MP4  | H.264 | AAC stereo | Depends on source | Medium         |     25 MB or less |
 
 ## Devices presets
 
@@ -156,24 +151,26 @@ HandBrake's Hardware `Presets` encode video using dedicated media engines provid
 More information on specific hardware encoders:
 
 - [Intel Quick Sync Video (QSV)](video-qsv.html)
-- [Nvidia NVENC](video-nvenc.html)
+- [NVIDIA NVENC](video-nvenc.html)
 - [AMD VCN](video-vcn.html)
 - [Microsoft Media Foundation (MF)](video-mediafoundation.html)
   - For Windows on ARM devices such as Qualcomm Snapdragon
 
 HandBrake will disable any Hardware `Preset` where the associated hardware and software drivers are not detected, or are outdated.
 
-| Preset                 | Type | Video | Audio      | Encoding Speed |
-|------------------------|------|-------|------------|----------------|
-| AV1 QSV 2160p60 4K     | MP4  | AV1   | AAC stereo | Very Fast      |
-| H.265 NVENC 2160p60 4K | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 NVENC 1080p60    | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 QSV 2160p60 4K   | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 QSV 1080p60      | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 VCN 2160p60 4K   | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 VCN 1080p60      | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 MF 2160p60 4K    | MP4  | H.265 | AAC stereo | Very Fast      |
-| H.265 MF 1080p60       | MP4  | H.265 | AAC stereo | Very Fast      |
+| Preset                              | Type | Video | Audio      | Encoding Speed |
+|-------------------------------------|------|-------|------------|----------------|
+| AV1 QSV 2160p60 4K                  | MP4  | AV1   | AAC stereo | Very Fast      |
+| H.265 NVENC 2160p60 4K              | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 NVENC 1080p60                 | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 QSV 2160p60 4K                | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 QSV 1080p60                   | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 VCN 2160p60 4K                | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 VCN 1080p60                   | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 MF 2160p60 4K                 | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 MF 1080p60                    | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 Apple VideoToolbox 2160p60 4K | MP4  | H.265 | AAC stereo | Very Fast      |
+| H.265 Apple VideoToolbox 1080p60    | MP4  | H.265 | AAC stereo | Very Fast      |
 
 ## Production presets
 
@@ -188,22 +185,31 @@ Production Proxy `Presets` create fast to encode, Intra-only video limited to on
 | Production Proxy 1080p    | MP4  | H.264 | AAC stereo | 1/4 2160p 4K   | Proxy           | Intra-only  | 1        | Fast              | Average   |
 | Production Proxy 540p     | MP4  | H.264 | AAC stereo | 1/4 1080p HD   | Proxy           | Intra-only  | 1        | Very Fast         | Small     |
 
-## Compatible replacements for deprecated or removed presets
+## Deprecated or removed presets
 
-From time to time, official `Presets` may be deprecated or removed. Compatible replacements are listed here.
+From time to time, official `Presets` may be deprecated or removed. These and suitable replacements, if available, are listed here.
 
 ### Legacy Web presets
 
-| Preset                        | Compatible Preset                  | Notes                                                                                           |
-|-------------------------------|------------------------------------|-------------------------------------------------------------------------------------------------|
-| Discord Tiny 5 Minutes 240p30 | None                               | Web > Social 8 MB 3 Minutes 360p30 may be suitable for durations up to 3 minutes.               |
-| Vimeo YouTube 720p30          | Web > Creator 720p60               |                                                                                                 |
+| Preset                          | Similar Preset                      | Notes                                                                                                  |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------|
+| Discord Tiny 5 Minutes 240p30   | Web > Social 25 MB 5 Minutes 360p60 | Reduce resolution and bit rate as needed to accommodate longer durations and/or file size constraints. |
+| Email 25 MB 3 Minutes 720p30    | Web > Social 25 MB 2 Minutes 540p60 | Web > Social 25 MB 1 Minute 720p60 or Web > Social 25 MB 5 Minutes 360p60 may also be suitable.        |
+| Email 25 MB 5 Minutes 480p30    | Web > Social 25 MB 5 Minutes 360p60 |                                                                                                        |
+| Email 25 MB 10 Minutes 288p30   | Web > Social 25 MB 5 Minutes 360p60 | Reduce resolution and bit rate as needed to accommodate longer durations and/or file size constraints. |
+| Social 100 MB 5 Minutes 1080p30 | Web > Social 25 MB 1 Minute 720p60  | Web > Social 25 MB 30 Seconds 1080p60 or Web > Social 25 MB 2 Minutes 540p60 may also be suitable.     |
+| Social 50 MB 5 Minutes 720p30   | Web > Social 25 MB 2 Minutes 540p60 | Web > Social 25 MB 1 Minute 720p60 or Web > Social 25 MB 5 Minutes 360p60 may also be suitable.        |
+| Social 50 MB 10 Minutes 480p30  | Web > Social 25 MB 5 Minutes 360p60 |                                                                                                        |
+| Social 8 MB 3 Minutes 360p30    | Web > Social 25 MB 5 Minutes 360p60 | Reduce resolution and bit rate as needed to accommodate longer durations and/or file size constraints. |
+| Vimeo YouTube 720p30            | Web > Creator 720p60                |                                                                                                        |
 
 As of HandBrake 1.6.0, the Vimeo YouTube HQ `Presets` have been renamed Creator, the Gmail `Presets` have been renamed Email 25 MB, and the Discord `Presets` have been renamed Social.
 
+As of HandBrake 1.7.0, the Email 25 MB `Presets` have been superseded by the Social 25 MB `Presets`, which for shorter durations produce higher quality video at up to 60 frames per second.
+
 ### Legacy Devices presets
 
-| Preset                       | Compatible Preset                | Notes                                                                                           |
+| Preset                       | Similar Preset                   | Notes                                                                                           |
 |------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------|
 | Apple 240p30                 | None                             | Obsolete.                                                                                       |
 | Windows Mobile 1080p30       | General > Fast 1080p30           | Later Windows Mobile and Windows Phone devices, and Windows 10 Mobile devices.                  |
@@ -214,7 +220,7 @@ As of HandBrake 1.6.0, the Vimeo YouTube HQ `Presets` have been renamed Creator,
 
 ### Legacy Matroska presets
 
-| Preset          | Compatible Preset | Notes                                                                 |
+| Preset          | Similar Preset    | Notes                                                                 |
 |-----------------|-------------------|-----------------------------------------------------------------------|
 | VP8 MKV 1080p30 | None              | Obsolete. AV1 is the successor to VP9, which is the successor to VP8. |
 | VP8 MKV 720p30  | None              | Obsolete. AV1 is the successor to VP9, which is the successor to VP8. |
@@ -225,7 +231,7 @@ As of HandBrake 1.6.0, all 2160p60 presets have been renamed 2160p60 4K.
 
 ### Legacy 0.10.x presets
 
-| Preset              | Compatible Preset                | Notes                                                                                                                                   |
+| Preset              | Similar Preset                   | Notes                                                                                                                                   |
 |---------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | Normal              | General > Fast 1080p30           | Decomb filter, peak limited to 30 FPS, slightly decreased video bit rate, improved motion quality, foreign audio search.                |
 | High Profile        | General > HQ 1080p30 Surround    | Peak limited to 30 FPS, reduced video bit rate spikes, foreign audio search.                                                            |
@@ -243,7 +249,5 @@ As of HandBrake 1.6.0, all 2160p60 presets have been renamed 2160p60 4K.
 [^high-quality-settings-less-compatible]: Higher quality General `Presets` may include settings that are incompatible with older or slower devices.
 
 [^video-hosting-services]: Creator presets are designed and tested to meet these specific services' video guidelines. Compatibility with other services is possible, but neither tested nor guaranteed.
-
-[^email-size-limit]: Email presets are designed and tested to meet these specific services' file attachment size limits, which may change in the future. Compatibility with other services is possible, but neither tested nor guaranteed. It is generally recommended to use a [file hosting service](https://en.wikipedia.org/wiki/Comparison_of_file_hosting_services) when sharing large or long videos.
 
 [^social-services]: Social presets are designed and tested to meet these specific services' video guidelines. Compatibility with other services is possible, but neither tested nor guaranteed.
