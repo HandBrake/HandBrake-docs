@@ -35,9 +35,9 @@ Additional dependencies (may be built via included script):
 Optional dependencies (required by libdovi)
 
 - [Rust](https://www.rust-lang.org/tools/install) 1.64.0 or later
-  - Cross-compiling requires the ana dditional target:
+  - Cross-compiling requires adding an additional target:
     - `rustup target add aarch64-apple-darwin` for cross-compiling for Apple Silicon on an Intel Mac
-    - `rustup target add x86_64-apple-darwin` for cross-compiling for Intel on Apple Silicon
+    - `rustup target add x86_64-apple-darwin` for cross-compiling for Intel on an Apple Silicon Mac
 - [openssl](https://www.openssl.org)
 - [cargo-c](https://github.com/lu-zero/cargo-c)
  - Can be installed by running `cargo install cargo-c`
