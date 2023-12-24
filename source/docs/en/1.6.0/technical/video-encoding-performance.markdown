@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Video encoding performance
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
