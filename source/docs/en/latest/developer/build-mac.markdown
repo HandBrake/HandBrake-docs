@@ -16,34 +16,33 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Mac
 ==========================
 
-Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running macOS 10.14.3 Mojave or later, and the following dependencies.
+Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running macOS 12.6.7 Monterey or later, and the following dependencies.
 
-- [Xcode](https://developer.apple.com/xcode/) 10.3 or later
+- [Xcode](https://developer.apple.com/xcode/) 14.3.1 or later
   - free Apple Developer registration required, or install from the Mac App Store
-- [Command Line Tools for Xcode](https://developer.apple.com/download/more/)
-  - free Apple Developer registration required, or install using `xcode-select --install`
-- [Python](https://www.python.org/downloads/) 3.7.0 or later
-
-Python 3 as included with macOS 11.0 Big Sur is sufficient. For macOS prior to Big Sur, after installing an updated Python 3 from an official source, please ensure the installation has properly created `/Library/Frameworks/Python.framework/Versions/<version>`.
 
 Additional dependencies (may be built via included script):
 
-- autoconf 2.69 or later
-- automake 1.13 or later
-- cmake 3.1.0 or later
-- libtool 2.4.6 or later
-- meson 0.47.0 or later
-- nasm 2.13 or later
-- ninja 1.8.0 or later
-- pkg-config 0.27.0 or later
+- autoconf 2.71 or later
+- automake 1.16.5 or later
+- cmake 3.27.4 or later
+- libtool 2.4.7 or later
+- meson 1.2.1 or later
+- nasm 2.15.05 or later
+- ninja 1.11.1 or later
+- pkg-config 0.29.2 or later
+
+Optional dependencies (required by libdovi)
+
+- [Rust](https://www.rust-lang.org/tools/install) 1.64.0 or later
+  - Cross-compiling requires the ana dditional target:
+    - `rustup target add aarch64-apple-darwin` for cross-compiling for Apple Silicon on an Intel Mac
+    - `rustup target add x86_64-apple-darwin` for cross-compiling for Intel on Apple Silicon
+- [openssl](https://www.openssl.org)
+- [cargo-c](https://github.com/lu-zero/cargo-c)
+ - Can be installed by running `cargo install cargo-c`
 
 Install Xcode and open it once. Approve any prompts to install additional tools. You may quit Xcode after it has finished loading.
-
-Install Command Line Tools for Xcode using the package installer provided by Apple[^xcode-cli-tools], or using `xcode-select`.
-
-    xcode-select --install
-
-For macOS prior to Big Sur, install Python 3 using the latest package installer provided by [Python](https://www.python.org/downloads/).
 
 If you installed Python 3 from a different source, such as Homebrew, it is necessary to check whether Python 3 can properly open HTTPS connections. The following test prints `0` for success, or `1` for failure. Upon failure, you will need to ensure SSL certificates are installed and accessible to your Python 3 installation, or remove the installation and reinstall from the official package.
 
@@ -53,13 +52,9 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Initialize and update all submodules.
-
-    git submodule update --init --recursive
-
 You may build and install the additional dependencies using the included script. Feel free to choose a different output path, if desired.
 
-    scripts/mac-toolchain-build /usr/local
+    sudo scripts/mac-toolchain-build /usr/local
 
 This process will take a few minutes. If necessary, the script will provide you with instructions for adding the resulting binaries location to your environment's `PATH`[^default-path]. Do this now.
 
@@ -76,7 +71,5 @@ Install HandBrake (optional).
 To start over, simply remove the `build` directory.
 
     rm -rf build
-
-[^xcode-cli-tools]: When installing Command Line Tools for Xcode using the package installer (instead of `xcode-select --install`), make sure to install the package that corresponds to the installed Xcode version. A mismatch between the installed Xcode and Command Line Tools versions may cause problems.
 
 [^default-path]: `/usr/local/bin` is included in the system's `PATH` by default. It is not necessary to add it to your environment's `PATH` when installing the additional dependencies to `/usr/local`.
