@@ -40,7 +40,7 @@ Optional dependencies (required by libdovi)
     - `rustup target add x86_64-apple-darwin` for cross-compiling for Intel on an Apple Silicon Mac
 - [openssl](https://www.openssl.org)
 - [cargo-c](https://github.com/lu-zero/cargo-c)
- - Can be installed by running `cargo install cargo-c`
+  - Can be installed by running `cargo install cargo-c`
 
 Install Xcode and open it once. Approve any prompts to install additional tools. You may quit Xcode after it has finished loading.
 
