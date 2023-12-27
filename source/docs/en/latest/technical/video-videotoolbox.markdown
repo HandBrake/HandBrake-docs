@@ -52,9 +52,12 @@ By default only video encoding is performed by the hardware encoder. Every stage
 To decrease CPU utilisation, hardware decoders can be enabled in the Advanced preferences panel on macOS 13 and later, either to be used only in combination with the hardware encoders, or always.
 
 Additionally, the following filters will be run on the GPU when both hardware decoders & encoders are selected:
+
+- Framerate Shaper
 - Rotate
 - Crop & Scale
 - Pad
+- Comb Detect
 - Yadif
 - Bwdif
 - Chroma Smooth
