@@ -38,6 +38,8 @@ Dependencies:
 - harfbuzz-devel
 - lbzip2
 - libass-devel
+- libbluray-devel
+- libdvdnav-devel
 - libjansson-devel
 - libjpeg8-devel
 - libmp3lame-devel
@@ -84,7 +86,7 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo zypper in autoconf automake binutils bzip2 cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git gzip harfbuzz-devel lbzip2 libass-devel libjansson-devel libjpeg8-devel libmp3lame-devel libnuma-devel libogg-devel libopus-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja patch pkg-config python3 speex-devel tar xz-devel zimg-devel zlib-devel
+    sudo zypper in autoconf automake binutils bzip2 cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git gzip harfbuzz-devel lbzip2 libass-devel libbluray-devel libdvdnav-devel libjansson-devel libjpeg8-devel libmp3lame-devel libnuma-devel libogg-devel libopus-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja patch pkg-config python3 speex-devel tar xz-devel zimg-devel zlib-devel
 
 Install the [Packman](https://en.opensuse.org/Additional_package_repositories) Essentials repository and related additional dependencies.
 
