@@ -18,11 +18,12 @@ AMD VCN
 
 ## Supported Hardware and Configurations
 
-- AMD Radeon RX5000 (RDNA) and RX6000 (RDNA2) series GPU or better
+- AMD Radeon RX5000 (RDNA) and RX6000* (RDNA2) series GPU or better
 - Windows 10 or later
 - Limited support is available on Ubuntu 20.04 and later.
 
 Please note, these are not hard limits. Hardware encoding via VCN *might* work on older series GPUs and older operating systems, but this is not officially supported.
+* RX 6400 and RX 6500 XT not supported due to lack of hardware encoder (Seriously AMD??)
 
 On Ubuntu Linux, [AMD Radeon Software for Linux version 22.40 or later](https://www.amd.com/en/support/linux-drivers) is required to use the VCN encoder. Install using the `amdgpu-pro-install` script according to AMD’s [installation guide](https://amdgpu-install.readthedocs.io/en/latest/). Additionally, you must manually install the `amf-amdgpu-pro` package included in the download.
 
