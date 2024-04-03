@@ -72,7 +72,7 @@ Graphical interface dependencies:
 - gstreamer-1.0-plugins-good
 - gstreamer-1.0-libav
 - gstreamer-1.0-plugins-base-devel
-- libgtk-3-devel
+- libgtk-4-devel
 
 Install dependencies.
 
@@ -84,6 +84,6 @@ To build with Intel Quick Sync Video support, install the QSV dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo eopkg install appstream desktop-file-utils gstreamer-1.0-plugins-good gstreamer-1.0-libav gstreamer-1.0-plugins-base-devel libgtk-3-devel
+    sudo eopkg install appstream desktop-file-utils gstreamer-1.0-plugins-good gstreamer-1.0-libav gstreamer-1.0-plugins-base-devel libgtk-4-devel
 
 Solus is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.

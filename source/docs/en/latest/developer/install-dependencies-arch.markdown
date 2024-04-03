@@ -63,7 +63,7 @@ Graphical interface dependencies:
 - desktop-file-utils
 - gst-libav
 - gst-plugins-good
-- gtk3
+- gtk4
 
 Install dependencies.
 
@@ -75,6 +75,6 @@ To build with Intel Quick Sync Video support, install the QSV dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pacman -Syu desktop-file-utils gst-libav gst-plugins-good gtk3
+    sudo pacman -Syu desktop-file-utils gst-libav gst-plugins-good gtk4
 
 Arch is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.

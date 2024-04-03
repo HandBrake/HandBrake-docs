@@ -74,7 +74,7 @@ Graphical interface dependencies:
 - gstreamer1-libav
 - gstreamer1-plugins-base-devel
 - gstreamer1-plugins-good
-- gtk3-devel
+- gtk4-devel
 
 Additional graphical interface dependencies not available in the base repository:
 
@@ -111,6 +111,6 @@ To build with Intel Quick Sync Video support, install the QSV dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo dnf install appstream desktop-file-utils gstreamer1-libav gstreamer1-plugins-base-devel gstreamer1-plugins-good gtk3-devel
+    sudo dnf install appstream desktop-file-utils gstreamer1-libav gstreamer1-plugins-base-devel gstreamer1-plugins-good gtk4-devel
 
 Enterprise Linux is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.

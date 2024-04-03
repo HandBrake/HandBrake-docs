@@ -69,7 +69,7 @@ Graphical interface dependencies:
 - gst-plugins1-gdk_pixbuf
 - gst-plugins1-libav
 - gstreamer1
-- gtk3+
+- gtk4+
 
 Install dependencies.
 
@@ -77,7 +77,7 @@ Install dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pkgin in desktop-file-utils gettext glib2-tools gnome-themes-standard gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk3+
+    sudo pkgin in desktop-file-utils gettext glib2-tools gnome-themes-standard gst-plugins1-gdk_pixbuf gst-plugins1-libav gstreamer1 gtk4+
 
 Ensure the newly installed packages have search path priority.
 

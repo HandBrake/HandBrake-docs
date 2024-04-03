@@ -70,7 +70,7 @@ Graphical interface dependencies:
 - gettext
 - gstreamer1-libav
 - gstreamer1-plugins-gdkpixbuf
-- gtk3
+- gtk4
 
 Install dependencies.
 
@@ -82,6 +82,6 @@ To build with Intel Quick Sync Video support, install the QSV dependencies.
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pkg install desktop-file-utils gettext gstreamer1-libav gstreamer1-plugins-gdkpixbuf gtk3
+    sudo pkg install desktop-file-utils gettext gstreamer1-libav gstreamer1-plugins-gdkpixbuf gtk4
 
 FreeBSD is now prepared to build HandBrake. See [Building HandBrake for BSD](build-bsd.html) for further instructions.
