@@ -29,7 +29,7 @@ All encoders that support 10-bit encoding are also capable of HDR10 encoding. Th
 | NVIDIA NVEnc        |
 | AMD VCN             |
 | Intel QuickSync     |
-| Apple Video Toolbox |
+| Apple VideoToolbox  |
 
 HandBrake will automatically passthru mastering display metadata and content light metadata from the source video to to final encode. For x265 encodings, HandBrake will also set the hdr-opt flag for you.
 
@@ -45,11 +45,22 @@ The following 10-bit encoders support HDR10+ Dynamic metadata:
 |---------------------|
 | x265                |
 | SVT-AV1             |
+| Apple VideoToolbox  |
 
 ## Dolby Vision
 
-Dolby Vision is supported only when using the x265 10-bit encoder, the following Dolby Vision profiles and cross compatibility IDs are supported:
+Dolby Vision is supported only when using the following 10-bit encoders:
+
+| Encoder             |
+|---------------------|
+| x265                |
+| SVT-AV1             |
+| Apple VideoToolbox  |
+
+The supported Dolby Vision profiles and cross compatibility IDs are:
   - 5.0
   - 7.6 (base layer only, converted to 8.1)
   - 8.1
   - 8.4
+
+When using an AV1 encoder, profile will be set to 10 for every cross compatibility ID, per Dolby Vision specifications. At the current time, HandBrake can't read back the dynamic metadata from an AV1 video track.
