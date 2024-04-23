@@ -45,17 +45,17 @@ The following 10-bit encoders support HDR10+ Dynamic metadata:
 |---------------------|
 | x265                |
 | SVT-AV1             |
-| Apple VideoToolbox  |
+| Apple VideoToolbox HEVC |
 
 ## Dolby Vision
 
-Dolby Vision is supported only when using the following 10-bit encoders:
+Dolby Vision is supported when using the following 10-bit encoders:
 
 | Encoder             |
 |---------------------|
 | x265                |
 | SVT-AV1             |
-| Apple VideoToolbox  |
+| Apple VideoToolbox HEVC  |
 
 The supported Dolby Vision profiles and cross compatibility IDs are:
   - 5.0
@@ -63,4 +63,4 @@ The supported Dolby Vision profiles and cross compatibility IDs are:
   - 8.1
   - 8.4
 
-When using an AV1 encoder, profile will be set to 10 for every cross compatibility ID, per Dolby Vision specifications. At the current time, HandBrake can't read back the dynamic metadata from an AV1 video track.
+When using an AV1 encoder, profile will be set to 10 for every cross compatibility ID, per Dolby Vision specifications.
