@@ -18,13 +18,11 @@ Apple VideoToolbox
 
 ## Supported hardware
 
-Encoding:
-- Most 2011 and later Macs
+Encoding: most 2011 and later Macs
 
 Please note, these are not hard limits. Hardware encoding via VideoToolbox *might* work on older series GPUs and older operating systems, but this is not officially supported.
 
-Decoding:
-- macOS 13 and later
+Decoding: macOS 13 and later
 
 ## Enabling support
 
@@ -104,4 +102,7 @@ The following value types are supported (each option only accepts one value type
 | slice-max-size   | boolean     |   ✓   |       | Sets the maximum slice size for H.264 encoding in bytes.                                                  |
 | vbv-bufsize      | boolean     |   ✓   |   ✓   | Sets the size of the VBV buffer in bytes per second.                                                      |
 | vbv-maxrate      | boolean     |   ✓   |   ✓   | Sets the maximum rate the VBV buffer should be assumed to refill at, in bytes per second.                 |
+| qpmin            | int         |   ✓   |   ✓   | Sets the minimum quantizer that will be used.                                                             |
+| qpmax            | int         |   ✓   |   ✓   | Sets the maximum quantizer that will be used.                                                             |
+| ref              | int         |   ✓   |   ✓   | Sets the maximum number of reference frames.                 |
 | max-frame-delay  | int         |   ✓   |   ✓   | The maximum frame delay count is the maximum number of frames that a compressor is allowed to hold before it must output a compressed frame. |
