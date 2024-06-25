@@ -146,7 +146,7 @@ Next, the installer will ask you where you wish to install HandBrake. Unless you
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
 
-If you do not already have Microsoft .NET Desktop Runtime 6.0 installed, you will also need to install this from the [Microsoft .NET Desktop Runtime Download Page](https://dotnet.microsoft.com/download/dotnet/6.0/runtime)
+If you do not already have Microsoft .NET Desktop Runtime 8.0 installed, you will also need to install this from the [Microsoft .NET Desktop Runtime Download Page](https://dotnet.microsoft.com/download/dotnet/8.0/runtime)
 
 <!-- /.system-windows -->
 
