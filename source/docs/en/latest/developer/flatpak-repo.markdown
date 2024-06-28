@@ -29,20 +29,21 @@ Install flathub repository.
 
 Install flatpak freedesktop SDK.
 
-    flatpak install flathub org.freedesktop.Sdk//21.08
+    flatpak install flathub org.freedesktop.Sdk//23.08
 
 Install flatpak freedesktop runtime platform.
 
-    flatpak install flathub org.freedesktop.Platform//21.08
+    flatpak install flathub org.freedesktop.Platform//23.08
     
-Install flatpak gnome 43.
+Install flatpak gnome.
 
-    flatpak install flathub org.gnome.Platform//43
-    flatpak install flathub org.gnome.Sdk//43
+    flatpak install flathub org.gnome.Platform//46
+    flatpak install flathub org.gnome.Sdk//46
     
-Install LLVM 14
+Install Compilers
 
-    flatpak install flathub org.freedesktop.Sdk.Extension.llvm14//21.08
+    flatpak install flathub org.freedesktop.Sdk.Extension.llvm16//23.08
+    flatpak install flathub org.freedesktop.Sdk.Extension.rust-stable//23.08
 
 
 ## Create a new HandBrake flatpak bundle
