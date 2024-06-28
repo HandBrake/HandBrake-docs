@@ -31,7 +31,7 @@ In order to configure the track selection behaviour, click the "Selection Behavi
 ![Audio Defaults Window](../../images/mac/audio-defaults-mac-1.4.0.png "Audio Defaults Window")
 <!-- /.system-macos -->
 <!-- .system-windows -->
-![Audio Defaults Window](../../images/windows/audio-defaults-win-1.4.0.png "Audio Defaults Window")
+![Audio Defaults Window](../../images/windows/audio-defaults-win-1.8.0.png "Audio Defaults Window")
 <!-- /.system-windows -->
 
 - Track Selection Behaviour

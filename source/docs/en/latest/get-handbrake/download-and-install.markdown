@@ -136,13 +136,13 @@ If HandBrake is already installed on your computer, the installer will offer to 
 
 ![HandBrake Windows installer: removing previous versions](../../images/windows/uninstall-1.0.0.png "The HandBrake installer will offer to remove previous versions before installing the current version.")
 
-![HandBrake Windows installer](../../images/windows/install-1-1.0.0.png "HandBrake's Windows installer.")
+![HandBrake Windows installer](../../images/windows/install-1-1.8.0.png "HandBrake's Windows installer.")
 
 Next, the installer will ask you where you wish to install HandBrake. Unless you have a specific reason to change this, select `Install` to continue. Once the installation is complete, you may select `Finish` to exit the installer.
 
-![HandBrake for Windows installation progress](../../images/windows/install-2-1.0.0.png "The installer will report its progress.")
+![HandBrake for Windows installation progress](../../images/windows/install-2-1.8.0.png "The installer will report its progress.")
 
-![HandBrake for Windows installation complete](../../images/windows/install-finish-1.0.0.png "HandBrake is now installed.")
+![HandBrake for Windows installation complete](../../images/windows/install-finish-1.8.0.png "HandBrake is now installed.")
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
 

@@ -31,7 +31,7 @@ Begin by [opening a Source, selecting a Title](../workflow/open-video-source.htm
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![HandBrake toolbar on Windows](../../images/windows/add-to-queue-1.8.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
 
 <!-- /.system-windows -->
 

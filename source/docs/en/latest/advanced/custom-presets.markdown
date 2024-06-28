@@ -27,7 +27,7 @@ On the main window, below the title selection controls, you can click the "Save 
 ![macOS Preset Controls](../../images/windows/preset-controls-mac-1.4.0.png "Preset Controls (macOS)")
 <!-- /.system-macos -->
 <!-- .system-windows -->
-![Windows Preset Controls](../../images/windows/preset-controls-win-1.4.0.png "Preset Controls (Windows)")
+![Windows Preset Controls](../../images/windows/preset-controls-win-1.8.0.png "Preset Controls (Windows)")
 <!-- /.system-windows -->
 
 When you've pressed this button, you'll see the following window appear:
@@ -36,7 +36,7 @@ When you've pressed this button, you'll see the following window appear:
 ![macOS Add Preset](../../images/windows/add-preset-mac-1.4.0.png "Add Preset (macOS)")
 <!-- /.system-macos -->
 <!-- .system-windows -->
-![Windows Add Prese](../../images/windows/add-preset-win-1.4.0.png "Add Preset (Windows)")
+![Windows Add Prese](../../images/windows/add-preset-win-1.8.0.png "Add Preset (Windows)")
 <!-- /.system-windows -->
 
 Pressing "add" will save a new preset with the details you've entered based on the settings that are currently on the main window. 

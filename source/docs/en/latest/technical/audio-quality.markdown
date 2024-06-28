@@ -23,7 +23,7 @@ Each track can be configured to suit your needs.
 
 <!-- .system-windows -->
 
-![HandBrake's Audio Track Settings](../../images/windows/audio-quality-1.0.0.png "HandBrake's Audio Track Settings")
+![HandBrake's Audio Track Settings](../../images/windows/audio-quality-1.8.0.png "HandBrake's Audio Track Settings")
 
 <!-- /.system-windows -->
 
