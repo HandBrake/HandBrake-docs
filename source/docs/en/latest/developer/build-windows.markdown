@@ -106,7 +106,7 @@ The following tools are required to build and run the [GUI](abbr:Graphical User 
 - [Microsoft Visual Studio Community](https://www.visualstudio.com/vs/community/)
 - A Git client
   - [Source Tree](https://www.sourcetreeapp.com) (recommended)
-  - Client included with Visual Studio 2015 or later
+  - Client included with Visual Studio 2022 or later
 - `hb.dll` (see the LibHB build instructions preceding these, or download from [https://handbrake.fr/nightly.php](https://handbrake.fr/nightly.php))
 
 
