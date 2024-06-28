@@ -31,7 +31,6 @@ The following is the minimum level of hardware HandBrake formally supports.
   - 6 to 16 GB or more for transcoding ultra high definition video (2160p 4K)
 - System storage:
   - 150 MB for the HandBrake app
-  - 10 GB or more recommended for processing and storing your new videos
 - Display resolution:
   - 1280x960 minimum, proportionately higher with display scaling. (See section below)
 
@@ -40,9 +39,9 @@ While it may be technically possible to run HandBrake on hardware not meeting th
 <!-- .system-windows -->
 ### Notice: Users with Intel CPU's
 
-If you are using Windows 10 and also have an Intel 12th generation CPU (or newer), we recommend using the "High Performance" power profile in Windows.
+If you are running a 13th or 14th generation Intel CPU, please make sure you are running the latest BIOS to avoid system stability issues. 
 
-In HandBrake Preferences, we also recommend you set the "Priority Level" to "Normal" on the Advanced tab. 
+If you are using Windows 10 and also have an Intel 12th generation CPU (or newer), we recommend using the "High Performance" power profile in Windows.
 
 This should help maintain performance when HandBrake is not a foreground window. 
 
@@ -88,6 +87,7 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
+| Fedora 40      | Supported           |                         |                               |
 | Fedora 39      | Supported           |                         |                               |
 | Fedora 38      | Supported           |                         |                               |
 | Fedora 37      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
@@ -109,6 +109,7 @@ Interim (non-LTS) versions are typically supported until their end of life.
 
 | Ubuntu Version            | Status              | Last Compatible Version | Notes                              |
 |---------------------------|---------------------|-------------------------|------------------------------------|
+| 24.04 LTS Noble Numbat    | Supported           |                         | Flatpak, and source.               |
 | 22.04 LTS Jammy Jellyfish | Supported           |                         | Flatpak, and source.               |
 | 20.04 LTS Focal Fossa     | Deprecated          |                         | Flatpak, and source.               |
 | 18.04 LTS Bionic Beaver   | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
@@ -130,6 +131,7 @@ HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 15 Sequoia         | Supported           |                         | Requires HandBrake 1.8.0 or later. |
 | 14 Sonoma          | Supported           |                         | Requires HandBrake 1.5.0 or later. |
 | 13 Ventura         | Supported           |                         | Requires HandBrake 1.5.0 or later. |
 | 12 Monterey        | Supported           |                         | Requires HandBrake 1.4.0 or later. |
