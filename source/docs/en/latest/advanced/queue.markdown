@@ -41,14 +41,14 @@ Select the `Show Queue` button on the toolbar to see the queued encodes, or `Job
 
 ![Opening the Queue window](../../images/mac/queue-button-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
-![Queue window on Mac](../../images/mac/queue-1.0.0.png "The Queue window lists pending Jobs.")
+![Queue window on Mac](../../images/mac/queue-1.8.0.png "The Queue window lists pending Jobs.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.8.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
-![Queue window on Windows](../../images/windows/queue-1.0.0.png "The Queue window lists pending Jobs.")
+![Queue window on Windows](../../images/windows/queue-1.8.0.png "The Queue window lists pending Jobs.")
 
 <!-- /.system-windows -->
 
@@ -73,9 +73,9 @@ This ensures that each of your `Jobs` will be given a unique file name, and not 
 
 On Windows, first open the `Preferences` window using the `Tools` menu. In the `Output Files` section, ensure that the `Automatically name output files` setting is selected. Set a `Default Path` (where your new videos will be created) and make sure `Title` is part of the `File Format` field.
 
-![Opening the Preferences window on Windows](../../images/windows/preferences-menu-1.0.0.png "Open the Preferences window using the Tools menu.")
+![Opening the Preferences window on Windows](../../images/windows/preferences-menu-1.8.0.png "Open the Preferences window using the Tools menu.")
 
-![Selecting the Automatically name output files setting](../../images/windows/preferences-auto-naming-1.0.0.png "Set up Automatic File Naming to ensure unique file names when adding multiple Titles to the Queue.")
+![Selecting the Automatically name output files setting](../../images/windows/preferences-auto-naming-1.7.0.png "Set up Automatic File Naming to ensure unique file names when adding multiple Titles to the Queue.")
 
 This ensures that each of your `Jobs` will be given a unique file name, and not overwrite each other.
 
@@ -125,7 +125,7 @@ To make changes to `Jobs` in the `Queue`, first open the `Queue` window by selec
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.8.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
 <!-- /.system-windows -->
 
@@ -147,7 +147,7 @@ On Mac, if you want to make changes to a `Job` already in the `Queue`, control- 
 
 On Windows, if you want to make changes to a `Job` already in the `Queue`, select the edit button next to the `Job`. Editing a `Job` opens the `Source` in HandBrake's main window and removes the `Job` from the `Queue`.
 
-![Editing an encode Job on Windows](../../images/windows/queue-1.0.0.png "Select the edit button, which looks like a sheet of paper, to make changes to a Job.")
+![Editing an encode Job on Windows](../../images/windows/queue-1.8.0.png "Select the edit button, which looks like a sheet of paper, to make changes to a Job.")
 
 <!-- /.system-windows -->
 
@@ -160,7 +160,7 @@ When you're finished making changes, again add the encode to the `Queue` by sele
 <!-- /.system-macos -->
 <!-- .system-windows -->
 
-![HandBrake toolbar on Windows](../../images/windows/toolbar-1.0.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
+![HandBrake toolbar on Windows](../../images/windows/toolbar-1.8.0.png "Select the Add to Queue button on the toolbar to add your encode to the queue.")
 
 <!-- /.system-windows -->
 
