@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Ubuntu
 =================================
 
-The following instructions are for [Ubuntu](https://www.ubuntu.com) 22.04 (Jammy Jellyfish) and 20.04 (Focal Fossa).
+The following instructions are for [Ubuntu](https://www.ubuntu.com) 22.04 (Jammy Jellyfish).
 
 Basic requirements to run commands:
 
@@ -80,6 +80,13 @@ Install dependencies.
 
     sudo apt-get update
     sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig-dev libfreetype-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate0-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev
+
+For libdovi, you will also need rust, cargoc and associated dependencies:
+
+    curl https://sh.rustup.rs -sSf | sh
+    source "$HOME/.cargo/env"
+    cargo install cargo-c
+    rustup target add x86_64-pc-windows-gnu
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
