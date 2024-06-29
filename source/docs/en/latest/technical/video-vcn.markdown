@@ -18,7 +18,7 @@ AMD VCN
 
 ## Supported Hardware and Configurations
 
-- AMD Radeon RX5000 (RDNA) and RX6000 (RDNA2) series GPU or better
+- AMD Radeon RX5000 (RDNA), RX6000 (RDNA2), RX7000 (RDNA3) series GPU or better
 - Windows 10 or later
 - Limited support is available on Ubuntu 20.04 and later.
 
@@ -41,6 +41,10 @@ The following presets are available under the 'Hardware' category in the presets
 - H.265 VCN 1080p
 
 These are a good starting point for configuring HandBrake to use these encoders.
+
+## Known Limitations
+
+- The AV1 encoder that ships with Navi 3.x products requires a resolution that is divisible by 64 in both width and height. Becareful that the output resolution after cropping follows this rule. 
 
 
 ## Performance
