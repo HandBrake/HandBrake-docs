@@ -42,13 +42,17 @@ jobs:
         gitrev=$(git rev-parse --short HEAD)
         cd public
         tar cvzf HandBrake_Documentation.$gitrev.tar.gz docs
+        zip -r HandBrake_Documentation.$gitrev.zip docs
         cp *.tar.gz ../
+        cp *.zip ../
         cd ..
 
     - uses: actions/upload-artifact@master
       with:
          name: docs
-         path: HandBrake_Documentation*.tar.gz
+         path: |
+           HandBrake_Documentation*.tar.gz
+           HandBrake_Documentation*.zip
 
 
   publish:
