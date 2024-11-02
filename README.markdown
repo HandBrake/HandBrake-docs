@@ -13,6 +13,15 @@ The documentation is available in two public forms:
 Most people should use the first resource, which is the official published documentation. If you want to learn how to use HandBrake, go there now! [Official HandBrake Documentation](https://handbrake.fr/docs/)
 
 
+### Downloads 
+
+The HTML documentation is available for download 
+
+| Download        | Build Status |
+| --------------- | ------------- |
+| [Download](https://github.com/HandBrake/handbrake-docs/releases/tag/docs) | [![Windows Build](https://github.com/HandBrake/handbrake-docs/actions/workflows/main.yml/badge.svg)](https://github.com/HandBrake/handbrake-docs/actions/workflows/main.yml)  |
+
+
 ## Contributing and Translations
 
 We welcome most contributions. While it is our goal to allow everyone to contribute, contributions not meeting the project's goals or standards may be rejected. For this reason, we suggest communicating your interests before making any broad changes.
