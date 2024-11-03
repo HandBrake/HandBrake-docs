@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           [ draft ]
+State:           [ obsolete ]
 Title:           Constant Quality vs Average Bit Rate
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
