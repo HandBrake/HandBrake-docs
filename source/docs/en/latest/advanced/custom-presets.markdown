@@ -55,3 +55,14 @@ For more information, please see [Audio and Subtitle Defaults](../workflow/audio
 
 If you regularly use the same preset, you can make it the default preset that HandBrake starts with by selecting the "Make Default" (macOS) or "Set Current as Default" (Window) option in the presets menu or by using the preset manager accessed via the toolbar.
 
+## Import and Export
+
+You can export and import presets (singularly or many at a time) from the preset pane for backup or sharing purposes. 
+
+## Preset File Locations
+
+The presets file are stored in the following location: 
+
+- Windows: C:\Users\%Username%\AppData\Roaming\HandBrake\presets.json
+- Flatpak: /var/app/fr.handbrake.ghb/config/ghb/presets.json
+- macOS: ~/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/UserPresets.json (Note, "fr.handbrake.HandBrake" will be shown as "HandBrake" when viewed in Finder)
