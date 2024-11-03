@@ -3,7 +3,7 @@ Type:            article
 Title:           Installing dependencies on OpenBSD
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: Latest
+Project_Version: 1.8.0
 Language:        English
 Language_Code:   en
 Authors:         [ Brad Smith <brad@comstyle.com> (brad0) ]
