@@ -97,7 +97,7 @@ jobs:
           artifacts: "docs/*.*"
           name: "Documentation"
           bodyFile: .github/workflows/rel_body.md
-          prerelease: true
+          prerelease: false
           replacesArtifacts: false
           allowUpdates: false
           tag: docs
