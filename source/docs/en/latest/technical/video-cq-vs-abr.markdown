@@ -117,7 +117,7 @@ encoder will vary the number of bits given to any one portion of the video, but
 try to keep everything at the average you set.
 
 -   The video bitrate can be set on the "Video Tab"
--   It is recommended that you use 2-Pass encoding.
+-   It is recommended that you use multi-pass encoding.
 -   This will provide better quality and better bit-rate distribution. A single
     pass will lead to sub-optimal results.
     -   The "Turbo" checkbox will make the first pass quicker at the expense of

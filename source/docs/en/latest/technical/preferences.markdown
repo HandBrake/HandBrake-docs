@@ -22,7 +22,7 @@ The Preferences menu can be accessed via the "Tools" Menu -> "Preferences" optio
 
 
 <!-- .system-macos -->
-The Preferences menu can be accessed via the "HandBrake" Menu -> "Preferences" option.
+The Preferences menu can be accessed via the "HandBrake" Menu -> "Settings" option.
 <!-- /.system-macos -->
 
 

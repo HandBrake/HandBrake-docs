@@ -39,6 +39,7 @@ Optional dependencies (required by libdovi)
     - `rustup target add aarch64-apple-darwin` for cross-compiling for Apple Silicon on an Intel Mac
     - `rustup target add x86_64-apple-darwin` for cross-compiling for Intel on an Apple Silicon Mac
 - [openssl](https://www.openssl.org)
+  - may be built via included script
 - [cargo-c](https://github.com/lu-zero/cargo-c)
   - Can be installed by running `cargo install cargo-c`
 

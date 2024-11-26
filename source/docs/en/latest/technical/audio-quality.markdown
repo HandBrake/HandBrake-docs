@@ -31,20 +31,22 @@ There are several different modes HandBrake can operate in.
 
 ### Average Bitrate
 
-HandBrake supports average bitrate for all audio encoders except FLAC.
+HandBrake supports average bitrate for all audio encoders except FLAC, ALAC, and TrueHD.
 
 ### Quality based Encoding
 
 Quality based encoding is supported for the following codecs:
+
 - AAC
 - MP3
 - Vorbis
+- Opus
 
 The scale of the quality if much less pronounced compared to the video quality slider, so changes do not have nearly as big an impact on file size. 
 
 ### Lossless
 
-HandBrake supports FLAC (both 16 and 24bit) when the output format is MKV.
+HandBrake supports FLAC and ALAC (both 16 and 24bit) when the output format is MKV or MP4.
 
 In addition, HandBrake can passthru the following source audio track formats:
 
@@ -53,9 +55,9 @@ In addition, HandBrake can passthru the following source audio track formats:
 - TrueHD
 - AAC
 - MP3
+- Opus
+- Vorbis
+- TrueHD
 - FLAC
-
-  
-
-
+- ALAC
 

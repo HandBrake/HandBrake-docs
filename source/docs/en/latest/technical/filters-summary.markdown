@@ -21,13 +21,17 @@ Summary of Filters
 HandBrake contains the following filters:
 
 - Detelecine
-- Deinterlace 
+- Comb Detect
+- Deinterlace
+  - Yadif
   - Decomb
-- Denoise
+  - Bwdif
 - Deblock
+- Denoise
 - Chroma Smooth
-- Grayscale
+- Sharpen
 - Colorspace
+- Grayscale
 
 
 Detelecine
@@ -41,6 +45,7 @@ Deinterlace
 
 Deinterlace removes comb artifacts from the picture. 
 Yadif is a popular and fast deinterlacer. 
+Bwdif is a motion adaptive deinterlacing based on yadif with the use of w3fdif and cubic interpolation algorithms.
 Decomb switches between multiple interpolation algorithms for speed and quality.
 
 The following Deinterlace tunes are available:
@@ -49,6 +54,12 @@ The following Deinterlace tunes are available:
 - Skip Spatial Check: Lets Yadif skip correcting certain avoidable artifacts for a slight speed boost.
 - EEDI2: Uses a slower, higher quality interpolation algorithm for Decomb. Useful for the most difficult sources.
 - Bob: Attempts to better preserve motion for a slight penalty to perceived resolution.
+
+
+Deblock
+-------
+
+Deblock reduces blocky artifacts caused by low quality video compression.
 
 
 Denoise
@@ -71,22 +82,10 @@ For NLMeans the following Denoise tunes are available:
 - Sprite: Is useful for 1-/4-/8-/16-bit 2-dimensional games. Sprite is not designed for high definition video.
 
 
-Deblock
--------
-
-Deblock reduces blocky artifacts caused by low quality video compression.
-
-
 Chroma Smooth
 -------------
 
 Reduces chroma noise, rainbows, and other prominent visual artifacts. Useful for resolving various color-related issues, especially with lower resolution content from analog sources, e.g. poor quality DVD and VHS sources. The blurring/smoothing algorithm is the same as used by the unsharp filter.
-
-
-Grayscale
----------
-
-Grayscale removes the color component of the video. Often referred to as Black & White video.
 
 
 Colorspace
@@ -100,3 +99,9 @@ Colorspace + tonemap filter. Can change/tonemap the colorspace of the video into
 - BT.601 EBU
 
 If this set to "Off" then HandBrake will keep the colorspace of the video.
+
+
+Grayscale
+---------
+
+Grayscale removes the color component of the video. Often referred to as Black & White video.
