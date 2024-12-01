@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           [ draft ]
+State:           [ obsolete ]
 Title:           Anamorphic Guide
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
