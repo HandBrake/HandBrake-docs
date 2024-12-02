@@ -51,8 +51,10 @@ The following source format's can be passed thru.
 - DTS    (Limited player compatibility in MP4)
 - DTS-HD (Limited player compatibility in MP4)
 - TrueHD (Limited player compatibility in MP4)
-- FLAC   (MKV files only)
+- FLAC
+- ALAC
 - AAC
-- MP3
-- MP2
+- MP3    (Limited player compatibility in MP4)
+- MP2    (Limited player compatibility in MP4)
 - Opus
+- Vorbis

@@ -26,8 +26,8 @@ HandBrake creates the widely supported container formats MKV and MP4 (sometimes 
 Features and playback compatiblity varies between MKV, WebM, and MP4. The following is a summary of some of these differences:
 
 - MP4 container.
-  - Supports H.264, H.265, MPEG-4, MPEG-2, AV1 video.
-  - It stores audio in the AAC, MP3, AC3, E-AC3, and Opus format. AAC is recommended for better compatibility on most players. It is also possible to pass through Dolby Digital 5.1 Surround Sound (AC3) audio from a DVD or Blu-ray, and E-AC3 and TrueHD.
+  - Supports H.264, H.265, MPEG-4, MPEG-2, VP9, AV1 video.
+  - It stores audio in the AAC, MP3, AC3, E-AC3, TrueHD, Opus, FLAC, and ALAC format. AAC is recommended for better compatibility on most players. It is also possible to pass through Dolby Digital 5.1 Surround Sound (AC3) audio from a DVD or Blu-ray, and E-AC3 and TrueHD.
   - MP4 also supports chapters, for which HandBrake uses Apple's chapter format. 
   - MP4 also is capable of storing [VariableFrameRate Variable Frame Rate] video. 
   - Be aware that chapters and AC3 audio can only be seen by QuickTime 7 and earlier if you change the file extension from .mp4 to .m4v. HandBrake will do this for you automatically when you enable those features, although this can be disabled in the preferences if you really want .mp4 at the end of the name. QuickTime X and later don't require the extension change.
@@ -35,8 +35,8 @@ Features and playback compatiblity varies between MKV, WebM, and MP4. The follow
   - It can also include "soft" text subtitles that can be turned on or off, instead of always being hard burned into the video frames.
    
 - MKV container.
-  - Supports H.264, H.265, MPEG-4, MPEG-2, VP8, VP9, AV1, Theora video.
-  - It stores audio in the AAC, MP3, AC3, E-AC3, Vorbis, Opus, or FLAC formats. It can also pass through the Dolby Digital 5.1 (AC3), Digital Theater Systems (DTS), and TrueHD surround sound formats used by DVDs and Blu-rays.
+  - Supports H.264, H.265, MPEG-4, MPEG-2, VP8, VP9, AV1, Theora, FFV1 video.
+  - It stores audio in the AAC, MP3, AC3, E-AC3, TrueHD, Vorbis, Opus, FLAC or ALAC formats. It can also pass through the Dolby Digital 5.1 (AC3), Digital Theater Systems (DTS), and TrueHD surround sound formats used by DVDs and Blu-rays.
   - It supports chapters, as well as [VariableFrameRate Variable Frame Rate] video. 
   - It can include "soft" subtitles that can be turned on or off, instead of always being hard burned into the video frame. These can either be bitmap images of the subtitles included on a DVD (known as vobsub) or text.
 

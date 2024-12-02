@@ -93,16 +93,18 @@ The following value types are supported (each option only accepts one value type
 
 ### Options list
 
-| Option           | Type        | H.264 | H.265 | Detail                                                                                                    |
-|------------------|-------------|:-----:|:-----:|-----------------------------------------------------------------------------------------------------------|
-| gpu-registryid   | int         |   ✓   |   ✓   | GPU selection. If set, the VideoToolbox will only use a hardware encoder running on the GPU specified by the provided GPU registryID. |
-| keyint           | int         |   ✓   |   ✓   | Sets the maximum interval between key frames, also known as the key frame rate.                           |
-| bframes          | boolean     |   ✓   |   ✓   | Set to `1` to enable Reference B-Frames (default), `0` to disable.                                        |
-| cabac            | boolean     |   ✓   |       | Set to `1` to enable cabac, `0` to disable. Note the hyphen for H.264.                                    |
-| slice-max-size   | boolean     |   ✓   |       | Sets the maximum slice size for H.264 encoding in bytes.                                                  |
-| vbv-bufsize      | boolean     |   ✓   |   ✓   | Sets the size of the VBV buffer in bytes per second.                                                      |
-| vbv-maxrate      | boolean     |   ✓   |   ✓   | Sets the maximum rate the VBV buffer should be assumed to refill at, in bytes per second.                 |
-| qpmin            | int         |   ✓   |   ✓   | Sets the minimum quantizer that will be used.                                                             |
-| qpmax            | int         |   ✓   |   ✓   | Sets the maximum quantizer that will be used.                                                             |
-| ref              | int         |   ✓   |   ✓   | Sets the maximum number of reference frames.                 |
-| max-frame-delay  | int         |   ✓   |   ✓   | The maximum frame delay count is the maximum number of frames that a compressor is allowed to hold before it must output a compressed frame. |
+| Option                      | Type        | H.264 | H.265 | Detail                                                                                                    |
+|-----------------------------|-------------|:-----:|:-----:|-----------------------------------------------------------------------------------------------------------|
+| gpu-registryid              | int         |   ✓   |   ✓   | GPU selection. If set, the VideoToolbox will only use a hardware encoder running on the GPU specified by the provided GPU registryID. |
+| keyint                      | int         |   ✓   |   ✓   | Sets the maximum interval between key frames, also known as the key frame rate.                           |
+| bframes                     | boolean     |   ✓   |   ✓   | Set to `1` to enable Reference B-Frames (default), `0` to disable.                                        |
+| cabac                       | boolean     |   ✓   |       | Set to `1` to enable cabac, `0` to disable. Note the hyphen for H.264.                                    |
+| slice-max-size              | boolean     |   ✓   |       | Sets the maximum slice size for H.264 encoding in bytes.                                                  |
+| vbv-bufsize                 | boolean     |   ✓   |   ✓   | Sets the size of the VBV buffer in bytes per second.                                                      |
+| vbv-maxrate                 | boolean     |   ✓   |   ✓   | Sets the maximum rate the VBV buffer should be assumed to refill at, in bytes per second.                 |
+| qpmin                       | int         |   ✓   |   ✓   | Sets the minimum quantizer that will be used.                                                             |
+| qpmax                       | int         |   ✓   |   ✓   | Sets the maximum quantizer that will be used.                                                             |
+| ref                         | int         |   ✓   |   ✓   | Sets the maximum number of reference frames.                                                              |
+| max-frame-delay             | int         |   ✓   |   ✓   | The maximum frame delay count is the maximum number of frames that a compressor is allowed to hold before it must output a compressed frame. |
+| look-ahead-frame-count      | int         |   ✓   |   ✓   | The suggested number of frames to look ahead for rate control.                                            |
+| disable-spatial-adaptive-qp | boolean     |   ✓   |   ✓   | Disable spatial adaptation of the quantization parameter (QP) based on per-frame statistics.              |

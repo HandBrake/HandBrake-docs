@@ -129,7 +129,7 @@ You can access the current log by opening the Activity Log window in HandBrake.
 
 On Mac, logs are stored at the following locations, where `Username` is your user name:
 
-- `/Users/Username/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/EncodeLogs` for HandBrake 1.3.0 and later, sandboxed nightly/snapshot builds, and sandboxed personal builds
+- `/Users/Username/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/EncodeLogs` for HandBrake 1.3.0 and later, sandboxed nightly/snapshot builds, and sandboxed personal builds (the fr.handbrake.HandBrake folder is shown as HandBrake in Finder)
 - `/Users/Username/Library/Application Support/HandBrake/EncodeLogs` for HandBrake 1.2.2 and earlier, older non-sandboxed nightly/snapshot builds, and non-sandboxed personal builds
 
 You can open the applicable location directly from HandBrake’s Activity Log window.

@@ -28,6 +28,8 @@ The follow encoders support higher than 8-bit.
 | Nvidia NVEnc        |
 | Apple Video Toolbox |
 | SVT-AV1             |
+| VP9                 |
+| FFV1                |
 
 Please note, you must select a "10-bit" or "12-bit" encoder from the "Video Encoder" dropdown on the "Video" tab to enable this feature.
 For hardware encoders, the option will only be shown if the system supports it. 

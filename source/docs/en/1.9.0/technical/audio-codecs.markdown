@@ -47,7 +47,7 @@ Audio Encoders
     -   On Mac, HandBrake uses Apple's CoreAudio AAC encoder. It's known to be
         much better quality and is the default option for Mac users.
 
--   HE-AAC (Mac Only)
+-   HE-AAC (Mac Only):
 
     -   High Efficiency AAC encoder. This encoder is optimized for low-bitrate
         applications which may be useful for streaming.
@@ -63,9 +63,9 @@ Audio Encoders
 
     -   HandBrake offers Vorbis audio encoding as well.
 
--   Opus
+-   Opus:
 
-    -   Available in MKV files, Opus is the successor to Vorbis. HandBrake uses libopus for encoding.
+    -   Opus is the successor to Vorbis. HandBrake uses libopus for encoding.
 
 -   AC3 and E-AC3:
 
@@ -73,14 +73,16 @@ Audio Encoders
 
     -   This is not the same as Passthru. You can encode any audio track to AC3.
 
--   Flac 16 and 24bit (FFmpeg)
+-   Flac 16 and 24bit (FFmpeg):
 
     -   Lossless audio compression.
 
-    -   Available in MKV files.
-
     -   It is not currently possible to passthru the compression level to the
         ffmpeg encoder which is currently defaulted to "5"
+
+ -   ALAC 16 and 24bit:
+
+    -   Lossless audio compression.
 
  
 
@@ -88,7 +90,7 @@ Passthru options.
 -----------------
 
 HandBrake supports passthru for a limited number of popular source formats.
-These are: AC3, E-AC3, DTS, DTS-HD, TrueHD, MP3, MP2, AAC or flac (Passthru)
+These are: AC3, E-AC3, DTS, DTS-HD, TrueHD, Opus, Vorbis, MP3, MP2, AAC, FLAC or ALAC (Passthru)
 
 This copies the audio bit-for-bit from the source so offers no loss in audio
 quality. These audio tracks can be quite large so can impact the final size of
