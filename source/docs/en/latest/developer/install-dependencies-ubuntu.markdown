@@ -22,64 +22,10 @@ Basic requirements to run commands:
 
 - sudo (for normal user accounts)
 
-Dependencies:
-
-- autoconf
-- automake
-- build-essential
-- cmake
-- git
-- libass-dev
-- libbz2-dev
-- libfontconfig-dev
-- libfreetype-dev
-- libfribidi-dev
-- libharfbuzz-dev
-- libjansson-dev
-- liblzma-dev
-- libmp3lame-dev
-- libnuma-dev
-- libogg-dev
-- libopus-dev
-- libsamplerate0-dev
-- libspeex-dev
-- libtheora-dev
-- libtool
-- libtool-bin
-- libturbojpeg0-dev
-- libvorbis-dev
-- libx264-dev
-- libxml2-dev
-- libvpx-dev
-- m4
-- make
-- meson
-- nasm
-- ninja-build
-- patch
-- pkg-config
-- tar
-- zlib1g-dev
-
-Intel Quick Sync Video dependencies (optional):
-
-- libva-dev
-- libdrm-dev
-
-Graphical interface dependencies:
-
-- appstream
-- desktop-file-utils
-- gettext
-- gstreamer1.0-libav
-- gstreamer1.0-plugins-good
-- libgstreamer-plugins-base1.0-dev
-- libgtk-4-dev
-
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig-dev libfreetype-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate0-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig-dev libfreetype-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate0-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev curl libssl-dev clang
 
 For libdovi, you will also need rust, cargoc and associated dependencies:
 

@@ -35,7 +35,6 @@ Dependency installation instructions are available for the following distributio
 - [Ubuntu](install-dependencies-ubuntu.html)
 - [Void](install-dependencies-void.html)
 
-HandBrake’s optional experimental support for Intel Quick Sync Video on Linux requires installing the Intel Media SDK and its dependencies. See the [Intel Media SDK Releases](https://github.com/Intel-Media-SDK/MediaSDK/releases) page and [Intel Media SDK Build Instructions](https://github.com/Intel-Media-SDK/MediaSDK#how-to-build).
 
 ## Building HandBrake
 
@@ -43,10 +42,24 @@ Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
 
-Build HandBrake. To enable experimental support for Intel Quick Sync Video, append `--enable-qsv`. To build the command line interface only, disable the graphical interface by appending `--disable-gtk`.
+Build HandBrake. 
 
     ./configure --launch-jobs=$(nproc) --launch
+    
+The following optional parameters are commonly used:
 
+| Parameter        | Description         |
+|------------------|---------------------|
+| --enable-qsv     | Enable support for the Intel QuickSync Video Decoder and Encoder |
+| --enable-nvdec   | Enable support for the Nvidia NVDec Decoder |
+| --enable-vce     | Enable support for the AMD VCN video encoder |
+| --enable-libdovi | Enable support for Dolby Vision |
+| --disable-gtk    | Build only HandBrakeCLI on Linux |
+
+For a full listing of options, use the command:
+
+    ./configure --help
+ 
 When complete, you will find `HandBrakeCLI` in the `build` directory. If the graphical interface is enabled, you will also find `ghb` in the `build/gtk/src` directory.
 
 Install HandBrake (optional). When installing the graphical interface, icon and desktop files for the Applications menu will be also installed.

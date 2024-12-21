@@ -24,11 +24,9 @@ The following is the minimum level of hardware HandBrake formally supports.
   - AMD Ryzen, Threadripper, or Epyc
   - Intel Core (6th generation and newer) i3, i5, i7, i9, or equivalent Xeon
   - Apple Silicon M1 and newer, recent Intel Macs supported per the above
-- Free memory:
-  - Depends on settings used but as a general guide:
-  - 1 GB for transcoding standard definition video (480p/576p)
-  - 2 to 8 GB for transcoding high definition video (720p/1080p)
-  - 6 to 16 GB or more for transcoding ultra high definition video (2160p 4K)
+- Minimum System Memory:
+  - 16 GB for transcoding standard and high definition video (480p/576p/720p)
+  - 32 GB for transcoding 4K Ultra HD video (2160p)
 - System storage:
   - 150 MB for the HandBrake app
 - Display resolution:
