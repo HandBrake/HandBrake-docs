@@ -18,7 +18,7 @@ Intel Quick Sync Video
 
 ## Supported Hardware and Configurations
 
-- Intel Skylake (6th Generation Core) CPU or later with Intel HD, Iris Xe or Arc graphics.
+- Intel Skylake (8th Generation Core) CPU or later with Intel HD, Iris Xe or Arc graphics.
 - Windows 10 or Later
   - Please make sure your Intel GPU drivers are up-to-date. Driver version should be >= 31.0.x.x
 - Some Modern Linux versions. 
@@ -64,6 +64,7 @@ Support for the Intel Quick Sync Video encoder is enabled in preferences on the 
 
 The following presets are available under the 'Hardware' category in the presets menu:
 
+- AV1 QSV 2160P 4K
 - H.265 QSV 2160P 4K
 - H.265 QSV 1080p
 
