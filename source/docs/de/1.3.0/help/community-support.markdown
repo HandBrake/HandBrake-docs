@@ -29,9 +29,7 @@ Du denkst dir vielleicht, dass für deine einfache Frage ein Log unnötigt ist. 
 
 ## Community Foren
 
-Die [HandBrake Community Foren](https://forum.handbrake.fr/) sind 24/7 verfügbar. Ob du eine Supportanfrage hast oder einfach nur mit anderen HandBrake Nutzern reden möchtest, dies ist der Ort dafür. Die Registrierung ist frei. Bitte lese und halte dich an die [Community Rules](https://forum.handbrake.fr/viewtopic.php?f=6&t=6702).
-
-Falls du Hilfe brauchst oder auf einen Fehler bei der Benützung von HandBrake gestoßen bist, schau dir bitte zuerst unsere [Support Foren](https://forum.handbrake.fr/viewforum.php?f=16) an oder [suche](https://forum.handbrake.fr/search.php) nach ein paar Stichwörter die mit deiner Frage zusammenhängen. Dadurch erspart man jedem Zeit, Antworten zu oft gestellten Fragen zu wiederholen. Falls du noch immer keine Antwort gefunden hast, kannst du eine Supportanfrage erstellen. Lese vor dem Erstellen [How To Request Support](https://forum.handbrake.fr/viewtopic.php?f=6&t=31236).
+Die [Github Discussions](https://github.com/HandBrake/HandBrake/discussions) sind 24/7 verfügbar. Ob du eine Supportanfrage hast oder einfach nur mit anderen HandBrake Nutzern reden möchtest, dies ist der Ort dafür. Die Registrierung ist frei. 
 
 Entwickler und eifrige Benutzer können Bugs auf HandBrake's [Issue Tracker auf GitHub](https://github.com/HandBrake/HandBrake/issues) melden. Bitte fülle dafür alle benötigten Informationen aus, inklusive einem [Aktivitäten Log](aktivitaeten-log.html).
 

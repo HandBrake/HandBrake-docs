@@ -5,7 +5,7 @@ Thank you for your interest in contributing documentation for HandBrake.
 
 *Everyone should first [read the existing docs](https://handbrake.fr/docs/) before submitting changes*.
 
-If you're a non-technical person, feel free to suggest changes via the [HandBrake Community Forums](https://forum.handbrake.fr) (registration is free) or [open an issue on GitHub](https://github.com/HandBrake/HandBrake-docs/issues) (also free). To report minor issues (typos, etc.) or to ask questions, say hi on the [HandBrake IRC channel](https://handbrake.fr/community.php).
+If you're a non-technical person, feel free to suggest changes via [Github Discussions](https://github.com/HandBrake/HandBrake/discussions) or [open an issue on GitHub](https://github.com/HandBrake/HandBrake-docs/issues). You can also find us on the [HandBrake IRC channels](https://handbrake.fr/community.php).
 
 You may work directly on the source documents by [creating a GitHub account](https://github.com/join) and forking [HandBrake/HandBrake-docs](https://github.com/HandBrake/HandBrake-docs/). See *Working with the source files* for more information.
 
@@ -28,7 +28,7 @@ Work not meeting this general standard is unhelpful and potentially confusing, a
 
 Don't be a jerk. Please read and abide by the [HandBrake Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md).
 
-Most of our [forum rules](https://forum.handbrake.fr/app.php/rules) also apply. Please do not attempt to document topics of dubious legality, such as illegally obtaining content (piracy or working with pirated material) or illegally circumventing copy protections.
+Please do not attempt to document topics of dubious legality, such as illegally obtaining content (piracy or working with pirated material) or illegally circumventing copy protections.
 
 Harassment and abusive speech will not be tolerated.
 
@@ -205,5 +205,4 @@ While it is our goal to allow everyone to contribute, contributions not meeting 
 ## More information
 
 [HandBrake Website](https://handbrake.fr)  
-[HandBrake Community Forums](https://forum.handbrake.fr)  
 [HandBrake on GitHub](https://github.com/HandBrake)

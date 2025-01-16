@@ -20,7 +20,7 @@ HandBrake is an open source project created and maintained by the HandBrake Team
 
 ## Conduct
 
-First and foremost, familiarize yourself with the project's [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md) and [Community Forum Rules](https://forum.handbrake.fr/app.php/rules). The HandBrake Team expects all contributors to conduct themselves accordingly.
+First and foremost, familiarize yourself with the project's [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md). The HandBrake Team expects all contributors to conduct themselves accordingly.
 
 ## Communication
 

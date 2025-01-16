@@ -28,11 +28,13 @@ You may think you have a simple question for which providing a log seems unneces
 
 ## Community Forums
 
-The [HandBrake Community Forums](https://forum.handbrake.fr/) are available 24/7. Whether you have a support request or simply want to connect with other HandBrake users, this is the place. Registration is free. Please read and abide by our [Community Rules](https://forum.handbrake.fr/viewtopic.php?f=6&t=6702).
+The [Github Discussions](https://github.com/HandBrake/HandBrake/discussions) are available 24/7. Whether you have a support request or simply want to connect with other HandBrake users, this is the place. Registration is free. 
 
-If you need help or have encountered an error while using HandBrake, first take a look at our [Support Forums](https://forum.handbrake.fr/viewforum.php?f=16) or [Search](https://forum.handbrake.fr/search.php) using some words related to your questions. Doing this saves everyone from repeating answers to common questions. If you still haven't found an answer, feel free to start a new support request. Make sure to read [How To Request Support](https://forum.handbrake.fr/viewtopic.php?f=6&t=31236) before posting.
+Please read and abide by our [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md).
 
-Developers and keen users may report bugs on HandBrake's [issue tracker on GitHub](https://github.com/HandBrake/HandBrake/issues). Please make sure to fill out all requested information, including an [Activity Log](activity-log.html).
+Developers and keen users may report bugs on HandBrake's [issue tracker on GitHub](https://github.com/HandBrake/HandBrake/issues). 
+
+Please make sure to fill out all requested information, including an [Activity Log](activity-log.html).
 
 ## IRC discussion channels
 

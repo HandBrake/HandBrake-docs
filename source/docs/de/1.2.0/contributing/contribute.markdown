@@ -21,7 +21,7 @@ HandBrake ist ein quelloffenes Projekt, welches vom HandBrake Team erstellt wurd
 
 ## Verhalten
 
-Lese dir zuerst den [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md) und die [Community Forum Rules](https://forum.handbrake.fr/app.php/rules) des Projektes genau durch. Das HandBrake Team erwartet, dass alle Mithelfer sich laut diesen Regeln verhalten.
+Lese dir zuerst den [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md) des Projektes genau durch. Das HandBrake Team erwartet, dass alle Mithelfer sich laut diesen Regeln verhalten.
 
 ## Kommunikation
 
