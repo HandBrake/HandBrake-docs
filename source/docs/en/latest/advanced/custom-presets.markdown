@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Custom Presets
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
@@ -19,7 +18,7 @@ Custom Presets
 
 HandBrake comes with many built-in presets which cover the most common use case scenarios. However there are many scenarios and devices that many not be covered.
 
-On the main window, below the title selection controls, you can click the "Save New Preset" button to create your own preset.
+After you have chosen your preferred settings, you can click the "Save New Preset" button on the main window to create your own preset.
 
 <!-- .system-linux -->
 <!-- /.system-linux -->
@@ -44,16 +43,16 @@ Pressing "add" will save a new preset with the details you've entered based on t
 
 ## Audio and Subtitles Beavhiours 
 
-Audio and Subtitle settings are special. The preset does not store selected audio and subtitle tracks from the main window. It uses rules to automatically select them for each new source or title that you selected.
+Audio and Subtitle settings are special. The preset does not store selected audio and subtitle tracks from the audio or subtitle tabs. It uses rules to automatically select them for each new source or title that you selected.
 You can modify these rules by editing the settings on the relevant "selection behaviour" screen.
 
-Please note, these rules do not cover all possible use cases. If the behaviours don't meet your requirements, audio and subtitle tracks will need to be handled manually after you've scanned a source. 
+Please note, these rules do not cover all possible use cases. If the behaviours don't meet your requirements, audio and subtitle tracks will need to be handled manually after you've scanned a source before adding it to the queue.
 
 For more information, please see [Audio and Subtitle Defaults](../workflow/audio-subtitle-defaults.html).
 
 ## Default Preset
 
-If you regularly use the same preset, you can make it the default preset that HandBrake starts with by selecting the "Make Default" (macOS) or "Set Current as Default" (Window) option in the presets menu or by using the preset manager accessed via the toolbar.
+If you regularly use the same preset, you can make it the default preset that HandBrake starts with by selecting the "Make Default" (macOS) or "Set Current as Default" (Windows) option in the presets menu or by using the preset manager accessed via the toolbar.
 
 ## Import and Export
 

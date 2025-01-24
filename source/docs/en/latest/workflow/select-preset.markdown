@@ -48,6 +48,16 @@ If you've previously saved one of your own `Presets`, you may select it in the s
 
 You can learn more about [Custom presets](../advanced/custom-presets.html) in the advanced features section.
 
+
+## Setting a Default preset
+
+If you find you commonly use a preset, you can set it to be HandBrakes default preset when the application starts.
+
+To do this, you can choose the "Make Default" (macOS and Linux) or "Set Current as Default" (Windows) option in the presets menu or by using the preset manager accessed via the toolbar.
+
+<!-- /.system-macos -->
+
+
 <!-- .continue -->
 
 ## Next steps
