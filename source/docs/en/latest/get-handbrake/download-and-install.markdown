@@ -185,9 +185,6 @@ Once your PATH includes these directories, the GUI may be run with
 
     fr.handbrake.ghb
 
-And the CLI may be run with
-
-    fr.handbrake.HandBrakeCLI
 
 <!-- /.system-linux -->
 
