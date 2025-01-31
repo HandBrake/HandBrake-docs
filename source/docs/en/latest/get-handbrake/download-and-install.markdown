@@ -99,13 +99,9 @@ Alternatively, you may manually download, verify, and install [Flatpak](https://
 
 Install your distribution's `flatpak` package before running the following commands.
 
-Install the latest HandBrake GUI release (after download and verify)
+Install the latest HandBrake GUI and CLI release (after download and verify)
 
-    flatpak --user install HandBrake-1.4.2-x86_64.flatpak
-
-Install the latest HandBrake CLI release (after download and verify)
-
-    flatpak --user install HandBrakeCLI-1.4.2-x86_64.flatpak
+    flatpak --user install HandBrake-1.9.0-x86_64.flatpak
 
 Install the nightly build (example, filename changes nightly)
 
@@ -177,13 +173,9 @@ To launch the HandBrake GUI from the command line
 
 The HandBrake GUI Flatpak package also includes the CLI which may be run with
 
-    flatpak run --command=HandBrakeCLI fr.handbrake.ghb
+    flatpak run --command=HandBrakeCLI fr.handbrake.ghb <options...>   
 
 Additional HandBrakeCLI options go at the end of the above command line.
-
-If you installed the stand-alone HandBrakeCLI Flatpak package, it can be run with
-
-    flatpak run fr.handbrake.HandBrakeCLI
 
 The developers of Flatpak have also provided some useful helper scripts that get installed whenever a Flatpak package is installed.  Unfortunately, the PATH environment usually does not include the location these are installed to.  If you wish to use these helper scripts, update your PATH (usually performed in a shell initialization file such as ~/.bash_profile)
 
