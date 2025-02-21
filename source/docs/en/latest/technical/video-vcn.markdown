@@ -18,7 +18,7 @@ AMD VCN
 
 ## Supported Hardware and Configurations
 
-- AMD Radeon RX6000 (RDNA2), RX7000 (RDNA3) series GPU or better
+- AMD Radeon RX6000 (RDNA2), RX7000 (RDNA3) and RX9000 (RDNA4) series GPU or better
 - Windows 10 or later
 - Limited support is available on Ubuntu 22.04 and later.
 
@@ -31,7 +31,26 @@ Support for the AMD VCN encoder is enabled in preferences on the video tab. If y
 <!-- /.system-windows -->
 
 <!-- .system-linux-->
-On Ubuntu Linux, [AMD Radeon Software for Linux version 24.20 or later](https://www.amd.com/en/support/linux-drivers) is required to use the VCN encoder. Install using the `amdgpu-pro-install` script according to AMD’s [installation guide](https://amdgpu-install.readthedocs.io/en/latest/). Additionally, you must manually install the `amf-amdgpu-pro` package included in the download.
+On Linux, we need the official amdgpu-pro drivers.
+
+ - Download the latest drivers from: [AMD Radeon Software for Linux version 24.20 or later](https://www.amd.com/en/support/linux-drivers) is required to use the VCN encoder. 
+ - sudo dpkg -i amdgpu-install_VERSION_all.deb   (Where version is similar to: 6.3.60302-1)
+ - sudo amdgpu-install -y --usecase=graphics,amf --accept-eula
+ - Reboot your computer.
+ 
+For native installs, VCN should now be available in the HandBrake GUI.
+ 
+If your are using a flatpak build, you will have to perform some additional steps:
+
+ - If you don't already have [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) installed, you will need to install it. 
+ - Open FlatSeal and choose the HandBrake app.
+ - In the "Other Files" section, add a folder "/opt"
+ - In the "Environment - Variables" section, change LD_LIBRARY_PATH=/app/extensions/lib:/opt/amdgpu-pro/lib/x86_64-linux-gnu
+   (adding :/opt/amdgpu-pro/lib/x86_64-linux-gnu) to the end.  Note, on non-ubuntu distros, this path may be differnet. I.e RHEL/SLE it may be under: /opt/amdgpu-pro/lib64
+
+Now, if your run HandBrake, you should see the VCN options available. 
+
+
 <!-- /.system-linux -->
 
 
