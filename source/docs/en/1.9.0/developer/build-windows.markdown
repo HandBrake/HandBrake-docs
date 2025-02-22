@@ -34,10 +34,13 @@ Dependencies:
 - automake
 - autopoint
 - build-essential
+- cargo
 - cmake
 - clang
+- curl
 - gcc
 - git
+- libssl-dev
 - libtool
 - libtool-bin
 - m4
@@ -47,10 +50,9 @@ Dependencies:
 - ninja-build
 - patch
 - pkg-config
+- rustc
 - tar
 - zlib1g-dev
-- rustc
-- cargo
 
 Additional MinGW-w64 toolchain dependencies:
 
@@ -65,7 +67,7 @@ Additional MinGW-w64 toolchain dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev clang curl
+    sudo apt-get install automake autoconf autopoint build-essential cmake gcc git intltool libtool libtool-bin m4 make meson nasm ninja-build patch pkg-config tar zlib1g-dev clang curl libssl-dev
     curl https://sh.rustup.rs -sSf | sh
     source "$HOME/.cargo/env"
     cargo install cargo-c
@@ -73,7 +75,7 @@ Install dependencies.
 
 Install the additional dependencies required to build the MinGW-w64 toolchain.
 
-    sudo apt-get install bison bzip2 curl flex g++ gzip pax
+    sudo apt-get install bison bzip2 flex g++ gzip pax
 
 
 ### Building the MinGW-w64 toolchain and HandBrake
