@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you believe you’ve found a security vulnerability in the HandBrake Documentation website (https://handbrake.fr/docs) please use the "Report a vulnerability" button on the [Security Tab](https://github.com/HandBrake/HandBrake/security) above.
+If you believe you’ve found a security vulnerability in the HandBrake Documentation website (https://handbrake.fr/docs) please use the "Report a vulnerability" button on the [Security Tab](https://github.com/HandBrake/HandBrake-docs/security) above.
 
 If you believe you've found a vulnerability with the HandBrake app, please instead see the [HandBrake Repository Security page](https://github.com/HandBrake/HandBrake/security)
 
