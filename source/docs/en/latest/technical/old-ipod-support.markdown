@@ -23,5 +23,5 @@ Older classic iPods require a special atom to be written to the MP4 file before 
 
 HandBrake doesn't add this by default, but if you have an older classic iPod, you can turn it on by selecting the "iPod 5G Support" checkbox located under the Destination chooser.
 
-This is only available for MP4 files
+This is only available for MP4 files.
 
