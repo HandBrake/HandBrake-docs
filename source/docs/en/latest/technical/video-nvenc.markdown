@@ -23,7 +23,7 @@ NVIDIA NVENC
 - Windows 10 or later
 - Limited support is available on some modern Linux distros
 
-Please note, these are not hard limits. Hardware encoding via NVENC *might* work on older series GPUs and older operating systems, but this is not officially supported.
+Please note that these are not hard limits. Hardware encoding via NVENC *might* work on older series GPUs and older operating systems, but this is not officially supported by HandBrake.
 
 ## Enabling support
 
