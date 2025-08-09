@@ -22,10 +22,10 @@ The following is the minimum level of hardware HandBrake formally supports.
 
 - Processor:
   - AMD Ryzen, Threadripper, or Epyc
-  - Intel Core (6th generation and newer) i3, i5, i7, i9, or equivalent Xeon
-  - Apple Silicon M1 and newer, recent Intel Macs supported per the above
+  - Intel Core (9th generation and newer) i3, i5, i7, i9, Ultra or equivalent Xeon
+  - Apple Silicon M1 and newer
 - Minimum System Memory:
-  - 16 GB for transcoding standard and high definition video (480p/576p/720p)
+  - 16 GB for transcoding standard and high definition video (480p/576p/720p/1080p)
   - 32 GB for transcoding 4K Ultra HD video (2160p)
 - System storage:
   - 150 MB for the HandBrake app
@@ -85,9 +85,11 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
-| Fedora 40      | Supported           |                         |                               |
-| Fedora 39      | Supported           |                         |                               |
-| Fedora 38      | Supported           |                         |                               |
+| Fedora 42      | Supported           |                         |                               |
+| Fedora 41      | Supported           |                         |                               |
+| Fedora 40      | Unsupported         | HandBrake 1.9.2         |                               |
+| Fedora 39      | Unsupported         | HandBrake 1.9.2         |                               |
+| Fedora 38      | Unsupported         | HandBrake 1.9.2         |                               |
 | Fedora 37      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
 | Fedora 36      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
 | Fedora 35      | Unsupported         | HandBrake 1.5.1         | End of life.                  |
@@ -109,7 +111,7 @@ Interim (non-LTS) versions are typically supported until their end of life.
 |---------------------------|---------------------|-------------------------|------------------------------------|
 | 24.04 LTS Noble Numbat    | Supported           |                         | Flatpak, and source.               |
 | 22.04 LTS Jammy Jellyfish | Supported           |                         | Flatpak, and source.               |
-| 20.04 LTS Focal Fossa     | Deprecated          |                         | Flatpak, and source.               |
+| 20.04 LTS Focal Fossa     | Unsupported         | HandBrake 1.9.2         | Flatpak, and source.               |
 | 18.04 LTS Bionic Beaver   | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
 | 16.04 LTS Xenial Xerus    | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
 | 14.04 LTS Trusty Tahr     | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |

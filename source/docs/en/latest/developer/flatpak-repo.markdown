@@ -37,8 +37,8 @@ Install flatpak freedesktop runtime platform.
     
 Install flatpak gnome.
 
-    flatpak install flathub org.gnome.Platform//47
-    flatpak install flathub org.gnome.Sdk//47
+    flatpak install flathub org.gnome.Platform//48
+    flatpak install flathub org.gnome.Sdk//48
     
 Install Compilers
 
