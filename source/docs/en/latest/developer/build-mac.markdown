@@ -16,9 +16,9 @@ License_URL:     https://handbrake.fr/docs/license.html
 Building HandBrake for Mac
 ==========================
 
-Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running macOS 12.6.7 Monterey or later, and the following dependencies.
+Building HandBrake for Mac requires an Apple computer with a 64-bit Intel processor running macOS 13.5 Ventura or later, and the following dependencies.
 
-- [Xcode](https://developer.apple.com/xcode/) 14.3.1 or later
+- [Xcode](https://developer.apple.com/xcode/) 15.2 or later
   - free Apple Developer registration required, or install from the Mac App Store
 
 Additional dependencies (may be built via included script):
