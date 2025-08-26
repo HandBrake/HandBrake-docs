@@ -18,7 +18,7 @@ Intel Quick Sync Video
 
 ## Supported Hardware and Configurations
 
-- Intel Skylake (8th Generation Core) CPU or later with Intel HD, Iris Xe or Arc graphics.
+- Intel Skylake (9th Generation Core) CPU or later with Intel HD, Iris Xe or Arc graphics.
 - Windows 10 or Later
   - Please make sure your Intel GPU drivers are up-to-date. Driver version should be >= 31.0.x.x
 - Some Modern Linux versions. 

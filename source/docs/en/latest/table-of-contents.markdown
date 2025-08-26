@@ -59,6 +59,7 @@ Table of contents
 - [Preserving surround sound](advanced/surround-sound.html)<span class="notice draft"><span>draft</span></span>
 - [Adding subtitles](advanced/subtitles.html)<span class="notice draft"><span>draft</span></span>
 - [Adding chapter markers](advanced/chapter-markers.html)<span class="notice draft"><span>draft</span></span>
+- [Adding Metadata](advanced/metadata-passthru.html)<span class="notice draft"><span>draft</span></span>
 
 <!-- - [Managing Audio Tracks](advanced/managing-audio.html) -->
 <!-- - [Post-processing metadata](advanced/post-processing.html) -->

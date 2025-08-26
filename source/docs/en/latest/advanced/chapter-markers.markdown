@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Chapter Markers
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

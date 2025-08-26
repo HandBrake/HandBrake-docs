@@ -41,7 +41,7 @@ Select the `Show Queue` button on the toolbar to see the queued encodes, or `Job
 
 ![Opening the Queue window](../../images/mac/queue-button-1.0.0.png "Select the Show Queue button on the toolbar to open the Queue window.")
 
-![Queue window on Mac](../../images/mac/queue-1.8.0.png "The Queue window lists pending Jobs.")
+![Queue window on Mac](../../images/mac/queue-1.10.0.png "The Queue window lists pending Jobs.")
 
 <!-- /.system-macos -->
 <!-- .system-windows -->

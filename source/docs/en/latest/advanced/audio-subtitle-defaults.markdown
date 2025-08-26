@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Audio and Subtitle Defaults
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
@@ -17,13 +16,16 @@ License_URL:     https://handbrake.fr/docs/license.html
 Audio and Subtitle Defaults
 =============================
 
-HandBrake does not store Audio and Subtitle tracks in presets.
+HandBrake does not store Audio and Subtitle tracks in presets as these vary from source to source.
 
 Instead, we store behaviour rules for automatically selecting audio and subtitle tracks each time you scan a new source or select a title.
 
 In order to configure the track selection behaviour, click the "Selection Behaviour" button on the Audio or Subtitle Defaults tab.
 
 ![Audio Defaults Access Button](../../images/windows/audio-configure-defaults-button-win-1.4.0.png "Audio Defaults Window")
+
+After you've made the changes, you can press the "Reload" button on the Audio or Subtitle tab to see the effect on the currently selected source. 
+
 
 ### Audio Defaults
 
@@ -33,6 +35,8 @@ In order to configure the track selection behaviour, click the "Selection Behavi
 <!-- .system-windows -->
 ![Audio Defaults Window](../../images/windows/audio-defaults-win-1.8.0.png "Audio Defaults Window")
 <!-- /.system-windows -->
+
+The behaviours screen has a number of options: 
 
 - Track Selection Behaviour
   - None
@@ -63,6 +67,8 @@ In order to configure the track selection behaviour, click the "Selection Behavi
 <!-- .system-windows -->
 ![Subtitle Defaults Window](../../images/windows/subtitle-defaults-win-1.4.0.png "Subtitle Defaults Window")
 <!-- /.system-windows -->
+
+The behaviours screen has a number of options: 
 
 - Track Selection Behaviour
   - None

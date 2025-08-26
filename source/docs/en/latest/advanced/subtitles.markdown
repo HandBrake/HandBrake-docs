@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Subtitles
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
@@ -16,6 +15,10 @@ License_URL:     https://handbrake.fr/docs/license.html
 
 Subtitles
 =========
+
+If you wish to handle Audio and Subtitle tracks automatically, See the [Audio and Subtitle Defaults](../workflow/audio-subtitle-defaults.html) guide.
+
+Otherwise, if you wish to manually add subtitle tracks, press the "Tracks" button on the "Subtitles" tab and choose the appropriate option. A new track will be displayed that you can configure as you require.
 
 ## Supported Subtitle Formats
 
@@ -61,7 +64,6 @@ The following subtitle types as supported as follows:
   - Can be read from your source file or imported through the “Subtitles tab” if you have separate files(s)
   - You can set an offset (measured in milliseconds) to change the start time that the first and subsequent SRT subtitles will appear. Use trial and error encoding a single chapter to obtain the correct offset.
   - You should make sure the correct character code is selected from the “Char Code” dropdown. Selecting the wrong code, will result in your output file having no subtitle track, and can cause the player to crash when playing that track.
-  - Please note, SRT tracks are converted to SSA in the output file. This behavior is not currently configurable. 
 
 - SSA Subtitles
   - SSA Subtitles can be passed-thru or burned into the video. 

@@ -1,6 +1,5 @@
 ---
 Type:            article
-State:           [ draft ]
 Title:           Resizing Video
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
@@ -23,20 +22,7 @@ The picture settings tab is located on HandBrake's main window and becomes activ
 
 ![Picture settings tab](../../images/windows/picture-settings-win-1.4.0.png "Picture settings tab")
 
-### Anamorphic
-
-Typically recommended that you leave this on "automatic". If your source is not anamorphic, having this set to an anamorphic option will not affect the output. Thus, it is safe to leave on.
-
-When "Automatic" is selected, HandBrake will maximise the output size of the video, up to the source resolution or set "Resolution Limit".
-
-When "Off" is selected along with unchecking "Optimal Size", you can alter both "width" and "height". Otherwise, the source size, or resolution limit will be used. 
-
-When "Custom" is selected, you have full control of the output dimensions. 
-
-### Upscaling
-
-While upscaling is NOT recommended, there are some instances where it is useful (i.e. uploading to YouTube). To enable this, check the "Allow upscaling" checkbox. 
-The "Resolution Limit" will still be honoured. 
+It is recommended that you start with a preset that most closely fits your requirements. After this, if you want to set a limit on the output resolution, simply set the "Resolution Limit" dropdown to the desired value and HandBrake will automatically take care of the rest.
 
 ## Cropping
 
@@ -52,3 +38,24 @@ The preview window will then appear and will display in real-time any changes yo
 If the size of the output exceeds the window size, the preview window will scale it to fit to screen.
 
 ![Preview window](../../images/windows/preview-window-1.0.0.jpg "Preview window")
+
+
+### Upscaling Video
+
+While upscaling is NOT recommended, there are some instances where it is useful (i.e. uploading to YouTube). To enable this, check the "Allow upscaling" checkbox. 
+
+The "Resolution Limit" will still be honoured in this case.
+
+### Anamorphic
+
+Typically recommended that you leave this on "automatic". If your source is not anamorphic, having this set to an anamorphic option will not affect the output. Thus, it is safe to leave on.
+
+  - When "Automatic" is selected, HandBrake will maximise the output size of the video, up to the source resolution or set "Resolution Limit".
+
+  - When "Off" is selected along with unchecking "Optimal Size", you can alter both "width" and "height". Otherwise, the source size, or resolution limit will be used. 
+
+  - When "Custom" is selected, you have full control of the output dimensions. 
+
+
+
+
