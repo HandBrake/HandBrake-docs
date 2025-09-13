@@ -59,7 +59,9 @@ You may build and install the additional dependencies using the included script.
 
 This process will take a few minutes. If necessary, the script will provide you with instructions for adding the resulting binaries location to your environment's `PATH`[^default-path]. Do this now.
 
-Build HandBrake. To build the command line interface only, disable the graphical interface by appending `--disable-xcode`.
+### Build HandBrake using command line
+
+To build the command line interface only, disable the graphical interface by appending `--disable-xcode`.
 
     ./configure --launch-jobs=$(sysctl -n hw.activecpu) --launch
 
@@ -72,5 +74,11 @@ Install HandBrake (optional).
 To start over, simply remove the `build` directory.
 
     rm -rf build
+
+### Build HandBrake using Xcode
+
+If you installed the additional dependencies to `/usr/local`, Xcode should build without any problems.
+
+If you installed them somewhere else that Xcode couldn't find, you can update and add your custom `PATH` in `macosx/xcconfig/supplemental.xcconfig`.
 
 [^default-path]: `/usr/local/bin` is included in the system's `PATH` by default. It is not necessary to add it to your environment's `PATH` when installing the additional dependencies to `/usr/local`.
