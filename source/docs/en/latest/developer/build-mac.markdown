@@ -43,7 +43,7 @@ Optional dependencies (required by libdovi)
 - [cargo-c](https://github.com/lu-zero/cargo-c)
   - Can be installed by running `cargo install cargo-c`
 
-Install Xcode and open it once. Approve any prompts to install additional tools. You may quit Xcode after it has finished loading.
+Install Xcode and open it once. Approve any prompts to install additional tools. If Xcode version is 26 or higher, install the Metal Toolchain from Xcode Settings -> Components. You may quit Xcode after it has finished loading.
 
 If you installed Python 3 from a different source, such as Homebrew, it is necessary to check whether Python 3 can properly open HTTPS connections. The following test prints `0` for success, or `1` for failure. Upon failure, you will need to ensure SSL certificates are installed and accessible to your Python 3 installation, or remove the installation and reinstall from the official package.
 
