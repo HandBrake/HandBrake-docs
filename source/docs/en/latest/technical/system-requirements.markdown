@@ -90,16 +90,16 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 | Fedora 40      | Unsupported         | HandBrake 1.9.2         |                               |
 | Fedora 39      | Unsupported         | HandBrake 1.9.2         |                               |
 | Fedora 38      | Unsupported         | HandBrake 1.9.2         |                               |
-| Fedora 37      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
-| Fedora 36      | Unsupported         | HandBrake 1.6.1         | End of life.                  |
-| Fedora 35      | Unsupported         | HandBrake 1.5.1         | End of life.                  |
-| Fedora 34      | Unsupported         | HandBrake 1.5.1         | End of life.                  |
-| Fedora 33      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
-| Fedora 32      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
-| Fedora 31      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
-| Fedora 30      | Unsupported         | HandBrake 1.4.2         | End of life.                  |
-| Fedora 29      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
-| Fedora 28      | Unsupported         | HandBrake 1.3.1         | End of life.                  |
+| Fedora 37      | Unsupported         | HandBrake 1.6.1         |                               |
+| Fedora 36      | Unsupported         | HandBrake 1.6.1         |                               |
+| Fedora 35      | Unsupported         | HandBrake 1.5.1         |                               |
+| Fedora 34      | Unsupported         | HandBrake 1.5.1         |                               |
+| Fedora 33      | Unsupported         | HandBrake 1.4.2         |                               |
+| Fedora 32      | Unsupported         | HandBrake 1.4.2         |                               |
+| Fedora 31      | Unsupported         | HandBrake 1.4.2         |                               |
+| Fedora 30      | Unsupported         | HandBrake 1.4.2         |                               |
+| Fedora 29      | Unsupported         | HandBrake 1.3.1         |                               |
+| Fedora 28      | Unsupported         | HandBrake 1.3.1         |                               |
 
 #### Ubuntu
 
@@ -111,10 +111,10 @@ Interim (non-LTS) versions are typically supported until their end of life.
 |---------------------------|---------------------|-------------------------|------------------------------------|
 | 24.04 LTS Noble Numbat    | Supported           |                         | Flatpak, and source.               |
 | 22.04 LTS Jammy Jellyfish | Supported           |                         | Flatpak, and source.               |
-| 20.04 LTS Focal Fossa     | Unsupported         | HandBrake 1.9.2         | Flatpak, and source.               |
-| 18.04 LTS Bionic Beaver   | Unsupported         | HandBrake 1.3.3         | Flatpak only.                      |
-| 16.04 LTS Xenial Xerus    | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
-| 14.04 LTS Trusty Tahr     | Unsupported         | HandBrake 1.1.2         | End of life (standard support).    |
+| 20.04 LTS Focal Fossa     | Unsupported         | HandBrake 1.9.2         |                                    |
+| 18.04 LTS Bionic Beaver   | Unsupported         | HandBrake 1.3.3         |                                    |
+| 16.04 LTS Xenial Xerus    | Unsupported         | HandBrake 1.1.2         |                                    |
+| 14.04 LTS Trusty Tahr     | Unsupported         | HandBrake 1.1.2         |                                    |
 
 #### Other
 
@@ -129,23 +129,25 @@ See [Where to get HandBrake](../get-handbrake/where-to-get-handbrake.html), [Bui
 
 HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a Universal Binary supporting both Intel and Apple Silicon Macs.
 
+
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
+| 26 Taho            | Supported           |                         | Requires HandBrake 1.8.0 or later. |
 | 15 Sequoia         | Supported           |                         | Requires HandBrake 1.8.0 or later. |
 | 14 Sonoma          | Supported           |                         | Requires HandBrake 1.5.0 or later. |
-| 13 Ventura         | Supported           |                         | Requires HandBrake 1.5.0 or later. |
-| 12 Monterey        | Supported           |                         | Requires HandBrake 1.4.0 or later. |
+| 13 Ventura         | Deprecated          |                         | Requires HandBrake 1.5.0 or later. |
+| 12 Monterey        | Deprecated          |                         | Requires HandBrake 1.4.0 or later. |
 | 11 Big Sur         | Deprecated          |                         | Requires HandBrake 1.4.0 or later. |
 | 10.15 Catalina     | Deprecated          |                         | Requires HandBrake 1.2.2 or later. |
-| 10.14 Mojave       | Deprecated          |                         | End of life.                       |
-| 10.13 High Sierra  | Deprecated          |                         | End of life.                       |
-| 10.12 Sierra       | Unsupported         | 1.4.2                   | End of life.                       |
-| 10.11 El Capitan   | Unsupported         | 1.4.2                   | End of life.                       |
-| 10.10 Yosemite     | Unsupported         | 1.1.2                   | End of life.                       |
-| 10.9 Mavericks     | Unsupported         | 1.1.2                   | End of life.                       |
-| 10.8 Mountain Lion | Unsupported         | 1.1.2                   | End of life.                       |
-| 10.7 Lion          | Unsupported         | 1.1.2                   | End of life.                       |
-| 10.6 Snow Leopard  | Unsupported         | 0.10.5                  | End of life.                       |
+| 10.14 Mojave       | Deprecated          |                         |                                    |
+| 10.13 High Sierra  | Deprecated          |                         |                                    |
+| 10.12 Sierra       | Unsupported         | 1.4.2                   |                                    |
+| 10.11 El Capitan   | Unsupported         | 1.4.2                   |                                    |
+| 10.10 Yosemite     | Unsupported         | 1.1.2                   |                                    |
+| 10.9 Mavericks     | Unsupported         | 1.1.2                   |                                    |
+| 10.8 Mountain Lion | Unsupported         | 1.1.2                   |                                    |
+| 10.7 Lion          | Unsupported         | 1.1.2                   |                                    |
+| 10.6 Snow Leopard  | Unsupported         | 0.10.5                  |                                    |
 
 [VLC](https://www.videolan.org/vlc/) is recommended for viewing media files, notably Matroska (MKV), which is not natively supported on macOS.
 
@@ -164,8 +166,8 @@ Please becareful when selecting hte correct version to download. See the links u
 | Windows 10      | Supported           |                         | 1909 or later.               |
 | Windows 8.1     | Unsupported         | 1.3.3                   | 1.4.2 runs with limitations. |
 | Windows 7 SP1   | Unsupported         | 1.3.3                   | 1.4.2 runs with limitations. |
-| Windows Vista   | Unsupported         | 1.0.7                   | End of life.                 |
-| Windows XP      | Unsupported         | 0.9.9                   | End of life.                 |
+| Windows Vista   | Unsupported         | 1.0.7                   |                              |
+| Windows XP      | Unsupported         | 0.9.9                   |                              |
 
 <!-- /.system-windows -->
 
