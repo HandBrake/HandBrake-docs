@@ -45,11 +45,11 @@ If the above does not solve your issue, someone may be able to help via HandBrak
 
 ### HandBrake does not launch
 
-*HandBrake releases since version 1.1.0 are signed with an Apple Developer Certificate. These instructions are only applicable to [nightly builds](https://handbrake.fr/nightly.php)[^nightly-builds].*
+*HandBrake releases since version 1.1.0 are signed with an Apple Developer Certificate. These instructions are only applicable to [snapshot builds](https://github.com/HandBrake/handbrake-snapshots/releases/tag/win)[^snapshot-builds].*
 
-Unlike HandBrake releases, HandBrake nightly builds are not code signed using an Apple Developer Certificate. The first time you attempt to launch a HandBrake nightly or snapshot build, your Mac may present this message to you[^gatekeeper-disabled]:
+Unlike HandBrake releases, HandBrake snapshot builds are not code signed using an Apple Developer Certificate. The first time you attempt to launch a HandBrake snapshot or snapshot build, your Mac may present this message to you[^gatekeeper-disabled]:
 
-![Mac Gatekeeper message](../../images/mac/gatekeeper-message-1.1.0.png "Gatekeeper may present this message when launching a HandBrake nightly build for the first time.")
+![Mac Gatekeeper message](../../images/mac/gatekeeper-message-1.1.0.png "Gatekeeper may present this message when launching a HandBrake snapshot build for the first time.")
 
 Select `OK` to dismiss the Gatekeeper message, then hold down the `Control` key and select the HandBrake icon to bring up the shortcut menu. Select `Open` and your Mac will ask whether you are certain you wish to open HandBrake. Confirm that you want to trust HandBrake by again selecting `Open`.[^gatekeeper-instructions]
 
@@ -99,7 +99,7 @@ If the above does not solve your issue, someone may be able to help via HandBrak
 
 <!-- /.system-windows -->
 
-[^nightly-builds]: Nightly builds are based on HandBrake's latest development code, including new and experimental features that may be unstable or significantly different than the latest release version. Although everyone is welcome to try them, nightly builds are best suited for experienced users and developers.
+[^snapshot-builds]: Snapshot builds are based on HandBrake's latest development code, including new and experimental features that may be unstable or significantly different than the latest release version. Although everyone is welcome to try them, snapshot builds are best suited for experienced users and developers.
 
 [^gatekeeper-disabled]: If Gatekeeper is disabled on your Mac, you may not see this message.
 
