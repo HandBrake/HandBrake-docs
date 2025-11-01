@@ -20,14 +20,14 @@ HandBrake is an open source project created and maintained by the HandBrake Team
 
 ## Conduct
 
-
 First and foremost, familiarize yourself with the project's [Code of Conduct](https://github.com/HandBrake/HandBrake/blob/master/CODE_OF_CONDUCT.md). The HandBrake Team expects all contributors to conduct themselves accordingly.
 
 ## Communication
 
-Please ask the HandBrake Team via one of the [Community Support](../help/community-support.html) channels before adding major features or making other broad changes.
+Please ask the HandBrake Team via one of the [Community Support](../help/community-support.html) channels before making changes as this will increase the likely hood of a change being accepted.
 
 *Failure to communicate what you are working on may lead to duplicated efforts or rejection of your contributions.*
+
 
 ## Ways to contribute
 
@@ -41,7 +41,14 @@ The HandBrake Team welcomes contributions from user interface and graphic design
 
 Developers wanting to contribute code should check out the [HandBrake source code on GitHub](https://github.com/HandBrake/HandBrake) and create a pull request on GitHub for each contribution. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
 
-[Open issues](https://github.com/HandBrake/HandBrake/issues) are good candidates for learning and fixing various parts of the code base.
+[Open issues](https://github.com/HandBrake/HandBrake/issues) are good candidates for learning and fixing various parts of the code base. Please introduce yourself on an issue if you wish to work on it.
+
+Please be aware, the developers that work on the HandBrake project are volunteers. As such, it is not always possible to provide timely feedback or mentoring.
+
+If AI is used in the process of making a change, it must be disclosed in the Pull Request.
+
+Pull Requests may be rejected without further information if the change is not suitable for the project. For example, issues with: Code Quality / Style, Design, Security Issues, Inappropriate use of AI, Licenses / Copyright etc.
+
 
 ### Documentation
 
@@ -56,3 +63,5 @@ HandBrake is written and maintained in English, and translated into multiple int
 To view and contribute translations of the user interface strings in HandBrake, visit [HandBrake on Transifex](https://www.transifex.com/HandBrakeProject/public/).
 
 If you would like to contribute a translation of the HandBrake Documentation, please base it on the English documentation and submit a pull request to [HandBrake Documentation on GitHub](https://github.com/HandBrake/HandBrake-docs).
+
+Use of AI services to translate HandBrake is not permitted. 
