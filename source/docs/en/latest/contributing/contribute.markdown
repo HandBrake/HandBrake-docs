@@ -41,9 +41,12 @@ The HandBrake Team welcomes contributions from user interface and graphic design
 
 Developers wanting to contribute code should check out the [HandBrake source code on GitHub](https://github.com/HandBrake/HandBrake) and create a pull request on GitHub for each contribution. For more on this workflow, read [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/).
 
-[Open issues](https://github.com/HandBrake/HandBrake/issues) are good candidates for learning and fixing various parts of the code base. Please introduce yourself on an issue if you wish to work on it.
+[Open issues](https://github.com/HandBrake/HandBrake/issues) are good candidates for learning and fixing various parts of the code base. 
+In particular, look out for tickets labelled as ["Patch / Help Welcome"](https://github.com/HandBrake/HandBrake/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22Patch%20%2F%20Help%20Welcome%22) as these are good candidates to start with.
+ 
+Please introduce yourself on a ticket or one of our [Community](../help/community-support.html) channels before working on a issue. 
 
-Please be aware, the developers that work on the HandBrake project are volunteers. As such, it is not always possible to provide timely feedback or mentoring.
+The developers that work on the HandBrake project are volunteers. As such, it is not always possible to provide timely feedback or mentoring. Please be patient for a response. 
 
 If AI is used in the process of making a change, it must be disclosed in the Pull Request.
 
