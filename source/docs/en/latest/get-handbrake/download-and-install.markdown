@@ -142,15 +142,15 @@ Next, the installer will ask you where you wish to install HandBrake. Unless you
 
 You will find shortcuts for launching HandBrake placed on both the Windows Desktop and Start Menu.
 
-### Microsoft .NET Desktop Runtime 8.0
+### Microsoft .NET Desktop Runtime 10.0
 
-HandBrake has a dependency on Microsoft .NET Desktop Runtime 8.0
+HandBrake has a dependency on Microsoft .NET Desktop Runtime 10.0
 If you do not already have this, you will need to install this. 
 
 Direct download's are available from Microsoft:
 
-- [For x64 (AMD or Intel CPUs)](https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe)
-- [For Arm64 (Qualcomm or other)](https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-arm64.exe)
+- [For x64 (AMD or Intel CPUs)](https://aka.ms/dotnet/10.0/windowsdesktop-runtime-win-x64.exe)
+- [For Arm64 (Qualcomm or other)](https://aka.ms/dotnet/10.0/windowsdesktop-runtime-win-arm64.exe)
 
 
 <!-- /.system-windows -->
