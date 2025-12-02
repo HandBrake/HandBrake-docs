@@ -4,7 +4,7 @@ State:           [ draft ]
 Title:           Post Processing
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
-Project_Version: Latest
+Project_Version: 1.10.0
 Language:        English
 Language_Code:   en
 Authors:         []
