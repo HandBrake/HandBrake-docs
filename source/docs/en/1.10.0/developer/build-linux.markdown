@@ -41,6 +41,11 @@ Dependency installation instructions are available for the following distributio
 Clone the HandBrake repository.
 
     git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake
+	
+List available tags in the HandBrake 1.10.x release series, and check out the most recent.
+
+    git tag --list | grep ^1\.10\.
+    git checkout refs/tags/$(git tag -l | grep -E '^1\.10\.[0-9]+$' | tail -n 1)
 
 Build HandBrake. 
 
