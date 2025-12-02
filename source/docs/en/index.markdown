@@ -20,7 +20,7 @@ English documentation is currently available for the following HandBrake version
 
 Current release:
 
-- **[HandBrake 1.9](1.9.0/)**
+- **[HandBrake 1.10.0](1.10.0/)**
 
 Development release:
 
@@ -28,6 +28,7 @@ Development release:
 
 Previous releases:
 
+- [HandBrake 1.9.0-1.9.2](1.9.0/)
 - [HandBrake 1.8.0-1.8.1](1.8.0/)
 - [HandBrake 1.7.0-1.7.3](1.7.0/)
 - [HandBrake 1.6.0-1.6.1](1.6.0/)
