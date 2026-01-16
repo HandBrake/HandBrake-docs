@@ -1,4 +1,4 @@
-HandBrake Documentation ![Build](https://github.com/HandBrake/HandBrake-docs/workflows/Build/badge.svg)
+HandBrake Documentation [![Build](https://github.com/HandBrake/HandBrake-docs/actions/workflows/main.yml/badge.svg)](https://github.com/HandBrake/HandBrake-docs/actions/workflows/main.yml)
 =======================
 
 HandBrake's documentation exists to provide a well researched, reasonably tested, and clearly written layperson's guide to using HandBrake.
