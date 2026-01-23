@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Fedora
 =================================
 
-The following instructions are for [Fedora](https://getfedora.org) 38 and 39.
+The following instructions are for [Fedora](https://fedoraproject.org) 42 and 43.
 
 Basic requirements to run commands:
 
@@ -81,19 +81,19 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo dnf install autoconf automake binutils bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja-build numactl-devel opus-devel patch pkgconf python speex-devel tar turbojpeg-devel xz-devel zlib-devel
+    sudo dnf5 install autoconf automake binutils bzip2-devel cmake fontconfig-devel freetype-devel fribidi-devel gcc-c++ git harfbuzz-devel jansson-devel lame-devel lbzip2 libass-devel libogg-devel libsamplerate-devel libtheora-devel libtool libvorbis-devel libxml2-devel libvpx-devel m4 make meson nasm ninja-build numactl-devel opus-devel patch pkgconf python speex-devel tar turbojpeg-devel xz-devel zlib-devel
 
 Install the [RPM Fusion](http://rpmfusion.org) Free repository and related additional dependencies.
 
-    sudo dnf localinstall --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-    sudo dnf install x264-devel
+    sudo dnf5 install --nogpgcheck https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf5 install x264-devel
 
 To build with Intel Quick Sync Video support, install the QSV dependencies.
 
-    sudo dnf install libva-devel libdrm-devel
+    sudo dnf5 install libva-devel libdrm-devel
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo dnf install desktop-file-utils gstreamer1-libav gstreamer1-plugins-base-devel gstreamer1-plugins-good gtk4-devel
+    sudo dnf5 install desktop-file-utils gstreamer1-libav gstreamer1-plugins-base-devel gstreamer1-plugins-good gtk4-devel
 
 Fedora is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.html) for further instructions.
