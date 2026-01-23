@@ -133,7 +133,7 @@ HandBrake is supported on recent versions of macOS, and since version 1.4.0 is a
 
 | macOS Version      | Status              | Last Compatible Version | Notes                              |
 |--------------------|---------------------|-------------------------|------------------------------------|
-| 26 Taho            | Supported           |                         | Requires HandBrake 1.8.0 or later. |
+| 26 Tahoe           | Supported           |                         | Requires HandBrake 1.8.0 or later. |
 | 15 Sequoia         | Supported           |                         | Requires HandBrake 1.8.0 or later. |
 | 14 Sonoma          | Supported           |                         | Requires HandBrake 1.5.0 or later. |
 | 13 Ventura         | Deprecated          |                         | Requires HandBrake 1.5.0 or later. |
