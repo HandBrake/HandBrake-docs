@@ -85,8 +85,9 @@ HandBrake is supported on Fedora stable and maintenance versions until their end
 
 | Fedora Version | Status              | Last Compatible Version | Notes                         |
 |----------------|---------------------|-------------------------|-------------------------------|
+| Fedora 43      | Supported           |                         |                               |
 | Fedora 42      | Supported           |                         |                               |
-| Fedora 41      | Supported           |                         |                               |
+| Fedora 41      | Deprecated          |                         | EOL since 2025-12-15          |
 | Fedora 40      | Unsupported         | HandBrake 1.9.2         |                               |
 | Fedora 39      | Unsupported         | HandBrake 1.9.2         |                               |
 | Fedora 38      | Unsupported         | HandBrake 1.9.2         |                               |
