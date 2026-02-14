@@ -164,7 +164,7 @@ Please becareful when selecting hte correct version to download. See the links u
 | Windows Version | Status              | Last Compatible Version | Notes                        |
 |-----------------|---------------------|-------------------------|------------------------------|
 | Windows 11      | Supported           |                         |                              |
-| Windows 10      | Supported           |                         | 1909 or later.               |
+| Windows 10      | Deprecated          |                         | 1909 or later.               |
 | Windows 8.1     | Unsupported         | 1.3.3                   | 1.4.2 runs with limitations. |
 | Windows 7 SP1   | Unsupported         | 1.3.3                   | 1.4.2 runs with limitations. |
 | Windows Vista   | Unsupported         | 1.0.7                   |                              |
