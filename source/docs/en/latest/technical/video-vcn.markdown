@@ -31,12 +31,10 @@ Support for the AMD VCN encoder is enabled in preferences on the video tab. If y
 <!-- /.system-windows -->
 
 <!-- .system-linux-->
-On Linux, we need the official amdgpu-pro drivers.
+On Linux, we need the amf-amdgpu-pro libraries.
 
- - Download the latest drivers from: [AMD Radeon Software for Linux version 24.20 or later](https://www.amd.com/en/support/linux-drivers) is required to use the VCN encoder. 
- - sudo dpkg -i amdgpu-install_VERSION_all.deb   (Where version is similar to: 6.3.60302-1)
- - sudo amdgpu-install -y --usecase=graphics,amf --accept-eula
- - Reboot your computer.
+ - AMF for Linux version 25.20 only supports RDNA3 and later: [Install Instructions](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/Driver%20Linux#instructions).
+ - RDNA1 and RDNA 2 have to stay on 25.10 or earlier: [Legacy Instructions](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/Driver%20Linux#legacy-instructions-driver-version--2520).
  
 For native installs, VCN should now be available in the HandBrake GUI.
  
