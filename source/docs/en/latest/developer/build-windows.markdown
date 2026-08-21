@@ -35,7 +35,7 @@ Begin by installing all dependencies specified in the guide [Installing dependen
 
 *This section is for running HandBrake on ARM-based Windows machines only (not x64). You can find the type of machine you have by opening Windows Settings and navigating to System > About.*
 
-After installing the Ubuntu dependencies, continue as follows.
+After installing the Ubuntu dependencies, continue on Ubuntu as follows.
 
 To build with Dolby Vision support, install the additional Rust dependencies for Windows ARM.
 
@@ -67,7 +67,7 @@ Build LibHB and the HandBrake CLI using the cross-compilation toolchain.
 
 *This section is for running HandBrake on x64-based Windows machines only (not ARM). You can find the type of machine you have by opening Windows Settings and navigating to System > About.*
 
-After installing the Ubuntu dependencies, continue as follows.
+After installing the Ubuntu dependencies, continue on Ubuntu as follows.
 
 To build with Dolby Vision support, install the additional Rust dependencies for Windows x64.
 
