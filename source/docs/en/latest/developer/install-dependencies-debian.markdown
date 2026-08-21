@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Debian
 =================================
 
-The following instructions are for [Debian](https://www.debian.org) 11 Bullseye and 12 Bookworm.
+The following instructions are for [Debian](https://www.debian.org) 13 Trixie.
 
 Basic requirements to run commands:
 
@@ -33,7 +33,7 @@ Dependencies:
 - libass-dev
 - libbz2-dev
 - libfontconfig-dev
-- libfreetype6-dev
+- libfreetype-dev
 - libfribidi-dev
 - libharfbuzz-dev
 - libjansson-dev
@@ -44,14 +44,16 @@ Dependencies:
 - libopus-dev
 - libsamplerate0-dev
 - libspeex-dev
+- libssl-dev
 - libtheora-dev
 - libtool
 - libtool-bin
 - libturbojpeg0-dev
 - libvorbis-dev
+- libvpx-dev
+- libx11-dev
 - libx264-dev
 - libxml2-dev
-- libvpx-dev
 - m4
 - make
 - meson
@@ -59,14 +61,21 @@ Dependencies:
 - ninja-build
 - patch
 - pkg-config
-- python3
-- tar
 - zlib1g-dev
 
-Intel Quick Sync Video dependencies (optional):
+Dolby Vision dependencies (optional):
+
+- rustup
+
+Intel Quick Sync Video and VAAPI dependencies (optional):
 
 - libva-dev
 - libdrm-dev
+
+Nvidia NVENC/NVDEC dependencies (optional):
+
+- clang
+- llvm
 
 Graphical interface dependencies:
 
@@ -81,11 +90,22 @@ Graphical interface dependencies:
 Install dependencies.
 
     sudo apt-get update
-    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate0-dev libspeex-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make meson nasm ninja-build patch python3 pkg-config tar zlib1g-dev
+    sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig-dev libfreetype-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate0-dev libspeex-dev libssl-dev libtheora-dev libtool libtool-bin libturbojpeg0-dev libvorbis-dev libvpx-dev libx11-dev libx264-dev libxml2-dev m4 make meson nasm ninja-build patch pkg-config zlib1g-dev
 
-To build with Intel Quick Sync Video support, install the QSV dependencies.
+To build with Dolby Vision support, install the Rust dependencies.
+
+    sudo apt-get install rustup
+    rustup toolchain install "stable-$(uname -m)-unknown-linux-gnu"
+    rustup default "stable-$(uname -m)-unknown-linux-gnu"
+    cargo install cargo-c
+
+To build with Intel Quick Sync Video and VAAPI support, install the VAAPI dependencies.
 
     sudo apt-get install libva-dev libdrm-dev
+
+To build with Nvidia NVENC/NVDEC support, install the CUDA LLVM toolchain dependencies.
+
+    sudo apt-get install clang llvm
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
