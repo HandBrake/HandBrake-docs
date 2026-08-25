@@ -26,14 +26,14 @@ There are different types of subtitles that exist:
 
 - Bitmaps (Pictures), e.g. DVD VOBSUBs, Bluray PGS
 - Text with markup, e.g. Closed Captions and SRT files.
-- Styled SSA, e.g. most anime subtitles in MKV files
+- Styled ASS/SSA, e.g. most anime subtitles in MKV files
 
 HandBrake can read subtitles from the following sources:
 
 - From DVD’s – Either embedded VOBSUB or CC tracks. 
 - From Bluray - PGS Subtitles. 
 - User supplied SRT files. 
-- Embedded SSA/SRT/CC within files (such as mkv or mp4)
+- Embedded ASS/SSA, SRT, or CC within files (such as mkv or mp4)
 
 ## Supported Output Formats
 
@@ -65,11 +65,10 @@ The following subtitle types as supported as follows:
   - You can set an offset (measured in milliseconds) to change the start time that the first and subsequent SRT subtitles will appear. Use trial and error encoding a single chapter to obtain the correct offset.
   - You should make sure the correct character code is selected from the “Char Code” dropdown. Selecting the wrong code, will result in your output file having no subtitle track, and can cause the player to crash when playing that track.
 
-- SSA Subtitles
-  - SSA Subtitles can be passed-thru or burned into the video. 
+- ASS/SSA Subtitles
+  - Can be passed-thru (automatically converting to another soft/text format as needed) or burned into the video.
   - When burned into the video, all styling (e.g. fonts, colors, etc) is preserved.
-    - Animated effects (e.g. fade in/out, karaoke) are not currently supported. (Only the middle frame of the animation will be used.)
-  - When passed-thru as text, only bold/italic/underline styles are preserved. Some players may not support the simultaneous display of multiple passed-thru SSA subtitles.
+  - When passed-thru as text to a container format that does not support native ASS/SSA such as MP4, a conversion takes place and only bold/italic/underline styles are preserved. Some players may not support the simultaneous display of multiple passed-thru ASS/SSA subtitles.
 
 ## Forced Subtitles
 
