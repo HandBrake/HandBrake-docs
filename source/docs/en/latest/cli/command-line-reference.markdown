@@ -127,6 +127,8 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
        -e, --encoder <string>  Select video encoder:
                                    svt_av1
                                    svt_av1_10bit
+                                   nvenc_av1
+                                   nvenc_av1_10bit
                                    ffv1
                                    x264
                                    x264_10bit
