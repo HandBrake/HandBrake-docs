@@ -16,7 +16,7 @@ License_URL:     https://handbrake.fr/docs/license.html
 Installing dependencies on Arch
 ===============================
 
-The following instructions are for [Arch](https://www.archlinux.org) 2023.10.01.
+The following instructions are for [Arch](https://www.archlinux.org) 2026.08.01.
 
 Basic requirements to run commands:
 
@@ -53,10 +53,19 @@ Dependencies:
 - x264
 - xz
 
-Intel Quick Sync Video dependencies (optional):
+Dolby Vision dependencies (optional):
+
+- rustup
+
+Intel Quick Sync Video and VAAPI dependencies (optional):
 
 - libva
 - libdrm
+
+Nvidia NVENC/NVDEC dependencies (optional):
+
+- clang
+- llvm
 
 Graphical interface dependencies:
 
@@ -67,14 +76,25 @@ Graphical interface dependencies:
 
 Install dependencies.
 
-    sudo pacman -Syu base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libjpeg-turbo libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python speex x264 xz
+    sudo pacman -S --needed base-devel cmake flac fontconfig freetype2 fribidi git harfbuzz jansson lame libass libbluray libjpeg-turbo libogg libsamplerate libtheora libvorbis libvpx libxml2 meson nasm ninja numactl opus python speex x264 xz
 
-To build with Intel Quick Sync Video support, install the QSV dependencies.
+To build with Dolby Vision support, install the Rust dependencies.
 
-    sudo pacman -Syu libva libdrm
+    sudo pacman -S --needed rustup
+    rustup toolchain install "stable-$(uname -m)-unknown-linux-gnu"
+    rustup default "stable-$(uname -m)-unknown-linux-gnu"
+    cargo install cargo-c
+
+To build with Intel Quick Sync Video and VAAPI support, install the VAAPI dependencies.
+
+    sudo pacman -S --needed libva libdrm
+
+To build with Nvidia NVENC/NVDEC support, install the CUDA LLVM toolchain dependencies.
+
+    sudo pacman -S --needed clang llvm
 
 To build the GTK [GUI](abbr:Graphical User Interface), install the graphical interface dependencies.
 
-    sudo pacman -Syu desktop-file-utils gst-libav gst-plugins-good gtk4
+    sudo pacman -S --needed desktop-file-utils gst-libav gst-plugins-good gtk4
 
 Arch is now prepared to build HandBrake. See [Building HandBrake for Linux](build-linux.markdown) for further instructions.
