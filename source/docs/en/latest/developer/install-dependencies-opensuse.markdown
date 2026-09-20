@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ draft ]
 Title:           Installing dependencies on OpenSUSE
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
