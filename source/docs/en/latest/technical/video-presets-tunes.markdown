@@ -1,39 +1,47 @@
 ---
 Type:            article
-State:           [ draft ]
-Title:           Presets and Tunes
+Title:           Video encoder presets and tunes
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
 Project_Version: Latest
 Language:        English
 Language_Code:   en
-Authors:         [ Scott (s55) ]
+Authors:         [ Bradley Sepos <bradley@bradleysepos.com> (BradleyS), Scott (s55) ]
 Copyright:       2026 HandBrake Team
 License:         Creative Commons Attribution-ShareAlike 4.0 International
 License_Abbr:    CC BY-SA 4.0
 License_URL:     https://handbrake.fr/docs/license.html
 ---
 
-Encoder Presets and Tunes
-==========================
+Video encoder presets and tunes
+===============================
 
-Presets
---------------
+*Video encoder presets and tunes should not be confused with HandBrake's general Presets or filters presets and tunes.*
 
-Some encoders expose a preset and tune system. These can be adjusted from the Video Tab.
+Some video encoders expose presets and tunes to apply broad settings that affect the specific encoder's internal processing. These settings can be adjusted on the `Video` tab.
 
-These provide a means of adjusting the encoder parameters to trade encoding speed for better quality and / or filesize.
-Changes to the preset may also require changes to the quality slider or bitrate for optimium results. 
+Note that changing video encoder presets and tunes can affect the compatibility of the video files you create using HandBrake.
 
-Specific encoder settings can be overridden via the "Extra Options" box but this is typically not required.
+## Video encoder presets
 
-Best practice is to use a preset around the middle. in 
+Video encoder presets typically control multiple internal parameters to affect the balance of speed, quality, and filesize. Changing the video encoder preset may also require changes to the overall video quality or bit rate controls to achieve an optimal result.
 
-Tunes
---------------
+If available, start with the default video encoder preset, or one with a neutral name such as "balanced" or "medium". Some video encoder presets use a numbering system.
 
-The x264 and x265 tune options assign some additional options which will optimize the
-encoder for certain types of content.
+## Video encoder tunes
 
-If you are unsure or your content doesn't really fit into one of the following
-tunes, you can simply leave this option at "None".
+Some video encoders also provide the ability to adjust internal parameters specifically for the type of content being processed. For instance, the x264 and x265 video encoders provide `Animation` tunes which may perform better on anime and cartoon content, and `Grain` tunes which attempt to preserve the look of natural film grain.
+
+If you are uncertain about which video encoder tune to use for your content, use the default or "none" tune.
+
+## Advanced video encoder options
+
+HandBrake also supports setting individual internal options specific to each video encoder. Which options are available may vary with the graphics driver/SDK version you have installed; consult the upstream encoder project/manufacturer documentation for a list of available options, if any.
+
+If using HandBrake’s graphical interface, you can set the options in the `Advanced Options` field on the `Video` tab in the following format:
+
+    option1=value1:option2=value2
+
+If using HandBrake’s command line interface, use the `--encopts` parameter as follows:
+
+    --encopts="option1=value1:option2=value2"
