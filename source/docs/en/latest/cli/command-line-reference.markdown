@@ -127,28 +127,48 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
        -e, --encoder <string>  Select video encoder:
                                    svt_av1
                                    svt_av1_10bit
+                                   qsv_av1
+                                   qsv_av1_10bit
                                    nvenc_av1
                                    nvenc_av1_10bit
+                                   vce_av1
+                                   vce_av1_10bit
+                                   mf_av1
+                                   vaapi_av1
                                    ffv1
                                    x264
                                    x264_10bit
                                    vce_h264
                                    nvenc_h264
+                                   vaapi_h264
+                                   nvenc_h264_10bit
+                                   mf_h264
+                                   vt_h264
                                    x265
                                    x265_10bit
                                    x265_12bit
+                                   x265_16bit
+                                   qsv_h265
+                                   qsv_h265_10bit
                                    vce_h265
                                    vce_h265_10bit
                                    nvenc_h265
+                                   vaapi_hevc
                                    nvenc_h265_10bit
+                                   mf_h265
+                                   vt_h265
+                                   vt_h265_10bit
                                    mpeg4
                                    mpeg2
                                    VP8
+                                   vaapi_VP8
                                    VP9
+                                   vaapi_VP9
                                    VP9_10bit
                                    dnxhr
                                    dnxhr_10bit
                                    ff_prores
+                                   vt_prores
                                    theora
            --encoder-preset <string>
                                Adjust video encoding settings for a particular
