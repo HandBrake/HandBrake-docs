@@ -19,7 +19,7 @@ NVIDIA NVENC
 ## Supported Hardware and Configurations
 
 - NVIDIA GeForce RTX Turing (2060+), Ampere (3060+), Ada Lovelace (4060+) or Ada Lovelace (5060+) series GPU or better
-- NVIDIA Graphics Driver 570.0 or later
+- NVIDIA Graphics Driver 610.0 or later
 - Windows 10 or later
 - Limited support is available on some modern Linux distros
 
