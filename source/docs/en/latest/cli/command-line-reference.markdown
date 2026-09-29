@@ -65,6 +65,8 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                only, default: 1)
            --min-duration      Set the minimum title duration (in seconds).
                                Shorter titles will be ignored (default: 10).
+           --max-duration      Set the maximum title duration (in seconds).
+                               Longer titles will be ignored.
            --scan              Scan selected title only.
            --main-feature      Detect and select the main feature title.
            --keep-duplicate-titles
@@ -97,6 +99,7 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
        -o, --output <filename> Set destination file name
        -f, --format <string>   Select container format:
                                    av_mp4
+                                   av_mov
                                    av_mkv
                                    av_webm
                                default: auto-detected from destination file name)
@@ -141,6 +144,9 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                    VP8
                                    VP9
                                    VP9_10bit
+                                   dnxhr
+                                   dnxhr_10bit
+                                   ff_prores
                                    theora
            --encoder-preset <string>
                                Adjust video encoding settings for a particular
@@ -201,6 +207,7 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                    all
        --no-hdr-dynamic-metadata Disable HDR dynamic metadata passthru
        --enable-hw-decoding <string>                                        
+                               Use 'amfdec' to enable AMFdec                
                                Use 'nvdec' to enable NVDec                  
                                Use 'qsv' to enable QSV decoding             
        --disable-hw-decoding   Disable hardware decoding of the video track,
@@ -252,6 +259,9 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                    alac16
                                    alac24
                                    copy:alac
+                                   pcm16
+                                   pcm24
+                                   copy:pcm
                                    copy
                                "copy:<type>" will enable passthru of the 
                                corresponding audio track without modification
@@ -264,7 +274,7 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
            --audio-copy-mask <string>
                                Set audio codecs that are permitted when the
                                "copy" audio encoder option is specified
-                               (aac/ac3/eac3/truehd/dts/dtshd/mp2/mp3/opus/vorbis/flac/alac)
+                               (aac/ac3/eac3/truehd/dts/dtshd/mp2/mp3/opus/vorbis/flac/alac/pcm)
                                Separated by commas for multiple allowed options.
            --audio-fallback <string>
                                Set audio codec to use when it is not possible
@@ -285,9 +295,13 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                    stereo
                                    dpl1
                                    dpl2
+                                   3point0
+                                   4point0
+                                   quad
                                    5point1
                                    6point1
                                    7point1
+                                   7point1_sdds
                                    5_2_lfe
                                Separate tracks by commas.
                                Defaults:
@@ -330,6 +344,8 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                Separate tracks by commas.
                                Supported by encoder(s):
                                    flac16
+                                   alac16
+                                   pcm16
            --keep-aname        Passthru the source audio track(s) name(s).
            --no-keep-aname     Disable the source audio track(s) name(s) passthru.
            --automatic-naming-behaviour
@@ -340,6 +356,53 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                Disable the source audio track(s) name(s) passthru.
        -A, --aname <string>    Set audio track name(s).
                                Separate tracks by commas.
+
+
+    Audio Filters Options --------------------------------------------------------
+
+           --acompressor[=string]
+                               Apply a dynamic range compressor to audio.
+                               Separate tracks by commas. An empty entry leaves
+                               the track unaffected.
+                               Presets:
+                                   light
+                                   moderate
+                                   strong
+                                   nightmode
+                               Custom Format:
+                                   level-in=l:mode=m:threshold=t:ratio=r:attack=a:
+                                   release=r:makeup=m:knee=k:link=l:detection=d:
+                                   level-sc=l:mix=m
+                               Default:
+                                   level-in=1:mode=0:threshold=0.125:ratio=2:
+                                   attack=20:release=250:makeup=1:knee=2.82843:
+                                   link=0:detection=1:level-sc=1:mix=1
+           --no-acompressor    Disable the audio compressor.
+           --acompressor-tune <string>
+                               Tune the audio compressor to content type.
+                               Separate tracks by commas, or give a single value
+                               to apply it to all tracks. Applies to acompressor
+                               presets only (does not affect custom settings).
+                               Tunes:
+                                   none
+                                   voice
+                                   music
+           --agate[=string]    Apply a noise gate to audio.
+                               Separate tracks by commas. An empty entry leaves
+                               the track unaffected.
+                               Presets:
+                                   light
+                                   moderate
+                                   strong
+                               Custom Format:
+                                   level-in=l:mode=m:range=r:threshold=t:ratio=r:
+                                   attack=a:release=r:makeup=m:knee=k:link=l:
+                                   detection=d:level-sc=l
+                               Default:
+                                   level-in=1:mode=0:range=0.06125:threshold=0.125:
+                                   ratio=2:attack=20:release=250:makeup=1:
+                                   knee=2.82843:link=0:detection=1:level-sc=1
+           --no-agate          Disable the audio noise gate.
 
 
     Picture Options --------------------------------------------------------------
@@ -488,6 +551,15 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                    y-temporal=2:cb-temporal=3:cr-temporal=3
        --no-hqdn3d             Disable preset hqdn3d filter
        --denoise[=string]      Legacy alias for '--hqdn3d'
+       --bm3d[=string]         Denoise video with BM3D advanced denoising
+                               Presets:
+                                   medium
+                                   strong
+                               Custom Format:
+                                   sigma=s
+                               Default:
+                                   sigma=1
+       --no-bm3d               Disable preset BM3D filter
        --nlmeans[=string]      Denoise video with NLMeans filter
                                Presets:
                                    ultralight
@@ -613,6 +685,14 @@ Options may vary slightly depending on hardware / operating system. Run `HandBra
                                    large
                                Applies to deblock presets only (does not affect
                                custom settings)
+       --deband[=string]       Remove banding artifacts (common in anime,
+                               gradients, dark scenes)
+                               Custom Format:
+                                   1thr=1:2thr=2:3thr=3:4thr=4:range=r:blur=b
+                               Default:
+                                   1thr=0.02:2thr=0.02:3thr=0.02:4thr=0.02:
+                                   range=16:blur=1
+       --no-deband             Disable preset deband filter
        --rotate[=string]       Rotate image or flip its axes.
                                angle rotates clockwise, can be one of:
                                    0, 90, 180, 270
