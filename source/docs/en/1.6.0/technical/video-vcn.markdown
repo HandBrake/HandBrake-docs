@@ -38,7 +38,7 @@ Support for the AMD VCN encoder is enabled in preferences on the video tab. If y
 
 The following presets are available under the 'Hardware' category in the presets menu:
 
-- H.265 VCN 2160P 4K
+- H.265 VCN 2160p 4K
 - H.265 VCN 1080p
 
 These are a good starting point for configuring HandBrake to use these encoders.
