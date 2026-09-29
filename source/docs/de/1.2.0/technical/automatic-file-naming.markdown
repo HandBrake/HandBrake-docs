@@ -43,4 +43,4 @@ MP4 und M4V Dateien sind identisch. Es ist nur eine andere Benennung.
 
 HandBrake wird für MP4 Dateien automatisch die Endung M4V verwenden, wenn du Audio (AC3) durchleitest, SRT Untertitel verwendest oder Kapitelmarkierungen aktiviert hast.
 
-Du kannst einfach die Dateiendung zwischen .mp4 und .m4v ändern da die Datei exakt gleich ist. Es gibt einen Unterschied im Inhalt oder im Container selbst.
+Du kannst einfach die Dateiendung zwischen .mp4 und .m4v ändern da die Datei exakt gleich ist. Es gibt keinen Unterschied im Inhalt oder im Container selbst.
