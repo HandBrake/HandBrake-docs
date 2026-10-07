@@ -136,7 +136,7 @@ Table of contents
   - [10/12-bit encoding](technical/video-bit-depth.markdown)<span class="notice draft"><span>draft</span></span>
   - [HDR encoding](technical/hdr.markdown)<span class="notice draft"><span>draft</span></span>
   - [Constant quality versus average bit rate](technical/video-cq-vs-abr.markdown)<span class="notice draft"><span>draft</span></span>
-  - [Presets and tunes](technical/video-presets-tunes.markdown)<span class="notice draft"><span>draft</span></span>
+  - [Presets and tunes](technical/video-presets-tunes.markdown)
   - [Profiles and levels](technical/video-profiles-levels.markdown)<span class="notice draft"><span>draft</span></span>
   - [Video angles](technical/video-angles.markdown)<span class="notice draft"><span>draft</span></span>
   - [Anamorphic video](technical/anamorphic-guide.markdown)<span class="notice draft"><span>draft</span></span>
