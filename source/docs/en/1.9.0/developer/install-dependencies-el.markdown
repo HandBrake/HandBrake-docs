@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Installing dependencies on Enterprise Linux
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Audio and Subtitle Defaults
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

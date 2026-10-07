@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Building HandBrake for Linux
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

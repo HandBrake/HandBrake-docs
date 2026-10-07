@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Installing dependencies on Solus
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Starting encoding
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

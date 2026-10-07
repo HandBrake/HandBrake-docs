@@ -1,5 +1,6 @@
 ---
 Type:            article
+State:           [ obsolete ]
 Title:           Installing dependencies on NetBSD
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/

@@ -1,6 +1,6 @@
 ---
 Type:            article
-State:           [ draft ]
+State:           [ obsolete, draft ]
 Title:           Post Processing
 Project:         HandBrake
 Project_URL:     https://handbrake.fr/
