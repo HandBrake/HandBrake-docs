@@ -20,7 +20,7 @@ English documentation is currently available for the following HandBrake version
 
 Current release:
 
-- **[HandBrake 1.10.0](1.10.0/index.markdown)**
+- **[HandBrake 1.10.0-1.10.2](1.10.0/index.markdown)**
 
 Development release:
 
